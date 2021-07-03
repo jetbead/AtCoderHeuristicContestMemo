@@ -12,6 +12,8 @@ AtCoder Heuristic Contestのメモです。
   - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
 - AtCoder Heuristic Statistics
   - https://heuristic-statistics.herokuapp.com/
+- AHC Rating Simulator
+  - https://saharan.github.io/progcon/ahc-rating-sim.html
 
 # Contests Memo
 - [Introduction to Heuristics Contest](./memo/intro-heuristics.md)
