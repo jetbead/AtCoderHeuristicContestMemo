@@ -1,2 +1,21 @@
-# AtCoderHeuristicContestMemo
-AtCoder Heuristic Contestのメモです
+# AtCoder Heuristic Contest Memo
+AtCoder Heuristic Contestのメモです。
+
+# Contest Link
+- [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
+- [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
+
+# Useful Link
+- AtCoder Marathon Rating History
+  - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
+- AtCoder Marathon Replay
+  - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
+- AtCoder Heuristic Statistics
+  - https://heuristic-statistics.herokuapp.com/
+
+# Contests Memo
+- [Introduction to Heuristics Contest](./memo/intro-heuristics.md)
+- [AHC001](./memo/ahc001.md)
+- [AHC002](./memo/ahc002.md)
+- [AHC003](./memo/ahc003.md)
+- [AHC004](./memo/ahc004.md)
