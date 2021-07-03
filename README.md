@@ -5,7 +5,7 @@ AtCoder Heuristic Contestのメモです。
 - [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
 - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
 
-# Useful Link
+# Useful Tool/Link
 - AtCoder Marathon Rating History
   - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
 - AtCoder Marathon Replay
@@ -14,6 +14,9 @@ AtCoder Heuristic Contestのメモです。
   - https://heuristic-statistics.herokuapp.com/
 - AHC Rating Simulator
   - https://saharan.github.io/progcon/ahc-rating-sim.html
+- kmyk/marathon-kit
+  - https://github-dotcom.gateway.web.tr/kmyk/marathon-kit
+
 
 # Contests Memo
 - [Introduction to Heuristics Contest](./memo/intro-heuristics.md)
