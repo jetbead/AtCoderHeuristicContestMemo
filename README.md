@@ -20,7 +20,7 @@ AtCoder Heuristic Contestのメモです。
 
 ## support tool
 - kmyk/marathon-kit
-  - https://github-dotcom.gateway.web.tr/kmyk/marathon-kit
+  - https://github.com/kmyk/marathon-kit
 
 ## visualize
 - kmyk/longcontest-visualizer-framework
