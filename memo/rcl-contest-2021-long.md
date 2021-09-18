@@ -50,6 +50,7 @@
 - [48位komori3さん](https://twitter.com/komora71_/status/1436983005382254596)
 - [49位terry_u16さん](https://twitter.com/terry_u16/status/1436978268935127044)
 
+- [tomerunさん](https://twitter.com/tomerun/status/1438163487205724166)
 
 # Links
 - [agwさんTwitterまとめ](https://togetter.com/li/1771914)
