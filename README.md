@@ -43,3 +43,5 @@ AtCoder Heuristic Contestのメモです。
 - [AHC004](./memo/ahc004.md)
 - [AHC005](./memo/ahc005.md)
 - [RECRUIT 日本橋ハーフマラソン2021～増刊号～](./memo/rcl-contest-2021-long.md)
+- [HACK TO THE FUTURE 2022 予選](./memo/httf2022qual.md)
+- [京セラプログラミングコンテスト(AHC006)](./memo/ahc006.md)
