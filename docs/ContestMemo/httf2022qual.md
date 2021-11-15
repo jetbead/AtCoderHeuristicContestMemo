@@ -1,7 +1,7 @@
 # HACK TO THE FUTURE 2022 予選
 - https://atcoder.jp/contests/future-contest-2022-qual
 
-# 問題概要
+## 問題概要
 - N=1000個のタスクをM=20人のチームメンバーに割り振りたい
     - 各タスクは高々1人に割り振る
     - タスクは割り当てられると、そのタスクが終わるまで他のタスクは割り当てられない
@@ -12,10 +12,10 @@
 - できるだけ短い日数ですべてのタスクが終わるように、各日のタスクの割り当てを求めよ
     - interactive問題で、各日ごとに、完了したタスクを受け取り、その日の割当を返却するプログラムを作成せよ
 
-# 時間
+## 時間
 240時間
 
-# 解説
+## 解説
 (50位まで&発言を見つけられた方のみ)
 
 - [解説放送(終了直後)](https://www.youtube.com/watch?v=H_MuLN6L-r4)
@@ -96,10 +96,9 @@
     - https://twitter.com/lgeuwce/status/1460106180005564416
     - https://twitter.com/lgeuwce/status/1459677513970434050
 
-# Links
+## Links
 - [agwさんTwitterまとめ](https://togetter.com/li/1802420)
 - [Twitter hashtag HTTF](https://twitter.com/hashtag/HTTF)
 
 
-# 個人的メモ
-
+## 個人的メモ
