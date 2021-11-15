@@ -13,3 +13,20 @@ AtCoder Heuristic Contestに関連するメモです。
 - `ContestMemo`: 過去のコンテストの情報、解法リンク、コンテスト反省メモ
 - `Library`: 調査のまとめ、ライブラリ置き場
 - `Docs`: その他Tips、ドキュメント置き場
+
+# Contest Link
+- [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
+- [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
+
+# Useful Tool/Link
+## rating/statistics
+- AtCoder Marathon Rating History
+    - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
+- AtCoder Marathon Replay
+    - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
+- AtCoder Heuristic Statistics
+    - https://heuristic-statistics.herokuapp.com/
+- AHC Rating Simulator
+    - https://saharan.github.io/progcon/ahc-rating-sim.html
+- competitiveprogramming.info/atcoder/contests/marathon
+    - https://competitiveprogramming.info/atcoder/contests/marathon
