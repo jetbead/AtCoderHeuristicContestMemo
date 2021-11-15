@@ -1,17 +1,15 @@
-# Welcome to MkDocs
+# About
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+AtCoder Heuristic Contestに関連するメモです。
 
-## Commands
+# Disclaimer
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+!!! warning "個人的にまとめているページのため、内容が間違っている可能性があります。このページの内容やコードによって生じた損害等の一切の責任を負いかねますので、ご了承ください。また、リンクの移動先での情報やサービスについても一切責任も負いません。"
 
-## Project layout
+また、コンテスト期間中はネタバレ防止の為更新いたしません。
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+# Contents
+
+- `ContestMemo`: 過去のコンテストの情報、解法リンク、コンテスト反省メモ
+- `Library`: 調査のまとめ、ライブラリ置き場
+- `Docs`: その他Tips、ドキュメント置き場
