@@ -1,0 +1,58 @@
+div.md-footer-nav {
+  display: none;
+}
+
+.md-content {
+  max-width: 100%;
+}
+
+.md-sidebar--secondary {
+  display: none;
+}
+
+.md-header,
+.md-tabs {
+  background-color: rgba(240, 240, 240, 1);
+  color: black;
+}
+
+.md-header[data-md-state="shadow"] {
+  box-shadow: none;
+}
+
+.md-typeset a {
+  color: cornflowerblue;
+}
+
+.md-nav__title {
+  font-size: 1.5em;
+}
+
+.md-typeset mark {
+  color: #c2185c;
+  background-color: initial;
+}
+
+.md-typeset h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+  color: black;
+  /*border-bottom: 1px solid #ccc;*/
+}
+
+.md-typeset h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0 0 0.3em;
+  color: black;
+  /*border-bottom: 1px solid #ccc;*/
+}
+
+.md-typeset h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 0.3em;
+  color: black;
+  /*border-bottom: 1px solid #ccc;*/
+}
