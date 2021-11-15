@@ -11,8 +11,9 @@ AtCoder Heuristic Contestに関連するメモです。
 ## Contents
 
 - `ContestMemo`: 過去のコンテストの情報、解法リンク、コンテスト反省メモ
+- `Docs`: Tips、ドキュメント置き場
 - `Library`: 調査のまとめ、ライブラリ置き場
-- `Docs`: その他Tips、ドキュメント置き場
+
 
 ## Contest Link
 - [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
