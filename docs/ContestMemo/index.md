@@ -1,4 +1,6 @@
-# Contests Memo
+# Contest List
+
+過去のコンテスト情報と、解法リンク、コンテスト反省メモです。
 
 - [Introduction to Heuristics Contest](./intro-heuristics.md)
 - [AHC001](./ahc001.md)
