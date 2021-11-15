@@ -1,18 +1,49 @@
-site_name: My Docs
+site_name: AtCoder Heuristic Contest Memo
+
+copyright: "Copyright &copy; jetbead 2021"
+
 theme:
   name: material
-  language: 'ja'
+  language: "ja"
   feature:
     tabs: true
 
+plugins: []
+
 extra:
-  search:
-    language: 'jp'
   font:
     text: "Noto Sans JP"
     code: "Consolas"
 
+extra_css:
+  - "css/custom.css"
+
+extra_javascript:
+  - "js/extra.js"
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"
+
 use_directory_urls: false
 
-nav:
-  - Home: index.md
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
