@@ -1,5 +1,5 @@
-div.md-footer-nav {
-  display: none;
+.md-footer {
+  display: none !important;
 }
 
 .md-content {
@@ -7,7 +7,7 @@ div.md-footer-nav {
 }
 
 .md-sidebar--secondary {
-  display: none;
+  display: none !important;
 }
 
 .md-header,
