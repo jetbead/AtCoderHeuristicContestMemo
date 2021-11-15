@@ -14,7 +14,7 @@
     
     
       
-        <title>Contests Memo - AtCoder Heuristic Contest Memo</title>
+        <title>京セラプログラミングコンテスト(AtCoder Heuristic Contest 006) - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contests-memo" class="md-skip">
+        <a href="#atcoder-heuristic-contest-006" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contests Memo
+              京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)
             
           </span>
         </div>
@@ -189,21 +189,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Contests Memo
       </a>
-      
     </li>
   
 
@@ -283,11 +273,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="ahc006.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="ahc006.html" class="md-nav__link md-nav__link--active">
         京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)
       </a>
+      
     </li>
   
 
@@ -373,18 +373,94 @@
               
                 
                 
-                <h1 id="contests-memo">Contests Memo<a class="headerlink" href="#contests-memo" title="Permanent link">&para;</a></h1>
+                <h1 id="atcoder-heuristic-contest-006">京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)<a class="headerlink" href="#atcoder-heuristic-contest-006" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="intro-heuristics.html">Introduction to Heuristics Contest</a></li>
-<li><a href="ahc001.html">AHC001</a></li>
-<li><a href="ahc002.html">AHC002</a></li>
-<li><a href="ahc003.html">AHC003</a></li>
-<li><a href="ahc004.html">AHC004</a></li>
-<li><a href="ahc005.html">AHC005</a></li>
-<li><a href="rcl-contest-2021-long.html">RECRUIT 日本橋ハーフマラソン2021～増刊号～</a></li>
-<li><a href="httf2022qual.html">HACK TO THE FUTURE 2022 予選</a></li>
-<li><a href="ahc006.html">京セラプログラミングコンテスト(AHC006)</a></li>
+<li><a href="https://atcoder.jp/contests/ahc006">https://atcoder.jp/contests/ahc006</a></li>
 </ul>
+<h1 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<ul>
+<li>1000個の配達の注文があり、各注文は二次元平面(0&lt;=x,y&lt;=800)上の地点Xのレストランから地点Yへの配達依頼になっている</li>
+<li>レストランに着くと料理を受け取り、配達地点に着くと持っている料理の中から該当する料理を配達する</li>
+<li>料理はいくつでも受け取って持っておくことができる</li>
+<li>地点間の移動時間はマンハッタン距離で、総移動時間は地点間の時間の合計</li>
+<li>最初は(400,400)の地点からスタートし、最後も(400,400)の地点に戻ってくるようにする</li>
+<li>このうち、50個の注文を選び、総移動時間ができるだけ小さくなるような各地点の訪問順を求めよ</li>
+</ul>
+<h1 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>240分</p>
+<h1 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<p>(50位まで&amp;発言を見つけられた方のみ)</p>
+<ul>
+<li>1位Aquariusさん</li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1459839209464762373">2位noimiさん</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1459840657468526601">https://twitter.com/noimi_kyopro/status/1459840657468526601</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1459918745283928073">https://twitter.com/noimi_kyopro/status/1459918745283928073</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1459920996920487940">https://twitter.com/noimi_kyopro/status/1459920996920487940</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1459949128968851461">https://twitter.com/noimi_kyopro/status/1459949128968851461</a></li>
+<li>3位WA_TLEさん</li>
+<li><a href="https://twitter.com/tomerun/status/1459840216932712449">4位tomerunさん</a></li>
+<li><a href="https://twitter.com/kawatea03/status/1459840905482240000">5位kawateaさん</a></li>
+<li><a href="https://twitter.com/C7C7LL/status/1459839493377171457">6位c7c7さん</a></li>
+<li>7位krさん</li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1459842859079589889">8位hamamuさん</a></li>
+<li>9位asi1024さん</li>
+<li><a href="https://twitter.com/arimasenu/status/1459839073485410312">10位iehnさん</a></li>
+<li><a href="https://twitter.com/kens_kyopro/status/1459841740333285376">11位kensさん</a></li>
+<li><a href="https://twitter.com/takumi152/status/1459840518389911552">12位takumi152さん</a></li>
+<li><a href="https://twitter.com/threecourse/status/1459839438989656069">13位threecourseさん</a></li>
+<li><a href="https://twitter.com/ethylene_66/status/1459842462001016832">14位cuthbertさん</a></li>
+<li>15位E869120さん</li>
+<li>16位yokozuna57さん</li>
+<li><a href="https://twitter.com/square10011/status/1459841650155393026">17位square1001さん</a></li>
+<li>18位Jirotechさん</li>
+<li><a href="https://twitter.com/shibh308/status/1459839246836330497">19位shibh308さん</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1459839669798338560">20位terry_u16さん</a></li>
+<li><a href="https://twitter.com/tsukasa__diary/status/1459839733715304448">21位tsukasa_diaryさん</a></li>
+<li><a href="https://twitter.com/t33f/status/1459839346966597637">22位kozimaさん</a></li>
+<li><a href="https://twitter.com/t33f/status/1459839742468497415">https://twitter.com/t33f/status/1459839742468497415</a></li>
+<li><a href="https://twitter.com/t33f/status/1459840276344696833">https://twitter.com/t33f/status/1459840276344696833</a></li>
+<li><a href="https://twitter.com/t33f/status/1459841454075891713">https://twitter.com/t33f/status/1459841454075891713</a></li>
+<li><a href="https://twitter.com/t33f/status/1459842437694689285">https://twitter.com/t33f/status/1459842437694689285</a></li>
+<li><a href="https://twitter.com/t33f/status/1459843482193829888">https://twitter.com/t33f/status/1459843482193829888</a></li>
+<li><a href="https://twitter.com/t33f/status/1459844027881177094">https://twitter.com/t33f/status/1459844027881177094</a></li>
+<li>23位torisasamiさん</li>
+<li>24位mtsdさん</li>
+<li><a href="https://twitter.com/iwashi31/status/1459838941360656385">25位iwashi31さん</a></li>
+<li><a href="https://twitter.com/gyoooouzasushi/status/1459841422778339328">26位gyouzasushiさん</a></li>
+<li>27位nakari_1124さん</li>
+<li><a href="https://twitter.com/jutama11952680/status/1459845123588517888">28位jutamaさん</a></li>
+<li>29位Haaさん</li>
+<li><a href="https://twitter.com/itigo_purokonn/status/1459839928536240130">30位itigoさん</a></li>
+<li><a href="https://twitter.com/tsukammo/status/1459839888547663874">31位tsukammoさん</a></li>
+<li><a href="https://twitter.com/iray_tno/status/1459883622249353216">32位iraytnoさん</a></li>
+<li><a href="https://twitter.com/iray_tno/status/1459840051282472969">https://twitter.com/iray_tno/status/1459840051282472969</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1459841231207370755">33位bowwowforeachさん</a></li>
+<li>34位hteさん</li>
+<li>35位hiro116sさん</li>
+<li><a href="https://twitter.com/CUteNeuron/status/1459842817103384581">36位cunitacさん</a></li>
+<li><a href="https://twitter.com/kusano_k/status/1459840275178610688">37位kusanoさん</a></li>
+<li><a href="https://twitter.com/AtOjiCoder/status/1459844820600598533">38位OjiCoderさん</a></li>
+<li>39位ytknさん</li>
+<li><a href="https://twitter.com/snow39_y/status/1459842731778330627">40位snow39さん</a></li>
+<li><a href="https://twitter.com/shinh/status/1459858681122615296">41位shinhさん</a></li>
+<li><a href="https://twitter.com/298slider/status/1459841416536854534">42位t98sliderさん</a></li>
+<li><a href="https://twitter.com/kabipoyo/status/1459841155978473477">43位kabipoyoさん</a></li>
+<li><a href="https://twitter.com/0xff00ff00/status/1459841524196261888">44位makibishi0212さん</a></li>
+<li><a href="https://twitter.com/nico_shindannin/status/1459841082884190213">45位shindanninさん</a></li>
+<li><a href="https://www.youtube.com/watch?v=Tv2vmoCIcXg">https://www.youtube.com/watch?v=Tv2vmoCIcXg</a></li>
+<li>46位ichyoさん</li>
+<li><a href="https://twitter.com/colun/status/1459846244847677452">47位colunさん</a></li>
+<li>48位Shibuyapさん</li>
+<li>49位Romannさん</li>
+<li><a href="https://twitter.com/ebicochineal/status/1459837554685976583">50位ebicochinealさん</a></li>
+<li><a href="https://twitter.com/wata_orz/status/1459840344062050304">wataさん解</a></li>
+</ul>
+<h1 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://togetter.com/li/1802420">agwさんTwitterまとめ</a></li>
+<li><a href="https://twitter.com/hashtag/AHC">Twitter hashtag AHC</a></li>
+</ul>
+<h1 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
                 
               
               
@@ -404,7 +480,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="前: About" rel="prev">
+        <a href="ahc005.html" class="md-footer__link md-footer__link--prev" aria-label="前: AtCoder Heuristic Contest 005" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -413,20 +489,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              About
+              AtCoder Heuristic Contest 005
             </div>
           </div>
         </a>
       
       
         
-        <a href="ahc001.html" class="md-footer__link md-footer__link--next" aria-label="次: AtCoder Heuristic Contest 001" rel="next">
+        <a href="httf2022qual.html" class="md-footer__link md-footer__link--next" aria-label="次: HACK TO THE FUTURE 2022 予選" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              AtCoder Heuristic Contest 001
+              HACK TO THE FUTURE 2022 予選
             </div>
           </div>
           <div class="md-footer__button md-icon">
