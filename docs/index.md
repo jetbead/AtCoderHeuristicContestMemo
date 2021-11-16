@@ -11,6 +11,7 @@ AtCoder Heuristic Contestに関連するメモです。
 ## Contents
 
 - `ContestMemo`: 過去のコンテストの情報、解法リンク、コンテスト反省メモ
+    - [Contest List](./ContestMemo/index.md)
 - `Docs`: Tips、ドキュメント置き場
 - `Library`: 調査のまとめ、ライブラリ置き場
 
