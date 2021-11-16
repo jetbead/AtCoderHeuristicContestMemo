@@ -15,9 +15,10 @@ AtCoder Heuristic Contestに関連するメモです。
 - `Library`: 調査のまとめ、ライブラリ置き場
 
 
-## Contest Link
+## Official Link
 - [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
-- [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
+- [AHC Ranking(beta)](https://www.dropbox.com/s/j276tgd7izpc40u/ranking.csv?dl=0)
+    - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
 
 ## Useful Tool/Link
 ### rating/statistics
