@@ -19,8 +19,10 @@
 (50位まで&発言を見つけられた方のみ)
 
 - [解説放送(終了直後)](https://www.youtube.com/watch?v=H_MuLN6L-r4)
+- [解説まとめ(公式)](https://atcoder.jp/contests/future-contest-2022-qual/editorial/2931?lang=ja)
 - [1位eivourさん](https://twitter.com/contramundum2/status/1459478557210537985)
     - https://twitter.com/contramundum2/status/1459487317631012865
+    - https://qiita.com/contramundum/items/52609b5a4c943bc6a275
 - [2位phocomさん](https://twitter.com/_phocom/status/1459461706619699201)
 - [3位toameさん](https://twitter.com/41Toame/status/1459861272049041412)
 - [4位bowwowforeachさん](https://twitter.com/bowwowforeach/status/1459466965433470977)
