@@ -496,6 +496,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    近傍
+  </a>
+  
+    <nav class="md-nav" aria-label="近傍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-opt" class="md-nav__link">
+    2-opt近傍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kick" class="md-nav__link">
+    kick近傍
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -545,6 +572,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    近傍
+  </a>
+  
+    <nav class="md-nav" aria-label="近傍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-opt" class="md-nav__link">
+    2-opt近傍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kick" class="md-nav__link">
+    kick近傍
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -583,6 +637,33 @@
 </li>
 <li>貪欲法、山登り法、焼きなまし、ビームサーチ、これらの間の関係について(kmykさん)<ul>
 <li><a href="https://kmyk.github.io/blog/blog/2019/03/07/local-search-and-greedy/">https://kmyk.github.io/blog/blog/2019/03/07/local-search-and-greedy/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">近傍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="2-opt">2-opt近傍<a class="headerlink" href="#2-opt" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/2-opt">https://en.wikipedia.org/wiki/2-opt</a></li>
+<li>巡回セールスマン問題などで、2点を交換する2-swap近傍は4辺変化してしまうが、そこを2辺変化させるような近傍</li>
+<li>実装方法にもよるが、訪問点の順を状態に持っている場合は、ある範囲をreverseする感じになる<ul>
+<li>O(N)程度かかる</li>
+</ul>
+</li>
+<li>その他<ul>
+<li>k-opt(3-opt, 4-opt, double-bridge)</li>
+<li>Lin-Kernighan Heuristic</li>
+</ul>
+</li>
+</ul>
+<h3 id="kick">kick近傍<a class="headerlink" href="#kick" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Introduction to Heuristics Contest解説 p.7<ul>
+<li><a href="https://img.atcoder.jp/intro-heuristics/editorial.pdf">https://img.atcoder.jp/intro-heuristics/editorial.pdf</a></li>
+</ul>
+</li>
+<li>k-swap-kick<ul>
+<li>TSPなどで、k個のセグメントs1,s2,...,skをs1,sk,...,s2にする感じ</li>
+<li>2-optではたどり着くのが難しいようなdouble bridgeみたいな形にキックする</li>
 </ul>
 </li>
 </ul>
