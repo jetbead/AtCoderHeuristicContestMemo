@@ -34,6 +34,7 @@ AtCoderにて新たに定期的に開催されるプログラミングコンテ�
 - [マラソンマッチの取り組み方(colunさん)](http://www.colun.net/archives/294)
 - [AHC のおはなし(NNMochiさん)](https://trap.jp/post/1304/)
 - [Topcoderマラソンマッチの探索問題で重要なこと(takapt0226さん)](https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21)
+- [競プロ〜ヒューリスティック/マラソン事始め〜(tanaka-aさん)](https://qiita.com/tanaka-a/items/3c2a1bca63759ec71e7f)
 
 ## 感想戦、解説記事
 - コンテスト終了後は、他の人の解法はなどがtwitterやブログなどで共有されることが多い
