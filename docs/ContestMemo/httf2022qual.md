@@ -78,6 +78,7 @@
     - https://twitter.com/itigo_purokonn/status/1459469271629582343
 - [38位Trineutronさん](https://twitter.com/trineutron/status/1459471474805198848)
 - 39位uminorosujinさん
+    - https://uminorosu.hatenablog.com/entry/2021/11/23/151939
 - [40位wanuiさん](https://twitter.com/gmeriaog/status/1459480733433548802)
 - [41位keep_OCさん](https://twitter.com/keep_OC/status/1459462090713088000)
 - 42位cirno3153さん
