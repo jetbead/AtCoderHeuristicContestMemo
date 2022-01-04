@@ -34,7 +34,7 @@
 }
 
 .md-typeset h1 {
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-weight: bold;
   margin: 0 0 0.5em;
   color: black;
@@ -42,7 +42,7 @@
 }
 
 .md-typeset h2 {
-  font-size: 2em;
+  font-size: 1.3em;
   font-weight: bold;
   margin: 0 0 0.3em;
   color: black;
@@ -50,12 +50,21 @@
 }
 
 .md-typeset h3 {
-  font-size: 1.5em;
+  font-size: 1.0em;
   font-weight: bold;
   margin: 0 0 0.3em;
   color: black;
   /*border-bottom: 1px solid #ccc;*/
 }
+
+.md-typeset ul li {
+  margin-bottom: 0.15em;
+}
+.md-typeset ul li ul {
+  margin: 0;
+}
+
+
 
 /* for card */
 .box {
