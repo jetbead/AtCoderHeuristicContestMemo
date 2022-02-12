@@ -41,3 +41,4 @@ AtCoderにて新たに定期的に開催されるプログラミングコンテ�
 
 ## 資料集
 - [マラソンマッチの資料集(threecourseさん)](https://threecourse.hatenablog.com/entry/%3Fp%3D1164)
+- [ヒューリスティック最適化資料集(threecourseさん)](https://heuristic-ja.growi.cloud/)
