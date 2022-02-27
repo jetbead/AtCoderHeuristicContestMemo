@@ -1,0 +1,1164 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.2">
+    
+    
+      
+        <title>MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008) - AtCoder Heuristic Contest Memo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mc-digital2022atcoder-heuristic-contest-008" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AtCoder Heuristic Contest Memo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AtCoder Heuristic Contest Memo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          ContestMemo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ContestMemo" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          ContestMemo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Contest List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc001.html" class="md-nav__link">
+        AtCoder Heuristic Contest 001
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc002.html" class="md-nav__link">
+        AtCoder Heuristic Contest 002
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc003.html" class="md-nav__link">
+        AtCoder Heuristic Contest 003
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc004.html" class="md-nav__link">
+        AtCoder Heuristic Contest 004
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc005.html" class="md-nav__link">
+        AtCoder Heuristic Contest 005
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc006.html" class="md-nav__link">
+        京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc007.html" class="md-nav__link">
+        THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ahc008.html" class="md-nav__link md-nav__link--active">
+        MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    問題概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    時間
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    戦略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    柵の配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    待受戦略での塞ぐタイミング
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    犬、猫への対処
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    全ペット捕獲率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizer" class="md-nav__link">
+    visualizer共有
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="httf2022qual.html" class="md-nav__link">
+        HACK TO THE FUTURE 2022 予選
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro-heuristics.html" class="md-nav__link">
+        Introduction to Heuristics Contest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rcl-contest-2021-long.html" class="md-nav__link">
+        RECRUIT 日本橋ハーフマラソン2021～増刊号～
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/how_to_get_started.html" class="md-nav__link">
+        How to get started!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/support_tool.html" class="md-nav__link">
+        Support Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/tips.html" class="md-nav__link">
+        Tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/visualizer.html" class="md-nav__link">
+        Visualizer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Library" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/glossary.html" class="md-nav__link">
+        用語集
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/sa.html" class="md-nav__link">
+        焼きなまし
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/stage_array.html" class="md-nav__link">
+        Stage機能付きValue/Array
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/timer.html" class="md-nav__link">
+        Timer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    問題概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    時間
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    戦略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    柵の配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    待受戦略での塞ぐタイミング
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    犬、猫への対処
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    全ペット捕獲率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizer" class="md-nav__link">
+    visualizer共有
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="mc-digital2022atcoder-heuristic-contest-008">MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)<a class="headerlink" href="#mc-digital2022atcoder-heuristic-contest-008" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://atcoder.jp/contests/ahc008">https://atcoder.jp/contests/ahc008</a></li>
+</ul>
+<h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>30*30マスのグリッド上に、N(10～20)匹のペットとM(5～10)人の人がいる</li>
+<li>人は、移動または柵を設置することができる<ul>
+<li>ただし、柵はペットに隣接するか、ペットか人がいると設置できない</li>
+</ul>
+</li>
+<li>ペットは、種類によってターンでの移動規則が異なる<ul>
+<li>牛、豚、兎は、移動距離が異なるランダムウォーク</li>
+<li>犬は、誰か人に向かうような動き＋ランダム移動</li>
+<li>猫は、どこか目的地に向かうような動き＋ランダム移動</li>
+</ul>
+</li>
+<li>300ターンの間、人の移動→ペットの移動というのを繰り返す</li>
+<li>最終的に、各人について、自分がいる領域のサイズが広く、その領域内にペットができるだけ少ないようにせよ</li>
+</ul>
+<h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>343時間</p>
+<h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>(50位まで&amp;発言を見つけられた方のみ)</p>
+<ul>
+<li><a href="https://atcoder.jp/contests/ahc008/editorial">解説(公式)</a></li>
+<li><a href="https://twitter.com/wata_orz/status/1497512877346881540">writer解(wataさん)</a><ul>
+<li><a href="https://twitter.com/wata_orz/status/1497514603751751681">https://twitter.com/wata_orz/status/1497514603751751681</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/wleite/status/1497575630736609285">1位wleiteさん</a></li>
+<li>2位ynasuさん</li>
+<li><a href="https://twitter.com/terry_u16/status/1497512298100838400">3位terry_u16さん</a></li>
+<li><a href="https://twitter.com/_simanman/status/1497515640965320705">4位simanさん</a></li>
+<li><a href="https://twitter.com/_phocom/status/1497514149101785091">5位phocomさん</a><ul>
+<li><a href="https://twitter.com/_phocom/status/1497518089579077632">https://twitter.com/_phocom/status/1497518089579077632</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/shift_neji/status/1497515949918134272">6位nejinejiさん</a></li>
+<li><a href="https://twitter.com/inani_waon/status/1497512229020712964">7位NKTさん</a><ul>
+<li><a href="https://inaniwa.hatenablog.com/entry/2022/02/26/223424">https://inaniwa.hatenablog.com/entry/2022/02/26/223424</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/contramundum2/status/1497512638741303298">8位eivourさん</a><ul>
+<li><a href="https://twitter.com/contramundum2/status/1497517356117282822">https://twitter.com/contramundum2/status/1497517356117282822</a></li>
+<li><a href="https://twitter.com/contramundum2/status/1497540918202679297">https://twitter.com/contramundum2/status/1497540918202679297</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/highjump_425/status/1497517421267017731">9位highjumpさん</a></li>
+<li><a href="https://twitter.com/dedentete/status/1497534856490020868">10位Denteさん</a></li>
+<li><a href="https://twitter.com/ymatsux_ac/status/1497512006307364869">11位ymatsuxさん</a></li>
+<li><a href="https://qiita.com/tanaka-a/items/5c53588d3d14575b523e">12位rabotさん</a></li>
+<li><a href="https://twitter.com/tsukammo/status/1497512484059578369">13位tsukammoさん</a><ul>
+<li><a href="https://hackmd.io/cC9PxiYpRwGZh0tRoE6RQQ?view">https://hackmd.io/cC9PxiYpRwGZh0tRoE6RQQ?view</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/iwashi31/status/1497512290291449856">14位iwashi31さん</a></li>
+<li>15位nagissさん</li>
+<li><a href="https://twitter.com/bowwowforeach/status/1497514444599230464">16位bowwowforeachさん</a></li>
+<li><a href="https://twitter.com/fugusuki/status/1497795705020518408">17位fugusukiさん</a></li>
+<li>18位sash0さん</li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1497519660048158721">19位hamamuさん</a><ul>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1497523260145102849">https://twitter.com/hamamu_kyopro/status/1497523260145102849</a></li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1497525420178415618">https://twitter.com/hamamu_kyopro/status/1497525420178415618</a></li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1497623765538127872">https://twitter.com/hamamu_kyopro/status/1497623765538127872</a></li>
+</ul>
+</li>
+<li>20位saky0080さん</li>
+<li><a href="https://twitter.com/tomerun/status/1497513841261187074">21位tomerunさん</a></li>
+<li>22位zachさん</li>
+<li><a href="https://twitter.com/Shun___PI/status/1497512532470546438">23位Shun_PIさん</a></li>
+<li>24位m_mさん</li>
+<li>25位rmizutaさん</li>
+<li><a href="https://twitter.com/eijirou_kyopro/status/1497540026279759874">26位eijirouさん</a><ul>
+<li><a href="https://eijirou-kyopro.hatenablog.com/entry/2022/02/27/003135">https://eijirou-kyopro.hatenablog.com/entry/2022/02/27/003135</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/y_kawano/status/1497513962161672192">27位y_kawanoさん</a></li>
+<li><a href="https://twitter.com/PonponJuice0/status/1497513510141501442">28位ponjuiceさん</a></li>
+<li>29位ssaattooさん</li>
+<li><a href="https://twitter.com/KaggleSaito/status/1497518238086828032">30位saitodevel01さん</a><ul>
+<li><a href="https://twitter.com/KaggleSaito/status/1497521822903857152">https://twitter.com/KaggleSaito/status/1497521822903857152</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/Jirosho111/status/1497511844897955840">31位merhornさん</a><ul>
+<li><a href="https://note.com/syamashi/n/n1c0a02cf3911">https://note.com/syamashi/n/n1c0a02cf3911</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/dedentete/status/1497534856490020868">32位kusanoさん</a><ul>
+<li><a href="https://qiita.com/kusano_k/items/0bfc59b0273a8b970f92">https://qiita.com/kusano_k/items/0bfc59b0273a8b970f92</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/shr_pc/status/1497513705290219521">33位saharanさん</a><ul>
+<li><a href="https://twitter.com/shr_pc/status/1497515755138850817">https://twitter.com/shr_pc/status/1497515755138850817</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/takumi152/status/1497603940027826177">34位takumi152さん</a></li>
+<li><a href="https://twitter.com/whimsicott_opu/status/1497513118871605249">35位tokotoko7777さん</a><ul>
+<li><a href="https://twitter.com/whimsicott_opu/status/1497516189593247744">https://twitter.com/whimsicott_opu/status/1497516189593247744</a></li>
+<li><a href="https://twitter.com/whimsicott_opu/status/1497518190821515264">https://twitter.com/whimsicott_opu/status/1497518190821515264</a></li>
+</ul>
+</li>
+<li>36位hiro116sさん</li>
+<li>37位ikomaさん</li>
+<li><a href="https://twitter.com/kiri8128/status/1497511759539810311">38位Kiri8128さん</a><ul>
+<li><a href="https://atcoder.jp/contests/ahc008/submissions/29653897">https://atcoder.jp/contests/ahc008/submissions/29653897</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1497515374325420036">https://twitter.com/kiri8128/status/1497515374325420036</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/yochan_tech/status/1497514462479224838">39位yochanさん</a></li>
+<li><a href="https://twitter.com/Jiro_tech15/status/1497512649432518656">40位Jirotechさん</a></li>
+<li><a href="https://twitter.com/nrvkpr/status/1497513984202731524">41位nrvftさん</a><ul>
+<li><a href="https://twitter.com/nrvkpr/status/1497514873109975041">https://twitter.com/nrvkpr/status/1497514873109975041</a></li>
+</ul>
+</li>
+<li>42位Aquariusさん</li>
+<li><a href="https://twitter.com/Hufnium/status/1497515738193862659">43位Hufniumさん</a></li>
+<li>44位dn6049949さん</li>
+<li><a href="https://twitter.com/yupiteru_kun/status/1497595313468555265">45位yupiteruさん</a><ul>
+<li><a href="https://twitter.com/yupiteru_kun/status/1497594496577540097">https://twitter.com/yupiteru_kun/status/1497594496577540097</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/Yu_212_MC/status/1497518767160455169">46位Yu_212さん</a></li>
+<li>47位cunitacさん</li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1497512650640482304">48位zattさん</a></li>
+<li>49位mtsdさん</li>
+<li><a href="https://twitter.com/kens_kyopro/status/1497517421707796480">50位kensさん</a></li>
+</ul>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://togetter.com/li/1851279">agwさんTwitterまとめ</a></li>
+<li><a href="https://twitter.com/hashtag/AHC008">Twitter hashtag AHC008</a></li>
+</ul>
+<h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>2週間だったのもあり、戦略の自由度が高く、また、スコアを出すためには結構作りきらないといけないため重実装気味な感じの問題だった</li>
+<li>最適化というより、ルールベース作成コンテストという感じ<ul>
+<li><a href="https://twitter.com/chokudai/status/1497546485495320583">https://twitter.com/chokudai/status/1497546485495320583</a></li>
+</ul>
+</li>
+<li>今回は、待受戦略(固定配置、小部屋たくさん)が有効で、上位に多かった模様</li>
+</ul>
+<h3 id="_5">戦略<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>領域を囲い込むか、ペットを領域外に出すか<ul>
+<li>囲い込むように領域を作る場合、ペット数が結構多く、移動しまくるのもあり、大きく作ることが難しい</li>
+<li>今回は、罠を張って、領域外にするような方法が有効だった模様</li>
+</ul>
+</li>
+<li>待受戦略か、追込戦略か<ul>
+<li>ざっくり、部屋(罠)を用意して入ったペットを捕らえるか、こちらから追い込んで捕らえるか</li>
+<li>ただ、ほとんどのペットは人の配置に依存しない＆ランダムウォークなので、誘導するのが難しい</li>
+<li>今回の場合、実装難易度も含めて待受戦略を取った人が多かった模様<ul>
+<li>不定形追込戦略が良さそうに見えるけど、細かいところが非自明的なのと、実装難易度が高い</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">柵の配置<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>固定形<ul>
+<li>待受戦略の場合、短冊/二型(縦、横、斜め)、CC型、SS型、O型/□型などで部屋を作っておき、そこに入ったら塞ぐ</li>
+<li>基本は、1手か2手(2人で1手、挟み撃ち)で捕獲できるような部屋<ul>
+<li>それ以上の手数(例えば□型で4手で捕獲)だと、部屋サイズが大きくなりがちなのと人の移動/連携が大変など</li>
+</ul>
+</li>
+<li>部屋の空間は大きく取ってしまうと無駄が多くなるため、幅1、長さ3～5程度のをたくさん(複数列)用意するのが効率的だった模様</li>
+<li>斜めか、軸に並行かだと、あまり変わらないみたいだけど、その後の動きの実装の問題からか、軸に並行な配置が多かった模様</li>
+<li>また、固定形だと、理論値などの予想がしやすい</li>
+</ul>
+</li>
+<li>不定形<ul>
+<li>追込戦略の場合、複数人でいっしょに動いて一気に塞ぐ、みたいな感じで捕らえる</li>
+<li>(一応、300ターン以内にほとんどのペットをたどることは可能みたいだけど、ペットが多いと回りきれない)</li>
+<li>一方、少ないターンで捉えられないと、無駄な柵を配置しまくって移動や柵設置を妨げやすい<ul>
+<li>ペットが毎回大きく動くので、そのターンで捉えられる配置と次のターンで捉えられる配置が結構ズレる</li>
+<li>無駄な柵が多くなるとスコアも低くなる</li>
+</ul>
+</li>
+<li>雰囲気的には、追込戦略＆不定形が無駄な柵設置も少なく高スコアを狙えそうに見えるが、実装難易度が結構高い<ul>
+<li>複数人でのペットの追いかけ方や柵の配置など、どうするか自明ではなく、難しい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>領域分割形<ul>
+<li>真ん中とかで2分割や4分割して、ペットがいたら塞ぐ、や、ペットが少ない方を選ぶ、ような戦略(またはそれを階層構造的に処理する)<ul>
+<li>2分割の場合、理論的には、領域内のペットが少ない方を選べるので必ずペット数が半分以下にすることができてうれしい</li>
+<li>が、領域サイズが&frac12;ずつになってしまうため、スコアの上限値の減り方も大きく、基本的に数回は分割が必要なため、高スコアを取るのは難しい</li>
+</ul>
+</li>
+<li>また、木構造的になるため、犬猫への対処が難しい</li>
+</ul>
+</li>
+<li>配置パターンはいくつか用意して、そこからN,Mに応じて選ぶ人が多かった模様</li>
+<li>領域が木形状になってしまう場合<ul>
+<li>今回のスコア計算式だと、人はみんな同じ領域内にいたほうがよいため、2領域にしたり、誰かを犠牲にしてみたいなのだと高得点が狙いにくい</li>
+<li>木形状(1手で塞ぐ部屋のみとか)の場合、葉の部分で捉えたいが、犬や猫はそこに行く可能性が低く、挟み込めないので、捉えるのが難しい</li>
+</ul>
+</li>
+<li>複数人での柵設置の最適化<ul>
+<li><a href="https://twitter.com/terry_u16/status/1497512589529522178">https://twitter.com/terry_u16/status/1497512589529522178</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">待受戦略での塞ぐタイミング<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>使う部屋数が少ないほどうれしいので、部屋にいるペット数が多い部屋ほどうれしいが、遠くの部屋にペットがいる場合、塞ぐために移動している間に状況が変化してしまう</li>
+<li>また、部屋数が少なかったり、部屋を先に塞ぎまくると、部屋に入れずに通路にとどまるペットが出やすくなる<ul>
+<li>ので、部屋数が多く、ある程度塞いでる部屋があっても入りやすい配置がよかった模様</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">犬、猫への対処<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>犬は、人の配置に依存するので、2手挟み撃ちできる部屋のその両端に人が立っているとその間を行き来するような感じになるので捕獲できる<ul>
+<li>ただ、先に塞ごうとすると、犬が来るまで「待ち」が発生するので、無駄なターン消費(50～100ターンぐらい？)をしてしまう</li>
+<li>(ここでターンを使ってしまうと、他の柵の設置にターンが使えずに、大きな部屋(幅2とか)ぐらいしか作りにくい)</li>
+</ul>
+</li>
+<li>猫は、フィールドを二分割して、その間に通路を作ると、高確率でその間を行き来するので、捕獲できる<ul>
+<li>似たような話で、第2回RCO日本橋ハーフマラソン本戦Aの、ランダムな2点間の移動距離を最大化する問題でも二分割してその間を通らせる解法があったのを思い出した</li>
+<li><a href="https://twitter.com/yowa/status/972414256514662401">https://twitter.com/yowa/status/972414256514662401</a></li>
+</ul>
+</li>
+<li>全体を真ん中で2分割し、その間に通路を作るような設置が有効<ul>
+<li>部屋をたくさん用意しているケースでは、通路のみで空間を分割している感じに相当</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9">全ペット捕獲率<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>スコアがざっくり「柵の配置数」と「ペットの捕獲率」に依存していて、捕獲失敗はスコアに大きく影響する</li>
+<li>最上位層はペットの捕獲失敗はほぼなかった模様(2%程度)<ul>
+<li><a href="https://twitter.com/terry_u16/status/1497600215217762305">https://twitter.com/terry_u16/status/1497600215217762305</a></li>
+</ul>
+</li>
+<li>部屋に入ってくれないケース(通路にずっといる)への対処(緊急捕獲モード)</li>
+<li>270ターン(移動距離分)ぐらいの最終盤で捕獲できていないペットを強制的に捕獲しにいく</li>
+</ul>
+<h3 id="_10">その他<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>300ターンは結構短い<ul>
+<li>柵配置するにしても、適当に人に割り当てると移動距離が伸びたりで無駄ターンを作りやすい</li>
+<li>ギリギリいろんな戦略がありえる制約で、犬や猫も含めて、ここらへんの制約調整がすごい</li>
+</ul>
+</li>
+<li>人の動き<ul>
+<li>柵の配置が固定形の場合、人の動きを「道路/レーン上のみ」などに制限すると実装しやすい</li>
+<li>行ったり来たりとか、ぐるぐる回らせるとかも</li>
+</ul>
+</li>
+</ul>
+<h3 id="visualizer">visualizer共有<a class="headerlink" href="#visualizer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>結構最初の方からいろんな戦略/配置が共有されていた<ul>
+<li><a href="https://twitter.com/fkyrz_0111/status/1493247255758790659">https://twitter.com/fkyrz_0111/status/1493247255758790659</a></li>
+<li><a href="https://twitter.com/yuusanlondon/status/1492697637052633090">https://twitter.com/yuusanlondon/status/1492697637052633090</a></li>
+<li><a href="https://twitter.com/matsu7874/status/1492446213035405318">https://twitter.com/matsu7874/status/1492446213035405318</a></li>
+<li><a href="https://twitter.com/raclamusi/status/1492841923190476800">https://twitter.com/raclamusi/status/1492841923190476800</a></li>
+<li><a href="https://twitter.com/takoshiiiiiiiii/status/1492788191195447298">https://twitter.com/takoshiiiiiiiii/status/1492788191195447298</a></li>
+<li><a href="https://twitter.com/arimasenu/status/1492871668922216448">https://twitter.com/arimasenu/status/1492871668922216448</a></li>
+<li><a href="https://twitter.com/arimasenu/status/1495032396563226625">https://twitter.com/arimasenu/status/1495032396563226625</a></li>
+<li><a href="https://twitter.com/arimasenu/status/1492766522699583492">https://twitter.com/arimasenu/status/1492766522699583492</a></li>
+<li><a href="https://twitter.com/ValGrowth/status/1494933680820977666">https://twitter.com/ValGrowth/status/1494933680820977666</a></li>
+</ul>
+</li>
+<li>配置パターンなど思いつかないと辛いので、良い刺激/参考になってよかったと思う<ul>
+<li>今回の場合、結構スコアが出ている人のも公開されていて、それを参考に改良していくという戦略も有効だったかも</li>
+</ul>
+</li>
+<li>一方、今回は固定形かつseed=0と同じ配置でも有効で、パターンがバレると真似した人が上位に来やすくなってしまう(見た人が有利)<ul>
+<li>お絵かきなどで情報を発信することもできるので、悪意があるとゲーム性が壊れてしまう恐れ</li>
+<li>コンテスト後の公式アンケートでも、良し悪しについてアンケートされていた</li>
+</ul>
+</li>
+<li>お絵かき<ul>
+<li><a href="https://twitter.com/kusano_k/status/1492549075828625410">https://twitter.com/kusano_k/status/1492549075828625410</a></li>
+<li><a href="https://twitter.com/Kyo_s_s/status/1494962071494361088">https://twitter.com/Kyo_s_s/status/1494962071494361088</a></li>
+<li><a href="https://twitter.com/fumuumuf/status/1493155122700238849">https://twitter.com/fumuumuf/status/1493155122700238849</a></li>
+<li><a href="https://twitter.com/satanic0258/status/1492398070700851202">https://twitter.com/satanic0258/status/1492398070700851202</a></li>
+<li><a href="https://twitter.com/python05238919/status/1494172514133577728">https://twitter.com/python05238919/status/1494172514133577728</a></li>
+<li><a href="https://twitter.com/bayashiko_kpr/status/1494331187175002114">https://twitter.com/bayashiko_kpr/status/1494331187175002114</a></li>
+<li><a href="https://twitter.com/ozy4dm/status/1494843053261332480">https://twitter.com/ozy4dm/status/1494843053261332480</a></li>
+<li><a href="https://twitter.com/ozy4dm/status/1497511790800158721">https://twitter.com/ozy4dm/status/1497511790800158721</a></li>
+<li><a href="https://twitter.com/Suppli_Lion/status/1496456768163311616">https://twitter.com/Suppli_Lion/status/1496456768163311616</a></li>
+</ul>
+</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="フッター">
+      
+        
+        <a href="ahc007.html" class="md-footer__link md-footer__link--prev" aria-label="前: THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                前
+              </span>
+              THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="httf2022qual.html" class="md-footer__link md-footer__link--next" aria-label="次: HACK TO THE FUTURE 2022 予選" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              HACK TO THE FUTURE 2022 予選
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; jetbead 2021
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9f3ca3d1.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
