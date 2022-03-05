@@ -60,7 +60,8 @@
     - https://saharan.github.io/progcon/ahc-rating-sim.html
 - competitiveprogramming.info/atcoder/contests/marathon
     - https://competitiveprogramming.info/atcoder/contests/marathon
-
+- AtCoder Heuristic Rating Estimator
+    - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
 
 ## Disclaimer
 
