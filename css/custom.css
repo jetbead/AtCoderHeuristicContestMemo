@@ -20,6 +20,10 @@
   box-shadow: none;
 }
 
+.md-typeset {
+  font-size: 0.6em;
+}
+
 .md-typeset a {
   color: cornflowerblue;
 }
