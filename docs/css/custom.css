@@ -6,6 +6,10 @@
   max-width: 100%;
 }
 
+.md-nav__title {
+  display: none !important;
+}
+
 .md-sidebar--secondary {
   display: none !important;
 }
@@ -54,14 +58,15 @@
 }
 
 .md-typeset h3 {
-  font-size: 1.0em;
+  font-size: 1em;
   font-weight: bold;
   margin: 0 0 0.3em;
   color: black;
   /*border-bottom: 1px solid #ccc;*/
 }
 
-.md-typeset ol li :-webkit-any(ul,ol), .md-typeset ul li :-webkit-any(ul,ol) {
+.md-typeset ol li :-webkit-any(ul, ol),
+.md-typeset ul li :-webkit-any(ul, ol) {
   margin-bottom: 0.3em;
   margin-top: 0em;
 }
@@ -71,8 +76,6 @@
 .md-typeset ul li ul {
   margin: 0;
 }
-
-
 
 /* for card */
 .box {
@@ -129,5 +132,5 @@
   color: #6bb6ff;
 }
 .card-content p {
-  margin-bottom:0;
+  margin-bottom: 0;
 }
