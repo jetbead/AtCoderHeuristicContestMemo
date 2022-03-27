@@ -1,23 +1,24 @@
-# Stage機能付きValue/Array
+# Stage 機能付き Value/Array
 
 ## 概要
 
-- 焼きなましなどで、変数や配列に対して1回だけundo操作を実装したい場合がある
-- これを簡単に実装するために、操作に対して、commitで反映、resetで1つ前のcommit状態に戻す機能を持たせたクラス
-    - `StageValue`: stage機能付き変数
-    - `StageArray`: stage機能付き配列
+- 焼きなましなどで、変数や配列に対して 1 回だけ undo 操作を実装したい場合がある
+- これを簡単に実装するために、操作に対して、commit で反映、reset で 1 つ前の commit 状態に戻す機能を持たせたクラス
+  - `StageValue`: stage 機能付き変数
+  - `StageArray`: stage 機能付き配列
 
 ## 計算量
+
 - `set()`: $O(1)$
-    - 値をセット
+  - 値をセット
 - `add()`: $O(1)$
-    - 値に追加
+  - 値に追加
 - `get()` or `operator[]`: $O(1)$
-    - 値を取得
+  - 値を取得
 - `commit()`: $O(m)$ ($m$: 操作回数)
-    - 操作内容を反映
+  - 操作内容を反映
 - `reset()`: $O(1)$
-    - 操作内容を破棄し、1つ前のcommit状態に戻す
+  - 操作内容を破棄し、1 つ前の commit 状態に戻す
 
 ## コード
 
@@ -168,5 +169,6 @@ int main() {
 ```
 
 ## Verified
+
 - https://atcoder.jp/contests/ahc006/submissions/27339909
-    - `add()`以外
+  - `add()`以外

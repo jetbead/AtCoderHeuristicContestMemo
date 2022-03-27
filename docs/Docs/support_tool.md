@@ -3,9 +3,9 @@
 ## ツール、言語
 
 - kmyk/marathon-kit
-    - https://github.com/kmyk/marathon-kit
+  - https://github.com/kmyk/marathon-kit
 - colun/mmlang
-    - https://github.com/colun/mmlang
+  - https://github.com/colun/mmlang
 
 ## 手元で複数ケース実行
 
