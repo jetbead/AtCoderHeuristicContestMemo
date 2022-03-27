@@ -1,6 +1,11 @@
-# Home
+---
+title: Home
+---
+
+# AtCoder Heuristic Contest Memo
 
 ## Contents
+
 <div class="box">
   <div class="l-wrapper">
     <div class="card">
@@ -44,24 +49,27 @@
 </div>
 
 ## Links
+
 ### Official
+
 - [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
 - [AHC Ranking(beta)](https://www.dropbox.com/s/j276tgd7izpc40u/ranking.csv?dl=0)
-    - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
+  - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
 
 ### rating/statistics
+
 - AtCoder Marathon Rating History
-    - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
+  - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
 - AtCoder Marathon Replay
-    - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
+  - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
 - AtCoder Heuristic Statistics
-    - https://heuristic-statistics.herokuapp.com/
+  - https://heuristic-statistics.herokuapp.com/
 - AHC Rating Simulator
-    - https://saharan.github.io/progcon/ahc-rating-sim.html
+  - https://saharan.github.io/progcon/ahc-rating-sim.html
 - competitiveprogramming.info/atcoder/contests/marathon
-    - https://competitiveprogramming.info/atcoder/contests/marathon
+  - https://competitiveprogramming.info/atcoder/contests/marathon
 - AtCoder Heuristic Rating Estimator
-    - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
+  - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
 
 ## Disclaimer
 
