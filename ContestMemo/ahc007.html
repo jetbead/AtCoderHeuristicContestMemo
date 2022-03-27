@@ -13,7 +13,7 @@
     
     
       
-        <title>THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007) - AtCoder Heuristic Contest Memo</title>
+        <title>AHC007(THIRD) - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#third2021atcoder-heuristic-contest-007" class="md-skip">
+        <a href="#third-2021atcoder-heuristic-contest-007" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)
+              AHC007(THIRD)
             
           </span>
         </div>
@@ -205,7 +205,7 @@
   
     <li class="md-nav__item">
       <a href="ahc001.html" class="md-nav__link">
-        AtCoder Heuristic Contest 001
+        AHC001
       </a>
     </li>
   
@@ -219,7 +219,7 @@
   
     <li class="md-nav__item">
       <a href="ahc002.html" class="md-nav__link">
-        AtCoder Heuristic Contest 002
+        AHC002
       </a>
     </li>
   
@@ -233,7 +233,7 @@
   
     <li class="md-nav__item">
       <a href="ahc003.html" class="md-nav__link">
-        AtCoder Heuristic Contest 003
+        AHC003
       </a>
     </li>
   
@@ -247,7 +247,7 @@
   
     <li class="md-nav__item">
       <a href="ahc004.html" class="md-nav__link">
-        AtCoder Heuristic Contest 004
+        AHC004
       </a>
     </li>
   
@@ -261,7 +261,7 @@
   
     <li class="md-nav__item">
       <a href="ahc005.html" class="md-nav__link">
-        AtCoder Heuristic Contest 005
+        AHC005
       </a>
     </li>
   
@@ -275,7 +275,7 @@
   
     <li class="md-nav__item">
       <a href="ahc006.html" class="md-nav__link">
-        京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)
+        AHC006(京セラ)
       </a>
     </li>
   
@@ -298,12 +298,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)
+          AHC007(THIRD)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="ahc007.html" class="md-nav__link md-nav__link--active">
-        THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)
+        AHC007(THIRD)
       </a>
       
         
@@ -399,7 +399,7 @@
   
     <li class="md-nav__item">
       <a href="ahc008.html" class="md-nav__link">
-        MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)
+        AHC008(MC Digital)
       </a>
     </li>
   
@@ -413,7 +413,7 @@
   
     <li class="md-nav__item">
       <a href="ahc009.html" class="md-nav__link">
-        モノグサプログラミングコンテスト2022(AtCoder Heuristic Contest 009)
+        AHC009(モノグサ)
       </a>
     </li>
   
@@ -427,7 +427,7 @@
   
     <li class="md-nav__item">
       <a href="httf2022qual.html" class="md-nav__link">
-        HACK TO THE FUTURE 2022 予選
+        HTTF2022予選
       </a>
     </li>
   
@@ -441,7 +441,7 @@
   
     <li class="md-nav__item">
       <a href="intro-heuristics.html" class="md-nav__link">
-        Introduction to Heuristics Contest
+        Intro. to HC
       </a>
     </li>
   
@@ -455,7 +455,7 @@
   
     <li class="md-nav__item">
       <a href="rcl-contest-2021-long.html" class="md-nav__link">
-        RECRUIT 日本橋ハーフマラソン2021～増刊号～
+        日本橋ハーフ2021増刊号(RECRUIT)
       </a>
     </li>
   
@@ -764,148 +764,122 @@
                 
 
 
-<h1 id="third2021atcoder-heuristic-contest-007">THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)<a class="headerlink" href="#third2021atcoder-heuristic-contest-007" title="Permanent link">&para;</a></h1>
+<h1 id="third-2021atcoder-heuristic-contest-007">THIRD プログラミングコンテスト 2021(AtCoder Heuristic Contest 007)<a class="headerlink" href="#third-2021atcoder-heuristic-contest-007" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc007">https://atcoder.jp/contests/ahc007</a></li>
 </ul>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>頂点数N、辺の数Mの無向グラフがあり、辺iの長さlは、頂点間のユークリッド距離をdとすると、d&lt;=l&lt;=3*dであるが、正確な値は最初はわからない</li>
-<li>ターンiでは、辺iの正確な距離が与えられるので、その辺を選択するか否かを答える</li>
+<li>頂点数 N、辺の数 M の無向グラフがあり、辺 i の長さ l は、頂点間のユークリッド距離を d とすると、d&lt;=l&lt;=3*d であるが、正確な値は最初はわからない</li>
+<li>ターン i では、辺 i の正確な距離が与えられるので、その辺を選択するか否かを答える</li>
 <li>最終的に選んだ辺が全域木になっており、その選択した辺の長さの合計が最小になるようにせよ</li>
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>240分</p>
+<p>240 分</p>
 <h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>(50位まで&amp;発言を見つけられた方のみ)</p>
+<p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc007/editorial">解説(公式)</a></li>
-<li><a href="https://twitter.com/wata_orz/status/1469986628517376004">writer解(wataさん)</a><ul>
+<li><a href="https://twitter.com/wata_orz/status/1469986628517376004">writer 解(wata さん)</a></li>
 <li><a href="https://twitter.com/wata_orz/status/1469992225484713984">https://twitter.com/wata_orz/status/1469992225484713984</a></li>
 <li><a href="https://twitter.com/wata_orz/status/1470733095179792385">https://twitter.com/wata_orz/status/1470733095179792385</a></li>
 <li><a href="https://twitter.com/wata_orz/status/1470767323510616065">https://twitter.com/wata_orz/status/1470767323510616065</a></li>
 <li><a href="https://twitter.com/wata_orz/status/1470768152649027588">https://twitter.com/wata_orz/status/1470768152649027588</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/chokudai/status/1469987427393892353">社長解(chokudaiさん)</a></li>
-<li>1位yokozuna57さん</li>
-<li><a href="https://twitter.com/square10011/status/1469986298685722633">2位square1001さん</a></li>
-<li><a href="https://twitter.com/5bin101/status/1469992023121924101">3位bin101さん</a></li>
-<li>4位USAさん</li>
-<li>5位tanzakuさん</li>
-<li><a href="https://twitter.com/shr_pc/status/1469989780809478147">6位saharanさん</a><ul>
+<li><a href="https://twitter.com/chokudai/status/1469987427393892353">社長解(chokudai さん)</a></li>
+<li>1 位 yokozuna57 さん</li>
+<li><a href="https://twitter.com/square10011/status/1469986298685722633">2 位 square1001 さん</a></li>
+<li><a href="https://twitter.com/5bin101/status/1469992023121924101">3 位 bin101 さん</a></li>
+<li>4 位 USA さん</li>
+<li>5 位 tanzaku さん</li>
+<li><a href="https://twitter.com/shr_pc/status/1469989780809478147">6 位 saharan さん</a></li>
 <li><a href="https://twitter.com/shr_pc/status/1469995102513033222">https://twitter.com/shr_pc/status/1469995102513033222</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/tute7627/status/1469986542563491840">7位tute7627さん</a><ul>
+<li><a href="https://twitter.com/tute7627/status/1469986542563491840">7 位 tute7627 さん</a></li>
 <li><a href="https://twitter.com/tute7627/status/1469991054283710464">https://twitter.com/tute7627/status/1469991054283710464</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/_olphe/status/1469985927556927494">8位olpheさん</a><ul>
+<li><a href="https://twitter.com/_olphe/status/1469985927556927494">8 位 olphe さん</a></li>
 <li><a href="https://twitter.com/_olphe/status/1469990829909745669">https://twitter.com/_olphe/status/1469990829909745669</a></li>
-</ul>
-</li>
-<li>9位Aquariusさん</li>
-<li>10位Nyaanさん</li>
-<li><a href="https://twitter.com/kawatea03/status/1469987323610013700">11位kawateaさん</a></li>
-<li><a href="https://twitter.com/WniKwo/status/1469987016536629248">12位daijuさん</a></li>
-<li><a href="https://twitter.com/m_idiri/status/1469986645013561346">13位firiexpさん</a></li>
-<li><a href="https://twitter.com/Shibungi_kyopro/status/1469987076926238720">14位Shibungiさん</a></li>
-<li>15位hiikunZさん</li>
-<li>16位asi1024さん</li>
-<li>17位ynasuさん</li>
-<li>18位hoshi524さん</li>
-<li><a href="https://twitter.com/noimi_kyopro/status/1469986997582594050">19位noimiさん</a></li>
-<li>20位ats5515さん</li>
-<li><a href="https://twitter.com/CUteNeuron/status/1469987798388453381">21位cunitacさん</a></li>
-<li><a href="https://twitter.com/terry_u16/status/1469991344982888448">22位terry_u16さん</a><ul>
+<li>9 位 Aquarius さん</li>
+<li>10 位 Nyaan さん</li>
+<li><a href="https://twitter.com/kawatea03/status/1469987323610013700">11 位 kawatea さん</a></li>
+<li><a href="https://twitter.com/WniKwo/status/1469987016536629248">12 位 daiju さん</a></li>
+<li><a href="https://twitter.com/m_idiri/status/1469986645013561346">13 位 firiexp さん</a></li>
+<li><a href="https://twitter.com/Shibungi_kyopro/status/1469987076926238720">14 位 Shibungi さん</a></li>
+<li>15 位 hiikunZ さん</li>
+<li>16 位 asi1024 さん</li>
+<li>17 位 ynasu さん</li>
+<li>18 位 hoshi524 さん</li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1469986997582594050">19 位 noimi さん</a></li>
+<li>20 位 ats5515 さん</li>
+<li><a href="https://twitter.com/CUteNeuron/status/1469987798388453381">21 位 cunitac さん</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1469991344982888448">22 位 terry_u16 さん</a></li>
 <li><a href="https://www.terry-u16.net/entry/ahc007-explanation">https://www.terry-u16.net/entry/ahc007-explanation</a></li>
-</ul>
-</li>
-<li>23位ashmelevさん</li>
-<li>24位rngさん</li>
-<li><a href="https://twitter.com/tanaka_a8/status/1470010825666891785">25位rabotさん</a></li>
-<li>26位mtsdさん</li>
-<li>27位Rafbillさん</li>
-<li>28位krさん</li>
-<li>29位notさん</li>
-<li><a href="https://twitter.com/hamamu_kyopro/status/1470007379609931777">30位hamamuさん</a></li>
-<li>31位kai1000_don</li>
-<li><a href="https://twitter.com/threecourse/status/1469986759274803204">32位threecourseさん</a></li>
-<li><a href="https://twitter.com/akakimidori/status/1469986752370995206">33位sansenさん</a><ul>
+<li>23 位 ashmelev さん</li>
+<li>24 位 rng さん</li>
+<li><a href="https://twitter.com/tanaka_a8/status/1470010825666891785">25 位 rabot さん</a></li>
+<li>26 位 mtsd さん</li>
+<li>27 位 Rafbill さん</li>
+<li>28 位 kr さん</li>
+<li>29 位 not さん</li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1470007379609931777">30 位 hamamu さん</a></li>
+<li>31 位 kai1000_don</li>
+<li><a href="https://twitter.com/threecourse/status/1469986759274803204">32 位 threecourse さん</a></li>
+<li><a href="https://twitter.com/akakimidori/status/1469986752370995206">33 位 sansen さん</a></li>
 <li><a href="https://twitter.com/akakimidori/status/1469986907455365124">https://twitter.com/akakimidori/status/1469986907455365124</a></li>
 <li><a href="https://twitter.com/akakimidori/status/1469989653218758665">https://twitter.com/akakimidori/status/1469989653218758665</a></li>
-</ul>
-</li>
-<li>34位btk15049さん</li>
-<li><a href="https://twitter.com/fuppy_kyopro/status/1469986470257901570">35位fuppy0716さん</a><ul>
+<li>34 位 btk15049 さん</li>
+<li><a href="https://twitter.com/fuppy_kyopro/status/1469986470257901570">35 位 fuppy0716 さん</a></li>
 <li><a href="https://twitter.com/fuppy_kyopro/status/1469987223961751554">https://twitter.com/fuppy_kyopro/status/1469987223961751554</a></li>
 <li><a href="https://twitter.com/fuppy_kyopro/status/1469986968360873986">https://twitter.com/fuppy_kyopro/status/1469986968360873986</a></li>
-</ul>
-</li>
-<li>36位roto_37さん</li>
-<li>37位cuthbertさん</li>
-<li>38位ymatsuxさん</li>
-<li><a href="https://twitter.com/assy1028/status/1469988350279176192">39位assyさん</a><ul>
+<li>36 位 roto_37 さん</li>
+<li>37 位 cuthbert さん</li>
+<li>38 位 ymatsux さん</li>
+<li><a href="https://twitter.com/assy1028/status/1469988350279176192">39 位 assy さん</a></li>
 <li><a href="https://assy.hatenablog.jp/entry/2021/12/13/205320">https://assy.hatenablog.jp/entry/2021/12/13/205320</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/tsukammo/status/1469985929826021376">40位tsukammoさん</a></li>
-<li>41位HIIRAGIchanさん</li>
-<li>42位Forestedさん</li>
-<li><a href="https://twitter.com/shibh308/status/1469986167567581186">43位shibh308さん</a></li>
-<li><a href="https://twitter.com/_phocom/status/1469995485239078913">44位phocomさん</a></li>
-<li><a href="https://twitter.com/_su1sen/status/1469986769383079937">45位suisenさん</a></li>
-<li>46位iehnさん</li>
-<li>47位sensaurさん</li>
-<li><a href="https://twitter.com/tomerun/status/1469986110281760774">48位tomerunさん</a></li>
-<li>49位kuhakuさん</li>
-<li><a href="https://twitter.com/iray_tno/status/1469989827613700100">50位iraytnoさん</a></li>
+<li><a href="https://twitter.com/tsukammo/status/1469985929826021376">40 位 tsukammo さん</a></li>
+<li>41 位 HIIRAGIchan さん</li>
+<li>42 位 Forested さん</li>
+<li><a href="https://twitter.com/shibh308/status/1469986167567581186">43 位 shibh308 さん</a></li>
+<li><a href="https://twitter.com/_phocom/status/1469995485239078913">44 位 phocom さん</a></li>
+<li><a href="https://twitter.com/_su1sen/status/1469986769383079937">45 位 suisen さん</a></li>
+<li>46 位 iehn さん</li>
+<li>47 位 sensaur さん</li>
+<li><a href="https://twitter.com/tomerun/status/1469986110281760774">48 位 tomerun さん</a></li>
+<li>49 位 kuhaku さん</li>
+<li><a href="https://twitter.com/iray_tno/status/1469989827613700100">50 位 iraytno さん</a></li>
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://togetter.com/li/1815565">agwさんTwitterまとめ</a></li>
+<li><a href="https://togetter.com/li/1815565">agw さん Twitter まとめ</a></li>
 <li><a href="https://twitter.com/hashtag/AHC007">Twitter hashtag AHC007</a></li>
 </ul>
 <h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>毎ターン、その辺を選択した/選択しなかった場合の「最終的な最小全域木の総距離の期待値」を計算できれば、期待値が低くなる場合に選択、そうでないなら選択しない、とするgreedyが考えられる</li>
+<li>毎ターン、その辺を選択した/選択しなかった場合の「最終的な最小全域木の総距離の期待値」を計算できれば、期待値が低くなる場合に選択、そうでないなら選択しない、とする greedy が考えられる</li>
 <li>期待値を正確に算出するのは難しいので、近似的に求めることになる</li>
 </ul>
 <h3 id="_5">近似の仕方<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
-<li>l=2dを仮定<ul>
+<li>l=2d を仮定</li>
 <li><a href="https://www.terry-u16.net/entry/ahc007-explanation">https://www.terry-u16.net/entry/ahc007-explanation</a></li>
-<li>残りの不明な辺の長さをl=2dと仮定するのは、実はそんなに良い解が得られない</li>
-<li>目指している解ではl=dに近い辺を採用しているはずなので、大きめに期待値を計算している可能性</li>
-<li>2じゃなく少し小さめの値にすると少しだけよくなる</li>
-</ul>
-</li>
-<li>モンテカルロ法<ul>
+<li>残りの不明な辺の長さを l=2d と仮定するのは、実はそんなに良い解が得られない</li>
+<li>目指している解では l=d に近い辺を採用しているはずなので、大きめに期待値を計算している可能性</li>
+<li>2 じゃなく少し小さめの値にすると少しだけよくなる</li>
+<li>モンテカルロ法</li>
 <li>長さが不明な辺に対して実際に値を割り当ててみたものをいくつか用意して、コスト平均を見る</li>
-</ul>
-</li>
-<li>wataさんのDP解</li>
+<li>wata さんの DP 解</li>
 </ul>
 <h3 id="_6">その他の方針<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
-<li>辺の採用確率<ul>
+<li>辺の採用確率</li>
 <li>ランダムに辺の長さを割り当てたグラフをいくつか用意して最小全域木を計算</li>
-<li>作った最小全域木でその辺が採用される確率がX以上なら採用</li>
-</ul>
-</li>
+<li>作った最小全域木でその辺が採用される確率が X 以上なら採用</li>
 </ul>
 <h3 id="_7">その他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
-<li>近くの辺のみ考慮<ul>
+<li>近くの辺のみ考慮</li>
 <li>グラフを見ると結構「塊」みたいになっているので、近くの辺だけを考えるなどの高速化は有効だった模様</li>
-</ul>
-</li>
-<li>ランダムに辺の値を決めるときに乱数の範囲d〜3dではなく、少し狭めると結構変わるっぽい<ul>
+<li>ランダムに辺の値を決めるときに乱数の範囲 d〜3d ではなく、少し狭めると結構変わるっぽい</li>
 <li><a href="https://twitter.com/5bin101/status/1469992023121924101">https://twitter.com/5bin101/status/1469992023121924101</a></li>
 <li><a href="https://blog.knshnb.com/posts/ahc007-optuna/">https://blog.knshnb.com/posts/ahc007-optuna/</a></li>
-</ul>
-</li>
 </ul>
 
               
@@ -920,7 +894,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="ahc006.html" class="md-footer__link md-footer__link--prev" aria-label="前: 京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)" rel="prev">
+        <a href="ahc006.html" class="md-footer__link md-footer__link--prev" aria-label="前: AHC006(京セラ)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -929,20 +903,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)
+              AHC006(京セラ)
             </div>
           </div>
         </a>
       
       
         
-        <a href="ahc008.html" class="md-footer__link md-footer__link--next" aria-label="次: MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)" rel="next">
+        <a href="ahc008.html" class="md-footer__link md-footer__link--next" aria-label="次: AHC008(MC Digital)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)
+              AHC008(MC Digital)
             </div>
           </div>
           <div class="md-footer__button md-icon">

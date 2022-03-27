@@ -13,7 +13,7 @@
     
     
       
-        <title>RECRUIT 日本橋ハーフマラソン2021～増刊号～ - AtCoder Heuristic Contest Memo</title>
+        <title>日本橋ハーフ2021増刊号(RECRUIT) - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RECRUIT 日本橋ハーフマラソン2021～増刊号～
+              日本橋ハーフ2021増刊号(RECRUIT)
             
           </span>
         </div>
@@ -205,7 +205,7 @@
   
     <li class="md-nav__item">
       <a href="ahc001.html" class="md-nav__link">
-        AtCoder Heuristic Contest 001
+        AHC001
       </a>
     </li>
   
@@ -219,7 +219,7 @@
   
     <li class="md-nav__item">
       <a href="ahc002.html" class="md-nav__link">
-        AtCoder Heuristic Contest 002
+        AHC002
       </a>
     </li>
   
@@ -233,7 +233,7 @@
   
     <li class="md-nav__item">
       <a href="ahc003.html" class="md-nav__link">
-        AtCoder Heuristic Contest 003
+        AHC003
       </a>
     </li>
   
@@ -247,7 +247,7 @@
   
     <li class="md-nav__item">
       <a href="ahc004.html" class="md-nav__link">
-        AtCoder Heuristic Contest 004
+        AHC004
       </a>
     </li>
   
@@ -261,7 +261,7 @@
   
     <li class="md-nav__item">
       <a href="ahc005.html" class="md-nav__link">
-        AtCoder Heuristic Contest 005
+        AHC005
       </a>
     </li>
   
@@ -275,7 +275,7 @@
   
     <li class="md-nav__item">
       <a href="ahc006.html" class="md-nav__link">
-        京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)
+        AHC006(京セラ)
       </a>
     </li>
   
@@ -289,7 +289,7 @@
   
     <li class="md-nav__item">
       <a href="ahc007.html" class="md-nav__link">
-        THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)
+        AHC007(THIRD)
       </a>
     </li>
   
@@ -303,7 +303,7 @@
   
     <li class="md-nav__item">
       <a href="ahc008.html" class="md-nav__link">
-        MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)
+        AHC008(MC Digital)
       </a>
     </li>
   
@@ -317,7 +317,7 @@
   
     <li class="md-nav__item">
       <a href="ahc009.html" class="md-nav__link">
-        モノグサプログラミングコンテスト2022(AtCoder Heuristic Contest 009)
+        AHC009(モノグサ)
       </a>
     </li>
   
@@ -331,7 +331,7 @@
   
     <li class="md-nav__item">
       <a href="httf2022qual.html" class="md-nav__link">
-        HACK TO THE FUTURE 2022 予選
+        HTTF2022予選
       </a>
     </li>
   
@@ -345,7 +345,7 @@
   
     <li class="md-nav__item">
       <a href="intro-heuristics.html" class="md-nav__link">
-        Introduction to Heuristics Contest
+        Intro. to HC
       </a>
     </li>
   
@@ -368,12 +368,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          RECRUIT 日本橋ハーフマラソン2021～増刊号～
+          日本橋ハーフ2021増刊号(RECRUIT)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="rcl-contest-2021-long.html" class="md-nav__link md-nav__link--active">
-        RECRUIT 日本橋ハーフマラソン2021～増刊号～
+        日本橋ハーフ2021増刊号(RECRUIT)
       </a>
       
         
@@ -710,124 +710,102 @@
                 
 
 
-<h1 id="recruit-2021">RECRUIT 日本橋ハーフマラソン2021～増刊号～<a class="headerlink" href="#recruit-2021" title="Permanent link">&para;</a></h1>
+<h1 id="recruit-2021">RECRUIT 日本橋ハーフマラソン 2021 ～増刊号～<a class="headerlink" href="#recruit-2021" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://atcoder.jp/contests/rcl-contest-2021-long">https://atcoder.jp/contests/rcl-contest-2021-long</a></li>
 </ul>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>N * Nマスのフィールドがあり、特定の時間に価値vの野菜が現れ、時間が立つと消える</li>
+<li>N * N マスのフィールドがあり、特定の時間に価値 v の野菜が現れ、時間が立つと消える</li>
 <li>野菜を収穫するには収穫機が必要で、価格は「(現在持っている台数+1)^3」円かかる</li>
-<li>Tターン中、「収穫機を買って設置する」か「収穫機を移動する」か選ぶ<ul>
+<li>T ターン中、「収穫機を買って設置する」か「収穫機を移動する」か選ぶ</li>
 <li>設置位置や移動先には他の収穫機があってはいけない</li>
-</ul>
-</li>
-<li>各ターンの終了時点で、そのマスに野菜と収穫機がある場合収穫され、「野菜の価値 * その収穫機と4方向で連結している収穫機の数」円だけ得られる</li>
+<li>各ターンの終了時点で、そのマスに野菜と収穫機がある場合収穫され、「野菜の価値 * その収穫機と 4 方向で連結している収穫機の数」円だけ得られる</li>
 <li>最終的に得られるお金を最大化せよ</li>
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>168時間</p>
+<p>168 時間</p>
 <h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>(50位まで&amp;発言を見つけられた方のみ)</p>
+<p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
-<li>1位Jirotechさん<ul>
+<li>1 位 Jirotech さん</li>
 <li><a href="https://twitter.com/Jiro_tech15/status/1436979563079163907">https://twitter.com/Jiro_tech15/status/1436979563079163907</a></li>
 <li><a href="https://vimeo.com/603126256?ref=tw-share">https://vimeo.com/603126256?ref=tw-share</a></li>
 <li><a href="https://twitter.com/Jiro_tech15/status/1437008103799541764">https://twitter.com/Jiro_tech15/status/1437008103799541764</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/_phocom/status/1436981894499880967">4位phocomさん</a></li>
-<li><a href="https://twitter.com/fuppy_kyopro/status/1436980675916144640">7位fuppy0716さん</a></li>
-<li><a href="https://simanman.hatenablog.com/entry/2021/09/13/155633">8位simanさん</a></li>
-<li><a href="https://twitter.com/kawatea03/status/1436978583197548546">9位kawateaさん</a></li>
-<li><a href="https://twitter.com/bowwowforeach/status/1436982453579616256">10位bowwowforeachさん</a></li>
-<li><a href="https://twitter.com/fkyrz_0111/status/1436978724826537984">12位fky_さん</a></li>
-<li><a href="https://twitter.com/assy1028/status/1436979233373360132">14位assyさん</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1437012665293889539">16位Shun_PIさん</a></li>
-<li><a href="https://twitter.com/lgeuwce/status/1436982098103992331">17位nagissさん</a></li>
-<li><a href="https://twitter.com/shibh308/status/1436979647992909824">18位shibh308さん</a></li>
-<li><a href="https://twitter.com/gmeriaog/status/1437764559662505984">20位wanuiさん</a></li>
-<li><a href="https://twitter.com/tsukammo/status/1436983837645422599">21位tsukammoさん</a></li>
-<li><a href="https://twitter.com/C7C7LL/status/1436979425359237130">22位c7c7さん</a></li>
-<li><a href="https://twitter.com/contramundum2/status/1437000102975926273">23位eivourさん</a></li>
-<li><a href="https://twitter.com/ethylene_66/status/1437009336308436995">24位cuthbertさん</a></li>
-<li><a href="https://twitter.com/eijirou_kyopro/status/1436980647457738755">25位eijirouさん</a></li>
-<li><a href="https://twitter.com/hirokazu1020/status/1436982503286317063">27位hirokazu1020さん</a></li>
-<li>28位prd_xxxさん<ul>
+<li><a href="https://twitter.com/_phocom/status/1436981894499880967">4 位 phocom さん</a></li>
+<li><a href="https://twitter.com/fuppy_kyopro/status/1436980675916144640">7 位 fuppy0716 さん</a></li>
+<li><a href="https://simanman.hatenablog.com/entry/2021/09/13/155633">8 位 siman さん</a></li>
+<li><a href="https://twitter.com/kawatea03/status/1436978583197548546">9 位 kawatea さん</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1436982453579616256">10 位 bowwowforeach さん</a></li>
+<li><a href="https://twitter.com/fkyrz_0111/status/1436978724826537984">12 位 fky_さん</a></li>
+<li><a href="https://twitter.com/assy1028/status/1436979233373360132">14 位 assy さん</a></li>
+<li><a href="https://twitter.com/Shun___PI/status/1437012665293889539">16 位 Shun_PI さん</a></li>
+<li><a href="https://twitter.com/lgeuwce/status/1436982098103992331">17 位 nagiss さん</a></li>
+<li><a href="https://twitter.com/shibh308/status/1436979647992909824">18 位 shibh308 さん</a></li>
+<li><a href="https://twitter.com/gmeriaog/status/1437764559662505984">20 位 wanui さん</a></li>
+<li><a href="https://twitter.com/tsukammo/status/1436983837645422599">21 位 tsukammo さん</a></li>
+<li><a href="https://twitter.com/C7C7LL/status/1436979425359237130">22 位 c7c7 さん</a></li>
+<li><a href="https://twitter.com/contramundum2/status/1437000102975926273">23 位 eivour さん</a></li>
+<li><a href="https://twitter.com/ethylene_66/status/1437009336308436995">24 位 cuthbert さん</a></li>
+<li><a href="https://twitter.com/eijirou_kyopro/status/1436980647457738755">25 位 eijirou さん</a></li>
+<li><a href="https://twitter.com/hirokazu1020/status/1436982503286317063">27 位 hirokazu1020 さん</a></li>
+<li>28 位 prd_xxx さん</li>
 <li><a href="https://twitter.com/prd_xxx/status/1436981945963986951">https://twitter.com/prd_xxx/status/1436981945963986951</a></li>
 <li><a href="https://twitter.com/prd_xxx/status/1436984188817707013">https://twitter.com/prd_xxx/status/1436984188817707013</a></li>
 <li><a href="https://twitter.com/prd_xxx/status/1436999142924972034">https://twitter.com/prd_xxx/status/1436999142924972034</a></li>
 <li><a href="https://prd-xxx.hateblo.jp/entry/2021/09/15/003013">https://prd-xxx.hateblo.jp/entry/2021/09/15/003013</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/yowa/status/1437071686537416706">29位yowaさん</a></li>
-<li><a href="https://twitter.com/nrvkpr/status/1436998757262893058">30位nrvftさん</a></li>
-<li><a href="https://jupiro.hatenablog.com/entry/rcl-2021">32位udon1206さん</a></li>
-<li><a href="https://twitter.com/kiri8128/status/1436980713140588549">36位Kiri8128さん</a></li>
-<li><a href="https://twitter.com/idolikeshishamo/status/1436981033778380801">44位shim0さん</a></li>
-<li><a href="https://twitter.com/yochan_tech/status/1436978962723270659">47位yochanさん</a></li>
-<li><a href="https://twitter.com/komora71_/status/1436983005382254596">48位komori3さん</a></li>
+<li><a href="https://twitter.com/yowa/status/1437071686537416706">29 位 yowa さん</a></li>
+<li><a href="https://twitter.com/nrvkpr/status/1436998757262893058">30 位 nrvft さん</a></li>
+<li><a href="https://jupiro.hatenablog.com/entry/rcl-2021">32 位 udon1206 さん</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1436980713140588549">36 位 Kiri8128 さん</a></li>
+<li><a href="https://twitter.com/idolikeshishamo/status/1436981033778380801">44 位 shim0 さん</a></li>
+<li><a href="https://twitter.com/yochan_tech/status/1436978962723270659">47 位 yochan さん</a></li>
+<li><a href="https://twitter.com/komora71_/status/1436983005382254596">48 位 komori3 さん</a></li>
 <li>
-<p><a href="https://twitter.com/terry_u16/status/1436978268935127044">49位terry_u16さん</a></p>
+<p><a href="https://twitter.com/terry_u16/status/1436978268935127044">49 位 terry_u16 さん</a></p>
 </li>
 <li>
-<p><a href="https://twitter.com/tomerun/status/1438163487205724166">tomerunさん</a></p>
+<p><a href="https://twitter.com/tomerun/status/1438163487205724166">tomerun さん</a></p>
 </li>
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://togetter.com/li/1771914">agwさんTwitterまとめ</a></li>
+<li><a href="https://togetter.com/li/1771914">agw さん Twitter まとめ</a></li>
 <li><a href="https://twitter.com/hashtag/R_procon">Twitter hashtag R_procon</a></li>
 </ul>
 <h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>盤面に合わせてうにゃうにゃとアメーバが動くような感じ<ul>
-<li>固定配置＋遊撃隊だと、盤面に合わないときにスコアが出せない(平均5M円超えは難しそう)</li>
-</ul>
-</li>
-<li>「連結性を維持して」は関節点(LowLinkなど)<ul>
+<li>盤面に合わせてうにゃうにゃとアメーバが動くような感じ</li>
+<li>固定配置＋遊撃隊だと、盤面に合わないときにスコアが出せない(平均 5M 円超えは難しそう)</li>
+<li>「連結性を維持して」は関節点(LowLink など)</li>
 <li>関節点以外を動かせる</li>
 <li>(もしかして差分計算できる？)</li>
-</ul>
-</li>
-<li>野菜を収穫済みか？の保持の仕方<ul>
+<li>野菜を収穫済みか？の保持の仕方</li>
 <li><a href="https://twitter.com/C7C7LL/status/1436986015088996354">https://twitter.com/C7C7LL/status/1436986015088996354</a></li>
-<li>野菜は5000個だが、各マスの野菜の有無を状態に毎ターン更新すれば16*16=256個で済む(Stateが軽くなる)</li>
-</ul>
-</li>
-<li>各操作はint1つで持てる<ul>
+<li>野菜は 5000 個だが、各マスの野菜の有無を状態に毎ターン更新すれば 16*16=256 個で済む(State が軽くなる)</li>
+<li>各操作は int1 つで持てる</li>
 <li><a href="https://jupiro.hatenablog.com/entry/rcl-2021">https://jupiro.hatenablog.com/entry/rcl-2021</a></li>
-</ul>
-</li>
-<li>マスの評価値(時間、空間)<ul>
+<li>マスの評価値(時間、空間)</li>
 <li>時間方向<ul>
 <li>未来に出現/消滅する野菜に対して重み付け(先読み)</li>
-<li>ターンtでマスxに発生する野菜の価値vについて、tまでのターン数で減衰させる</li>
+<li>ターン t でマス x に発生する野菜の価値 v について、t までのターン数で減衰させる</li>
 </ul>
 </li>
 <li>空間方向<ul>
 <li>現在出現している野菜との距離に対して重み付け</li>
-<li>出現しているマスxの野菜の価値vについて、その距離で減衰させる(そこまで0点だったときの平均になるv/d的な指数減衰など)</li>
+<li>出現しているマス x の野菜の価値 v について、その距離で減衰させる(そこまで 0 点だったときの平均になる v/d 的な指数減衰など)</li>
 <li>取得済みを除く、消滅までの期間で距離を制限、複数の収穫機が同じマスを目指して動いて無駄にならないような工夫も必要？</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>コーナーケース<ul>
-<li><a href="https://twitter.com/_phocom/status/1436978429010710528">時刻0にひとつも野菜がないケース</a></li>
-</ul>
-</li>
-<li>マスの評価関数+貪欲/ビームサーチ<ul>
+<li>コーナーケース</li>
+<li><a href="https://twitter.com/_phocom/status/1436978429010710528">時刻 0 にひとつも野菜がないケース</a></li>
+<li>マスの評価関数+貪欲/ビームサーチ</li>
 <li>基本連結を保って、マスの評価値が最小のマスから最大のマスに動くような貪欲、または、いくつかのパターンを試すビームサーチ</li>
 <li>(結構、同じアプローチも、評価関数の作り方や細かい実装などでスコアの差がでやすかった？)</li>
-</ul>
-</li>
-<li>焼きなましの可能性<ul>
+<li>焼きなましの可能性</li>
 <li><a href="https://twitter.com/t33f/status/1437003245621157894">https://twitter.com/t33f/status/1437003245621157894</a></li>
 <li><a href="https://qiita.com/kusano_k/items/eb44e796adf237ae35d6">https://qiita.com/kusano_k/items/eb44e796adf237ae35d6</a></li>
 <li>回収する野菜の集合を焼き鈍す、移動先の焼きなます</li>
-</ul>
-</li>
 </ul>
 
               
@@ -842,7 +820,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="intro-heuristics.html" class="md-footer__link md-footer__link--prev" aria-label="前: Introduction to Heuristics Contest" rel="prev">
+        <a href="intro-heuristics.html" class="md-footer__link md-footer__link--prev" aria-label="前: Intro. to HC" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -851,7 +829,7 @@
               <span class="md-footer__direction">
                 前
               </span>
-              Introduction to Heuristics Contest
+              Intro. to HC
             </div>
           </div>
         </a>

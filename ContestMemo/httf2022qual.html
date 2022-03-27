@@ -13,7 +13,7 @@
     
     
       
-        <title>HACK TO THE FUTURE 2022 予選 - AtCoder Heuristic Contest Memo</title>
+        <title>HTTF2022予選 - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HACK TO THE FUTURE 2022 予選
+              HTTF2022予選
             
           </span>
         </div>
@@ -205,7 +205,7 @@
   
     <li class="md-nav__item">
       <a href="ahc001.html" class="md-nav__link">
-        AtCoder Heuristic Contest 001
+        AHC001
       </a>
     </li>
   
@@ -219,7 +219,7 @@
   
     <li class="md-nav__item">
       <a href="ahc002.html" class="md-nav__link">
-        AtCoder Heuristic Contest 002
+        AHC002
       </a>
     </li>
   
@@ -233,7 +233,7 @@
   
     <li class="md-nav__item">
       <a href="ahc003.html" class="md-nav__link">
-        AtCoder Heuristic Contest 003
+        AHC003
       </a>
     </li>
   
@@ -247,7 +247,7 @@
   
     <li class="md-nav__item">
       <a href="ahc004.html" class="md-nav__link">
-        AtCoder Heuristic Contest 004
+        AHC004
       </a>
     </li>
   
@@ -261,7 +261,7 @@
   
     <li class="md-nav__item">
       <a href="ahc005.html" class="md-nav__link">
-        AtCoder Heuristic Contest 005
+        AHC005
       </a>
     </li>
   
@@ -275,7 +275,7 @@
   
     <li class="md-nav__item">
       <a href="ahc006.html" class="md-nav__link">
-        京セラプログラミングコンテスト(AtCoder Heuristic Contest 006)
+        AHC006(京セラ)
       </a>
     </li>
   
@@ -289,7 +289,7 @@
   
     <li class="md-nav__item">
       <a href="ahc007.html" class="md-nav__link">
-        THIRDプログラミングコンテスト2021(AtCoder Heuristic Contest 007)
+        AHC007(THIRD)
       </a>
     </li>
   
@@ -303,7 +303,7 @@
   
     <li class="md-nav__item">
       <a href="ahc008.html" class="md-nav__link">
-        MC Digitalプログラミングコンテスト2022(AtCoder Heuristic Contest 008)
+        AHC008(MC Digital)
       </a>
     </li>
   
@@ -317,7 +317,7 @@
   
     <li class="md-nav__item">
       <a href="ahc009.html" class="md-nav__link">
-        モノグサプログラミングコンテスト2022(AtCoder Heuristic Contest 009)
+        AHC009(モノグサ)
       </a>
     </li>
   
@@ -340,12 +340,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          HACK TO THE FUTURE 2022 予選
+          HTTF2022予選
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="httf2022qual.html" class="md-nav__link md-nav__link--active">
-        HACK TO THE FUTURE 2022 予選
+        HTTF2022予選
       </a>
       
         
@@ -441,7 +441,7 @@
   
     <li class="md-nav__item">
       <a href="intro-heuristics.html" class="md-nav__link">
-        Introduction to Heuristics Contest
+        Intro. to HC
       </a>
     </li>
   
@@ -455,7 +455,7 @@
   
     <li class="md-nav__item">
       <a href="rcl-contest-2021-long.html" class="md-nav__link">
-        RECRUIT 日本橋ハーフマラソン2021～増刊号～
+        日本橋ハーフ2021増刊号(RECRUIT)
       </a>
     </li>
   
@@ -770,140 +770,106 @@
 </ul>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>N=1000個のタスクをM=20人のチームメンバーに割り振りたい<ul>
-<li>各タスクは高々1人に割り振る</li>
+<li>N=1000 個のタスクを M=20 人のチームメンバーに割り振りたい</li>
+<li>各タスクは高々 1 人に割り振る</li>
 <li>タスクは割り当てられると、そのタスクが終わるまで他のタスクは割り当てられない</li>
-</ul>
-</li>
-<li>各メンバーはK種類の技能レベルがあり、ベクトルsで表されるが、入力としては与えられない</li>
-<li>各タスクは各技能に対する要求レベルが決まっており、ベクトルdで表され、入力として与えられる<ul>
-<li>また、タスク間には依存関係(1000&lt;=R&lt;=3000個の有向辺で与えられる)があり、あるタスクを割り振るためにはそれに依存するすべてのタスクが前日までに終わっている必要がある</li>
-</ul>
-</li>
-<li>メンバーjがタスクiを行った場合、「各技能の要求レベルに満たない分」の合計をwとして、w=0なら1日、w&gt;0ならw±r(-3～3の一様乱数)日だけかかる</li>
-<li>できるだけ短い日数ですべてのタスクが終わるように、各日のタスクの割り当てを求めよ<ul>
-<li>interactive問題で、各日ごとに、完了したタスクを受け取り、その日の割当を返却するプログラムを作成せよ</li>
-</ul>
-</li>
+<li>各メンバーは K 種類の技能レベルがあり、ベクトル s で表されるが、入力としては与えられない</li>
+<li>各タスクは各技能に対する要求レベルが決まっており、ベクトル d で表され、入力として与えられる</li>
+<li>また、タスク間には依存関係(1000&lt;=R&lt;=3000 個の有向辺で与えられる)があり、あるタスクを割り振るためにはそれに依存するすべてのタスクが前日までに終わっている必要がある</li>
+<li>メンバー j がタスク i を行った場合、「各技能の要求レベルに満たない分」の合計を w として、w=0 なら 1 日、w&gt;0 なら w±r(-3 ～ 3 の一様乱数)日だけかかる</li>
+<li>できるだけ短い日数ですべてのタスクが終わるように、各日のタスクの割り当てを求めよ</li>
+<li>interactive 問題で、各日ごとに、完了したタスクを受け取り、その日の割当を返却するプログラムを作成せよ</li>
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>240時間</p>
+<p>240 時間</p>
 <h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>(50位まで&amp;発言を見つけられた方のみ)</p>
+<p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=H_MuLN6L-r4">解説放送(終了直後)</a></li>
 <li><a href="https://atcoder.jp/contests/future-contest-2022-qual/editorial/2931?lang=ja">解説まとめ(公式)</a></li>
-<li><a href="https://twitter.com/contramundum2/status/1459478557210537985">1位eivourさん</a><ul>
+<li><a href="https://twitter.com/contramundum2/status/1459478557210537985">1 位 eivour さん</a></li>
 <li><a href="https://twitter.com/contramundum2/status/1459487317631012865">https://twitter.com/contramundum2/status/1459487317631012865</a></li>
 <li><a href="https://qiita.com/contramundum/items/52609b5a4c943bc6a275">https://qiita.com/contramundum/items/52609b5a4c943bc6a275</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/_phocom/status/1459461706619699201">2位phocomさん</a></li>
-<li><a href="https://twitter.com/41Toame/status/1459861272049041412">3位toameさん</a></li>
-<li><a href="https://twitter.com/bowwowforeach/status/1459466965433470977">4位bowwowforeachさん</a><ul>
+<li><a href="https://twitter.com/_phocom/status/1459461706619699201">2 位 phocom さん</a></li>
+<li><a href="https://twitter.com/41Toame/status/1459861272049041412">3 位 toame さん</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1459466965433470977">4 位 bowwowforeach さん</a></li>
 <li><a href="https://twitter.com/bowwowforeach/status/1459490991153422336">https://twitter.com/bowwowforeach/status/1459490991153422336</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/ValGrowth/status/1459465199216652289">5位ValGrowthさん</a><ul>
+<li><a href="https://twitter.com/ValGrowth/status/1459465199216652289">5 位 ValGrowth さん</a></li>
 <li><a href="https://twitter.com/ValGrowth/status/1459463370781097987">https://twitter.com/ValGrowth/status/1459463370781097987</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/C7C7LL/status/1459462826930552836">6位c7c7さん</a></li>
-<li>7位ynasuさん</li>
-<li><a href="https://twitter.com/Shun___PI/status/1459463013832880133">8位Shun_PIさん</a></li>
-<li>9位yokozuna57さん</li>
-<li><a href="https://twitter.com/arimasenu/status/1459461165969395712">10位iehnさん</a></li>
-<li>11位simanさん</li>
-<li><a href="https://twitter.com/inani_waon/status/1459461945615020032">12位NKTさん</a><ul>
+<li><a href="https://twitter.com/C7C7LL/status/1459462826930552836">6 位 c7c7 さん</a></li>
+<li>7 位 ynasu さん</li>
+<li><a href="https://twitter.com/Shun___PI/status/1459463013832880133">8 位 Shun_PI さん</a></li>
+<li>9 位 yokozuna57 さん</li>
+<li><a href="https://twitter.com/arimasenu/status/1459461165969395712">10 位 iehn さん</a></li>
+<li>11 位 siman さん</li>
+<li><a href="https://twitter.com/inani_waon/status/1459461945615020032">12 位 NKT さん</a></li>
 <li><a href="https://twitter.com/inani_waon/status/1459479269453623302">https://twitter.com/inani_waon/status/1459479269453623302</a></li>
 <li><a href="https://twitter.com/inani_waon/status/1459542680073957376">https://twitter.com/inani_waon/status/1459542680073957376</a></li>
 <li><a href="https://inaniwa.hatenablog.com/entry/2021/11/15/072751">https://inaniwa.hatenablog.com/entry/2021/11/15/072751</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/iwashi31/status/1459461324287582210">13位iwashi31さん</a><ul>
+<li><a href="https://twitter.com/iwashi31/status/1459461324287582210">13 位 iwashi31 さん</a></li>
 <li><a href="https://twitter.com/iwashi31/status/1459462724547579907">https://twitter.com/iwashi31/status/1459462724547579907</a></li>
 <li><a href="https://twitter.com/iwashi31/status/1459463107860844547">https://twitter.com/iwashi31/status/1459463107860844547</a></li>
 <li><a href="https://twitter.com/iwashi31/status/1459465190890631173">https://twitter.com/iwashi31/status/1459465190890631173</a></li>
 <li><a href="https://twitter.com/iwashi31/status/1459466272383504389">https://twitter.com/iwashi31/status/1459466272383504389</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/yochan_tech/status/1459462014615851008">14位yochanさん</a><ul>
+<li><a href="https://twitter.com/yochan_tech/status/1459462014615851008">14 位 yochan さん</a></li>
 <li><a href="https://twitter.com/yochan_tech/status/1459466656225558528">https://twitter.com/yochan_tech/status/1459466656225558528</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/gzlcp/status/1459462267331051521">15位gazelleさん</a><ul>
+<li><a href="https://twitter.com/gzlcp/status/1459462267331051521">15 位 gazelle さん</a></li>
 <li><a href="https://twitter.com/gzlcp/status/1459463457900998658">https://twitter.com/gzlcp/status/1459463457900998658</a></li>
 <li><a href="https://twitter.com/gzlcp/status/1459463747970682880">https://twitter.com/gzlcp/status/1459463747970682880</a></li>
 <li><a href="https://twitter.com/gzlcp/status/1459464174070038528">https://twitter.com/gzlcp/status/1459464174070038528</a></li>
 <li><a href="https://twitter.com/gzlcp/status/1459464947822624768">https://twitter.com/gzlcp/status/1459464947822624768</a></li>
 <li><a href="https://twitter.com/gzlcp/status/1459465248499716097">https://twitter.com/gzlcp/status/1459465248499716097</a></li>
-</ul>
-</li>
-<li><a href="https://qiita.com/tanaka-a/items/dc50b224f984335ab986">16位rabotさん</a></li>
-<li>17位tokuさん</li>
-<li>18位tomerunさん</li>
-<li>19位shamioさん</li>
-<li><a href="https://twitter.com/kawatea03/status/1459464321768259585">20位kawateaさん</a></li>
-<li>21位ytknさん</li>
-<li><a href="https://twitter.com/_hokekyo1210/status/1459479032932990977">22位hokekyo1210さん</a></li>
-<li><a href="https://twitter.com/EmKjp/status/1459465646371053572">23位EmKさん</a></li>
-<li><a href="https://twitter.com/shibh308/status/1459469659468877825">24位shibh308さん</a></li>
-<li><a href="https://twitter.com/assy1028/status/1459461980347985924">25位assyさん</a></li>
-<li>26位krさん</li>
-<li><a href="https://twitter.com/terry_u16/status/1459462317771747328">28位terry_u16さん</a><ul>
+<li><a href="https://qiita.com/tanaka-a/items/dc50b224f984335ab986">16 位 rabot さん</a></li>
+<li>17 位 toku さん</li>
+<li>18 位 tomerun さん</li>
+<li>19 位 shamio さん</li>
+<li><a href="https://twitter.com/kawatea03/status/1459464321768259585">20 位 kawatea さん</a></li>
+<li>21 位 ytkn さん</li>
+<li><a href="https://twitter.com/_hokekyo1210/status/1459479032932990977">22 位 hokekyo1210 さん</a></li>
+<li><a href="https://twitter.com/EmKjp/status/1459465646371053572">23 位 EmK さん</a></li>
+<li><a href="https://twitter.com/shibh308/status/1459469659468877825">24 位 shibh308 さん</a></li>
+<li><a href="https://twitter.com/assy1028/status/1459461980347985924">25 位 assy さん</a></li>
+<li>26 位 kr さん</li>
+<li><a href="https://twitter.com/terry_u16/status/1459462317771747328">28 位 terry_u16 さん</a></li>
 <li><a href="https://twitter.com/terry_u16/status/1459470465354076167">https://twitter.com/terry_u16/status/1459470465354076167</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/sumoooru/status/1459478589309550596">29位sumoooruさん</a></li>
-<li><a href="https://twitter.com/yupiteru_kun/status/1459461186466975751">30位yupiteruさん</a></li>
-<li><a href="https://twitter.com/kens_kyopro/status/1459462599339556866">31位kensさん</a></li>
-<li>32位y_kawanoさん</li>
-<li><a href="https://twitter.com/ebicochineal/status/1459487058087407617">33位ebicochinealさん</a></li>
-<li><a href="https://twitter.com/yowa/status/1459985209949302784">34位yowaさん</a><ul>
+<li><a href="https://twitter.com/sumoooru/status/1459478589309550596">29 位 sumoooru さん</a></li>
+<li><a href="https://twitter.com/yupiteru_kun/status/1459461186466975751">30 位 yupiteru さん</a></li>
+<li><a href="https://twitter.com/kens_kyopro/status/1459462599339556866">31 位 kens さん</a></li>
+<li>32 位 y_kawano さん</li>
+<li><a href="https://twitter.com/ebicochineal/status/1459487058087407617">33 位 ebicochineal さん</a></li>
+<li><a href="https://twitter.com/yowa/status/1459985209949302784">34 位 yowa さん</a></li>
 <li><a href="https://twitter.com/yowa/status/1460116477097680896">https://twitter.com/yowa/status/1460116477097680896</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/whimsicott_opu/status/1459472590796308484">35位tokotoko7777さん</a></li>
-<li>36位rs02さん</li>
-<li><a href="https://twitter.com/itigo_purokonn/status/1459466863201587202">37位itigoさん</a><ul>
+<li><a href="https://twitter.com/whimsicott_opu/status/1459472590796308484">35 位 tokotoko7777 さん</a></li>
+<li>36 位 rs02 さん</li>
+<li><a href="https://twitter.com/itigo_purokonn/status/1459466863201587202">37 位 itigo さん</a></li>
 <li><a href="https://twitter.com/itigo_purokonn/status/1459469271629582343">https://twitter.com/itigo_purokonn/status/1459469271629582343</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/trineutron/status/1459471474805198848">38位Trineutronさん</a></li>
-<li>39位uminorosujinさん<ul>
+<li><a href="https://twitter.com/trineutron/status/1459471474805198848">38 位 Trineutron さん</a></li>
+<li>39 位 uminorosujin さん</li>
 <li><a href="https://uminorosu.hatenablog.com/entry/2021/11/23/151939">https://uminorosu.hatenablog.com/entry/2021/11/23/151939</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/gmeriaog/status/1459480733433548802">40位wanuiさん</a></li>
-<li><a href="https://twitter.com/keep_OC/status/1459462090713088000">41位keep_OCさん</a></li>
-<li>42位cirno3153さん</li>
-<li>43位besukohuさん</li>
-<li><a href="https://twitter.com/takumi152/status/1459464409651171334">44位takumi152さん</a><ul>
+<li><a href="https://twitter.com/gmeriaog/status/1459480733433548802">40 位 wanui さん</a></li>
+<li><a href="https://twitter.com/keep_OC/status/1459462090713088000">41 位 keep_OC さん</a></li>
+<li>42 位 cirno3153 さん</li>
+<li>43 位 besukohu さん</li>
+<li><a href="https://twitter.com/takumi152/status/1459464409651171334">44 位 takumi152 さん</a></li>
 <li><a href="https://twitter.com/takumi152/status/1459465554402889728">https://twitter.com/takumi152/status/1459465554402889728</a></li>
 <li><a href="https://takumi152.hatenablog.jp/entry/2021/11/13/191713">https://takumi152.hatenablog.jp/entry/2021/11/13/191713</a></li>
-</ul>
-</li>
-<li>45位spica314さん</li>
-<li>46位primenumberさん</li>
-<li><a href="https://twitter.com/takoshiiiiiiiii/status/1459464790489780225">47位takoshiさん</a></li>
-<li><a href="https://twitter.com/t33f/status/1459464692405915651">48位kozimaさん</a><ul>
+<li>45 位 spica314 さん</li>
+<li>46 位 primenumber さん</li>
+<li><a href="https://twitter.com/takoshiiiiiiiii/status/1459464790489780225">47 位 takoshi さん</a></li>
+<li><a href="https://twitter.com/t33f/status/1459464692405915651">48 位 kozima さん</a></li>
 <li><a href="https://twitter.com/t33f/status/1459467052263952385">https://twitter.com/t33f/status/1459467052263952385</a></li>
 <li><a href="https://twitter.com/t33f/status/1459467759335575554">https://twitter.com/t33f/status/1459467759335575554</a></li>
 <li><a href="https://twitter.com/t33f/status/1459478143136256003">https://twitter.com/t33f/status/1459478143136256003</a></li>
-</ul>
-</li>
-<li>49位shotoyooさん</li>
-<li><a href="https://twitter.com/lgeuwce/status/1459461720624095232">50位nagissさん</a><ul>
+<li>49 位 shotoyoo さん</li>
+<li><a href="https://twitter.com/lgeuwce/status/1459461720624095232">50 位 nagiss さん</a></li>
 <li><a href="https://twitter.com/lgeuwce/status/1459469988838862851">https://twitter.com/lgeuwce/status/1459469988838862851</a></li>
 <li><a href="https://twitter.com/lgeuwce/status/1459475887724789760">https://twitter.com/lgeuwce/status/1459475887724789760</a></li>
 <li><a href="https://twitter.com/lgeuwce/status/1460106180005564416">https://twitter.com/lgeuwce/status/1460106180005564416</a></li>
 <li><a href="https://twitter.com/lgeuwce/status/1459677513970434050">https://twitter.com/lgeuwce/status/1459677513970434050</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://togetter.com/li/1802420">agwさんTwitterまとめ</a></li>
+<li><a href="https://togetter.com/li/1802420">agw さん Twitter まとめ</a></li>
 <li><a href="https://twitter.com/hashtag/HTTF">Twitter hashtag HTTF</a></li>
 </ul>
 <h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
@@ -913,29 +879,25 @@
 </ul>
 <h3 id="_5">スキル推定<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
-<li>それまでに選択したタスクとかかった時間を保持して、絶対誤差/二乗誤差(MSE)あたりが最小になるように山登り/焼きなましなど<ul>
-<li>自由度があるので、正則化項(L2ノルムとか)なども</li>
-</ul>
-</li>
+<li>それまでに選択したタスクとかかった時間を保持して、絶対誤差/二乗誤差(MSE)あたりが最小になるように山登り/焼きなましなど</li>
+<li>自由度があるので、正則化項(L2 ノルムとか)なども</li>
 <li>最初の方は、あえて探索要素をいれるなど</li>
 <li>ベイズ推定、MCMC</li>
 </ul>
 <h3 id="_6">タスク割り当て<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
-<li>クリティカルパス(一番時間がかかるタスクのパス)がボトルネックになるので、そのようなパスを重視するなどは必要<ul>
+<li>クリティカルパス(一番時間がかかるタスクのパス)がボトルネックになるので、そのようなパスを重視するなどは必要</li>
 <li>深さ、などでも良い</li>
 <li>クリティカルパス分析</li>
-</ul>
-</li>
-<li>greedyなタスク割当で難しいところは、人が余ってないときや強い人がタスク中のときに、タスクが終わったからといってその人が不得意な仕事を割り当てることになりえること<ul>
+<li>greedy なタスク割当で難しいところは、人が余ってないときや強い人がタスク中のときに、タスクが終わったからといってその人が不得意な仕事を割り当てることになりえること</li>
 <li>そこで、「人(全員)と、割り当て可能なジョブ」の組み合わせに対して評価値を考える<ul>
 <li>手が開いてる人に対してだけだと、評価関数をちゃんとやってても、活かされないような割り当てする可能性がある</li>
 <li>タスク中でも、終わってからタスクをやった場合というのを考える</li>
-<li>ここが、Rが大きいときに重要で、暫定97k点台と101k点台ぐらいの差がでていたキモ</li>
+<li>ここが、R が大きいときに重要で、暫定 97k 点台と 101k 点台ぐらいの差がでていたキモ</li>
 </ul>
 </li>
 <li>反省: 自分は「終わりが近い人も含めて割当を考える」だけをしていた(全員ではない)</li>
-<li>人iにタスクjを割り当てるときの評価関数<ul>
+<li>人 i にタスク j を割り当てるときの評価関数<ul>
 <li>パスの重み/最長経路/要求技能レベルの総和</li>
 <li>かかる時間(タスク終了見込み時間)</li>
 <li>自分にどのぐらい向いている仕事か</li>
@@ -946,37 +908,29 @@
 </ul>
 </li>
 <li>実際の割り当て方は、評価関数をもとに、貪欲、山登り/焼きなましなど</li>
-</ul>
-</li>
-<li>割り当て方は、最小費用流＋アドホックや、LPソルバで計算していた方も<ul>
+<li>割り当て方は、最小費用流＋アドホックや、LP ソルバで計算していた方も</li>
 <li>マッチングを最小費用流で解くやつで、かかる時間の合計が小さくなるような割り当てを求める<ul>
-<li>s-&gt;人の部分で辺を複数本に分けてそれぞれコストを分けることで均等になるような工夫(terry_u16さん)</li>
+<li>s-&gt;人の部分で辺を複数本に分けてそれぞれコストを分けることで均等になるような工夫(terry_u16 さん)</li>
 </ul>
 </li>
 <li>能力が低い人は別処理、など</li>
 </ul>
-</li>
-</ul>
 <h3 id="_7">その他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Rによって問題の性質が違っていた<ul>
-<li>Rが小さい(1000付近)と、依存が少ないので、やれるタスクが多い → 自分が得意な仕事ができる</li>
-<li>Rが大きい(3000付近)と、依存が多く、やれるタスクが少なく、暇になっている人が多い → 得意な人が全部やったほうが早いのに、手があいてるからと不得意な人が手をつけてしまうと逆に遅くなる(あえてやらないほうがよい)</li>
-</ul>
-</li>
-<li>「Rごとに調整」するとよかった可能性<ul>
-<li>3つぐらいに分割してそれぞれでパラメータを分ける、など</li>
-<li>ローカルの評価でも、それぞれのRごとに評価データを分けて確認するなどしたほうが良かった可能性<ul>
+<li>R によって問題の性質が違っていた</li>
+<li>R が小さい(1000 付近)と、依存が少ないので、やれるタスクが多い → 自分が得意な仕事ができる</li>
+<li>R が大きい(3000 付近)と、依存が多く、やれるタスクが少なく、暇になっている人が多い → 得意な人が全部やったほうが早いのに、手があいてるからと不得意な人が手をつけてしまうと逆に遅くなる(あえてやらないほうがよい)</li>
+<li>「R ごとに調整」するとよかった可能性</li>
+<li>3 つぐらいに分割してそれぞれでパラメータを分ける、など</li>
+<li>ローカルの評価でも、それぞれの R ごとに評価データを分けて確認するなどしたほうが良かった可能性<ul>
 <li><a href="https://twitter.com/_phocom/status/1460164219006259201">https://twitter.com/_phocom/status/1460164219006259201</a></li>
 <li><a href="https://twitter.com/iwashi31/status/1460192127338508292">https://twitter.com/iwashi31/status/1460192127338508292</a></li>
 <li>テストケースが少ないと偏りやすい</li>
-<li>3000ケースで評価していればそこまで偏らないのでよいか</li>
+<li>3000 ケースで評価していればそこまで偏らないのでよいか</li>
 </ul>
 </li>
 <li>ヒートマップを見る<ul>
 <li><a href="https://tsutaj.hatenablog.com/entry/2021/11/13/190712">https://tsutaj.hatenablog.com/entry/2021/11/13/190712</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -993,7 +947,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="ahc009.html" class="md-footer__link md-footer__link--prev" aria-label="前: モノグサプログラミングコンテスト2022(AtCoder Heuristic Contest 009)" rel="prev">
+        <a href="ahc009.html" class="md-footer__link md-footer__link--prev" aria-label="前: AHC009(モノグサ)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1002,20 +956,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              モノグサプログラミングコンテスト2022(AtCoder Heuristic Contest 009)
+              AHC009(モノグサ)
             </div>
           </div>
         </a>
       
       
         
-        <a href="intro-heuristics.html" class="md-footer__link md-footer__link--next" aria-label="次: Introduction to Heuristics Contest" rel="next">
+        <a href="intro-heuristics.html" class="md-footer__link md-footer__link--next" aria-label="次: Intro. to HC" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Introduction to Heuristics Contest
+              Intro. to HC
             </div>
           </div>
           <div class="md-footer__button md-icon">
