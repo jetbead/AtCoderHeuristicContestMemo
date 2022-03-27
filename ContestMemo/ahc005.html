@@ -717,9 +717,11 @@
 </ul>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>N * N マスの地図が与えられ、各マスは道路または障害物になっている</li>
+<li>N * N マスの地図が与えられ、各マスは道路または障害物になっている<ul>
 <li>道路の場合は、5〜9 の数字が書かれており、そのマスへの移動にかかる時間を表している</li>
 <li>道路からは隣接する道路に移動することができる</li>
+</ul>
+</li>
 <li>あるマスにいるとき、その上下左右に続く道路は「視界に入る」</li>
 <li>指定されたスタートマスから、すべての道路が「視界に入る」ように動いて、スタートマスに戻ってくるようなルートについて、できるだけ総移動時間が短いルートを求めよ</li>
 </ul>
@@ -734,15 +736,15 @@
 <li><a href="https://twitter.com/_phocom/status/1423964300905910274">5 位 phocom さん</a></li>
 <li>6 位 Aquarius さん</li>
 <li><a href="https://twitter.com/rsat__m/status/1423964658994618368">7 位 hitonanode さん</a></li>
-<li><a href="https://twitter.com/tomerun/status/1423964750367531015">8 位 tomerun さん</a></li>
+<li><a href="https://twitter.com/tomerun/status/1423964750367531015">8 位 tomerun さん</a><ul>
 <li><a href="https://twitter.com/tomerun/status/1424298448690446336">https://twitter.com/tomerun/status/1424298448690446336</a></li>
+</ul>
+</li>
 <li><a href="https://assy.hatenablog.jp/entry/2021/08/08/000925">9 位 assy さん</a></li>
-<li>
-<p>10 位 Rafbill さん</p>
-</li>
-<li>
-<p><a href="https://twitter.com/chokudai/status/1423964972002930695">社長コメント</a></p>
-</li>
+<li>10 位 Rafbill さん</li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/chokudai/status/1423964972002930695">社長コメント</a></li>
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -752,12 +754,16 @@
 <h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>ざっくり「全道路が視界に入るようなの交差点の部分集合を通って戻ってくる TSP」</li>
-<li>「すべての道路が視界に入っているか」判定</li>
+<li>「すべての道路が視界に入っているか」判定<ul>
 <li>交差点列挙した後、<code>dp[N][N]</code>みたいに持って、交差点を選んだら上下左右に+1、選ばなくしたら上下左右に-1 みたいにすると更新に O(N)程度かかってしまう</li>
 <li>連続した道路列(線分、辺)に対して ID を割り振って、道路列上の交差点とのペア<code>(線分ID, 交差点ID)</code>で扱うようにすると、更新が O(1)程度にできる</li>
-<li>通る頂点集合最適化と TSP 最適化を一緒に焼きなます</li>
+</ul>
+</li>
+<li>通る頂点集合最適化と TSP 最適化を一緒に焼きなます<ul>
 <li>交差点巡回の場合。交差点の追加削除近傍、2-opt 近傍</li>
 <li>道路列巡回の場合は、<code>(線分ID, 交差点ID)</code>の順番を最適化して、最短時間計算時にうまく交差点無視しつつ計算する、などもできる</li>
+</ul>
+</li>
 </ul>
 
               
