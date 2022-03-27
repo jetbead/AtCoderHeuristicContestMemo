@@ -61,6 +61,10 @@
   /*border-bottom: 1px solid #ccc;*/
 }
 
+.md-typeset ol li :-webkit-any(ul,ol), .md-typeset ul li :-webkit-any(ul,ol) {
+  margin-bottom: 0.3em;
+  margin-top: 0em;
+}
 .md-typeset ul li {
   margin-bottom: 0.15em;
 }
