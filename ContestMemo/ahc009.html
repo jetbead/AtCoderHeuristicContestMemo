@@ -408,13 +408,20 @@
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    ビームサーチ
+    スコア計算の高速化
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    ビームサーチ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     壁にぶつかるまで進む/ダブらせ
   </a>
   
@@ -428,7 +435,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     その他
   </a>
   
@@ -789,13 +796,20 @@
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    ビームサーチ
+    スコア計算の高速化
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    ビームサーチ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     壁にぶつかるまで進む/ダブらせ
   </a>
   
@@ -809,7 +823,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     その他
   </a>
   
@@ -957,10 +971,7 @@
 </ul>
 <h3 id="_7">スコア計算/評価関数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
-<li>スコアを愚直に計算しても 5000 ～ 10000 回ぐらい回る<ul>
-<li>(毎回 1 ターン目から計算する必要はなくて、変更したターンより前は再計算省略できる。もし命令列の後半部分の変更が重要ならこの省略はかなり有効そうかも)</li>
-</ul>
-</li>
+<li>スコアを愚直に計算しても 5000 ～ 10000 回ぐらい回る</li>
 <li>評価関数として「各マスでの"存在確率*ゴールまでの距離"の合計」とかも<ul>
 <li><a href="https://twitter.com/ValGrowth/status/1507659973433520132">https://twitter.com/ValGrowth/status/1507659973433520132</a></li>
 <li><a href="https://twitter.com/Shun___PI/status/1507659970636292099">https://twitter.com/Shun___PI/status/1507659970636292099</a></li>
@@ -968,13 +979,29 @@
 </ul>
 </li>
 </ul>
-<h3 id="_8">ビームサーチ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_8">スコア計算の高速化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>毎回 1 ターン目から計算する必要はなくて、変更したターンより前は再計算省略できる(定数倍高速化)<ul>
+<li>もし命令列の後半部分の変更が重要ならこの省略はかなり有効そうかも</li>
+</ul>
+</li>
+<li>状態更新を後に持ってくるテク<ul>
+<li>焼きなまし系の高速化テクで、「状態更新して差分計算後に悪かったら undo する」ではなく、「(状態更新はせずに)近傍の差分計算をO(1)とかで行って良くなる場合だけ状態更新する」テク</li>
+<li>基本、不採用になることが多いので、採用時にだけ状態更新することで、高速化できる</li>
+<li>今回の場合だと、近傍の差分計算は、前からと後ろからの確率DPを持っておくと、あるターンの命令が変わったとき、各マスからゴールする確率が後ろからのDPでわかる<ul>
+<li>差分計算がO(H*W)、更新がO(Turn*H*W)ぐらい</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9">ビームサーチ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li>命令列と確率値を保持することで、1 ターン目からの再計算が不要</li>
 <li><a href="https://twitter.com/chokudai/status/1507663092418682883">https://twitter.com/chokudai/status/1507663092418682883</a></li>
 <li><a href="https://twitter.com/colun/status/1507717580022161410">https://twitter.com/colun/status/1507717580022161410</a></li>
 </ul>
-<h3 id="_9">壁にぶつかるまで進む/ダブらせ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_10">壁にぶつかるまで進む/ダブらせ<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <ul>
 <li>できるだけ塊(高い確率値のマス)で扱いたい気持ち<ul>
 <li>同じ方向に動き続けて、壁にぶつかってそこで滞留させる感じの動き</li>
@@ -1005,7 +1032,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_10">その他<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_11">その他<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <ul>
 <li>「bool cango[y][x][d] := (y,x)から方向 d に移動できるか」で持つと便利<ul>
 <li><a href="https://twitter.com/tomerun/status/1507763835746553859">https://twitter.com/tomerun/status/1507763835746553859</a></li>
