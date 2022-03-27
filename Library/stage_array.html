@@ -13,7 +13,7 @@
     
     
       
-        <title>Stage機能付きValue/Array - AtCoder Heuristic Contest Memo</title>
+        <title>Stage 機能付き Value/Array - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stagevaluearray" class="md-skip">
+        <a href="#stage-valuearray" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stage機能付きValue/Array
+              Stage 機能付き Value/Array
             
           </span>
         </div>
@@ -562,12 +562,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Stage機能付きValue/Array
+          Stage 機能付き Value/Array
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="stage_array.html" class="md-nav__link md-nav__link--active">
-        Stage機能付きValue/Array
+        Stage 機能付き Value/Array
       </a>
       
         
@@ -724,26 +724,38 @@
                 
 
 
-<h1 id="stagevaluearray">Stage機能付きValue/Array<a class="headerlink" href="#stagevaluearray" title="Permanent link">&para;</a></h1>
+<h1 id="stage-valuearray">Stage 機能付き Value/Array<a class="headerlink" href="#stage-valuearray" title="Permanent link">&para;</a></h1>
 <h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>焼きなましなどで、変数や配列に対して1回だけundo操作を実装したい場合がある</li>
-<li>これを簡単に実装するために、操作に対して、commitで反映、resetで1つ前のcommit状態に戻す機能を持たせたクラス
-    - <code>StageValue</code>: stage機能付き変数
-    - <code>StageArray</code>: stage機能付き配列</li>
+<li>焼きなましなどで、変数や配列に対して 1 回だけ undo 操作を実装したい場合がある</li>
+<li>これを簡単に実装するために、操作に対して、commit で反映、reset で 1 つ前の commit 状態に戻す機能を持たせたクラス<ul>
+<li><code>StageValue</code>: stage 機能付き変数</li>
+<li><code>StageArray</code>: stage 機能付き配列</li>
+</ul>
+</li>
 </ul>
 <h2 id="_2">計算量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>set()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>
-    - 値をセット</li>
-<li><code>add()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>
-    - 値に追加</li>
-<li><code>get()</code> or <code>operator[]</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>
-    - 値を取得</li>
-<li><code>commit()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(m)</span><script type="math/tex">O(m)</script></span> (<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>: 操作回数)
-    - 操作内容を反映</li>
-<li><code>reset()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>
-    - 操作内容を破棄し、1つ前のcommit状態に戻す</li>
+<li><code>set()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>値をセット</li>
+</ul>
+</li>
+<li><code>add()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>値に追加</li>
+</ul>
+</li>
+<li><code>get()</code> or <code>operator[]</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>値を取得</li>
+</ul>
+</li>
+<li><code>commit()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(m)</span><script type="math/tex">O(m)</script></span> (<span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>: 操作回数)<ul>
+<li>操作内容を反映</li>
+</ul>
+</li>
+<li><code>reset()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>操作内容を破棄し、1 つ前の commit 状態に戻す</li>
+</ul>
+</li>
 </ul>
 <h2 id="_3">コード<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1">// stage機能付き変数</span>
@@ -889,8 +901,10 @@
 </code></pre></div>
 <h2 id="verified">Verified<a class="headerlink" href="#verified" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://atcoder.jp/contests/ahc006/submissions/27339909">https://atcoder.jp/contests/ahc006/submissions/27339909</a>
-    - <code>add()</code>以外</li>
+<li><a href="https://atcoder.jp/contests/ahc006/submissions/27339909">https://atcoder.jp/contests/ahc006/submissions/27339909</a><ul>
+<li><code>add()</code>以外</li>
+</ul>
+</li>
 </ul>
 
               

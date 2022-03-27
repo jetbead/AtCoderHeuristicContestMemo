@@ -531,10 +531,10 @@
       
         <li class="md-nav__item">
   <a href="#ai" class="md-nav__link">
-    ゲームとAIの分離
+    ゲームと AI の分離
   </a>
   
-    <nav class="md-nav" aria-label="ゲームとAIの分離">
+    <nav class="md-nav" aria-label="ゲームと AI の分離">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -682,7 +682,7 @@
   
     <li class="md-nav__item">
       <a href="stage_array.html" class="md-nav__link">
-        Stage機能付きValue/Array
+        Stage 機能付き Value/Array
       </a>
     </li>
   
@@ -737,10 +737,10 @@
       
         <li class="md-nav__item">
   <a href="#ai" class="md-nav__link">
-    ゲームとAIの分離
+    ゲームと AI の分離
   </a>
   
-    <nav class="md-nav" aria-label="ゲームとAIの分離">
+    <nav class="md-nav" aria-label="ゲームと AI の分離">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -846,11 +846,11 @@
 
 <h1 id="_1">デザインパターン<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>(コードメモは適当に書いたやつなので注意)</p>
-<h2 id="ai">ゲームとAIの分離<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
+<h2 id="ai">ゲームと AI の分離<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
 <h3 id="_2">概要<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>ゲーム(環境情報、スコア計算など)に関するものと、AI(方針、戦略など)に関するものを分ける</li>
-<li>AI部分は、試行錯誤する部分なので、アルゴリズムを切り替えられるようStrategyパターンなどにする</li>
+<li>AI 部分は、試行錯誤する部分なので、アルゴリズムを切り替えられるよう Strategy パターンなどにする</li>
 <li>分けておくことで、いろんな戦略を切り替えやすくなる</li>
 </ul>
 <h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h3>
@@ -908,9 +908,11 @@
 <h2 id="_4">異なるタスクを実行しうるマルチエージェントの協調動作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="_5">概要<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
-<li>複数のエージェントが、それぞれ異なるタスクを実行したり、部分的に協調的にタスクを実行する場合、「命令(Command)」単位で扱うとわかりやすい
-    - AIがいくつか命令を発行し、命令にエージェントをアサインする
-    - 命令ごとに目標を達成するためにエージェントを動かす</li>
+<li>複数のエージェントが、それぞれ異なるタスクを実行したり、部分的に協調的にタスクを実行する場合、「命令(Command)」単位で扱うとわかりやすい<ul>
+<li>AI がいくつか命令を発行し、命令にエージェントをアサインする</li>
+<li>命令ごとに目標を達成するためにエージェントを動かす</li>
+</ul>
+</li>
 </ul>
 <h3 id="reference_1">Reference<a class="headerlink" href="#reference_1" title="Permanent link">&para;</a></h3>
 <ul>
