@@ -4,79 +4,49 @@ title: Home
 
 # AtCoder Heuristic Contest Memo
 
-## Contents
+## :material-table-of-contents: Contents
 
-<div class="box">
-  <div class="l-wrapper">
-    <div class="card">
-      <img class="card-img" src="./img/digitization-g1628107d9_320.jpg">
-      <div class="card-content">
-        <p class="card-title">Contest Memo</p>
-        <p class="card-text">過去のコンテスト情報、解法リンク、反省メモなど</p>
-      </div>
-      <div class="card-link">
-        <a href="./ContestMemo/index.html">Contest List</a>
-      </div>
-    </div>
-  </div>
+- :material-pen: **Contest Memo** (過去のコンテスト情報、解法リンク、反省メモ)
+  - [Contest List](./ContestMemo/index.md)
+- :fontawesome-solid-book: **Document** (Heuristic Contest に関する Tips やドキュメント)
+  - [How to get started](./Docs/how_to_get_started.md)
+  - [Support Tool](./Docs/support_tool.md)
+  - [Visualizer](./Docs/visualizer.md)
+  - [Tips](./Docs/tips.md)
+- :material-axe: **Library** (Heuristic Contest 関連の自作ライブラリ、調査メモ)
+  - [焼きなまし法](./Library/sa.md)
+  - [ゲーム木探索](./Library/game_tree.md)
+  - [stage 機能付き配列](./Library/stage_array.md)
+  - [時間計測 Timer](./Library/timer.md)
+  - [デザインパターン](./Library/design_pattern.md)
+  - [用語集](./Library/glossary.md)
 
-  <div class="l-wrapper">
-    <div class="card">
-      <img class="card-img" src="./img/paper-g6c8835b2d_320.jpg">
-      <div class="card-content">
-        <p class="card-title">Docs</p>
-        <p class="card-text">Heuristic Contestに関するTipsやドキュメントなど</p>
-      </div>
-      <div class="card-link">
-        <a href="./Docs/how_to_get_started.html">Get Started</a>
-      </div>
-    </div>
-  </div>
+## :material-link: Links
 
-  <div class="l-wrapper">
-    <div class="card">
-      <img class="card-img" src="./img/books-g9dd217d7d_320.jpg">
-      <div class="card-content">
-        <p class="card-title">Library</p>
-        <p class="card-text">Heuristic Contest関連の用語集や自作ライブラリなど</p>
-      </div>
-      <div class="card-link">
-        <a href="./Library/glossary.html">Glossary</a>
-      </div>
-    </div>
-  </div>
+- :material-office-building: **Official**
+  - [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
+  - [AHC Ranking(beta)](https://www.dropbox.com/s/j276tgd7izpc40u/ranking.csv?dl=0)
+    - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
+- :material-axis-arrow: **rating/statistics**
+  - AtCoder Marathon Rating History
+    - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
+  - AtCoder Marathon Replay
+    - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
+  - AtCoder Heuristic Statistics
+    - https://heuristic-statistics.herokuapp.com/
+  - AHC Rating Simulator
+    - https://saharan.github.io/progcon/ahc-rating-sim.html
+  - competitiveprogramming.info/atcoder/contests/marathon
+    - https://competitiveprogramming.info/atcoder/contests/marathon
+  - AtCoder Heuristic Rating Estimator
+    - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
 
-</div>
-
-## Links
-
-### Official
-
-- [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
-- [AHC Ranking(beta)](https://www.dropbox.com/s/j276tgd7izpc40u/ranking.csv?dl=0)
-  - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
-
-### rating/statistics
-
-- AtCoder Marathon Rating History
-  - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
-- AtCoder Marathon Replay
-  - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
-- AtCoder Heuristic Statistics
-  - https://heuristic-statistics.herokuapp.com/
-- AHC Rating Simulator
-  - https://saharan.github.io/progcon/ahc-rating-sim.html
-- competitiveprogramming.info/atcoder/contests/marathon
-  - https://competitiveprogramming.info/atcoder/contests/marathon
-- AtCoder Heuristic Rating Estimator
-  - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
-
-## Disclaimer
+## :material-paw: Disclaimer
 
 !!! warning "個人的にまとめているページのため、内容が間違っている可能性があります。このページの内容やコードによって生じた損害等の一切の責任を負いかねますので、ご了承ください。また、リンクの移動先での情報やサービスについても一切責任も負いません。"
 
 また、コンテスト期間中はネタバレ防止の為更新いたしません。
 
-## GitHub
+## :material-github: GitHub
 
-[:material-github: jetbead/AtCoderHeuristicContestMemo](https://github.com/jetbead/AtCoderHeuristicContestMemo/)
+[jetbead/AtCoderHeuristicContestMemo](https://github.com/jetbead/AtCoderHeuristicContestMemo/)
