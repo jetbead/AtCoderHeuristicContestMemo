@@ -941,11 +941,11 @@
 <li><a href="https://twitter.com/sumoooru/status/1507660018547847170">50 位 sumoooru さん</a></li>
 </ul>
 <ul>
-<li><a href="https://twitter.com/colun/status/1508247782984933377">コンテスト後colunさん75.9億点解</a><ul>
+<li><a href="https://twitter.com/colun/status/1508247782984933377">コンテスト後 colun さん 75.9 億点解</a><ul>
 <li><a href="https://twitter.com/colun/status/1508277689140248576">https://twitter.com/colun/status/1508277689140248576</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/wata_orz/status/1508304028312096770">コンテスト後wataさん76.8億点解</a><ul>
+<li><a href="https://twitter.com/wata_orz/status/1508304028312096770">コンテスト後 wata さん 76.8 億点解</a><ul>
 <li><a href="https://twitter.com/wata_orz/status/1508295401572495365">https://twitter.com/wata_orz/status/1508295401572495365</a></li>
 </ul>
 </li>
@@ -975,8 +975,8 @@
 <li>右下に行きやすくする</li>
 <li>ビームサーチ</li>
 <li>多点スタート<ul>
-<li>iteration回数が少ないため？か、初期値に依存が強いっぽいので、良い初期解を考えるのではなく、多点スタートも有効だった模様</li>
-<li>wataさん解</li>
+<li>iteration 回数が少ないため？か、初期値に依存が強いっぽいので、良い初期解を考えるのではなく、多点スタートも有効だった模様</li>
+<li>wata さん解</li>
 </ul>
 </li>
 </ul>
@@ -993,7 +993,7 @@
 </ul>
 <h3 id="_7">スコア計算/評価関数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
-<li>今回のスコアは、ゴールできないとS = 0だが、ゴールできれば200点なので、できるだけ早くではなく、できるだけ多くが重要だったっぽい<ul>
+<li>今回のスコアは、ゴールできないと S = 0 だが、ゴールできれば 200 点なので、できるだけ早くではなく、できるだけ多くが重要だったっぽい<ul>
 <li><a href="https://twitter.com/kotatsugame_t/status/1508374148212727808">https://twitter.com/kotatsugame_t/status/1508374148212727808</a></li>
 </ul>
 </li>
@@ -1007,7 +1007,7 @@
 </ul>
 <h3 id="_8">スコア計算の高速化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ul>
-<li>2次元配列ではなく1次元配列で処理したほうが速い<ul>
+<li>2 次元配列ではなく 1 次元配列で処理したほうが速い<ul>
 <li><a href="https://twitter.com/theory_and_me/status/1509887727248211973">https://twitter.com/theory_and_me/status/1509887727248211973</a></li>
 </ul>
 </li>
@@ -1016,10 +1016,10 @@
 </ul>
 </li>
 <li>状態更新を後に持ってくるテク<ul>
-<li>焼きなまし系の高速化テクで、「状態更新して差分計算後に悪かったら undo する」ではなく、「(状態更新はせずに)近傍の差分計算をO(1)とかで行って良くなる場合だけ状態更新する」テク</li>
+<li>焼きなまし系の高速化テクで、「状態更新して差分計算後に悪かったら undo する」ではなく、「(状態更新はせずに)近傍の差分計算を O(1)とかで行って良くなる場合だけ状態更新する」テク</li>
 <li>基本、不採用になることが多いので、採用時にだけ状態更新することで、高速化できる</li>
-<li>今回の場合だと、近傍の差分計算は、前からと後ろからの確率DPを持っておくと、あるターンの命令が変わったとき、各マスからゴールする確率が後ろからのDPでわかる<ul>
-<li>差分計算がO(H*W)、更新がO(Turn*H*W)ぐらい</li>
+<li>今回の場合だと、近傍の差分計算は、前からと後ろからの確率 DP を持っておくと、あるターンの命令が変わったとき、各マスからゴールする確率が後ろからの DP でわかる<ul>
+<li>差分計算が O(H*W)、更新が O(Turn*H*W)ぐらい</li>
 </ul>
 </li>
 </ul>
@@ -1027,7 +1027,7 @@
 <li>ターン順方向更新にすると状態更新時の全ターン更新が不要<ul>
 <li><a href="https://twitter.com/colun/status/1508247782984933377">https://twitter.com/colun/status/1508247782984933377</a></li>
 <li>近傍計算時に変更箇所をランダムに決めた状態更新する場合、変更したターン以降に対して更新する必要があるので、ターン数分かかってしまう</li>
-<li>変更箇所の順番をターン順方向に固定すると、後からDPを全ターンで求めておけば、前から順番に計算できるので、更新もO(H*W)ぐらいになる</li>
+<li>変更箇所の順番をターン順方向に固定すると、後から DP を全ターンで求めておけば、前から順番に計算できるので、更新も O(H*W)ぐらいになる</li>
 </ul>
 </li>
 </ul>
