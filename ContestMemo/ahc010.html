@@ -13,7 +13,7 @@
     
     
       
-        <title>AHC009(モノグサ) - AtCoder Heuristic Contest Memo</title>
+        <title>AHC010(ALGO ARTIS) - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2022atcoder-heuristic-contest-009" class="md-skip">
+        <a href="#algo-artis-2022atcoder-heuristic-contest-010" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AHC009(モノグサ)
+              AHC010(ALGO ARTIS)
             
           </span>
         </div>
@@ -314,6 +314,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="ahc009.html" class="md-nav__link">
+        AHC009(モノグサ)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -326,12 +340,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          AHC009(モノグサ)
+          AHC010(ALGO ARTIS)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="ahc009.html" class="md-nav__link md-nav__link--active">
-        AHC009(モノグサ)
+      <a href="ahc010.html" class="md-nav__link md-nav__link--active">
+        AHC010(ALGO ARTIS)
       </a>
       
         
@@ -387,55 +401,48 @@
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    初期解
+    問題固有の性質
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    近傍
+    最適解の形
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    スコア計算/評価関数
+    サイクルの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    スコア計算の高速化
+    サイクルの拡大
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2つのサイクルサイズの調整
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    ビームサーチ
+    実装周り
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    壁にぶつかるまで進む/ダブらせ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#p" class="md-nav__link">
-    p によって戦略を変える
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
     その他
   </a>
   
@@ -450,20 +457,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ahc010.html" class="md-nav__link">
-        AHC010(ALGO ARTIS)
-      </a>
     </li>
   
 
@@ -789,55 +782,48 @@
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    初期解
+    問題固有の性質
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    近傍
+    最適解の形
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    スコア計算/評価関数
+    サイクルの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    スコア計算の高速化
+    サイクルの拡大
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2つのサイクルサイズの調整
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    ビームサーチ
+    実装周り
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    壁にぶつかるまで進む/ダブらせ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#p" class="md-nav__link">
-    p によって戦略を変える
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
     その他
   </a>
   
@@ -862,234 +848,266 @@
                 
 
 
-<h1 id="2022atcoder-heuristic-contest-009">モノグサプログラミングコンテスト 2022(AtCoder Heuristic Contest 009)<a class="headerlink" href="#2022atcoder-heuristic-contest-009" title="Permanent link">&para;</a></h1>
+<h1 id="algo-artis-2022atcoder-heuristic-contest-010">ALGO ARTISプログラミングコンテスト 2022(AtCoder Heuristic Contest 010)<a class="headerlink" href="#algo-artis-2022atcoder-heuristic-contest-010" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="https://atcoder.jp/contests/ahc009">https://atcoder.jp/contests/ahc009</a></li>
+<li><a href="https://atcoder.jp/contests/ahc010">https://atcoder.jp/contests/ahc010</a></li>
 </ul>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>20 * 20 マスのグリッドがあり、外周には壁があり、隣接マスの間には壁があったりなかったりする</li>
-<li>左上のあるスタート地点から右下のあるゴール地点に向かって、上下左右(UDLR)からなる命令列に従って移動する</li>
-<li>しかし、毎ターン「確率 p で命令を無視して何もしない、確率 1-p で指示通りに移動(壁がある場合は移動しない)」という動きをする</li>
-<li>200 ターン以下の命令列を作成し、できるだけゴールまでかかるターンの期待値を最小化せよ</li>
+<li>30 * 30 マスのタイルがあり、タイルにはレールがついている</li>
+<li>タイルは、向きを区別すると8種類</li>
+<li>各タイルを回転させて、レールでできるだけ大きな閉路を 2 つ作りたい</li>
+<li>2 つの閉路の長さの積を最大化せよ</li>
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>240 分</p>
 <h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
-<li><a href="https://atcoder.jp/contests/ahc009/editorial">解説(公式)</a></li>
-<li><a href="https://twitter.com/wata_orz/status/1507660020963414016">writer 解(wata さん)</a></li>
-<li><a href="https://twitter.com/terry_u16/status/1507660599001780226">1 位 terry_u16 さん</a><ul>
-<li><a href="https://twitter.com/terry_u16/status/1507662503651995650">https://twitter.com/terry_u16/status/1507662503651995650</a></li>
-<li><a href="https://www.terry-u16.net/entry/ahc009">https://www.terry-u16.net/entry/ahc009</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/square10011/status/1507660876110708736">2 位 square1001 さん</a></li>
-<li><a href="https://twitter.com/rsat__m/status/1507663533139718145">3 位 hitonanode さん</a></li>
-<li>4 位 USA さん</li>
-<li>5 位 Nyaan さん</li>
-<li><a href="https://twitter.com/FakePsyho/status/1507664421132324869">6 位 Psyho さん</a></li>
-<li><a href="https://twitter.com/ValGrowth/status/1507659973433520132">7 位 ValGrowth さん</a></li>
-<li>8 位 Aquarius さん</li>
-<li><a href="https://twitter.com/kawatea03/status/1507660902794817537">9 位 kawatea さん</a></li>
-<li><a href="https://twitter.com/takumi152/status/1507661320367538176">10 位 takumi152 さん</a></li>
-<li><a href="https://twitter.com/C7C7LL/status/1507660174470787073">11 位 c7c7 さん</a></li>
-<li><a href="https://twitter.com/plcherrim/status/1507663997289451521">12 位 plcherrim さん</a></li>
-<li><a href="https://twitter.com/heno_code/status/1507659870123700226">13 位 heno239 さん</a></li>
-<li>14 位 kr さん</li>
-<li><a href="https://twitter.com/bond_cmprog/status/1507659214902407172">15 位 Bondo416 さん</a><ul>
-<li><a href="https://bondo.hateblo.jp/entry/2022/03/27/111422">https://bondo.hateblo.jp/entry/2022/03/27/111422</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/t33f/status/1507659014636974086">16 位 kozima さん</a><ul>
-<li><a href="https://twitter.com/t33f/status/1507664894635941889">https://twitter.com/t33f/status/1507664894635941889</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/tomerun/status/1507659630045921280">17 位 tomerun さん</a></li>
-<li><a href="https://twitter.com/highjump_425/status/1507662711202926600">18 位 highjump さん</a></li>
-<li><a href="https://twitter.com/_olphe/status/1507659331638276110">19 位 olphe さん</a></li>
-<li><a href="https://twitter.com/ha15p/status/1507663493272850433">20 位 ha15 さん</a></li>
-<li>21 位 KawattaTaido さん</li>
-<li>22 位 toku さん</li>
-<li><a href="https://twitter.com/Shun___PI/status/1507659970636292099">23 位 Shun_PI さん</a><ul>
-<li><a href="https://twitter.com/Shun___PI/status/1507662001824485380">https://twitter.com/Shun___PI/status/1507662001824485380</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1507669145231687682">https://twitter.com/Shun___PI/status/1507669145231687682</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/butsurizuki/status/1507661093166260231">24 位 physics0523 さん</a></li>
-<li><a href="https://twitter.com/noimi_kyopro/status/1507659006747512836">25 位 noimi さん</a></li>
-<li><a href="https://twitter.com/hoshi524/status/1507667761350475778">26 位 hoshi524 さん</a></li>
-<li><a href="https://twitter.com/iwashi31/status/1507664742110085121">27 位 iwashi31 さん</a></li>
-<li><a href="https://twitter.com/rusa6111/status/1507666559669800961">28 位 rusa さん</a></li>
-<li><a href="https://twitter.com/nok0_kyopro/status/1507658979475828736">29 位 nok0 さん</a></li>
-<li><a href="https://twitter.com/iaNTU_/status/1507659307533303812">30 位 iaNTU さん</a></li>
-<li>31 位 gotanto さん</li>
-<li><a href="https://twitter.com/Shibungi_kyopro/status/1507659462165016576">32 位 Shibungi さん</a></li>
-<li>33 位 mtsd さん</li>
-<li>34 位 toame さん</li>
-<li>35 位 tanzaku さん</li>
-<li>36 位 to_omoT222 さん</li>
-<li>37 位 nasuo さん</li>
-<li><a href="https://twitter.com/Hufnium/status/1507659693678039040">38 位 Hufnium さん</a><ul>
-<li><a href="https://twitter.com/Hufnium/status/1507660062332166146">https://twitter.com/Hufnium/status/1507660062332166146</a></li>
-</ul>
-</li>
-<li><a href="https://twitter.com/bowwowforeach/status/1507661031648096263">39 位 bowwowforeach さん</a><ul>
-<li><a href="https://bowwowforeach.hatenablog.com/entry/2022/03/27/101117">https://bowwowforeach.hatenablog.com/entry/2022/03/27/101117</a></li>
-</ul>
-</li>
-<li>40 位 tosca2020 さん</li>
-<li>41 位 homesentinel さん</li>
-<li><a href="https://twitter.com/Kyo_s_s/status/1507658893287358470">42 位 Kyo_s_s さん</a><ul>
-<li><a href="https://twitter.com/Kyo_s_s/status/1507659363833761795">https://twitter.com/Kyo_s_s/status/1507659363833761795</a></li>
-</ul>
-</li>
-<li>43 位 Rafbill さん</li>
-<li><a href="https://twitter.com/Preds1dent/status/1507666214687969281">44 位 pres1dent さん</a></li>
-<li>45 位 nope124 さん</li>
-<li>46 位 uyasuda さん</li>
-<li><a href="https://twitter.com/trineutron/status/1507661736429916162">47 位 Trineutron さん</a></li>
-<li><a href="https://twitter.com/soraie_/status/1507669693502406656">48 位 soraie さん</a></li>
-<li><a href="https://twitter.com/theory_and_me/status/1507659669854363654">49 位 theory_and_me さん</a></li>
-<li><a href="https://twitter.com/sumoooru/status/1507660018547847170">50 位 sumoooru さん</a></li>
+<li><a href="https://atcoder.jp/contests/ahc010/editorial">解説(公式)</a></li>
+<li><a href="https://www.youtube.com/watch?v=4PvcIm5MDUc">解説放送</a></li>
 </ul>
 <ul>
-<li><a href="https://twitter.com/colun/status/1508247782984933377">コンテスト後 colun さん 75.9 億点解</a><ul>
-<li><a href="https://twitter.com/colun/status/1508277689140248576">https://twitter.com/colun/status/1508277689140248576</a></li>
+<li><a href="https://twitter.com/takumi152/status/1518172728532279297">1 位 takumi152 さん</a><ul>
+<li><a href="https://twitter.com/takumi152/status/1518173970792873984">https://twitter.com/takumi152/status/1518173970792873984</a></li>
+<li><a href="https://takumi152.hatenablog.jp/entry/2022/04/26/124706">https://takumi152.hatenablog.jp/entry/2022/04/26/124706</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/wata_orz/status/1508304028312096770">コンテスト後 wata さん 76.8 億点解</a><ul>
-<li><a href="https://twitter.com/wata_orz/status/1508295401572495365">https://twitter.com/wata_orz/status/1508295401572495365</a></li>
+<li>2 位 Rafbill さん</li>
+<li><a href="https://twitter.com/rsat__m/status/1518169079148081153">3 位 hitonanode さん</a></li>
+<li>4 位 ynasu さん</li>
+<li><a href="https://twitter.com/tomerun/status/1518168426518245376">5 位 tomerun さん</a><ul>
+<li><a href="https://twitter.com/tomerun/status/1518171066316640257">https://twitter.com/tomerun/status/1518171066316640257</a></li>
+<li><a href="https://twitter.com/tomerun/status/1518174134353600512">https://twitter.com/tomerun/status/1518174134353600512</a></li>
 </ul>
 </li>
+<li><a href="https://twitter.com/kawatea03/status/1518169239110119424">6 位 kawatea さん</a></li>
+<li><a href="https://twitter.com/Shun___PI/status/1518169357779894273">7 位 Shun_PI さん</a><ul>
+<li><a href="https://twitter.com/Shun___PI/status/1518170646001623040">https://twitter.com/Shun___PI/status/1518170646001623040</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/bowwowforeach/status/1518169914871148544">8 位 bowwowforeach さん</a><ul>
+<li><a href="https://twitter.com/bowwowforeach/status/1518170677500514304">https://twitter.com/bowwowforeach/status/1518170677500514304</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1518171454684090368">https://twitter.com/bowwowforeach/status/1518171454684090368</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/mamemame_fujita/status/1518168712662368257">9 位 mamekin さん</a></li>
+<li>10 位 Nyaan さん</li>
+<li><a href="https://twitter.com/4000Tashikani/status/1518562746815504384">11 位 tashikani さん</a></li>
+<li>12 位 WA_TLE さん</li>
+<li>13 位 hiratai さん</li>
+<li>14 位 ichyo さん</li>
+<li><a href="https://twitter.com/Jiro_tech15/status/1518168397208768516">15 位 Jirotech さん</a></li>
+<li><a href="https://twitter.com/butsurizuki/status/1518171098957094912">16 位 physics0523 さん</a><ul>
+<li><a href="https://twitter.com/butsurizuki/status/1518171406441545728">https://twitter.com/butsurizuki/status/1518171406441545728</a></li>
+<li><a href="https://twitter.com/butsurizuki/status/1518173159815794688">https://twitter.com/butsurizuki/status/1518173159815794688</a></li>
+<li><a href="https://twitter.com/butsurizuki/status/1518174029404078081">https://twitter.com/butsurizuki/status/1518174029404078081</a></li>
+<li><a href="https://twitter.com/butsurizuki/status/1518181690312732673">https://twitter.com/butsurizuki/status/1518181690312732673</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/carrot46_kyopro/status/1518168836985348096">17 位 carrot46 さん</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1518169236308660224">18 位 iwashi31 さん</a><ul>
+<li><a href="https://twitter.com/iwashi31/status/1518169867765313536">https://twitter.com/iwashi31/status/1518169867765313536</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/rian_tkb/status/1518168687957917697">19 位 riantkb さん</a><ul>
+<li><a href="https://twitter.com/rian_tkb/status/1518169415246057477">https://twitter.com/rian_tkb/status/1518169415246057477</a></li>
+<li><a href="https://twitter.com/rian_tkb/status/1518171147837526016">https://twitter.com/rian_tkb/status/1518171147837526016</a></li>
+<li><a href="https://twitter.com/rian_tkb/status/1518178162127290368">https://twitter.com/rian_tkb/status/1518178162127290368</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/shibh308/status/1518169616430039041">20 位 shibh308 さん</a></li>
+<li>21 位 tishii24 さん</li>
+<li>22 位 EmK さん</li>
+<li>23 位 hasi さん</li>
+<li><a href="https://twitter.com/xyz600600/status/1518169412263890945">24 位 xyz600 さん</a><ul>
+<li><a href="https://twitter.com/xyz600600/status/1518169677830430721">https://twitter.com/xyz600600/status/1518169677830430721</a></li>
+<li><a href="https://twitter.com/xyz600600/status/1518178532127617025">https://twitter.com/xyz600600/status/1518178532127617025</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/5bin101/status/1518172242437611520">25 位 bin101 さん</a></li>
+<li><a href="https://twitter.com/NachiaVivias/status/1518168533540405248">26 位 Nachia さん</a></li>
+<li><a href="https://twitter.com/tute7627/status/1518169268613169153">27 位 tute7627 さん</a></li>
+<li>28 位 kuhaku さん</li>
+<li><a href="https://twitter.com/tokumini_ss/status/1518169190527811584">29 位 tokumini さん</a></li>
+<li><a href="https://twitter.com/cunitac/status/1518173733571104768">30 位 cunitac さん</a></li>
+<li>31 位 KoD さん</li>
+<li><a href="https://twitter.com/sumoooru/status/1518171847971708929">32 位 sumoooru さん</a></li>
+<li><a href="https://twitter.com/mih28731325/status/1518168933622480896">33 位 Moegi さん</a><ul>
+<li><a href="https://twitter.com/mih28731325/status/1518169857472479233">https://twitter.com/mih28731325/status/1518169857472479233</a></li>
+<li><a href="https://twitter.com/mih28731325/status/1518170614867329024">https://twitter.com/mih28731325/status/1518170614867329024</a></li>
+<li><a href="https://twitter.com/mih28731325/status/1518183735224856576">https://twitter.com/mih28731325/status/1518183735224856576</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/gmeriaog/status/1518170958112051200">34 位 wanui さん</a></li>
+<li><a href="https://twitter.com/fuppy_kyopro/status/1518168960889663488">35 位 fuppy0716 さん</a><ul>
+<li><a href="https://twitter.com/fuppy_kyopro/status/1518169845216722944">https://twitter.com/fuppy_kyopro/status/1518169845216722944</a></li>
+<li><a href="https://twitter.com/fuppy_kyopro/status/1518170718600822784">https://twitter.com/fuppy_kyopro/status/1518170718600822784</a></li>
+<li><a href="https://twitter.com/fuppy_kyopro/status/1518175037899309056">https://twitter.com/fuppy_kyopro/status/1518175037899309056</a></li>
+<li><a href="https://twitter.com/fuppy_kyopro/status/1518179272585715712">https://twitter.com/fuppy_kyopro/status/1518179272585715712</a></li>
+</ul>
+</li>
+<li>36 位 rng さん</li>
+<li><a href="https://twitter.com/milkcoffeen/status/1518175508823154690">37 位 milkcoffee さん</a><ul>
+<li><a href="https://twitter.com/milkcoffeen/status/1518186652531064832">https://twitter.com/milkcoffeen/status/1518186652531064832</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/kens_kyopro/status/1518172356799205376">38 位 kens さん</a></li>
+<li>39 位 mtsd さん</li>
+<li><a href="https://twitter.com/ValGrowth/status/1518169439883370496">40 位 ValGrowth さん</a><ul>
+<li><a href="https://twitter.com/ValGrowth/status/1518171178757550080">https://twitter.com/ValGrowth/status/1518171178757550080</a></li>
+</ul>
+</li>
+<li>41 位 cuthbert さん</li>
+<li>42 位 hoshi524 さん</li>
+<li><a href="https://twitter.com/sash277/status/1518171655138603011">43 位 sash さん</a></li>
+<li>44 位 siman さん</li>
+<li>45 位 MatsuTaku さん</li>
+<li><a href="https://twitter.com/yochan_tech/status/1518169856692002818">46 位 yochan さん</a></li>
+<li><a href="https://twitter.com/zeke8080/status/1518173775803879424">47 位 zeke さん</a></li>
+<li>48 位 toame さん</li>
+<li>49 位 dn6049949 さん</li>
+<li><a href="https://twitter.com/merom686/status/1518169194281402368">50 位 merom686 さん</a></li>
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://togetter.com/li/1864078">agw さん Twitter まとめ</a></li>
-<li><a href="https://twitter.com/hashtag/AHC009">Twitter hashtag AHC009</a></li>
-<li><a href="https://twitter.com/kiri8128/status/1507727139902455808">kiri8128 さん Score-Performance グラフ</a></li>
+<li><a href="https://togetter.com/li/1877606">agw さん Twitter まとめ</a></li>
+<li><a href="https://twitter.com/hashtag/AHC010">Twitter hashtag AHC010</a></li>
 </ul>
 <h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ざっくり「初期解を作って、山登り/焼きなましで改善」</li>
-<li>命令列の前の方の変更は後半の状態にまで影響するので、ビームサーチがよさそうに見えるけど、単純な山登り/焼きなましも有効だった模様<ul>
-<li>良い解の形が「ざっくり全体を右下に持っていった後、散らばった確率値をできるだけ拾う」感じだった？</li>
+<li>長いサイクルをどう作るか、が難しい問題</li>
+<li>ざっくり、「小さいサイクルをどんどん大きく/拡大縮小で調整していく」か「領域にわけてパスを見つけ、それをつなぐ」というのが強かった模様</li>
+<li>ただ、実装が間に合わなかった(方針が見えなかった/ミスった、考察に時間がかかった、実装量が多くなった、バグらせた、など)人が多いかもで、ある程度の方針で実装しきれれば良い順位になれた回かも<ul>
+<li>結構どの方針でもそこそこ実装量が必要だった</li>
+<li>上位狙いで提出諦めた人もまあまあいた？</li>
 </ul>
 </li>
-<li>逆にアドホックなルールとかはあんまり得点に繋がりにくかったっぽい</li>
 </ul>
-<h3 id="_5">初期解<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">問題固有の性質<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>(解説放送でのwataさんの手法より)</p>
 <ul>
-<li>BFS(01BFS)やダイクストラで最短路<ul>
-<li>壁にぶつかるまで/曲がるときに+α なコスト。たどり着けない場合は、確率最大マスから最短移動とか、普通の BFS 解を使うとか</li>
+<li>1タイルに2レールがあるタイル(タイル番号4,5)は、そのタイルで2つの異なるサイクルが共有している場合、回転させることで、その2つのサイクルを大きな1つのサイクルにすることができる</li>
+<li>さらに、そのようなタイルは全体の50%の確率で生成されているので、結構多い(半分はこのタイル)</li>
+<li>この性質に気づけて活用できていた人はかなり少なかったぽいかも(twitterを見た感じだと6人ぐらい？多くの人はDFSで探索)</li>
 </ul>
-</li>
-<li>貪欲(評価値が一番改善する方向とか)</li>
-<li>右下に行きやすくする</li>
-<li>ビームサーチ</li>
-<li>多点スタート<ul>
-<li>iteration 回数が少ないため？か、初期値に依存が強いっぽいので、良い初期解を考えるのではなく、多点スタートも有効だった模様</li>
-<li>wata さん解</li>
-</ul>
-</li>
-</ul>
-<h3 id="_6">近傍<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_6">最適解の形<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
-<li>1 文字ランダム変更/削除/挿入</li>
-<li>1 文字ランダム削除、かつ、ランダム/最後に挿入<ul>
-<li><a href="https://twitter.com/theory_and_me/status/1509887727248211973">https://twitter.com/theory_and_me/status/1509887727248211973</a></li>
+<li>「サイクルの長さ」を長くしたいので、大きな○なサイクルというより密度の高いサイクルを目指す必要がある</li>
+<li>また、「2つ」のサイクルの積なので、2つのサイクルはだいたい領域の半分半分が埋まっている感じなのが理想的</li>
 </ul>
-</li>
-<li>隣のものを 1 文字挿入(ダブらせ)</li>
-<li>2 点 swap</li>
-<li>区間反転</li>
-</ul>
-<h3 id="_7">スコア計算/評価関数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7">サイクルの作成<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
-<li>今回のスコアは、ゴールできないと S = 0 だが、ゴールできれば 200 点なので、できるだけ早くではなく、できるだけ多くが重要だったっぽい<ul>
-<li><a href="https://twitter.com/kotatsugame_t/status/1508374148212727808">https://twitter.com/kotatsugame_t/status/1508374148212727808</a></li>
+<li>そもそもサイクルを作るのが難しい<ul>
+<li>最終的には「長いサイクル」を作らないといけないのでさらに難しい</li>
+<li>パスを長くすればよいわけではない(始点に戻ってくる必要がある)</li>
 </ul>
 </li>
-<li>スコアを愚直に計算しても 5000 ～ 10000 回ぐらい回る</li>
-<li>評価関数として「各マスでの"存在確率*ゴールまでの距離"の合計」とかも<ul>
-<li><a href="https://twitter.com/ValGrowth/status/1507659973433520132">https://twitter.com/ValGrowth/status/1507659973433520132</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1507659970636292099">https://twitter.com/Shun___PI/status/1507659970636292099</a></li>
-<li><a href="https://twitter.com/shun_skycrew/status/1507659445450711042">https://twitter.com/shun_skycrew/status/1507659445450711042</a></li>
+<li>ランダムに、タイルを選んで回転させ、偶然サイクルができるのを待つ<ul>
+<li>ランダムにまかせてても、(長い)サイクルはほとんどできないので、よくない</li>
+</ul>
+</li>
+<li>ランダムウォークでパスを伸ばす<ul>
+<li>ランダムに1本パスを伸ばしていって、ゴール地点に偶然たどり着くことに期待する</li>
+<li>基本、途中で移動できなくなったり、ゴール地点にたどり着けないので、かなり失敗率が高い<ul>
+<li>DFSやビームサーチなど複数経路を探索しないと厳しい</li>
 </ul>
 </li>
 </ul>
-<h3 id="_8">スコア計算の高速化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+</li>
+<li>DFSでサイクルを作る<ul>
+<li>適当なレールからスタートして、DFSでタイルを固定しながらたどって、サイクルになるものを見つける<ul>
+<li>偶然元の位置付近に戻るようなのを期待する</li>
+<li>一度固定したタイルは回転させないようにしたいので、訪問回数をカウント(タイルを回転可能か判断)しながらDFSでたどる</li>
+</ul>
+</li>
+<li>深さ制限や時間制限などをつけないと遠くにいくものも探索したり、探索量が多くなってしまう<ul>
+<li>が、各タイルの回転で変わるのは基本2方向なので、そんなに多いわけではない</li>
+<li>進む方向は、「ランダムに選ぶ」か「順番決め打ち」<ul>
+<li><a href="https://twitter.com/iwashi31/status/1518169867765313536">https://twitter.com/iwashi31/status/1518169867765313536</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>なので、1回で長いサイクルを見つけるのではなく、探索量は少なめにして小さめのサイクルから「サイクルの拡大」をしていくのが良い</li>
+</ul>
+</li>
+<li>領域を分けてパスを見つけ、領域間のパスをつないでサイクル化<ul>
+<li>比較的「パス」は作りやすいので、全体を小さい領域に分割してその中で開始位置と終了位置を固定して長いパスを見つけておく</li>
+<li>あとは領域間のパスをつないであげればよい</li>
+</ul>
+</li>
+<li>乱択ビームサーチ<ul>
+<li><a href="https://twitter.com/gmeriaog/status/1518170958112051200">https://twitter.com/gmeriaog/status/1518170958112051200</a></li>
+<li><a href="https://twitter.com/colun/status/1518170632986705921">https://twitter.com/colun/status/1518170632986705921</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">サイクルの拡大<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ul>
-<li>2 次元配列ではなく 1 次元配列で処理したほうが速い<ul>
-<li><a href="https://twitter.com/theory_and_me/status/1509887727248211973">https://twitter.com/theory_and_me/status/1509887727248211973</a></li>
+<li>タイル4,5の(上の問題固有の)性質を使う<ul>
+<li>タイル4,5を使って、そのタイルを共有するサイクルを見つけてそこを回転させればサイクルを拡大していける</li>
 </ul>
 </li>
-<li>毎回 1 ターン目から計算する必要はなくて、変更したターンより前は再計算省略できる(定数倍高速化)<ul>
-<li>もし命令列の後半部分の変更が重要ならこの省略はかなり有効そうかも</li>
+<li>部分破壊、DFSで再構築<ul>
+<li>AHC002でも強かった手法</li>
+<li>サイクルの一部分を壊してDFSでその両端がつながるパスを見つける<ul>
+<li>領域にあるパスをすべて壊す、とかも考えられるが再構築が厳しい</li>
 </ul>
 </li>
-<li>状態更新を後に持ってくるテク<ul>
-<li>焼きなまし系の高速化テクで、「状態更新して差分計算後に悪かったら undo する」ではなく、「(状態更新はせずに)近傍の差分計算を O(1)とかで行って良くなる場合だけ状態更新する」テク</li>
-<li>基本、不採用になることが多いので、採用時にだけ状態更新することで、高速化できる</li>
-<li>今回の場合だと、近傍の差分計算は、前からと後ろからの確率 DP を持っておくと、あるターンの命令が変わったとき、各マスからゴールする確率が後ろからの DP でわかる<ul>
-<li>差分計算が O(H*W)、更新が O(Turn*H*W)ぐらい</li>
+<li>(部分破壊のとき、┌ ┐を┐┌(両方とも回転)にするようなケースだけを考えてたけど、タイル4,5の場合タイル4,5の方だけ回転で良い場合がある(ので、すべての回転を探索するのがよかった))</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>ターン順方向更新にすると状態更新時の全ターン更新が不要<ul>
-<li><a href="https://twitter.com/colun/status/1508247782984933377">https://twitter.com/colun/status/1508247782984933377</a></li>
-<li>近傍計算時に変更箇所をランダムに決めた状態更新する場合、変更したターン以降に対して更新する必要があるので、ターン数分かかってしまう</li>
-<li>変更箇所の順番をターン順方向に固定すると、後から DP を全ターンで求めておけば、前から順番に計算できるので、更新も O(H*W)ぐらいになる</li>
-</ul>
-</li>
-</ul>
-<h3 id="_9">ビームサーチ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="2">2つのサイクルサイズの調整<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>命令列と確率値を保持することで、1 ターン目からの再計算が不要</li>
-<li><a href="https://twitter.com/chokudai/status/1507663092418682883">https://twitter.com/chokudai/status/1507663092418682883</a></li>
-<li><a href="https://twitter.com/colun/status/1507717580022161410">https://twitter.com/colun/status/1507717580022161410</a></li>
+<li>だいたい同じ程度になってくれてたほうが良い<ul>
+<li>変な形になると、塞いでしまって、片方のサイクルが大きくなれなかったりしてしまう</li>
 </ul>
-<h3 id="_10">壁にぶつかるまで進む/ダブらせ<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+</li>
+<li>全体を2分割する</li>
+<li>小さいサイクルの方を拡大する</li>
+<li>サイクル生成をたくさん試す、多点スタート</li>
+<li>サイクルサイズを調整可能にする<ul>
+<li>サイクルの拡大縮小を近傍に焼き鈍す</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9">実装周り<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
-<li>できるだけ塊(高い確率値のマス)で扱いたい気持ち<ul>
-<li>同じ方向に動き続けて、壁にぶつかってそこで滞留させる感じの動き</li>
+<li>サイクルの実装<ul>
+<li>明示的にサイクルを保持する場合は、タイル4,5があってタイルの列だけだと扱いにくいので、タイルとタイル内のレールの端点(方向)の列を保持しておく</li>
 </ul>
 </li>
-<li>辛いケース(Seed=14)<ul>
-<li><a href="https://twitter.com/gmeriaog/status/1507667151658037249">https://twitter.com/gmeriaog/status/1507667151658037249</a></li>
-<li><a href="https://twitter.com/kabipoyo/status/1507667602881282055">https://twitter.com/kabipoyo/status/1507667602881282055</a></li>
-<li>コの字型のところとかが途中にあると抜け出すのが難しい(抜け出すのに 1 手戻る必要がある)</li>
-<li>ゴールに辿り着くのが難しい場合への対処も必要<ul>
-<li>確率値最大マスから最短路で動くを繰り返す、とか</li>
+<li>レールの実装<ul>
+<li>問題ページに、長さを求め方のヒントとして、<code>to[t][d]</code>(タイルtにdの方向から侵入したとき次のタイルの方向)というのが書かれていた</li>
+<li>ただ、自分は、この「方向」というのに実装が引っ張られて、ベクトル的なのと点的なのがゴッチャになってデバッグに時間が取られてしまった</li>
+<li>「方向」ではなく、すべて「点」で考えて、<code>to[t][d]</code>(タイルtの点dにつながるもう片方の点)としたほうがよかった</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>ダブらせ<ul>
-<li><a href="https://twitter.com/terry_u16/status/1507665798210281473">https://twitter.com/terry_u16/status/1507665798210281473</a></li>
-<li>命令無視されるのを考慮して何回か実行する</li>
+<li>タイルを正規化<ul>
+<li><a href="https://twitter.com/tomerun/status/1518174134353600512">https://twitter.com/tomerun/status/1518174134353600512</a></li>
+<li>最初に向きを同じに回転させておくと、扱いやすい<ul>
+<li><a href="https://twitter.com/gojira_kyopro/status/1518171381401518080">https://twitter.com/gojira_kyopro/status/1518171381401518080</a></li>
+<li>こういうイメージ？</li>
 </ul>
 </li>
 </ul>
-<h3 id="p">p によって戦略を変える<a class="headerlink" href="#p" title="Permanent link">&para;</a></h3>
+</li>
+</ul>
+<h3 id="_10">その他<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <ul>
-<li>p によって挙動や有効な戦略が違っていたかも？<ul>
-<li><a href="https://twitter.com/square10011/status/1507660876110708736">https://twitter.com/square10011/status/1507660876110708736</a></li>
-<li><a href="https://twitter.com/ryota_cpp/status/1507660204187389953">https://twitter.com/ryota_cpp/status/1507660204187389953</a></li>
-<li><a href="https://twitter.com/tomerun/status/1507659630045921280">https://twitter.com/tomerun/status/1507659630045921280</a></li>
+<li>スコア計算の高速化<ul>
+<li><a href="https://twitter.com/EvbCFfp1XB/status/1518169617738657794">https://twitter.com/EvbCFfp1XB/status/1518169617738657794</a></li>
+<li>特定のタイルを通るサイクルのみスコア計算する</li>
 </ul>
 </li>
-</ul>
-<h3 id="_11">その他<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<ul>
-<li>「bool cango[y][x][d] := (y,x)から方向 d に移動できるか」で持つと便利<ul>
-<li><a href="https://twitter.com/tomerun/status/1507763835746553859">https://twitter.com/tomerun/status/1507763835746553859</a></li>
+<li>理論値(付近)のイメージ？(prd_xxx さん)<ul>
+<li><a href="https://twitter.com/prd_xxx/status/1518605592604340224">https://twitter.com/prd_xxx/status/1518605592604340224</a></li>
 </ul>
 </li>
-<li>TEXT 提出(1 位)<ul>
-<li><a href="https://twitter.com/__DielsAlder__/status/1507666063273918468">https://twitter.com/__DielsAlder__/status/1507666063273918468</a></li>
+<li>0 点AC(gojira_kyopro さん)<ul>
+<li><a href="https://twitter.com/gojira_kyopro/status/1518171381401518080">https://twitter.com/gojira_kyopro/status/1518171381401518080</a></li>
 </ul>
 </li>
 </ul>
@@ -1106,7 +1124,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="ahc008.html" class="md-footer__link md-footer__link--prev" aria-label="前: AHC008(MC Digital)" rel="prev">
+        <a href="ahc009.html" class="md-footer__link md-footer__link--prev" aria-label="前: AHC009(モノグサ)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1115,20 +1133,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              AHC008(MC Digital)
+              AHC009(モノグサ)
             </div>
           </div>
         </a>
       
       
         
-        <a href="ahc010.html" class="md-footer__link md-footer__link--next" aria-label="次: AHC010(ALGO ARTIS)" rel="next">
+        <a href="httf2022qual.html" class="md-footer__link md-footer__link--next" aria-label="次: HTTF2022予選" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              AHC010(ALGO ARTIS)
+              HTTF2022予選
             </div>
           </div>
           <div class="md-footer__button md-icon">
