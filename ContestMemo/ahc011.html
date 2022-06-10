@@ -1363,10 +1363,6 @@
 </li>
 <li>評価関数は、タイルの個数の差の2乗の和、など</li>
 <li>かなり多くの全域木が得られるようで、良い解を複数次のn-puzzleを解くパートに持っていける</li>
-<li>二部マッチングコストの差分更新<ul>
-<li><a href="https://twitter.com/contramundum2/status/1533389325605273600">https://twitter.com/contramundum2/status/1533389325605273600</a></li>
-</ul>
-</li>
 </ul>
 <h4 id="1-2-2swap">1-2. 2タイルswapする焼きなまし<a class="headerlink" href="#1-2-2swap" title="Permanent link">&para;</a></h4>
 <ul>
@@ -1481,6 +1477,7 @@
 <li>LBL method</li>
 </ul>
 </li>
+<li>実際のタイルの移動は目的位置への移動パターンをBFSやA*などで探す</li>
 <li>車庫入れ<ul>
 <li>行を埋めるとき、残り2マスは同時に考えないといけない</li>
 <li>しかし、実際にその動きを実装しようとすると、ハマるパターンが出てしまう</li>
@@ -1509,6 +1506,7 @@
 <li>マンハッタン距離だけだとハマり状態とかで詰みやすいので、うまく避けられるように評価関数にヒューリスティクスを加える</li>
 <li>Linear Conflict(同じ行に、その行に配置されるタイルがswapして存在したら、すれ違いするために+2は必要)</li>
 <li>mismatch cost(離れたところで揃ってないマスが存在していることにコスト)<ul>
+<li><a href="https://atcoder.jp/contests/ahc011/submissions/32268527">https://atcoder.jp/contests/ahc011/submissions/32268527</a></li>
 <li><a href="https://twitter.com/hoshi524/status/1533757667264851968">https://twitter.com/hoshi524/status/1533757667264851968</a></li>
 </ul>
 </li>
