@@ -18,6 +18,7 @@ title: Home
   - [ゲーム木探索](./Library/game_tree.md)
   - [stage 機能付き配列](./Library/stage_array.md)
   - [時間計測 Timer](./Library/timer.md)
+  - [デバッグ出力](./Library/debug_print.md)
   - [デザインパターン](./Library/design_pattern.md)
   - [用語集](./Library/glossary.md)
 
