@@ -664,15 +664,49 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    スコア計算
+    評価関数
   </a>
   
-    <nav class="md-nav" aria-label="スコア計算">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    スコア計算の高速化
+  </a>
+  
+    <nav class="md-nav" aria-label="スコア計算の高速化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
+    差分計算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     状態更新を後に持っていくテク
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    その他
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invalid" class="md-nav__link">
+    Invalidな状態を許容する焼きなまし
   </a>
   
 </li>
@@ -787,15 +821,49 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    スコア計算
+    評価関数
   </a>
   
-    <nav class="md-nav" aria-label="スコア計算">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    スコア計算の高速化
+  </a>
+  
+    <nav class="md-nav" aria-label="スコア計算の高速化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
+    差分計算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     状態更新を後に持っていくテク
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    その他
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invalid" class="md-nav__link">
+    Invalidな状態を許容する焼きなまし
   </a>
   
 </li>
@@ -874,16 +942,43 @@
 </li>
 <li>k-swap-kick<ul>
 <li>TSP などで、k 個のセグメント s1,s2,...,sk を s1,sk,...,s2 にする感じ</li>
+</ul>
+</li>
 <li>2-opt ではたどり着くのが難しいような double bridge みたいな形にキックする</li>
+</ul>
+<h2 id="_3">評価関数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>スコアをそのまま利用</li>
+<li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
+<li>2タイルをswapする近傍で、「一番大きな木のサイズ」を評価関数にすると、それ以外のタイルの状態が考慮できないので、「連結成分の個数(が1になるようにする)」や「連結成分のサイズの2乗和」などにすると、収束が速い</li>
 </ul>
 </li>
 </ul>
-<h2 id="_3">スコア計算<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="_4">状態更新を後に持っていくテク<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h2 id="_4">スコア計算の高速化<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">差分計算<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../ContestMemo/ahc012.html">AHC012</a><ul>
+<li>直線の追加削除は、その直線の両側の領域だけを考えれば良い</li>
+<li>ある領域にある個数は座圧＋二次元累積和でO(1)で求められ、領域数はO(K)程度</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">状態更新を後に持っていくテク<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../ContestMemo/ahc009.html">AHC009</a><ul>
 <li>前からDP・後からDPを持っておくと、差分計算が高速に求められる</li>
 <li>さらに、近傍更新時の変更箇所をターン順方向に固定すると、状態更新の方も高速化可能</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">その他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="invalid">Invalidな状態を許容する焼きなまし<a class="headerlink" href="#invalid" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
+<li>最終的に「与えられたタイルで作れる」必要があるが、辺の追加・削除を近傍に、与えられたタイルで作れない状態も探索<ul>
+<li>ただし、評価関数は各利用タイル数の差にして0になるよう目指す</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
