@@ -422,6 +422,40 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    スキル推定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    タスク割り当て
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     解説
   </a>
   
@@ -431,40 +465,6 @@
   <a href="#links" class="md-nav__link">
     Links
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    個人的メモ
-  </a>
-  
-    <nav class="md-nav" aria-label="個人的メモ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    スキル推定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    タスク割り当て
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    その他
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -789,6 +789,40 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    スキル推定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    タスク割り当て
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     解説
   </a>
   
@@ -798,40 +832,6 @@
   <a href="#links" class="md-nav__link">
     Links
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    個人的メモ
-  </a>
-  
-    <nav class="md-nav" aria-label="個人的メモ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    スキル推定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    タスク割り当て
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    その他
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -853,6 +853,7 @@
 <ul>
 <li><a href="https://atcoder.jp/contests/future-contest-2022-qual">https://atcoder.jp/contests/future-contest-2022-qual</a></li>
 </ul>
+<p><img src="../imgs/httf2022qual.png" width=400></p>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>N=1000 個のタスクを M=20 人のチームメンバーに割り振りたい<ul>
@@ -873,7 +874,81 @@
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>240 時間</p>
-<h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ざっくり「スキル推定」と「タスク割当」パート</li>
+<li>特に、「タスク割当」は、手が空いている人に割り当てだと良くないケースがあり、タスク中の人にも割り当てを考える部分がどの程度できたかで差が出ていた模様</li>
+</ul>
+<h3 id="_4">スキル推定<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>それまでに選択したタスクとかかった時間を保持して、絶対誤差/二乗誤差(MSE)あたりが最小になるように山登り/焼きなましなど<ul>
+<li>自由度があるので、正則化項(L2 ノルムとか)なども</li>
+</ul>
+</li>
+<li>最初の方は、あえて探索要素をいれるなど</li>
+<li>ベイズ推定、MCMC</li>
+</ul>
+<h3 id="_5">タスク割り当て<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>クリティカルパス(一番時間がかかるタスクのパス)がボトルネックになるので、そのようなパスを重視するなどは必要<ul>
+<li>深さ、などでも良い</li>
+<li>クリティカルパス分析</li>
+</ul>
+</li>
+<li>greedy なタスク割当で難しいところは、人が余ってないときや強い人がタスク中のときに、タスクが終わったからといってその人が不得意な仕事を割り当てることになりえること<ul>
+<li>そこで、「人(全員)と、割り当て可能なジョブ」の組み合わせに対して評価値を考える<ul>
+<li>手が開いてる人に対してだけだと、評価関数をちゃんとやってても、活かされないような割り当てする可能性がある</li>
+<li>タスク中でも、終わってからタスクをやった場合というのを考える</li>
+<li>ここが、R が大きいときに重要で、暫定 97k 点台と 101k 点台ぐらいの差がでていたキモ</li>
+</ul>
+</li>
+<li>反省: 自分は「終わりが近い人も含めて割当を考える」だけをしていた(全員ではない)</li>
+<li>人 i にタスク j を割り当てるときの評価関数<ul>
+<li>パスの重み/最長経路/要求技能レベルの総和</li>
+<li>かかる時間(タスク終了見込み時間)</li>
+<li>自分にどのぐらい向いている仕事か</li>
+<li>あえて少し待ってから仕事をするペナルティ</li>
+<li>全タスクが終わるまでにかかる最短時間(可能であれば。終盤だけでも)</li>
+<li>先読みしたときのコスト(依存が強い場合)</li>
+<li>などで調整</li>
+</ul>
+</li>
+<li>実際の割り当て方は、評価関数をもとに、貪欲、山登り/焼きなましなど</li>
+</ul>
+</li>
+<li>割り当て方は、最小費用流＋アドホックや、LP ソルバで計算していた方も<ul>
+<li>マッチングを最小費用流で解くやつで、かかる時間の合計が小さくなるような割り当てを求める<ul>
+<li>s-&gt;人の部分で辺を複数本に分けてそれぞれコストを分けることで均等になるような工夫(terry_u16 さん)</li>
+</ul>
+</li>
+<li>能力が低い人は別処理、など</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">その他<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>R によって問題の性質が違っていた<ul>
+<li>R が小さい(1000 付近)と、依存が少ないので、やれるタスクが多い → 自分が得意な仕事ができる</li>
+<li>R が大きい(3000 付近)と、依存が多く、やれるタスクが少なく、暇になっている人が多い → 得意な人が全部やったほうが早いのに、手があいてるからと不得意な人が手をつけてしまうと逆に遅くなる(あえてやらないほうがよい)</li>
+</ul>
+</li>
+<li>「R ごとに調整」するとよかった可能性<ul>
+<li>3 つぐらいに分割してそれぞれでパラメータを分ける、など</li>
+<li>ローカルの評価でも、それぞれの R ごとに評価データを分けて確認するなどしたほうが良かった可能性<ul>
+<li><a href="https://twitter.com/_phocom/status/1460164219006259201">https://twitter.com/_phocom/status/1460164219006259201</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1460192127338508292">https://twitter.com/iwashi31/status/1460192127338508292</a></li>
+<li>テストケースが少ないと偏りやすい</li>
+<li>3000 ケースで評価していればそこまで偏らないのでよいか</li>
+</ul>
+</li>
+<li>ヒートマップを見る<ul>
+<li><a href="https://tsutaj.hatenablog.com/entry/2021/11/13/190712">https://tsutaj.hatenablog.com/entry/2021/11/13/190712</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">解説<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=H_MuLN6L-r4">解説放送(終了直後)</a></li>
@@ -990,80 +1065,6 @@
 <ul>
 <li><a href="https://togetter.com/li/1802420">agw さん Twitter まとめ</a></li>
 <li><a href="https://twitter.com/hashtag/HTTF">Twitter hashtag HTTF</a></li>
-</ul>
-<h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>ざっくり「スキル推定」と「タスク割当」パート</li>
-<li>特に、「タスク割当」は、手が空いている人に割り当てだと良くないケースがあり、タスク中の人にも割り当てを考える部分がどの程度できたかで差が出ていた模様</li>
-</ul>
-<h3 id="_5">スキル推定<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>それまでに選択したタスクとかかった時間を保持して、絶対誤差/二乗誤差(MSE)あたりが最小になるように山登り/焼きなましなど<ul>
-<li>自由度があるので、正則化項(L2 ノルムとか)なども</li>
-</ul>
-</li>
-<li>最初の方は、あえて探索要素をいれるなど</li>
-<li>ベイズ推定、MCMC</li>
-</ul>
-<h3 id="_6">タスク割り当て<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>クリティカルパス(一番時間がかかるタスクのパス)がボトルネックになるので、そのようなパスを重視するなどは必要<ul>
-<li>深さ、などでも良い</li>
-<li>クリティカルパス分析</li>
-</ul>
-</li>
-<li>greedy なタスク割当で難しいところは、人が余ってないときや強い人がタスク中のときに、タスクが終わったからといってその人が不得意な仕事を割り当てることになりえること<ul>
-<li>そこで、「人(全員)と、割り当て可能なジョブ」の組み合わせに対して評価値を考える<ul>
-<li>手が開いてる人に対してだけだと、評価関数をちゃんとやってても、活かされないような割り当てする可能性がある</li>
-<li>タスク中でも、終わってからタスクをやった場合というのを考える</li>
-<li>ここが、R が大きいときに重要で、暫定 97k 点台と 101k 点台ぐらいの差がでていたキモ</li>
-</ul>
-</li>
-<li>反省: 自分は「終わりが近い人も含めて割当を考える」だけをしていた(全員ではない)</li>
-<li>人 i にタスク j を割り当てるときの評価関数<ul>
-<li>パスの重み/最長経路/要求技能レベルの総和</li>
-<li>かかる時間(タスク終了見込み時間)</li>
-<li>自分にどのぐらい向いている仕事か</li>
-<li>あえて少し待ってから仕事をするペナルティ</li>
-<li>全タスクが終わるまでにかかる最短時間(可能であれば。終盤だけでも)</li>
-<li>先読みしたときのコスト(依存が強い場合)</li>
-<li>などで調整</li>
-</ul>
-</li>
-<li>実際の割り当て方は、評価関数をもとに、貪欲、山登り/焼きなましなど</li>
-</ul>
-</li>
-<li>割り当て方は、最小費用流＋アドホックや、LP ソルバで計算していた方も<ul>
-<li>マッチングを最小費用流で解くやつで、かかる時間の合計が小さくなるような割り当てを求める<ul>
-<li>s-&gt;人の部分で辺を複数本に分けてそれぞれコストを分けることで均等になるような工夫(terry_u16 さん)</li>
-</ul>
-</li>
-<li>能力が低い人は別処理、など</li>
-</ul>
-</li>
-</ul>
-<h3 id="_7">その他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<ul>
-<li>R によって問題の性質が違っていた<ul>
-<li>R が小さい(1000 付近)と、依存が少ないので、やれるタスクが多い → 自分が得意な仕事ができる</li>
-<li>R が大きい(3000 付近)と、依存が多く、やれるタスクが少なく、暇になっている人が多い → 得意な人が全部やったほうが早いのに、手があいてるからと不得意な人が手をつけてしまうと逆に遅くなる(あえてやらないほうがよい)</li>
-</ul>
-</li>
-<li>「R ごとに調整」するとよかった可能性<ul>
-<li>3 つぐらいに分割してそれぞれでパラメータを分ける、など</li>
-<li>ローカルの評価でも、それぞれの R ごとに評価データを分けて確認するなどしたほうが良かった可能性<ul>
-<li><a href="https://twitter.com/_phocom/status/1460164219006259201">https://twitter.com/_phocom/status/1460164219006259201</a></li>
-<li><a href="https://twitter.com/iwashi31/status/1460192127338508292">https://twitter.com/iwashi31/status/1460192127338508292</a></li>
-<li>テストケースが少ないと偏りやすい</li>
-<li>3000 ケースで評価していればそこまで偏らないのでよいか</li>
-</ul>
-</li>
-<li>ヒートマップを見る<ul>
-<li><a href="https://tsutaj.hatenablog.com/entry/2021/11/13/190712">https://tsutaj.hatenablog.com/entry/2021/11/13/190712</a></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 
               
