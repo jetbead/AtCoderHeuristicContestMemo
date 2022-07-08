@@ -6,7 +6,7 @@ title: Intro. to HC
 
 - https://atcoder.jp/contests/intro-heuristics
 
-![image](imgs/intro-heuristics.png)
+![image](../imgs/intro-heuristics.png)
 
 ## 問題概要
 
