@@ -20,6 +20,7 @@ title: Home
   - [時間計測 Timer](./Library/timer.md)
   - [デバッグ出力](./Library/debug_print.md)
   - [デザインパターン](./Library/design_pattern.md)
+  - [2次元累積和](./Library/summed_area_table.md)
   - [用語集](./Library/glossary.md)
 
 ## :material-link: Links
