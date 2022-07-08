@@ -49,6 +49,12 @@ title: Home
 
 また、コンテスト期間中はネタバレ防止の為更新いたしません。
 
+## :material-account: About Me
+
+- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic)
+  - AHCは、橙(rate2400)を目標に、ゆるく参加しています
+  - 短期は50位、長期は30位ぐらいに入れるよう、コンテストの反省や知見をまとめておきます
+
 ## :material-github: GitHub
 
 [jetbead/AtCoderHeuristicContestMemo](https://github.com/jetbead/AtCoderHeuristicContestMemo/)
