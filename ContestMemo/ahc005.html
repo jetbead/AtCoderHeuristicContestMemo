@@ -310,6 +310,13 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     解説
   </a>
   
@@ -318,13 +325,6 @@
         <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    個人的メモ
   </a>
   
 </li>
@@ -762,6 +762,13 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     解説
   </a>
   
@@ -770,13 +777,6 @@
         <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    個人的メモ
   </a>
   
 </li>
@@ -800,6 +800,7 @@
 <li><a href="https://atcoder.jp/contests/ahc005">https://atcoder.jp/contests/ahc005</a></li>
 <li><a href="https://atcoder.jp/contests/stage0-2021">https://atcoder.jp/contests/stage0-2021</a> (「STAGE:0 競技プログラミング高校生大会 powered by AtCoder」とパラレル)</li>
 </ul>
+<p><img src="../imgs/ahc005.png" width=300></p>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>N * N マスの地図が与えられ、各マスは道路または障害物になっている<ul>
@@ -812,7 +813,21 @@
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>240 分</p>
-<h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ざっくり「全道路が視界に入るようなの交差点の部分集合を通って戻ってくる TSP」</li>
+<li>「すべての道路が視界に入っているか」判定<ul>
+<li>交差点列挙した後、<code>dp[N][N]</code>みたいに持って、交差点を選んだら上下左右に+1、選ばなくしたら上下左右に-1 みたいにすると更新に O(N)程度かかってしまう</li>
+<li>連続した道路列(線分、辺)に対して ID を割り振って、道路列上の交差点とのペア<code>(線分ID, 交差点ID)</code>で扱うようにすると、更新が O(1)程度にできる</li>
+</ul>
+</li>
+<li>通る頂点集合最適化と TSP 最適化を一緒に焼きなます<ul>
+<li>交差点巡回の場合。交差点の追加削除近傍、2-opt 近傍</li>
+<li>道路列巡回の場合は、<code>(線分ID, 交差点ID)</code>の順番を最適化して、最短時間計算時にうまく交差点無視しつつ計算する、などもできる</li>
+</ul>
+</li>
+</ul>
+<h2 id="_4">解説<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://twitter.com/C7C7LL/status/1423963600280973317">1 位 c7c7 さん</a></li>
 <li>2 位 USA さん</li>
@@ -835,20 +850,6 @@
 <ul>
 <li><a href="https://togetter.com/li/1756054">agw さん Twitter まとめ</a></li>
 <li><a href="https://twitter.com/hashtag/AHC005">Twitter hashtag AHC005</a></li>
-</ul>
-<h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>ざっくり「全道路が視界に入るようなの交差点の部分集合を通って戻ってくる TSP」</li>
-<li>「すべての道路が視界に入っているか」判定<ul>
-<li>交差点列挙した後、<code>dp[N][N]</code>みたいに持って、交差点を選んだら上下左右に+1、選ばなくしたら上下左右に-1 みたいにすると更新に O(N)程度かかってしまう</li>
-<li>連続した道路列(線分、辺)に対して ID を割り振って、道路列上の交差点とのペア<code>(線分ID, 交差点ID)</code>で扱うようにすると、更新が O(1)程度にできる</li>
-</ul>
-</li>
-<li>通る頂点集合最適化と TSP 最適化を一緒に焼きなます<ul>
-<li>交差点巡回の場合。交差点の追加削除近傍、2-opt 近傍</li>
-<li>道路列巡回の場合は、<code>(線分ID, 交差点ID)</code>の順番を最適化して、最短時間計算時にうまく交差点無視しつつ計算する、などもできる</li>
-</ul>
-</li>
 </ul>
 
               
