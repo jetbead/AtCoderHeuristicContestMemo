@@ -380,20 +380,6 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    解説
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
     個人的メモ
   </a>
   
@@ -401,28 +387,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     問題固有の性質
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     最適解の形
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     サイクルの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     サイクルの拡大
   </a>
   
@@ -436,14 +422,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     実装周り
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     その他
   </a>
   
@@ -451,6 +437,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
   
 </li>
       
@@ -817,20 +817,6 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    解説
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
     個人的メモ
   </a>
   
@@ -838,28 +824,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     問題固有の性質
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     最適解の形
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     サイクルの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     サイクルの拡大
   </a>
   
@@ -873,14 +859,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     実装周り
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     その他
   </a>
   
@@ -888,6 +874,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
   
 </li>
       
@@ -909,6 +909,7 @@
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc010">https://atcoder.jp/contests/ahc010</a></li>
 </ul>
+<p><img src="../imgs/ahc010.png" width=300></p>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>30 * 30 マスのタイルがあり、タイルにはレールがついている</li>
@@ -918,7 +919,144 @@
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>240 分</p>
-<h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>長いサイクルをどう作るか、が難しい問題</li>
+<li>ざっくり、「小さいサイクルをどんどん大きく/拡大縮小で調整していく」か「領域にわけてパスを見つけ、それをつなぐ」というのが強かった模様</li>
+<li>ただ、実装が間に合わなかった(方針が見えなかった/ミスった、考察に時間がかかった、実装量が多くなった、バグらせた、など)人が多いかもで、ある程度の方針で実装しきれれば良い順位になれた回かも<ul>
+<li>結構どの方針でもそこそこ実装量が必要だった</li>
+<li>上位狙いで提出諦めた人もまあまあいた？</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">問題固有の性質<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>(解説放送でのwataさんの手法より)</p>
+<ul>
+<li>1タイルに2レールがあるタイル(タイル番号4,5)は、そのタイルで2つの異なるサイクルが共有している場合、回転させることで、その2つのサイクルを大きな1つのサイクルにすることができる</li>
+<li>さらに、そのようなタイルは全体の50%の確率で生成されているので、結構多い(半分はこのタイル)</li>
+<li>この性質に気づけて活用できていた人はかなり少なかったぽいかも(twitterを見た感じだと6人ぐらい？多くの人はDFSで探索)</li>
+</ul>
+<h3 id="_5">最適解の形<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>「サイクルの長さ」を長くしたいので、大きな○なサイクルというより密度の高いサイクルを目指す必要がある</li>
+<li>また、「2つ」のサイクルの積なので、2つのサイクルはだいたい領域の半分半分が埋まっている感じなのが理想的</li>
+</ul>
+<h3 id="_6">サイクルの作成<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>そもそもサイクルを作るのが難しい<ul>
+<li>最終的には「長いサイクル」を作らないといけないのでさらに難しい</li>
+<li>パスを長くすればよいわけではない(始点に戻ってくる必要がある)</li>
+</ul>
+</li>
+<li>ランダムに、タイルを選んで回転させ、偶然サイクルができるのを待つ<ul>
+<li>ランダムにまかせてても、(長い)サイクルはほとんどできないので、よくない</li>
+</ul>
+</li>
+<li>ランダムウォークでパスを伸ばす<ul>
+<li>ランダムに1本パスを伸ばしていって、ゴール地点に偶然たどり着くことに期待する</li>
+<li>基本、途中で移動できなくなったり、ゴール地点にたどり着けないので、かなり失敗率が高い<ul>
+<li>DFSやビームサーチなど複数経路を探索しないと厳しい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DFSでサイクルを作る<ul>
+<li>適当なレールからスタートして、DFSでタイルを固定しながらたどって、サイクルになるものを見つける<ul>
+<li>偶然元の位置付近に戻るようなのを期待する</li>
+<li>一度固定したタイルは回転させないようにしたいので、訪問回数をカウント(タイルを回転可能か判断)しながらDFSでたどる</li>
+</ul>
+</li>
+<li>深さ制限や時間制限などをつけないと遠くにいくものも探索したり、探索量が多くなってしまう<ul>
+<li>が、各タイルの回転で変わるのは基本2方向なので、そんなに多いわけではない</li>
+<li>進む方向は、「ランダムに選ぶ」か「順番決め打ち」<ul>
+<li><a href="https://twitter.com/iwashi31/status/1518169867765313536">https://twitter.com/iwashi31/status/1518169867765313536</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>なので、1回で長いサイクルを見つけるのではなく、探索量は少なめにして小さめのサイクルから「サイクルの拡大」をしていくのが良い</li>
+</ul>
+</li>
+<li>領域を分けてパスを見つけ、領域間のパスをつないでサイクル化<ul>
+<li>比較的「パス」は作りやすいので、全体を小さい領域に分割してその中で開始位置と終了位置を固定して長いパスを見つけておく</li>
+<li>あとは領域間のパスをつないであげればよい</li>
+</ul>
+</li>
+<li>乱択ビームサーチ<ul>
+<li><a href="https://twitter.com/gmeriaog/status/1518170958112051200">https://twitter.com/gmeriaog/status/1518170958112051200</a></li>
+<li><a href="https://twitter.com/colun/status/1518170632986705921">https://twitter.com/colun/status/1518170632986705921</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">サイクルの拡大<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>タイル4,5の(上の問題固有の)性質を使う<ul>
+<li>タイル4,5を使って、そのタイルを共有するサイクルを見つけてそこを回転させればサイクルを拡大していける</li>
+</ul>
+</li>
+<li>部分破壊、DFSで再構築<ul>
+<li>AHC002でも強かった手法</li>
+<li>サイクルの一部分を壊してDFSでその両端がつながるパスを見つける<ul>
+<li>領域にあるパスをすべて壊す、とかも考えられるが再構築が厳しい</li>
+</ul>
+</li>
+<li>(部分破壊のとき、┌ ┐を┐┌(両方とも回転)にするようなケースだけを考えてたけど、タイル4,5の場合タイル4,5の方だけ回転で良い場合がある(ので、すべての回転を探索するのがよかった))</li>
+</ul>
+</li>
+</ul>
+<h3 id="2">2つのサイクルサイズの調整<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>だいたい同じ程度になってくれてたほうが良い<ul>
+<li>変な形になると、塞いでしまって、片方のサイクルが大きくなれなかったりしてしまう</li>
+</ul>
+</li>
+<li>全体を2分割する</li>
+<li>小さいサイクルの方を拡大する</li>
+<li>サイクル生成をたくさん試す、多点スタート</li>
+<li>サイクルサイズを調整可能にする<ul>
+<li>サイクルの拡大縮小を近傍に焼き鈍す</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">実装周り<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>サイクルの実装<ul>
+<li>明示的にサイクルを保持する場合は、タイル4,5があってタイルの列だけだと扱いにくいので、タイルとタイル内のレールの端点(方向)の列を保持しておく</li>
+</ul>
+</li>
+<li>レールの実装<ul>
+<li>問題ページに、長さを求め方のヒントとして、<code>to[t][d]</code>(タイルtにdの方向から侵入したとき次のタイルの方向)というのが書かれていた</li>
+<li>ただ、自分は、この「方向」というのに実装が引っ張られて、ベクトル的なのと点的なのがゴッチャになってデバッグに時間が取られてしまった</li>
+<li>「方向」ではなく、すべて「点」で考えて、<code>to[t][d]</code>(タイルtの点dにつながるもう片方の点)としたほうがよかった</li>
+</ul>
+</li>
+<li>タイルを正規化<ul>
+<li><a href="https://twitter.com/tomerun/status/1518174134353600512">https://twitter.com/tomerun/status/1518174134353600512</a></li>
+<li>最初に向きを同じに回転させておくと、扱いやすい<ul>
+<li><a href="https://twitter.com/gojira_kyopro/status/1518171381401518080">https://twitter.com/gojira_kyopro/status/1518171381401518080</a></li>
+<li>こういうイメージ？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9">その他<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>スコア計算の高速化<ul>
+<li><a href="https://twitter.com/EvbCFfp1XB/status/1518169617738657794">https://twitter.com/EvbCFfp1XB/status/1518169617738657794</a></li>
+<li>特定のタイルを通るサイクルのみスコア計算する</li>
+</ul>
+</li>
+<li>理論値(付近)のイメージ？(prd_xxx さん)<ul>
+<li><a href="https://twitter.com/prd_xxx/status/1518605592604340224">https://twitter.com/prd_xxx/status/1518605592604340224</a></li>
+</ul>
+</li>
+<li>0 点AC(gojira_kyopro さん)<ul>
+<li><a href="https://twitter.com/gojira_kyopro/status/1518171381401518080">https://twitter.com/gojira_kyopro/status/1518171381401518080</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_10">解説<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc010/editorial">解説(公式)</a></li>
@@ -1033,143 +1171,6 @@
 <ul>
 <li><a href="https://togetter.com/li/1877606">agw さん Twitter まとめ</a></li>
 <li><a href="https://twitter.com/hashtag/AHC010">Twitter hashtag AHC010</a></li>
-</ul>
-<h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>長いサイクルをどう作るか、が難しい問題</li>
-<li>ざっくり、「小さいサイクルをどんどん大きく/拡大縮小で調整していく」か「領域にわけてパスを見つけ、それをつなぐ」というのが強かった模様</li>
-<li>ただ、実装が間に合わなかった(方針が見えなかった/ミスった、考察に時間がかかった、実装量が多くなった、バグらせた、など)人が多いかもで、ある程度の方針で実装しきれれば良い順位になれた回かも<ul>
-<li>結構どの方針でもそこそこ実装量が必要だった</li>
-<li>上位狙いで提出諦めた人もまあまあいた？</li>
-</ul>
-</li>
-</ul>
-<h3 id="_5">問題固有の性質<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>(解説放送でのwataさんの手法より)</p>
-<ul>
-<li>1タイルに2レールがあるタイル(タイル番号4,5)は、そのタイルで2つの異なるサイクルが共有している場合、回転させることで、その2つのサイクルを大きな1つのサイクルにすることができる</li>
-<li>さらに、そのようなタイルは全体の50%の確率で生成されているので、結構多い(半分はこのタイル)</li>
-<li>この性質に気づけて活用できていた人はかなり少なかったぽいかも(twitterを見た感じだと6人ぐらい？多くの人はDFSで探索)</li>
-</ul>
-<h3 id="_6">最適解の形<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>「サイクルの長さ」を長くしたいので、大きな○なサイクルというより密度の高いサイクルを目指す必要がある</li>
-<li>また、「2つ」のサイクルの積なので、2つのサイクルはだいたい領域の半分半分が埋まっている感じなのが理想的</li>
-</ul>
-<h3 id="_7">サイクルの作成<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<ul>
-<li>そもそもサイクルを作るのが難しい<ul>
-<li>最終的には「長いサイクル」を作らないといけないのでさらに難しい</li>
-<li>パスを長くすればよいわけではない(始点に戻ってくる必要がある)</li>
-</ul>
-</li>
-<li>ランダムに、タイルを選んで回転させ、偶然サイクルができるのを待つ<ul>
-<li>ランダムにまかせてても、(長い)サイクルはほとんどできないので、よくない</li>
-</ul>
-</li>
-<li>ランダムウォークでパスを伸ばす<ul>
-<li>ランダムに1本パスを伸ばしていって、ゴール地点に偶然たどり着くことに期待する</li>
-<li>基本、途中で移動できなくなったり、ゴール地点にたどり着けないので、かなり失敗率が高い<ul>
-<li>DFSやビームサーチなど複数経路を探索しないと厳しい</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>DFSでサイクルを作る<ul>
-<li>適当なレールからスタートして、DFSでタイルを固定しながらたどって、サイクルになるものを見つける<ul>
-<li>偶然元の位置付近に戻るようなのを期待する</li>
-<li>一度固定したタイルは回転させないようにしたいので、訪問回数をカウント(タイルを回転可能か判断)しながらDFSでたどる</li>
-</ul>
-</li>
-<li>深さ制限や時間制限などをつけないと遠くにいくものも探索したり、探索量が多くなってしまう<ul>
-<li>が、各タイルの回転で変わるのは基本2方向なので、そんなに多いわけではない</li>
-<li>進む方向は、「ランダムに選ぶ」か「順番決め打ち」<ul>
-<li><a href="https://twitter.com/iwashi31/status/1518169867765313536">https://twitter.com/iwashi31/status/1518169867765313536</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>なので、1回で長いサイクルを見つけるのではなく、探索量は少なめにして小さめのサイクルから「サイクルの拡大」をしていくのが良い</li>
-</ul>
-</li>
-<li>領域を分けてパスを見つけ、領域間のパスをつないでサイクル化<ul>
-<li>比較的「パス」は作りやすいので、全体を小さい領域に分割してその中で開始位置と終了位置を固定して長いパスを見つけておく</li>
-<li>あとは領域間のパスをつないであげればよい</li>
-</ul>
-</li>
-<li>乱択ビームサーチ<ul>
-<li><a href="https://twitter.com/gmeriaog/status/1518170958112051200">https://twitter.com/gmeriaog/status/1518170958112051200</a></li>
-<li><a href="https://twitter.com/colun/status/1518170632986705921">https://twitter.com/colun/status/1518170632986705921</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="_8">サイクルの拡大<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<ul>
-<li>タイル4,5の(上の問題固有の)性質を使う<ul>
-<li>タイル4,5を使って、そのタイルを共有するサイクルを見つけてそこを回転させればサイクルを拡大していける</li>
-</ul>
-</li>
-<li>部分破壊、DFSで再構築<ul>
-<li>AHC002でも強かった手法</li>
-<li>サイクルの一部分を壊してDFSでその両端がつながるパスを見つける<ul>
-<li>領域にあるパスをすべて壊す、とかも考えられるが再構築が厳しい</li>
-</ul>
-</li>
-<li>(部分破壊のとき、┌ ┐を┐┌(両方とも回転)にするようなケースだけを考えてたけど、タイル4,5の場合タイル4,5の方だけ回転で良い場合がある(ので、すべての回転を探索するのがよかった))</li>
-</ul>
-</li>
-</ul>
-<h3 id="2">2つのサイクルサイズの調整<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>だいたい同じ程度になってくれてたほうが良い<ul>
-<li>変な形になると、塞いでしまって、片方のサイクルが大きくなれなかったりしてしまう</li>
-</ul>
-</li>
-<li>全体を2分割する</li>
-<li>小さいサイクルの方を拡大する</li>
-<li>サイクル生成をたくさん試す、多点スタート</li>
-<li>サイクルサイズを調整可能にする<ul>
-<li>サイクルの拡大縮小を近傍に焼き鈍す</li>
-</ul>
-</li>
-</ul>
-<h3 id="_9">実装周り<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<ul>
-<li>サイクルの実装<ul>
-<li>明示的にサイクルを保持する場合は、タイル4,5があってタイルの列だけだと扱いにくいので、タイルとタイル内のレールの端点(方向)の列を保持しておく</li>
-</ul>
-</li>
-<li>レールの実装<ul>
-<li>問題ページに、長さを求め方のヒントとして、<code>to[t][d]</code>(タイルtにdの方向から侵入したとき次のタイルの方向)というのが書かれていた</li>
-<li>ただ、自分は、この「方向」というのに実装が引っ張られて、ベクトル的なのと点的なのがゴッチャになってデバッグに時間が取られてしまった</li>
-<li>「方向」ではなく、すべて「点」で考えて、<code>to[t][d]</code>(タイルtの点dにつながるもう片方の点)としたほうがよかった</li>
-</ul>
-</li>
-<li>タイルを正規化<ul>
-<li><a href="https://twitter.com/tomerun/status/1518174134353600512">https://twitter.com/tomerun/status/1518174134353600512</a></li>
-<li>最初に向きを同じに回転させておくと、扱いやすい<ul>
-<li><a href="https://twitter.com/gojira_kyopro/status/1518171381401518080">https://twitter.com/gojira_kyopro/status/1518171381401518080</a></li>
-<li>こういうイメージ？</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="_10">その他<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<ul>
-<li>スコア計算の高速化<ul>
-<li><a href="https://twitter.com/EvbCFfp1XB/status/1518169617738657794">https://twitter.com/EvbCFfp1XB/status/1518169617738657794</a></li>
-<li>特定のタイルを通るサイクルのみスコア計算する</li>
-</ul>
-</li>
-<li>理論値(付近)のイメージ？(prd_xxx さん)<ul>
-<li><a href="https://twitter.com/prd_xxx/status/1518605592604340224">https://twitter.com/prd_xxx/status/1518605592604340224</a></li>
-</ul>
-</li>
-<li>0 点AC(gojira_kyopro さん)<ul>
-<li><a href="https://twitter.com/gojira_kyopro/status/1518171381401518080">https://twitter.com/gojira_kyopro/status/1518171381401518080</a></li>
-</ul>
-</li>
 </ul>
 
               
