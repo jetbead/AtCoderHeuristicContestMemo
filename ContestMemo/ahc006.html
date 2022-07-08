@@ -324,6 +324,33 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    近傍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     解説
   </a>
   
@@ -333,33 +360,6 @@
   <a href="#links" class="md-nav__link">
     Links
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    個人的メモ
-  </a>
-  
-    <nav class="md-nav" aria-label="個人的メモ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    近傍
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    その他
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -782,6 +782,33 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    近傍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     解説
   </a>
   
@@ -791,33 +818,6 @@
   <a href="#links" class="md-nav__link">
     Links
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    個人的メモ
-  </a>
-  
-    <nav class="md-nav" aria-label="個人的メモ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    近傍
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    その他
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -839,6 +839,7 @@
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc006">https://atcoder.jp/contests/ahc006</a></li>
 </ul>
+<p><img src="../imgs/ahc006.png" width=300></p>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>1000 個の配達の注文があり、各注文は二次元平面(0&lt;=x,y&lt;=800)上の地点 X のレストランから地点 Y への配達依頼になっている<ul>
@@ -852,7 +853,40 @@
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>240 分</p>
-<h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>見た目が TSP で、50 個をどう選ぶかと依存関係をどうするか</li>
+<li>どちらも一緒に探索して、近傍として注文入れ替え時に最適位置に挿入するまでした場合が強かった模様</li>
+<li>差分更新したほうが良さそうに見えるが、バグ散らかしてしまった<ul>
+<li>高速化が本当に必要かどうかもわからないうちから複雑な実装をすべきではない、、、</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">近傍<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>2-opt<ul>
+<li>依存関係があるので有効か？と思われるが、依存関係が壊れない範囲で適用可能</li>
+<li>また、最終的な形として、結構レストランが連続していたり、配達地点が連続している解があるため、結構いい感じに発動できる模様</li>
+</ul>
+</li>
+<li>注文を削除して、別の注文に置き換え。このとき、最適位置に挿入、が重要<ul>
+<li>良い位置から他の良い位置への移動ができる</li>
+<li>O(2*m)<ul>
+<li><a href="https://twitter.com/satanic0258/status/1460233516889870354">https://twitter.com/satanic0258/status/1460233516889870354</a></li>
+</ul>
+</li>
+<li>挿入位置全探索する場合は O(m^2)?</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">その他<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>貪欲解</li>
+<li>注文を挿入するビーム</li>
+<li>レストラン/配達先を独立に計算(依存がなくなる)してくっつける</li>
+<li>偏角ソートして円の形で選出</li>
+</ul>
+<h2 id="_6">解説<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li>1 位 Aquarius さん</li>
@@ -937,39 +971,6 @@
 <ul>
 <li><a href="https://togetter.com/li/1802420">agw さん Twitter まとめ</a></li>
 <li><a href="https://twitter.com/hashtag/AHC">Twitter hashtag AHC</a></li>
-</ul>
-<h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>見た目が TSP で、50 個をどう選ぶかと依存関係をどうするか</li>
-<li>どちらも一緒に探索して、近傍として注文入れ替え時に最適位置に挿入するまでした場合が強かった模様</li>
-<li>差分更新したほうが良さそうに見えるが、バグ散らかしてしまった<ul>
-<li>高速化が本当に必要かどうかもわからないうちから複雑な実装をすべきではない、、、</li>
-</ul>
-</li>
-</ul>
-<h3 id="_5">近傍<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>2-opt<ul>
-<li>依存関係があるので有効か？と思われるが、依存関係が壊れない範囲で適用可能</li>
-<li>また、最終的な形として、結構レストランが連続していたり、配達地点が連続している解があるため、結構いい感じに発動できる模様</li>
-</ul>
-</li>
-<li>注文を削除して、別の注文に置き換え。このとき、最適位置に挿入、が重要<ul>
-<li>良い位置から他の良い位置への移動ができる</li>
-<li>O(2*m)<ul>
-<li><a href="https://twitter.com/satanic0258/status/1460233516889870354">https://twitter.com/satanic0258/status/1460233516889870354</a></li>
-</ul>
-</li>
-<li>挿入位置全探索する場合は O(m^2)?</li>
-</ul>
-</li>
-</ul>
-<h3 id="_6">その他<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>貪欲解</li>
-<li>注文を挿入するビーム</li>
-<li>レストラン/配達先を独立に計算(依存がなくなる)してくっつける</li>
-<li>偏角ソートして円の形で選出</li>
 </ul>
 
               
