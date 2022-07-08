@@ -338,6 +338,40 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    近似の仕方
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    その他の方針
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     解説
   </a>
   
@@ -347,40 +381,6 @@
   <a href="#links" class="md-nav__link">
     Links
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    個人的メモ
-  </a>
-  
-    <nav class="md-nav" aria-label="個人的メモ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    近似の仕方
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    その他の方針
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    その他
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -789,6 +789,40 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    近似の仕方
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    その他の方針
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     解説
   </a>
   
@@ -798,40 +832,6 @@
   <a href="#links" class="md-nav__link">
     Links
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    個人的メモ
-  </a>
-  
-    <nav class="md-nav" aria-label="個人的メモ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    近似の仕方
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    その他の方針
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    その他
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -853,6 +853,7 @@
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc007">https://atcoder.jp/contests/ahc007</a></li>
 </ul>
+<p><img src="../imgs/ahc007.png" width=300></p>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>頂点数 N、辺の数 M の無向グラフがあり、辺 i の長さ l は、頂点間のユークリッド距離を d とすると、d &lt;= l &lt;= 3 * d であるが、正確な値は最初はわからない</li>
@@ -861,7 +862,47 @@
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>240 分</p>
-<h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>毎ターン、その辺を選択した/選択しなかった場合の「最終的な最小全域木の総距離の期待値」を計算できれば、期待値が低くなる場合に選択、そうでないなら選択しない、とする greedy が考えられる</li>
+<li>期待値を正確に算出するのは難しいので、近似的に求めることになる</li>
+</ul>
+<h3 id="_4">近似の仕方<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>l=2d を仮定<ul>
+<li><a href="https://www.terry-u16.net/entry/ahc007-explanation">https://www.terry-u16.net/entry/ahc007-explanation</a></li>
+<li>残りの不明な辺の長さを l=2d と仮定するのは、実はそんなに良い解が得られない</li>
+<li>目指している解では l=d に近い辺を採用しているはずなので、大きめに期待値を計算している可能性</li>
+<li>2 じゃなく少し小さめの値にすると少しだけよくなる</li>
+</ul>
+</li>
+<li>モンテカルロ法<ul>
+<li>長さが不明な辺に対して実際に値を割り当ててみたものをいくつか用意して、コスト平均を見る</li>
+</ul>
+</li>
+<li>wata さんの DP 解</li>
+</ul>
+<h3 id="_5">その他の方針<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>辺の採用確率<ul>
+<li>ランダムに辺の長さを割り当てたグラフをいくつか用意して最小全域木を計算</li>
+<li>作った最小全域木でその辺が採用される確率が X 以上なら採用</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">その他<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>近くの辺のみ考慮<ul>
+<li>グラフを見ると結構「塊」みたいになっているので、近くの辺だけを考えるなどの高速化は有効だった模様</li>
+</ul>
+</li>
+<li>ランダムに辺の値を決めるときに乱数の範囲 d〜3d ではなく、少し狭めると結構変わるっぽい<ul>
+<li><a href="https://twitter.com/5bin101/status/1469992023121924101">https://twitter.com/5bin101/status/1469992023121924101</a></li>
+<li><a href="https://blog.knshnb.com/posts/ahc007-optuna/">https://blog.knshnb.com/posts/ahc007-optuna/</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">解説<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc007/editorial">解説(公式)</a></li>
@@ -951,46 +992,6 @@
 <ul>
 <li><a href="https://togetter.com/li/1815565">agw さん Twitter まとめ</a></li>
 <li><a href="https://twitter.com/hashtag/AHC007">Twitter hashtag AHC007</a></li>
-</ul>
-<h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>毎ターン、その辺を選択した/選択しなかった場合の「最終的な最小全域木の総距離の期待値」を計算できれば、期待値が低くなる場合に選択、そうでないなら選択しない、とする greedy が考えられる</li>
-<li>期待値を正確に算出するのは難しいので、近似的に求めることになる</li>
-</ul>
-<h3 id="_5">近似の仕方<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>l=2d を仮定<ul>
-<li><a href="https://www.terry-u16.net/entry/ahc007-explanation">https://www.terry-u16.net/entry/ahc007-explanation</a></li>
-<li>残りの不明な辺の長さを l=2d と仮定するのは、実はそんなに良い解が得られない</li>
-<li>目指している解では l=d に近い辺を採用しているはずなので、大きめに期待値を計算している可能性</li>
-<li>2 じゃなく少し小さめの値にすると少しだけよくなる</li>
-</ul>
-</li>
-<li>モンテカルロ法<ul>
-<li>長さが不明な辺に対して実際に値を割り当ててみたものをいくつか用意して、コスト平均を見る</li>
-</ul>
-</li>
-<li>wata さんの DP 解</li>
-</ul>
-<h3 id="_6">その他の方針<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>辺の採用確率<ul>
-<li>ランダムに辺の長さを割り当てたグラフをいくつか用意して最小全域木を計算</li>
-<li>作った最小全域木でその辺が採用される確率が X 以上なら採用</li>
-</ul>
-</li>
-</ul>
-<h3 id="_7">その他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<ul>
-<li>近くの辺のみ考慮<ul>
-<li>グラフを見ると結構「塊」みたいになっているので、近くの辺だけを考えるなどの高速化は有効だった模様</li>
-</ul>
-</li>
-<li>ランダムに辺の値を決めるときに乱数の範囲 d〜3d ではなく、少し狭めると結構変わるっぽい<ul>
-<li><a href="https://twitter.com/5bin101/status/1469992023121924101">https://twitter.com/5bin101/status/1469992023121924101</a></li>
-<li><a href="https://blog.knshnb.com/posts/ahc007-optuna/">https://blog.knshnb.com/posts/ahc007-optuna/</a></li>
-</ul>
-</li>
 </ul>
 
               
