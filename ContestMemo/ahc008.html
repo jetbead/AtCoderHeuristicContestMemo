@@ -352,20 +352,6 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    解説
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
     個人的メモ
   </a>
   
@@ -373,42 +359,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     戦略
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     柵の配置
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     待受戦略での塞ぐタイミング
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     犬、猫への対処
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     全ペット捕獲率
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     その他
   </a>
   
@@ -423,6 +409,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
   
 </li>
       
@@ -817,20 +817,6 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    解説
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
     個人的メモ
   </a>
   
@@ -838,42 +824,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     戦略
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     柵の配置
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     待受戦略での塞ぐタイミング
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     犬、猫への対処
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     全ペット捕獲率
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     その他
   </a>
   
@@ -888,6 +874,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
   
 </li>
       
@@ -909,6 +909,7 @@
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc008">https://atcoder.jp/contests/ahc008</a></li>
 </ul>
+<p><img src="../imgs/ahc008.png" width=300></p>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>30 * 30 マスのグリッド上に、N(10 ～ 20)匹のペットと M(5 ～ 10)人の人がいる</li>
@@ -927,7 +928,166 @@
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>343 時間</p>
-<h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>2 週間だったのもあり、戦略の自由度が高く、また、スコアを出すためには結構作りきらないといけないため重実装気味な感じの問題だった</li>
+<li>最適化というより、ルールベース作成コンテストという感じ<ul>
+<li><a href="https://twitter.com/chokudai/status/1497546485495320583">https://twitter.com/chokudai/status/1497546485495320583</a></li>
+</ul>
+</li>
+<li>今回は、待受戦略(固定配置、小部屋たくさん)が有効で、上位に多かった模様</li>
+</ul>
+<h3 id="_4">戦略<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>領域を囲い込むか、ペットを領域外に出すか<ul>
+<li>囲い込むように領域を作る場合、ペット数が結構多く、移動しまくるのもあり、大きく作ることが難しい</li>
+<li>今回は、罠を張って、領域外にするような方法が有効だった模様</li>
+</ul>
+</li>
+<li>待受戦略か、追込戦略か<ul>
+<li>ざっくり、部屋(罠)を用意して入ったペットを捕らえるか、こちらから追い込んで捕らえるか</li>
+<li>ただ、ほとんどのペットは人の配置に依存しない＆ランダムウォークなので、誘導するのが難しい</li>
+<li>今回の場合、実装難易度も含めて待受戦略を取った人が多かった模様<ul>
+<li>不定形追込戦略が良さそうに見えるけど、細かいところが非自明的なのと、実装難易度が高い</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">柵の配置<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>固定形<ul>
+<li>待受戦略の場合、短冊/二型(縦、横、斜め)、CC 型、SS 型、O 型/□ 型などで部屋を作っておき、そこに入ったら塞ぐ</li>
+<li>基本は、1 手か 2 手(2 人で 1 手、挟み撃ち)で捕獲できるような部屋<ul>
+<li>それ以上の手数(例えば □ 型で 4 手で捕獲)だと、部屋サイズが大きくなりがちなのと人の移動/連携が大変など</li>
+</ul>
+</li>
+<li>部屋の空間は大きく取ってしまうと無駄が多くなるため、幅 1、長さ 3 ～ 5 程度のをたくさん(複数列)用意するのが効率的だった模様</li>
+<li>斜めか、軸に並行かだと、あまり変わらないみたいだけど、その後の動きの実装の問題からか、軸に並行な配置が多かった模様</li>
+<li>また、固定形だと、理論値などの予想がしやすい</li>
+</ul>
+</li>
+<li>不定形<ul>
+<li>追込戦略の場合、複数人でいっしょに動いて一気に塞ぐ、みたいな感じで捕らえる</li>
+<li>(一応、300 ターン以内にほとんどのペットをたどることは可能みたいだけど、ペットが多いと回りきれない)</li>
+<li>一方、少ないターンで捉えられないと、無駄な柵を配置しまくって移動や柵設置を妨げやすい<ul>
+<li>ペットが毎回大きく動くので、そのターンで捉えられる配置と次のターンで捉えられる配置が結構ズレる</li>
+<li>無駄な柵が多くなるとスコアも低くなる</li>
+</ul>
+</li>
+<li>雰囲気的には、追込戦略＆不定形が無駄な柵設置も少なく高スコアを狙えそうに見えるが、実装難易度が結構高い<ul>
+<li>複数人でのペットの追いかけ方や柵の配置など、どうするか自明ではなく、難しい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>領域分割形<ul>
+<li>真ん中とかで 2 分割や 4 分割して、ペットがいたら塞ぐ、や、ペットが少ない方を選ぶ、ような戦略(またはそれを階層構造的に処理する)<ul>
+<li>2 分割の場合、理論的には、領域内のペットが少ない方を選べるので必ずペット数が半分以下にすることができてうれしい</li>
+<li>が、領域サイズが &frac12; ずつになってしまうため、スコアの上限値の減り方も大きく、基本的に数回は分割が必要なため、高スコアを取るのは難しい</li>
+</ul>
+</li>
+<li>また、木構造的になるため、犬猫への対処が難しい</li>
+</ul>
+</li>
+<li>配置パターンはいくつか用意して、そこから N,M に応じて選ぶ人が多かった模様</li>
+<li>領域が木形状になってしまう場合<ul>
+<li>今回のスコア計算式だと、人はみんな同じ領域内にいたほうがよいため、2 領域にしたり、誰かを犠牲にしてみたいなのだと高得点が狙いにくい</li>
+<li>木形状(1 手で塞ぐ部屋のみとか)の場合、葉の部分で捉えたいが、犬や猫はそこに行く可能性が低く、挟み込めないので、捉えるのが難しい</li>
+</ul>
+</li>
+<li>複数人での柵設置の最適化<ul>
+<li><a href="https://twitter.com/terry_u16/status/1497512589529522178">https://twitter.com/terry_u16/status/1497512589529522178</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">待受戦略での塞ぐタイミング<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>使う部屋数が少ないほどうれしいので、部屋にいるペット数が多い部屋ほどうれしいが、遠くの部屋にペットがいる場合、塞ぐために移動している間に状況が変化してしまう</li>
+<li>また、部屋数が少なかったり、部屋を先に塞ぎまくると、部屋に入れずに通路にとどまるペットが出やすくなる<ul>
+<li>ので、部屋数が多く、ある程度塞いでる部屋があっても入りやすい配置がよかった模様</li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">犬、猫への対処<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>犬は、人の配置に依存するので、2 手挟み撃ちできる部屋のその両端に人が立っているとその間を行き来するような感じになるので捕獲できる<ul>
+<li>ただ、先に塞ごうとすると、犬が来るまで「待ち」が発生するので、無駄なターン消費(50 ～ 100 ターンぐらい？)をしてしまう</li>
+<li>(ここでターンを使ってしまうと、他の柵の設置にターンが使えずに、大きな部屋(幅 2 とか)ぐらいしか作りにくい)</li>
+</ul>
+</li>
+<li>猫は、フィールドを二分割して、その間に通路を作ると、高確率でその間を行き来するので、捕獲できる<ul>
+<li>似たような話で、第 2 回 RCO 日本橋ハーフマラソン本戦 A の、ランダムな 2 点間の移動距離を最大化する問題でも二分割してその間を通らせる解法があったのを思い出した</li>
+<li><a href="https://twitter.com/yowa/status/972414256514662401">https://twitter.com/yowa/status/972414256514662401</a></li>
+</ul>
+</li>
+<li>全体を真ん中で 2 分割し、その間に通路を作るような設置が有効<ul>
+<li>部屋をたくさん用意しているケースでは、通路のみで空間を分割している感じに相当</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">全ペット捕獲率<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>スコアがざっくり「柵の配置数」と「ペットの捕獲率」に依存していて、捕獲失敗はスコアに大きく影響する</li>
+<li>最上位層はペットの捕獲失敗はほぼなかった模様(2%程度)<ul>
+<li><a href="https://twitter.com/terry_u16/status/1497600215217762305">https://twitter.com/terry_u16/status/1497600215217762305</a></li>
+</ul>
+</li>
+<li>部屋に入ってくれないケース(通路にずっといる)への対処(緊急捕獲モード)<ul>
+<li>270 ターン(移動距離分)ぐらいの最終盤で捕獲できていないペットを強制的に捕獲しにいく</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9">その他<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>300 ターンは結構短い<ul>
+<li>柵配置するにしても、適当に人に割り当てると移動距離が伸びたりで無駄ターンを作りやすい</li>
+<li>ギリギリいろんな戦略がありえる制約で、犬や猫も含めて、ここらへんの制約調整がすごい</li>
+</ul>
+</li>
+<li>人の動き<ul>
+<li>柵の配置が固定形の場合、人の動きを「道路/レーン上のみ」などに制限すると実装しやすい</li>
+<li>行ったり来たりとか、ぐるぐる回らせるとかも</li>
+</ul>
+</li>
+</ul>
+<h3 id="visualizer">visualizer 共有<a class="headerlink" href="#visualizer" title="Permanent link">&para;</a></h3>
+<ul>
+<li>結構最初の方からいろんな戦略/配置が共有されていた<ul>
+<li><a href="https://twitter.com/fkyrz_0111/status/1493247255758790659">https://twitter.com/fkyrz_0111/status/1493247255758790659</a></li>
+<li><a href="https://twitter.com/yuusanlondon/status/1492697637052633090">https://twitter.com/yuusanlondon/status/1492697637052633090</a></li>
+<li><a href="https://twitter.com/matsu7874/status/1492446213035405318">https://twitter.com/matsu7874/status/1492446213035405318</a></li>
+<li><a href="https://twitter.com/raclamusi/status/1492841923190476800">https://twitter.com/raclamusi/status/1492841923190476800</a></li>
+<li><a href="https://twitter.com/takoshiiiiiiiii/status/1492788191195447298">https://twitter.com/takoshiiiiiiiii/status/1492788191195447298</a></li>
+<li><a href="https://twitter.com/arimasenu/status/1492871668922216448">https://twitter.com/arimasenu/status/1492871668922216448</a></li>
+<li><a href="https://twitter.com/arimasenu/status/1495032396563226625">https://twitter.com/arimasenu/status/1495032396563226625</a></li>
+<li><a href="https://twitter.com/arimasenu/status/1492766522699583492">https://twitter.com/arimasenu/status/1492766522699583492</a></li>
+<li><a href="https://twitter.com/ValGrowth/status/1494933680820977666">https://twitter.com/ValGrowth/status/1494933680820977666</a></li>
+</ul>
+</li>
+<li>配置パターンなど思いつかないと辛いので、良い刺激/参考になってよかったと思う<ul>
+<li>今回の場合、結構スコアが出ている人のも公開されていて、それを参考に改良していくという戦略も有効だったかも</li>
+</ul>
+</li>
+<li>一方、今回は固定形かつ seed=0 と同じ配置でも有効で、パターンがバレると真似した人が上位に来やすくなってしまう(見た人が有利)<ul>
+<li>お絵かきなどで情報を発信することもできるので、悪意があるとゲーム性が壊れてしまう恐れ</li>
+<li>コンテスト後の公式アンケートでも、良し悪しについてアンケートされていた</li>
+</ul>
+</li>
+<li>お絵かき<ul>
+<li><a href="https://twitter.com/kusano_k/status/1492549075828625410">https://twitter.com/kusano_k/status/1492549075828625410</a></li>
+<li><a href="https://twitter.com/Kyo_s_s/status/1494962071494361088">https://twitter.com/Kyo_s_s/status/1494962071494361088</a></li>
+<li><a href="https://twitter.com/fumuumuf/status/1493155122700238849">https://twitter.com/fumuumuf/status/1493155122700238849</a></li>
+<li><a href="https://twitter.com/satanic0258/status/1492398070700851202">https://twitter.com/satanic0258/status/1492398070700851202</a></li>
+<li><a href="https://twitter.com/python05238919/status/1494172514133577728">https://twitter.com/python05238919/status/1494172514133577728</a></li>
+<li><a href="https://twitter.com/bayashiko_kpr/status/1494331187175002114">https://twitter.com/bayashiko_kpr/status/1494331187175002114</a></li>
+<li><a href="https://twitter.com/ozy4dm/status/1494843053261332480">https://twitter.com/ozy4dm/status/1494843053261332480</a></li>
+<li><a href="https://twitter.com/ozy4dm/status/1497511790800158721">https://twitter.com/ozy4dm/status/1497511790800158721</a></li>
+<li><a href="https://twitter.com/Suppli_Lion/status/1496456768163311616">https://twitter.com/Suppli_Lion/status/1496456768163311616</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_10">解説<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>(50 位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://atcoder.jp/contests/ahc008/editorial">解説(公式)</a></li>
@@ -1059,165 +1219,6 @@
 <li><a href="https://twitter.com/hashtag/AHC008">Twitter hashtag AHC008</a></li>
 <li><a href="https://tc-wleite.github.io/ahc008.html">AHC008 statistics(wleite さん)</a></li>
 <li><a href="https://twitter.com/kiri8128/status/1497975788985282560">kiri8128 さん Score-Performance グラフ</a></li>
-</ul>
-<h2 id="_4">個人的メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>2 週間だったのもあり、戦略の自由度が高く、また、スコアを出すためには結構作りきらないといけないため重実装気味な感じの問題だった</li>
-<li>最適化というより、ルールベース作成コンテストという感じ<ul>
-<li><a href="https://twitter.com/chokudai/status/1497546485495320583">https://twitter.com/chokudai/status/1497546485495320583</a></li>
-</ul>
-</li>
-<li>今回は、待受戦略(固定配置、小部屋たくさん)が有効で、上位に多かった模様</li>
-</ul>
-<h3 id="_5">戦略<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>領域を囲い込むか、ペットを領域外に出すか<ul>
-<li>囲い込むように領域を作る場合、ペット数が結構多く、移動しまくるのもあり、大きく作ることが難しい</li>
-<li>今回は、罠を張って、領域外にするような方法が有効だった模様</li>
-</ul>
-</li>
-<li>待受戦略か、追込戦略か<ul>
-<li>ざっくり、部屋(罠)を用意して入ったペットを捕らえるか、こちらから追い込んで捕らえるか</li>
-<li>ただ、ほとんどのペットは人の配置に依存しない＆ランダムウォークなので、誘導するのが難しい</li>
-<li>今回の場合、実装難易度も含めて待受戦略を取った人が多かった模様<ul>
-<li>不定形追込戦略が良さそうに見えるけど、細かいところが非自明的なのと、実装難易度が高い</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="_6">柵の配置<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>固定形<ul>
-<li>待受戦略の場合、短冊/二型(縦、横、斜め)、CC 型、SS 型、O 型/□ 型などで部屋を作っておき、そこに入ったら塞ぐ</li>
-<li>基本は、1 手か 2 手(2 人で 1 手、挟み撃ち)で捕獲できるような部屋<ul>
-<li>それ以上の手数(例えば □ 型で 4 手で捕獲)だと、部屋サイズが大きくなりがちなのと人の移動/連携が大変など</li>
-</ul>
-</li>
-<li>部屋の空間は大きく取ってしまうと無駄が多くなるため、幅 1、長さ 3 ～ 5 程度のをたくさん(複数列)用意するのが効率的だった模様</li>
-<li>斜めか、軸に並行かだと、あまり変わらないみたいだけど、その後の動きの実装の問題からか、軸に並行な配置が多かった模様</li>
-<li>また、固定形だと、理論値などの予想がしやすい</li>
-</ul>
-</li>
-<li>不定形<ul>
-<li>追込戦略の場合、複数人でいっしょに動いて一気に塞ぐ、みたいな感じで捕らえる</li>
-<li>(一応、300 ターン以内にほとんどのペットをたどることは可能みたいだけど、ペットが多いと回りきれない)</li>
-<li>一方、少ないターンで捉えられないと、無駄な柵を配置しまくって移動や柵設置を妨げやすい<ul>
-<li>ペットが毎回大きく動くので、そのターンで捉えられる配置と次のターンで捉えられる配置が結構ズレる</li>
-<li>無駄な柵が多くなるとスコアも低くなる</li>
-</ul>
-</li>
-<li>雰囲気的には、追込戦略＆不定形が無駄な柵設置も少なく高スコアを狙えそうに見えるが、実装難易度が結構高い<ul>
-<li>複数人でのペットの追いかけ方や柵の配置など、どうするか自明ではなく、難しい</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>領域分割形<ul>
-<li>真ん中とかで 2 分割や 4 分割して、ペットがいたら塞ぐ、や、ペットが少ない方を選ぶ、ような戦略(またはそれを階層構造的に処理する)<ul>
-<li>2 分割の場合、理論的には、領域内のペットが少ない方を選べるので必ずペット数が半分以下にすることができてうれしい</li>
-<li>が、領域サイズが &frac12; ずつになってしまうため、スコアの上限値の減り方も大きく、基本的に数回は分割が必要なため、高スコアを取るのは難しい</li>
-</ul>
-</li>
-<li>また、木構造的になるため、犬猫への対処が難しい</li>
-</ul>
-</li>
-<li>配置パターンはいくつか用意して、そこから N,M に応じて選ぶ人が多かった模様</li>
-<li>領域が木形状になってしまう場合<ul>
-<li>今回のスコア計算式だと、人はみんな同じ領域内にいたほうがよいため、2 領域にしたり、誰かを犠牲にしてみたいなのだと高得点が狙いにくい</li>
-<li>木形状(1 手で塞ぐ部屋のみとか)の場合、葉の部分で捉えたいが、犬や猫はそこに行く可能性が低く、挟み込めないので、捉えるのが難しい</li>
-</ul>
-</li>
-<li>複数人での柵設置の最適化<ul>
-<li><a href="https://twitter.com/terry_u16/status/1497512589529522178">https://twitter.com/terry_u16/status/1497512589529522178</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="_7">待受戦略での塞ぐタイミング<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<ul>
-<li>使う部屋数が少ないほどうれしいので、部屋にいるペット数が多い部屋ほどうれしいが、遠くの部屋にペットがいる場合、塞ぐために移動している間に状況が変化してしまう</li>
-<li>また、部屋数が少なかったり、部屋を先に塞ぎまくると、部屋に入れずに通路にとどまるペットが出やすくなる<ul>
-<li>ので、部屋数が多く、ある程度塞いでる部屋があっても入りやすい配置がよかった模様</li>
-</ul>
-</li>
-</ul>
-<h3 id="_8">犬、猫への対処<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<ul>
-<li>犬は、人の配置に依存するので、2 手挟み撃ちできる部屋のその両端に人が立っているとその間を行き来するような感じになるので捕獲できる<ul>
-<li>ただ、先に塞ごうとすると、犬が来るまで「待ち」が発生するので、無駄なターン消費(50 ～ 100 ターンぐらい？)をしてしまう</li>
-<li>(ここでターンを使ってしまうと、他の柵の設置にターンが使えずに、大きな部屋(幅 2 とか)ぐらいしか作りにくい)</li>
-</ul>
-</li>
-<li>猫は、フィールドを二分割して、その間に通路を作ると、高確率でその間を行き来するので、捕獲できる<ul>
-<li>似たような話で、第 2 回 RCO 日本橋ハーフマラソン本戦 A の、ランダムな 2 点間の移動距離を最大化する問題でも二分割してその間を通らせる解法があったのを思い出した</li>
-<li><a href="https://twitter.com/yowa/status/972414256514662401">https://twitter.com/yowa/status/972414256514662401</a></li>
-</ul>
-</li>
-<li>全体を真ん中で 2 分割し、その間に通路を作るような設置が有効<ul>
-<li>部屋をたくさん用意しているケースでは、通路のみで空間を分割している感じに相当</li>
-</ul>
-</li>
-</ul>
-<h3 id="_9">全ペット捕獲率<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<ul>
-<li>スコアがざっくり「柵の配置数」と「ペットの捕獲率」に依存していて、捕獲失敗はスコアに大きく影響する</li>
-<li>最上位層はペットの捕獲失敗はほぼなかった模様(2%程度)<ul>
-<li><a href="https://twitter.com/terry_u16/status/1497600215217762305">https://twitter.com/terry_u16/status/1497600215217762305</a></li>
-</ul>
-</li>
-<li>部屋に入ってくれないケース(通路にずっといる)への対処(緊急捕獲モード)<ul>
-<li>270 ターン(移動距離分)ぐらいの最終盤で捕獲できていないペットを強制的に捕獲しにいく</li>
-</ul>
-</li>
-</ul>
-<h3 id="_10">その他<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<ul>
-<li>300 ターンは結構短い<ul>
-<li>柵配置するにしても、適当に人に割り当てると移動距離が伸びたりで無駄ターンを作りやすい</li>
-<li>ギリギリいろんな戦略がありえる制約で、犬や猫も含めて、ここらへんの制約調整がすごい</li>
-</ul>
-</li>
-<li>人の動き<ul>
-<li>柵の配置が固定形の場合、人の動きを「道路/レーン上のみ」などに制限すると実装しやすい</li>
-<li>行ったり来たりとか、ぐるぐる回らせるとかも</li>
-</ul>
-</li>
-</ul>
-<h3 id="visualizer">visualizer 共有<a class="headerlink" href="#visualizer" title="Permanent link">&para;</a></h3>
-<ul>
-<li>結構最初の方からいろんな戦略/配置が共有されていた<ul>
-<li><a href="https://twitter.com/fkyrz_0111/status/1493247255758790659">https://twitter.com/fkyrz_0111/status/1493247255758790659</a></li>
-<li><a href="https://twitter.com/yuusanlondon/status/1492697637052633090">https://twitter.com/yuusanlondon/status/1492697637052633090</a></li>
-<li><a href="https://twitter.com/matsu7874/status/1492446213035405318">https://twitter.com/matsu7874/status/1492446213035405318</a></li>
-<li><a href="https://twitter.com/raclamusi/status/1492841923190476800">https://twitter.com/raclamusi/status/1492841923190476800</a></li>
-<li><a href="https://twitter.com/takoshiiiiiiiii/status/1492788191195447298">https://twitter.com/takoshiiiiiiiii/status/1492788191195447298</a></li>
-<li><a href="https://twitter.com/arimasenu/status/1492871668922216448">https://twitter.com/arimasenu/status/1492871668922216448</a></li>
-<li><a href="https://twitter.com/arimasenu/status/1495032396563226625">https://twitter.com/arimasenu/status/1495032396563226625</a></li>
-<li><a href="https://twitter.com/arimasenu/status/1492766522699583492">https://twitter.com/arimasenu/status/1492766522699583492</a></li>
-<li><a href="https://twitter.com/ValGrowth/status/1494933680820977666">https://twitter.com/ValGrowth/status/1494933680820977666</a></li>
-</ul>
-</li>
-<li>配置パターンなど思いつかないと辛いので、良い刺激/参考になってよかったと思う<ul>
-<li>今回の場合、結構スコアが出ている人のも公開されていて、それを参考に改良していくという戦略も有効だったかも</li>
-</ul>
-</li>
-<li>一方、今回は固定形かつ seed=0 と同じ配置でも有効で、パターンがバレると真似した人が上位に来やすくなってしまう(見た人が有利)<ul>
-<li>お絵かきなどで情報を発信することもできるので、悪意があるとゲーム性が壊れてしまう恐れ</li>
-<li>コンテスト後の公式アンケートでも、良し悪しについてアンケートされていた</li>
-</ul>
-</li>
-<li>お絵かき<ul>
-<li><a href="https://twitter.com/kusano_k/status/1492549075828625410">https://twitter.com/kusano_k/status/1492549075828625410</a></li>
-<li><a href="https://twitter.com/Kyo_s_s/status/1494962071494361088">https://twitter.com/Kyo_s_s/status/1494962071494361088</a></li>
-<li><a href="https://twitter.com/fumuumuf/status/1493155122700238849">https://twitter.com/fumuumuf/status/1493155122700238849</a></li>
-<li><a href="https://twitter.com/satanic0258/status/1492398070700851202">https://twitter.com/satanic0258/status/1492398070700851202</a></li>
-<li><a href="https://twitter.com/python05238919/status/1494172514133577728">https://twitter.com/python05238919/status/1494172514133577728</a></li>
-<li><a href="https://twitter.com/bayashiko_kpr/status/1494331187175002114">https://twitter.com/bayashiko_kpr/status/1494331187175002114</a></li>
-<li><a href="https://twitter.com/ozy4dm/status/1494843053261332480">https://twitter.com/ozy4dm/status/1494843053261332480</a></li>
-<li><a href="https://twitter.com/ozy4dm/status/1497511790800158721">https://twitter.com/ozy4dm/status/1497511790800158721</a></li>
-<li><a href="https://twitter.com/Suppli_Lion/status/1496456768163311616">https://twitter.com/Suppli_Lion/status/1496456768163311616</a></li>
-</ul>
-</li>
 </ul>
 
               
