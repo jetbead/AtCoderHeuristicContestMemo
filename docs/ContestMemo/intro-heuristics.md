@@ -6,6 +6,8 @@ title: Intro. to HC
 
 - https://atcoder.jp/contests/intro-heuristics
 
+![image](imgs/intro-heuristics.png)
+
 ## 問題概要
 
 - 26 種類のコンテストがあり、ユーザーの満足度ができるだけ高くなるようにしたい
