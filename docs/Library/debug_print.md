@@ -2,7 +2,7 @@
 
 ## 概要
 
-- デバッグしやすいよう、コンテナや構造体のデバッグ出力をまとめて`debug(x)`でできるようにしたもの
+- デバッグしやすいよう、コンテナや構造体のデバッグ出力をまとめて`debug(x)`や`debugs(x, y)`でできるようにしたもの
 
 ## コード
 ソースコードの上の方に貼り付けて使う。
@@ -32,76 +32,114 @@
 #define ESC_FT_REVERSE "\033[7m"
 #define ESC_FT_CLEAR "\033[0m"
 // 画面のクリア
-void ESC_CLEAR(){ cerr << "\033[2J" << flush; }
+void ESC_CLEAR() {
+    cerr << "\033[2J" << flush;
+}
 // (y行目,x列目)にカーソルを移動
-void ESC_MOVE(int y, int x){ cerr << "\033[" << y << ";" << x << "H" << flush; }
+void ESC_MOVE(int y, int x) {
+    cerr << "\033[" << y << ";" << x << "H" << flush;
+}
+
+// 複数引数用
+#define debugs(...)                 \
+    cerr << "L" << __LINE__ << " "; \
+    cerr << #__VA_ARGS__ << ": ";   \
+    debugs_local(__VA_ARGS__);
+void debugs_local() {
+    cerr << endl;
+}
+template <class Head, class... Tail>
+void debugs_local(Head&& head, Tail&&... tail) {
+    cerr << head;
+    if (sizeof...(tail) > 0) cerr << ", ";
+    debugs_local(move(tail)...);
+}
+/*
+template <class... Args>
+void debugs_local(const Args&... args) {
+    bool is_first = true;
+    for (auto const& e : {args...}) {
+        if (is_first)
+            cerr << " ";
+        else
+            cerr << ", ";
+        is_first = false;
+        cerr << e;
+    }
+}
+*/
 
 // 変数名あり
 //#define debug(x) cerr << #x << ": " << (x) << endl;
 // 行数あり
 #define debug(x) cerr << "L" << __LINE__ << " " << #x << ": " << (x) << endl;
 // 色あり
-//#define debug(x) cerr << ESC_YELLOW << "L" << __LINE__ << " " << #x << ": " << (x) << ESC_DEFAULT << endl;
+//#define debug(x) cerr << ESC_YELLOW << "L" << __LINE__ << " " << #x << ": " << (x) << ESC_DEFAULT
+//<< endl;
 // ファイル出力
-//ofstream logfs("log.txt");
+// ofstream logfs("log.txt");
 //#define debug(x) logfs << "L" << __LINE__ << " " << #x << ": " << (x) << endl;
 
 // コンテナ出力
-template<class T>
-ostream& operator<<(ostream& os, const vector<T>& v){
-  os << "[";
-  for(const auto& x: v) os << " " << x;
-  os << " ]";
-  return os;
+template <class T>
+ostream& operator<<(ostream& os, const vector<T>& v) {
+    os << "[";
+    for (const auto& x : v) os << " " << x;
+    os << " ]";
+    return os;
 }
-template<class T>
-ostream& operator<<(ostream& os, const vector<vector<T>>& v){
-  //os << "[";
-  //for(const auto& e: v) os << " " << e;
-  //os << " ]";
-  for(size_t i=0; i<v.size(); i++){
-    os << endl;
-    for(size_t j=0; j<v[i].size(); j++){
-      //os << v[i][j];
-      os << setw(3) << v[i][j];
+template <class T>
+ostream& operator<<(ostream& os, const vector<vector<T>>& v) {
+    // os << "[";
+    // for(const auto& e: v) os << " " << e;
+    // os << " ]";
+    for (size_t i = 0; i < v.size(); i++) {
+        os << endl;
+        for (size_t j = 0; j < v[i].size(); j++) {
+            // os << v[i][j];
+            os << setw(3) << v[i][j];
+        }
     }
-  }
-  return os;
+    return os;
 }
-template<class T>
-ostream& operator<<(ostream& os, const set<T>& v){
-  os << "[";
-  for(const auto& x: v) os << " " << x;
-  os << " ]";
-  return os;
+template <class T>
+ostream& operator<<(ostream& os, const set<T>& v) {
+    os << "[";
+    for (const auto& x : v) os << " " << x;
+    os << " ]";
+    return os;
 }
-template<class T, size_t N>
-ostream& operator<<(ostream& os, const array<T,N>& v){
-  os << "[";
-  for(const auto& x: v) os << " " << x;
-  os << " ]";
-  return os;
+template <class T, size_t N>
+ostream& operator<<(ostream& os, const array<T, N>& v) {
+    os << "[";
+    for (const auto& x : v) os << " " << x;
+    os << " ]";
+    return os;
 }
-template<class T, class U>
-ostream& operator<<(ostream& os, const map<T,U>& m){
-  os << "{";
-  for(const auto& x: m) os << " " << x.first << ":" << x.second;
-  os << " }";
-  return os;
+template <class T, class U>
+ostream& operator<<(ostream& os, const map<T, U>& m) {
+    os << "{";
+    for (const auto& x : m) os << " " << x.first << ":" << x.second;
+    os << " }";
+    return os;
 }
 
 #else
 #define debug(x)
+#define debugs(...)
 #endif
 
+// 構造体などを追加する場合
 struct P {
-  int y, x;
-  P():y(0),x(0){}
-  P(int y, int x):y(y),x(x){}
+    int y, x;
+    P() : y(0), x(0) {
+    }
+    P(int y, int x) : y(y), x(x) {
+    }
 };
-ostream& operator<<(ostream& os, const P& p){
-  os << "(" << p.y << "," << p.x << ")";
-  return os;
+ostream& operator<<(ostream& os, const P& p) {
+    os << "(" << p.y << "," << p.x << ")";
+    return os;
 }
 ```
 
@@ -119,10 +157,13 @@ int main() {
     debug(v);
   
     vector<P> ps;
-    ps.emplace_back(1,2);
-    ps.emplace_back(3,4);
+    ps.emplace_back(1, 2);
+    ps.emplace_back(3, 4);
     debug(ps);
-  
+
+    int a = 1, b = 5;
+    debugs(a, b);
+
     return 0;
 }
 ```
@@ -131,13 +172,14 @@ int main() {
 # LOCALをdefineしている場合のみ出力
 $ g++ solver.cc -DLOCAL
 $ ./a.out
-L112 v:
+L150 v:
   0  0  0  0  0
   0  0  0  0  0
   0  0  0  0  0
   0  0  0  0  0
   0  0  0  0  0
-L117 ps: [ (1,2) (3,4) ]
+L155 ps: [ (1,2) (3,4) ]
+L158 a, b: 1, 5
 
 # LOCALがなければ出力なし(本番環境用)
 $ g++ solver.cc
