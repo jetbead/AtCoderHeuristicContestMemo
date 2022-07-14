@@ -13,3 +13,5 @@
 - https://twitter.com/chokudai/status/713979313377255425
 - https://shindannin.hatenadiary.com/entry/2017/05/04/230832
 - https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
+- https://qiita.com/tsukasa__diary/items/f050291b6adad80b7998
+- https://tanzaku.github.io/post/2022-07-13-chokudai-search/
