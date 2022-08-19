@@ -1,5 +1,7 @@
 # 用語集
 
+- https://kmyk.github.io/blog/blog/2019/03/08/terms-in-marathon-matches/
+
 ## 文脈
 
 - https://twitter.com/colun/status/645318121713078272
