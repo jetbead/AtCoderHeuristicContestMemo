@@ -553,6 +553,20 @@
   
   
     <li class="md-nav__item">
+      <a href="beam_search.html" class="md-nav__link">
+        ビームサーチ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="debug_print.html" class="md-nav__link">
         デバッグ出力
       </a>
@@ -621,6 +635,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="greedy.html" class="md-nav__link">
+        貪欲法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="matching.html" class="md-nav__link">
+        マッチング
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -665,6 +707,20 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    有用性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    状態
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     近傍
   </a>
   
@@ -685,20 +741,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    部分破壊と再構築
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     評価関数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     スコア計算の高速化
   </a>
   
@@ -706,14 +769,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     差分計算
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     状態更新を後に持っていくテク
   </a>
   
@@ -725,7 +788,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     その他
   </a>
   
@@ -836,6 +899,20 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    有用性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    状態
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     近傍
   </a>
   
@@ -856,20 +933,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    部分破壊と再構築
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     評価関数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     スコア計算の高速化
   </a>
   
@@ -877,14 +961,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     差分計算
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     状態更新を後に持っていくテク
   </a>
   
@@ -896,7 +980,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     その他
   </a>
   
@@ -957,7 +1041,39 @@
 </ul>
 </li>
 </ul>
-<h2 id="_2">近傍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">有用性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>「焼きなましが強い」というより、「焼きなましが適用できたら強い」ケースが多い<ul>
+<li>素直に適用できる場合もあれば、工夫が必要だったり、強引に適用できたり、など</li>
+<li>探索空間がガタガタだったり大きかったりすると、うまく収束しなかったり、収束までに時間がかかったりして、他の手法よりも悪い場合もある<ul>
+<li>ビームサーチで初期解を作って、焼きなましで微修正みたいな感じも</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>適用できた場合も、状態の持ち方、近傍、評価関数などで、探索空間の形が大きく変わり差が出やすい<ul>
+<li>同じ場合は、高速化、差分計算などで差がつく</li>
+</ul>
+</li>
+<li>「焼きなましを適用できるか？」という視点から入ると視野が狭まりやすいので、さまざまな状態の持ち方や探索の仕方(ルールベース/貪欲法など)を検討して、その改善として「焼きなまし」を考えたほうが良い</li>
+</ul>
+<h2 id="_3">状態<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>(自明・非自明というのは、適当に自分の中での分類なので注意)</p>
+<ul>
+<li>自明系<ul>
+<li>盤面やグラフなど、問題の解空間をそのまま状態に持つ</li>
+<li>訪問点の順番(TSP系)</li>
+</ul>
+</li>
+<li>非自明系<ul>
+<li>問題の解空間の一部だけ状態に持つ(残りは別途最適化)</li>
+<li>操作列をそのまま持つ</li>
+<li>訪問辺順番(TSP系)</li>
+<li>「解空間-&gt;状態空間-&gt;解空間」みたいな変換(復元)ができる場合、より性質の良い(探索空間の小さい)状態空間で探索する</li>
+</ul>
+</li>
+</ul>
+<h2 id="_4">近傍<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="2-opt">2-opt 近傍<a class="headerlink" href="#2-opt" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/2-opt">https://en.wikipedia.org/wiki/2-opt</a></li>
@@ -988,7 +1104,15 @@
 </li>
 <li>2-opt ではたどり着くのが難しいような double bridge みたいな形にキックする</li>
 </ul>
-<h2 id="_3">評価関数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_5">部分破壊と再構築<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>パスやサイクルの一部を破壊してDFSで再構築<ul>
+<li><a href="../ContestMemo/ahc002.html">AHC002</a></li>
+<li><a href="../ContestMemo/ahc010.html">AHC010</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">評価関数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>スコアをそのまま利用</li>
 <li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
@@ -996,8 +1120,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="_4">スコア計算の高速化<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="_5">差分計算<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h2 id="_7">スコア計算の高速化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">差分計算<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../ContestMemo/ahc012.html">AHC012</a><ul>
 <li>直線の追加削除は、その直線の両側の領域だけを考えれば良い</li>
@@ -1005,7 +1129,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_6">状態更新を後に持っていくテク<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_9">状態更新を後に持っていくテク<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../ContestMemo/ahc009.html">AHC009</a><ul>
 <li>前からDP・後からDPを持っておくと、差分計算が高速に求められる</li>
@@ -1013,7 +1137,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_7">その他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_10">その他<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <h3 id="invalid">Invalidな状態を許容する焼きなまし<a class="headerlink" href="#invalid" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
@@ -1042,7 +1166,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="gnuplot.html" class="md-footer__link md-footer__link--prev" aria-label="前: gnuplotで簡易ビジュアライザ" rel="prev">
+        <a href="matching.html" class="md-footer__link md-footer__link--prev" aria-label="前: マッチング" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1051,7 +1175,7 @@
               <span class="md-footer__direction">
                 前
               </span>
-              gnuplotで簡易ビジュアライザ
+              マッチング
             </div>
           </div>
         </a>
