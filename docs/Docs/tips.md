@@ -6,6 +6,8 @@
   - https://kmyk.github.io/blog/blog/2018/11/22/tools-and-tips-for-marathon-matchs/
 - マラソンマッチにおける精神論(chokudai さん)
   - https://chokudai.hatenablog.com/entry/2014/12/04/000132
+- マラソンマッチの取り組み方(colun さん)
+  - http://www.colun.net/archives/294
 - Topcoderマラソンマッチの探索問題で重要なこと(takapt0226 さん)
   - https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21
 
