@@ -91,3 +91,7 @@
 - [AHC011](../ContestMemo/ahc011.md)
   - 最終的に「与えられたタイルで作れる」必要があるが、辺の追加・削除を近傍に、与えられたタイルで作れない状態も探索
     - ただし、評価関数は各利用タイル数の差にして0になるよう目指す
+
+### Successive Halving
+
+- https://cyberagent.ai/blog/research/1036/
