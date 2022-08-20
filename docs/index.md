@@ -43,6 +43,8 @@ title: Home
     - https://competitiveprogramming.info/atcoder/contests/marathon
   - AtCoder Heuristic Rating Estimator
     - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
+  - AtCoder Heuristic Race Ranking (Unofficial)
+    - https://docs.google.com/spreadsheets/d/1gFmqVYr44QlQBkHKLcd1YyFM_-Ne7Hzf7SODbADx8HI/edit#gid=340005926
 
 ## :material-paw: Disclaimer
 
