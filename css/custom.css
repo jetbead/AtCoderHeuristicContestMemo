@@ -65,6 +65,14 @@
   /*border-bottom: 1px solid #ccc;*/
 }
 
+.md-typeset h4 {
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0 0 0.3em;
+  color: black;
+  /*border-bottom: 1px solid #ccc;*/
+}
+
 .md-typeset ol li :-webkit-any(ul, ol),
 .md-typeset ul li :-webkit-any(ul, ol) {
   margin-bottom: 0.3em;
