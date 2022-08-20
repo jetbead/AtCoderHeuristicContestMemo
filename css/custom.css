@@ -50,7 +50,7 @@
 }
 
 .md-typeset h2 {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: bold;
   margin: 0 0 0.3em;
   color: black;
@@ -58,7 +58,7 @@
 }
 
 .md-typeset h3 {
-  font-size: 1em;
+  font-size: 1.17em;
   font-weight: bold;
   margin: 0 0 0.3em;
   color: black;
@@ -66,7 +66,7 @@
 }
 
 .md-typeset h4 {
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: bold;
   margin: 0 0 0.3em;
   color: black;
