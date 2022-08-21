@@ -31,7 +31,7 @@
 
 - https://en.wikipedia.org/wiki/Xorshift
 
-```
+```cpp
 uint32_t xor128() {
     static uint32_t x = 123456789, y = 362436069, z = 521288629, w = 88675123;
     uint32_t t;
@@ -47,7 +47,7 @@ uint32_t xor128() {
 
 - https://prng.di.unimi.it/
 
-```
+```cpp
 // Xoroshiro128++
 // https://prng.di.unimi.it/xoroshiro128plusplus.c
 class Xoroshiro128pp {
