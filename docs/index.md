@@ -26,6 +26,7 @@ title: Home
   - [デバッグ出力](./Library/debug_print.md)
   - [デザインパターン](./Library/design_pattern.md)
   - [2次元累積和](./Library/summed_area_table.md)
+  - [高速化(C++)](./Library/speedup.md)
   - [用語集](./Library/glossary.md)
 
 ## :material-link: Links
