@@ -18,6 +18,7 @@ title: Home
   - [ビームサーチ](./Library/beam_search.md)
   - [貪欲法](./Library/greedy.md)
   - [マッチング](./Library/matching.md)
+  - [乱数/乱択](./Library/random.md)
   - [ゲーム木探索](./Library/game_tree.md)
   - [stage 機能付き配列](./Library/stage_array.md)
   - [時間計測 Timer](./Library/timer.md)
