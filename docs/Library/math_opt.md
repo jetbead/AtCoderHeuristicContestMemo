@@ -2,7 +2,7 @@
 
 - https://www.slideshare.net/shunjiumetani/ss-17197023
 - https://blog.hamayanhamayan.com/entry/2017/05/31/131424
-- 
+
 
 ## 線形計画法
 
