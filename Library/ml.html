@@ -13,7 +13,7 @@
     
     
       
-        <title>貪欲法 - AtCoder Heuristic Contest Memo</title>
+        <title>機械学習 - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              貪欲法
+              機械学習
             
           </span>
         </div>
@@ -663,21 +663,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="greedy.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="greedy.html" class="md-nav__link">
         貪欲法
       </a>
-      
     </li>
   
 
@@ -701,11 +691,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="ml.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          機械学習
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ml.html" class="md-nav__link md-nav__link--active">
         機械学習
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    線形回帰
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ロジスティック回帰
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    決定木系
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ガウス過程回帰
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neural-network" class="md-nav__link">
+    Neural Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Neural Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    線形モデル(pytorch)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -835,6 +907,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    線形回帰
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ロジスティック回帰
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    決定木系
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ガウス過程回帰
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neural-network" class="md-nav__link">
+    Neural Network
+  </a>
+  
+    <nav class="md-nav" aria-label="Neural Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    線形モデル(pytorch)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -847,7 +975,116 @@
                 
 
 
-<h1 id="_1">貪欲法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">機械学習<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<ul>
+<li>パラメータの推定など<ul>
+<li><a href="../ContestMemo/ahc003.html">AHC003</a><ul>
+<li><a href="https://twitter.com/Komaki__/status/1398961656781185026">https://twitter.com/Komaki__/status/1398961656781185026</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ソルバーやルールの切り替え判断などにも使える可能性<ul>
+<li><a href="https://www.terry-u16.net/entry/ahc008">https://www.terry-u16.net/entry/ahc008</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">線形回帰<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">clf</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">1.2</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.2</span><span class="p">],</span>
+             <span class="p">[</span><span class="mf">1.8</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.4</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.2</span><span class="p">]])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">xv</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">yv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">xv</span><span class="p">)</span>
+    <span class="n">pyv</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">xv</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">xv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">yv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">pyv</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="_3">ロジスティック回帰<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">決定木系<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>treelite<ul>
+<li><a href="https://github.com/dmlc/treelite">https://github.com/dmlc/treelite</a></li>
+<li><a href="https://twitter.com/phyllo/status/1175421755919228928">https://twitter.com/phyllo/status/1175421755919228928</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">ガウス過程回帰<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://gist.github.com/jetbead/ac017f930bf7140494db777286eeb252">https://gist.github.com/jetbead/ac017f930bf7140494db777286eeb252</a><ul>
+<li><a href="https://twitter.com/phyllo/status/1177248224270094336">https://twitter.com/phyllo/status/1177248224270094336</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="neural-network">Neural Network<a class="headerlink" href="#neural-network" title="Permanent link">&para;</a></h2>
+<h3 id="pytorch">線形モデル(pytorch)<a class="headerlink" href="#pytorch" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+
+<span class="c1"># 線形モデル w * x + b</span>
+<span class="n">linear_model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># 学習データ(入力、出力は正規化(-1〜1)されている方が良い)</span>
+<span class="n">t_c</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="c1"># 入力</span>
+<span class="n">t_u</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="c1"># 出力</span>
+<span class="n">t_c</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">t_c</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">t_u</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">t_u</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># シャッフルかつ分割</span>
+<span class="n">n_samples</span> <span class="o">=</span> <span class="n">t_u</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">n_val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">n_samples</span><span class="p">)</span>
+<span class="n">shuffled_indices</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randperm</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
+<span class="n">train_indices</span> <span class="o">=</span> <span class="n">shuffled_indices</span><span class="p">[:</span><span class="o">-</span><span class="n">n_val</span><span class="p">]</span>
+<span class="n">val_indices</span> <span class="o">=</span> <span class="n">shuffled_indices</span><span class="p">[</span><span class="o">-</span><span class="n">n_val</span><span class="p">:]</span>
+<span class="n">train_indices</span><span class="p">,</span> <span class="n">val_indices</span>
+
+<span class="n">t_u_train</span> <span class="o">=</span> <span class="n">t_u</span><span class="p">[</span><span class="n">train_indices</span><span class="p">]</span>
+<span class="n">t_c_train</span> <span class="o">=</span> <span class="n">t_c</span><span class="p">[</span><span class="n">train_indices</span><span class="p">]</span>
+<span class="n">t_u_val</span> <span class="o">=</span> <span class="n">t_u</span><span class="p">[</span><span class="n">val_indices</span><span class="p">]</span>
+<span class="n">t_c_val</span> <span class="o">=</span> <span class="n">t_c</span><span class="p">[</span><span class="n">val_indices</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">training_loop</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">loss_fn</span><span class="p">,</span> <span class="n">t_u_train</span><span class="p">,</span> <span class="n">t_u_val</span><span class="p">,</span>
+                  <span class="n">t_c_train</span><span class="p">,</span> <span class="n">t_c_val</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_epochs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">t_p_train</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">t_u_train</span><span class="p">)</span>
+        <span class="n">loss_train</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">t_p_train</span><span class="p">,</span> <span class="n">t_c_train</span><span class="p">)</span>
+
+        <span class="n">t_p_val</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">t_u_val</span><span class="p">)</span>
+        <span class="n">loss_val</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">t_p_val</span><span class="p">,</span> <span class="n">t_c_val</span><span class="p">)</span>
+
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+        <span class="n">loss_train</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">epoch</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">}</span><span class="s2">, Training loss </span><span class="si">{</span><span class="n">loss_train</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">,&quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot; Validation loss </span><span class="si">{</span><span class="n">loss_val</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">linear_model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">)</span>
+<span class="n">training_loop</span><span class="p">(</span>
+    <span class="n">n_epochs</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">,</span> 
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optimizer</span><span class="p">,</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">linear_model</span><span class="p">,</span>
+    <span class="n">loss_fn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">(),</span>
+    <span class="n">t_u_train</span> <span class="o">=</span> <span class="n">t_un_train</span><span class="p">,</span>
+    <span class="n">t_u_val</span> <span class="o">=</span> <span class="n">t_un_val</span><span class="p">,</span> 
+    <span class="n">t_c_train</span> <span class="o">=</span> <span class="n">t_c_train</span><span class="p">,</span>
+    <span class="n">t_c_val</span> <span class="o">=</span> <span class="n">t_c_val</span><span class="p">)</span>
+
+<span class="c1"># 学習結果</span>
+<span class="n">linear_model</span><span class="o">.</span><span class="n">weight</span>
+<span class="n">linear_model</span><span class="o">.</span><span class="n">bias</span>
+</code></pre></div>
 
 
 
@@ -866,7 +1103,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="gnuplot.html" class="md-footer__link md-footer__link--prev" aria-label="前: gnuplotで簡易ビジュアライザ" rel="prev">
+        <a href="matching.html" class="md-footer__link md-footer__link--prev" aria-label="前: マッチング" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -875,20 +1112,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              gnuplotで簡易ビジュアライザ
+              マッチング
             </div>
           </div>
         </a>
       
       
         
-        <a href="matching.html" class="md-footer__link md-footer__link--next" aria-label="次: マッチング" rel="next">
+        <a href="random.html" class="md-footer__link md-footer__link--next" aria-label="次: 乱数/乱択" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              マッチング
+              乱数/乱択
             </div>
           </div>
           <div class="md-footer__button md-icon">
