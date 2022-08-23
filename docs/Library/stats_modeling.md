@@ -13,6 +13,47 @@
     - PRML2.3.1〜2.3.3
     - https://speakerdeck.com/yos1up/ahc003-2wei-jie-fa?slide=10
 
+```python
+# 適当な例: xが正規分布に従う確率変数で、それらの線形変換後の値yだけ観測できるとき、各xの分布を推定
+#  (x1,x2,x3): 平均5、平均3、平均0、分散は4の正規分布に従う
+#  (y1,y2,y3): y1=x1+x3, y2=x1+x2, y3=x1+x2+x3の関係になっている観測できる値
+import numpy as np
+
+# xとyとの関係(y=Ax+b)
+A = np.array([
+    [1, 0, 1],
+    [1, 1, 0],
+    [1, 1, 1]
+])
+b = np.zeros(3)
+
+# 観測yでの精度行列L
+sgm = np.zeros((3,3))
+sgm[0,0] = sgm[1,1] = 8.0
+sgm[2,2] = 12.0
+L = np.linalg.inv(sgm)
+
+# 観測&ベイズ更新
+results = []
+mu = np.zeros(3) # 平均
+lmd = np.ones((3,3)) * 1e-9 # 精度行列(分散の逆行列)
+for i in range(1000):
+    # 正規乱数
+    x1 = np.random.normal(5, 4)
+    x2 = np.random.normal(3, 4)
+    x3 = np.random.normal(0, 4)
+    # 観測できる値
+    y1 = x1 + x3
+    y2 = x1 + x2
+    y3 = x1 + x2 + x3
+    # ベイズ更新
+    cov = np.linalg.inv(lmd + (A.T @ L @ A))
+    E = cov @ ((A.T @ L @ (np.array([y1,y2, y3]) - b).T) + (lmd @ mu))
+    mu = E
+    lmd = np.linalg.inv(cov)
+    results.append(E)
+```
+
 ### 非正規なデータへの正規分布仮定
 
 - データが正規分布に従っているとは言えなくても、標本平均の分布は正規分布に近い
@@ -42,6 +83,10 @@
 ### MCMC
 
 #### ギブスサンプリング
+
+
+## カルマンフィルタ
+
 
 ## ベイズ最適化
 
