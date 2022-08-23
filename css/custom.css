@@ -46,7 +46,9 @@
   font-weight: bold;
   margin: 0 0 0.5em;
   color: black;
-  /*border-bottom: 1px solid #ccc;*/
+  padding: 0.1em 0.3em;
+  border-left: solid 5px black;
+  border-bottom: 1px solid black;
 }
 
 .md-typeset h2 {
@@ -54,7 +56,9 @@
   font-weight: bold;
   margin: 0 0 0.3em;
   color: black;
-  /*border-bottom: 1px solid #ccc;*/
+  padding: 0.1em 0.3em;
+  border-left: solid 5px black;
+  border-bottom: 1px solid black;
 }
 
 .md-typeset h3 {
@@ -62,6 +66,8 @@
   font-weight: bold;
   margin: 0 0 0.3em;
   color: black;
+  padding: 0em 0.5em;
+  border-left: solid 7px black;
   /*border-bottom: 1px solid #ccc;*/
 }
 

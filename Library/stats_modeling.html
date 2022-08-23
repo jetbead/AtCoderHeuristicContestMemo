@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
     
     
       
@@ -651,6 +651,20 @@
   
   
     <li class="md-nav__item">
+      <a href="flow.html" class="md-nav__link">
+        フロー
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="game_tree.html" class="md-nav__link">
         ゲーム木探索
       </a>
@@ -707,6 +721,20 @@
   
   
     <li class="md-nav__item">
+      <a href="grid.html" class="md-nav__link">
+        グリッド操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="matching.html" class="md-nav__link">
         マッチング
       </a>
@@ -749,8 +777,36 @@
   
   
     <li class="md-nav__item">
+      <a href="multi_agent.html" class="md-nav__link">
+        マルチエージェント
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="random.html" class="md-nav__link">
         乱数/乱択
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="result_analy.html" class="md-nav__link">
+        実行結果の分析
       </a>
     </li>
   
@@ -907,13 +963,20 @@
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    ベイズ最適化
+    カルマンフィルタ
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    ベイズ最適化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     問題
   </a>
   
@@ -950,6 +1013,20 @@
     <li class="md-nav__item">
       <a href="timer.html" class="md-nav__link">
         Timer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tsp.html" class="md-nav__link">
+        TSP(巡回セールスマン問題)
       </a>
     </li>
   
@@ -1057,13 +1134,20 @@
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    ベイズ最適化
+    カルマンフィルタ
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    ベイズ最適化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     問題
   </a>
   
@@ -1106,6 +1190,45 @@
 </ul>
 </li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># 適当な例: xが正規分布に従う確率変数で、それらの線形変換後の値yだけ観測できるとき、各xの分布を推定</span>
+<span class="c1">#  (x1,x2,x3): 平均5、平均3、平均0、分散は4の正規分布に従う</span>
+<span class="c1">#  (y1,y2,y3): y1=x1+x3, y2=x1+x2, y3=x1+x2+x3の関係になっている観測できる値</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># xとyとの関係(y=Ax+b)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># 観測yでの精度行列L</span>
+<span class="n">sgm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sgm</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sgm</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">8.0</span>
+<span class="n">sgm</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">12.0</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">sgm</span><span class="p">)</span>
+
+<span class="c1"># 観測&amp;ベイズ更新</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 平均</span>
+<span class="n">lmd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="o">*</span> <span class="mf">1e-9</span> <span class="c1"># 精度行列(分散の逆行列)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="c1"># 正規乱数</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="c1"># 観測できる値</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x3</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span>
+    <span class="n">y3</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span> <span class="o">+</span> <span class="n">x3</span>
+    <span class="c1"># ベイズ更新</span>
+    <span class="n">cov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">lmd</span> <span class="o">+</span> <span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">L</span> <span class="o">@</span> <span class="n">A</span><span class="p">))</span>
+    <span class="n">E</span> <span class="o">=</span> <span class="n">cov</span> <span class="o">@</span> <span class="p">((</span><span class="n">A</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">L</span> <span class="o">@</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">y1</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">])</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">lmd</span> <span class="o">@</span> <span class="n">mu</span><span class="p">))</span>
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">E</span>
+    <span class="n">lmd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">cov</span><span class="p">)</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="_3">非正規なデータへの正規分布仮定<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>データが正規分布に従っているとは言えなくても、標本平均の分布は正規分布に近い<ul>
@@ -1143,11 +1266,12 @@
 </ul>
 <h3 id="mcmc">MCMC<a class="headerlink" href="#mcmc" title="Permanent link">&para;</a></h3>
 <h4 id="_7">ギブスサンプリング<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<h2 id="_8">ベイズ最適化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_8">カルマンフィルタ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_9">ベイズ最適化<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.slideshare.net/issei_sato/bayesian-optimization">https://www.slideshare.net/issei_sato/bayesian-optimization</a></li>
 </ul>
-<h2 id="_9">問題<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_10">問題<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../ContestMemo/ahc003.html">AHC003</a></li>
 <li><a href="https://yukicoder.me/problems/no/5006">https://yukicoder.me/problems/no/5006</a><ul>

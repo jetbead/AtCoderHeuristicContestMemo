@@ -13,7 +13,7 @@
     
     
       
-        <title>2次元累積和 - AtCoder Heuristic Contest Memo</title>
+        <title>実行結果の分析 - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2次元累積和
+              実行結果の分析
             
           </span>
         </div>
@@ -803,11 +803,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="result_analy.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          実行結果の分析
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="result_analy.html" class="md-nav__link md-nav__link--active">
         実行結果の分析
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    前提
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    パラメータごとの散布図
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nkscore" class="md-nav__link">
+    N,Kごとのscoreの平均値
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ヒートマップ表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    Kごとについて、ヒストグラムを並べて表示
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -873,80 +942,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          2次元累積和
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="summed_area_table.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="summed_area_table.html" class="md-nav__link">
         2次元累積和
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    概要
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    計算量
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    コード
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verified" class="md-nav__link">
-    Verified
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1013,36 +1013,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    概要
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    計算量
+    前提
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    コード
+    パラメータごとの散布図
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#nkscore" class="md-nav__link">
+    N,Kごとのscoreの平均値
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verified" class="md-nav__link">
-    Verified
+  <a href="#_4" class="md-nav__link">
+    ヒートマップ表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    Kごとについて、ヒストグラムを並べて表示
   </a>
   
 </li>
@@ -1061,86 +1061,60 @@
                 
 
 
-<h1 id="2">2次元累積和<a class="headerlink" href="#2" title="Permanent link">&para;</a></h1>
-<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="_1">実行結果の分析<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <ul>
-<li>2次元平面上の頂点集合が与えられるとき、任意の長方形領域にある頂点数を高速に計算</li>
-<li>座標が負になる場合、座標が大きいが頂点数が少ない場合：座標圧縮(座圧)と組み合わせて使う</li>
-</ul>
-<h2 id="_2">計算量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>add()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
-<li>頂点を追加</li>
+<li>入力の制約ごとのスコア分布や実行時間などをプロットすることで、プログラムの改善点を見つけられる可能性がある<ul>
+<li>制約などで戦略を変えたり、など</li>
 </ul>
 </li>
-<li><code>init()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(N^2)</span><script type="math/tex">O(N^2)</script></span><ul>
-<li>累積和の構築</li>
+<li>pythonのpandas/matplotlib等での可視化についてまとめておく</li>
 </ul>
-</li>
-<li><code>get()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
-<li>領域内の頂点数を返す</li>
-<li>注意: 使用する場合は必ず先にinit()を呼び出して構築する</li>
-</ul>
-</li>
-</ul>
-<h2 id="_3">コード<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1">// NxNの領域の2次元累積和</span>
-<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">SummedAreaTable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">table</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">SummedAreaTable</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">N</span><span class="p">),</span><span class="w"> </span><span class="n">table</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">table</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// [0,y]と[0,x]の領域の個数を返す</span>
-<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">table</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">];</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// [y1,y2)と[x1,x2)の領域の個数を返す</span>
-<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="n">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="n">y1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="n">y2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="w">               </span><span class="n">get</span><span class="p">(</span><span class="n">y1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<h2 id="_2">前提<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>入力のパラメータとそのときの実行結果のスコアをtsvファイルなどにしておく。(以下はAHC013のもの)</p>
+<div class="highlight"><pre><span></span><code>$ head score.tsv
+K   N   score
+<span class="m">3</span>   <span class="m">33</span>  <span class="m">7834</span>
+<span class="m">4</span>   <span class="m">29</span>  <span class="m">6275</span>
+<span class="m">5</span>   <span class="m">39</span>  <span class="m">7172</span>
+<span class="m">2</span>   <span class="m">29</span>  <span class="m">6754</span>
+<span class="m">3</span>   <span class="m">33</span>  <span class="m">7810</span>
+<span class="m">4</span>   <span class="m">33</span>  <span class="m">7313</span>
+<span class="m">5</span>   <span class="m">24</span>  <span class="m">3084</span>
+<span class="m">2</span>   <span class="m">24</span>  <span class="m">7229</span>
+<span class="m">3</span>   <span class="m">18</span>  <span class="m">5029</span>
 </code></pre></div>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">SummedAreaTable</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sat</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<p>notebookで作業する。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="w">    </span><span class="c1">// 頂点を追加</span>
-<span class="w">    </span><span class="n">sat</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">sat</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">sat</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// 累積和を構築</span>
-<span class="w">    </span><span class="n">sat</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">    </span><span class="c1">// 領域内の個数を返却</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sat</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// 1</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sat</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">    </span><span class="c1">// 2</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sat</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 3</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sat</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1</span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;score.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="verified">Verified<a class="headerlink" href="#verified" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://atcoder.jp/contests/ahc012/submissions/33008172">https://atcoder.jp/contests/ahc012/submissions/33008172</a></li>
-</ul>
+<h2 id="_3">パラメータごとの散布図<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">K</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;K&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">K</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">],</span> <span class="n">tmp</span><span class="p">[</span><span class="s1">&#39;score&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="nkscore">N,Kごとのscoreの平均値<a class="headerlink" href="#nkscore" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Nが細かすぎるので5刻みにする</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;GN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># N, Kごとのscoreの平均値</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">precision</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;GN&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;score&#39;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="_4">ヒートマップ表示<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;score&#39;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="k">Kごとについて、ヒストグラムを並べて表示<a class="headerlink" href="#k" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;GN&#39;</span><span class="p">],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;score&#39;</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
 
 
 
@@ -1159,7 +1133,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="stats_modeling.html" class="md-footer__link md-footer__link--prev" aria-label="前: 統計モデリング" rel="prev">
+        <a href="random.html" class="md-footer__link md-footer__link--prev" aria-label="前: 乱数/乱択" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1168,20 +1142,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              統計モデリング
+              乱数/乱択
             </div>
           </div>
         </a>
       
       
         
-        <a href="timer.html" class="md-footer__link md-footer__link--next" aria-label="次: Timer" rel="next">
+        <a href="sa.html" class="md-footer__link md-footer__link--next" aria-label="次: 焼きなまし" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Timer
+              焼きなまし
             </div>
           </div>
           <div class="md-footer__button md-icon">
