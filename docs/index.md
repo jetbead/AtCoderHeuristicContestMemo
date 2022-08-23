@@ -16,7 +16,6 @@ title: Home
 - :material-axe: **Library** (Heuristic Contest 関連の自作ライブラリ、調査メモ)
   - [焼きなまし法](./Library/sa.md)
   - [ビームサーチ](./Library/beam_search.md)
-  - [貪欲法](./Library/greedy.md)
   - [マッチング](./Library/matching.md)
   - [フロー](./Library/flow.md)
   - [乱数/乱択](./Library/random.md)
