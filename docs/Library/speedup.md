@@ -3,6 +3,13 @@
 - 基本的に、本質的な改善に時間を使うほうがよくて、定数倍高速化などは最後の最後に行うほうが良い
   - 高速化が本質じゃないならば
 
+## SIMD
+
+- https://qiita.com/logicmachine/items/3531ddb0b8acc04cb613
+- https://qiita.com/saka1_p/items/72c7755086ec985cade6
+- https://runom.hatenablog.com/entry/2018/12/18/235641
+- https://speakerdeck.com/sato_t/cpuwoatatakakusurujing-puroshi-li-ji
+
 ## Links
 
 - https://xuzijian629.hatenablog.com/entry/2019/03/31/130708
