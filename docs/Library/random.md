@@ -182,7 +182,7 @@ class WalkersAliasMethod {
     }
 
     int sampling() {
-        double idx = xor128() % N;
+        int idx = xor128() % N;
         return frand() < prob[idx] ? index[idx] : idx; // frand()は0.0から1.0の一様乱数
     }
 };
