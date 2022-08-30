@@ -9,7 +9,7 @@
 ## 重複排除
 
 - ZobristHashを用いる
-  - [乱数/乱択](./Library/random.md)
+  - [乱数/乱択](./random.md)
 
 ## 多様性
 
