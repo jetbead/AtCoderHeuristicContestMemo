@@ -101,3 +101,89 @@ x128pp();
 - https://noshi91.hatenablog.com/entry/2022/04/18/000958
 - https://kmyk.github.io/blog/blog/2017/03/08/unordered-map-hash-collision/
 
+
+## 重み付きサンプリング(Walker's Alias Method)
+
+- N要素を重みに従ってサンプリングしたい場合、`O(1)`で行える
+  - 愚直にやると`O(N)`、累積和＋二分探索だと`O(logN)`
+- 等分のbinを用意し、各binに高々2種類になるように割り当てる
+- 近傍計算時の要素選択の優先度などに利用　
+
+```cpp
+// 重み分布weight(和が1.0でなくてもよい)に従ってサンプリング
+class WalkersAliasMethod {
+    int N;
+    std::vector<double> weight;
+    std::vector<double> prob;
+    std::vector<int> index;
+
+    void make_table() {
+        double average = 0.0;
+        for (double w : weight) average += w;
+        average /= weight.size();
+
+        std::queue<pair<int, double>> que_over, que_under;
+        for (size_t i = 0; i < weight.size(); i++) {
+            if (weight[i] > average)
+                que_over.push(std::make_pair(i, weight[i]));
+            else
+                que_under.push(std::make_pair(i, weight[i]));
+        }
+        while (!que_under.empty()) {
+            std::pair<int, double> p = que_under.front();
+            que_under.pop();
+
+            double diff = average - p.second;
+
+            if (!que_over.empty()) {
+                std::pair<int, double> q = que_over.front();
+                que_over.pop();
+
+                prob[p.first] = diff / average;
+                index[p.first] = q.first;
+
+                q.second -= diff;
+                if (q.second > average)
+                    que_over.push(q);
+                else
+                    que_under.push(q);
+            } else {
+                prob[p.first] = 0.0;
+                index[p.first] = p.first;
+            }
+        }
+        while (!que_over.empty()) {
+            std::pair<int, double> q = que_over.front();
+            que_over.pop();
+            prob[q.first] = 0.0;
+            index[q.first] = q.first;
+        }
+    }
+
+   public:
+    WalkersAliasMethod(const std::vector<double>& weight) : weight(weight) {
+        N = weight.size();
+        prob.assign(N, 0.0);
+        index.assign(N, 0);
+        make_table();
+    }
+
+    void dump_table() {
+        for (size_t i = 0; i < N; i++) {
+            std::cerr << i << "\t";
+            std::cerr << "[" << i << ": " << 1.0 - prob[i] << "]";
+            std::cerr << "[" << index[i] << ": " << prob[i] << "]";
+            std::cerr << std::endl;
+        }
+    }
+
+    size_t size() const {
+        return weight.size();
+    }
+
+    int sampling() {
+        double idx = xor128() % N;
+        return frand() < prob[idx] ? index[idx] : idx; // frand()は0.0から1.0の一様乱数
+    }
+};
+```
