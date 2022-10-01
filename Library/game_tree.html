@@ -721,6 +721,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ゲームの分類
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ゲーム木
+  </a>
+  
+    <nav class="md-nav" aria-label="ゲーム木">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    合流/重複局面
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playout" class="md-nav__link">
+    playout
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -993,6 +1027,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ゲームの分類
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ゲーム木
+  </a>
+  
+    <nav class="md-nav" aria-label="ゲーム木">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    合流/重複局面
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playout" class="md-nav__link">
+    playout
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1017,6 +1085,76 @@
 </li>
 <li>競技プログラミングにおけるゲーム機探索の面白さ(tsukammo さん)<ul>
 <li><a href="https://qiita.com/tsukammo/items/02e8ad2469c5441d2956">https://qiita.com/tsukammo/items/02e8ad2469c5441d2956</a></li>
+</ul>
+</li>
+<li>ゲーム木探索技術とコンピュータ将棋への応用<ul>
+<li><a href="https://www.slideshare.net/shogotakeuchi/ss-62415546">https://www.slideshare.net/shogotakeuchi/ss-62415546</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">ゲームの分類<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>0人ゲーム/1人ゲーム/2人ゲーム/多人数ゲーム<ul>
+<li>ゲームの参加者数による分類</li>
+</ul>
+</li>
+<li>完全情報/不完全情報<ul>
+<li>局面(盤面、状態)がすべてプレイヤーに見えているか、そうでないか<ul>
+<li>トランプなどは、手札を公開しない場合は、相手の手札の情報がわからないため不完全情報</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>確定/非確定<ul>
+<li>着手以外の確率的に不確定な要素があるかどうか<ul>
+<li>すごろくなどは、状態遷移がサイコロに依存して決まるため非確定的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ゼロ和/非ゼロ和<ul>
+<li>ゲームの結果が、勝ちを+1、負けを-1、引き分けを0などにしたとき、合計が0となるためゼロ和ゲーム</li>
+<li>3人以上でのじゃんけん、など</li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">ゲーム木<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>局面(盤面、状態)をノード、着手(合法手)をエッジとした有向グラフ</li>
+<li>局面を、経路が違った場合にすべて区別すれば、これは初期局面をルートノードとした木になる<ul>
+<li>最終局面はリーフノード</li>
+</ul>
+</li>
+<li>すべて展開できればよいが、通常、ノード数が膨大なため現実的には難しい<ul>
+<li>そのため、着手の良さや局面の評価、探索手法などの工夫が必要</li>
+</ul>
+</li>
+<li>また、「ゲーム木」として考えてしまうと、探索方法が限られてしまう<ul>
+<li>状態に局所性があるなら、部分破壊再構築などできる可能性があり、近傍として局所探索/焼きなまし法など検討できる可能性がある</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">合流/重複局面<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>異なる着手列から同じ局面(重複局面)に至ること</li>
+<li>合流を考慮する場合、その直前の局面の評価値が違ったりするため、訪問回数などを伝播させるときなど注意が必要</li>
+<li>局面の重複検知は、Zobrist hashなど</li>
+<li>(合流が多いというのは、着手列よりも状態に注目できる＝文脈があまりない、可能性がある)</li>
+</ul>
+<h2 id="playout">playout<a class="headerlink" href="#playout" title="Permanent link">&para;</a></h2>
+<ul>
+<li>「(最初から、または、途中の手から)最後まで手を進める」こと</li>
+<li>「playout回数」は、playoutを行った回数のこと</li>
+<li>ゲーム木探索などでは、playoutによって、複数の解を生成したり、手の良さの評価に用いたりする</li>
+<li>random playoutは、ランダムに手を選んで最後までゲームを進めること<ul>
+<li>乱択greedy/乱択山登り的な感じのこと<ul>
+<li>合法手の集合を決めてその集合内を乱択、盤面の評価がよくなる手の集合を乱択で選んで山を登る</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>playoutは、高速にして何回も行うか、評価関数を導入してplayoutの質を高めることで有益な情報として活用できる<ul>
+<li>通常、random playoutはあまり品質の良い解は得られないことが多いので、量か質でカバー</li>
 </ul>
 </li>
 </ul>

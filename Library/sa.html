@@ -873,15 +873,35 @@
     状態
   </a>
   
+    <nav class="md-nav" aria-label="状態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    状態の局所性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     近傍
   </a>
   
     <nav class="md-nav" aria-label="近傍">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    変化量が小さな近傍
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#2-opt" class="md-nav__link">
@@ -898,7 +918,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     部分破壊と再構築
   </a>
   
@@ -910,14 +930,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     評価関数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     スコア計算の高速化
   </a>
   
@@ -925,14 +945,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     差分計算
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     状態更新を後に持っていくテク
   </a>
   
@@ -944,7 +964,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     その他
   </a>
   
@@ -1114,15 +1134,35 @@
     状態
   </a>
   
+    <nav class="md-nav" aria-label="状態">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    状態の局所性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     近傍
   </a>
   
     <nav class="md-nav" aria-label="近傍">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    変化量が小さな近傍
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#2-opt" class="md-nav__link">
@@ -1139,7 +1179,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     部分破壊と再構築
   </a>
   
@@ -1151,14 +1191,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     評価関数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     スコア計算の高速化
   </a>
   
@@ -1166,14 +1206,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     差分計算
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     状態更新を後に持っていくテク
   </a>
   
@@ -1185,7 +1225,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     その他
   </a>
   
@@ -1283,7 +1323,39 @@
 </ul>
 </li>
 </ul>
-<h2 id="_4">近傍<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_4">状態の局所性<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>局所性<ul>
+<li>状態内の離れた2つの要素に関連性(依存関係、文脈)がなければ、それぞれの要素は独立に考えることができる</li>
+<li>焼きなましは、「状態を少し変えて改善(局所探索)」という感じのため、近傍を考えるうえで重要<ul>
+<li>状態の1つの要素を入れ替えるのが容易などであれば、それを近傍として局所探索/山登り/焼きなましができる</li>
+<li>2次元グリッドなどの問題の場合、部分的な領域で見るとそこだけを入れ替えて別の状態にできるなら近傍として利用できる</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">近傍<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>同じ焼きなまし解だとしても差がでる大きな要素<ul>
+<li>近傍によって探索空間の形が変わるため、探索の質に直結する</li>
+</ul>
+</li>
+<li>「極小で高速な近傍」「依存する要素をまとめて置き換える近傍」など</li>
+<li>近傍として望ましい条件にはいくつかありえるが、基本的には、良い状態間を行き来できるような近傍を考えられるか</li>
+</ul>
+<h3 id="_6">変化量が小さな近傍<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>状態の変化(スコアの変化量)がとても小さい近傍のこと<ul>
+<li>状態の1要素を他の要素と入れ替える、位置を1だけずらす、2つの要素をswapする、など</li>
+</ul>
+</li>
+<li>「一番小さい」と思っても、より変化量が小さい近傍が作れる可能性があるので、できるだけ検討する<ul>
+<li>2-opt近傍</li>
+<li><a href="https://phyllo-algo.hatenablog.com/entry/2018/06/21/002545">https://phyllo-algo.hatenablog.com/entry/2018/06/21/002545</a></li>
+</ul>
+</li>
+</ul>
 <h3 id="2-opt">2-opt 近傍<a class="headerlink" href="#2-opt" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/2-opt">https://en.wikipedia.org/wiki/2-opt</a></li>
@@ -1304,6 +1376,7 @@
 </ul>
 <h3 id="kick">kick 近傍<a class="headerlink" href="#kick" title="Permanent link">&para;</a></h3>
 <ul>
+<li>局所解を抜け出す(kick)ような状態を大きく変える近傍</li>
 <li>Introduction to Heuristics Contest 解説 p.7<ul>
 <li><a href="https://img.atcoder.jp/intro-heuristics/editorial.pdf">https://img.atcoder.jp/intro-heuristics/editorial.pdf</a></li>
 </ul>
@@ -1314,15 +1387,23 @@
 </li>
 <li>2-opt ではたどり着くのが難しいような double bridge みたいな形にキックする</li>
 </ul>
-<h3 id="_5">部分破壊と再構築<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_7">部分破壊と再構築<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>パスやサイクルの一部を破壊してDFSで再構築<ul>
 <li><a href="../ContestMemo/ahc002.html">AHC002</a></li>
 <li><a href="../ContestMemo/ahc010.html">AHC010</a></li>
 </ul>
 </li>
+<li>領域の一部を破壊して再構築<ul>
+<li><a href="../ContestMemo/ahc014.html">AHC014</a><ul>
+<li>解が操作列でも、盤面での部分領域に対応する部分列の削除＆後ろに操作列追加で近傍を作成可能</li>
+<li>操作列に注目しても、操作列の依存関係を有向グラフとしてトポロジカルソートすると操作列の途中から最後をまとめて削除、ということもできる</li>
 </ul>
-<h2 id="_6">評価関数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_8">評価関数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ul>
 <li>スコアをそのまま利用</li>
 <li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
@@ -1330,8 +1411,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="_7">スコア計算の高速化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<h3 id="_8">差分計算<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h2 id="_9">スコア計算の高速化<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">差分計算<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../ContestMemo/ahc012.html">AHC012</a><ul>
 <li>直線の追加削除は、その直線の両側の領域だけを考えれば良い</li>
@@ -1339,7 +1420,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_9">状態更新を後に持っていくテク<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_11">状態更新を後に持っていくテク<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../ContestMemo/ahc009.html">AHC009</a><ul>
 <li>前からDP・後からDPを持っておくと、差分計算が高速に求められる</li>
@@ -1347,7 +1428,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_10">その他<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h2 id="_12">その他<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <h3 id="invalid">Invalidな状態を許容する焼きなまし<a class="headerlink" href="#invalid" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
