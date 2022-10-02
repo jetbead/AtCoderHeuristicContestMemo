@@ -882,6 +882,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    細かいテク
+  </a>
+  
+    <nav class="md-nav" aria-label="細かいテク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bitbitset" class="md-nav__link">
+    bit演算、bitset高速化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectoro1" class="md-nav__link">
+    vectorの途中の要素をO(1)で消すテク
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    計算量オーダーより実行時間
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    動的メモリ確保を減らす
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1007,6 +1048,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    細かいテク
+  </a>
+  
+    <nav class="md-nav" aria-label="細かいテク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bitbitset" class="md-nav__link">
+    bit演算、bitset高速化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectoro1" class="md-nav__link">
+    vectorの途中の要素をO(1)で消すテク
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    計算量オーダーより実行時間
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    動的メモリ確保を減らす
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1044,6 +1126,37 @@
 <li><a href="https://kmyk.github.io/blog/blog/2017/06/07/bitset-vector-bool/">https://kmyk.github.io/blog/blog/2017/06/07/bitset-vector-bool/</a></li>
 <li><a href="https://www.slideshare.net/KMC_JP/ss-45855264">https://www.slideshare.net/KMC_JP/ss-45855264</a></li>
 <li><a href="https://zenn.dev/irugo/articles/4bd113195228c3">https://zenn.dev/irugo/articles/4bd113195228c3</a></li>
+</ul>
+<h2 id="_1">細かいテク<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="bitbitset">bit演算、bitset高速化<a class="headerlink" href="#bitbitset" title="Permanent link">&para;</a></h3>
+<ul>
+<li>複数のbool値などを保持するのに<code>uint64_t</code>を64個のbit集合として圧縮したりすると、データコピーのコストが減って高速化につながる</li>
+<li>また、簡単なbit-level parallelで複数要素をまとめて処理することで高速化を狙う</li>
+<li>popcountなど</li>
+<li><a href="https://naoyat.hatenablog.jp/entry/2014/05/12/143650">https://naoyat.hatenablog.jp/entry/2014/05/12/143650</a></li>
+<li><a href="https://www.slideshare.net/KMC_JP/slide-www">https://www.slideshare.net/KMC_JP/slide-www</a></li>
+<li><a href="https://rsk0315.hatenablog.com/entry/2021/06/08/091128">https://rsk0315.hatenablog.com/entry/2021/06/08/091128</a></li>
+<li><a href="https://rsk0315.hatenablog.com/entry/2022/09/25/214915">https://rsk0315.hatenablog.com/entry/2022/09/25/214915</a></li>
+</ul>
+<h3 id="vectoro1">vectorの途中の要素をO(1)で消すテク<a class="headerlink" href="#vectoro1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>消したい<code>v[i]</code>を末尾の要素とswapし、pop_back()する</li>
+</ul>
+<h3 id="_2">計算量オーダーより実行時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ヒューリスティック系だと、Nが大きくなかったりするため、計算量オーダー的には<code>O(N)</code>でも<code>O(logN)</code>より高速に動作する場合がある</li>
+<li>連結成分を見つけるのにUnionFind(dsu)を使うより、単純にBFSで列挙した方が実行時間が速かったりする</li>
+</ul>
+<h3 id="_3">動的メモリ確保を減らす<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>global変数やstatic変数にして使い回す</li>
+<li>同じ処理を2回 or 変化したやつだけ保持しておいてそれだけ戻す or undo操作で初期状態に戻す<ul>
+<li>Nが大きいのに変化する要素が少ない場合に有効</li>
+</ul>
+</li>
+<li>DFS的にノードを辿ったりする場合は、ノードごとに独立に状態を作るのではなく、undo操作＆advance操作でノード間を移動するようにすると状態のコピーがなくなる</li>
+<li>vectorなど、十分な量を最初にreserveしておく</li>
+<li>queueやpriority_queueなど、最後にemptyになるまでpopすれば空にできる</li>
 </ul>
 
 
