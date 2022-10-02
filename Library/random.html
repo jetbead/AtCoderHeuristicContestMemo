@@ -889,8 +889,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#weighted-random-sampling" class="md-nav__link">
+    重み付きサンプリング(Weighted random sampling)
+  </a>
+  
+    <nav class="md-nav" aria-label="重み付きサンプリング(Weighted random sampling)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roulette-wheel-selection" class="md-nav__link">
+    Roulette Wheel Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#walkers-alias-method" class="md-nav__link">
-    重み付きサンプリング(Walker's Alias Method)
+    Walker's Alias Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-pass-sampling" class="md-nav__link">
+    one-pass sampling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    乱択要素選択
   </a>
   
 </li>
@@ -1111,8 +1145,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#weighted-random-sampling" class="md-nav__link">
+    重み付きサンプリング(Weighted random sampling)
+  </a>
+  
+    <nav class="md-nav" aria-label="重み付きサンプリング(Weighted random sampling)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roulette-wheel-selection" class="md-nav__link">
+    Roulette Wheel Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#walkers-alias-method" class="md-nav__link">
-    重み付きサンプリング(Walker's Alias Method)
+    Walker's Alias Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-pass-sampling" class="md-nav__link">
+    one-pass sampling
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    乱択要素選択
   </a>
   
 </li>
@@ -1238,14 +1306,27 @@
 <li><a href="https://noshi91.hatenablog.com/entry/2022/04/18/000958">https://noshi91.hatenablog.com/entry/2022/04/18/000958</a></li>
 <li><a href="https://kmyk.github.io/blog/blog/2017/03/08/unordered-map-hash-collision/">https://kmyk.github.io/blog/blog/2017/03/08/unordered-map-hash-collision/</a></li>
 </ul>
-<h2 id="walkers-alias-method">重み付きサンプリング(Walker's Alias Method)<a class="headerlink" href="#walkers-alias-method" title="Permanent link">&para;</a></h2>
+<h2 id="weighted-random-sampling">重み付きサンプリング(Weighted random sampling)<a class="headerlink" href="#weighted-random-sampling" title="Permanent link">&para;</a></h2>
 <ul>
-<li>N要素を重みに従ってサンプリングしたい場合、<code>O(1)</code>で行える<ul>
-<li>愚直にやると<code>O(N)</code>、累積和＋二分探索だと<code>O(logN)</code></li>
+<li>復元/非復元(with/without replacement)抽出<ul>
+<li>一度サンプリングしたものを、次のサンプリングの前に戻すかどうか</li>
+<li>同じ要素が再び複数回選ばれるかどうか</li>
 </ul>
 </li>
+</ul>
+<h3 id="roulette-wheel-selection">Roulette Wheel Selection<a class="headerlink" href="#roulette-wheel-selection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>要素iの重みw_iとして、要素iの選択される確率p_i = w_i / Σ_j w_jでサンプリングすること</li>
+<li>計算テクとしては、w_iの累積和(or FenwickTree/BIT)を持っておいて、[0,合計)の一様乱数で該当する要素を決める<ul>
+<li>愚直に線形に見ると<code>O(N)</code>だが、二分探索すれば<code>O(logN)</code>でできる</li>
+<li>さらに、前計算を工夫すると、<code>O(1)</code>で選択も可能(Walker's Alias Method)</li>
+</ul>
+</li>
+</ul>
+<h3 id="walkers-alias-method">Walker's Alias Method<a class="headerlink" href="#walkers-alias-method" title="Permanent link">&para;</a></h3>
+<ul>
+<li>N要素を重みに従ってサンプリングしたい場合、<code>O(1)</code>で行える</li>
 <li>等分のbinを用意し、各binに高々2種類になるように割り当てる</li>
-<li>近傍計算時の要素選択の優先度などに利用　</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1">// 重み分布weight(和が1.0でなくてもよい)に従ってサンプリング</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">WalkersAliasMethod</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1324,6 +1405,32 @@
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
+<h3 id="one-pass-sampling">one-pass sampling<a class="headerlink" href="#one-pass-sampling" title="Permanent link">&para;</a></h3>
+<ul>
+<li>構築なしで、すべての要素を1回なめるだけでサンプリングするテク<ul>
+<li>w_iの合計値の情報なしでサンプリングできる</li>
+</ul>
+</li>
+<li><code>-ln(rand())/w_i</code>の値が一番大きいものを選ぶ<ul>
+<li>Reservoir sampling + exponential distribution + numeric stability</li>
+<li><a href="https://en.wikipedia.org/wiki/Reservoir_sampling">https://en.wikipedia.org/wiki/Reservoir_sampling</a></li>
+<li><a href="https://stackoverflow.com/questions/2140787/select-k-random-elements-from-a-list-whose-elements-have-weights">https://stackoverflow.com/questions/2140787/select-k-random-elements-from-a-list-whose-elements-have-weights</a></li>
+<li><a href="https://twitter.com/t33f/status/1576435864439488515">https://twitter.com/t33f/status/1576435864439488515</a></li>
+</ul>
+</li>
+<li>k個選ぶなら、上記を降順ソートして前からk個選ぶ</li>
+</ul>
+<h2 id="_4">乱択要素選択<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>要素に重みをつけて、重み付きサンプリングする</li>
+<li>要素に重み(乱数)をつけて、ソート or priority_queueして前から選ぶ</li>
+<li>ランダムにk要素選んで、評価値を計算して、一番良いものを選ぶ<ul>
+<li>評価値を求めるのが重い場合、選択時に計算を持ってこれるテク</li>
+<li><a href="https://www.youtube.com/watch?v=eddDPITjzDc">https://www.youtube.com/watch?v=eddDPITjzDc</a> (35分ごろ)</li>
+<li><a href="https://twitter.com/terry_u16/status/1576231985596764160">https://twitter.com/terry_u16/status/1576231985596764160</a></li>
+</ul>
+</li>
+</ul>
 
 
 
