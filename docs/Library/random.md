@@ -102,12 +102,23 @@ x128pp();
 - https://kmyk.github.io/blog/blog/2017/03/08/unordered-map-hash-collision/
 
 
-## 重み付きサンプリング(Walker's Alias Method)
+## 重み付きサンプリング(Weighted random sampling)
+
+- 復元/非復元(with/without replacement)抽出
+  - 一度サンプリングしたものを、次のサンプリングの前に戻すかどうか
+  - 同じ要素が再び複数回選ばれるかどうか
+
+### Roulette Wheel Selection
+
+- 要素iの重みw_iとして、要素iの選択される確率p_i = w_i / Σ_j w_jでサンプリングすること
+- 計算テクとしては、w_iの累積和(or FenwickTree/BIT)を持っておいて、[0,合計)の一様乱数で該当する要素を決める
+  - 愚直に線形に見ると`O(N)`だが、二分探索すれば`O(logN)`でできる
+  - さらに、前計算を工夫すると、`O(1)`で選択も可能(Walker's Alias Method)
+
+### Walker's Alias Method
 
 - N要素を重みに従ってサンプリングしたい場合、`O(1)`で行える
-  - 愚直にやると`O(N)`、累積和＋二分探索だと`O(logN)`
 - 等分のbinを用意し、各binに高々2種類になるように割り当てる
-- 近傍計算時の要素選択の優先度などに利用　
 
 ```cpp
 // 重み分布weight(和が1.0でなくてもよい)に従ってサンプリング
@@ -187,3 +198,23 @@ class WalkersAliasMethod {
     }
 };
 ```
+
+### one-pass sampling
+
+- 構築なしで、すべての要素を1回なめるだけでサンプリングするテク
+  - w_iの合計値の情報なしでサンプリングできる
+- `-ln(rand())/w_i`の値が一番大きいものを選ぶ
+  - Reservoir sampling + exponential distribution + numeric stability
+  - https://en.wikipedia.org/wiki/Reservoir_sampling
+  - https://stackoverflow.com/questions/2140787/select-k-random-elements-from-a-list-whose-elements-have-weights
+  - https://twitter.com/t33f/status/1576435864439488515
+- k個選ぶなら、上記を降順ソートして前からk個選ぶ
+
+## 乱択要素選択
+
+- 要素に重みをつけて、重み付きサンプリングする
+- 要素に重み(乱数)をつけて、ソート or priority_queueして前から選ぶ
+- ランダムにk要素選んで、評価値を計算して、一番良いものを選ぶ
+  - 評価値を求めるのが重い場合、選択時に計算を持ってこれるテク
+  - https://www.youtube.com/watch?v=eddDPITjzDc (35分ごろ)
+  - https://twitter.com/terry_u16/status/1576231985596764160
