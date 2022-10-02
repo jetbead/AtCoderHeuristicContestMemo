@@ -913,6 +913,13 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    キャッシュミスを減らす
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     動的メモリ確保を減らす
   </a>
   
@@ -1079,6 +1086,13 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    キャッシュミスを減らす
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     動的メモリ確保を減らす
   </a>
   
@@ -1147,7 +1161,12 @@
 <li>ヒューリスティック系だと、Nが大きくなかったりするため、計算量オーダー的には<code>O(N)</code>でも<code>O(logN)</code>より高速に動作する場合がある</li>
 <li>連結成分を見つけるのにUnionFind(dsu)を使うより、単純にBFSで列挙した方が実行時間が速かったりする</li>
 </ul>
-<h3 id="_3">動的メモリ確保を減らす<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_3">キャッシュミスを減らす<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>2次元配列より1次元配列を使う、2次元配列でできるだけ連続した参照順序にする</li>
+<li><a href="https://ja.wikipedia.org/wiki/%E5%8F%82%E7%85%A7%E3%81%AE%E5%B1%80%E6%89%80%E6%80%A7">https://ja.wikipedia.org/wiki/%E5%8F%82%E7%85%A7%E3%81%AE%E5%B1%80%E6%89%80%E6%80%A7</a></li>
+</ul>
+<h3 id="_4">動的メモリ確保を減らす<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>global変数やstatic変数にして使い回す</li>
 <li>同じ処理を2回 or 変化したやつだけ保持しておいてそれだけ戻す or undo操作で初期状態に戻す<ul>
