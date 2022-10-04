@@ -1,6 +1,6 @@
 # Support Tool
 
-## ツール、言語
+## サポートツール、専用言語
 
 - kmyk/marathon-kit
   - https://github.com/kmyk/marathon-kit
@@ -13,3 +13,10 @@
 ## 手元で複数ケース実行
 
 - https://twitter.com/matsu7874/status/1470023326731206657
+
+## 複数Cppファイルのマージ
+
+- https://twitter.com/phyllo/status/1562386281136820229
+  - atcoder library(ac-library)を使っていたりすると、シンボル衝突などでうまく動かないかも
+- cpp-merge
+  - https://github.com/FastAlien/cpp-merge
