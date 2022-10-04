@@ -59,6 +59,12 @@
   - 2-opt近傍
   - https://phyllo-algo.hatenablog.com/entry/2018/06/21/002545
 
+
+### 確実に前進する近傍
+
+- https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21#%E9%81%B7%E7%A7%BB
+
+
 ### 2-opt 近傍
 
 - https://en.wikipedia.org/wiki/2-opt
@@ -82,6 +88,7 @@
 
 ### 部分破壊と再構築
 
+- https://togetter.com/li/607979?page=2
 - パスやサイクルの一部を破壊してDFSで再構築
   - [AHC002](../ContestMemo/ahc002.md)
   - [AHC010](../ContestMemo/ahc010.md)
