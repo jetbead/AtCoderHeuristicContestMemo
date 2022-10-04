@@ -6,6 +6,10 @@
 - https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
 - https://note.com/nyanyan_cubetech/n/n5e30c52139d3
 
+## 確実に前進
+
+- https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21#%E9%81%B7%E7%A7%BB
+
 ## 重複排除
 
 - ZobristHashを用いる
