@@ -17,3 +17,4 @@
   - https://twitter.com/shr_pc/status/1371121053330595840
 - OpenSiv3D
   - https://github.com/Siv3D/OpenSiv3D
+  - https://zenn.dev/reputeless/books/siv3d-documentation
