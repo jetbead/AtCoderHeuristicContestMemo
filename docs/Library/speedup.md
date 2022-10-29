@@ -63,5 +63,6 @@
 - 同じ処理を2回 or 変化したやつだけ保持しておいてそれだけ戻す or undo操作で初期状態に戻す
   - Nが大きいのに変化する要素が少ない場合に有効
 - DFS的にノードを辿ったりする場合は、ノードごとに独立に状態を作るのではなく、undo操作＆advance操作でノード間を移動するようにすると状態のコピーがなくなる
+  - https://qiita.com/rhoo/items/f2be256cde5ad2e62dde
 - vectorなど、十分な量を最初にreserveしておく
 - queueやpriority_queueなど、最後にemptyになるまでpopすれば空にできる
