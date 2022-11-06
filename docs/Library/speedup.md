@@ -18,7 +18,7 @@
 - https://kmyk.github.io/blog/blog/2017/06/07/bitset-vector-bool/
 - https://www.slideshare.net/KMC_JP/ss-45855264
 - https://zenn.dev/irugo/articles/4bd113195228c3
-
+- https://topcoder-tomerun.hatenablog.jp/entry/2017/12/16/000000
 
 ## 細かいテク
 
@@ -60,6 +60,11 @@
 ### 動的メモリ確保を減らす
 
 - global変数やstatic変数にして使い回す
+- カウンタ変数を用意してその値かで判定することでbool配列の初期化を省略
+  - https://topcoder-tomerun.hatenablog.jp/entry/2022/11/06/145156
+  - https://twitter.com/koyumeishi_/status/1589142265209188352
+- 初期化配列
+  - https://qiita.com/kgoto/items/0251e442292d8ebc1f3d
 - 同じ処理を2回 or 変化したやつだけ保持しておいてそれだけ戻す or undo操作で初期状態に戻す
   - Nが大きいのに変化する要素が少ない場合に有効
 - DFS的にノードを辿ったりする場合は、ノードごとに独立に状態を作るのではなく、undo操作＆advance操作でノード間を移動するようにすると状態のコピーがなくなる
