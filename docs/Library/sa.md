@@ -14,6 +14,10 @@
   - https://togetter.com/li/607979
 - 貪欲法、山登り法、焼きなまし、ビームサーチ、これらの間の関係について(kmyk さん)
   - https://kmyk.github.io/blog/blog/2019/03/07/local-search-and-greedy/
+- 焼きなましをするときの設計に関するメモ(yunix_kyopro さん)
+  - https://yunix-kyopro.hatenablog.com/entry/2022/10/30/141616
+  - https://twitter.com/yunix91201367/status/1586588684622520322
+
 
 ## 有用性
 
