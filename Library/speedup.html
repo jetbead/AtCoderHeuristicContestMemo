@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
@@ -20,7 +20,7 @@
       <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.815d1a91.min.css">
         
       
       
@@ -1182,6 +1182,7 @@
 <li><a href="https://kmyk.github.io/blog/blog/2017/06/07/bitset-vector-bool/">https://kmyk.github.io/blog/blog/2017/06/07/bitset-vector-bool/</a></li>
 <li><a href="https://www.slideshare.net/KMC_JP/ss-45855264">https://www.slideshare.net/KMC_JP/ss-45855264</a></li>
 <li><a href="https://zenn.dev/irugo/articles/4bd113195228c3">https://zenn.dev/irugo/articles/4bd113195228c3</a></li>
+<li><a href="https://topcoder-tomerun.hatenablog.jp/entry/2017/12/16/000000">https://topcoder-tomerun.hatenablog.jp/entry/2017/12/16/000000</a></li>
 </ul>
 <h2 id="_1">細かいテク<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="bitbitset">bit演算、bitset高速化<a class="headerlink" href="#bitbitset" title="Permanent link">&para;</a></h3>
@@ -1224,6 +1225,15 @@
 <h3 id="_4">動的メモリ確保を減らす<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>global変数やstatic変数にして使い回す</li>
+<li>カウンタ変数を用意してその値かで判定することでbool配列の初期化を省略<ul>
+<li><a href="https://topcoder-tomerun.hatenablog.jp/entry/2022/11/06/145156">https://topcoder-tomerun.hatenablog.jp/entry/2022/11/06/145156</a></li>
+<li><a href="https://twitter.com/koyumeishi_/status/1589142265209188352">https://twitter.com/koyumeishi_/status/1589142265209188352</a></li>
+</ul>
+</li>
+<li>初期化配列<ul>
+<li><a href="https://qiita.com/kgoto/items/0251e442292d8ebc1f3d">https://qiita.com/kgoto/items/0251e442292d8ebc1f3d</a></li>
+</ul>
+</li>
 <li>同じ処理を2回 or 変化したやつだけ保持しておいてそれだけ戻す or undo操作で初期状態に戻す<ul>
 <li>Nが大きいのに変化する要素が少ない場合に有効</li>
 </ul>
@@ -1315,7 +1325,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
         <script src="../js/extra.js"></script>
       
