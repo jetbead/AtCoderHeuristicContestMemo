@@ -1768,7 +1768,7 @@
 </ul>
 </li>
 <li>decodeは、多数決を取ることで、多少のノイズがあっても正しく情報を得られることを狙う</li>
-<li>たとえば、n=5の場合は、入力が0なら00000を送る感じで、5つのうち3個or4個or5個が反転してしまうと誤りになってしまうので、エラー率はp_e = Comb(5,3)*p<sup>3*(1-p)</sup>2 + Comb(5,4)*p^4*(1-p) + Comb(5,5)*p^5</li>
+<li>たとえば、n=5の場合は、入力が0なら00000を送る感じで、5つのうち3個or4個or5個が反転してしまうと誤りになってしまうので、エラー率はp_e = Comb(5,3) * p^3 * (1-p)^2 + Comb(5,4) * p^4 * (1-p) + Comb(5,5) * p^5</li>
 <li>今回、p=0.4までありえるため、エラー率を小さくしようとすると、かなり大きなnが必要なことがわかる</li>
 </ul>
 <h4 id="stochastic-block-model">Stochastic Block Model<a class="headerlink" href="#stochastic-block-model" title="Permanent link">&para;</a></h4>
