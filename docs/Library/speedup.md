@@ -31,6 +31,7 @@
 - https://www.slideshare.net/KMC_JP/slide-www
 - https://rsk0315.hatenablog.com/entry/2021/06/08/091128
 - https://rsk0315.hatenablog.com/entry/2022/09/25/214915
+- https://graphics.stanford.edu/~seander/bithacks.html
 
 
 ### vectorの途中の要素をO(1)で消すテク
