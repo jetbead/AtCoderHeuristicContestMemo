@@ -40,4 +40,5 @@
 
 ## その他
 
+- [実験、環境構築](./experiments.md)
 - [用語集](./glossary.md)
