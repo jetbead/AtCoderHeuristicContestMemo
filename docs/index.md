@@ -10,12 +10,7 @@ title: Home
   - [Contest List](./ContestMemo/index.md)
 - :material-axe: **Library** (Heuristic Contest 関連の自作ライブラリ、調査メモ)
   - [Library List](./Library/index.md)
-- :fontawesome-solid-book: **Document** (Heuristic Contest に関する Tips やドキュメント)
-  - [How to get started](./Docs/how_to_get_started.md)
-  - [Tips](./Docs/tips.md)
-  - [Support Tool](./Docs/support_tool.md)
-  - [Visualizer](./Docs/visualizer.md)
-  - [Checklist](./Docs/checklist.md)
+
 
 ## :material-link: Links
 

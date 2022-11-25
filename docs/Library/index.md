@@ -22,7 +22,6 @@
   - [分枝限定法](./branch_and_bound.md)
   - [近似アルゴリズム](./approx_algo.md)
 
-
 ## ライブラリ
 
 - [乱数/乱択](./random.md)
@@ -46,3 +45,11 @@
 
 - [実験、環境構築](./experiments.md)
 - [用語集](./glossary.md)
+
+## ドキュメント/Tips
+
+- [How to get started](../Docs/how_to_get_started.md)
+- [Tips](../Docs/tips.md)
+- [Support Tool](../Docs/support_tool.md)
+- [Visualizer](../Docs/visualizer.md)
+- [Checklist](../Docs/checklist.md)
