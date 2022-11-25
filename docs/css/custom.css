@@ -90,3 +90,9 @@
 .md-typeset ul li ul {
   margin: 0;
 }
+
+.trimimg {
+  width: 150px;
+  height: 150px !important;
+  object-fit: contain;
+}
