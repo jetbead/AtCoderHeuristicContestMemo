@@ -15,7 +15,7 @@ title: Home
 ## :material-link: Links
 
 - :material-office-building: **Official**
-  - [AtCoder Contests Archive(Marathon)](https://atcoder.jp/contests/archive?ratedType=0&category=1200&keyword=)
+  - [AtCoder Contests Archive(AHC Classd)](https://atcoder.jp/contests/archive?ratedType=4&category=0&keyword=)
   - [AHC Ranking(beta)](https://www.dropbox.com/s/j276tgd7izpc40u/ranking.csv?dl=0)
     - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
 - :material-axis-arrow: **rating/statistics**
