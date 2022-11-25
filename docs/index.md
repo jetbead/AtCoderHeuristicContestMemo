@@ -8,14 +8,16 @@ title: Home
 
 - :material-pen: **Contest Memo** (過去のコンテスト情報、解法リンク、反省メモ)
   - [Contest List](./ContestMemo/index.md)
+  - 過去のコンテストの関連情報や反省をまとめています
+- :material-axe: **Library** (Heuristic Contest 関連の自作ライブラリ、調査メモ)
+  - [Library List](./Library/index.md)
+  - AHC関連のライブラリや調査資料などをまとめています
 - :fontawesome-solid-book: **Document** (Heuristic Contest に関する Tips やドキュメント)
   - [How to get started](./Docs/how_to_get_started.md)
   - [Tips](./Docs/tips.md)
   - [Support Tool](./Docs/support_tool.md)
   - [Visualizer](./Docs/visualizer.md)
   - [Checklist](./Docs/checklist.md)
-- :material-axe: **Library** (Heuristic Contest 関連の自作ライブラリ、調査メモ)
-  - [Library List](./Library/index.md)
 
 ## :material-link: Links
 
@@ -49,7 +51,7 @@ title: Home
 
 ## :material-account: About Me
 
-- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic)
+- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; ">2212</span>)
   - AHCは、橙(rate2400)を目標に、ゆるく参加しています
   - 短期は50位、長期は30位ぐらいに入れるよう、コンテストの反省や知見をまとめておきます
 
