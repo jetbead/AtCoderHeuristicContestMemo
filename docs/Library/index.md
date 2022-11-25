@@ -39,11 +39,15 @@
 
 ## デザインパターン、実装方法
 
-- [デザインパターン](./design_pattern.md)
+- [ゲームとAIの分離](./design_patterns/gameai.md)
+- [異なるタスクを実行しうるマルチエージェントの協調動作](./design_patterns/multiagent.md)
+- [状態遷移](./design_patterns/state.md)
 
 ## その他
 
 - [実験、環境構築](./experiments.md)
+- [pythonスニペット](./python_snippet.md)
+- [Optuna](./optuna.md)
 - [用語集](./glossary.md)
 
 ## ドキュメント/Tips

@@ -7,3 +7,15 @@
 - https://takuti.me/ja/note/data-science-project-structure/
 - https://upura.hatenablog.com/entry/2018/12/28/225234
 - https://goodresearch.dev/
+
+## 設定ファイル
+
+### .clang-format
+
+```
+BasedOnStyle: Google
+IndentWidth: 4
+AllowShortIfStatementsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: false
+ColumnLimit: 100
+```
