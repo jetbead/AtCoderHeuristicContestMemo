@@ -18,6 +18,10 @@
 - ヒューリスティックコンテスト(マラソン)、ゲーム AI コンテストで使う武器まとめ(Nyanyan_Cube さん)
   - https://note.com/nyanyan_cubetech/n/n5e30c52139d3
 
+## AHCレーティング
+
+- https://twitter.com/koyumeishi_/status/1387439273251524608
+
 ## AtCoder API
 
 - コンテスト情報json形式
