@@ -8,19 +8,19 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Intro. to HC - AtCoder Heuristic Contest Memo</title>
+        <title>ゲームと AI の分離 - AtCoder Heuristic Contest Memo</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -37,9 +37,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-heuristics-contest" class="md-skip">
+        <a href="#ai" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+    <a href="../../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro. to HC
+              ゲームと AI の分離
             
           </span>
         </div>
@@ -131,7 +131,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+    <a href="../../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -150,7 +150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         Home
       </a>
     </li>
@@ -163,14 +163,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -193,7 +191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../../ContestMemo/index.html" class="md-nav__link">
         Contest List
       </a>
     </li>
@@ -207,7 +205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc001.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc001.html" class="md-nav__link">
         AHC001
       </a>
     </li>
@@ -221,7 +219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc002.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc002.html" class="md-nav__link">
         AHC002
       </a>
     </li>
@@ -235,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc003.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc003.html" class="md-nav__link">
         AHC003
       </a>
     </li>
@@ -249,7 +247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc004.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc004.html" class="md-nav__link">
         AHC004
       </a>
     </li>
@@ -263,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc005.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc005.html" class="md-nav__link">
         AHC005
       </a>
     </li>
@@ -277,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc006.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc006.html" class="md-nav__link">
         AHC006(京セラ)
       </a>
     </li>
@@ -291,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc007.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc007.html" class="md-nav__link">
         AHC007(THIRD)
       </a>
     </li>
@@ -305,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc008.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc008.html" class="md-nav__link">
         AHC008(MC Digital)
       </a>
     </li>
@@ -319,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc009.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc009.html" class="md-nav__link">
         AHC009(モノグサ)
       </a>
     </li>
@@ -333,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc010.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc010.html" class="md-nav__link">
         AHC010(ALGO ARTIS)
       </a>
     </li>
@@ -347,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc011.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc011.html" class="md-nav__link">
         AHC011
       </a>
     </li>
@@ -361,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc012.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc012.html" class="md-nav__link">
         AHC012
       </a>
     </li>
@@ -375,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc013.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc013.html" class="md-nav__link">
         AHC013(RECRUIT)
       </a>
     </li>
@@ -389,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc014.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc014.html" class="md-nav__link">
         AHC014(estie)
       </a>
     </li>
@@ -403,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc015.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc015.html" class="md-nav__link">
         AHC015(トヨタ自動車)
       </a>
     </li>
@@ -417,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ahc016.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc016.html" class="md-nav__link">
         AHC016(HTTF2023予選)
       </a>
     </li>
@@ -431,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="httf2022qual.html" class="md-nav__link">
+      <a href="../../ContestMemo/httf2022qual.html" class="md-nav__link">
         HTTF2022予選
       </a>
     </li>
@@ -443,73 +441,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Intro. to HC
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="intro-heuristics.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ContestMemo/intro-heuristics.html" class="md-nav__link">
         Intro. to HC
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    問題概要
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    時間
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    解説
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -521,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rcl-contest-2021-long.html" class="md-nav__link">
+      <a href="../../ContestMemo/rcl-contest-2021-long.html" class="md-nav__link">
         日本橋ハーフ2021増刊号(RECRUIT)
       </a>
     </li>
@@ -569,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Docs/checklist.html" class="md-nav__link">
+      <a href="../../Docs/checklist.html" class="md-nav__link">
         CheckList
       </a>
     </li>
@@ -583,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Docs/how_to_get_started.html" class="md-nav__link">
+      <a href="../../Docs/how_to_get_started.html" class="md-nav__link">
         How to get started!
       </a>
     </li>
@@ -597,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Docs/support_tool.html" class="md-nav__link">
+      <a href="../../Docs/support_tool.html" class="md-nav__link">
         Support Tool
       </a>
     </li>
@@ -611,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Docs/tips.html" class="md-nav__link">
+      <a href="../../Docs/tips.html" class="md-nav__link">
         Tips
       </a>
     </li>
@@ -625,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Docs/visualizer.html" class="md-nav__link">
+      <a href="../../Docs/visualizer.html" class="md-nav__link">
         Visualizer
       </a>
     </li>
@@ -645,12 +581,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -673,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         Library List
       </a>
     </li>
@@ -687,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/approx_algo.html" class="md-nav__link">
+      <a href="../approx_algo.html" class="md-nav__link">
         近似アルゴリズム
       </a>
     </li>
@@ -701,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/beam_search.html" class="md-nav__link">
+      <a href="../beam_search.html" class="md-nav__link">
         ビームサーチ
       </a>
     </li>
@@ -715,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/branch_and_bound.html" class="md-nav__link">
+      <a href="../branch_and_bound.html" class="md-nav__link">
         分枝限定法
       </a>
     </li>
@@ -729,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/compress.html" class="md-nav__link">
+      <a href="../compress.html" class="md-nav__link">
         情報圧縮
       </a>
     </li>
@@ -743,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/debug_print.html" class="md-nav__link">
+      <a href="../debug_print.html" class="md-nav__link">
         デバッグ出力
       </a>
     </li>
@@ -757,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/exp2.html" class="md-nav__link">
+      <a href="../exp2.html" class="md-nav__link">
         Exploration & Exploitation
       </a>
     </li>
@@ -771,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/experiments.html" class="md-nav__link">
+      <a href="../experiments.html" class="md-nav__link">
         実験、環境構築
       </a>
     </li>
@@ -785,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/flow.html" class="md-nav__link">
+      <a href="../flow.html" class="md-nav__link">
         フロー
       </a>
     </li>
@@ -799,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/game_tree.html" class="md-nav__link">
+      <a href="../game_tree.html" class="md-nav__link">
         ゲーム木探索
       </a>
     </li>
@@ -813,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/glossary.html" class="md-nav__link">
+      <a href="../glossary.html" class="md-nav__link">
         用語集
       </a>
     </li>
@@ -827,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/gnuplot.html" class="md-nav__link">
+      <a href="../gnuplot.html" class="md-nav__link">
         gnuplotで簡易ビジュアライザ
       </a>
     </li>
@@ -841,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/graph.html" class="md-nav__link">
+      <a href="../graph.html" class="md-nav__link">
         グラフ理論
       </a>
     </li>
@@ -855,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/grid.html" class="md-nav__link">
+      <a href="../grid.html" class="md-nav__link">
         グリッド操作
       </a>
     </li>
@@ -869,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/matching.html" class="md-nav__link">
+      <a href="../matching.html" class="md-nav__link">
         マッチング
       </a>
     </li>
@@ -883,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/math_opt.html" class="md-nav__link">
+      <a href="../math_opt.html" class="md-nav__link">
         数理計画法/数理最適化
       </a>
     </li>
@@ -897,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/ml.html" class="md-nav__link">
+      <a href="../ml.html" class="md-nav__link">
         機械学習
       </a>
     </li>
@@ -911,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/multi_agent.html" class="md-nav__link">
+      <a href="../multi_agent.html" class="md-nav__link">
         マルチエージェント
       </a>
     </li>
@@ -925,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/optuna.html" class="md-nav__link">
+      <a href="../optuna.html" class="md-nav__link">
         optuna
       </a>
     </li>
@@ -939,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/python_snippet.html" class="md-nav__link">
+      <a href="../python_snippet.html" class="md-nav__link">
         pythonスニペット
       </a>
     </li>
@@ -953,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/random.html" class="md-nav__link">
+      <a href="../random.html" class="md-nav__link">
         乱数/乱択
       </a>
     </li>
@@ -967,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/result_analy.html" class="md-nav__link">
+      <a href="../result_analy.html" class="md-nav__link">
         実行結果の分析
       </a>
     </li>
@@ -981,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/sa.html" class="md-nav__link">
+      <a href="../sa.html" class="md-nav__link">
         局所探索/山登り/焼きなまし
       </a>
     </li>
@@ -995,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/speedup.html" class="md-nav__link">
+      <a href="../speedup.html" class="md-nav__link">
         高速化(C++)
       </a>
     </li>
@@ -1009,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/stage_array.html" class="md-nav__link">
+      <a href="../stage_array.html" class="md-nav__link">
         Stage 機能付き Value/Array
       </a>
     </li>
@@ -1023,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/stats_modeling.html" class="md-nav__link">
+      <a href="../stats_modeling.html" class="md-nav__link">
         統計モデリング
       </a>
     </li>
@@ -1037,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/summed_area_table.html" class="md-nav__link">
+      <a href="../summed_area_table.html" class="md-nav__link">
         2次元累積和
       </a>
     </li>
@@ -1051,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/timer.html" class="md-nav__link">
+      <a href="../timer.html" class="md-nav__link">
         Timer
       </a>
     </li>
@@ -1065,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/tsp.html" class="md-nav__link">
+      <a href="../tsp.html" class="md-nav__link">
         TSP(巡回セールスマン問題)
       </a>
     </li>
@@ -1077,12 +1015,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_30" type="checkbox" id="__nav_4_30" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_30" type="checkbox" id="__nav_4_30" checked>
       
       
       
@@ -1103,11 +1043,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Library/design_patterns/gameai.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ゲームと AI の分離
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="gameai.html" class="md-nav__link md-nav__link--active">
         ゲームと AI の分離
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    コードメモ
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1119,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/design_patterns/multiagent.html" class="md-nav__link">
+      <a href="multiagent.html" class="md-nav__link">
         異なるタスクを実行しうるマルチエージェントの協調動作
       </a>
     </li>
@@ -1133,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/design_patterns/state.html" class="md-nav__link">
+      <a href="state.html" class="md-nav__link">
         状態遷移
       </a>
     </li>
@@ -1182,28 +1177,21 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    問題概要
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    時間
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    解説
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
+    コードメモ
   </a>
   
 </li>
@@ -1223,30 +1211,65 @@
                   
 
 
-<h1 id="introduction-to-heuristics-contest">Introduction to Heuristics Contest<a class="headerlink" href="#introduction-to-heuristics-contest" title="Permanent link">&para;</a></h1>
+<h1 id="ai">ゲームと AI の分離<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://atcoder.jp/contests/intro-heuristics">https://atcoder.jp/contests/intro-heuristics</a></li>
+<li>ゲーム(環境情報、スコア計算など)に関するものと、AI(方針、戦略など)に関するものを分ける</li>
+<li>AI 部分は、試行錯誤する部分なので、アルゴリズムを切り替えられるよう Strategy パターンなどにする</li>
+<li>分けておくことで、いろんな戦略を切り替えやすくなる</li>
 </ul>
-<p><img alt="image" src="../imgs/intro-heuristics.png" /></p>
-<h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
-<li>26 種類のコンテストがあり、ユーザーの満足度ができるだけ高くなるようにしたい<ul>
-<li>満足度は開催すると増加するが、開催タイミングで増加量は変動する</li>
-<li>また、特定のタイプのコンテストがしばらく開催されないと下がる</li>
+<li><a href="https://eijirou-kyopro.hatenablog.com/entry/2022/02/27/003135">https://eijirou-kyopro.hatenablog.com/entry/2022/02/27/003135</a></li>
 </ul>
-</li>
-<li>毎日 1 つのコンテストを開催する想定で、満足度ができるだけ大きくなるよう D 日分の日程を用意せよ</li>
-</ul>
-<h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>120 分</p>
-<h2 id="_3">解説<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://img.atcoder.jp/intro-heuristics/editorial.pdf">https://img.atcoder.jp/intro-heuristics/editorial.pdf</a></li>
-</ul>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://togetter.com/li/1550502">agw さん Twitter まとめ</a></li>
-</ul>
+<h2 id="_2">コードメモ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Game</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">update</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Game update()&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Strategy</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AI</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">AI</span><span class="p">(</span><span class="n">Game</span><span class="o">&amp;</span><span class="w"> </span><span class="n">game</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">game</span><span class="p">(</span><span class="n">game</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">strategy</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">game</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">update</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">strategy</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">game</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Game</span><span class="o">&amp;</span><span class="w"> </span><span class="n">game</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Strategy</span><span class="w"> </span><span class="n">strategy</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">StrategyX</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="n">Game</span><span class="o">&amp;</span><span class="w"> </span><span class="n">game</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;StrategyX init()&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">update</span><span class="p">(</span><span class="n">Game</span><span class="o">&amp;</span><span class="w"> </span><span class="n">game</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;StrategyX update()&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">AI</span><span class="o">&lt;</span><span class="n">StrategyX</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ai</span><span class="p">(</span><span class="n">game</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">ai</span><span class="p">.</span><span class="n">update</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">game</span><span class="p">.</span><span class="n">update</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
 
 
@@ -1267,7 +1290,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="httf2022qual.html" class="md-footer__link md-footer__link--prev" aria-label="前: HTTF2022予選" rel="prev">
+        <a href="../tsp.html" class="md-footer__link md-footer__link--prev" aria-label="前: TSP(巡回セールスマン問題)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1276,20 +1299,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              HTTF2022予選
+              TSP(巡回セールスマン問題)
             </div>
           </div>
         </a>
       
       
         
-        <a href="rcl-contest-2021-long.html" class="md-footer__link md-footer__link--next" aria-label="次: 日本橋ハーフ2021増刊号(RECRUIT)" rel="next">
+        <a href="multiagent.html" class="md-footer__link md-footer__link--next" aria-label="次: 異なるタスクを実行しうるマルチエージェントの協調動作" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              日本橋ハーフ2021増刊号(RECRUIT)
+              異なるタスクを実行しうるマルチエージェントの協調動作
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1324,12 +1347,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
-        <script src="../js/extra.js"></script>
+        <script src="../../js/extra.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
