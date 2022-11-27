@@ -41,7 +41,7 @@
 
 - [ゲームとAIの分離](./design_patterns/gameai.md)
 - [異なるタスクを実行しうるマルチエージェントの協調動作](./design_patterns/multiagent.md)
-- [状態遷移](./design_patterns/state.md)
+- [状態遷移](./design_patterns/transition.md)
 
 ## その他
 
