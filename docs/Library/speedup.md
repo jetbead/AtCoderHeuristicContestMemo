@@ -61,9 +61,11 @@
 ### 動的メモリ確保を減らす
 
 - global変数やstatic変数にして使い回す
-- カウンタ変数を用意してその値かで判定することでbool配列の初期化を省略
+- カウンタ変数を用意してその値かで判定することでbool配列の初期化を省略(Fast-Clearing Array)
   - https://topcoder-tomerun.hatenablog.jp/entry/2022/11/06/145156
   - https://twitter.com/koyumeishi_/status/1589142265209188352
+  - https://twitter.com/FakePsyho/status/1605963724715479042
+  - https://twitter.com/FakePsyho/status/1605965054779674624 (拡張)
 - 初期化配列
   - https://qiita.com/kgoto/items/0251e442292d8ebc1f3d
 - 同じ処理を2回 or 変化したやつだけ保持しておいてそれだけ戻す or undo操作で初期状態に戻す
