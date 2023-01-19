@@ -11,6 +11,12 @@
 - Topcoderマラソンマッチの探索問題で重要なこと(takapt0226 さん)
   - https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21
 
+## PsyhoさんによるHeuristics/Bot Contest Tips
+
+- https://twitter.com/FakePsyho/status/1605570944537280512
+- https://ozy4dm.hateblo.jp/entry/2022/12/22/162046
+- https://togetter.com/li/2025077
+
 ## メモ
 
 - 問題の正しい理解、大まかな方針、細かいアイデア・実装、パラメータ調整の図(iwashi31 さん)
