@@ -282,3 +282,5 @@ int main() {
 - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8075568/
 - Data Structures for Traveling Salesman
   - https://dl.acm.org/doi/pdf/10.5555/313559.313668
+- https://github.com/GAStudyGroup/GPX2
+- http://tsp-basics.blogspot.com/
