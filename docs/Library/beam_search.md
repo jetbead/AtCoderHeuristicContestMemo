@@ -19,6 +19,13 @@
 
 - 状態のなにかの要素で区別して、それぞれでビームするようにする
 
+## 上位N件を高速に取る話
+
+- https://zenn.dev/siman/articles/e94f63246f6cb3
+  - https://twitter.com/_simanman/status/1618415422277292032
+  - https://twitter.com/koyumeishi_/status/1618430006207877120
+  - https://twitter.com/colun/status/1618419150384418816
+  - https://twitter.com/FakePsyho/status/1618522597481938945
 
 ## 高度な話題
 
