@@ -3,6 +3,7 @@
 - https://www.slideshare.net/shunjiumetani/ss-17197023
 - https://blog.hamayanhamayan.com/entry/2017/05/31/131424
 - https://qiita.com/hari64/items/e66fd2a281ab76a58af3
+- https://blog.brainpad.co.jp/entry/2020/10/01/000001
 
 
 ## 線形計画法
