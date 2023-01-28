@@ -15,6 +15,8 @@
 
 ## 整数計画問題
 
+- https://snowberryfield.hatenadiary.com/entry/2022/12/25/012510
+
 ### 線形緩和
 
 ## OR-tools
