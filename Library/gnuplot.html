@@ -909,6 +909,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ファイルを経由しないで直接実行
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1353,6 +1360,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ファイルを経由しないで直接実行
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1542,6 +1556,34 @@ filename = sprintf(&quot;out_%03d.png&quot;, n)
 n=n+1
 pause 0.1
 if(n&lt;50) reread
+</code></pre></div>
+<h2 id="_6">ファイルを経由しないで直接実行<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">FILE</span><span class="o">*</span><span class="w"> </span><span class="n">gp</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">gp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">popen</span><span class="p">(</span><span class="s">&quot;gnuplot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;w&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;error: pipe open error.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;set terminal png size 512,512</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;set output </span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;set size ratio 1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;set title </span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\&quot;\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;set grid</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;set nokey</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;unset xtics</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;unset ytics</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;set xrange [0:10000]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;set yrange [10000:0] reverse</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="c1">//...</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;plot </span><span class="se">\&quot;</span><span class="s">-</span><span class="se">\&quot;</span><span class="s"> w p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;-1 -1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">ss</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;e</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+
+<span class="n">fprintf</span><span class="p">(</span><span class="n">gp</span><span class="p">,</span><span class="w"> </span><span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">().</span><span class="n">c_str</span><span class="p">());</span>
+<span class="n">fflush</span><span class="p">(</span><span class="n">gp</span><span class="p">);</span>
+<span class="n">fprintf</span><span class="p">(</span><span class="n">gp</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;exit</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="n">pclose</span><span class="p">(</span><span class="n">gp</span><span class="p">);</span>
 </code></pre></div>
 
 
