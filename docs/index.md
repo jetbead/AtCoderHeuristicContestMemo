@@ -23,8 +23,6 @@ title: Home
     - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
   - AtCoder Marathon Replay
     - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
-  - AtCoder Heuristic Statistics
-    - https://heuristic-statistics.herokuapp.com/
   - AHC Rating Simulator
     - https://saharan.github.io/progcon/ahc-rating-sim.html
   - competitiveprogramming.info/atcoder/contests/marathon
