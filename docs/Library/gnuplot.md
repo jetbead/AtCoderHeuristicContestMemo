@@ -190,3 +190,34 @@ n=n+1
 pause 0.1
 if(n<50) reread
 ```
+
+## ファイルを経由しないで直接実行
+
+```c++
+FILE* gp;
+if ((gp = popen("gnuplot", "w")) == nullptr) {
+    cerr << "error: pipe open error." << endl;
+    return;
+}
+std::stringstream ss;
+ss << "set terminal png size 512,512\n";
+ss << "set output \"" << filename << "\"\n";
+ss << "set size ratio 1\n";
+ss << "set title \"" << title << "\"\n";
+ss << "set grid\n";
+ss << "set nokey\n";
+ss << "unset xtics\n";
+ss << "unset ytics\n";
+ss << "set xrange [0:10000]\n";
+ss << "set yrange [10000:0] reverse\n";
+//...
+ss << "\n";
+ss << "plot \"-\" w p\n";
+ss << "-1 -1\n";
+ss << "e\n";
+
+fprintf(gp, ss.str().c_str());
+fflush(gp);
+fprintf(gp, "exit\n");
+pclose(gp);
+```
