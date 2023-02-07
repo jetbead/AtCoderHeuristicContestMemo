@@ -57,3 +57,20 @@
   - https://kopricky.github.io/code/Academic/random_graph_generator.html
     - Efficient and simple generation of random simple connected graphs with prescribed degree sequence
   - https://twitter.com/komora71_/status/1594278415850356737
+
+## 最短距離
+
+### Single-Source Shortest Path(SSSP)
+
+- https://yosupo.hatenablog.com/entry/2015/04/03/224649
+
+#### 近似/差分更新/高速化
+
+- [AHC017](../ContestMemo/ahc017.md)
+  - Shortest Path Tree
+  - 最短経路差分でグラフを作ってBFS
+  - など
+
+### All-pair Shortest Path(APSP)
+
+- https://koyumeishi.hatenablog.com/entry/2021/07/03/165922
