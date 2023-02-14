@@ -58,6 +58,10 @@
     - Efficient and simple generation of random simple connected graphs with prescribed degree sequence
   - https://twitter.com/komora71_/status/1594278415850356737
 
+## TSP
+
+- [TSP(巡回セールスマン問題)](./tsp.md)
+
 ## 最短距離
 
 ### Single-Source Shortest Path(SSSP)
@@ -74,3 +78,7 @@
 ### All-pair Shortest Path(APSP)
 
 - https://koyumeishi.hatenablog.com/entry/2021/07/03/165922
+
+## コミュニティ抽出
+
+- https://www.jstage.jst.go.jp/article/jsoft/21/4/21_500/_pdf
