@@ -1,0 +1,2662 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="ahc017.html">
+      
+      
+        <link rel="next" href="httf2022qual.html">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
+    
+    
+      
+        <title>AHC018(RECRUIT) - AtCoder Heuristic Contest Memo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recruit-2023-atcoder-heuristic-contest-018" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AtCoder Heuristic Contest Memo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AHC018(RECRUIT)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    AtCoder Heuristic Contest Memo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          ContestMemo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          ContestMemo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Contest List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc001.html" class="md-nav__link">
+        AHC001
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc002.html" class="md-nav__link">
+        AHC002
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc003.html" class="md-nav__link">
+        AHC003
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc004.html" class="md-nav__link">
+        AHC004
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc005.html" class="md-nav__link">
+        AHC005
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc006.html" class="md-nav__link">
+        AHC006(京セラ)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc007.html" class="md-nav__link">
+        AHC007(THIRD)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc008.html" class="md-nav__link">
+        AHC008(MC Digital)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc009.html" class="md-nav__link">
+        AHC009(モノグサ)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc010.html" class="md-nav__link">
+        AHC010(ALGO ARTIS)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc011.html" class="md-nav__link">
+        AHC011
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc012.html" class="md-nav__link">
+        AHC012
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc013.html" class="md-nav__link">
+        AHC013(RECRUIT)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc014.html" class="md-nav__link">
+        AHC014(estie)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc015.html" class="md-nav__link">
+        AHC015(トヨタ自動車)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc016.html" class="md-nav__link">
+        AHC016(HTTF2023予選)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc017.html" class="md-nav__link">
+        AHC017(THIRD)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          AHC018(RECRUIT)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ahc018.html" class="md-nav__link md-nav__link--active">
+        AHC018(RECRUIT)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    問題概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    時間
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    問題固有の性質
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    頑丈さの推定
+  </a>
+  
+    <nav class="md-nav" aria-label="頑丈さの推定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    現在の試掘状態から真の頑丈さの推定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    試掘する地点の候補
+  </a>
+  
+    <nav class="md-nav" aria-label="試掘する地点の候補">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    荒いグリッドやメッシュの格子点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    不確実性が高い地点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    次に破壊された場合に嬉しい地点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    推定方法
+  </a>
+  
+    <nav class="md-nav" aria-label="推定方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    逆距離加重和、距離を考慮した重み付き平均
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    線形補間
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    近傍マスで重み付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    ガウス過程回帰
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlsmoving-least-squares" class="md-nav__link">
+    MLS(Moving Least Squares?)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sphsmoothed-particle-hydrodynamics" class="md-nav__link">
+    SPH(Smoothed Particle Hydrodynamics)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    試掘時のパワー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    水路ルート生成
+  </a>
+  
+    <nav class="md-nav" aria-label="水路ルート生成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    最小シュタイナー木
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    格子点上のみで計算するか、全マスで計算するか
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    ダイクストラを繰り返す、で近似
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mst" class="md-nav__link">
+    MST上で最小距離でつなぐ、で近似
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    水路ルート上の掘削
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    パラメータチューニング
+  </a>
+  
+    <nav class="md-nav" aria-label="パラメータチューニング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    チューニングツール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    焼きなましっぽく探す
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    その他
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    ボーリング調査
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    マンハッタン距離のとき単純な経路が選ばれやすい問題
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    サンプルがそこそこ強かった
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    手元での評価方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    問題の元ネタ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    入力データの傾向の調査
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizer" class="md-nav__link">
+    visualizer周り
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    インタラクティブ問題のデバッグ方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shake-upshake-down" class="md-nav__link">
+    shake up/shake down
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="httf2022qual.html" class="md-nav__link">
+        HTTF2022予選
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro-heuristics.html" class="md-nav__link">
+        Intro. to HC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rcl-contest-2021-long.html" class="md-nav__link">
+        日本橋ハーフ2021増刊号(RECRUIT)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/checklist.html" class="md-nav__link">
+        CheckList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/how_to_get_started.html" class="md-nav__link">
+        How to get started!
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/support_tool.html" class="md-nav__link">
+        Support Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/tips.html" class="md-nav__link">
+        Tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docs/visualizer.html" class="md-nav__link">
+        Visualizer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/index.html" class="md-nav__link">
+        Library List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/approx_algo.html" class="md-nav__link">
+        近似アルゴリズム
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/beam_search.html" class="md-nav__link">
+        ビームサーチ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/branch_and_bound.html" class="md-nav__link">
+        分枝限定法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/compress.html" class="md-nav__link">
+        情報圧縮
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/debug_print.html" class="md-nav__link">
+        デバッグ出力
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/exp2.html" class="md-nav__link">
+        Exploration & Exploitation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/experiments.html" class="md-nav__link">
+        実験、環境構築
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/flow.html" class="md-nav__link">
+        フロー
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/game_tree.html" class="md-nav__link">
+        ゲーム木探索
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/glossary.html" class="md-nav__link">
+        用語集
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/gnuplot.html" class="md-nav__link">
+        gnuplotで簡易ビジュアライザ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/graph.html" class="md-nav__link">
+        グラフ理論
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/grid.html" class="md-nav__link">
+        グリッド操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/matching.html" class="md-nav__link">
+        マッチング
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/math_opt.html" class="md-nav__link">
+        数理計画法/数理最適化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/ml.html" class="md-nav__link">
+        機械学習
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/multi_agent.html" class="md-nav__link">
+        マルチエージェント
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/optuna.html" class="md-nav__link">
+        optuna
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/python_snippet.html" class="md-nav__link">
+        pythonスニペット
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/random.html" class="md-nav__link">
+        乱数/乱択
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/result_analy.html" class="md-nav__link">
+        実行結果の分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/sa.html" class="md-nav__link">
+        局所探索/山登り/焼きなまし
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/speedup.html" class="md-nav__link">
+        高速化(C++)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/stage_array.html" class="md-nav__link">
+        Stage 機能付き Value/Array
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/stats_modeling.html" class="md-nav__link">
+        統計モデリング
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/summed_area_table.html" class="md-nav__link">
+        2次元累積和
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/timer.html" class="md-nav__link">
+        Timer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/tsp.html" class="md-nav__link">
+        TSP(巡回セールスマン問題)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_30" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="0">
+          Design patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_30">
+          <span class="md-nav__icon md-icon"></span>
+          Design patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/design_patterns/gameai.html" class="md-nav__link">
+        ゲームと AI の分離
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/design_patterns/multiagent.html" class="md-nav__link">
+        異なるタスクを実行しうるマルチエージェントの協調動作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/design_patterns/transition.html" class="md-nav__link">
+        状態遷移
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    問題概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    時間
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    個人的メモ
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    問題固有の性質
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    頑丈さの推定
+  </a>
+  
+    <nav class="md-nav" aria-label="頑丈さの推定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    現在の試掘状態から真の頑丈さの推定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    試掘する地点の候補
+  </a>
+  
+    <nav class="md-nav" aria-label="試掘する地点の候補">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    荒いグリッドやメッシュの格子点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    不確実性が高い地点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    次に破壊された場合に嬉しい地点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    推定方法
+  </a>
+  
+    <nav class="md-nav" aria-label="推定方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    逆距離加重和、距離を考慮した重み付き平均
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    線形補間
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    近傍マスで重み付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    ガウス過程回帰
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlsmoving-least-squares" class="md-nav__link">
+    MLS(Moving Least Squares?)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sphsmoothed-particle-hydrodynamics" class="md-nav__link">
+    SPH(Smoothed Particle Hydrodynamics)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    試掘時のパワー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    水路ルート生成
+  </a>
+  
+    <nav class="md-nav" aria-label="水路ルート生成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    最小シュタイナー木
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    格子点上のみで計算するか、全マスで計算するか
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    ダイクストラを繰り返す、で近似
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mst" class="md-nav__link">
+    MST上で最小距離でつなぐ、で近似
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    水路ルート上の掘削
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    パラメータチューニング
+  </a>
+  
+    <nav class="md-nav" aria-label="パラメータチューニング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    チューニングツール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    焼きなましっぽく探す
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    その他
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    ボーリング調査
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    マンハッタン距離のとき単純な経路が選ばれやすい問題
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    サンプルがそこそこ強かった
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    手元での評価方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    問題の元ネタ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    入力データの傾向の調査
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizer" class="md-nav__link">
+    visualizer周り
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    インタラクティブ問題のデバッグ方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shake-upshake-down" class="md-nav__link">
+    shake up/shake down
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="recruit-2023-atcoder-heuristic-contest-018">RECRUIT 日本橋ハーフマラソン 2023冬 (AtCoder Heuristic Contest 018)<a class="headerlink" href="#recruit-2023-atcoder-heuristic-contest-018" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://atcoder.jp/contests/ahc018">https://atcoder.jp/contests/ahc018</a></li>
+</ul>
+<p><img src="../imgs/ahc018.png" width=300></p>
+<h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>200*200のグリッドで表される土地がある</li>
+<li>各マスには10〜5000以下の頑丈さの岩盤があるが、これは不明で、1度にC+Pの体力を使ってPだけ岩盤を削ることができる<ul>
+<li>頑丈さはパーリンノイズで生成される</li>
+<li>Cは、入力で与えられる正の整数(1,2,4,8,16,32,64,128)</li>
+<li>Pは、削るときに毎回決める値(5000以下の正の整数)</li>
+<li>各マスについて、最初の頑丈さ以上に削った場合に岩盤が破壊される</li>
+</ul>
+</li>
+<li>W(=1〜4)箇所に水源、K(=1〜10)箇所に家があり、水源から岩盤がなくなっているマスを辿って水が流れる</li>
+<li>できるだけ少ない体力で、岩盤を削り、すべての家に水が流れるようにせよ</li>
+</ul>
+<h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>199 時間</li>
+</ul>
+<h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>(<img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" />今回、どこで差がでているかまだよくわかっていないので、あとで追記・修正したい)</p>
+<ul>
+<li>探索と活用のバランスを取りながら、硬いところをできるだけ回避してルートを作る、のが難しい問題</li>
+<li>ざっくり、「格子点や不確実性が高いなどのマスを試掘し、その情報から地図を作成し、水路ルートを更新、を繰り返す」方法が強かった模様</li>
+<li>また今回は、結構似たようなアプローチを取った人が多かったため、細かい調整の違いやパラメータ調整具合でかなり順位に差がでていた可能性がある</li>
+</ul>
+<h3 id="_4">問題固有の性質<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>家や水源の位置の頑丈さは、柔らかい場合が多い<ul>
+<li>頑丈さに反比例する確率で選ばれるため</li>
+</ul>
+</li>
+<li>近くのマスは同程度の頑丈さであることが多い</li>
+<li>柔らかいところを軽く調べるのは低コストでできる</li>
+<li>硬いところを通らないルートを作ることが大事<ul>
+<li>頑丈さが、やわらかい(低い)ところは数十程度なのに対し、硬い(高い)ところは数千程度あるため、100倍ちかく違う</li>
+<li>そのため、硬いところを超える短いルートよりも、柔らかいところのみを通る長いルートのほうがよい、などがある</li>
+</ul>
+</li>
+<li>試掘で地図を正確さを高めるのと、どの程度不正確な地図で水路ルートを決めるかバランスが難しい<ul>
+<li>コストに見合わない場合も多く、高度な手法ではなく単純な貪欲などでも十分強かった</li>
+<li>コストを抑えるために、不正確・少ない情報で判断する必要があったため、ヒューリスティックを入れまくるほうがよかった？</li>
+</ul>
+</li>
+<li>掘るときのパワーは小さいと、回数が増えてしまう一方、正確に推定でき、また、その近くの地点の推定も正確にできる<ul>
+<li>Cが128程度でも、正確に推定できるメリットが大きいためか、powerは小さい方がよく、あまりCによる違いが大きくなかった模様</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">頑丈さの推定<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>頑丈さについて、正確な情報が得られないため、2つ推定したいものがある<ul>
+<li>現在の試掘状態から真の頑丈さ<ul>
+<li>掘りきった、掘りきっていない</li>
+</ul>
+</li>
+<li>試掘した地点から、まだ試掘していない(周囲)地点の頑丈さ</li>
+</ul>
+</li>
+<li>これらを考慮して、試掘地点の選択、頑丈さを推定、掘削パワーの決定、を行う必要がある</li>
+</ul>
+<h4 id="_6">現在の試掘状態から真の頑丈さの推定<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>掘りきった/掘りきっていないしかわからないため、正確な頑丈さを得るのが難しい<ul>
+<li>細かく刻めば真の頑丈さに近い値がわかるがコストがかかり、荒く刻むとコストはかからないが真の頑丈さの推定精度は低くなる</li>
+</ul>
+</li>
+<li>真の頑丈さについて、区間で表現するすると扱いやすい?<ul>
+<li>最大(上限)、最小(下限)</li>
+<li>分布(正規分布)</li>
+</ul>
+</li>
+<li>今回、おおよその値が入力データの統計から分布を見て推定<ul>
+<li>指数的だった模様?</li>
+</ul>
+</li>
+</ul>
+<h4 id="_7">試掘する地点の候補<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>近くのマスが同程度の頑丈さであることが多いので、あまりすでに掘った地点の近くを調べる必要がない</li>
+<li>そこで、ある程度離れた地点を調べたかった<ul>
+<li>格子点</li>
+<li>不確実性が高い地点</li>
+</ul>
+</li>
+<li>また、通らないような地点を調べても無駄なので、現状でのベストな水路ルートを作ってみてそのルート上の地点を調べることで無駄な試掘が減らせる<ul>
+<li>掘削していないところは無駄に調べない、など細かい非効率が重なると差がつく可能性がある</li>
+</ul>
+</li>
+</ul>
+<h5 id="_8">荒いグリッドやメッシュの格子点<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<ul>
+<li>フィールド全体をM*M程度の荒いグリッドにして、その格子点を調べる<ul>
+<li>軸に直角/斜め、三角格子、ハニカム、サイコロの5の目のような感じ、など<ul>
+<li>ただし、本当は「円」に近い感じがベースが良い可能性も</li>
+<li><a href="https://twitter.com/tsukammo/status/1630055493225050113">https://twitter.com/tsukammo/status/1630055493225050113</a></li>
+</ul>
+</li>
+<li>Mの値は人によって違っていて、10程度〜30程度など<ul>
+<li>細かくすると、水路ルートが計算するたびぶれまくったり、計算コストが増える恐れもある</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>家や水路も含むようにしておく<ul>
+<li>軸として追加せずに、グリッドにはならないが、近くの格子点と辺をつないでグラフにする、なども</li>
+</ul>
+</li>
+<li>1位Psyhoさんの場合: <a href="https://twitter.com/bowwowforeach/status/1630191132541079552">https://twitter.com/bowwowforeach/status/1630191132541079552</a>  </li>
+</ul>
+<h5 id="_9">不確実性が高い地点<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<ul>
+<li>格子点ではなく、任意地点で調べる価値があるが不確実性が高いところを調べる</li>
+<li>ルートの中間地点(二分探索的に調べる)</li>
+<li>なんらかの方法で、不確実性が高い順に調べる<ul>
+<li>すでに調べた地点から遠い</li>
+<li>推定(モンテカルロ法、ガウス過程等)で不確実性が高い値の地点<ul>
+<li><a href="https://zenn.dev/gmeriaog/articles/880af6fb3728b5">https://zenn.dev/gmeriaog/articles/880af6fb3728b5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="_10">次に破壊された場合に嬉しい地点<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<ul>
+<li>次に破壊できたと仮定して、連結になるのにかかる期待コストが低いものを選ぶ<ul>
+<li><a href="https://kiri8128.hatenablog.com/entry/2023/02/26/192733">https://kiri8128.hatenablog.com/entry/2023/02/26/192733</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="_11">推定方法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<h5 id="_12">逆距離加重和、距離を考慮した重み付き平均<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Inverse Distance Weighting<ul>
+<li><a href="https://en.wikipedia.org/wiki/Inverse_distance_weighting">https://en.wikipedia.org/wiki/Inverse_distance_weighting</a></li>
+</ul>
+</li>
+<li>距離の逆数を重みとした加重平均</li>
+<li>パーリンノイズはユークリッド距離的な感じなので、距離を使うときはユークリッド距離で計算したほうがよいかも</li>
+<li>ただし、</li>
+</ul>
+<h5 id="_13">線形補間<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h5>
+<ul>
+<li><a href="https://ja.wikipedia.org/wiki/%E7%B7%9A%E5%BD%A2%E8%A3%9C%E9%96%93">https://ja.wikipedia.org/wiki/%E7%B7%9A%E5%BD%A2%E8%A3%9C%E9%96%93</a></li>
+<li>2地点に対してその間を補間するのに、一次式(線形)で補間<ul>
+<li>多項式補間</li>
+</ul>
+</li>
+<li>計算が軽い</li>
+</ul>
+<h5 id="_14">近傍マスで重み付け<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
+<ul>
+<li><a href="https://zenn.dev/gmeriaog/articles/880af6fb3728b5">https://zenn.dev/gmeriaog/articles/880af6fb3728b5</a></li>
+<li>
+<p><a href="https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb">https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb</a></p>
+<ul>
+<li>入力データから統計を取って、破壊できなかったときの実際の頑丈さ、dだけ離れた位置で何倍になるかなど確認し、調整</li>
+<li>画像っぽく考える</li>
+<li>カーネルによる重み和/平均</li>
+<li>フィルタとかのカーネル(m*m)っぽく見て重み和/平均を考える</li>
+<li>CNN(U-Net)を使う</li>
+</ul>
+</li>
+</ul>
+<h5 id="_15">ガウス過程回帰<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
+<ul>
+<li>不確かさを扱う方法として「ガウス過程」が使える</li>
+<li>ただし、素直に計算すると候補点数が増えると厳しいので、近くの頂点だけにしたり、近似・高速化などが必要</li>
+<li>カーネルのチューニングも必要そう?</li>
+<li><a href="https://twitter.com/yos1up/status/1629827983187013632">https://twitter.com/yos1up/status/1629827983187013632</a></li>
+<li><a href="https://twitter.com/YamagenSakam/status/1629784103305510913">https://twitter.com/YamagenSakam/status/1629784103305510913</a></li>
+<li><a href="https://twitter.com/contramundum2/status/1629784992862576642">https://twitter.com/contramundum2/status/1629784992862576642</a><ul>
+<li><a href="https://twitter.com/contramundum2/status/1629787107622531072">https://twitter.com/contramundum2/status/1629787107622531072</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/terry_u16/status/1629784652104994816">https://twitter.com/terry_u16/status/1629784652104994816</a><ul>
+<li><a href="https://twitter.com/fridericusgauss/status/1629822657356259329">https://twitter.com/fridericusgauss/status/1629822657356259329</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/koyumeishi_/status/1629791873782145024">https://twitter.com/koyumeishi_/status/1629791873782145024</a></li>
+<li><a href="https://twitter.com/SakiKuroe/status/1629795830898233350">https://twitter.com/SakiKuroe/status/1629795830898233350</a></li>
+</ul>
+<h5 id="mlsmoving-least-squares">MLS(Moving Least Squares?)<a class="headerlink" href="#mlsmoving-least-squares" title="Permanent link">&para;</a></h5>
+<ul>
+<li>移動最小二乗法</li>
+<li><a href="https://en.wikipedia.org/wiki/Moving_least_squares">https://en.wikipedia.org/wiki/Moving_least_squares</a></li>
+</ul>
+<h5 id="sphsmoothed-particle-hydrodynamics">SPH(Smoothed Particle Hydrodynamics)<a class="headerlink" href="#sphsmoothed-particle-hydrodynamics" title="Permanent link">&para;</a></h5>
+<ul>
+<li><a href="https://twitter.com/shr_pc/status/1629798718181629952">https://twitter.com/shr_pc/status/1629798718181629952</a><ul>
+<li><a href="https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics">https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/Smoothed_Particle_Hydrodynamics">https://ja.wikipedia.org/wiki/Smoothed_Particle_Hydrodynamics</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="_16">試掘時のパワー<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<ul>
+<li>基本は、推定値程度(か、少し弱めのパワー)で試す</li>
+<li>また、岩盤が壊れない場合に、壊れるまで試してしまうと、硬い岩盤の場合にかなりコストを使ってしまうので掘り切るのは避けたほうが良い</li>
+<li>壊れない場合は、小さいパワーで追加で削ったり、しきい値以下までしか削らない等で、コストを抑えておく必要がある<ul>
+<li>今回、追加で調べるときのパワーは小さい方がよかった模様</li>
+<li>小さいと回数が増えてしまいCによるコストが増えるが、正確に推定でき、周囲の推定精度やルートを削るときのコストが減らせる副次的メリットが大きい</li>
+</ul>
+</li>
+</ul>
+<h3 id="_17">水路ルート生成<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h4 id="_18">最小シュタイナー木<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<ul>
+<li>平面上の点を結ぶ(点を追加してもよい)直線で総距離が最小のものは最小シュタイナー木で求められる<ul>
+<li><a href="https://kopricky.github.io/code/Academic/steiner_tree.html">https://kopricky.github.io/code/Academic/steiner_tree.html</a></li>
+<li>ターミナル数が少なければ、bit mask DPで一応求められる</li>
+<li><a href="https://atcoder.jp/contests/ahc018/editorial/5899">https://atcoder.jp/contests/ahc018/editorial/5899</a></li>
+</ul>
+</li>
+<li>が、200*200程度の地点もあるため、かなり計算コストもかかってしまう</li>
+<li>また、不正確な推定情報しか使えないのもあるため、最適解である必要があまりなく、厳密に最小を狙わず、近似的に低コストなルートが作れれば十分だった<ul>
+<li>候補点が多いと、ルートが更新毎にぶれまくってしまう</li>
+<li>高速に計算できると、総実行時間も減らせて、パラメータチューニングなどを多く試行できるメリットがある</li>
+</ul>
+</li>
+</ul>
+<h4 id="_19">格子点上のみで計算するか、全マスで計算するか<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li>全マスで計算すると計算コストがそこそこかかってしまうため、試掘のときの格子点でつないだグラフ上で計算するでも十分</li>
+<li>ただ、格子点間が離れていると、その間に硬い部分が微妙に入った場合に、想定よりコストが掛かってしまう可能性がある</li>
+<li>また、格子点間のつなぎ方は、4方向だけでなく、斜め方向も使える可能性はあるので、考慮すると良いかも<ul>
+<li><a href="https://twitter.com/_phocom/status/1630057876726386688">https://twitter.com/_phocom/status/1630057876726386688</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1629845491684102144">https://twitter.com/iwashi31/status/1629845491684102144</a></li>
+<li><a href="https://twitter.com/chokudai_s/status/1629991027191992321">https://twitter.com/chokudai_s/status/1629991027191992321</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="_20">ダイクストラを繰り返す、で近似<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li>水源に近い家から貪欲に、ダイクストラ等で一番近くの水があるマスにつなぐことを繰り返す<ul>
+<li>ダイクストラを使っている人が多かったけど、平面的なのでSPFAでもよかった？</li>
+</ul>
+</li>
+</ul>
+<h4 id="mst">MST上で最小距離でつなぐ、で近似<a class="headerlink" href="#mst" title="Permanent link">&para;</a></h4>
+<ul>
+<li>格子点でのグラフでMSTを作って、そのMSTの辺のみを使って各家から水源への最小距離でつなぐ<ul>
+<li>(自分はMSTの不要な葉頂点を繰り返し消してルートを作ったけど、普通に最小距離で繋げば余計な処理を削れた、、、)</li>
+</ul>
+</li>
+</ul>
+<h3 id="_21">水路ルート上の掘削<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>基本は推定値程度で掘って、壊れなければ壊れるまで掘る</li>
+<li>試掘時の推定値や、格子点の場合は両端の値から推定<ul>
+<li>平均、期待値DP、など</li>
+</ul>
+</li>
+<li>基本、1マスずつ壊すのだと、一つ前の情報も使える</li>
+<li>1マス飛ばしで調べて、前後の値を使うなども工夫可能<ul>
+<li>どの程度効くかは不明</li>
+</ul>
+</li>
+</ul>
+<h3 id="_22">パラメータチューニング<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>今回、高度な手法やアイデアというより、十分汎用な手法でパラメータチューニングをきちんとするのが重要だった可能性がある<ul>
+<li>「Cごとに1000〜10000ケースでチューニング」みたいな上位に多かったかも</li>
+</ul>
+</li>
+<li>高速に大量のケースを試すために、高速な解法にする、並列実行(クラウド実行)、探索方法の工夫など</li>
+</ul>
+<h4 id="_23">チューニングツール<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<ul>
+<li>psytester<ul>
+<li><a href="https://github.com/FakePsyho/psytester">https://github.com/FakePsyho/psytester</a></li>
+<li><a href="https://twitter.com/sash277/status/1629788504757796865">https://twitter.com/sash277/status/1629788504757796865</a></li>
+</ul>
+</li>
+<li>optuna<ul>
+<li>ただし、"自動"チューニングツールを使うことに対する批判もある<ul>
+<li><a href="https://twitter.com/FakePsyho/status/1631275687058219010">https://twitter.com/FakePsyho/status/1631275687058219010</a></li>
+<li>基本的に自動チューニングが必要なコンテストはあまりない</li>
+<li>自動でチューニングすると洞察が得られない</li>
+<li>単峰性が多く、3分探索やグリッドサーチなどで十分</li>
+<li>早いタイミングでの最適化により、他の手法での改善判断が難しくなる</li>
+<li>必要なら最後に行う</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_24">焼きなましっぽく探す<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<ul>
+<li>6位のarvindf232さんは、焼き鈍し法っぽい感じで、テストケースを時間とともに増やしながらパラメータ(十数個)を最適化した模様</li>
+</ul>
+<h3 id="_25">その他<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<h4 id="_26">ボーリング調査<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<ul>
+<li>地盤調査方法</li>
+<li>ある地点に穴を開けてそこからサンプルを得て調査する</li>
+<li><a href="https://twitter.com/terry_u16/status/1629794734503002113">https://twitter.com/terry_u16/status/1629794734503002113</a></li>
+</ul>
+<h4 id="_27">マンハッタン距離のとき単純な経路が選ばれやすい問題<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<ul>
+<li>タイのときは、始点からのユークリッド距離を使う</li>
+<li><a href="https://twitter.com/_phocom/status/1630205013187338240">https://twitter.com/_phocom/status/1630205013187338240</a></li>
+</ul>
+<h4 id="_28">サンプルがそこそこ強かった<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<ul>
+<li>全制約を使っていてかつシンプルな解法、ゆえに結構強かった(解説放送)<ul>
+<li>Powerも100が適当に決めたわりによい値で、上げたり下げたりすると、結果は悪化してしまった模様</li>
+<li>ここから工夫を入れようとしても、コストがかかってしまって逆に悪化しやすいなどあり、結構サンプルよりも良い結果を得るまでが難しい</li>
+</ul>
+</li>
+</ul>
+<h4 id="_29">手元での評価方法<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<ul>
+<li>相対評価なので、手元でどうなるか確かめるのが難しい<ul>
+<li>「best/score」な感じ</li>
+<li>「絶対スコアの和」だと、スケールがかなり違う値が混ざるので参考にならない</li>
+</ul>
+</li>
+<li>自分のベストと比較する<ul>
+<li>topがかなり良いスコアだと、これで上がっても実際はそんなに改善しない、など(AHC016とか)</li>
+</ul>
+</li>
+<li>頑丈さが既知だった場合の結果(チートした場合、下限)と比較する<ul>
+<li>実は今回はあまりこれはケースごとのブレが大きかったので、よくなかったかも</li>
+</ul>
+</li>
+<li>logを取ったものの合計<ul>
+<li><a href="https://twitter.com/kiri8128/status/1629874801040031744">https://twitter.com/kiri8128/status/1629874801040031744</a></li>
+<li><a href="https://engineering.dena.com/blog/2022/12/httf-2023-qual/">https://engineering.dena.com/blog/2022/12/httf-2023-qual/</a> (AHC016、「相対スコア」)</li>
+</ul>
+</li>
+<li><a href="https://twitter.com/_phocom/status/1629789717884702720">https://twitter.com/_phocom/status/1629789717884702720</a></li>
+<li><a href="https://twitter.com/sash277/status/1629790417742077952">https://twitter.com/sash277/status/1629790417742077952</a></li>
+</ul>
+<h4 id="_30">問題の元ネタ<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<ul>
+<li>卵が割れる回数を見つけるやつ<ul>
+<li>「卵２個で落としたら割れる階数を調べる問題」？</li>
+<li><a href="https://mathlog.info/articles/2098">https://mathlog.info/articles/2098</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="_31">入力データの傾向の調査<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ヒストグラムを作って観察、統計量を見る<ul>
+<li>頑丈さが低い地点が多い、というのが気づきやすかった</li>
+<li><a href="https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb">https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb</a></li>
+</ul>
+</li>
+<li>入力生成の中で、ロジスティック関数など使っているのは、ある程度低い地点が多く、一方、高いところもある、というところを調整した結果らしい</li>
+<li><a href="https://kusano-k.hatenablog.com/entry/2023/03/02/025046">https://kusano-k.hatenablog.com/entry/2023/03/02/025046</a></li>
+</ul>
+<h4 id="visualizer">visualizer周り<a class="headerlink" href="#visualizer" title="Permanent link">&para;</a></h4>
+<ul>
+<li>visualizerで推定値もvisualizeするテク<ul>
+<li><a href="https://twitter.com/fujika_WA/status/1629786325238038529">https://twitter.com/fujika_WA/status/1629786325238038529</a></li>
+</ul>
+</li>
+<li>お絵かき<ul>
+<li><a href="https://twitter.com/moooaki/status/1630209074825691137">https://twitter.com/moooaki/status/1630209074825691137</a></li>
+</ul>
+</li>
+<li>visualizerTシャツ<ul>
+<li><a href="https://twitter.com/moooaki/status/1629787058469482500">https://twitter.com/moooaki/status/1629787058469482500</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="_32">インタラクティブ問題のデバッグ方法<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://twitter.com/terry_u16/status/1629866716888199169">https://twitter.com/terry_u16/status/1629866716888199169</a></li>
+</ul>
+<h4 id="shake-upshake-down">shake up/shake down<a class="headerlink" href="#shake-upshake-down" title="Permanent link">&para;</a></h4>
+<ul>
+<li>今回は、暫定ケースがまあまあ偏っていた可能性がある<ul>
+<li>C=1のケースが少なかった？</li>
+</ul>
+</li>
+<li>そのせいか、暫定順位とシステムテストの結果で順位変動がいつもより大きかったように思われる</li>
+</ul>
+<h2 id="_33">解説<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h2>
+<p>(100位まで&amp;発言を見つけられた方のみ)</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KoAjmMkDLgw">AHCラジオ(解説放送)</a></li>
+<li><a href="https://atcoder.jp/contests/ahc018/editorial">解説(日本語)</a></li>
+<li><a href="https://atcoder.jp/contests/ahc018/editorial?editorialLang=en">解説(英語)</a></li>
+</ul>
+<ul>
+<li><a href="https://twitter.com/FakePsyho/status/1629892674063876097">1位Psyhoさん</a><ul>
+<li><a href="https://github.com/FakePsyho/cpcontests/blob/master/atcoder/ahc018/approach.md">https://github.com/FakePsyho/cpcontests/blob/master/atcoder/ahc018/approach.md</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/yokozuna_57/status/1629788383064240129">2位yokozuna57さん</a><ul>
+<li><a href="https://twitter.com/yokozuna_57/status/1629790994769264641">https://twitter.com/yokozuna_57/status/1629790994769264641</a></li>
+<li><a href="https://twitter.com/yokozuna_57/status/1630105509729804290">https://twitter.com/yokozuna_57/status/1630105509729804290</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/gmeriaog/status/1629801812902674433">3位wanuiさん</a><ul>
+<li><a href="https://twitter.com/gmeriaog/status/1630046572422791168">https://twitter.com/gmeriaog/status/1630046572422791168</a></li>
+<li><a href="https://zenn.dev/gmeriaog/articles/880af6fb3728b5">https://zenn.dev/gmeriaog/articles/880af6fb3728b5</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/KawattaT/status/1629800283881734144">4位KawattaTaidoさん</a><ul>
+<li><a href="https://twitter.com/KawattaT/status/1629949949055205376">https://twitter.com/KawattaT/status/1629949949055205376</a></li>
+<li><a href="https://twitter.com/KawattaT/status/1629950946670432258">https://twitter.com/KawattaT/status/1629950946670432258</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/_phocom/status/1629787101779869698">5位phocomさん</a><ul>
+<li><a href="https://twitter.com/_phocom/status/1629787917706223618">https://twitter.com/_phocom/status/1629787917706223618</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629789717884702720">https://twitter.com/_phocom/status/1629789717884702720</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629790591847473152">https://twitter.com/_phocom/status/1629790591847473152</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629791626703896576">https://twitter.com/_phocom/status/1629791626703896576</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629794815117348865">https://twitter.com/_phocom/status/1629794815117348865</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629797064811986944">https://twitter.com/_phocom/status/1629797064811986944</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629798838142914560">https://twitter.com/_phocom/status/1629798838142914560</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629802240293699586">https://twitter.com/_phocom/status/1629802240293699586</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629867204249374720">https://twitter.com/_phocom/status/1629867204249374720</a></li>
+<li><a href="https://twitter.com/_phocom/status/1629991305785884673">https://twitter.com/_phocom/status/1629991305785884673</a></li>
+<li><a href="https://twitter.com/_phocom/status/1630057876726386688">https://twitter.com/_phocom/status/1630057876726386688</a></li>
+<li><a href="https://twitter.com/_phocom/status/1630100199635836928">https://twitter.com/_phocom/status/1630100199635836928</a></li>
+<li><a href="https://twitter.com/_phocom/status/1630205013187338240">https://twitter.com/_phocom/status/1630205013187338240</a></li>
+</ul>
+</li>
+<li><a href="https://atcoder.jp/contests/ahc018/editorial/5883">6位arvindf232さん</a></li>
+<li><a href="https://twitter.com/yos1up/status/1629827983187013632">7位yosssさん</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1629784139850477569">8位iwashi31さん</a><ul>
+<li><a href="https://twitter.com/iwashi31/status/1629786748678184961">https://twitter.com/iwashi31/status/1629786748678184961</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1629789874772643841">https://twitter.com/iwashi31/status/1629789874772643841</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1629791064575062017">https://twitter.com/iwashi31/status/1629791064575062017</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1629789022326489088">https://twitter.com/iwashi31/status/1629789022326489088</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1629845491684102144">https://twitter.com/iwashi31/status/1629845491684102144</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1629848849367052289">https://twitter.com/iwashi31/status/1629848849367052289</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1630205743814291457">https://twitter.com/iwashi31/status/1630205743814291457</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/shr_pc/status/1629788223189954560">9位saharanさん</a><ul>
+<li><a href="https://twitter.com/shr_pc/status/1629792424230014977">https://twitter.com/shr_pc/status/1629792424230014977</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1629793315989372928">https://twitter.com/shr_pc/status/1629793315989372928</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1629794953529552899">https://twitter.com/shr_pc/status/1629794953529552899</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1629797877320138753">https://twitter.com/shr_pc/status/1629797877320138753</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1629798718181629952">https://twitter.com/shr_pc/status/1629798718181629952</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1629800268920688641">https://twitter.com/shr_pc/status/1629800268920688641</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1629802654611439617">https://twitter.com/shr_pc/status/1629802654611439617</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1629807099436990464">https://twitter.com/shr_pc/status/1629807099436990464</a></li>
+</ul>
+</li>
+<li>10位gazelleさん</li>
+<li><a href="https://twitter.com/_gacin/status/1629796478528163840">11位gasinさん</a><ul>
+<li><a href="https://twitter.com/_gacin/status/1629931267008651266">https://twitter.com/_gacin/status/1629931267008651266</a></li>
+</ul>
+</li>
+<li>12位madouさん</li>
+<li><a href="https://twitter.com/kiri8128/status/1629785480337436674">13位Kiri8128さん</a><ul>
+<li><a href="https://twitter.com/kiri8128/status/1629874073852600320">https://twitter.com/kiri8128/status/1629874073852600320</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1629874801040031744">https://twitter.com/kiri8128/status/1629874801040031744</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1629877492994670593">https://twitter.com/kiri8128/status/1629877492994670593</a></li>
+<li><a href="https://kiri8128.hatenablog.com/entry/2023/02/26/192733">https://kiri8128.hatenablog.com/entry/2023/02/26/192733</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/sash277/status/1629783987865686018">14位sashさん</a></li>
+<li><a href="https://twitter.com/rsat__m/status/1629785426977513475">15位hitonanodeさん</a></li>
+<li><a href="https://twitter.com/ToastUz/status/1629784671226834945">16位ToastUzさん</a><ul>
+<li><a href="https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb">https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb</a></li>
+<li><a href="https://twitter.com/ToastUz/status/1629785122332639233">https://twitter.com/ToastUz/status/1629785122332639233</a></li>
+<li><a href="https://twitter.com/ToastUz/status/1629789051619540992">https://twitter.com/ToastUz/status/1629789051619540992</a></li>
+<li><a href="https://twitter.com/ToastUz/status/1629794399243890689">https://twitter.com/ToastUz/status/1629794399243890689</a></li>
+<li><a href="https://twitter.com/ToastUz/status/1629836598815899649">https://twitter.com/ToastUz/status/1629836598815899649</a></li>
+<li><a href="https://twitter.com/ToastUz/status/1629847593873457152">https://twitter.com/ToastUz/status/1629847593873457152</a></li>
+<li><a href="https://twitter.com/ToastUz/status/1629969947236659200">https://twitter.com/ToastUz/status/1629969947236659200</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/eijirou_kyopro/status/1629859194949226498">17位eijirouさん</a></li>
+<li><a href="https://twitter.com/tanzaku_sub/status/1629813628441628673">18位tanzakuさん</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1629810644001357825">19位bowwowforeachさん</a><ul>
+<li><a href="https://twitter.com/bowwowforeach/status/1629829468457164801">https://twitter.com/bowwowforeach/status/1629829468457164801</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1630191132541079552">https://twitter.com/bowwowforeach/status/1630191132541079552</a></li>
+</ul>
+</li>
+<li>20位shamioさん</li>
+<li><a href="https://twitter.com/yowa/status/1630103951533297665">21位yowaさん</a></li>
+<li><a href="https://twitter.com/risenafis/status/1629789861921292288">22位Risenさん</a><ul>
+<li><a href="https://twitter.com/risenafis/status/1629790633580974081">https://twitter.com/risenafis/status/1629790633580974081</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/montplusa/status/1629788961123213312">23位montplusaさん</a><ul>
+<li><a href="https://twitter.com/montplusa/status/1630077456714727424">https://twitter.com/montplusa/status/1630077456714727424</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/Shun___PI/status/1629790340864671744">24位Shun_PIさん</a><ul>
+<li><a href="https://twitter.com/Shun___PI/status/1629799714618212352">https://twitter.com/Shun___PI/status/1629799714618212352</a></li>
+</ul>
+</li>
+<li>25位dn6049949さん</li>
+<li><a href="https://twitter.com/notkamonohasi_2/status/1630569298984079360">26位notkamonohasiさん</a></li>
+<li><a href="https://twitter.com/tek1031/status/1629786753870753792">27位tek1031さん</a><ul>
+<li><a href="https://twitter.com/tek1031/status/1629786843125534721">https://twitter.com/tek1031/status/1629786843125534721</a></li>
+<li><a href="https://twitter.com/tek1031/status/1629787599543111682">https://twitter.com/tek1031/status/1629787599543111682</a></li>
+<li><a href="https://twitter.com/tek1031/status/1629790160375410700">https://twitter.com/tek1031/status/1629790160375410700</a></li>
+<li><a href="https://twitter.com/tek1031/status/1629791561201651713">https://twitter.com/tek1031/status/1629791561201651713</a></li>
+<li><a href="https://twitter.com/tek1031/status/1629792986195427328">https://twitter.com/tek1031/status/1629792986195427328</a></li>
+<li><a href="https://twitter.com/tek1031/status/1629794364808638464">https://twitter.com/tek1031/status/1629794364808638464</a></li>
+<li><a href="https://twitter.com/tek1031/status/1629794444835979272">https://twitter.com/tek1031/status/1629794444835979272</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/kaz_mighty/status/1629789492185026560">28位kaz_mightyさん</a><ul>
+<li><a href="https://twitter.com/kaz_mighty/status/1629804744956076033">https://twitter.com/kaz_mighty/status/1629804744956076033</a></li>
+<li><a href="https://twitter.com/kaz_mighty/status/1629986976891011074">https://twitter.com/kaz_mighty/status/1629986976891011074</a></li>
+<li><a href="https://twitter.com/kaz_mighty/status/1629987467599441921">https://twitter.com/kaz_mighty/status/1629987467599441921</a></li>
+</ul>
+</li>
+<li>29位simanさん</li>
+<li>30位brown_amaurotisさん</li>
+<li>31位zachさん</li>
+<li><a href="https://twitter.com/dj_maeda3/status/1629786719565516801">32位maeda3さん</a><ul>
+<li><a href="https://twitter.com/dj_maeda3/status/1629789982880849920">https://twitter.com/dj_maeda3/status/1629789982880849920</a></li>
+<li><a href="https://twitter.com/dj_maeda3/status/1629795757267234822">https://twitter.com/dj_maeda3/status/1629795757267234822</a></li>
+<li><a href="https://twitter.com/dj_maeda3/status/1629799351496359936">https://twitter.com/dj_maeda3/status/1629799351496359936</a></li>
+<li><a href="https://twitter.com/dj_maeda3/status/1629799987801657345">https://twitter.com/dj_maeda3/status/1629799987801657345</a></li>
+<li><a href="https://twitter.com/dj_maeda3/status/1629810950466576384">https://twitter.com/dj_maeda3/status/1629810950466576384</a></li>
+<li><a href="https://twitter.com/dj_maeda3/status/1629816902683090945">https://twitter.com/dj_maeda3/status/1629816902683090945</a></li>
+<li><a href="https://twitter.com/dj_maeda3/status/1630201199323668482">https://twitter.com/dj_maeda3/status/1630201199323668482</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/ethylene_66/status/1629784253289615361">33位cuthbertさん</a><ul>
+<li><a href="https://twitter.com/ethylene_66/status/1630229941475483648">https://twitter.com/ethylene_66/status/1630229941475483648</a></li>
+<li><a href="https://twitter.com/ethylene_66/status/1630230150058233856">https://twitter.com/ethylene_66/status/1630230150058233856</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/C7C7LL/status/1629786053002526720">34位c7c7さん</a><ul>
+<li><a href="https://twitter.com/C7C7LL/status/1629789544404127745">https://twitter.com/C7C7LL/status/1629789544404127745</a></li>
+<li><a href="https://twitter.com/C7C7LL/status/1629792624034082818">https://twitter.com/C7C7LL/status/1629792624034082818</a></li>
+</ul>
+</li>
+<li>35位Kahukaさん</li>
+<li><a href="https://twitter.com/terry_u16/status/1629784652104994816">36位terry_u16さん</a><ul>
+<li><a href="https://twitter.com/terry_u16/status/1629786825223962625">https://twitter.com/terry_u16/status/1629786825223962625</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629787691024805888">https://twitter.com/terry_u16/status/1629787691024805888</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629788114284695553">https://twitter.com/terry_u16/status/1629788114284695553</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629789782028218373">https://twitter.com/terry_u16/status/1629789782028218373</a><ul>
+<li><a href="https://twitter.com/contramundum2/status/1629789178685952001">https://twitter.com/contramundum2/status/1629789178685952001</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/terry_u16/status/1629790126359429122">https://twitter.com/terry_u16/status/1629790126359429122</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629790351262380033">https://twitter.com/terry_u16/status/1629790351262380033</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629791535553294337">https://twitter.com/terry_u16/status/1629791535553294337</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629793599180230656">https://twitter.com/terry_u16/status/1629793599180230656</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629794734503002113">https://twitter.com/terry_u16/status/1629794734503002113</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629796315923386369">https://twitter.com/terry_u16/status/1629796315923386369</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629798864957095936">https://twitter.com/terry_u16/status/1629798864957095936</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629800605136080897">https://twitter.com/terry_u16/status/1629800605136080897</a><ul>
+<li><a href="https://twitter.com/pu__Ne/status/1629800463922249729">https://twitter.com/pu__Ne/status/1629800463922249729</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/terry_u16/status/1629800716935266305">https://twitter.com/terry_u16/status/1629800716935266305</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629801627925491712">https://twitter.com/terry_u16/status/1629801627925491712</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629803167511633921">https://twitter.com/terry_u16/status/1629803167511633921</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629806397327310853">https://twitter.com/terry_u16/status/1629806397327310853</a><ul>
+<li><a href="https://github.com/terry-u16/ahc018/blob/master/diary.md">https://github.com/terry-u16/ahc018/blob/master/diary.md</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/terry_u16/status/1629808402242191362">https://twitter.com/terry_u16/status/1629808402242191362</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629809420497747969">https://twitter.com/terry_u16/status/1629809420497747969</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629844698436182016">https://twitter.com/terry_u16/status/1629844698436182016</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629845843728801792">https://twitter.com/terry_u16/status/1629845843728801792</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629847240792588293">https://twitter.com/terry_u16/status/1629847240792588293</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629848095163916291">https://twitter.com/terry_u16/status/1629848095163916291</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629848944749735937">https://twitter.com/terry_u16/status/1629848944749735937</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629850596571504641">https://twitter.com/terry_u16/status/1629850596571504641</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629867724112527362">https://twitter.com/terry_u16/status/1629867724112527362</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629869838519681026">https://twitter.com/terry_u16/status/1629869838519681026</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629868421239255042">https://twitter.com/terry_u16/status/1629868421239255042</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629883150951239680">https://twitter.com/terry_u16/status/1629883150951239680</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629886141817323520">https://twitter.com/terry_u16/status/1629886141817323520</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1629887020142301185">https://twitter.com/terry_u16/status/1629887020142301185</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1630085006034079748">https://twitter.com/terry_u16/status/1630085006034079748</a></li>
+<li><a href="https://twitter.com/terry_u16/status/1630228029321494529">https://twitter.com/terry_u16/status/1630228029321494529</a></li>
+<li><a href="https://www.terry-u16.net/entry/ahc018">https://www.terry-u16.net/entry/ahc018</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/stat_learning/status/1629790893095153664">37位starpentagonさん</a><ul>
+<li><a href="https://twitter.com/stat_learning/status/1629797977832439808">https://twitter.com/stat_learning/status/1629797977832439808</a></li>
+<li><a href="https://twitter.com/stat_learning/status/1629812201694576640">https://twitter.com/stat_learning/status/1629812201694576640</a></li>
+<li><a href="https://twitter.com/stat_learning/status/1629813091612639236">https://twitter.com/stat_learning/status/1629813091612639236</a></li>
+<li><a href="https://twitter.com/stat_learning/status/1629824510412361729">https://twitter.com/stat_learning/status/1629824510412361729</a></li>
+<li><a href="https://twitter.com/stat_learning/status/1629826755702951937">https://twitter.com/stat_learning/status/1629826755702951937</a></li>
+<li><a href="https://twitter.com/stat_learning/status/1629840281049907200">https://twitter.com/stat_learning/status/1629840281049907200</a></li>
+<li><a href="https://starpentagon.net/analytics/ahc018/">https://starpentagon.net/analytics/ahc018/</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/shirokuro_buf/status/16298455425232568320">38位m_mさん</a></li>
+<li>39位HBitさん</li>
+<li><a href="https://twitter.com/fkyrz_0111/status/1629786294850293760">40位fky_さん</a><ul>
+<li><a href="https://twitter.com/fkyrz_0111/status/1629787139830595586">https://twitter.com/fkyrz_0111/status/1629787139830595586</a></li>
+<li><a href="https://twitter.com/fkyrz_0111/status/1629790549476782081">https://twitter.com/fkyrz_0111/status/1629790549476782081</a></li>
+<li><a href="https://twitter.com/fkyrz_0111/status/1629791137463689216">https://twitter.com/fkyrz_0111/status/1629791137463689216</a></li>
+</ul>
+</li>
+<li>41位besukohuさん</li>
+<li>42位risujirohさん</li>
+<li>43位Jirotechさん</li>
+<li>44位ks2mさん</li>
+<li>45位hiro116sさん</li>
+<li>46位rhooさん</li>
+<li><a href="https://twitter.com/Yu_212_MC/status/1629786322297831424">47位Yu_212さん</a></li>
+<li><a href="https://twitter.com/sotasingularity/status/1629807398952255488">48位sotanishyさん</a></li>
+<li>49位hirataiさん</li>
+<li><a href="https://twitter.com/skytwittey/status/1629787461483380741">50位yasuwoさん</a></li>
+<li>51位saitodevel01さん</li>
+<li>52位btk15049さん</li>
+<li>53位sumitacchanさん</li>
+<li><a href="https://twitter.com/arimasenu/status/1629813154330071040">54位iehnさん</a></li>
+<li><a href="https://twitter.com/HEXAcpp/status/1629787770947518465">55位hexa0611さん</a></li>
+<li><a href="https://twitter.com/highjump_425/status/1629815340489379840">56位highjumpさん</a></li>
+<li>57位nautさん</li>
+<li><a href="https://twitter.com/t33f/status/1629783791886581760">58位kozimaさん</a><ul>
+<li><a href="https://twitter.com/t33f/status/1629785259746160642">https://twitter.com/t33f/status/1629785259746160642</a></li>
+<li><a href="https://twitter.com/t33f/status/1629799441535254529">https://twitter.com/t33f/status/1629799441535254529</a><ul>
+<li><a href="https://twitter.com/contramundum2/status/1629798946783776768">https://twitter.com/contramundum2/status/1629798946783776768</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/t33f/status/1629801175758274565">https://twitter.com/t33f/status/1629801175758274565</a></li>
+<li><a href="https://twitter.com/t33f/status/1629826200700059649">https://twitter.com/t33f/status/1629826200700059649</a></li>
+<li><a href="https://twitter.com/t33f/status/1629843787613884418">https://twitter.com/t33f/status/1629843787613884418</a></li>
+<li><a href="https://twitter.com/t33f/status/1629845038179192834">https://twitter.com/t33f/status/1629845038179192834</a></li>
+<li><a href="https://twitter.com/t33f/status/1629859319859806208">https://twitter.com/t33f/status/1629859319859806208</a></li>
+<li><a href="https://twitter.com/t33f/status/1630197218597543937">https://twitter.com/t33f/status/1630197218597543937</a></li>
+</ul>
+</li>
+<li>59位shibh308さん</li>
+<li><a href="https://twitter.com/snippet2022/status/1629848607779328006">60位broadさん</a></li>
+<li><a href="https://twitter.com/YamagenSakam/status/1629784103305510913">61位YamagenSakamさん</a><ul>
+<li><a href="https://twitter.com/YamagenSakam/status/1629804004673990656">https://twitter.com/YamagenSakam/status/1629804004673990656</a></li>
+<li><a href="https://twitter.com/YamagenSakam/status/1629834532190048256">https://twitter.com/YamagenSakam/status/1629834532190048256</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/birdwatcherYT/status/1629789979651211266">62位birdwatcherさん</a><ul>
+<li><a href="https://twitter.com/birdwatcherYT/status/1629794191768420352">https://twitter.com/birdwatcherYT/status/1629794191768420352</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/contramundum2/status/1629783803270164488">63位eivourさん</a><ul>
+<li><a href="https://twitter.com/contramundum2/status/1629784992862576642">https://twitter.com/contramundum2/status/1629784992862576642</a></li>
+<li><a href="https://twitter.com/contramundum2/status/1629787107622531072">https://twitter.com/contramundum2/status/1629787107622531072</a></li>
+<li><a href="https://twitter.com/contramundum2/status/1629789178685952001">https://twitter.com/contramundum2/status/1629789178685952001</a></li>
+<li><a href="https://twitter.com/contramundum2/status/1629798946783776768">https://twitter.com/contramundum2/status/1629798946783776768</a></li>
+<li><a href="https://twitter.com/contramundum2/status/1629834620886994944">https://twitter.com/contramundum2/status/1629834620886994944</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/TusYuuki/status/1629783858496573440">64位yuuki_nさん</a><ul>
+<li><a href="https://qiita.com/tus_yuuki/items/34af146f2980680b7843">https://qiita.com/tus_yuuki/items/34af146f2980680b7843</a></li>
+</ul>
+</li>
+<li>65位kensさん<ul>
+<li><a href="https://twitter.com/kens_kyopro/status/1629788796274475010">https://twitter.com/kens_kyopro/status/1629788796274475010</a></li>
+<li><a href="https://twitter.com/kens_kyopro/status/1629789588058251264">https://twitter.com/kens_kyopro/status/1629789588058251264</a></li>
+</ul>
+</li>
+<li>66位nutsさん</li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1629785027453255680">67位zattさん</a><ul>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1629789959807971335">https://twitter.com/zat_is_a_cat/status/1629789959807971335</a></li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1629792145346539521">https://twitter.com/zat_is_a_cat/status/1629792145346539521</a></li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1629792589481402368">https://twitter.com/zat_is_a_cat/status/1629792589481402368</a></li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1629795647036727296">https://twitter.com/zat_is_a_cat/status/1629795647036727296</a></li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1629796344188780544">https://twitter.com/zat_is_a_cat/status/1629796344188780544</a></li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1629799631701024771">https://twitter.com/zat_is_a_cat/status/1629799631701024771</a></li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1629802409739563010">https://twitter.com/zat_is_a_cat/status/1629802409739563010</a></li>
+<li><a href="https://twitter.com/zat_is_a_cat/status/1630057325292834817">https://twitter.com/zat_is_a_cat/status/1630057325292834817</a></li>
+</ul>
+</li>
+<li>68位krさん</li>
+<li><a href="https://twitter.com/kabipoyo/status/1629787235154554880">69位kabipoyoさん</a></li>
+<li><a href="https://twitter.com/ikoma_3/status/1629846517896069120">70位ikomaさん</a><ul>
+<li><a href="https://twitter.com/ikoma_3/status/1630351577189056512">https://twitter.com/ikoma_3/status/1630351577189056512</a></li>
+</ul>
+</li>
+<li>71位sash0さん</li>
+<li>72位Ueddyさん</li>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629784832493637632">73位G4NP0Nさん</a><ul>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629786113710919680">https://twitter.com/G4NP0N_kyopro/status/1629786113710919680</a></li>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629789692240740352">https://twitter.com/G4NP0N_kyopro/status/1629789692240740352</a></li>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629793934586302464">https://twitter.com/G4NP0N_kyopro/status/1629793934586302464</a></li>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629800641534263298">https://twitter.com/G4NP0N_kyopro/status/1629800641534263298</a></li>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629801791843110912">https://twitter.com/G4NP0N_kyopro/status/1629801791843110912</a></li>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629802496888815617">https://twitter.com/G4NP0N_kyopro/status/1629802496888815617</a></li>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629804174652379136">https://twitter.com/G4NP0N_kyopro/status/1629804174652379136</a></li>
+<li><a href="https://twitter.com/G4NP0N_kyopro/status/1629865221174210560">https://twitter.com/G4NP0N_kyopro/status/1629865221174210560</a></li>
+</ul>
+</li>
+<li>74位sugarrrさん</li>
+<li><a href="https://twitter.com/AllDirections4/status/1629784217960988672">75位AllDirectionsさん</a><ul>
+<li><a href="https://twitter.com/AllDirections4/status/1629795556766937090">https://twitter.com/AllDirections4/status/1629795556766937090</a></li>
+<li><a href="https://twitter.com/AllDirections4/status/1629801281610203136">https://twitter.com/AllDirections4/status/1629801281610203136</a></li>
+<li><a href="https://twitter.com/AllDirections4/status/1629804332815360000">https://twitter.com/AllDirections4/status/1629804332815360000</a></li>
+<li><a href="https://twitter.com/AllDirections4/status/1629813514700460032">https://twitter.com/AllDirections4/status/1629813514700460032</a></li>
+</ul>
+</li>
+<li>76位rabotさん</li>
+<li><a href="https://twitter.com/EmptyBox_0/status/1629794175876214784">77位petit_sophiaさん</a></li>
+<li>78位dn154さん</li>
+<li><a href="https://twitter.com/sumoooru/status/1629791661932019712">79位sumoooruさん</a></li>
+<li><a href="https://twitter.com/mih28731325/status/1629784861870546948">80位Moegiさん</a><ul>
+<li><a href="https://twitter.com/mih28731325/status/1629786687936294912">https://twitter.com/mih28731325/status/1629786687936294912</a></li>
+<li><a href="https://twitter.com/mih28731325/status/1629812410931646464">https://twitter.com/mih28731325/status/1629812410931646464</a></li>
+</ul>
+</li>
+<li>81位nnnSMMさん</li>
+<li>82位amitaniさん</li>
+<li><a href="https://twitter.com/pg_ariii/status/1629832733571842048">83位arimattiさん</a><ul>
+<li><a href="https://twitter.com/pg_ariii/status/1630044144377950208">https://twitter.com/pg_ariii/status/1630044144377950208</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/5bin101/status/1630383064345108480">84位bin101さん</a></li>
+<li><a href="https://twitter.com/tokoharu_procon/status/1629811645789904896">85位tokoharuさん</a><ul>
+<li><a href="https://twitter.com/tokoharu_procon/status/1629846886004985862">https://twitter.com/tokoharu_procon/status/1629846886004985862</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1629798853821202433">86位hamamuさん</a><ul>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1629810403571294209">https://twitter.com/hamamu_kyopro/status/1629810403571294209</a></li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1629862395811356673">https://twitter.com/hamamu_kyopro/status/1629862395811356673</a></li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1629863525991747584">https://twitter.com/hamamu_kyopro/status/1629863525991747584</a></li>
+</ul>
+</li>
+<li>87位ichyoさん</li>
+<li><a href="https://twitter.com/tsukammo/status/1629784663043743749">88位tsukammoさん</a><ul>
+<li><a href="https://hackmd.io/@tRy4BmqEQNynaezZyF9K5g/SyNTo3T6i">https://hackmd.io/@tRy4BmqEQNynaezZyF9K5g/SyNTo3T6i</a></li>
+<li><a href="https://twitter.com/tsukammo/status/1629842981611266055">https://twitter.com/tsukammo/status/1629842981611266055</a></li>
+<li><a href="https://twitter.com/tsukammo/status/1630055493225050113">https://twitter.com/tsukammo/status/1630055493225050113</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/RinSakamichi/status/1629819502564356096">89位RinSakamichiさん</a><ul>
+<li><a href="https://twitter.com/RinSakamichi/status/1630042151727034373">https://twitter.com/RinSakamichi/status/1630042151727034373</a></li>
+<li><a href="https://twitter.com/RinSakamichi/status/1630142149147906048">https://twitter.com/RinSakamichi/status/1630142149147906048</a><ul>
+<li><a href="https://www.youtube.com/watch?v=3KPmfDVTxRQ">https://www.youtube.com/watch?v=3KPmfDVTxRQ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>90位y_kawanoさん</li>
+<li>91位sensaurさん</li>
+<li><a href="https://twitter.com/theory_and_me/status/1630201139617746945">92位theory_and_meさん</a><ul>
+<li><a href="https://twitter.com/theory_and_me/status/1630204759516004353">https://twitter.com/theory_and_me/status/1630204759516004353</a><ul>
+<li><a href="https://kopricky.github.io/code/Academic/steiner_tree.html">https://kopricky.github.io/code/Academic/steiner_tree.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://twitter.com/ehekatlact/status/1629803574103515136">93位ehekatlactさん</a><ul>
+<li><a href="https://twitter.com/ehekatlact/status/1629804270559305729">https://twitter.com/ehekatlact/status/1629804270559305729</a></li>
+</ul>
+</li>
+<li>94位nnnnishiさん</li>
+<li><a href="https://twitter.com/soiya_ksk/status/1629788774615093249">95位mtsdさん</a><ul>
+<li><a href="https://twitter.com/soiya_ksk/status/1629789183886913538">https://twitter.com/soiya_ksk/status/1629789183886913538</a></li>
+<li><a href="https://twitter.com/soiya_ksk/status/1629790115550887936">https://twitter.com/soiya_ksk/status/1629790115550887936</a></li>
+<li><a href="https://twitter.com/soiya_ksk/status/1629790588542550017">https://twitter.com/soiya_ksk/status/1629790588542550017</a></li>
+</ul>
+</li>
+<li>96位chudanuさん</li>
+<li>97位Sullyperさん</li>
+<li>98位tosca2020さん</li>
+<li>99位hirokazu1020さん</li>
+<li>100位fgwiebfaoishさん</li>
+</ul>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://togetter.com/li/2089464">agwさんTwitterまとめ</a></li>
+<li><a href="https://twitter.com/hashtag/AHC018">Twitter hashtag AHC018</a></li>
+<li><a href="https://twitter.com/hashtag/rcl_procon">Twitter hashtag rcl_procon</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1630393347759276032">kiri8128 さん Score-Performance グラフ</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; jetbead 2021
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ce72ebac.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
