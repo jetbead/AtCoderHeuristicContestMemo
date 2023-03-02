@@ -94,8 +94,16 @@ x128pp();
 
 ### hack(シード値特定、hash衝突)
 
+#### 乱数予測
+
 - https://twitter.com/yosupot/status/1236215631034253312
   - https://atcoder.jp/contests/rcl-contest-2020-final
+- https://github.com/kmyk/mersenne-twister-predictor
+  - http://herumi.in.coocan.jp/diary/1505.html#18
+  - メルセンヌツイスターは、624個程度観察できれば次の乱数を予測できる
+
+#### hash衝突
+
 - https://codeforces.com/blog/entry/62393
   - https://qiita.com/recuraki/items/652f97f5330fde231ddb
 - https://noshi91.hatenablog.com/entry/2022/04/18/000958
@@ -221,3 +229,7 @@ class WalkersAliasMethod {
   - 評価値を求めるのが重い場合、選択時に計算を持ってこれるテク
   - https://www.youtube.com/watch?v=eddDPITjzDc (35分ごろ)
   - https://twitter.com/terry_u16/status/1576231985596764160
+- 4近傍選択時の優先度シャッフル
+  - https://twitter.com/chokudai/status/1628614093329559552
+  - `int nx = x + vx[arr[k]]`みたいにarrを入れることで、方向の優先度をシャッフル
+  - これがない場合は上下左右が固定なので、一方方向に偏りやすいのを回避できる

@@ -24,12 +24,35 @@
 - ヒューリスティックコンテスト(マラソン)、ゲーム AI コンテストで使う武器まとめ(Nyanyan_Cube さん)
   - https://note.com/nyanyan_cubetech/n/n5e30c52139d3
 
+## 改善アイデアの試し方
+
+- https://twitter.com/shr_pc/status/1630411810368290816
+  - 簡単な解法を試し尽くすまでより複雑な実装をしない
+  - https://twitter.com/FakePsyho/status/1630114201308987394
+- [AHC018解説放送の後半(59:40-)](https://www.youtube.com/watch?v=KoAjmMkDLgw)
+  - アイデアを、期待値の大きさ・確実性・実装の大変さ、的な軸で考えられる
+    - 解法アイデアを出すところの難しさ
+      - たくさんいろんな問題や他の人の解法を見てみる
+      - 一つの問題を極めるまでやってみる
+    - 実装できるかどうかの判断の難しさ
+    - どれから・どの順番で取り組むかの難しさ
+      - 連続的な改善アイデア
+      - 方針を変えるようなアイデア
+  - AHCは失敗のリスクがほとんどないので、最大を狙っていくのがよい
+    - AHCのレーティングシステム的に1発当てるほうが重要
+  - 方針を変えたら無駄になるようなところに頑張りすぎない
+    - バグってたり不十分な調整でハズレ方針判断してしまうリスクがあるので、ある程度正しく検証できる程度に作り込む必要性
+    - ただし調整しすぎるのは悪い面もあるので、最後に行うのが推奨
+      - https://twitter.com/FakePsyho/status/1631275687058219010
+
 ## AHCレーティング
 
 - https://twitter.com/koyumeishi_/status/1387439273251524608
 
-## AtCoder API
+## AtCoder関連のAPI
 
 - コンテスト情報json形式
   - https://atcoder.jp/api/contests/ahc001
   - https://twitter.com/snuke_/status/1498207465317363713
+- AtCoder Problems API / Datasets
+  - https://github.com/kenkoooo/AtCoderProblems/blob/master/doc/api.md
