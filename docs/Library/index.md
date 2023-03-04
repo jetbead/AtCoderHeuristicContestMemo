@@ -14,6 +14,7 @@
   - [統計モデリング](./stats_modeling.md)
   - [機械学習](./ml.md)
   - [数理最適化](./math_opt.md)
+  - [不確かさの取り扱い](./uncertainty.md)
 - その他
   - [ゲーム木探索](./game_tree.md)
   - [マルチエージェント](./multi_agent.md)
