@@ -59,6 +59,9 @@ from logging import getLogger
 logger = getLogger(__name__)
 ```
 
+- 色付け
+  - colorlog
+
 ## pathlib
 
 - https://www.kaggle.com/code/ttahara/elementary-usage-example-of-pathlib-path

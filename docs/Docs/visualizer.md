@@ -18,3 +18,21 @@
 - OpenSiv3D
   - https://github.com/Siv3D/OpenSiv3D
   - https://zenn.dev/reputeless/books/siv3d-documentation
+
+
+## 自作でVisualizeする場合の手段の例
+
+- 公式visualizer改造
+- svg
+- python
+  - PIL
+  - matplotlib
+  - plotly
+  - tcl/tk
+- gnuplot
+- c++
+  - OpenSiv3D https://github.com/Siv3D/OpenSiv3D
+  - SDL
+- js
+  - p5.js https://p5js.org/
+  
