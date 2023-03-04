@@ -607,13 +607,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sphsmoothed-particle-hydrodynamics" class="md-nav__link">
-    SPH(Smoothed Particle Hydrodynamics)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -713,6 +706,13 @@
   
     <nav class="md-nav" aria-label="その他">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sphsmoothed-particle-hydrodynamics" class="md-nav__link">
+    SPH(Smoothed Particle Hydrodynamics)
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_26" class="md-nav__link">
@@ -1403,23 +1403,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Library/uncertainty.html" class="md-nav__link">
+        不確かさの取り扱い
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_30" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_31" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4_31" id="__nav_4_31_label" tabindex="0">
           Design patterns
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_30">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_31_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_31">
           <span class="md-nav__icon md-icon"></span>
           Design patterns
         </label>
@@ -1627,13 +1641,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#sphsmoothed-particle-hydrodynamics" class="md-nav__link">
-    SPH(Smoothed Particle Hydrodynamics)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1733,6 +1740,13 @@
   
     <nav class="md-nav" aria-label="その他">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sphsmoothed-particle-hydrodynamics" class="md-nav__link">
+    SPH(Smoothed Particle Hydrodynamics)
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_26" class="md-nav__link">
@@ -1859,11 +1873,10 @@
 <li>199 時間</li>
 </ul>
 <h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>(<img alt="⚠" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26a0.svg" title=":warning:" />今回、どこで差がでているかまだよくわかっていないので、あとで追記・修正したい)</p>
 <ul>
 <li>探索と活用のバランスを取りながら、硬いところをできるだけ回避してルートを作る、のが難しい問題</li>
 <li>ざっくり、「格子点や不確実性が高いなどのマスを試掘し、その情報から地図を作成し、水路ルートを更新、を繰り返す」方法が強かった模様</li>
-<li>また今回は、結構似たようなアプローチを取った人が多かったため、細かい調整の違いやパラメータ調整具合でかなり順位に差がでていた可能性がある</li>
+<li>また今回は、結構似たようなアプローチを取った人が多かったためか、細かい処理・関数の違いやパラメータ調整具合でかなり順位に差がでていた可能性がある</li>
 </ul>
 <h3 id="_4">問題固有の性質<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1908,7 +1921,7 @@
 </li>
 <li>真の頑丈さについて、区間で表現するすると扱いやすい?<ul>
 <li>最大(上限)、最小(下限)</li>
-<li>分布(正規分布)</li>
+<li>分布(正規分布) -&gt; ガウス過程回帰</li>
 </ul>
 </li>
 <li>今回、おおよその値が入力データの統計から分布を見て推定<ul>
@@ -1945,9 +1958,9 @@
 </li>
 <li>家や水路も含むようにしておく<ul>
 <li>軸として追加せずに、グリッドにはならないが、近くの格子点と辺をつないでグラフにする、なども</li>
+<li>1位Psyhoさんの場合: <a href="https://twitter.com/bowwowforeach/status/1630191132541079552">https://twitter.com/bowwowforeach/status/1630191132541079552</a>  </li>
 </ul>
 </li>
-<li>1位Psyhoさんの場合: <a href="https://twitter.com/bowwowforeach/status/1630191132541079552">https://twitter.com/bowwowforeach/status/1630191132541079552</a>  </li>
 </ul>
 <h5 id="_9">不確実性が高い地点<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
 <ul>
@@ -1978,7 +1991,6 @@
 </li>
 <li>距離の逆数を重みとした加重平均</li>
 <li>パーリンノイズはユークリッド距離的な感じなので、距離を使うときはユークリッド距離で計算したほうがよいかも</li>
-<li>ただし、</li>
 </ul>
 <h5 id="_13">線形補間<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h5>
 <ul>
@@ -1992,16 +2004,16 @@
 <h5 id="_14">近傍マスで重み付け<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
 <ul>
 <li><a href="https://zenn.dev/gmeriaog/articles/880af6fb3728b5">https://zenn.dev/gmeriaog/articles/880af6fb3728b5</a></li>
-<li>
-<p><a href="https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb">https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb</a></p>
-<ul>
+<li><a href="https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb">https://qiita.com/toast-uz/items/a71bcfbe721aba18c8fb</a><ul>
 <li>入力データから統計を取って、破壊できなかったときの実際の頑丈さ、dだけ離れた位置で何倍になるかなど確認し、調整</li>
-<li>画像っぽく考える</li>
-<li>カーネルによる重み和/平均</li>
-<li>フィルタとかのカーネル(m*m)っぽく見て重み和/平均を考える</li>
-<li>CNN(U-Net)を使う</li>
 </ul>
 </li>
+<li>画像っぽく考える</li>
+<li>カーネルによる重み和/平均<ul>
+<li>フィルタとかのカーネル(m*m)っぽく見て重み和/平均を考える</li>
+</ul>
+</li>
+<li>CNN(U-Net)を使う</li>
 </ul>
 <h5 id="_15">ガウス過程回帰<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
 <ul>
@@ -2026,19 +2038,12 @@
 <li>移動最小二乗法</li>
 <li><a href="https://en.wikipedia.org/wiki/Moving_least_squares">https://en.wikipedia.org/wiki/Moving_least_squares</a></li>
 </ul>
-<h5 id="sphsmoothed-particle-hydrodynamics">SPH(Smoothed Particle Hydrodynamics)<a class="headerlink" href="#sphsmoothed-particle-hydrodynamics" title="Permanent link">&para;</a></h5>
-<ul>
-<li><a href="https://twitter.com/shr_pc/status/1629798718181629952">https://twitter.com/shr_pc/status/1629798718181629952</a><ul>
-<li><a href="https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics">https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics</a></li>
-<li><a href="https://ja.wikipedia.org/wiki/Smoothed_Particle_Hydrodynamics">https://ja.wikipedia.org/wiki/Smoothed_Particle_Hydrodynamics</a></li>
-</ul>
-</li>
-</ul>
 <h4 id="_16">試掘時のパワー<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <ul>
 <li>基本は、推定値程度(か、少し弱めのパワー)で試す</li>
 <li>また、岩盤が壊れない場合に、壊れるまで試してしまうと、硬い岩盤の場合にかなりコストを使ってしまうので掘り切るのは避けたほうが良い</li>
 <li>壊れない場合は、小さいパワーで追加で削ったり、しきい値以下までしか削らない等で、コストを抑えておく必要がある<ul>
+<li>回数を抑えるために、<code>power_i = init_power * alpha^i</code>的な感じで徐々に増やす感じ、など</li>
 <li>今回、追加で調べるときのパワーは小さい方がよかった模様</li>
 <li>小さいと回数が増えてしまいCによるコストが増えるが、正確に推定でき、周囲の推定精度やルートを削るときのコストが減らせる副次的メリットが大きい</li>
 </ul>
@@ -2114,13 +2119,17 @@
 </ul>
 </li>
 <li>optuna<ul>
-<li>ただし、"自動"チューニングツールを使うことに対する批判もある<ul>
+<li>ただし、"自動"チューニングツールの使い方は気をつけたほうがよいという批判もある<ul>
 <li><a href="https://twitter.com/FakePsyho/status/1631275687058219010">https://twitter.com/FakePsyho/status/1631275687058219010</a></li>
 <li>基本的に自動チューニングが必要なコンテストはあまりない</li>
 <li>自動でチューニングすると洞察が得られない</li>
 <li>単峰性が多く、3分探索やグリッドサーチなどで十分</li>
 <li>早いタイミングでの最適化により、他の手法での改善判断が難しくなる</li>
 <li>必要なら最後に行う</li>
+</ul>
+</li>
+<li><a href="https://twitter.com/not_522/status/1631963338250018818">https://twitter.com/not_522/status/1631963338250018818</a><ul>
+<li>フレームワークとして、可視化やDBでの管理などもあるのでそちらを有効活用</li>
 </ul>
 </li>
 </ul>
@@ -2131,6 +2140,14 @@
 <li>6位のarvindf232さんは、焼き鈍し法っぽい感じで、テストケースを時間とともに増やしながらパラメータ(十数個)を最適化した模様</li>
 </ul>
 <h3 id="_25">その他<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<h4 id="sphsmoothed-particle-hydrodynamics">SPH(Smoothed Particle Hydrodynamics)<a class="headerlink" href="#sphsmoothed-particle-hydrodynamics" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://twitter.com/shr_pc/status/1629798718181629952">https://twitter.com/shr_pc/status/1629798718181629952</a><ul>
+<li><a href="https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics">https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/Smoothed_Particle_Hydrodynamics">https://ja.wikipedia.org/wiki/Smoothed_Particle_Hydrodynamics</a></li>
+</ul>
+</li>
+</ul>
 <h4 id="_26">ボーリング調査<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
 <ul>
 <li>地盤調査方法</li>
@@ -2324,6 +2341,7 @@
 </li>
 <li><a href="https://twitter.com/montplusa/status/1629788961123213312">23位montplusaさん</a><ul>
 <li><a href="https://twitter.com/montplusa/status/1630077456714727424">https://twitter.com/montplusa/status/1630077456714727424</a></li>
+<li><a href="https://montplusa.hatenablog.com/entry/2023/03/04/004000">https://montplusa.hatenablog.com/entry/2023/03/04/004000</a></li>
 </ul>
 </li>
 <li><a href="https://twitter.com/Shun___PI/status/1629790340864671744">24位Shun_PIさん</a><ul>
