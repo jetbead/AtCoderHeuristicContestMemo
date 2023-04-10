@@ -23,6 +23,8 @@
   - https://twitter.com/iwashi31/status/1437776807944724495
 - ヒューリスティックコンテスト(マラソン)、ゲーム AI コンテストで使う武器まとめ(Nyanyan_Cube さん)
   - https://note.com/nyanyan_cubetech/n/n5e30c52139d3
+- AHCレートの直感的な可視化(Kiri8128 さん)
+  - https://twitter.com/kiri8128/status/1642567258336792578
 
 ## 改善アイデアの試し方
 
