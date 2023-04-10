@@ -43,7 +43,7 @@ title: Home
 
 ## :material-account: About Me
 
-- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2224</span>)
+- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2250</span>)
   - AHCは、橙(rate2400)を目標に、ゆるく参加しています
   - 短期は50位、長期は30位ぐらいに入れるよう、コンテストの反省や知見をまとめておきます
 
