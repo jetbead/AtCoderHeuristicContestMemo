@@ -15,7 +15,7 @@
         <link rel="next" href="stage_array.html">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
     
     
       
@@ -24,9 +24,6 @@
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -54,14 +51,11 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -1087,6 +1081,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    逆操作で戻す
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    分岐を減らす
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1357,6 +1365,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    逆操作で戻す
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    分岐を減らす
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1395,6 +1417,7 @@
 <li><a href="https://www.slideshare.net/KMC_JP/ss-45855264">https://www.slideshare.net/KMC_JP/ss-45855264</a></li>
 <li><a href="https://zenn.dev/irugo/articles/4bd113195228c3">https://zenn.dev/irugo/articles/4bd113195228c3</a></li>
 <li><a href="https://topcoder-tomerun.hatenablog.jp/entry/2017/12/16/000000">https://topcoder-tomerun.hatenablog.jp/entry/2017/12/16/000000</a></li>
+<li><a href="https://en.algorithmica.org/hpc/">https://en.algorithmica.org/hpc/</a></li>
 </ul>
 <h2 id="_1">細かいテク<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="bitbitset">bit演算、bitset高速化<a class="headerlink" href="#bitbitset" title="Permanent link">&para;</a></h3>
@@ -1449,6 +1472,11 @@
 <li><a href="https://qiita.com/kgoto/items/0251e442292d8ebc1f3d">https://qiita.com/kgoto/items/0251e442292d8ebc1f3d</a></li>
 </ul>
 </li>
+<li>vectorなど、十分な量を最初にreserveしておく</li>
+<li>queueやpriority_queueなど、最後にemptyになるまでpopすれば空にできる</li>
+</ul>
+<h2 id="_5">逆操作で戻す<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
 <li>同じ処理を2回 or 変化したやつだけ保持しておいてそれだけ戻す or undo操作で初期状態に戻す<ul>
 <li>Nが大きいのに変化する要素が少ない場合に有効</li>
 </ul>
@@ -1457,8 +1485,11 @@
 <li><a href="https://qiita.com/rhoo/items/f2be256cde5ad2e62dde">https://qiita.com/rhoo/items/f2be256cde5ad2e62dde</a></li>
 </ul>
 </li>
-<li>vectorなど、十分な量を最初にreserveしておく</li>
-<li>queueやpriority_queueなど、最後にemptyになるまでpopすれば空にできる</li>
+</ul>
+<h2 id="_6">分岐を減らす<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.algorithmica.org/hpc/pipelining/branchless/">https://en.algorithmica.org/hpc/pipelining/branchless/</a></li>
+<li><a href="https://probablydance.com/2023/04/27/beautiful-branchless-binary-search/">https://probablydance.com/2023/04/27/beautiful-branchless-binary-search/</a></li>
 </ul>
 
 
