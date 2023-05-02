@@ -6,15 +6,13 @@ title: Home
 
 ## :material-table-of-contents: Contents
 
-- :material-pen: **Contest Memo** (過去のコンテスト情報、解法リンク、反省メモ)
-  - [Contest List](./ContestMemo/index.md)
-- :material-axe: **Library** (Heuristic Contest 関連の自作ライブラリ、調査メモ)
-  - [Library List](./Library/index.md)
+- :material-pen: [Contest List](./ContestMemo/index.md) (過去のコンテスト情報、解法リンク、反省メモ)
+- :material-axe: [Library List](./Library/index.md) (Heuristic Contest 関連の自作ライブラリ、調査メモ)
 
 ## :material-link: Links
 
 - :material-office-building: **Official**
-  - [AtCoder Contests Archive(AHC Classd)](https://atcoder.jp/contests/archive?ratedType=4&category=0&keyword=)
+  - [AtCoder Contests Archive(AHC Class)](https://atcoder.jp/contests/archive?ratedType=4&category=0&keyword=)
   - [AHC Ranking(beta)](https://www.dropbox.com/s/j276tgd7izpc40u/ranking.csv?dl=0)
     - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
 - :material-axis-arrow: **rating/statistics**
