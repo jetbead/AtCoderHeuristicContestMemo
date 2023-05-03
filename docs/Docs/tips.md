@@ -58,3 +58,8 @@
   - https://twitter.com/snuke_/status/1498207465317363713
 - AtCoder Problems API / Datasets
   - https://github.com/kenkoooo/AtCoderProblems/blob/master/doc/api.md
+
+## その他
+
+- AHC難易度表(?)
+  - https://docs.google.com/spreadsheets/d/1KS3UXpcU5lyQTpPbFw10HsX4xas99ZWMTpQtswWsG84/edit?usp=sharing
