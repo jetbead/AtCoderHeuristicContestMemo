@@ -3,13 +3,6 @@
 - 基本的に、本質的な改善に時間を使うほうがよくて、定数倍高速化などは最後の最後に行うほうが良い
   - 高速化が本質じゃないならば
 
-## SIMD
-
-- https://qiita.com/logicmachine/items/3531ddb0b8acc04cb613
-- https://qiita.com/saka1_p/items/72c7755086ec985cade6
-- https://runom.hatenablog.com/entry/2018/12/18/235641
-- https://speakerdeck.com/sato_t/cpuwoatatakakusurujing-puroshi-li-ji
-
 ## Links
 
 - https://xuzijian629.hatenablog.com/entry/2019/03/31/130708
@@ -20,6 +13,31 @@
 - https://zenn.dev/irugo/articles/4bd113195228c3
 - https://topcoder-tomerun.hatenablog.jp/entry/2017/12/16/000000
 - https://en.algorithmica.org/hpc/
+- https://www.cc.u-tokyo.ac.jp/events/lectures/X01/shiryou-1.pdf
+
+## SIMD
+
+- https://qiita.com/logicmachine/items/3531ddb0b8acc04cb613
+- https://qiita.com/saka1_p/items/72c7755086ec985cade6
+- https://runom.hatenablog.com/entry/2018/12/18/235641
+- https://speakerdeck.com/sato_t/cpuwoatatakakusurujing-puroshi-li-ji
+- https://www.cc.u-tokyo.ac.jp/kashiwa_open/files/25simd.pdf
+- https://kaityo256.github.io/sevendayshpc/day7/index.html
+
+## AoS/SoA
+
+- Array of Structure(AoS)、Structure of Arrays(SoA)
+- キャッシュ効率やSIMDなどの最適のされやすさなど
+
+## キャッシュブロッキング
+
+- https://www.isus.jp/hpc/cache-blocking/
+  - https://www.intel.com/content/www/us/en/developer/articles/technical/cache-blocking-techniques.html
+
+## Cache-Oblivious
+
+- https://www.slideshare.net/joisino/ss-258176417
+- https://www.slideshare.net/iwiwi/cacheoblivious-dsirnlp5
 
 ## 細かいテク
 
