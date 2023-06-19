@@ -15,6 +15,9 @@
   - https://twitter.com/koyumeishi_/status/1670132146420453378
   - https://github.com/koyumeishi/ahc_vis_archiver
   - AHCのビジュアライザをローカルに保存するスクリプト
+- AHC Output File Reader
+  - https://github.com/qropa/marathon/tree/main/ahc
+  - ビジュアライザで自動で出力ファイルを読み込む拡張
 
 ## クラウドジャッジ環境整備
 
