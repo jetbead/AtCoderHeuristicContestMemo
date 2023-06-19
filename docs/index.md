@@ -16,19 +16,17 @@ title: Home
   - [AHC Ranking(beta)](https://www.dropbox.com/s/j276tgd7izpc40u/ranking.csv?dl=0)
     - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
 - :material-axis-arrow: **rating/statistics**
-  - AtCoder Marathon Rating History
-    - https://iilj.github.io/AtCoderMarathonRatingHistory/#/rating/
-  - AtCoder Marathon Replay
+  - AtCoder Marathon Replay(当時のマラソンコンテストにおける順位や得点の推移をグラフ表示)
     - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
-  - AHC Rating Simulator
-    - https://saharan.github.io/progcon/ahc-rating-sim.html
-  - competitiveprogramming.info/atcoder/contests/marathon
-    - https://competitiveprogramming.info/atcoder/contests/marathon
-  - AtCoder Heuristic Rating Estimator
+  - AtCoder Heuristic Rating Estimator(目標レーティングへ到達に必要なパフォーマンスを計算するツール)
     - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
-  - AtCoder Heuristic Contest Statistics (ahcstats)
+  - AHC Rating Simulator(パフォーマンスをもとにレーティング変化を計算するツール)
+    - https://saharan.github.io/progcon/ahc-rating-sim.html
+  - competitiveprogramming.info/atcoder/contests/marathon(過去のコンテスト情報が見やすくまとめられたサイト)
+    - https://competitiveprogramming.info/atcoder/contests/marathon
+  - AtCoder Heuristic Contest Statistics (AHCの統計情報が見れるサイト)
     - https://ahcstats.vercel.app/
-  - AtCoder Heuristic Race Ranking (Unofficial)
+  - AtCoder Heuristic Race Ranking (Unofficial, ポイント制でのランキング)
     - https://docs.google.com/spreadsheets/d/1gFmqVYr44QlQBkHKLcd1YyFM_-Ne7Hzf7SODbADx8HI/edit#gid=340005926
 - :material-folder: **summary**
   - https://kato-hiro.github.io/AtCoderClans/
