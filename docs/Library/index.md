@@ -28,6 +28,7 @@
 - [乱数/乱択](./random.md)
 - [高速化(C++)](./speedup.md)
 - [グリッド](./grid.md)
+- [C++テンプレート](./cpp_template.md)
 - [stage 機能付き配列](./stage_array.md)
 - [2次元累積和](./summed_area_table.md)
 - [時間計測 Timer](./timer.md)
