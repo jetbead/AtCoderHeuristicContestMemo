@@ -10,6 +10,11 @@
 
 - https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21#%E9%81%B7%E7%A7%BB
 
+## 置換表(transposition table, hash table)
+
+- ゲームAIの置換表におけるreplacement strategyについて
+  - https://yaneuraou.yaneu.com/2023/06/09/replacement-strategy-in-transposition-table/
+
 ## 重複排除
 
 - ZobristHashを用いる
