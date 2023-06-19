@@ -11,6 +11,10 @@
 - FakePsyho/mmtester
   - https://github.com/FakePsyho/mmtester
   - 注意: AHCは形式が固定ではなく、特殊なテスト形式の場合は非対応なため、事前に動くか確認しておくこと
+- koyumeishi/ahc_vis_archiver
+  - https://twitter.com/koyumeishi_/status/1670132146420453378
+  - https://github.com/koyumeishi/ahc_vis_archiver
+  - AHCのビジュアライザをローカルに保存するスクリプト
 
 ## クラウドジャッジ環境整備
 
