@@ -1,5 +1,7 @@
 # C++テンプレート
 
+- 注意: ころころ変わる可能性あり
+
 ## 焼きなましテンプレート
 
 ```cpp
@@ -60,23 +62,52 @@ Timer global_timer;
 
 struct State {
     int score;
+    State() : score(0) {
+    }
+    inline bool operator<(const State& other) const {
+        return score < other.score;
+    }
+    inline bool operator>(const State& other) const {
+        return score > other.score;
+    }
 };
 
-class Neighborhood {
+class Transition {
    protected:
+    const string name;
     State& state;
 
    public:
-    Neighborhood(State& state) : state(state) {
+    Transition(const string& name, State& state) : name(name), state(state) {
     }
     virtual void apply() = 0;
     virtual void rollback() = 0;
+    virtual string get_name() {
+        return name;
+    }
 };
 
-class Neighborhood1 : public Neighborhood {
+class TransitionSelector {
+    vector<int> table;
+    vector<Transition*> transitions;
+
+   public:
+    void add(Transition& transition, int weight) {
+        int idx = transitions.size();
+        for (int i = 0; i < weight; i++) {
+            table.push_back(idx);
+        }
+        transitions.push_back(&transition);
+    }
+    Transition* get() {
+        return transitions[table[xor128() % table.size()]];
+    }
+};
+
+class Transition1 : public Transition {
    private:
    public:
-    Neighborhood1(State& state) : Neighborhood(state) {
+    Transition1(const string& name, State& state) : Transition(name, state) {
     }
     void apply() {
         state.score++;
@@ -89,6 +120,9 @@ class Neighborhood1 : public Neighborhood {
 void input() {
 }
 
+void init(State& state) {
+}
+
 double calc_temp(double sec, double time_limit) {
     static const double START_TEMP = 10.0;
     static const double END_TEMP = 1e-9;
@@ -97,15 +131,20 @@ double calc_temp(double sec, double time_limit) {
 
 void solve() {
     State state;
-    state.score = 0;
+    init(state);
+
+    State best_state = state;
 
     // 近傍
-    Neighborhood1 neighborhood1(state);
+    TransitionSelector selector;
+    Transition1 transition1("transition1", state);
+    selector.add(transition1, 100);
 
-    Neighborhood* neighborhood;
+    // 探索
     const double TIME_LIMIT = GLOBAL_TIME_LIMIT - global_timer.getSec();
     Timer timer;
     timer.start();
+    Transition* transition;
     double sec;
     int step = 0;
     while (true) {
@@ -114,11 +153,10 @@ void solve() {
         if (sec > TIME_LIMIT) break;
         double T = calc_temp(sec, TIME_LIMIT);
 
-        // 近傍選択
-        neighborhood = &neighborhood1;
+        transition = selector.get();
 
         int prev_score = state.score;
-        neighborhood->apply();
+        transition->apply();
         int new_score = state.score;
 
         int delta = new_score - prev_score;
@@ -131,14 +169,18 @@ void solve() {
             }
         }
         if (undo) {
-            neighborhood->rollback();
+            transition->rollback();
+        } else {
+            if (best_state < state) {
+                best_state = state;
+            }
         }
 
         // cerr << state.score << endl;
     }
 
     cerr << "steps = " << step << endl;
-    cerr << "Score = " << state.score << endl;
+    cerr << "Score = " << best_state.score << endl;
     cerr << "Processed Time = " << global_timer.getSec() << endl;
 }
 
