@@ -8,6 +8,7 @@
 - https://upura.hatenablog.com/entry/2018/12/28/225234
 - https://goodresearch.dev/
 - https://speakerdeck.com/hpprc/zi-yuan-tositejian-rushi-yan-puroguramu
+- https://twitter.com/mamas16k/status/1660011592870948864
 
 ## 設定ファイル
 
