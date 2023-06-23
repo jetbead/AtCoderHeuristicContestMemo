@@ -11,11 +11,15 @@
 - Topcoderマラソンマッチの探索問題で重要なこと(takapt0226 さん)
   - https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21
 
-## PsyhoさんによるHeuristics/Bot Contest Tips
+## Heuristicsの設計、実装について
 
-- https://twitter.com/FakePsyho/status/1605570944537280512
-- https://ozy4dm.hateblo.jp/entry/2022/12/22/162046
-- https://togetter.com/li/2025077
+- Heuristics/Bot Contest Tips(Psyhoさん)
+  - https://twitter.com/FakePsyho/status/1605570944537280512
+  - https://ozy4dm.hateblo.jp/entry/2022/12/22/162046
+  - https://togetter.com/li/2025077
+- Introduction to Design and Implementation of Metaheuristics(umeponさん)
+  - https://speakerdeck.com/umepon/introduction-to-design-and-implementation-of-metaheuristics
+
 
 ## メモ
 
