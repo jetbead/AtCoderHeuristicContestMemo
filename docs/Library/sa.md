@@ -156,3 +156,9 @@
 ### Successive Halving
 
 - https://cyberagent.ai/blog/research/1036/
+
+
+### その他のネタ
+
+- https://twitter.com/chokudai/status/1672116955330011136
+  - 「これまでの遷移の評価差分の絶対値の平均値」を最高温度に設定
