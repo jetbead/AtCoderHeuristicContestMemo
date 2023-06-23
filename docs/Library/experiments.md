@@ -7,6 +7,7 @@
 - https://takuti.me/ja/note/data-science-project-structure/
 - https://upura.hatenablog.com/entry/2018/12/28/225234
 - https://goodresearch.dev/
+- https://speakerdeck.com/hpprc/zi-yuan-tositejian-rushi-yan-puroguramu
 
 ## 設定ファイル
 
