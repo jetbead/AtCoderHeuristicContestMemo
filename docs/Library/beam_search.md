@@ -19,6 +19,7 @@
 
 - ZobristHashを用いる
   - [乱数/乱択](./random.md)
+- 確定した部分は無視する
 
 ## 多様性
 
@@ -31,6 +32,15 @@
   - AHC019 USAさん解
 - 評価関数がうまく設計できたり、ある程度良い解が多い場合など、高速に、よい解が得られる
 
+## 状態の差分更新で木のノードを行き来するテク
+
+- advance/undo操作で状態を行き来する(差分)やつ
+  - 状態の差分更新をすることで、状態のコピーをなくす
+- https://gitlab.com/rafaelbocquet-cpcontests/euler-tour-beam-search (euler-tour beam-search)
+- https://qiita.com/rhoo/items/f2be256cde5ad2e62dde
+- https://twitter.com/threecourse/status/1381102400400809992
+- https://twitter.com/search?q=from%3Acolun%20until%3A2018-04-19%20since%3A2018-04-16&src=typed_query&f=live
+- https://twitter.com/chokudai/status/986484347069915138
 
 ## 上位N件を高速に取る話
 
@@ -42,5 +52,4 @@
 
 ## 高度な話題
 
-- https://qiita.com/rhoo/items/f2be256cde5ad2e62dde
 - https://twitter.com/threecourse/status/1380460108551843841
