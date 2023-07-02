@@ -23,6 +23,7 @@
 - https://speakerdeck.com/sato_t/cpuwoatatakakusurujing-puroshi-li-ji
 - https://www.cc.u-tokyo.ac.jp/kashiwa_open/files/25simd.pdf
 - https://kaityo256.github.io/sevendayshpc/day7/index.html
+- https://speakerdeck.com/herumi/simdnoji-chu-toguan-shu-noshi-zhuang-li
 
 ## AoS/SoA
 
