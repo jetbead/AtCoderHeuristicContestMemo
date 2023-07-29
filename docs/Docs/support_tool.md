@@ -37,3 +37,6 @@
   - https://github.com/FastAlien/cpp-merge
 - caide (C++ code inliner)
   - https://github.com/slycelote/caide/tree/master/libcaide
+- yunixさんのマラソン系コンテストでソースコードを分割して書く方法のメモ
+  - https://yunix-kyopro.hatenablog.com/entry/2023/03/14/220453
+  - https://github.com/yunix-kyopro/AHC-cpp-template-public
