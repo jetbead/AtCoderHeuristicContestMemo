@@ -5,6 +5,7 @@
 - https://hakomof.hatenablog.com/entry/2018/12/06/000000
 - https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
 - https://note.com/nyanyan_cubetech/n/n5e30c52139d3
+- https://platinum-prog.hatenablog.com/entry/2023/07/28/222536
 
 ## 確実に前進
 
@@ -41,6 +42,7 @@
 - https://twitter.com/threecourse/status/1381102400400809992
 - https://twitter.com/search?q=from%3Acolun%20until%3A2018-04-19%20since%3A2018-04-16&src=typed_query&f=live
 - https://twitter.com/chokudai/status/986484347069915138
+- https://github.com/niuez/niuristic/blob/main/algorithm/beam_search/beam_search.md
 
 ## 上位N件を高速に取る話
 

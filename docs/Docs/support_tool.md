@@ -35,3 +35,5 @@
   - atcoder library(ac-library)を使っていたりすると、シンボル衝突などでうまく動かないかも
 - cpp-merge
   - https://github.com/FastAlien/cpp-merge
+- caide (C++ code inliner)
+  - https://github.com/slycelote/caide/tree/master/libcaide
