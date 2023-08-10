@@ -6,6 +6,7 @@
 - https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
 - https://note.com/nyanyan_cubetech/n/n5e30c52139d3
 - https://platinum-prog.hatenablog.com/entry/2023/07/28/222536
+- https://platinum-prog.hatenablog.com/entry/2023/08/09/203217
 
 ## 確実に前進
 
