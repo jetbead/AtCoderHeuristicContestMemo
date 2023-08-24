@@ -22,6 +22,7 @@
   - [情報圧縮](./compress.md)
   - [分枝限定法](./branch_and_bound.md)
   - [近似アルゴリズム](./approx_algo.md)
+  - [パターン生成](./patterns.md)
 
 ## ライブラリ
 
@@ -50,6 +51,7 @@
 
 - [実験、環境構築](./experiments.md)
 - [pythonスニペット](./python_snippet.md)
+- [C++関数メモ](./func.md)
 - [Optuna](./optuna.md)
 - [用語集](./glossary.md)
 

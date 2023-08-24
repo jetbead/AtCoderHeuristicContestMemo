@@ -10,6 +10,9 @@
   - http://www.colun.net/archives/294
 - Topcoderマラソンマッチの探索問題で重要なこと(takapt0226 さん)
   - https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21
+- メタヒューリスティクスで広がる「解けた！」の世界(terry_u16 さん)
+  - https://speakerdeck.com/terryu16/metahiyurisuteikusudeguang-garu-jie-keta-noshi-jie
+
 
 ## Heuristicsの設計、実装について
 
@@ -29,6 +32,8 @@
   - https://note.com/nyanyan_cubetech/n/n5e30c52139d3
 - AHCレートの直感的な可視化(Kiri8128 さん)
   - https://twitter.com/kiri8128/status/1642567258336792578
+- 評価関数を考えるときに参考になる図(phocom さん)
+  - https://twitter.com/_phocom/status/1693217561381404801
 
 ## 改善アイデアの試し方
 
