@@ -870,7 +870,7 @@
         
           <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
-    ラプラス方程式/ポアソン方程式
+    山の形での配置コスト最小の配置
   </a>
   
 </li>
@@ -904,6 +904,13 @@
         
           <li class="md-nav__item">
   <a href="#_20" class="md-nav__link">
+    標準正規分布のロジスティック近似
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
     実装周りの工夫
   </a>
   
@@ -917,7 +924,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     お絵かき
   </a>
   
@@ -934,7 +941,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     解説
   </a>
   
@@ -2188,7 +2195,7 @@
         
           <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
-    ラプラス方程式/ポアソン方程式
+    山の形での配置コスト最小の配置
   </a>
   
 </li>
@@ -2222,6 +2229,13 @@
         
           <li class="md-nav__item">
   <a href="#_20" class="md-nav__link">
+    標準正規分布のロジスティック近似
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
     実装周りの工夫
   </a>
   
@@ -2235,7 +2249,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     お絵かき
   </a>
   
@@ -2252,7 +2266,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     解説
   </a>
   
@@ -2528,7 +2542,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="_16">ラプラス方程式/ポアソン方程式<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<h4 id="_16">山の形での配置コスト最小の配置<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <ul>
 <li>山の形になるように配置する場合、山頂を固定して配置コストが最小になるようにしたい場合、外に向かって均等に値を減らすのは実は配置コスト最小ではない</li>
 <li>配置コストの形的には、最適な値はポアソン方程式(＋ディリクレ境界条件)の解から求められるらしい<ul>
@@ -2544,6 +2558,9 @@
 </ul>
 </li>
 <li><a href="https://hooktail.sub.jp/vectoranalysis/Laplacian/">https://hooktail.sub.jp/vectoranalysis/Laplacian/</a></li>
+<li>他の方法でも</li>
+<li><a href="https://twitter.com/terry_u16/status/1694722396207608279">https://twitter.com/terry_u16/status/1694722396207608279</a></li>
+<li><a href="https://qiita.com/jkdorayaki/items/3f7d581b70c7881c7a5f">https://qiita.com/jkdorayaki/items/3f7d581b70c7881c7a5f</a></li>
 </ul>
 <h3 id="_17">その他<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <h4 id="_18">同じ地点を繰り返し計測した場合<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
@@ -2559,7 +2576,12 @@
 <ul>
 <li>同程度になったほうがよいかというと、アプローチ次第で、そうでもなかった模様</li>
 </ul>
-<h4 id="_20">実装周りの工夫<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<h4 id="_20">標準正規分布のロジスティック近似<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://twitter.com/terry_u16/status/1694703649103233145">https://twitter.com/terry_u16/status/1694703649103233145</a></li>
+<li><a href="https://qiita.com/KiyoshiSakurai1984/items/cb8ec1fe09ff690e26b2">https://qiita.com/KiyoshiSakurai1984/items/cb8ec1fe09ff690e26b2</a></li>
+</ul>
+<h4 id="_21">実装周りの工夫<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <ul>
 <li>アプローチを切り替えやすいように実装する<ul>
 <li>関数・クラス(〜Solver)に分ける、Strategyパターン、など</li>
@@ -2583,11 +2605,11 @@
 <li><a href="https://twitter.com/bowwowforeach/status/1693208488921719105">https://twitter.com/bowwowforeach/status/1693208488921719105</a></li>
 <li>今回、コストの数字の桁が多いので、カンマ表示や、表示するときに揃えると見やすい</li>
 </ul>
-<h4 id="_21">お絵かき<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<h4 id="_22">お絵かき<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="https://twitter.com/moooaki/status/1693952792342192555">https://twitter.com/moooaki/status/1693952792342192555</a></li>
 </ul>
-<h2 id="_22">解説<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<h2 id="_23">解説<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
 <p>(50位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=lOPnnHCFc30">AHCラジオ(解説放送)</a></li>
