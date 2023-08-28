@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/toyota-2023-summer-final.png" class="trimimg"> | [TOYOTA Programming Contest 2023 Summer Final](./toyota-2023-summer-final.md) | <span style="color: #0000cc;">short</span> | |
 | <img loading="lazy" src="../imgs/ahc022.png" class="trimimg"> | [RECRUIT 日本橋ハーフマラソン 2023夏(AHC022)](./ahc022.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc021.png" class="trimimg"> | [TOYOTA Programming Contest 2023 Summer(AHC021)](./ahc021.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc020.png" class="trimimg"> | [ALGO ARTISプログラミングコンテスト2023(AHC020)](./ahc020.md) | <span style="color: #0000cc;">short</span> | :material-check: |
