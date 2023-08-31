@@ -57,3 +57,4 @@ title: TOYOTA2023夏Final
 ## Links
 
 - [Twitter hashtag トヨタコンSummer](https://twitter.com/hashtag/%E3%83%88%E3%83%A8%E3%82%BF%E3%82%B3%E3%83%B3Summer)
+- [kiri8128 さん Score-Performance グラフ](https://twitter.com/kiri8128/status/1696911046014124182)
