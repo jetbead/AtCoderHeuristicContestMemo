@@ -68,6 +68,11 @@
 - AtCoder Problems API / Datasets
   - https://github.com/kenkoooo/AtCoderProblems/blob/master/doc/api.md
 
+## 使用できる言語
+
+- AtCoderの各コンテストページのフッターの「ルール」の言語からコンパイラやオプションの確認ができる
+  - (ちなみにこの部分はコンテストごとに自動生成しているらしいので、コンテストごとに異なるみたい)
+
 ## その他
 
 - AHC難易度表(?)
