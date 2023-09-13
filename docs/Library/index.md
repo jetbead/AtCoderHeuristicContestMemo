@@ -23,6 +23,7 @@
   - [分枝限定法](./branch_and_bound.md)
   - [近似アルゴリズム](./approx_algo.md)
   - [パターン生成](./patterns.md)
+  - [未分類トピック](./uncategorized_topic.md)
 
 ## ライブラリ
 

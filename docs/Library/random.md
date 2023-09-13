@@ -45,7 +45,9 @@ uint32_t xor128() {
 
 #### シャッフル
 
+- 単純にランダムに2点をswapするのを繰り返す方法とかだと、偏りがでる
 - Fisher–Yates_shuffle
+  - O(N)
 
 ```cpp
 template <class RandomAccessIterator>
@@ -104,7 +106,6 @@ x128pp();
 - https://www.pcg-random.org/index.html
 - https://ja.wikipedia.org/wiki/Permuted_congruential_generator
 
-
 ### hack(シード値特定、hash衝突)
 
 #### 乱数予測
@@ -122,6 +123,10 @@ x128pp();
 - https://noshi91.hatenablog.com/entry/2022/04/18/000958
 - https://kmyk.github.io/blog/blog/2017/03/08/unordered-map-hash-collision/
 
+### Ziggurat Algorithm
+
+- https://en.wikipedia.org/wiki/Ziggurat_algorithm
+  - https://cpprefjp.github.io/reference/random/normal_distribution.html
 
 ## 重み付きサンプリング(Weighted random sampling)
 

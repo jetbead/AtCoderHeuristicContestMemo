@@ -12,15 +12,17 @@
   - https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21
 - メタヒューリスティクスで広がる「解けた！」の世界(terry_u16 さん)
   - https://speakerdeck.com/terryu16/metahiyurisuteikusudeguang-garu-jie-keta-noshi-jie
+- しっかり学ぶ数理最適化 ヒューリスティック編(hari64 さん)
+  - https://qiita.com/hari64/items/e66fd2a281ab76a58af3
 
 
 ## Heuristicsの設計、実装について
 
-- Heuristics/Bot Contest Tips(Psyhoさん)
+- Heuristics/Bot Contest Tips(Psyho さん)
   - https://twitter.com/FakePsyho/status/1605570944537280512
   - https://ozy4dm.hateblo.jp/entry/2022/12/22/162046
   - https://togetter.com/li/2025077
-- Introduction to Design and Implementation of Metaheuristics(umeponさん)
+- Introduction to Design and Implementation of Metaheuristics(umepon さん)
   - https://speakerdeck.com/umepon/introduction-to-design-and-implementation-of-metaheuristics
 
 

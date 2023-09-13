@@ -221,3 +221,122 @@ fflush(gp);
 fprintf(gp, "exit\n");
 pclose(gp);
 ```
+
+```c++
+// gnuplot.hh
+#pragma once
+
+#include <cassert>
+#include <cstdio>
+#include <memory>
+#include <sstream>
+#include <string>
+
+class Gnuplot {
+    std::unique_ptr<FILE, decltype(&pclose)> gp;
+    int obj_id;
+
+   public:
+    Gnuplot() : gp(popen("gnuplot", "w"), pclose), obj_id(1) {
+        assert(gp);
+    }
+    ~Gnuplot() {
+        print("exit");
+    }
+
+    void print(const std::string& line) {
+        fprintf(gp.get(), line.c_str());
+        fprintf(gp.get(), "\n");
+        fflush(gp.get());
+    }
+
+    void set_label(int y, int x, const std::string& label, bool center = true) {
+        std::stringstream ss;
+        ss << "set label " << obj_id++ << " \"" << label << "\" ";
+        if (center) ss << "center ";
+        ss << "at " << x << "," << y << " front";
+        print(ss.str());
+    }
+
+    void set_rect(int y1, int x1, int y2, int x2, const std::string& color) {
+        std::stringstream ss;
+        ss << "set object " << obj_id++ << " ";
+        ss << "rect from " << x1 << "," << y1 << " to " << x2 << "," << y2 << " ";
+        ss << "fc \"" << color << "\"";
+        print(ss.str());
+    }
+
+    // 以下、設定例・サンプル
+    void initialize(const std::string& file_path, const std::string& title) {
+        std::stringstream ss;
+        ss << "set terminal pngcairo size 800,800\n";
+        ss << "set output \"" << file_path << "\"\n";
+        ss << "set size ratio 1\n";
+        ss << "set title \"" << title << "\"\n";
+        ss << "set grid\n";
+        ss << "set nokey\n";
+        ss << "set xrange [0:100]\n";
+        ss << "set yrange [100:0]\n";
+        ss << "set format x \"\"\n";
+        ss << "set x2tics\n";
+        ss << "set mxtics 10\n";
+        ss << "set mx2tics 10\n";
+        ss << "set mytics 10\n";
+        print(ss.str());
+    }
+
+    void set_grid(int H, int W, int size) {
+        for (int h = 0; h < H; h++) {
+            for (int w = 0; w < W; w++) {
+                std::string color = "#ffffff";
+                if (h % 2 == 0)
+                    color = "#ff7f7f";
+                else if (w % 4 == 0)
+                    color = "#7fff7f";
+
+                set_rect(h * size, w * size, (h + 1) * size, (w + 1) * size, color);
+                std::stringstream ss;
+                ss << "(" << h << "," << w << ")";
+                set_label(h * size + size / 2, w * size + size / 2, ss.str());
+            }
+        }
+    }
+
+    void set_sample_plot() {
+        print("plot \"-\" w lp pt 7");
+        print("5.0 5.0");
+        print("25.0 60.0");
+        print("e");
+    }
+
+    void set_sample_plot2() {
+        print("plot \"-\" w l lw 3 lc rgb \"gray\"");
+        print("5 5");
+        print("5 15");
+        print("");
+        print("5 5");
+        print("15 5");
+        print("");
+        print("e");
+    }
+
+    void set_sample_plot3() {
+        print("plot \"-\" w l lw 3 lc rgb \"gray\", \"-\" w l lw 3 lc rgb \"red\"");
+        print("5 5");
+        print("5 15");
+        print("");
+        print("5 5");
+        print("15 5");
+        print("");
+        print("e");
+
+        print("15 15");
+        print("15 25");
+        print("");
+        print("15 15");
+        print("25 15");
+        print("");
+        print("e");
+    }
+};
+```
