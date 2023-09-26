@@ -5,6 +5,8 @@
     - https://twitter.com/Komaki__/status/1398961656781185026
 - ソルバーやルールの切り替え判断などにも使える可能性
   - https://www.terry-u16.net/entry/ahc008
+- ヒューリスティックコンテストで機械学習しよう(nagissさん)
+  https://speakerdeck.com/nagiss/hiyurisuteitukukontesutodeji-jie-xue-xi-siyou
 
 ## 線形回帰
 
