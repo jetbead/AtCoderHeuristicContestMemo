@@ -16,6 +16,7 @@
   - [数理最適化](./math_opt.md)
   - [不確かさの取り扱い](./uncertainty.md)
 - その他
+  - [グリッド](./grid.md)
   - [ゲーム木探索](./game_tree.md)
   - [マルチエージェント](./multi_agent.md)
   - [探索と活用](./exp2.md)
@@ -29,7 +30,6 @@
 
 - [乱数/乱択](./random.md)
 - [高速化(C++)](./speedup.md)
-- [グリッド](./grid.md)
 - [C++テンプレート](./cpp_template.md)
 - [stage 機能付き配列](./stage_array.md)
 - [2次元累積和](./summed_area_table.md)

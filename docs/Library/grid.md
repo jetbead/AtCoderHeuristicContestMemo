@@ -56,3 +56,39 @@ xoxoxox
 - https://phyllo-algo.hatenablog.com/entry/2017/02/05/040632
   - http://www.kupc.jp/static/media/E.67ad1a46.pdf
 - 最小カット
+
+## 3x3関節点高速化
+
+- 連結成分が操作によってちぎれないかを判定する(=関節点判定)を単純にBFSとかしてしまうと遅い
+- 完全な判定ではないが、近似的に8近傍のみで判定する方法で高速化できる
+- https://twitter.com/takumi152/status/1705891739020525662
+- https://twitter.com/chokudai/status/1706124817915908481
+  - 連結性を保つ用途以外にも、大きな輪っかで連結になるような連結を禁止するような判定にも使える
+- https://twitter.com/Shun___PI/status/1705978257437532498
+
+### 消去可能性
+
+- 画像処理で、あるセルxを削除してトポロジー構造を維持できるかの判定を以下の式で行うことができる
+  - 連結成分だけでなく、穴の数とかも変えない条件がつく
+
+```
+432
+501
+678
+```
+
+- セルの値が0/1として、4近傍の場合、1+3+5+7-1\*2\*3-3\*4\*5-5\*6\*7-7\*8\*1の値が1ならば消去可能
+
+```c++
+bool can_delete(int y, int x, int c) {
+    int x1 = (grid[y][x + 1] == c) ? 1 : 0;
+    int x2 = (grid[y - 1][x + 1] == c) ? 1 : 0;
+    int x3 = (grid[y - 1][x] == c) ? 1 : 0;
+    int x4 = (grid[y - 1][x - 1] == c) ? 1 : 0;
+    int x5 = (grid[y][x - 1] == c) ? 1 : 0;
+    int x6 = (grid[y + 1][x - 1] == c) ? 1 : 0;
+    int x7 = (grid[y + 1][x] == c) ? 1 : 0;
+    int x8 = (grid[y + 1][x + 1] == c) ? 1 : 0;
+    return x1 + x3 + x5 + x7 - x1 * x2 * x3 - x3 * x4 * x5 - x5 * x6 * x7 - x7 * x8 * x1 == 1;
+}
+```
