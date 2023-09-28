@@ -1690,7 +1690,7 @@
         
           <li class="md-nav__item">
   <a href="#_15" class="md-nav__link">
-    状態更新を後に持っていくテク
+    状態更新/判定処理を後に持っていくテク
   </a>
   
 </li>
@@ -2187,7 +2187,7 @@
         
           <li class="md-nav__item">
   <a href="#_15" class="md-nav__link">
-    状態更新を後に持っていくテク
+    状態更新/判定処理を後に持っていくテク
   </a>
   
 </li>
@@ -2467,13 +2467,17 @@
 </ul>
 </li>
 </ul>
-<h3 id="_15">状態更新を後に持っていくテク<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_15">状態更新/判定処理を後に持っていくテク<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <ul>
 <li>「近傍に遷移(状態更新)してから評価関数の値を計算」ではなく「遷移後の評価関数の値を計算して移動すると判断した場合だけ状態を更新」する</li>
 <li>評価関数の値を計算後にundo操作するとundo操作分の時間がかかってしまうが、状態更新前に評価関数が計算できる場合はundo操作を省略できる</li>
 <li><a href="../ContestMemo/ahc009.html">AHC009</a><ul>
 <li>前からDP・後からDPを持っておくと、差分計算が高速に求められる</li>
 <li>さらに、近傍更新時の変更箇所をターン順方向に固定すると、状態更新の方も高速化可能</li>
+</ul>
+</li>
+<li><a href="../ContestMemo/ahc024.html">AHC024</a><ul>
+<li>「色を変える→スコア計算→焼きなましの採用判定→採用されるなら連結性判定＆隣接判定」とすることで、結局rollbackするときに重い判定処理を省略できる</li>
 </ul>
 </li>
 </ul>

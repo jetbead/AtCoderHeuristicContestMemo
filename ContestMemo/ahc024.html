@@ -822,14 +822,41 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3x3" class="md-nav__link">
-    3x3関節点高速化
+  <a href="#invalid" class="md-nav__link">
+    invalidを許容
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#3x3" class="md-nav__link">
+    3x3関節点高速化
+  </a>
+  
+    <nav class="md-nav" aria-label="3x3関節点高速化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    消去可能性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    スコア計算と判定処理の順番を入れ替えるテクで高速化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
     その他
   </a>
   
@@ -841,7 +868,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     解説
   </a>
   
@@ -2051,14 +2078,41 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3x3" class="md-nav__link">
-    3x3関節点高速化
+  <a href="#invalid" class="md-nav__link">
+    invalidを許容
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#3x3" class="md-nav__link">
+    3x3関節点高速化
+  </a>
+  
+    <nav class="md-nav" aria-label="3x3関節点高速化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    消去可能性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    スコア計算と判定処理の順番を入れ替えるテクで高速化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
     その他
   </a>
   
@@ -2070,7 +2124,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     解説
   </a>
   
@@ -2139,7 +2193,7 @@
 <h4 id="1">1マス選んで、隣接マスの色で塗る<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>1マスを選んで、validな状態を維持できるなら、その隣接マスの色で塗ることで、状態を少しだけ変化させられる</li>
-<li>ただ、田のような隣接4マスで考えると、ある1マスの色を変えたい場合、変えた後に色の隣接関係が壊れてしまい、変更できない場合ができる<ul>
+<li>ただ、田のような隣接4マスですべて色が違うような場合を考えると、ある1マスの色を変えたい場合、変えた後に色の隣接関係が壊れてしまい、変更できない場合ができる<ul>
 <li>1マス隣接変更近傍だけだと、微妙に伸びた状態の局所解でハマったりする</li>
 <li>うまくいっていないケースの観察をするとわかる </li>
 </ul>
@@ -2147,7 +2201,10 @@
 </ul>
 <h4 id="2">2マスまとめて変更<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>上記の問題に対応するため、隣接2マス(以上)同時に変更することで対処</li>
+<li>上記の問題に対応するため、隣接2マス(以上)同時に変更することで対処<ul>
+<li>「隣接セルで塗ったら隣接関係が違反になる場合は、その違反になるセルも変更する」というのを繰り返すと複数マス同時変更が考えられる</li>
+</ul>
+</li>
 <li>(平行移動的な感じ)</li>
 </ul>
 <h4 id="_8">行・列の削除<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
@@ -2163,6 +2220,11 @@
 <ul>
 <li>1マス隣接変更近傍に内包されるが、外周の1マスを削る(色0にする)ような近傍も考えられる</li>
 </ul>
+<h3 id="invalid">invalidを許容<a class="headerlink" href="#invalid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>隣接関係が壊れた状態を許すのもできるらしい(解説放送)</li>
+<li>ただし、「繋がっていてはいけないのに繋がっている」は調整しやすいが、「繋がっていないといけないのに切れてる」は調整が難しいので、後者は禁止し前者のみペナルティとして扱うと良い模様</li>
+</ul>
 <h3 id="3x3">3x3関節点高速化<a class="headerlink" href="#3x3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>区がちぎれないかを判定する(=関節点判定)を単純にBFSとかしてしまうと遅い</li>
@@ -2170,9 +2232,27 @@
 <li><a href="https://twitter.com/takumi152/status/1705891739020525662">https://twitter.com/takumi152/status/1705891739020525662</a></li>
 <li><a href="https://twitter.com/chokudai/status/1706124817915908481">https://twitter.com/chokudai/status/1706124817915908481</a></li>
 <li><a href="https://twitter.com/Shun___PI/status/1705978257437532498">https://twitter.com/Shun___PI/status/1705978257437532498</a></li>
+<li>5x5とかでも</li>
 </ul>
-<h3 id="_9">その他<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h4 id="_9">消去可能性<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <ul>
+<li>画像処理の文脈で、トポロジーを維持してある画素を消去できるか？を隣接セルの値を変数にした計算式で判定できる「消去可能性」というのがあるらしい<ul>
+<li>「トポロジー構造を変えない」なので、連結成分数や穴の数などが変化しない(たとえば3x3すべて1の真ん中は穴ができてしまうので削除不可能)</li>
+</ul>
+</li>
+</ul>
+<h3 id="_10">スコア計算と判定処理の順番を入れ替えるテクで高速化<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>素直に実装すると「色を変える→連結性判定→隣接判定→スコア計算→焼きなましの採用判定→採用/rollback」という順番が考えられる</li>
+<li>しかし、この「連結性判定」や「隣接判定」の計算は「スコア計算」よりも結構重い</li>
+<li>「色を変える→スコア計算→焼きなましの採用判定→採用されるなら連結性判定＆隣接判定」と順番を入れ替えることで、rollbackなどの無駄な計算を減らすことができる</li>
+</ul>
+<h3 id="_11">その他<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>回転が必要な遷移<ul>
+<li><a href="https://twitter.com/montplusa/status/1707043155810644316">https://twitter.com/montplusa/status/1707043155810644316</a></li>
+</ul>
+</li>
 <li>埋め込みの一意性についての議論<ul>
 <li><a href="https://twitter.com/risujiroh/status/1705895297678024816">https://twitter.com/risujiroh/status/1705895297678024816</a></li>
 </ul>
@@ -2182,7 +2262,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_10">解説<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h2 id="_12">解説<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p>(50位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=LHH_rpC6hJo">AHCラジオ(解説放送)</a></li>
@@ -2318,6 +2398,14 @@
 <li>48位mamekinさん</li>
 <li>49位rs02さん</li>
 <li><a href="https://twitter.com/kzyKT_M/status/1705885145285496850">50位kzyKTさん</a></li>
+</ul>
+<ul>
+<li>延長戦<ul>
+<li><a href="https://twitter.com/tanakh/status/1706637751830163927">https://twitter.com/tanakh/status/1706637751830163927</a></li>
+<li><a href="https://twitter.com/eijirou_kyopro/status/1706853800773112102">https://twitter.com/eijirou_kyopro/status/1706853800773112102</a></li>
+<li><a href="https://twitter.com/rho__o/status/1707043053394084285">https://twitter.com/rho__o/status/1707043053394084285</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
