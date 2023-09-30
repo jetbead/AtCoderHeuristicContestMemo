@@ -422,3 +422,53 @@ int main() {
     return 0;
 }
 ```
+
+
+## グリッド操作
+
+```cpp
+struct P {
+    int y, x;
+    P() : y(0), x(0) {
+    }
+    P(int y, int x) : y(y), x(x) {
+    }
+};
+bool operator<(const P& a, const P& b) {
+    if (a.y == b.y) return a.x < b.x;
+    return a.y < b.y;
+}
+class Grid {
+    int H, W;
+    vector<int> v;
+
+   public:
+    Grid() : H(0), W(0) {
+    }
+    Grid(int H, int W) : H(H), W(W), v(H * W, 0) {
+    }
+    int operator[](const P& pos) const {
+        return v[pos.y * W + pos.x];
+    }
+    int& operator[](const P& pos) {
+        return v[pos.y * W + pos.x];
+    }
+    int get_H() const {
+        return H;
+    }
+    int get_W() const {
+        return W;
+    }
+    bool in_range(const P& pos) const {
+        return 0 <= pos.y && pos.y < H && 0 <= pos.x && pos.x < W;
+    }
+    void dump() const {
+        for (int y = 0; y < H; y++) {
+            for (int x = 0; x < W; x++) {
+                cerr << setw(3) << v[y * W + x];
+            }
+            cerr << endl;
+        }
+    }
+};
+```
