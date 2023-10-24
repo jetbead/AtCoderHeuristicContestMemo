@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="ahc023.html">
+        <link rel="prev" href="ahc024.html">
       
       
-        <link rel="next" href="ahc025.html">
+        <link rel="next" href="httf2022qual.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>AHC024(丸紅) - AtCoder Heuristic Contest Memo</title>
+        <title>AHC025 - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2023-atcoder-heuristic-contest-024" class="md-skip">
+        <a href="#atcoder-heuristic-contest-025" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AHC024(丸紅)
+              AHC025
             
           </span>
         </div>
@@ -690,6 +690,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="ahc024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AHC024(丸紅)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -705,18 +725,18 @@
           
   
   <span class="md-ellipsis">
-    AHC024(丸紅)
+    AHC025
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="ahc024.html" class="md-nav__link md-nav__link--active">
+      <a href="ahc025.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    AHC024(丸紅)
+    AHC025
   </span>
   
 
@@ -761,57 +781,36 @@
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    問題固有の性質
+    基本アプローチ
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    隣接関係の判定
+    ソート
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="ソート">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    隣接関係を変えない行・列全体の削除
+    アイテムのソート
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    近傍
-  </a>
-  
-    <nav class="md-nav" aria-label="近傍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1マス選んで、隣接マスの色で塗る
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2マスまとめて変更
+    集合のソート
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    行・列の削除
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    外周の1マスを消す
+    ソートの種類
   </a>
   
 </li>
@@ -820,43 +819,132 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid" class="md-nav__link">
-    invalidを許容
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3x3" class="md-nav__link">
-    3x3関節点高速化
-  </a>
-  
-    <nav class="md-nav" aria-label="3x3関節点高速化">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    消去可能性
+    局所改善操作
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    スコア計算と判定処理の順番を入れ替えるテクで高速化
+    大小関係の推定
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
+    必要クエリ数の推定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    重さの推定
+  </a>
+  
+    <nav class="md-nav" aria-label="重さの推定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lp" class="md-nav__link">
+    線形計画法(LP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    重みの推定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    順位スコアの扱い
+  </a>
+  
+    <nav class="md-nav" aria-label="順位スコアの扱い">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    ローカルでの改善判断
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    その他
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    数分割問題
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-insertion-sortfordjohnson-algorithm" class="md-nav__link">
+    Merge-Insertion sort(Ford–Johnson algorithm)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    スターリンソート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#largest-defferencing-methodldm" class="md-nav__link">
+    Largest Defferencing Method(LDM)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#largest-processing-time-heuristics" class="md-nav__link">
+    Largest Processing Time Heuristics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    類似問題
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
     その他
   </a>
   
@@ -868,7 +956,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     解説
   </a>
   
@@ -885,26 +973,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ahc025.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AHC025
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2057,57 +2125,36 @@
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    問題固有の性質
+    基本アプローチ
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    隣接関係の判定
+    ソート
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="ソート">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    隣接関係を変えない行・列全体の削除
+    アイテムのソート
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    近傍
-  </a>
-  
-    <nav class="md-nav" aria-label="近傍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1マス選んで、隣接マスの色で塗る
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2マスまとめて変更
+    集合のソート
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    行・列の削除
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
-    外周の1マスを消す
+    ソートの種類
   </a>
   
 </li>
@@ -2116,43 +2163,132 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid" class="md-nav__link">
-    invalidを許容
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3x3" class="md-nav__link">
-    3x3関節点高速化
-  </a>
-  
-    <nav class="md-nav" aria-label="3x3関節点高速化">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    消去可能性
+    局所改善操作
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    スコア計算と判定処理の順番を入れ替えるテクで高速化
+    大小関係の推定
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
+    必要クエリ数の推定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    重さの推定
+  </a>
+  
+    <nav class="md-nav" aria-label="重さの推定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lp" class="md-nav__link">
+    線形計画法(LP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    重みの推定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    順位スコアの扱い
+  </a>
+  
+    <nav class="md-nav" aria-label="順位スコアの扱い">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    ローカルでの改善判断
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    その他
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    数分割問題
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-insertion-sortfordjohnson-algorithm" class="md-nav__link">
+    Merge-Insertion sort(Ford–Johnson algorithm)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    スターリンソート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#largest-defferencing-methodldm" class="md-nav__link">
+    Largest Defferencing Method(LDM)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#largest-processing-time-heuristics" class="md-nav__link">
+    Largest Processing Time Heuristics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    類似問題
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
     その他
   </a>
   
@@ -2164,7 +2300,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     解説
   </a>
   
@@ -2192,267 +2328,401 @@
                   
 
 
-<h1 id="2023-atcoder-heuristic-contest-024">丸紅プログラミングコンテスト2023 (AtCoder Heuristic Contest 024)<a class="headerlink" href="#2023-atcoder-heuristic-contest-024" title="Permanent link">&para;</a></h1>
+<h1 id="atcoder-heuristic-contest-025">AtCoder Heuristic Contest 025<a class="headerlink" href="#atcoder-heuristic-contest-025" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="https://atcoder.jp/contests/ahc024">https://atcoder.jp/contests/ahc024</a></li>
+<li><a href="https://atcoder.jp/contests/ahc025">https://atcoder.jp/contests/ahc025</a></li>
 </ul>
-<p><img src="../imgs/ahc024.png" width=300></p>
+<p><img src="../imgs/ahc025.png" width=300></p>
 <h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>n*nマスのグリッド上に表現された地図が与えられる</li>
-<li>m区あり、すべてのマスはいずれかの区に属している</li>
-<li>区の隣接関係が同じであるような、できるだけ少ないマスで表現するようなものを見つけよ</li>
+<li>N個のアイテムがある</li>
+<li>ただし、アイテムiの重さw[i]が未知</li>
+<li>天秤によって、指定した2つのアイテム集合の重さの総和を比較した結果を知ることができる</li>
+<li>Q回天秤で比較を行うことで、できるだけ重さの総和の等しいD個の集合に分割せよ</li>
 </ul>
 <h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>4 時間</li>
+<li>199 時間</li>
 </ul>
 <h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>グラフ(隣接情報のみ)に直してから再度グリッド上に埋め込もうと考えると、そもそも満たす解を作る時点で結構難しい</li>
-<li>ざっくり、隣接関係を維持したままグリッドのマスの色を変更する山登り/焼きなましが強かった模様</li>
+<li>基本的な局所改善を見つけて、より効率よく行う方法を見つけるのが重要だったみたい</li>
 </ul>
-<h3 id="_4">問題固有の性質<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">基本アプローチ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li>色の隣接関係のグラフは平面グラフ</li>
-<li>盤面を回転・反転しても色の隣接関係は変わらない</li>
-</ul>
-<h3 id="_5">隣接関係の判定<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>愚直にはO(N^2)で判定</li>
-<li>これは、近傍で変更するマスの周囲だけで考えられるので、O(1)差分更新できる</li>
-</ul>
-<h3 id="_6">隣接関係を変えない行・列全体の削除<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://note.com/ymatsux/n/nd33bbf9deff7">https://note.com/ymatsux/n/nd33bbf9deff7</a></li>
-<li><a href="https://twitter.com/laycrs/status/1705884912010825827">https://twitter.com/laycrs/status/1705884912010825827</a></li>
-<li>これだけでも210,000点ぐらいとれる模様</li>
-<li>部分的な削除を繰り返すと300,000点ぐらいまで狙えるっぽい？</li>
-</ul>
-<h3 id="_7">近傍<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<h4 id="1">1マス選んで、隣接マスの色で塗る<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
-<ul>
-<li>1マスを選んで、validな状態を維持できるなら、その隣接マスの色で塗ることで、状態を少しだけ変化させられる</li>
-<li>ただ、田のような隣接4マスですべて色が違うような場合を考えると、ある1マスの色を変えたい場合、変えた後に色の隣接関係が壊れてしまい、変更できない場合ができる<ul>
-<li>1マス隣接変更近傍だけだと、微妙に伸びた状態の局所解でハマったりする</li>
-<li>うまくいっていないケースの観察をするとわかる </li>
+<li>2つの集合を選んで、アイテムを移動・swapする、を繰り返す局所改善(山登り)<ul>
+<li>操作後に重さの差が前よりも小さくなっていれば採用</li>
+<li>これは、「操作前の重い集合の重さ」と「操作後の重い集合の重さ」を比較して操作後のほうが小さければ良い<ul>
+<li>重い集合から重いアイテム、軽い集合から軽いアイテムを選んでswapする場合は、必ず重い方が減って、軽い方が増えるので、元の軽い方の高さをチェックすれば良い</li>
+<li>ここで、同じアイテムがある集合を比較することになるが、この比較は、それぞれから同じアイテムを除いたもの同士で比較すればよい</li>
 </ul>
 </li>
 </ul>
-<h4 id="2">2マスまとめて変更<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+</li>
+<li>特に、2つの集合はできるだけ重い集合と軽い集合を選んだほうが(差が大きいので)成功率が高く、集合を常にソートした状態を維持すると、必ず選べる</li>
+<li>さらに、アイテムの重みの推定までやる場合は、重みの期待値から改善の可能性が高いものを選んで操作することで効率よく操作できる</li>
+</ul>
+<h3 id="_5">ソート<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="_6">アイテムのソート<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <ul>
-<li>上記の問題に対応するため、隣接2マス(以上)同時に変更することで対処<ul>
-<li>「隣接セルで塗ったら隣接関係が違反になる場合は、その違反になるセルも変更する」というのを繰り返すと複数マス同時変更が考えられる</li>
+<li>Qが多い場合、各アイテムをソートする余裕がある</li>
+<li>最初にソートしておくことで、2アイテムの大小関係を把握した上で操作できる<ul>
+<li>ランダム割当より良い初期解が作れる</li>
+<li>あるアイテムiより小さいもので最大のアイテムを選ぶ</li>
+<li>あるアイテムiよりも小さいものがなければ打ち切れる</li>
+<li>あるアイテムが移動後に不採用なら、それより重いアイテムは不採用とわかる</li>
+<li>など</li>
 </ul>
 </li>
-<li>(平行移動的な感じ)</li>
-<li>(おそらく、2マス以上の連続処理だったり、上記の1マス近傍と合わせて連続で処理したほうが状態が大きく変化させられてよい模様？)</li>
+<li>Qが少ないときでも、X個のアイテムだけソート、真ん中以外を狙ってソート、など</li>
 </ul>
-<h4 id="_8">行・列の削除<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h4 id="_7">集合のソート<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <ul>
-<li>1マス隣接変更近傍での局所解の改善として部分的に行・列の削除＆詰める処理をする</li>
-<li>ただ、領域が小さくするのには役立っても、小さくなった後の改善には役に立ちにくいため、2マス変更近傍のほうが強い模様<ul>
-<li><a href="https://twitter.com/toomerhs/status/1705950365546664040">https://twitter.com/toomerhs/status/1705950365546664040</a></li>
+<li>集合について、最大重みのものと最小重みのものを対象にすると差が最大のため、ランダムに2集合を選ぶよりも差が大きいので改善できる可能性が高い</li>
+<li>常に集合をソートしておくことで、最大のものと最小のものを対象にできる<ul>
+<li>二分探索で挿入位置を決めるO(2logD)</li>
 </ul>
 </li>
-<li>矩形削除も考えられる</li>
+<li>(自分はランダムに2集合を選んで既知の情報からできるだけ重みが離れるようにしたりしたけど、常に選べるわけではないので差がついてしまっていた模様)</li>
 </ul>
-<h4 id="1_1">外周の1マスを消す<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<h4 id="_8">ソートの種類<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <ul>
-<li>1マス隣接変更近傍に内包されるが、外周の1マスを削る(色0にする)ような近傍も考えられる</li>
+<li>できるだけ少ない回数でソートしたい</li>
+<li>実験的にもマージソートが良かった模様？</li>
 </ul>
-<h3 id="invalid">invalidを許容<a class="headerlink" href="#invalid" title="Permanent link">&para;</a></h3>
+<h3 id="_9">局所改善操作<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
-<li>隣接関係が壊れた状態を許すのもできるらしい(解説放送)</li>
-<li>ただし、「繋がっていてはいけないのに繋がっている」は調整しやすいが、「繋がっていないといけないのに切れてる」は調整が難しいので、後者は禁止し前者のみペナルティとして扱うと良い模様</li>
-</ul>
-<h3 id="3x3">3x3関節点高速化<a class="headerlink" href="#3x3" title="Permanent link">&para;</a></h3>
-<ul>
-<li>区がちぎれないかを判定する(=関節点判定)を単純にBFSとかしてしまうと遅い</li>
-<li>完全な判定ではないが、近似的に8近傍のみで判定する方法で高速化できる</li>
-<li><a href="https://twitter.com/takumi152/status/1705891739020525662">https://twitter.com/takumi152/status/1705891739020525662</a></li>
-<li><a href="https://twitter.com/chokudai/status/1706124817915908481">https://twitter.com/chokudai/status/1706124817915908481</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1705978257437532498">https://twitter.com/Shun___PI/status/1705978257437532498</a></li>
-<li>5x5とかでも</li>
-</ul>
-<h4 id="_9">消去可能性<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<ul>
-<li>画像処理の文脈で、トポロジーを維持してある画素を消去できるか？を隣接セルの値を変数にした計算式で判定できる「消去可能性」というのがあるらしい<ul>
-<li>「トポロジー構造を変えない」なので、連結成分数や穴の数などが変化しない(たとえば3x3すべて1の真ん中は穴ができてしまうので削除不可能)</li>
+<li>2つの集合(できれば最大と最小の重みの集合)について<ul>
+<li>重い集合から軽い集合にアイテムを移す</li>
+<li>重い集合から軽い集合にアイテムをswapする<ul>
+<li>1要素同士のswapの場合、2つの集合間の全部の組み合わせは必要なく、2つの集合のアイテムをまとめてソートして異なる集合での隣接だけ見れば良い</li>
+<li>しゃくとり/二分探索的に探索したりなども</li>
 </ul>
 </li>
-</ul>
-<h3 id="_10">スコア計算と判定処理の順番を入れ替えるテクで高速化<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<ul>
-<li>素直に実装すると「色を変える→連結性判定→隣接判定→スコア計算→焼きなましの採用判定→採用/rollback」という順番が考えられる</li>
-<li>しかし、この「連結性判定」や「隣接判定」の計算は「スコア計算」よりも結構重い</li>
-<li>「色を変える→スコア計算→焼きなましの採用判定→採用されるなら連結性判定＆隣接判定」と順番を入れ替えることで、rollbackなどの無駄な計算を減らすことができる</li>
-</ul>
-<h3 id="_11">その他<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<ul>
-<li>回転が必要な遷移<ul>
-<li><a href="https://twitter.com/montplusa/status/1707043155810644316">https://twitter.com/montplusa/status/1707043155810644316</a></li>
+<li>Largest Defferencing Methodを適用する</li>
 </ul>
 </li>
-<li>埋め込みの一意性についての議論<ul>
-<li><a href="https://twitter.com/risujiroh/status/1705895297678024816">https://twitter.com/risujiroh/status/1705895297678024816</a></li>
+<li>ランダムに操作を選ぶというより、操作できなくなったら他の操作を有効にする、優先度を決めるとかがよいみたい</li>
+<li>2つのアイテムをくっつけて扱う、2つの集合を混ぜて真ん中を2分探索でみつけて分割、とかも</li>
+</ul>
+<h3 id="_10">大小関係の推定<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>問い合わせ内容によっては、過去の問い合わせ内容から大小関係を導き出せる<ul>
+<li>推移律から<code>A&lt;B</code>と<code>B&lt;C</code>がわかっていれば<code>A&lt;C</code>がわかる</li>
+<li><code>A+B&lt;C</code>なら<code>A&lt;C</code>かつ<code>B&lt;C</code>がわかる</li>
+<li>など</li>
 </ul>
 </li>
-<li>お絵かき<ul>
-<li><a href="https://twitter.com/Sophia_maki/status/1705955521013182543">https://twitter.com/Sophia_maki/status/1705955521013182543</a></li>
+<li>ある<code>X&lt;Y</code>が判明した場合、「Xより小さいとわかっているアイテム」と「Yより大きいとわかっているアイテム」の間にも大小関係が成り立つ</li>
+<li>ただ、上位の方だと重さの推定の方をしていそうで、あんまりここを頑張る感じではなかったっぽい？<ul>
+<li>1対1より多い組み合わせを考えると計算量とかも厳しい</li>
 </ul>
 </li>
 </ul>
-<h2 id="_12">解説<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="_11">必要クエリ数の推定<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Q/Nを(1アイテムあたりのクエリ数)ベースに、クエリ数に余裕があるか見積もる</li>
+<li>ソートや検索にかかる最悪クエリ数を求めて必要クエリ数を見積もる<ul>
+<li><a href="https://twitter.com/bowwowforeach/status/1716032987530482022">https://twitter.com/bowwowforeach/status/1716032987530482022</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="_12">重さの推定<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h4 id="lp">線形計画法(LP)<a class="headerlink" href="#lp" title="Permanent link">&para;</a></h4>
+<ul>
+<li>問い合わせでは、アイテムの重みを変数とした不等式(等式)が得られる</li>
+<li>これらを満たす変数を見つけるために、線形計画法で求める？</li>
+<li><a href="https://twitter.com/hari64boli64/status/1716037013382799427">https://twitter.com/hari64boli64/status/1716037013382799427</a><ul>
+<li><a href="https://twitter.com/hari64boli64/status/1716037490224816377">https://twitter.com/hari64boli64/status/1716037490224816377</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/ethylene_66/status/1716048409751331150">https://twitter.com/ethylene_66/status/1716048409751331150</a></li>
+<li><a href="https://twitter.com/birdwatcherYT/status/1716034189597044885">https://twitter.com/birdwatcherYT/status/1716034189597044885</a></li>
+</ul>
+<h4 id="_13">重みの推定<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>具体的な重みが見積もれると、局所改善で改善する期待値が高いものを選べる<ul>
+<li>最上位は重みの推定まで行っていた模様</li>
+</ul>
+</li>
+<li>ランダム(指数分布に従う)に(いくつか)候補を生成→条件が増える→条件を満たさないものを破棄して再生成or修正→条件が増える→...、みたいな感じで推定<ul>
+<li>ギブスサンプリング？逐次モンテカルロ法？的な感じ</li>
+<li>再生成：全制約を満たす範囲を求めて打ち切った指数分布から再生性</li>
+<li>修正：条件を満たさない場合、(不等号を逆にしたいので)重さの和を入れ替えるようスケーリング</li>
+<li>候補を複数用意して期待値を計算</li>
+</ul>
+</li>
+<li>分布の分位点で推定<ul>
+<li>i番に重いアイテムの重さの期待値(分位点)を考える</li>
+<li>これは、累積分布の逆数である分位点関数F^{-1}(p)=-1/λ*log(1-p)で期待値を見積もれる<ul>
+<li>ただし、入力生成方法で10^5*N/D以下で再生成されるのも考慮</li>
+</ul>
+</li>
+<li><code>(2i+1)/2N</code>分位点を使う(p=0とp=1は使いたくないため？)</li>
+</ul>
+</li>
+<li>指数分布からN個生成、を何回(1000回程度)か実行して平均値でざっくり推定</li>
+<li>条件を満たすように焼きなまし</li>
+<li>パーセプトロン風に学習し予測</li>
+<li><a href="https://twitter.com/wata_orz/status/1716034332241051794">https://twitter.com/wata_orz/status/1716034332241051794</a><ul>
+<li><a href="https://twitter.com/wata_orz/status/1716373444273885472">https://twitter.com/wata_orz/status/1716373444273885472</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/eijirou_kyopro/status/1716089227140862264">https://twitter.com/eijirou_kyopro/status/1716089227140862264</a></li>
+<li><a href="https://twitter.com/sugarrr_med/status/1716053911541620749">https://twitter.com/sugarrr_med/status/1716053911541620749</a></li>
+<li><a href="https://twitter.com/iiljj/status/1716036685832868047">https://twitter.com/iiljj/status/1716036685832868047</a></li>
+<li><a href="https://twitter.com/ymatsux_ac/status/1716051799680180669">https://twitter.com/ymatsux_ac/status/1716051799680180669</a></li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1716037388013916237">https://twitter.com/hamamu_kyopro/status/1716037388013916237</a></li>
+<li><a href="https://twitter.com/yunix91201367/status/1716033843613114793">https://twitter.com/yunix91201367/status/1716033843613114793</a></li>
+<li><a href="https://ssaattoo.hatenablog.com/entry/2023/10/22/210022">https://ssaattoo.hatenablog.com/entry/2023/10/22/210022</a></li>
+<li><a href="https://kiri8128.hatenablog.com/entry/2023/10/22/192752">https://kiri8128.hatenablog.com/entry/2023/10/22/192752</a></li>
+<li><a href="https://twitter.com/gmeriaog/status/1716035509653483720">https://twitter.com/gmeriaog/status/1716035509653483720</a></li>
+</ul>
+<h3 id="_14">順位スコアの扱い<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>今回は「順位スコア」(順位率)だった</li>
+<li>topの最適解がどの程度か見積もるのが難しいし、生スコアの悪化がどの程度影響するかも見積もりにくい</li>
+<li>絶対スコアも相対スコアも適用しにくい問題だったっぽいが、ランダム性が強いところでぶれやすかったりもする</li>
+</ul>
+<h4 id="_15">ローカルでの改善判断<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>何を参考にすればよいだろう？</li>
+<li>スコアの扱い<ul>
+<li>相加平均、相乗平均</li>
+<li>logを取ったスコア(相対スコア)</li>
+<li>ケースごとの勝ち負け数</li>
+<li>スコア*f(Q,D,N)</li>
+<li>手元でのベストスコアとの比較(ただしスコア1とか出ると微妙になる)</li>
+</ul>
+</li>
+</ul>
+<h3 id="_16">その他<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h4 id="_17">数分割問題<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://scmopt.github.io/opt100/76npp.html">https://scmopt.github.io/opt100/76npp.html</a></li>
+</ul>
+<h4 id="merge-insertion-sortfordjohnson-algorithm">Merge-Insertion sort(Ford–Johnson algorithm)<a class="headerlink" href="#merge-insertion-sortfordjohnson-algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Nが小さい(N&lt;15なら最適、N&lt;47なら最適の可能性が高いらしい)場合に最悪比較回数を最小限に抑えるソート<ul>
+<li>N=5を7回でソートできる</li>
+<li>実行速度がよいではなく、比較回数がよい</li>
+</ul>
+</li>
+<li>要素2つずつのペアにしてペア内をソート→各ペアの小さい方に対して同様に再帰的にソート→いい感じの順番で、各ペアの大きい方を2分探索で入れる位置を決めて入れる<ul>
+<li>いい感じというのは、2分探索する対象の長さと探索コストを考慮して無駄がでないように探索できるような順番で、という意味</li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Merge-insertion_sort">https://en.wikipedia.org/wiki/Merge-insertion_sort</a></li>
+<li><a href="https://twitter.com/iwashi31/status/1716036715801125057">https://twitter.com/iwashi31/status/1716036715801125057</a></li>
+<li><a href="https://twitter.com/iiljj/status/1716042633746006493">https://twitter.com/iiljj/status/1716042633746006493</a></li>
+<li><a href="https://atcoder.jp/contests/language-test-202001/tasks/practice_2?lang=ja">https://atcoder.jp/contests/language-test-202001/tasks/practice_2?lang=ja</a></li>
+<li><a href="https://twitter.com/tsukammo/status/1716441744278196374">https://twitter.com/tsukammo/status/1716441744278196374</a><ul>
+<li><a href="https://github.com/decidedlyso/merge-insertion-sort/blob/master/README.md">https://github.com/decidedlyso/merge-insertion-sort/blob/master/README.md</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="_18">スターリンソート<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(バケツソートのこと)</li>
+<li><a href="https://twitter.com/yunix91201367/status/1716086099704168571">https://twitter.com/yunix91201367/status/1716086099704168571</a></li>
+<li><a href="https://qiita.com/sasanquaneuf/items/951c206284ffd49aec10">https://qiita.com/sasanquaneuf/items/951c206284ffd49aec10</a></li>
+</ul>
+<h4 id="largest-defferencing-methodldm">Largest Defferencing Method(LDM)<a class="headerlink" href="#largest-defferencing-methodldm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>差分法、Karmarkar-Karpアルゴリズム<ul>
+<li><a href="https://en.wikipedia.org/wiki/Largest_differencing_method">https://en.wikipedia.org/wiki/Largest_differencing_method</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Karmarkar%E2%80%93Karp_bin_packing_algorithms">https://en.wikipedia.org/wiki/Karmarkar%E2%80%93Karp_bin_packing_algorithms</a></li>
+<li><a href="https://twitter.com/MickeyKubo/status/1716316014319964582">https://twitter.com/MickeyKubo/status/1716316014319964582</a></li>
+</ul>
+</li>
+<li>数字を降順に並べて、最大と最大の次に大きい数をその差分で置き換える、を繰り返す</li>
+<li>要素が1つになったら、そこからバックトラックで実際の分割を復元する<ul>
+<li>復元でどちらの分割にいれるかは、大きい方を自分と同じ分割に、小さい方を異なる分割にいれる</li>
+</ul>
+</li>
+<li>例: 数字の集合<code>S={8,7,6,5,4}</code>を集合<code>K=2</code>に分割する場合<ul>
+<li>8と7を選んで差の1に入れ替えて<code>S={6,5,4,1}</code></li>
+<li>6と5を選んで差の1に入れ替えて<code>S={4,1,1}</code></li>
+<li>4と1を選んで差の3に入れ替えて<code>S={3,1}</code></li>
+<li>3と1を選んで差の2に入れ替えて<code>S={2}</code></li>
+<li>分割<code>2|φ</code>を考える</li>
+<li>2は3と1だったので、<code>3|1</code>に戻す(3を2があった方、1を他方に入れる)</li>
+<li>3は4と1だったので、<code>4|1,1</code>にする</li>
+<li>1は6と5だったので、<code>4,5|1,6</code>にする</li>
+<li>1は8と7だったので、<code>4,5,7|6,8</code>にする</li>
+</ul>
+</li>
+<li>グラフで考えると2分木になる</li>
+<li>3分割以上にも拡張できる</li>
+</ul>
+<h4 id="largest-processing-time-heuristics">Largest Processing Time Heuristics<a class="headerlink" href="#largest-processing-time-heuristics" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://scmopt.github.io/opt100/76npp.html">https://scmopt.github.io/opt100/76npp.html</a></li>
+<li>処理時間の長いジョブから順に、現状で最も合計完了時間が短い機械に割り振るのを繰り返す</li>
+</ul>
+<h4 id="_19">類似問題<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li>TopCoder MM127 CarRacing<ul>
+<li><a href="https://inaniwa.hatenablog.com/entry/2021/06/17/171416">https://inaniwa.hatenablog.com/entry/2021/06/17/171416</a></li>
+<li><a href="https://iwashi31.hatenablog.com/entry/2021/06/17/175032">https://iwashi31.hatenablog.com/entry/2021/06/17/175032</a></li>
+<li><a href="https://togetter.com/li/1728312">https://togetter.com/li/1728312</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="_20">その他<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://twitter.com/wata_orz/status/1716736455060734136">https://twitter.com/wata_orz/status/1716736455060734136</a></li>
+<li><a href="https://twitter.com/idat_50me/status/1716089234862543106">https://twitter.com/idat_50me/status/1716089234862543106</a></li>
+</ul>
+<h2 id="_21">解説<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
 <p>(50位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=LHH_rpC6hJo">AHCラジオ(解説放送)</a></li>
-<li><a href="https://atcoder.jp/contests/ahc024/editorial">解説(日本語)</a></li>
-<li><a href="https://atcoder.jp/contests/ahc024/editorial?editorialLang=en">解説(英語)</a></li>
-<li><a href="https://twitter.com/wata_orz/status/1705885647771430927">writer解</a><ul>
-<li><a href="https://twitter.com/wata_orz/status/1705887357965340979">https://twitter.com/wata_orz/status/1705887357965340979</a></li>
-<li><a href="https://atcoder.jp/contests/ahc024/submissions/45918156">https://atcoder.jp/contests/ahc024/submissions/45918156</a></li>
-</ul>
-</li>
+<li><a href="https://www.youtube.com/watch?v=CrzS-Tgnloc">AHCラジオ(解説放送)</a></li>
+<li><a href="https://atcoder.jp/contests/ahc025/editorial">解説(日本語)</a></li>
+<li><a href="https://atcoder.jp/contests/ahc025/editorial?editorialLang=en">解説(英語)</a></li>
+<li><a href="https://twitter.com/wata_orz/status/1716033094405505107">writer解</a></li>
 </ul>
 <ul>
-<li><a href="https://twitter.com/tomatobokujo/status/1705887974716801501">1位suzumeさん</a><ul>
-<li><a href="https://twitter.com/tomatobokujo/status/1705891990121164857">https://twitter.com/tomatobokujo/status/1705891990121164857</a></li>
-<li><a href="https://twitter.com/tomatobokujo/status/1705892098686509453">https://twitter.com/tomatobokujo/status/1705892098686509453</a></li>
+<li><a href="https://twitter.com/eijirou_kyopro/status/1716089227140862264">1位eijirouさん</a><ul>
+<li><a href="https://twitter.com/eijirou_kyopro/status/1716091730733465622">https://twitter.com/eijirou_kyopro/status/1716091730733465622</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/kawatea03/status/1705888012025160081">2位kawateaさん</a></li>
-<li>3位ynasuさん</li>
-<li>4位yokozuna57さん</li>
-<li><a href="https://twitter.com/Shun___PI/status/1705885880261685337">5位Shun_PIさん</a><ul>
-<li><a href="https://twitter.com/Shun___PI/status/1705889899386421330">https://twitter.com/Shun___PI/status/1705889899386421330</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1705892122271052256">https://twitter.com/Shun___PI/status/1705892122271052256</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1705897005242081548">https://twitter.com/Shun___PI/status/1705897005242081548</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1705900055096598649">https://twitter.com/Shun___PI/status/1705900055096598649</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1705948023686336599">https://twitter.com/Shun___PI/status/1705948023686336599</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1705958102242337074">https://twitter.com/Shun___PI/status/1705958102242337074</a></li>
-<li><a href="https://twitter.com/Shun___PI/status/1705978257437532498">https://twitter.com/Shun___PI/status/1705978257437532498</a></li>
+<li><a href="https://twitter.com/sugarrr_med/status/1716053911541620749">2位sugarrrさん</a></li>
+<li><a href="https://twitter.com/montplusa/status/1716033303063736573">3位montplusaさん</a><ul>
+<li><a href="https://twitter.com/montplusa/status/1716037300369686678">https://twitter.com/montplusa/status/1716037300369686678</a></li>
+<li><a href="https://twitter.com/montplusa/status/1716038546946236624">https://twitter.com/montplusa/status/1716038546946236624</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/takumi152/status/1705889379724710118">6位takumi152さん</a></li>
-<li><a href="https://twitter.com/toomerhs/status/1705886370714288287">7位HBitさん</a><ul>
-<li><a href="https://twitter.com/toomerhs/status/1705950365546664040">https://twitter.com/toomerhs/status/1705950365546664040</a></li>
+<li><a href="https://twitter.com/ymatsux_ac/status/1716032652418146563">4位ymatsuxさん</a></li>
+<li>5位Rafbillさん</li>
+<li>6位ynasuさん</li>
+<li><a href="https://twitter.com/shr_pc/status/1716033022343225709">7位saharanさん</a><ul>
+<li><a href="https://twitter.com/shr_pc/status/1716039640963309642">https://twitter.com/shr_pc/status/1716039640963309642</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1716054563256709333">https://twitter.com/shr_pc/status/1716054563256709333</a></li>
+<li><a href="https://twitter.com/shr_pc/status/1716058680767156565">https://twitter.com/shr_pc/status/1716058680767156565</a></li>
 </ul>
 </li>
-<li>8位Rafbillさん</li>
-<li><a href="https://twitter.com/ymatsux_ac/status/1705888360139723176">9位ymatsuxさん</a><ul>
-<li><a href="https://twitter.com/ymatsux_ac/status/1705891448670068891">https://twitter.com/ymatsux_ac/status/1705891448670068891</a></li>
-<li><a href="https://note.com/ymatsux/n/nd33bbf9deff7">https://note.com/ymatsux/n/nd33bbf9deff7</a></li>
+<li>8位daiwakunさん</li>
+<li><a href="https://simanman.hatenablog.com/entry/2023/10/22/190146">9位simanさん</a><ul>
+<li><a href="https://twitter.com/_simanman/status/1715388377074373041">https://twitter.com/_simanman/status/1715388377074373041</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/ichyo/status/1705899675675750407">10位ichyoさん</a></li>
-<li><a href="https://twitter.com/rsat__m/status/1705886719768428807">11位hitonanodeさん</a></li>
-<li><a href="https://twitter.com/EvbCFfp1XB/status/1705896215341383936">12位C7BMkOO7Qbmcwck7さん</a></li>
-<li><a href="https://twitter.com/laycrs/status/1705884912010825827">13位LayCurseさん</a></li>
-<li>14位ytknさん</li>
-<li><a href="https://twitter.com/plcherrim/status/1705891542215668124">15位plcherrimさん</a></li>
-<li><a href="https://twitter.com/hitoare1/status/1705886343317123160">16位hitoareさん</a></li>
-<li><a href="https://twitter.com/highjump_425/status/1705889493163876616">17位highjumpさん</a></li>
-<li>18位reew2nさん</li>
-<li><a href="https://twitter.com/milkcoffeen/status/1706195399332229499">19位milkcoffeeさん</a><ul>
-<li><a href="https://milkcoffee.hatenablog.jp/entry/2023/09/25/222541">https://milkcoffee.hatenablog.jp/entry/2023/09/25/222541</a></li>
+<li><a href="https://twitter.com/kawatea03/status/1716034167342072215">10位kawateaさん</a><ul>
+<li><a href="https://twitter.com/kawatea03/status/1716036511836389886">https://twitter.com/kawatea03/status/1716036511836389886</a></li>
 </ul>
 </li>
-<li>20位dn6049949さん</li>
-<li>21位lvkaiyi0811さん</li>
-<li><a href="https://twitter.com/carrot46_kyopro/status/1705886261507162473">22位carrot46さん</a><ul>
-<li><a href="https://twitter.com/carrot46_kyopro/status/1705895439143448819">https://twitter.com/carrot46_kyopro/status/1705895439143448819</a></li>
+<li>11位hitonanodeさん</li>
+<li>12位Pech1さん</li>
+<li>13位tishii24さん</li>
+<li>14位soumatさん</li>
+<li>15位Shibuyapさん</li>
+<li><a href="https://twitter.com/hamamu_kyopro/status/1716036581205893166">16位hamamuさん</a></li>
+<li>17位yupiteruさん</li>
+<li>18位yukikazerさん</li>
+<li><a href="https://twitter.com/ValGrowth/status/1716034092943483219">19位ValGrowthさん</a></li>
+<li><a href="https://twitter.com/yunix91201367/status/1716032866646458569">20位yunixさん</a></li>
+<li><a href="https://twitter.com/ethylene_66/status/1716032445496373508">21位cuthbertさん</a><ul>
+<li><a href="https://twitter.com/ethylene_66/status/1716033122935193917">https://twitter.com/ethylene_66/status/1716033122935193917</a></li>
+<li><a href="https://twitter.com/ethylene_66/status/1716033122935193917">https://twitter.com/ethylene_66/status/1716033122935193917</a></li>
+<li><a href="https://twitter.com/ethylene_66/status/1716064341106307274">https://twitter.com/ethylene_66/status/1716064341106307274</a></li>
+<li><a href="https://twitter.com/ethylene_66/status/1716066644471275737">https://twitter.com/ethylene_66/status/1716066644471275737</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/terry_u16/status/1705888969442116050">23位terry_u16さん</a><ul>
-<li><a href="https://twitter.com/terry_u16/status/1705890676158922756">https://twitter.com/terry_u16/status/1705890676158922756</a></li>
-<li><a href="https://twitter.com/terry_u16/status/1705944037868667225">https://twitter.com/terry_u16/status/1705944037868667225</a></li>
-<li><a href="https://twitter.com/terry_u16/status/1705950905789714912">https://twitter.com/terry_u16/status/1705950905789714912</a></li>
-<li><a href="https://twitter.com/terry_u16/status/1705970480610705694">https://twitter.com/terry_u16/status/1705970480610705694</a></li>
-<li><a href="https://twitter.com/terry_u16/status/1706133439840448590">https://twitter.com/terry_u16/status/1706133439840448590</a></li>
-<li><a href="https://twitter.com/terry_u16/status/1706137504867619024">https://twitter.com/terry_u16/status/1706137504867619024</a></li>
+<li>22位brown_amaurotisさん</li>
+<li>23位nnnSMMさん</li>
+<li><a href="https://twitter.com/ks4m/status/1716054538443198834">24位ks2mさん</a><ul>
+<li><a href="https://twitter.com/ks4m/status/1716068583334457522">https://twitter.com/ks4m/status/1716068583334457522</a></li>
+<li><a href="https://twitter.com/ks4m/status/1716089866264662257">https://twitter.com/ks4m/status/1716089866264662257</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/tomerun/status/1705885950143033670">24位tomerunさん</a></li>
-<li>25位ks2mさん</li>
-<li><a href="https://twitter.com/comavius/status/1705887442669326533">26位Comaviusさん</a><ul>
-<li><a href="https://twitter.com/comavius/status/1705948883183173871">https://twitter.com/comavius/status/1705948883183173871</a></li>
-<li><a href="https://trap.jp/post/2006/">https://trap.jp/post/2006/</a></li>
+<li><a href="https://twitter.com/myh9_f/status/1716065702761623808">25位ssaattooさん</a><ul>
+<li><a href="https://ssaattoo.hatenablog.com/entry/2023/10/22/210022">https://ssaattoo.hatenablog.com/entry/2023/10/22/210022</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/uta_cccc/status/1705887892315451807">27位uta_cccさん</a><ul>
-<li><a href="https://twitter.com/uta_cccc/status/1705909923723510059">https://twitter.com/uta_cccc/status/1705909923723510059</a></li>
-<li><a href="https://twitter.com/uta_cccc/status/1705915365661052948">https://twitter.com/uta_cccc/status/1705915365661052948</a></li>
-<li><a href="https://utac.hateblo.jp/entry/2023/09/24/215001">https://utac.hateblo.jp/entry/2023/09/24/215001</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1716034289182355875">26位Kiri8128さん</a><ul>
+<li><a href="https://twitter.com/kiri8128/status/1716048771136827772">https://twitter.com/kiri8128/status/1716048771136827772</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1716048100241072175">https://twitter.com/kiri8128/status/1716048100241072175</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1716040933324833003">https://twitter.com/kiri8128/status/1716040933324833003</a></li>
+<li><a href="https://kiri8128.hatenablog.com/entry/2023/10/22/192752">https://kiri8128.hatenablog.com/entry/2023/10/22/192752</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/birdwatcherYT/status/1705887872543564015">28位birdwatcherさん</a></li>
-<li>29位emthrmさん</li>
-<li><a href="https://twitter.com/border_of_ymg/status/1705890964043333729">30位kenchoさん</a><ul>
-<li><a href="https://twitter.com/border_of_ymg/status/1705897500568432901">https://twitter.com/border_of_ymg/status/1705897500568432901</a></li>
-<li><a href="https://twitter.com/border_of_ymg/status/1705899728683298928">https://twitter.com/border_of_ymg/status/1705899728683298928</a></li>
-<li><a href="https://twitter.com/border_of_ymg/status/1705950003326488960">https://twitter.com/border_of_ymg/status/1705950003326488960</a></li>
-<li><a href="https://twitter.com/border_of_ymg/status/1705950502876557389">https://twitter.com/border_of_ymg/status/1705950502876557389</a></li>
+<li><a href="https://twitter.com/_kueda/status/1716032799701086485">27位Ueddyさん</a></li>
+<li><a href="https://twitter.com/AcPiiiii/status/1716374224468898045">28位Piiiiiさん</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1716034155275055183">29位noimiさん</a><ul>
+<li><a href="https://twitter.com/noimi_kyopro/status/1716035560039694721">https://twitter.com/noimi_kyopro/status/1716035560039694721</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1716035861031358806">https://twitter.com/noimi_kyopro/status/1716035861031358806</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1716040165360390447">https://twitter.com/noimi_kyopro/status/1716040165360390447</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1716041261222953373">https://twitter.com/noimi_kyopro/status/1716041261222953373</a></li>
+<li><a href="https://twitter.com/noimi_kyopro/status/1716043052278809039">https://twitter.com/noimi_kyopro/status/1716043052278809039</a></li>
 </ul>
 </li>
-<li>31位sugarrrさん</li>
-<li><a href="https://twitter.com/_su1sen/status/1705885761604923475">32位suisenさん</a><ul>
-<li><a href="https://twitter.com/_su1sen/status/1705886336295858569">https://twitter.com/_su1sen/status/1705886336295858569</a></li>
-<li><a href="https://twitter.com/_su1sen/status/1705888519754007000">https://twitter.com/_su1sen/status/1705888519754007000</a></li>
+<li>30位Jirotechさん</li>
+<li>31位c7c7さん</li>
+<li><a href="https://twitter.com/neterukun_cd/status/1716034588919898220">32位neterukunさん</a></li>
+<li>33位USAさん</li>
+<li>34位lemondoさん</li>
+<li><a href="https://twitter.com/hari64boli64/status/1716037013382799427">35位hari64さん</a><ul>
+<li><a href="https://twitter.com/hari64boli64/status/1716037490224816377">https://twitter.com/hari64boli64/status/1716037490224816377</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/t33f/status/1705886139872374884">33位kozimaさん</a><ul>
-<li><a href="https://twitter.com/t33f/status/1705899356384289024">https://twitter.com/t33f/status/1705899356384289024</a></li>
-<li><a href="https://twitter.com/t33f/status/1705891230440403062">https://twitter.com/t33f/status/1705891230440403062</a></li>
+<li><a href="https://twitter.com/tomerun/status/1716032131057733880">36位tomerunさん</a><ul>
+<li><a href="https://twitter.com/tomerun/status/1716096247864721850">https://twitter.com/tomerun/status/1716096247864721850</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/AprilGanmo/status/1705886741025247279">34位ganmodokixさん</a></li>
-<li><a href="https://twitter.com/notkamonohasi_2/status/1705886976107524369">35位notkamonohasiさん</a></li>
-<li><a href="https://twitter.com/hari64boli64/status/1705895416779481513">36位hari64さん</a></li>
-<li><a href="https://twitter.com/semiexp/status/1705886739993436539">37位semiexpさん</a><ul>
-<li><a href="https://twitter.com/semiexp/status/1705886209929793595">https://twitter.com/semiexp/status/1705886209929793595</a></li>
-<li><a href="https://twitter.com/semiexp/status/1705888305475436978">https://twitter.com/semiexp/status/1705888305475436978</a></li>
+<li><a href="https://twitter.com/tanaka_a8/status/1716032572327891371">37位rabotさん</a><ul>
+<li><a href="https://twitter.com/tanaka_a8/status/1716038251797266595">https://twitter.com/tanaka_a8/status/1716038251797266595</a></li>
+<li><a href="https://twitter.com/tanaka_a8/status/1716214212639518729">https://twitter.com/tanaka_a8/status/1716214212639518729</a></li>
+<li><a href="https://twitter.com/tanaka_a8/status/1716405491583390182">https://twitter.com/tanaka_a8/status/1716405491583390182</a></li>
 </ul>
 </li>
-<li>38位risujirohさん</li>
-<li><a href="https://twitter.com/eijirou_kyopro/status/1705923471119962119">39位eijirouさん</a><ul>
-<li><a href="https://twitter.com/eijirou_kyopro/status/1705925613381640329">https://twitter.com/eijirou_kyopro/status/1705925613381640329</a></li>
+<li>38位tanashou1さん</li>
+<li>39位ra5anchorさん</li>
+<li><a href="https://twitter.com/risenafis/status/1716032272238051808">40位Risenさん</a><ul>
+<li><a href="https://twitter.com/risenafis/status/1716456410471686554">https://twitter.com/risenafis/status/1716456410471686554</a></li>
+<li><a href="https://twitter.com/risenafis/status/1716456959543791842">https://twitter.com/risenafis/status/1716456959543791842</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/merom686/status/1705886651384475742">40位merom686さん</a></li>
-<li>41位sansenさん</li>
-<li><a href="https://twitter.com/komora71_/status/1705887888368644222">42位komori3さん</a></li>
-<li>43位totori0908さん</li>
-<li>43位yuto1115さん</li>
-<li><a href="https://twitter.com/trineutron/status/1705909656026231031">45位Trineutronさん</a><ul>
-<li><a href="https://twitter.com/trineutron/status/1705926895181979669">https://twitter.com/trineutron/status/1705926895181979669</a></li>
-<li><a href="https://twitter.com/trineutron/status/1705927304495693981">https://twitter.com/trineutron/status/1705927304495693981</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1716032987530482022">41位bowwowforeachさん</a><ul>
+<li><a href="https://twitter.com/bowwowforeach/status/1716036516693295376">https://twitter.com/bowwowforeach/status/1716036516693295376</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1716037283269501316">https://twitter.com/bowwowforeach/status/1716037283269501316</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1716038253126791263">https://twitter.com/bowwowforeach/status/1716038253126791263</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1716038535084736774">https://twitter.com/bowwowforeach/status/1716038535084736774</a></li>
+<li><a href="https://twitter.com/bowwowforeach/status/1716041712240627745">https://twitter.com/bowwowforeach/status/1716041712240627745</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/torii_kyopro/status/1705886680794964345">46位toamさん</a><ul>
-<li><a href="https://twitter.com/torii_kyopro/status/1705885219419759063">https://twitter.com/torii_kyopro/status/1705885219419759063</a></li>
-<li><a href="https://twitter.com/torii_kyopro/status/1706198554921087231">https://twitter.com/torii_kyopro/status/1706198554921087231</a></li>
-<li><a href="https://twitter.com/torii_kyopro/status/1706209625459298766">https://twitter.com/torii_kyopro/status/1706209625459298766</a></li>
+<li>42位koviさん</li>
+<li><a href="https://twitter.com/gmeriaog/status/1716035509653483720">43位wanuiさん</a></li>
+<li><a href="https://twitter.com/heno_code/status/1716038248274014518">44位heno239さん</a><ul>
+<li><a href="https://twitter.com/heno_code/status/1716038513618231686">https://twitter.com/heno_code/status/1716038513618231686</a></li>
+<li><a href="https://twitter.com/heno_code/status/1716038924039319624">https://twitter.com/heno_code/status/1716038924039319624</a></li>
+<li><a href="https://twitter.com/heno_code/status/1716039911122632740">https://twitter.com/heno_code/status/1716039911122632740</a></li>
+<li><a href="https://twitter.com/heno_code/status/1716040515693801747">https://twitter.com/heno_code/status/1716040515693801747</a></li>
+<li><a href="https://twitter.com/heno_code/status/1716045192950874575">https://twitter.com/heno_code/status/1716045192950874575</a></li>
+<li><a href="https://twitter.com/heno_code/status/1716046325643657410">https://twitter.com/heno_code/status/1716046325643657410</a></li>
 </ul>
 </li>
-<li><a href="https://twitter.com/Kuma_TachiRen/status/1705886480659546371">47位KumaTachiRenさん</a></li>
-<li>48位mamekinさん</li>
-<li>49位rs02さん</li>
-<li><a href="https://twitter.com/kzyKT_M/status/1705885145285496850">50位kzyKTさん</a></li>
-</ul>
-<ul>
-<li>延長戦<ul>
-<li><a href="https://twitter.com/tanakh/status/1706637751830163927">https://twitter.com/tanakh/status/1706637751830163927</a></li>
-<li><a href="https://twitter.com/eijirou_kyopro/status/1706853800773112102">https://twitter.com/eijirou_kyopro/status/1706853800773112102</a></li>
-<li><a href="https://twitter.com/rho__o/status/1707043053394084285">https://twitter.com/rho__o/status/1707043053394084285</a></li>
+<li><a href="https://twitter.com/CoCoJapanpan/status/1716033331861831873">45位CoCoJapanpanさん</a></li>
+<li><a href="https://twitter.com/birdwatcherYT/status/1716032159973347655">46位birdwatcherさん</a></li>
+<li>47位besukohuさん</li>
+<li>48位petit_sophiaさん</li>
+<li><a href="https://twitter.com/xiuez/status/1716033154962903359">49位niuezさん</a><ul>
+<li><a href="https://twitter.com/xiuez/status/1716249067347673110">https://twitter.com/xiuez/status/1716249067347673110</a></li>
 </ul>
 </li>
+<li>50位iehnさん</li>
 </ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://togetter.com/li/2230650">agwさんTwitterまとめ</a></li>
-<li><a href="https://twitter.com/hashtag/AHC024">Twitter hashtag AHC024</a></li>
-<li><a href="https://twitter.com/kiri8128/status/1705933716462420088">kiri8128 さん Score-Performance グラフ</a></li>
+<li><a href="https://togetter.com/li/2245895">agwさんTwitterまとめ</a></li>
+<li><a href="https://twitter.com/hashtag/AHC025">Twitter hashtag AHC025</a></li>
+<li><a href="https://twitter.com/kiri8128/status/1716308256401104905">kiri8128 さん Score-Performance グラフ</a><ul>
+<li><a href="https://twitter.com/kiri8128/status/1716470437318992057">https://twitter.com/kiri8128/status/1716470437318992057</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/_simanman/status/1716308637793358077">simanさん統計</a><ul>
+<li><a href="https://siman-man.github.io/ahc_statistics/025/index_with_admin.html">https://siman-man.github.io/ahc_statistics/025/index_with_admin.html</a></li>
+</ul>
+</li>
 </ul>
 
 

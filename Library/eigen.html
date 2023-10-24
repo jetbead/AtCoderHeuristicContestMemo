@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="uncategorized_topic.html">
+        <link rel="prev" href="debug_print.html">
       
       
-        <link rel="next" href="design_patterns/gameai.html">
+        <link rel="next" href="exp2.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>不確かさの取り扱い - AtCoder Heuristic Contest Memo</title>
+        <title>行列ライブラリEigen - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#eigen" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              不確かさの取り扱い
+              行列ライブラリEigen
             
           </span>
         </div>
@@ -1156,9 +1156,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="eigen.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    行列ライブラリEigen
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="eigen.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1167,6 +1187,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    高速
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1696,29 +1750,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    不確かさの取り扱い
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="uncertainty.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="uncertainty.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1727,40 +1761,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    表現方法、推定方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    アプローチ
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1904,15 +1904,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    表現方法、推定方法
+  <a href="#links" class="md-nav__link">
+    Links
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    アプローチ
+  <a href="#_1" class="md-nav__link">
+    高速
   </a>
   
 </li>
@@ -1932,32 +1932,39 @@
                   
 
 
-<h1 id="_1">不確かさの取り扱い<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>正確な情報が得られない場合や隠れパラメータについて、推定したい。</p>
-<h2 id="_2">表現方法、推定方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h1 id="eigen">行列ライブラリEigen<a class="headerlink" href="#eigen" title="Permanent link">&para;</a></h1>
 <ul>
-<li>区間(値の取りうる範囲の最大最小を保持)<ul>
-<li>平均</li>
-<li>統計を取ってアドホックに調整</li>
-</ul>
-</li>
-<li>確率、確率分布<ul>
-<li>確率行列、二重確率行列</li>
-<li>ガウス分布</li>
-</ul>
-</li>
-<li>モンテカルロ法、MCMC、ギブスサンプリング</li>
-<li>機械学習で推定<ul>
-<li>絶対誤差、二乗誤差などを最小化</li>
+<li>ヘッダオンリーなC++ライブラリ<ul>
+<li>C++標準ライブラリ以外の依存関係はない</li>
+<li>ビルドも不要(ドキュメントとテストだけ)</li>
 </ul>
 </li>
 </ul>
-<h2 id="_3">アプローチ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
-<li>統計を取ってみて、どのような分布になっているか確認する</li>
-<li>もし、特徴的ならばそれを活用する</li>
-<li>既知の分布なら、その分布を使う</li>
-<li>未知の分布でも、思い切って正規分布であると仮定してみる、など</li>
+<li>公式<ul>
+<li><a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">https://eigen.tuxfamily.org/index.php?title=Main_Page</a></li>
+</ul>
+</li>
+<li>公開コピー誌 行列ライブラリEigenのメモ(暗黒通信団)<ul>
+<li><a href="http://ankokudan.org/d/dl/pdf/pdf-eigennote.pdf">http://ankokudan.org/d/dl/pdf/pdf-eigennote.pdf</a></li>
+</ul>
+</li>
+<li>C++行列計算ライブラリEigen入門<ul>
+<li><a href="https://qiita.com/yohm/items/a03006790dc1e54a87be">https://qiita.com/yohm/items/a03006790dc1e54a87be</a></li>
+</ul>
+</li>
+<li>gitlab?<ul>
+<li><a href="https://gitlab.com/libeigen/eigen">https://gitlab.com/libeigen/eigen</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_1">高速<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Expression Template(式テンプレート)による遅延評価</li>
+<li>自動ベクトル化(SIMD)、ループ展開</li>
+<li>固定サイズの行列で動的メモリ割り当ての回避、</li>
+<li>大きな行列でのキャッシュの扱いへの配慮</li>
 </ul>
 
 
