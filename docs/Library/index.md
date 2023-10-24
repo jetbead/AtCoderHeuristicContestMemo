@@ -53,6 +53,7 @@
 - [実験、環境構築](./experiments.md)
 - [pythonスニペット](./python_snippet.md)
 - [C++関数メモ](./func.md)
+- [行列ライブラリEigen](./eigen.md)
 - [Optuna](./optuna.md)
 - [用語集](./glossary.md)
 

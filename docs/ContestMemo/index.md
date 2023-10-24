@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc025.png" class="trimimg"> | [AHC025](./ahc025.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc024.png" class="trimimg"> | [丸紅プログラミングコンテスト2023(AHC024)](./ahc024.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc023.png" class="trimimg"> | [第10回Asprovaプログラミングコンテスト(AHC023)](./ahc023.md) | <span style="color: #cc0000;">long</span> | |
 | <img loading="lazy" src="../imgs/toyota-2023-summer-final.png" class="trimimg"> | [TOYOTA Programming Contest 2023 Summer Final](./toyota-2023-summer-final.md) | <span style="color: #0000cc;">short</span> | |

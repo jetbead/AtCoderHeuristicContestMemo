@@ -25,6 +25,10 @@
 - Introduction to Design and Implementation of Metaheuristics(umepon さん)
   - https://speakerdeck.com/umepon/introduction-to-design-and-implementation-of-metaheuristics
 
+## AHC解法まとめ
+
+- https://twitter.com/thun_c/status/1715029812295995649
+
 
 ## メモ
 
@@ -36,6 +40,8 @@
   - https://twitter.com/kiri8128/status/1642567258336792578
 - 評価関数を考えるときに参考になる図(phocom さん)
   - https://twitter.com/_phocom/status/1693217561381404801
+- テクニック集
+  - https://github.com/rhoo19937/p/blob/main/tech/.md
 
 ## 改善アイデアの試し方
 
