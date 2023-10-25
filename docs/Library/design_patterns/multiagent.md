@@ -28,8 +28,7 @@ struct Game {
 };
 
 struct Command {
-    virtual ~Command() {
-    }
+    virtual ~Command() = default;
     virtual void execute(Game& game) = 0;
     void assign(int index) {
         assigned.emplace_back(index);

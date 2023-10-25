@@ -97,8 +97,7 @@ class Transition {
    public:
     Transition(const string& name, State& state) : name(name), state(state) {
     }
-    virtual ~Transition() {
-    }
+    virtual ~Transition() = default;
     virtual void apply() = 0;
     virtual void rollback() = 0;
     virtual string get_name() {
