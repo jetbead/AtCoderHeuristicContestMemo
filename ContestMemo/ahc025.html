@@ -869,6 +869,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#writerwata" class="md-nav__link">
+    writer(wataさん)解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_14" class="md-nav__link">
     順位スコアの扱い
   </a>
@@ -878,6 +885,13 @@
         
           <li class="md-nav__item">
   <a href="#_15" class="md-nav__link">
+    順位スコア採用の裏話
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
     ローカルでの改善判断
   </a>
   
@@ -889,7 +903,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     その他
   </a>
   
@@ -897,7 +911,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     数分割問題
   </a>
   
@@ -911,8 +925,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     スターリンソート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    トーナメントソート
   </a>
   
 </li>
@@ -932,7 +953,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     類似問題
   </a>
   
@@ -944,7 +965,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     その他
   </a>
   
@@ -956,7 +977,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     解説
   </a>
   
@@ -2213,6 +2234,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#writerwata" class="md-nav__link">
+    writer(wataさん)解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_14" class="md-nav__link">
     順位スコアの扱い
   </a>
@@ -2222,6 +2250,13 @@
         
           <li class="md-nav__item">
   <a href="#_15" class="md-nav__link">
+    順位スコア採用の裏話
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
     ローカルでの改善判断
   </a>
   
@@ -2233,7 +2268,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     その他
   </a>
   
@@ -2241,7 +2276,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     数分割問題
   </a>
   
@@ -2255,8 +2290,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     スターリンソート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    トーナメントソート
   </a>
   
 </li>
@@ -2276,7 +2318,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     類似問題
   </a>
   
@@ -2288,7 +2330,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     その他
   </a>
   
@@ -2300,7 +2342,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     解説
   </a>
   
@@ -2384,6 +2426,7 @@
 </ul>
 </li>
 <li>(自分はランダムに2集合を選んで既知の情報からできるだけ重みが離れるようにしたりしたけど、常に選べるわけではないので差がついてしまっていた模様)</li>
+<li>解説放送だとだいたい50位相当</li>
 </ul>
 <h4 id="_8">ソートの種類<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <ul>
@@ -2393,7 +2436,10 @@
 <h3 id="_9">局所改善操作<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li>2つの集合(できれば最大と最小の重みの集合)について<ul>
-<li>重い集合から軽い集合にアイテムを移す</li>
+<li>重い集合から軽い集合にアイテムを移す<ul>
+<li>(正確には、動かすアイテムを除いた上で比較して低い方に置くほうがよい)</li>
+</ul>
+</li>
 <li>重い集合から軽い集合にアイテムをswapする<ul>
 <li>1要素同士のswapの場合、2つの集合間の全部の組み合わせは必要なく、2つの集合のアイテムをまとめてソートして異なる集合での隣接だけ見れば良い</li>
 <li>しゃくとり/二分探索的に探索したりなども</li>
@@ -2428,10 +2474,21 @@
 </li>
 </ul>
 <h3 id="_12">重さの推定<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>指数分布のため、軽いのが多く、重いのが少ない</li>
+<li>推定しようとすると、重いアイテムの分散が大きく推定が難しい<ul>
+<li>例えば、アイテムがソートされていて、i番目の重みの期待値を考えたり</li>
+</ul>
+</li>
+<li>そのため重さの推定だけで上位に行くのは難しかった模様(解説放送)<ul>
+<li>これに上記の山登りを組み合わせるなどは必要</li>
+</ul>
+</li>
+</ul>
 <h4 id="lp">線形計画法(LP)<a class="headerlink" href="#lp" title="Permanent link">&para;</a></h4>
 <ul>
 <li>問い合わせでは、アイテムの重みを変数とした不等式(等式)が得られる</li>
-<li>これらを満たす変数を見つけるために、線形計画法で求める？</li>
+<li>これらを満たす変数を見つけるために、線形計画法で求める</li>
 <li><a href="https://twitter.com/hari64boli64/status/1716037013382799427">https://twitter.com/hari64boli64/status/1716037013382799427</a><ul>
 <li><a href="https://twitter.com/hari64boli64/status/1716037490224816377">https://twitter.com/hari64boli64/status/1716037490224816377</a></li>
 </ul>
@@ -2479,13 +2536,46 @@
 <li><a href="https://kiri8128.hatenablog.com/entry/2023/10/22/192752">https://kiri8128.hatenablog.com/entry/2023/10/22/192752</a></li>
 <li><a href="https://twitter.com/gmeriaog/status/1716035509653483720">https://twitter.com/gmeriaog/status/1716035509653483720</a></li>
 </ul>
+<h3 id="writerwata">writer(wataさん)解<a class="headerlink" href="#writerwata" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://twitter.com/wata_orz/status/1716034332241051794">https://twitter.com/wata_orz/status/1716034332241051794</a></li>
+<li>(詳細は解説放送)</li>
+<li>Qが小さいときに強い</li>
+<li>アイテムの移動操作前後の改善量の期待値を考え、一番期待値の高い移動を試す<ul>
+<li>分散なので重みの2乗和で考えると、軽い方Aと重い方B+bについて<code>A^2+(B+b)^2</code>が<code>(A+b)^2+B^2</code>になるのでその差が改善量</li>
+<li>この改善量の期待値は解析的に求められないので、各アイテムの重みの推定値から考える(複数のwを用意すると分布)</li>
+<li>アイテムの重みは、w[0],w[1],...を順番にギブスサンプリングで求める<ul>
+<li>具体的には、w[i]を考えるとき、それ以外を固定して、w[i]が満たすべき値の範囲からリサンプリング、を1周する</li>
+</ul>
+</li>
+<li>参考：<a href="httf2022qual.html">HTTF2022予選</a></li>
+</ul>
+</li>
+<li>実際の各アイテムの重みの推定値を見てみるとうまくいっていないように見える<ul>
+<li>例えばアイテムaとアイテムbが常に一緒に扱われていたら、その和だけが重要で、それが正しければ十分<ul>
+<li>aとbを分けるときに具体的な重みが必要になる</li>
+</ul>
+</li>
+<li>そういうケースでは各アイテムの重みを正確に当てに行くよりも効率がよいみたい</li>
+</ul>
+</li>
+</ul>
 <h3 id="_14">順位スコアの扱い<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <ul>
 <li>今回は「順位スコア」(順位率)だった</li>
 <li>topの最適解がどの程度か見積もるのが難しいし、生スコアの悪化がどの程度影響するかも見積もりにくい</li>
 <li>絶対スコアも相対スコアも適用しにくい問題だったっぽいが、ランダム性が強いところでぶれやすかったりもする</li>
 </ul>
-<h4 id="_15">ローカルでの改善判断<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<h4 id="_15">順位スコア採用の裏話<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(解説放送)</li>
+<li>相対スコアを使った場合、分散が大きい<ul>
+<li>1位の人でもケースによって相対スコアの分散が大きい</li>
+</ul>
+</li>
+<li>ケースの重要度が変わりすぎてしまうので、それを抑えるために順位スコアを採用</li>
+</ul>
+<h4 id="_16">ローカルでの改善判断<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <ul>
 <li>何を参考にすればよいだろう？</li>
 <li>スコアの扱い<ul>
@@ -2497,8 +2587,8 @@
 </ul>
 </li>
 </ul>
-<h3 id="_16">その他<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
-<h4 id="_17">数分割問題<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<h3 id="_17">その他<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h4 id="_18">数分割問題<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="https://scmopt.github.io/opt100/76npp.html">https://scmopt.github.io/opt100/76npp.html</a></li>
 </ul>
@@ -2522,11 +2612,15 @@
 </ul>
 </li>
 </ul>
-<h4 id="_18">スターリンソート<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<h4 id="_19">スターリンソート<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <ul>
 <li>(バケツソートのこと)</li>
 <li><a href="https://twitter.com/yunix91201367/status/1716086099704168571">https://twitter.com/yunix91201367/status/1716086099704168571</a></li>
 <li><a href="https://qiita.com/sasanquaneuf/items/951c206284ffd49aec10">https://qiita.com/sasanquaneuf/items/951c206284ffd49aec10</a></li>
+</ul>
+<h4 id="_20">トーナメントソート<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://twitter.com/iwashi31/status/1716463489974476950">https://twitter.com/iwashi31/status/1716463489974476950</a></li>
 </ul>
 <h4 id="largest-defferencing-methodldm">Largest Defferencing Method(LDM)<a class="headerlink" href="#largest-defferencing-methodldm" title="Permanent link">&para;</a></h4>
 <ul>
@@ -2561,7 +2655,7 @@
 <li><a href="https://scmopt.github.io/opt100/76npp.html">https://scmopt.github.io/opt100/76npp.html</a></li>
 <li>処理時間の長いジョブから順に、現状で最も合計完了時間が短い機械に割り振るのを繰り返す</li>
 </ul>
-<h4 id="_19">類似問題<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<h4 id="_21">類似問題<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <ul>
 <li>TopCoder MM127 CarRacing<ul>
 <li><a href="https://inaniwa.hatenablog.com/entry/2021/06/17/171416">https://inaniwa.hatenablog.com/entry/2021/06/17/171416</a></li>
@@ -2570,12 +2664,26 @@
 </ul>
 </li>
 </ul>
-<h3 id="_20">その他<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<h3 id="_22">その他<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://twitter.com/wata_orz/status/1716736455060734136">https://twitter.com/wata_orz/status/1716736455060734136</a></li>
-<li><a href="https://twitter.com/idat_50me/status/1716089234862543106">https://twitter.com/idat_50me/status/1716089234862543106</a></li>
+<li><a href="https://twitter.com/wata_orz/status/1716736455060734136">https://twitter.com/wata_orz/status/1716736455060734136</a><ul>
+<li>ローカルテスタでの可視化</li>
+<li><a href="https://twitter.com/wata_orz/status/1717153370023383397">https://twitter.com/wata_orz/status/1717153370023383397</a></li>
+<li><a href="https://img.atcoder.jp/ahc_standings/index.html?contest=ahc025">https://img.atcoder.jp/ahc_standings/index.html?contest=ahc025</a></li>
+<li><a href="https://img.atcoder.jp/ahc_standings/index.html?contest=ahc025&amp;add=editorial%2Cwata">https://img.atcoder.jp/ahc_standings/index.html?contest=ahc025&amp;add=editorial%2Cwata</a> (wataさん解あり)</li>
+<li>ローカルにダウンロードするとローカルでの順位表にも使える(！)</li>
 </ul>
-<h2 id="_21">解説<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+</li>
+<li><a href="https://twitter.com/idat_50me/status/1716089234862543106">https://twitter.com/idat_50me/status/1716089234862543106</a><ul>
+<li>暫定テストではスコア低くてシステムテストで高い件</li>
+</ul>
+</li>
+<li><a href="https://twitter.com/moooaki/status/1716611260811505813">https://twitter.com/moooaki/status/1716611260811505813</a><ul>
+<li>デバッグ出力ではエスケープシーケンスなどで色付け</li>
+</ul>
+</li>
+</ul>
+<h2 id="_23">解説<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
 <p>(50位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=CrzS-Tgnloc">AHCラジオ(解説放送)</a></li>
@@ -2725,6 +2833,7 @@
 <li><a href="https://siman-man.github.io/ahc_statistics/025/index_with_admin.html">https://siman-man.github.io/ahc_statistics/025/index_with_admin.html</a></li>
 </ul>
 </li>
+<li><a href="https://img.atcoder.jp/ahc_standings/index.html?contest=ahc025">wataさんの詳細な順位表</a></li>
 </ul>
 
 
