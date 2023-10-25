@@ -107,18 +107,18 @@ class Transition {
 
 class TransitionSelector {
     vector<int> table;
-    vector<Transition*> transitions;
+    vector<unique_ptr<Transition>> transitions;
 
    public:
-    void add(Transition& transition, int weight) {
+    void add(unique_ptr<Transition>&& transition, int weight) {
         int idx = transitions.size();
         for (int i = 0; i < weight; i++) {
             table.push_back(idx);
         }
-        transitions.push_back(&transition);
+        transitions.emplace_back(move(transition));
     }
     Transition* get() {
-        return transitions[table[xor128() % table.size()]];
+        return transitions[table[xor128() % table.size()]].get();
     }
 };
 
@@ -155,8 +155,7 @@ void solve() {
 
     // 近傍
     TransitionSelector selector;
-    Transition1 transition1("transition1", state);
-    selector.add(transition1, 100);
+    selector.add(make_unique<Transition1>("transition1", state), 100);
 
     // 探索
     const double TIME_LIMIT = GLOBAL_TIME_LIMIT - global_timer.getSec();
