@@ -97,6 +97,8 @@ class Transition {
    public:
     Transition(const string& name, State& state) : name(name), state(state) {
     }
+    virtual ~Transition() {
+    }
     virtual void apply() = 0;
     virtual void rollback() = 0;
     virtual string get_name() {
@@ -126,10 +128,10 @@ class Transition1 : public Transition {
    public:
     Transition1(const string& name, State& state) : Transition(name, state) {
     }
-    void apply() {
+    virtual void apply() {
         state.score++;
     }
-    void rollback() {
+    virtual void rollback() {
         state.score--;
     }
 };
