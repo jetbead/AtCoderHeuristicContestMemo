@@ -33,6 +33,7 @@
 - c++
   - OpenSiv3D https://github.com/Siv3D/OpenSiv3D
   - SDL
+  - MatPlot++ https://alandefreitas.github.io/matplotplusplus/
 - js
   - p5.js https://p5js.org/
   

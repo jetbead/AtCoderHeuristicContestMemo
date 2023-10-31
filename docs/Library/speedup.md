@@ -58,7 +58,7 @@
 
 - 消したい`v[i]`を末尾の要素とswapし、pop_back()する
 
-### [0,N)の整数の集合を管理する定数倍が軽いデータ構造
+### [0,N)の整数の集合を管理する定数倍が軽いデータ構造(IndexSet)
 
 - https://topcoder-tomerun.hatenablog.jp/entry/2021/06/12/134643
 - 要素と位置の2つのvectorを持っておいて更新する
