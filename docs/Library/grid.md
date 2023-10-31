@@ -69,6 +69,7 @@ xoxoxox
 ### 曲率の離散類似による連結判定
 
 - https://yokozuna57.hatenablog.com/entry/2023/10/27/155346
+  - https://twitter.com/ethylene_66/status/1719190628675047894
 
 ### 消去可能性
 
