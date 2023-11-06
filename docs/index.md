@@ -30,6 +30,8 @@ title: Home
     - https://ahcstats.vercel.app/
   - Scorerun(各コンテスト最高得点とコードへのリンク)
     - https://siman-man.github.io/scorerun/
+  - AHC ranking(short/longを分けた場合のレート、ランキング)
+    - https://docs.google.com/spreadsheets/d/1EMckCcHOKZ_xBnuXBafoU2gRxmZXSkHSAp1N2bZ7VfI
   - AHC Standings(スコア分布のビジュアライザ)
     - https://img.atcoder.jp/ahc_standings/index.html
   - AtCoder Heuristic Race Ranking (Unofficial, ポイント制でのランキング)
