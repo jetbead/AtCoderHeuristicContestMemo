@@ -42,6 +42,8 @@
   - https://twitter.com/_phocom/status/1693217561381404801
 - テクニック集
   - https://github.com/rhoo19937/p/blob/main/tech/.md
+- AHC典型:解をたくさん作る(iwashi31 さん)
+  - https://iwashi31.hatenablog.com/entry/2023/11/05/234449
 
 ## 改善アイデアの試し方
 
