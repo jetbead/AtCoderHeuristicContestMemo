@@ -35,6 +35,7 @@
 - [2次元累積和](./summed_area_table.md)
 - [時間計測 Timer](./timer.md)
 - [ビットボード](./bitboard.md)
+- [IndexSet](./index_set.md)
 
 ## デバッグ、ビジュアライザ
 
