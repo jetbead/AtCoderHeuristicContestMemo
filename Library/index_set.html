@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="index_set.html">
+        <link rel="prev" href="grid.html">
       
       
-        <link rel="next" href="math_opt.html">
+        <link rel="next" href="matching.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>マッチング - AtCoder Heuristic Contest Memo</title>
+        <title>IndexSet - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#indexset" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              マッチング
+              IndexSet
             
           </span>
         </div>
@@ -1376,26 +1376,6 @@
                 
   
   
-  
-    <li class="md-nav__item">
-      <a href="index_set.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IndexSet
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1411,18 +1391,18 @@
           
   
   <span class="md-ellipsis">
-    マッチング
+    IndexSet
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="matching.html" class="md-nav__link md-nav__link--active">
+      <a href="index_set.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    マッチング
+    IndexSet
   </span>
   
 
@@ -1444,22 +1424,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    二部グラフマッチング
+    計算量
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    マッチングの問題、高度な話題
+    コード
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
+  <a href="#verified" class="md-nav__link">
+    Verified
   </a>
   
 </li>
@@ -1468,6 +1455,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="matching.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    マッチング
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1951,22 +1958,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    二部グラフマッチング
+    計算量
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    マッチングの問題、高度な話題
+    コード
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
+  <a href="#verified" class="md-nav__link">
+    Verified
   </a>
   
 </li>
@@ -1986,45 +2000,83 @@
                   
 
 
-<h1 id="_1">マッチング<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">二部グラフマッチング<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h1 id="indexset">IndexSet<a class="headerlink" href="#indexset" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://qiita.com/drken/items/e805e3f514acceb87602">https://qiita.com/drken/items/e805e3f514acceb87602</a><ul>
-<li>重みなし<ul>
-<li>s-tグラフを作って、フロー(最大流)を流す</li>
-<li><a href="https://snuke.hatenablog.com/entry/2019/05/07/013609">https://snuke.hatenablog.com/entry/2019/05/07/013609</a></li>
+<li><a href="https://topcoder-tomerun.hatenablog.jp/entry/2021/06/12/134643">https://topcoder-tomerun.hatenablog.jp/entry/2021/06/12/134643</a></li>
+<li>0〜N-1までの整数の集合を管理するクラス</li>
 </ul>
-</li>
-<li>最大重み<ul>
-<li>重みをマイナスにしてコストに入れて、s-tグラフを作って最小費用流<ul>
-<li>マッチングできる頂点数は流量で表現</li>
-</ul>
-</li>
-<li>マッチングサイズがわかっていれば、コストを非負に変換して高速化できる<ul>
-<li>ベルマンフォードからdijkstraに変更</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>最小重み最大マッチング(割当問題)<ul>
-<li>ハンガリアン法</li>
-</ul>
-</li>
-</ul>
-<h2 id="_3">マッチングの問題、高度な話題<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_2">計算量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://koyumeishi.hatenablog.com/entry/2017/03/26/191726">https://koyumeishi.hatenablog.com/entry/2017/03/26/191726</a></li>
-<li><a href="https://speakerdeck.com/wata_orz/santakonpedeer-du-quan-wan-sitahua">https://speakerdeck.com/wata_orz/santakonpedeer-du-quan-wan-sitahua</a><ul>
-<li><a href="https://www.youtube.com/watch?v=bM1Xtziy6xc">https://www.youtube.com/watch?v=bM1Xtziy6xc</a></li>
+<li><code>insert()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>値を追加</li>
+</ul>
+</li>
+<li><code>erase()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>値を削除</li>
+</ul>
+</li>
+<li><code>count()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>指定した要素の個数を取得(0か1)</li>
+</ul>
+</li>
+<li><code>clear()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>値をすべて削除</li>
+</ul>
+</li>
+<li><code>size()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>要素数を取得</li>
+</ul>
+</li>
+<li><code>items()</code>: <span class="arithmatex"><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span><ul>
+<li>すべての要素をvectorで取得</li>
 </ul>
 </li>
 </ul>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<h2 id="_3">コード<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">IndexSet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+
+<span class="w">   </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">IndexSet</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">N</span><span class="p">),</span><span class="w"> </span><span class="n">pos</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="n">pos</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">erase</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+<span class="w">        </span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<span class="w">        </span><span class="n">pos</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<span class="w">        </span><span class="n">pos</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">clear</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">        </span><span class="n">pos</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">items</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="verified">Verified<a class="headerlink" href="#verified" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://ikatakos.com/pot/programming_algorithm/graph_theory/bipartite_matching">https://ikatakos.com/pot/programming_algorithm/graph_theory/bipartite_matching</a></li>
-<li><a href="https://blog.hamayanhamayan.com/entry/2017/05/09/120253">https://blog.hamayanhamayan.com/entry/2017/05/09/120253</a></li>
+<li>なし</li>
 </ul>
 
 
