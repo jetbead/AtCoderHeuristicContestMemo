@@ -35,7 +35,7 @@ title: Home
   - AHC Standings(スコア分布のビジュアライザ)
     - https://img.atcoder.jp/ahc_standings/index.html
   - AtCoder Heuristic Race Ranking (Unofficial, ポイント制でのランキング)
-    - https://docs.google.com/spreadsheets/d/1gFmqVYr44QlQBkHKLcd1YyFM_-Ne7Hzf7SODbADx8HI/edit#gid=340005926
+    - https://docs.google.com/spreadsheets/d/1gFmqVYr44QlQBkHKLcd1YyFM_-Ne7Hzf7SODbADx8HI
 - :material-folder: **summary**
   - https://kato-hiro.github.io/AtCoderClans/
 
