@@ -173,7 +173,16 @@
 
 ### exp()の計算部分を2^xの計算で近似して高速処理するテク
 
+- http://spvyxgfbtewiazrl.doorblog.jp/archives/50676843.html
 - https://twitter.com/koyumeishi_/status/1709456647285026819
+- https://twitter.com/koyumeishi_/status/1721964004741136589
+
+- 自分のコードの場合は、以下のようにする感じ？(＋温度調整)
+```
+if (exp(delta / T) >= frand()) {
+↓
+if (((uint32_t)(1) << (uint32_t)(32 + delta / T)) >= xor128()) {
+```
 
 ## その他
 
