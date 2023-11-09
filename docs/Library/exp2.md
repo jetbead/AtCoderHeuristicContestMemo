@@ -15,6 +15,12 @@
 
 ## バンディット
 
+### Links
+
+- いろんなバンディットアルゴリズムを理解しよう
+  - https://qiita.com/birdwatcher/items/9560afeea61d14cff317
+
+
 ### ε-greedy
 
 ### UCB1
