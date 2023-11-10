@@ -36,6 +36,7 @@
 - [時間計測 Timer](./timer.md)
 - [ビットボード](./bitboard.md)
 - [IndexSet](./index_set.md)
+- [永続stack](./persistent_stack.md)
 
 ## デバッグ、ビジュアライザ
 
