@@ -61,6 +61,7 @@
 ### [0,N)の整数の集合を管理する定数倍が軽いデータ構造(IndexSet)
 
 - https://topcoder-tomerun.hatenablog.jp/entry/2021/06/12/134643
+- [IndexSet](./index_set.md)
 - 要素と位置の2つのvectorを持っておいて更新する
   - (validな候補集合の)indexを保持する、など
   - ランダムに選ぶ関数を追加する、など
