@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="debug_print.html">
+        <link rel="prev" href="patterns.html">
       
       
-        <link rel="next" href="exp2.html">
+        <link rel="next" href="python_snippet.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>行列ライブラリEigen - AtCoder Heuristic Contest Memo</title>
+        <title>永続stack - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eigen" class="md-skip">
+        <a href="#stack" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              行列ライブラリEigen
+              永続stack
             
           </span>
         </div>
@@ -1176,29 +1176,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    行列ライブラリEigen
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="eigen.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="eigen.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1207,40 +1187,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    高速
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1570,9 +1516,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="persistent_stack.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    永続stack
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="persistent_stack.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1581,6 +1547,54 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    コード
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    使い方
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified" class="md-nav__link">
+    Verified
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1964,15 +1978,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
+  <a href="#_1" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    高速
+  <a href="#_2" class="md-nav__link">
+    コード
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    使い方
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified" class="md-nav__link">
+    Verified
   </a>
   
 </li>
@@ -1992,39 +2020,69 @@
                   
 
 
-<h1 id="eigen">行列ライブラリEigen<a class="headerlink" href="#eigen" title="Permanent link">&para;</a></h1>
+<h1 id="stack">永続stack<a class="headerlink" href="#stack" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ヘッダオンリーなC++ライブラリ<ul>
-<li>C++標準ライブラリ以外の依存関係はない</li>
-<li>ビルドも不要(ドキュメントとテストだけ)</li>
+<li><a href="https://platinum-prog.hatenablog.com/entry/2023/07/28/222536">https://platinum-prog.hatenablog.com/entry/2023/07/28/222536</a></li>
+<li><a href="https://noshi91.hatenablog.com/entry/2019/02/04/175100">https://noshi91.hatenablog.com/entry/2019/02/04/175100</a></li>
+<li>永続stackは、更新前のstackの状態を保存しておけるデータ構造</li>
+<li>ビームサーチやゲーム木などで、出力文字列を各ノードに持たせると、stepが進むほど大きくなってしまうが、永続stackに置き換えることで効率化できる</li>
 </ul>
-</li>
-</ul>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<h2 id="_2">コード<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PersistentStack</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">History</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">T</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">        </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">History</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parent</span><span class="p">;</span>
+<span class="w">        </span><span class="n">History</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">History</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parent</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">v</span><span class="p">(</span><span class="n">v</span><span class="p">),</span><span class="w"> </span><span class="n">parent</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">PersistentStack</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">PersistentStack</span><span class="p">(</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">History</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">head</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">head</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">top</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">head</span><span class="o">-&gt;</span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">PersistentStack</span><span class="w"> </span><span class="n">push</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">PersistentStack</span><span class="p">(</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">History</span><span class="o">&gt;</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">head</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">PersistentStack</span><span class="w"> </span><span class="n">pop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">PersistentStack</span><span class="p">(</span><span class="n">head</span><span class="o">-&gt;</span><span class="n">parent</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">   </span><span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">History</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="_3">使い方<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1">// Stateクラスに`std::vector&lt;int&gt; output;`のように持たせているところを置き換える</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">PersistentStack</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stack</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">};</span>
+
+<span class="c1">// 遷移時にstackも更新</span>
+<span class="n">State</span><span class="w"> </span><span class="n">next_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
+<span class="n">next_state</span><span class="p">.</span><span class="n">advance</span><span class="p">(</span><span class="n">op1</span><span class="p">);</span>
+<span class="n">next_state</span><span class="p">.</span><span class="n">stack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">next_state</span><span class="p">.</span><span class="n">stack</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="s">&quot;op1&quot;</span><span class="p">);</span>
+
+<span class="c1">// 最終状態から復元</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">state</span><span class="p">.</span><span class="n">stack</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+<span class="w">    </span><span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">stack</span><span class="p">.</span><span class="n">top</span><span class="p">());</span>
+<span class="w">    </span><span class="n">state</span><span class="p">.</span><span class="n">stack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="n">reverse</span><span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">ans</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</code></pre></div>
+<h2 id="verified">Verified<a class="headerlink" href="#verified" title="Permanent link">&para;</a></h2>
 <ul>
-<li>公式<ul>
-<li><a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">https://eigen.tuxfamily.org/index.php?title=Main_Page</a></li>
-</ul>
-</li>
-<li>公開コピー誌 行列ライブラリEigenのメモ(暗黒通信団)<ul>
-<li><a href="http://ankokudan.org/d/dl/pdf/pdf-eigennote.pdf">http://ankokudan.org/d/dl/pdf/pdf-eigennote.pdf</a></li>
-</ul>
-</li>
-<li>C++行列計算ライブラリEigen入門<ul>
-<li><a href="https://qiita.com/yohm/items/a03006790dc1e54a87be">https://qiita.com/yohm/items/a03006790dc1e54a87be</a></li>
-</ul>
-</li>
-<li>gitlab?<ul>
-<li><a href="https://gitlab.com/libeigen/eigen">https://gitlab.com/libeigen/eigen</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="_1">高速<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Expression Template(式テンプレート)による遅延評価</li>
-<li>自動ベクトル化(SIMD)、ループ展開</li>
-<li>固定サイズの行列で動的メモリ割り当ての回避、</li>
-<li>大きな行列でのキャッシュの扱いへの配慮</li>
+<li>なし</li>
 </ul>
 
 
