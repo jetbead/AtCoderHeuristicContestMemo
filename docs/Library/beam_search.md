@@ -17,6 +17,10 @@
 - ゲームAIの置換表におけるreplacement strategyについて
   - https://yaneuraou.yaneu.com/2023/06/09/replacement-strategy-in-transposition-table/
 
+## 出力の持ち方
+
+- [永続stack](./persistent_stack.md)
+
 ## 重複排除
 
 - ZobristHashを用いる
