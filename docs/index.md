@@ -10,6 +10,8 @@ title: Home
   - 過去のコンテスト情報、解法リンク、反省メモ
 - :material-axe: [Library List](./Library/index.md)
   - Heuristic Contest 関連の自作ライブラリ、調査メモ
+- :material-rss: [Blog](./blog/index.md)
+  - 雑記、ブログ
 
 ## :material-link: Links
 

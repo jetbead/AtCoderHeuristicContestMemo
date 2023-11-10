@@ -8,7 +8,10 @@ theme:
   features:
     - content.code.copy
 
-plugins: []
+plugins:
+  - blog:
+      blog_toc: true
+      post_readtime: false
 
 extra:
   font:
