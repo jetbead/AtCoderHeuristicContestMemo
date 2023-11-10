@@ -19,7 +19,8 @@
 
 - いろんなバンディットアルゴリズムを理解しよう
   - https://qiita.com/birdwatcher/items/9560afeea61d14cff317
-
+- バンディット問題の基本的な方策アルゴリズムの評価
+  - https://qiita.com/tyoshitake/items/2ed890c56945c43774f5
 
 ### ε-greedy
 
