@@ -42,7 +42,7 @@ class PersistentStack {
 };
 ```
 
-## 使い方
+## Usage
 
 ```cpp
 // Stateクラスに`std::vector<int> output;`のように持たせているところを置き換える
