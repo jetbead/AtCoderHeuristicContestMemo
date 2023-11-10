@@ -10,6 +10,19 @@
 - https://speakerdeck.com/hpprc/zi-yuan-tositejian-rushi-yan-puroguramu
 - https://twitter.com/mamas16k/status/1660011592870948864
 
+## コンパイラ設定
+
+- AtCoderの各コンテストtopページのfooter部分にある「ルール」から、使用可能な言語とコンパイラオプション、実行コマンドが確認できる
+
+## サーバー環境
+
+- 各コンテストの「コードテスト」で言語をBash等にすることで、サーバー環境の情報をコマンドで確認できる
+  - `cat /proc/cpuinfo`
+    - model name
+    - flags
+    - など
+  - ローカル環境でクロック数などを揃える場合に確認する
+
 ## 設定ファイル
 
 ### .clang-format
