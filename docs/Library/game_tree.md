@@ -8,6 +8,9 @@
   - https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
 - ゲーム木探索技術とコンピュータ将棋への応用
   - https://www.slideshare.net/shogotakeuchi/ss-62415546
+- AHC典型解法シリーズ第1弾「モンテカルロ法」(thunder さん)
+  - https://qiita.com/thun-c/items/8e7ae0249f1907854763
+
 
 ## ゲームの分類
 
