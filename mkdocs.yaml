@@ -4,22 +4,20 @@ copyright: "Copyright &copy; jetbead 2021"
 
 theme:
   name: material
-  language: "ja"
+  #language: "ja"
   features:
     - content.code.copy
     - toc.follow
   palette:
     primary: grey
+  font:
+    text: Noto Sans Japanese
 
 plugins:
   - blog:
       blog_toc: true
       post_readtime: false
-
-extra:
-  font:
-    text: "Noto Sans JP"
-    code: "Consolas"
+  - offline
 
 extra_css:
   - "css/custom.css"
