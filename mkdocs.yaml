@@ -7,6 +7,9 @@ theme:
   language: "ja"
   features:
     - content.code.copy
+    - toc.follow
+  palette:
+    primary: grey
 
 plugins:
   - blog:
