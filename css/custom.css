@@ -6,7 +6,12 @@
   max-width: 100%;
 }
 
+/*
 .md-nav__title {
+  display: none !important;
+}
+*/
+.md-nav--secondary .md-nav__title {
   display: none !important;
 }
 
