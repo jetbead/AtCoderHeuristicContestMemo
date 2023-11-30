@@ -17,7 +17,8 @@
 - 焼きなましをするときの設計に関するメモ(yunix_kyopro さん)
   - https://yunix-kyopro.hatenablog.com/entry/2022/10/30/141616
   - https://twitter.com/yunix91201367/status/1586588684622520322
-
+- AHC典型解法シリーズ第2弾「焼きなまし法」(thunder さん)
+  - https://qiita.com/thun-c/items/ecd438fde4d237b1f7bc
 
 ## テンプレート
 

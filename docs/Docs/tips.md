@@ -14,6 +14,11 @@
   - https://speakerdeck.com/terryu16/metahiyurisuteikusudeguang-garu-jie-keta-noshi-jie
 - しっかり学ぶ数理最適化 ヒューリスティック編(hari64 さん)
   - https://qiita.com/hari64/items/e66fd2a281ab76a58af3
+- AHC典型:解をたくさん作る(iwashi31 さん)
+  - https://iwashi31.hatenablog.com/entry/2023/11/05/234449
+- 焼きなまし法が使えなくても AHC 橙になれたよ(Kiri8128 さん)
+  - https://kiri8128.hatenablog.com/entry/2023/11/29/024335
+  - 評価関数・貪欲の考え方、その他の工夫について
 
 
 ## Heuristicsの設計、実装について
@@ -42,8 +47,7 @@
   - https://twitter.com/_phocom/status/1693217561381404801
 - テクニック集
   - https://github.com/rhoo19937/p/blob/main/tech/.md
-- AHC典型:解をたくさん作る(iwashi31 さん)
-  - https://iwashi31.hatenablog.com/entry/2023/11/05/234449
+
 
 ## 改善アイデアの試し方
 
