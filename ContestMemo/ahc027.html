@@ -2931,7 +2931,11 @@
 </ul>
 </li>
 <li>上記の「周期の見積もり」を使うと、<span class="arithmatex"><span class="MathJax_Preview">\frac{1}{\sqrt{d}}</span><script type="math/tex">\frac{1}{\sqrt{d}}</script></span>に比例する程度の時間で訪問すると良いことがわかるので、実際の汚れは<span class="arithmatex"><span class="MathJax_Preview">d * \frac{1}{\sqrt{d}} = \sqrt{d}</span><script type="math/tex">d * \frac{1}{\sqrt{d}} = \sqrt{d}</script></span>に比例する程度溜まったら掃除するのがよいとわかる</li>
-<li>なので、汚れのたまり具合をdではなく<span class="arithmatex"><span class="MathJax_Preview">\sqrt{d}</span><script type="math/tex">\sqrt{d}</script></span>にして考えて貪欲法をすると、かなり良い結果が得られる</li>
+<li>なので、汚れのたまり具合をdではなく<span class="arithmatex"><span class="MathJax_Preview">\sqrt{d}</span><script type="math/tex">\sqrt{d}</script></span>にして考えて貪欲法をすると、かなり良い結果が得られる<ul>
+<li>正確には、汚れを<span class="arithmatex"><span class="MathJax_Preview">sqrt(d)</span><script type="math/tex">sqrt(d)</script></span>に置き換えたうえで、「そのマスまでの最短経路上で掃除できる汚れの量の平均が一番高くなるマス」に向かって移動するような貪欲、とかが強い</li>
+<li>「一番汚れが溜まっているマスへ汚れを考慮しない最短経路で移動」とかだと全然良くならないっぽいので、結構気をつけて実装しないと良くならない</li>
+</ul>
+</li>
 <li>dを<span class="arithmatex"><span class="MathJax_Preview">\sqrt{d}</span><script type="math/tex">\sqrt{d}</script></span>で割るのではなく、現在のそのマスの訪問回数で割ったもの、で考えるのも有効な模様<ul>
 <li><a href="https://montplusa.hatenablog.com/entry/2023/12/11/195400">https://montplusa.hatenablog.com/entry/2023/12/11/195400</a> (その他の貪欲解改善の工夫も)</li>
 <li><a href="https://utac.hateblo.jp/entry/2023/12/10/191543">https://utac.hateblo.jp/entry/2023/12/10/191543</a></li>
