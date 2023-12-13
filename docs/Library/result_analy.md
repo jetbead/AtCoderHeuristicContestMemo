@@ -70,3 +70,9 @@ sns.heatmap(pd.pivot_table(df, index='N', columns='K', values='score', fill_valu
 df.groupby('K').plot(kind='hist', by=['K', 'GN'], column='score', layout=(4,6), sharex=True, sharey=True, subplots=True, legend=None)
 plt.show()
 ```
+
+## その他matplotlibによる可視化
+
+- https://twitter.com/rosso016/status/1734957163343397338
+  - https://matplotlib.org/stable/plot_types/index.html
+  - https://qiita.com/yubais/items/c95ba9ff1b23dd33fde2
