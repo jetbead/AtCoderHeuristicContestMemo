@@ -53,6 +53,12 @@
 - https://rsk0315.hatenablog.com/entry/2022/09/25/214915
 - https://graphics.stanford.edu/~seander/bithacks.html
 
+### SIMD化されやすい書き方、キャッシュに乗りやすい書き方
+
+- if文やmax/minの組み合わせではなく、clamp()を使う
+- 参照の局所性
+  - https://twitter.com/komori3_/status/1734784399504548339
+  - 2次元対称行列のアクセスで添字の順番を揃える
 
 ### vectorの途中の要素をO(1)で消すテク
 
@@ -103,3 +109,4 @@
 
 - https://en.algorithmica.org/hpc/pipelining/branchless/
 - https://probablydance.com/2023/04/27/beautiful-branchless-binary-search/
+
