@@ -433,42 +433,85 @@ struct P {
     }
     P(int y, int x) : y(y), x(x) {
     }
+    bool operator<(const P& other) const {
+        if (y == other.y) return x < other.x;
+        return y < other.y;
+    }
+    bool operator>(const P& other) const {
+        return other < *this;
+    }
+    bool operator==(const P& other) const {
+        return y == other.y && x == other.x;
+    }
 };
-bool operator<(const P& a, const P& b) {
-    if (a.y == b.y) return a.x < b.x;
-    return a.y < b.y;
+ostream& operator<<(ostream& os, const P& p) {
+    os << "(" << p.y << "," << p.x << ")";
+    return os;
 }
-class Grid {
-    int H, W;
-    vector<int> v;
+
+template <class T>
+struct Array2D {
+    static_assert(!is_same<T, bool>::value, "use int8_t instead of bool");
+    const int H, W;
+    vector<T> v;
+    Array2D(int H, int W) : H(H), W(W), v(H * W, T()) {
+    }
+    void clear() {
+        v.assign(H * W, T());
+    }
+    const T& operator[](const P& p) const {
+        return v[p.y * W + p.x];
+    }
+    T& operator[](const P& p) {
+        return v[p.y * W + p.x];
+    }
+};
+
+template <class T>
+class FastClearingArray2D {
+    T base;
+    T mx;
+    Array2D<T> v;
 
    public:
-    Grid() : H(0), W(0) {
+    FastClearingArray2D(int H, int W) : base(1), mx(0), v(H, W) {
     }
-    Grid(int H, int W) : H(H), W(W), v(H * W, 0) {
+    const T operator[](const P& p) const {
+        return get(p);
     }
-    int operator[](const P& pos) const {
-        return v[pos.y * W + pos.x];
+    const T get(const P& p) const {
+        if (v[p] >= base) return v[p] - base;
+        return -1;
     }
-    int& operator[](const P& pos) {
-        return v[pos.y * W + pos.x];
+    void set(const P& p, const T& x) {
+        assert(x >= 0);
+        v[p] = x + base;
+        mx = max(mx, v[p]);
     }
-    int get_H() const {
-        return H;
-    }
-    int get_W() const {
-        return W;
-    }
-    bool in_range(const P& pos) const {
-        return 0 <= pos.y && pos.y < H && 0 <= pos.x && pos.x < W;
-    }
-    void dump() const {
-        for (int y = 0; y < H; y++) {
-            for (int x = 0; x < W; x++) {
-                cerr << setw(3) << v[y * W + x];
-            }
-            cerr << endl;
+    void clear() {
+        base = mx + 1;
+        if (base > 1e9) {
+            base = 1;
+            mx = 0;
+            v.clear();
         }
     }
+};
+```
+
+## 方向操作
+
+```cpp
+struct Dir {
+    enum Angle { U = 0, L = 1, D = 2, R = 3 };
+    const string angle = "ULDR";
+    const string rev_angle = "DRUL";
+    const int vy[4] = {-1, 0, 1, 0};
+    const int vx[4] = {0, -1, 0, 1};
+    int rev(int k) const {
+        return (k + 2) % 4;
+    }
+
+    array<bool, 4> dir;
 };
 ```

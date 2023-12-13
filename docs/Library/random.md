@@ -105,6 +105,21 @@ x128pp();
 
 - https://www.pcg-random.org/index.html
 - https://ja.wikipedia.org/wiki/Permuted_congruential_generator
+- https://twitter.com/rho__o/status/1734784410808160661
+
+### 乱数生成の高速化
+
+- `rand() % m`のかわりに`(ll)rand() * m >> 32`を使う
+  - https://www.pcg-random.org/posts/bounded-rands.html
+  - [AHC027](../ContestMemo/ahc027.md)
+  - https://twitter.com/koyumeishi_/status/1363367043861389316
+  - お気持ちとしては、0〜(2^32)-1の乱数を2^32で割ると0〜1になるので、それをm倍するイメージ
+- https://twitter.com/rho__o/status/1734784563665424875
+- 配列に入れておいてbit maskしたものでアクセス
+  - https://twitter.com/terry_u16/status/1734776648627806391
+- 高速な乱数生成アルゴリズム
+  - https://twitter.com/ethylene_66/status/1734773049860501848
+  - https://twitter.com/rho__o/status/1734786100873564174 (LCGs)
 
 ### hack(シード値特定、hash衝突)
 
@@ -240,7 +255,7 @@ class WalkersAliasMethod {
 
 - 候補集合からランダムに選ぶ
   - ランダムに集合のindexを選ぶ
-  - 「[0,N)の整数の集合を管理する定数倍が軽いデータ構造」([高速化](./speedup.md))を使う
+  - 「[0,N)の整数の集合を管理する定数倍が軽いデータ構造」([高速化](./speedup.md),[IndexSet](./index_set.md))を使う
 - 要素に重みをつけて、重み付きサンプリングする
 - 要素に重み(乱数)をつけて、ソート or priority_queueして前から選ぶ
 - ランダムにk要素選んで、評価値を計算して、一番良いものを選ぶ
