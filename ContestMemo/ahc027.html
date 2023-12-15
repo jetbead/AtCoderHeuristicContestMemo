@@ -1031,7 +1031,7 @@
           <li class="md-nav__item">
   <a href="#_17" class="md-nav__link">
     <span class="md-ellipsis">
-      スコアの下限を使って正規化スコアを見る
+      橋/関節点
     </span>
   </a>
   
@@ -1040,7 +1040,7 @@
           <li class="md-nav__item">
   <a href="#_18" class="md-nav__link">
     <span class="md-ellipsis">
-      乱数生成の高速化
+      スコアの下限を使って正規化スコアを見る
     </span>
   </a>
   
@@ -1048,6 +1048,15 @@
         
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      乱数生成の高速化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
     <span class="md-ellipsis">
       ゴミ屋敷
     </span>
@@ -1066,7 +1075,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     <span class="md-ellipsis">
       解説
     </span>
@@ -2792,7 +2801,7 @@
           <li class="md-nav__item">
   <a href="#_17" class="md-nav__link">
     <span class="md-ellipsis">
-      スコアの下限を使って正規化スコアを見る
+      橋/関節点
     </span>
   </a>
   
@@ -2801,7 +2810,7 @@
           <li class="md-nav__item">
   <a href="#_18" class="md-nav__link">
     <span class="md-ellipsis">
-      乱数生成の高速化
+      スコアの下限を使って正規化スコアを見る
     </span>
   </a>
   
@@ -2809,6 +2818,15 @@
         
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      乱数生成の高速化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
     <span class="md-ellipsis">
       ゴミ屋敷
     </span>
@@ -2827,7 +2845,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     <span class="md-ellipsis">
       解説
     </span>
@@ -3053,12 +3071,19 @@
 <li>パスが短い場合、スコアを維持したまま、解の変更のしやすさを上げれる可能性がある</li>
 <li>半分時間がたったタイミング(1秒)でこれを入れる感じの人が何人かいた模様</li>
 </ul>
-<h4 id="_17">スコアの下限を使って正規化スコアを見る<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<h4 id="_17">橋/関節点<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li>橋/関節点は2回(行きと帰り)は通る必要がある<ul>
+<li>壁に囲われていて出入り口がそこしかないようなところ</li>
+</ul>
+</li>
+</ul>
+<h4 id="_18">スコアの下限を使って正規化スコアを見る<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="https://www.terry-u16.net/entry/httf2024">https://www.terry-u16.net/entry/httf2024</a></li>
 <li>Nや汚れやすさによってスコアが結構大きく違っているが、下限値を求めている場合は、それを使って正規化して考えられる</li>
 </ul>
-<h4 id="_18">乱数生成の高速化<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<h4 id="_19">乱数生成の高速化<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>rand() % m</code>で、mod計算が重いので、ビットシフトにして<code>(ll)rand() * m &gt;&gt; 32</code>にする</li>
 <li><a href="https://twitter.com/ethylene_66/status/1733880896909197728">https://twitter.com/ethylene_66/status/1733880896909197728</a></li>
@@ -3067,7 +3092,7 @@
 <li><a href="https://twitter.com/komora71_/status/1734778505110630694">https://twitter.com/komora71_/status/1734778505110630694</a></li>
 <li><a href="https://twitter.com/koyumeishi_/status/1734764973136711706">https://twitter.com/koyumeishi_/status/1734764973136711706</a></li>
 </ul>
-<h4 id="_19">ゴミ屋敷<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<h4 id="_20">ゴミ屋敷<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <ul>
 <li>dが大きいのが大量に存在しているケースがある<ul>
 <li>解法によってはTLEなどしないよう気をつける</li>
@@ -3076,7 +3101,7 @@
 <li><a href="https://twitter.com/bowwowforeach/status/1733802912109957334">https://twitter.com/bowwowforeach/status/1733802912109957334</a></li>
 <li><a href="https://twitter.com/shr_pc/status/1733803720134230057">https://twitter.com/shr_pc/status/1733803720134230057</a></li>
 </ul>
-<h2 id="_20">解説<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h2 id="_21">解説<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
 <p>(100位まで&amp;発言を見つけられた方のみ)</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=S7dJl3zpctc">AHCラジオ(解説放送)</a></li>
@@ -3090,7 +3115,7 @@
 <li><a href="https://twitter.com/ethylene_66/status/1733799421522125236">https://twitter.com/ethylene_66/status/1733799421522125236</a></li>
 </ul>
 </li>
-<li>2位eijirouさん</li>
+<li><a href="https://eijirou-kyopro.hatenablog.com/entry/2023/12/15/111632">2位eijirouさん</a></li>
 <li><a href="https://twitter.com/bowwowforeach/status/1733790846452109510">3位bowwowforeachさん</a><ul>
 <li><a href="https://twitter.com/bowwowforeach/status/1733968346541182987">https://twitter.com/bowwowforeach/status/1733968346541182987</a></li>
 <li><a href="https://twitter.com/bowwowforeach/status/1733802912109957334">https://twitter.com/bowwowforeach/status/1733802912109957334</a></li>
