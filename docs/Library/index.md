@@ -41,6 +41,7 @@
 ## デバッグ、ビジュアライザ
 
 - [gnuplotで簡易ビジュアライザ](./gnuplot.md)
+- [svgで簡易ビジュアライザ](./svg.md)
 - [デバッグ出力](./debug_print.md)
 - [実行結果の分析](./result_analy.md)
 
