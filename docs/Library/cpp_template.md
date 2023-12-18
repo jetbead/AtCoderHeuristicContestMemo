@@ -128,6 +128,7 @@ class TransitionSelector {
         transitions[select_index]->rollback();
     }
     inline void dump() {
+        cerr << "select: " << transitions[select_index]->get_name() << endl;
     }
 };
 
@@ -136,10 +137,10 @@ class Transition1 : public Transition {
    public:
     Transition1(const string& name, State& state) : Transition(name, state) {
     }
-    virtual void apply() {
+    virtual void apply() override {
         state.score++;
     }
-    virtual void rollback() {
+    virtual void rollback() override {
         state.score--;
     }
 };
