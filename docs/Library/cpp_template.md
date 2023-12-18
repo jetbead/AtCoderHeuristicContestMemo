@@ -108,6 +108,7 @@ class Transition {
 class TransitionSelector {
     vector<int> table;
     vector<unique_ptr<Transition>> transitions;
+    int select_index;
 
    public:
     void add(unique_ptr<Transition>&& transition, int weight) {
@@ -117,8 +118,16 @@ class TransitionSelector {
         }
         transitions.emplace_back(move(transition));
     }
-    Transition* get() {
-        return transitions[table[xor128() % table.size()]].get();
+    inline void select_transition() {
+        select_index = table[xor128() % table.size()];
+    }
+    inline void apply() {
+        transitions[select_index]->apply();
+    }
+    inline void rollback() {
+        transitions[select_index]->rollback();
+    }
+    inline void dump() {
     }
 };
 
@@ -161,7 +170,6 @@ void solve() {
     const double TIME_LIMIT = GLOBAL_TIME_LIMIT - global_timer.getSec();
     Timer timer;
     timer.start();
-    Transition* transition;
     double sec;
     int step = 0;
     while (true) {
@@ -170,10 +178,10 @@ void solve() {
         if (sec > TIME_LIMIT) break;
         double T = calc_temp(sec, TIME_LIMIT);
 
-        transition = selector.get();
+        selector.select_transition();
 
         int prev_score = state.score;
-        transition->apply();
+        selector.apply();
         int new_score = state.score;
 
         int delta = new_score - prev_score;
@@ -186,7 +194,7 @@ void solve() {
             }
         }
         if (undo) {
-            transition->rollback();
+            selector.rollback();
         } else {
             if (best_state < state) {
                 best_state = state;
