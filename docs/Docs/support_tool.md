@@ -18,6 +18,9 @@
 - AHC Output File Reader
   - https://github.com/qropa/marathon/tree/main/ahc
   - ビジュアライザで自動で出力ファイルを読み込む拡張
+- toast-uz/ahc_tools
+  - https://github.com/toast-uz/ahc_tools/
+  - ローカル(並列)テスターサポートツール
 
 ## クラウドジャッジ環境整備
 
