@@ -54,6 +54,9 @@ title: TOYOTA2023夏Final
   - https://twitter.com/Jiro_tech15/status/1695740964256862718
   - https://twitter.com/Jiro_tech15/status/1695738163984277950
 
+- 解説
+  - https://speakerdeck.com/terryu16/toyota-ahc-zhi-gao-noarugorizumujie-shuo-hui-transit-warehouse-jie-shuo
+
 ## Links
 
 - [Twitter hashtag トヨタコンSummer](https://twitter.com/hashtag/%E3%83%88%E3%83%A8%E3%82%BF%E3%82%B3%E3%83%B3Summer)
