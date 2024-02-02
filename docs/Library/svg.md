@@ -110,3 +110,8 @@ class SimpleSVG {
     }
 };
 ```
+
+## Tips
+
+- tooltipsを表示
+  - `<g><title>meg</title><rect>...</rect></g>`のようにすると、マウスカーソルを載せたときにmsg情報を表示できる
