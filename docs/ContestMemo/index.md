@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc030.png" class="trimimg"> | [THIRDプログラミングコンテスト2023(AHC030)](./ahc030.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc028.png" class="trimimg"> | [ALGO ARTIS プログラミングコンテスト 2023冬(AHC028)](./ahc028.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc029.png" class="trimimg"> | [RECRUIT 日本橋ハーフマラソン 2024冬(AHC029)](./ahc029.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc027.png" class="trimimg"> | [HACK TO THE FUTURE 2024(AHC027)](./ahc027.md) | <span style="color: #cc0000;">long</span> | :material-check: |
