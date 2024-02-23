@@ -13,6 +13,12 @@
 - https://cpprefjp.github.io/reference/cmath/erf.html
 - 誤差関数
 
+### erfc
+
+- https://cpprefjp.github.io/reference/cmath/erfc.html
+- 相補誤差関数
+- 1-erf(x)
+
 ## exp2
 
 - https://cpprefjp.github.io/reference/cmath/exp2.html

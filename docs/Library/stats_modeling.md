@@ -121,6 +121,33 @@ for i in range(1000):
 
 - 各行、各列を交互に正規化を繰り返すと二重確率行列に近似できる
 
+## エントロピー
+
+- https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC
+- https://ja.wikipedia.org/wiki/%E6%83%85%E5%A0%B1%E9%87%8F
+- (情報理論における)エントロピーとは、確率変数が持つ情報の量を表す尺度(情報量)
+- 確率変数Xに対するエントロピーは、$H(X) = -\sum_{x}{P(x)logP(x)}$
+  - 一般的には、すべてのxで等確率の場合H(X)は最大で、特定のxだけ確率が1になっている場合に最小(=0)
+- 条件付きエントロピー
+  - $H(X|y) = -\sum_{x}{P(x|y)logP(x|y)}$
+    - 確率変数Yがyの場合のエントロピー
+  - $H(X|Y) = \sum_{y}{P(Y=y) H(X|Y=y)}$
+    - yに関する平均(期待値)
+
+### エントロピーの差(相互情報量)
+
+- https://ja.wikipedia.org/wiki/%E7%9B%B8%E4%BA%92%E6%83%85%E5%A0%B1%E9%87%8F
+- https://manabitimes.jp/math/1403
+- ベイズ推定などで、ある情報Aを得ることで事後確率分布が変わるような場合に、事前分布のエントロピーと事後分布のエントロピーの差を考える
+  - $H(X) - H(X|A)$
+  - この差が大きいほど、情報Aが、特定のxである確率が高くできるような情報であると判断できる
+- この差は相互情報量とも呼ばれる
+- 2つの確率変数X,Yについて、$I(X;Y)=\sum_{x}\sum_{y}{P(x,y)log\frac{P(x,y)}{P(x)P(y)}}$
+- 性質
+  - $I(X;Y) = H(X) - H(X|Y)$
+  - $I(X;Y) = H(Y) - H(Y|X)$
+  - $I(X;Y) = H(X) + H(Y) - H(X,Y)$
+
 ## カルマンフィルタ
 
 ### パーティクルフィルタ
@@ -139,3 +166,4 @@ for i in range(1000):
   - https://twitter.com/square10011/status/1535911569607245824
 - [AHC022](../ContestMemo/ahc022.md)
 - [AHC025](../ContestMemo/ahc025.md)
+- [AHC030](../ContestMemo/ahc030.md)
