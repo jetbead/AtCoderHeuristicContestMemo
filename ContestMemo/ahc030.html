@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
       
@@ -3223,12 +3223,26 @@
 <li>(<span class="arithmatex"><span class="MathJax_Preview">H(X)</span><script type="math/tex">H(X)</script></span>の方に<span class="arithmatex"><span class="MathJax_Preview">\sum_{y}{P(y|x)}=1</span><script type="math/tex">\sum_{y}{P(y|x)}=1</script></span>を掛けて式を整理)</li>
 </ul>
 </li>
+<li>今回の場合、<span class="arithmatex"><span class="MathJax_Preview">P(x,y)=P(y|x)P(x)</span><script type="math/tex">P(x,y)=P(y|x)P(x)</script></span>から<span class="arithmatex"><span class="MathJax_Preview">I(X;Y)=\sum_{x}\sum_{y}{P(y|x) P(x) log\frac{P(y|x)}{P(y)}}</span><script type="math/tex">I(X;Y)=\sum_{x}\sum_{y}{P(y|x) P(x) log\frac{P(y|x)}{P(y)}}</script></span>にしてから使う</li>
 </ul>
 </li>
 </ul>
 <h5 id="_12">相互情報量最大のマス集合<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h5>
 <ul>
 <li>「相互情報量/コスト」を目的関数として、マスの追加削除などを近傍とした山登りで求める</li>
+<li>高速化<ul>
+<li>ただ、まともに計算しようとすると、「候補盤面*占った結果のあり得る値」回すことになるので、かなり重い</li>
+<li>以下のような高速化や調整をいれてないと厳しいっぽい<ul>
+<li>候補盤面は、確率が低い盤面を削除して減らす</li>
+<li>ある程度小さい確率の部分は無視する</li>
+<li>できるだけ重い関数を何度も呼ばない</li>
+<li>配列などの確保や初期化を何度もしない(差分計算する、逆操作で戻す)</li>
+<li>前計算しておく(log計算)</li>
+<li>パラメータ調整、時間調整</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="m2">候補が多すぎる問題への対処(M&gt;2への対処)<a class="headerlink" href="#m2" title="Permanent link">&para;</a></h3>
 <ul>
