@@ -93,6 +93,11 @@
   - k-opt(3-opt, 4-opt, double-bridge)
   - Lin-Kernighan Heuristic
 
+#### 類型
+
+- 系列を3箇所で切ってそれぞれ系列A、系列B、系列C、系列Dとして、ACBDの順番で連結する
+  - [AHC028](../ContestMemo/ahc028.md)
+
 ### kick 近傍
 
 - 局所解を抜け出す(kick)ような状態を大きく変える近傍
