@@ -19,6 +19,7 @@
   - [グリッド](./grid.md)
   - [ゲーム木探索](./game_tree.md)
   - [マルチエージェント](./multi_agent.md)
+  - [評価関数設計](./eval_function.md)
   - [探索と活用](./exp2.md)
   - [情報圧縮](./compress.md)
   - [分枝限定法](./branch_and_bound.md)
