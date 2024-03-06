@@ -14,6 +14,7 @@ parser.add_argument("--arg3", default="", help="")
 parser.add_argument("--flag", action='store_true')
 args = parser.parse_args()
 # args = vars(parser.parse_args()) # dict形式に変換
+main(**vars(args)) # 引数に展開して関数を呼び出す
 
 # jsonファイルを読み込み
 import json
