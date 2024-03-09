@@ -230,6 +230,110 @@ display(ui, interactive_output(display_svg, {"turn": slider}))
 ```
 
 
+## emscriptenで公式ビジュアライザのように動かす
+
+- emscriptenを使って、公式のビジュアライザのようにWebAssemblyにして動かせる
+- C++で書くことで、解答のC++コードと同じコードが使い回せる
+
+### 環境構築
+
+- emsdkをインストール
+  - https://github.com/emscripten-core/emsdk
+  - https://emscripten.org/docs/getting_started/downloads.html
+  - インストールして、activateしておく(emccが使えるようになる)
+  - アンインストールは、emsdkのディレクトリを消せばOK
+- pythonをインストール
+  - ローカルサーバーを立ち上げるのに利用(サーバーに置く場合は不要)
+
+### コード例
+
+(間違った書き方してるかもしれないので注意)
+
+```cpp
+// vis.cc
+#include <emscripten/bind.h>
+#include <emscripten/emscripten.h>
+
+// ...
+
+// input,outputに対してターンtの状態をsvg文字列で返す
+string vis(const string& input, const string& output, int t) {
+    string svg_text = "<svg> ... </svg>";
+    return svg_text;
+}
+
+// 最大ターン数
+int get_max_turn(const string& input, const string& output) {
+    int turn = 100;
+    return turn;
+}
+
+EMSCRIPTEN_BINDINGS(mod) {
+    emscripten::function("vis", &vis);
+    emscripten::function("get_max_turn", &get_max_turn);
+}
+```
+```html
+<!-- index.html(細かいところは公式ビジュアライザを参考) -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- フォームやdivなどを用意 -->
+    <!-- ... -->
+    <script type="module">
+      // 描画を更新
+      function visualize() {
+        const input = document.getElementById("input").value;
+        const output = document.getElementById("output").value;
+        const t = Number(document.getElementById("turn").value);
+        try {
+          const ret = window.Module.vis(input, output, t);
+          document.getElementById("result").innerHTML = ret;
+        } catch (error) {
+          console.log(error);
+          document.getElementById("result").innerHTML = "<p>Invalid</p>";
+        }
+      }
+      window.visualize = visualize; // window.hogeにいれることでグローバルでアクセスできる(html側から呼び出せる)
+
+      // tの更新があった場合の処理
+      function update_t(t) {
+        const max_turn = Number(document.getElementById("turn").max);
+        const new_turn = Math.min(Math.max(0, t), max_turn);
+        document.getElementById("turn").value = new_turn;
+        document.getElementById("t_bar").value = new_turn;
+        visualize();
+      }
+      window.update_t = update_t;
+
+      // アニメーションなどのコードを追加
+      // ...
+    </script>
+    <script async type="text/javascript" src="vis.js"></script>
+  </body>
+</html>
+```
+
+### ビルド
+
+```
+# vis.jsとvis.wasmができる
+emcc -lembind vis.cc -O3 -o vis.js
+```
+
+### 利用方法(ローカル)
+
+```
+# vis.js, vis.wasm, index.htmlがあるディレクトリで以下を実行
+python -m http.server 8000
+
+# http://localhost:8000/ にアクセス
+```
+
+
 ## Tips
 
 - tooltipsを表示
