@@ -914,6 +914,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../ContestMemo/masters-qual.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第一回マスターズ予選
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ContestMemo/rcl-contest-2021-long.html" class="md-nav__link">
         
   
@@ -1973,6 +1994,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#emscripten" class="md-nav__link">
+    <span class="md-ellipsis">
+      emscriptenで公式ビジュアライザのように動かす
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="emscriptenで公式ビジュアライザのように動かす">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境構築
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      コード例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビルド
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用方法(ローカル)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tips" class="md-nav__link">
     <span class="md-ellipsis">
       Tips
@@ -2541,6 +2613,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#emscripten" class="md-nav__link">
+    <span class="md-ellipsis">
+      emscriptenで公式ビジュアライザのように動かす
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="emscriptenで公式ビジュアライザのように動かす">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境構築
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      コード例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビルド
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用方法(ローカル)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tips" class="md-nav__link">
     <span class="md-ellipsis">
       Tips
@@ -2792,6 +2915,102 @@
 <span class="n">ui</span> <span class="o">=</span> <span class="n">HBox</span><span class="p">([</span><span class="n">play</span><span class="p">,</span> <span class="n">inc_button</span><span class="p">,</span> <span class="n">dec_button</span><span class="p">,</span> <span class="n">slider</span><span class="p">])</span>
 <span class="n">display</span><span class="p">(</span><span class="n">ui</span><span class="p">,</span> <span class="n">interactive_output</span><span class="p">(</span><span class="n">display_svg</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;turn&quot;</span><span class="p">:</span> <span class="n">slider</span><span class="p">}))</span>
 </code></pre></div></p>
+<h2 id="emscripten">emscriptenで公式ビジュアライザのように動かす<a class="headerlink" href="#emscripten" title="Permanent link">&para;</a></h2>
+<ul>
+<li>emscriptenを使って、公式のビジュアライザのようにWebAssemblyにして動かせる</li>
+<li>C++で書くことで、解答のC++コードと同じコードが使い回せる</li>
+</ul>
+<h3 id="_4">環境構築<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>emsdkをインストール<ul>
+<li><a href="https://github.com/emscripten-core/emsdk">https://github.com/emscripten-core/emsdk</a></li>
+<li><a href="https://emscripten.org/docs/getting_started/downloads.html">https://emscripten.org/docs/getting_started/downloads.html</a></li>
+<li>インストールして、activateしておく(emccが使えるようになる)</li>
+<li>アンインストールは、emsdkのディレクトリを消せばOK</li>
+</ul>
+</li>
+<li>pythonをインストール<ul>
+<li>ローカルサーバーを立ち上げるのに利用(サーバーに置く場合は不要)</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">コード例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>(間違った書き方してるかもしれないので注意)</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// vis.cc</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;emscripten/bind.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;emscripten/emscripten.h&gt;</span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// input,outputに対してターンtの状態をsvg文字列で返す</span>
+<span class="n">string</span><span class="w"> </span><span class="nf">vis</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">output</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">svg_text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&lt;svg&gt; ... &lt;/svg&gt;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">svg_text</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 最大ターン数</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">get_max_turn</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">output</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">turn</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">EMSCRIPTEN_BINDINGS</span><span class="p">(</span><span class="n">mod</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">emscripten</span><span class="o">::</span><span class="n">function</span><span class="p">(</span><span class="s">&quot;vis&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vis</span><span class="p">);</span>
+<span class="w">    </span><span class="n">emscripten</span><span class="o">::</span><span class="n">function</span><span class="p">(</span><span class="s">&quot;get_max_turn&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">get_max_turn</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- index.html(細かいところは公式ビジュアライザを参考) --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- フォームやdivなどを用意 --&gt;</span>
+    <span class="cm">&lt;!-- ... --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="c1">// 描画を更新</span>
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">visualize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;turn&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">Module</span><span class="p">.</span><span class="nx">vis</span><span class="p">(</span><span class="nx">input</span><span class="p">,</span><span class="w"> </span><span class="nx">output</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">);</span>
+<span class="w">          </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ret</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">          </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;p&gt;Invalid&lt;/p&gt;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">visualize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">visualize</span><span class="p">;</span><span class="w"> </span><span class="c1">// window.hogeにいれることでグローバルでアクセスできる(html側から呼び出せる)</span>
+
+<span class="w">      </span><span class="c1">// tの更新があった場合の処理</span>
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">update_t</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">max_turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;turn&quot;</span><span class="p">).</span><span class="nx">max</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">new_turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">),</span><span class="w"> </span><span class="nx">max_turn</span><span class="p">);</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;turn&quot;</span><span class="p">).</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">new_turn</span><span class="p">;</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;t_bar&quot;</span><span class="p">).</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">new_turn</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">visualize</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">update_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">update_t</span><span class="p">;</span>
+
+<span class="w">      </span><span class="c1">// アニメーションなどのコードを追加</span>
+<span class="w">      </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;vis.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<h3 id="_6">ビルド<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code># vis.jsとvis.wasmができる
+emcc -lembind vis.cc -O3 -o vis.js
+</code></pre></div>
+<h3 id="_7">利用方法(ローカル)<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code># vis.js, vis.wasm, index.htmlがあるディレクトリで以下を実行
+python -m http.server 8000
+
+# http://localhost:8000/ にアクセス
+</code></pre></div>
 <h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
 <ul>
 <li>tooltipsを表示<ul>
