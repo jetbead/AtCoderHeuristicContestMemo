@@ -512,16 +512,16 @@ class FastClearingArray2D {
 ## 方向操作
 
 ```cpp
-struct Dir {
-    enum Angle { U = 0, L = 1, D = 2, R = 3 };
-    const string angle = "ULDR";
-    const string rev_angle = "DRUL";
-    const int vy[4] = {-1, 0, 1, 0};
-    const int vx[4] = {0, -1, 0, 1};
-    int rev(int k) const {
-        return (k + 2) % 4;
-    }
-
-    array<bool, 4> dir;
-};
+enum Angle { U = 0, L = 1, D = 2, R = 3 };
+const string angle = "ULDR";
+const string rev_angle = "DRUL";
+const int vy[4] = {-1, 0, 1, 0};
+const int vx[4] = {0, -1, 0, 1};
+int rev(int k) {
+    return (k + 2) % 4;
+}
+using Dir = array<bool, 4>;
+P get_dir(const P& p, int k) {
+    return P(p.y + vy[k], p.x + vx[k]);
+}
 ```
