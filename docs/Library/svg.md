@@ -135,6 +135,7 @@ class SimpleSVG {
         xmls.push_back(ss.str());
     }
 
+    // 左上揃え: dominant_baseline=hanging, text_anchor=start
     void text(int y, int x, const string& str, int font_size = 15, const string& fill = "black",
               const string& dominant_baseline = "middle", const string& text_anchor = "middle") {
         stringstream ss;
@@ -145,6 +146,17 @@ class SimpleSVG {
         ss << " dominant-baseline=\"" << dominant_baseline << "\"";
         ss << " text-anchor=\"" << text_anchor << "\"";
         ss << ">" << str << "</text>";
+        xmls.push_back(ss.str());
+    }
+
+    void image(int y, int x, int h, int w, const std::string& file_path) {
+        std::stringstream ss;
+        ss << "<image";
+        ss << " x=\"" << x << "\" y=\"" << y << "\"";
+        ss << " height=\"" << h << "\"";
+        ss << " width=\"" << w << "\"";
+        ss << " xlink:href=\"" << file_path << "\"";
+        ss << "></image>";
         xmls.push_back(ss.str());
     }
 
