@@ -475,6 +475,7 @@ struct Array2D {
         return v[p.y * W + p.x];
     }
 };
+using Grid = Array2D<int>;
 
 template <class T>
 class FastClearingArray2D {

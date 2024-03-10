@@ -89,6 +89,7 @@
 
 - global変数やstatic変数にして使い回す
 - カウンタ変数を用意してその値かで判定することでbool配列の初期化を省略(Fast-Clearing Array)
+  - [FastClearingArray2D](./cpp_template.md#_3)
   - https://topcoder-tomerun.hatenablog.jp/entry/2022/11/06/145156
   - https://twitter.com/koyumeishi_/status/1589142265209188352
   - https://twitter.com/FakePsyho/status/1605963724715479042
