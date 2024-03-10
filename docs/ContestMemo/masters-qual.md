@@ -11,7 +11,7 @@ title: 第一回マスターズ予選
 ## 問題概要
 
 - N\*Nマスの盤面があり、マスの間には壁がある場合がある
-- 各マスには1〜N^2の数字が1つずつ書かれており、以下の一連の操作を最大で4N^2回行う
+- 各マスには1〜N^2 の数字が1つずつ書かれており、以下の一連の操作を最大で4N^2 回行う
   1. 高橋くんと青木くんの現在位置にかかれているマスを交換したければ交換する
   1. 高橋くんを現在の位置の移動可能な隣接マスへ移動したければ移動する
   1. 青木くんを現在の位置の移動可能な隣接マスへ移動したければ移動する
@@ -217,6 +217,7 @@ title: 第一回マスターズ予選
 
 ## Links
 
+- [agwさんTwitterまとめ](https://togetter.com/li/2328855)
 - [Twitter hashtag AtCoderマスターズ選手権2024](https://twitter.com/hashtag/AtCoder%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%E9%81%B8%E6%89%8B%E6%A8%A92024)
 - [Twitter hashtag AtCoderマスターズ選手権2024チーム募集](https://twitter.com/hashtag/AtCoder%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%E9%81%B8%E6%89%8B%E6%A8%A92024%E3%83%81%E3%83%BC%E3%83%A0%E5%8B%9F%E9%9B%86)
 - [チームコンに色をつけるuserscript](https://twitter.com/rian_tkb/status/1761046269169164404)
