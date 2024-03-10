@@ -521,7 +521,7 @@ int rev(int k) {
     return (k + 2) % 4;
 }
 using Dir = array<bool, 4>;
-P get_dir(const P& p, int k) {
+P get_dir_pos(const P& p, int k) {
     return P(p.y + vy[k], p.x + vx[k]);
 }
 ```
