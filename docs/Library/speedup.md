@@ -93,6 +93,7 @@
   - https://twitter.com/koyumeishi_/status/1589142265209188352
   - https://twitter.com/FakePsyho/status/1605963724715479042
   - https://twitter.com/FakePsyho/status/1605965054779674624 (拡張)
+  - https://qiita.com/tanaka-a/items/f06543c1f4750c465fc2 (世代管理)
 - 初期化配列
   - https://qiita.com/kgoto/items/0251e442292d8ebc1f3d
 - vectorなど、十分な量を最初にreserveしておく
