@@ -47,6 +47,8 @@
   - https://twitter.com/_phocom/status/1693217561381404801
 - テクニック集
   - https://github.com/rhoo19937/p/blob/main/tech/.md
+- ヒューリスティックコンテストのテクニック集
+  - https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f
 
 
 ## 改善アイデアの試し方

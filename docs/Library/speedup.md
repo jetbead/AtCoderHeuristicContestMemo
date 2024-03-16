@@ -112,3 +112,7 @@
 - https://en.algorithmica.org/hpc/pipelining/branchless/
 - https://probablydance.com/2023/04/27/beautiful-branchless-binary-search/
 
+### 入力に合わせて使う型を切り替える
+
+- マクロなどで型ごとのクラスを生成しておき、入力パラメータに合わせてswtich文等で切り替えて使う
+  - https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f

@@ -48,10 +48,18 @@ for i in tqdm(range(10000)):
 ```python
 # (使い方が雑なので注意)
 # main
+import argparse
 import logging
+parser = argparse.ArgumentParser()
+parser.add_argument("--log", default=None, help="log file path") # 未指定なら標準エラー出力
+args = parser.parse_args()
 logging.basicConfig(
-    format='[%(asctime)s %(levelname)s %(name)s:%(lineno)d] %(message)s',
-    encoding='utf-8', level=logging.DEBUG)
+    format="[%(asctime)s %(levelname)s %(name)s:%(lineno)d] %(message)s",
+    datefmt="%Y/%m/%d %H:%M:%S",
+    filename=args.log,
+    encoding="utf-8",
+    level=logging.DEBUG,
+)
 logger = logging.getLogger(__name__)
 logger.info("info message")
 
