@@ -47,9 +47,9 @@ struct RGB {
     string to_string() const {
         stringstream ss;
         ss << "#";
-        ss << hex << r;
-        ss << hex << g;
-        ss << hex << b;
+        ss << std::hex << std::setw(2) << std::setfill('0') << r;
+        ss << std::hex << std::setw(2) << std::setfill('0') << g;
+        ss << std::hex << std::setw(2) << std::setfill('0') << b;
         return ss.str();
     }
 };
