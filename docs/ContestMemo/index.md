@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc031.png" class="trimimg"> | [MC Digitalプログラミングコンテスト2024(AHC031)](./ahc031.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/masters-qual.png" class="trimimg"> | [第一回マスターズ選手権予選](./masters-qual.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc030.png" class="trimimg"> | [THIRDプログラミングコンテスト2023(AHC030)](./ahc030.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc028.png" class="trimimg"> | [ALGO ARTIS プログラミングコンテスト 2023冬(AHC028)](./ahc028.md) | <span style="color: #0000cc;">short</span> | |
