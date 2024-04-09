@@ -27,6 +27,7 @@
 - https://speakerdeck.com/threecourse/cloud-runtooptunadehiyurisuteitukukontesuto
   - https://threecourse.hatenablog.com/entry/2020/07/11/150049
 - https://yunix-kyopro.hatenablog.com/entry/2022/07/02/134251
+- https://topcoder-tomerun.hatenablog.jp/entry/2024/04/06/201915
 
 ## 手元で複数ケース実行
 

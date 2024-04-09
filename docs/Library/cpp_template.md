@@ -357,8 +357,9 @@ Action beam_search_action(const State& state, const int beam_width, const int be
             }
         }
         if (next_states.size() > beam_width) {
+            // c++20以降はshared_ptrのoperator<は削除されているので、compを指定する必要がある
             nth_element(next_states.begin(), next_states.begin() + beam_width, next_states.end(),
-                        greater<>());
+                        [](const auto& lhs, const auto& rhs) { return *lhs > *rhs; });
             next_states.resize(beam_width);
         }
         swap(states, next_states);
