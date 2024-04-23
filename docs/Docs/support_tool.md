@@ -20,6 +20,7 @@
   - ビジュアライザで自動で出力ファイルを読み込む拡張
 - toast-uz/ahc_tools
   - https://github.com/toast-uz/ahc_tools/
+  - https://qiita.com/toast-uz/items/b798cd24d3805aef2d80
   - ローカル(並列)テスターサポートツール
 
 ## クラウドジャッジ環境整備

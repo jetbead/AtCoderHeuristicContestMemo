@@ -2,6 +2,86 @@
 
 - 注意: ころころ変わる可能性あり
 
+
+## 入出力のラッパー
+
+- 入出力をラップすることで、以下に対応できる
+  - 本番とローカルテスター用の入力の違いを吸収
+  - ローカルテスターをシミュレーションに使って、一番良さそうなアプローチを選択
+- 参考: https://iwashi31.hatenablog.com/entry/2023/11/05/234449
+
+```cpp
+// ゲーム情報
+struct Game {
+    // ...
+};
+
+struct IO {
+    virtual Game init() = 0;
+    virtual void op1() = 0;
+    virtual int op2(int x) = 0;
+    virtual int answer(int ans) = 0;
+};
+
+class JudgeIO : public IO {
+    Game init() override {
+        cerr << "JudgeIO" << endl;
+        // ...
+        return Game();
+    }
+    void op1() override {
+        // ...
+    }
+    int op2(int x) override {
+        // ...
+        return 0;
+    }
+    int answer(int ans) override {
+        // ...
+        return 123;
+    }
+};
+
+class LocalIO : public IO {
+    int score;  // スコア
+    int state;  // 内部状態
+
+    Game init() override {
+        cerr << "LocalIO" << endl;
+        score = 123;
+        state = 0;
+        // ...
+        return Game();
+    }
+    void op1() override {
+        // ...
+    }
+    int op2(int x) override {
+        // ...
+        return 0;
+    }
+    int answer(int ans) override {
+        // ...
+        return score;
+    }
+};
+
+
+int main() {
+#ifdef LOCAL
+    shared_ptr<IO> io = make_shared<LocalIO>();
+#else
+    shared_ptr<IO> io = make_shared<JudgeIO>();
+#endif
+    Game game = io->init();
+
+    // ...
+
+    return 0;
+}
+```
+
+
 ## 焼きなましテンプレート
 
 ```cpp

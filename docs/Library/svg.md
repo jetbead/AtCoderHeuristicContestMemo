@@ -211,6 +211,9 @@ class SimpleSVG {
 </svg>
 ```
 ```python
+# 注意: display()を実行するたびに画像が一旦非表示になるような挙動をしてそうで、
+# widgetを表示している以降のセルが少ないと、勝手にスクロールされてしまうっぽい。
+# そのような場合は、widgetを実行するセルの下に多めに空セルを用意しておくとよいかも。
 from IPython.display import display, SVG, HTML
 from ipywidgets import Play, Layout, IntSlider, jslink, HBox, Button, interactive_output
 
@@ -334,6 +337,9 @@ EMSCRIPTEN_BINDINGS(mod) {
 ```
 # vis.jsとvis.wasmができる
 emcc -lembind vis.cc -O3 -o vis.js
+
+# (iftreamなどで外部ファイルを読み込む場合(手元にin/*.txtを用意した場合))
+emcc -lembind vis.cc -O3 -o vis.js --preload-file in/
 ```
 
 ### 利用方法(ローカル)
