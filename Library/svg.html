@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -956,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/masters-qual.html" class="md-nav__link">
+      <a href="../ContestMemo/masters2024-qual.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2940,7 +2940,10 @@
 ...
 &lt;/svg&gt;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">SVG</span><span class="p">,</span> <span class="n">HTML</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># 注意: display()を実行するたびに画像が一旦非表示になるような挙動をしてそうで、</span>
+<span class="c1"># widgetを表示している以降のセルが少ないと、勝手にスクロールされてしまうっぽい。</span>
+<span class="c1"># そのような場合は、widgetを実行するセルの下に多めに空セルを用意しておくとよいかも。</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">SVG</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Play</span><span class="p">,</span> <span class="n">Layout</span><span class="p">,</span> <span class="n">IntSlider</span><span class="p">,</span> <span class="n">jslink</span><span class="p">,</span> <span class="n">HBox</span><span class="p">,</span> <span class="n">Button</span><span class="p">,</span> <span class="n">interactive_output</span>
 
 <span class="c1"># 複数のsvgを連続して出力してあるファイルを読み込む</span>
@@ -3058,6 +3061,9 @@
 <h3 id="_6">ビルド<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code># vis.jsとvis.wasmができる
 emcc -lembind vis.cc -O3 -o vis.js
+
+# (iftreamなどで外部ファイルを読み込む場合(手元にin/*.txtを用意した場合))
+emcc -lembind vis.cc -O3 -o vis.js --preload-file in/
 </code></pre></div>
 <h3 id="_7">利用方法(ローカル)<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code># vis.js, vis.wasm, index.htmlがあるディレクトリで以下を実行
@@ -3125,7 +3131,7 @@ python -m http.server 8000
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
         <script src="../js/extra.js"></script>
       
