@@ -14,6 +14,22 @@
 // ゲーム情報
 struct Game {
     // ...
+
+    void init() {
+    }
+};
+
+// ローカルテスター
+struct LocalTester {
+    // ...
+
+    void init(Game& game) {
+        // ...
+    }
+
+    int get_score() {
+        return 0;
+    }
 };
 
 struct IO {
@@ -26,8 +42,9 @@ struct IO {
 class JudgeIO : public IO {
     Game init() override {
         cerr << "JudgeIO" << endl;
-        // ...
-        return Game();
+        Game game;
+        game.init();
+        return game;
     }
     void op1() override {
         // ...
@@ -43,15 +60,14 @@ class JudgeIO : public IO {
 };
 
 class LocalIO : public IO {
-    int score;  // スコア
-    int state;  // 内部状態
+    LocalTester local_tester;
 
     Game init() override {
         cerr << "LocalIO" << endl;
-        score = 123;
-        state = 0;
-        // ...
-        return Game();
+        Game game;
+        game.init();
+        local_tester.init(game);
+        return game;
     }
     void op1() override {
         // ...
@@ -61,11 +77,9 @@ class LocalIO : public IO {
         return 0;
     }
     int answer(int ans) override {
-        // ...
-        return score;
+        return local_tester.get_score();
     }
 };
-
 
 int main() {
 #ifdef LOCAL
@@ -74,8 +88,6 @@ int main() {
     shared_ptr<IO> io = make_shared<JudgeIO>();
 #endif
     Game game = io->init();
-
-    // ...
 
     return 0;
 }
