@@ -1193,16 +1193,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#visualizer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizer考
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizer考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      メモ
+      目的
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      可視化に使う情報
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      設計
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      テスターを兼用する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      コメントベース
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       まとめ
     </span>
@@ -2541,16 +2598,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#visualizer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizer考
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualizer考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      メモ
+      目的
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      可視化に使う情報
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      設計
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      テスターを兼用する
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      コメントベース
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       まとめ
     </span>
@@ -2592,15 +2706,63 @@
 
 
 <h1 id="visualizer">Visualizer<a class="headerlink" href="#visualizer" title="Permanent link">&para;</a></h1>
-<h2 id="_1">メモ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="visualizer_1">Visualizer考<a class="headerlink" href="#visualizer_1" title="Permanent link">&para;</a></h2>
+<h3 id="_1">目的<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>AHCにおいては、基本的に公式ビジュアライザが提供されているので、それで十分な場合が多い</li>
-<li>ビジュアライザが提供されなかったり、デバッグやよりリッチな情報を表示したい場合に自作を検討する</li>
-<li>ただし、公式テスターがRustで提供されていて流用できるため、Rustでビジュアライザを用意したほうが安全性(バグの恐れ、挙動の違い)やコスパ(準備にかかる時間)はよい可能性がある</li>
+<li>AHCだと、公式ビジュアライザが提供されているので、それで十分な場合が多い</li>
+<li>しかし、提供されないコンテストや、よりリッチな情報を可視化することで、デバッグや知見を得るなどに役立つ</li>
 </ul>
-<h2 id="_2">まとめ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_2">可視化に使う情報<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://yunix-kyopro.hatenablog.com/entry/2023/12/17/150534">ヒューリスティックコンテストでビジュアライザを開発する方法に関するメモ</a></li>
+<li>入力情報<ul>
+<li>問題の入力、テスター用の追加入力情報</li>
+</ul>
+</li>
+<li>テスターの内部情報、出力情報<ul>
+<li>真の値、判定結果、スコア(途中/最終)</li>
+</ul>
+</li>
+<li>ソルバーの内部情報、出力情報<ul>
+<li>推定値、出力解、デバッグ用の内部情報</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">設計<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h4 id="_4">テスターを兼用する<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>実際のソルバーの出力を入力とする場合、テスター側の情報がないため、途中状態のスコアなどがわからない</li>
+<li>そのため、テスターの処理をVisualizerの内部で持つことで、テスターとVisualizerを兼用する方針が考えられる</li>
+<li>AHCは公式テスターがRustで提供されるので、RustでVisualizerを用意すると移植などが楽で安全<ul>
+<li>他の言語に移植すると、挙動の違いや実装ミスなどの危険性がある</li>
+</ul>
+</li>
+</ul>
+<h4 id="_5">コメントベース<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>AHCでは<code>#</code>から始まる出力はコメントとして扱い、テスターでは<code>#p x y</code>などデバッグやVisualizerに使える情報を出力している場合がある</li>
+<li>Visualizerでは、テスターとソルバーのどちらの情報も使う必要がある場合が多いため、どちらもコメント文に出力し、それを使って可視化する方針が考えられる</li>
+<li>テスターコードを持たなくても済むが、必要な情報をコメント文で出力する必要があるため、出力の肥大化や文字列で処理するため遅くなる危険性がある</li>
+</ul>
+<div class="highlight"><pre><span></span><code>例:
+
+#p y x
+→ 真の位置(公式テスターで出力)
+
+#ep y x
+→ 推定位置(ソルバーで出力)
+
+#bp y x
+→ ビームサーチなどでの2番目以降の候補情報(複数指定可)(ソルバーで出力)
+
+#score s
+→ 現在のスコア(公式テスター or ソルバーで出力)
+
+#text y x t
+→ 位置(y,x)にテキストtを表示(ソルバーで出力)
+</code></pre></div>
+<h2 id="_6">まとめ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://yunix-kyopro.hatenablog.com/entry/2023/12/17/150534">ヒューリスティックコンテストでビジュアライザを開発する方法に関するメモ(yunix さん)</a></li>
 <li><a href="https://threecourse.hatenablog.com/entry/2021/05/04/181226">マラソンマッチのビジュアライザいろいろ(threecourse さん)</a></li>
 <li><a href="https://gobi-tk.hatenablog.com/entry/2023/04/16/184952">簡易にビジュアライザを作る方法の調査記(gobi さん)</a></li>
 </ul>
