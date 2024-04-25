@@ -4,9 +4,10 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/masters2024-final.png" class="trimimg"> | [第一回マスターズ選手権決勝](./masters2024-final.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc032.png" class="trimimg"> | [AHC032](./ahc032.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc031.png" class="trimimg"> | [MC Digitalプログラミングコンテスト2024(AHC031)](./ahc031.md) | <span style="color: #cc0000;">long</span> | :material-check: |
-| <img loading="lazy" src="../imgs/masters-qual.png" class="trimimg"> | [第一回マスターズ選手権予選](./masters-qual.md) | <span style="color: #0000cc;">short</span> | :material-check: |
+| <img loading="lazy" src="../imgs/masters2024-qual.png" class="trimimg"> | [第一回マスターズ選手権予選](./masters2024-qual.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc030.png" class="trimimg"> | [THIRDプログラミングコンテスト2023(AHC030)](./ahc030.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc028.png" class="trimimg"> | [ALGO ARTIS プログラミングコンテスト 2023冬(AHC028)](./ahc028.md) | <span style="color: #0000cc;">short</span> | |
 | <img loading="lazy" src="../imgs/ahc029.png" class="trimimg"> | [RECRUIT 日本橋ハーフマラソン 2024冬(AHC029)](./ahc029.md) | <span style="color: #cc0000;">long</span> | :material-check: |
