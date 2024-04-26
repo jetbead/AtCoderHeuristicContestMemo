@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="checklist.html">
+        <link rel="prev" href="../cpp_lib/tsp_cpp.html">
       
       
-        <link rel="next" href="support_tool.html">
+        <link rel="next" href="gameai.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
     
     
       
-        <title>How to get started! - AtCoder Heuristic Contest Memo</title>
+        <title>ハイパーパラメータの管理クラス(Configクラス) - AtCoder Heuristic Contest Memo</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-get-started" class="md-skip">
+        <a href="#config" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+    <a href="../../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to get started!
+              ハイパーパラメータの管理クラス(Configクラス)
             
           </span>
         </div>
@@ -148,7 +148,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+    <a href="../../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -166,7 +166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -221,7 +221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/index.html" class="md-nav__link">
+      <a href="../../ContestMemo/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -242,7 +242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc001.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc001.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc002.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc002.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -284,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc003.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc003.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -305,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc004.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc004.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -326,7 +326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc005.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc005.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -347,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc006.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc006.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -368,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc007.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc007.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc008.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc008.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc009.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc009.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc010.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc010.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc011.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc011.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc012.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc012.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc013.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc013.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -515,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc014.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc014.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -536,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc015.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc015.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -557,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc016.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc016.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc017.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc017.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -599,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc018.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc018.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc019.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc019.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc020.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc020.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -662,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc021.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc021.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc022.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc022.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc023.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc023.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc024.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc024.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc025.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc025.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc026.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc026.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc027.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc027.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc028.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc028.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc029.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc029.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc030.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc030.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc031.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc031.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/ahc032.html" class="md-nav__link">
+      <a href="../../ContestMemo/ahc032.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/httf2022qual.html" class="md-nav__link">
+      <a href="../../ContestMemo/httf2022qual.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -935,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/intro-heuristics.html" class="md-nav__link">
+      <a href="../../ContestMemo/intro-heuristics.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -956,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/masters2024-final.html" class="md-nav__link">
+      <a href="../../ContestMemo/masters2024-final.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -977,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/masters2024-qual.html" class="md-nav__link">
+      <a href="../../ContestMemo/masters2024-qual.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -998,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/rcl-contest-2021-long.html" class="md-nav__link">
+      <a href="../../ContestMemo/rcl-contest-2021-long.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1019,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ContestMemo/toyota-2023-summer-final.html" class="md-nav__link">
+      <a href="../../ContestMemo/toyota-2023-summer-final.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1063,7 +1063,7 @@
             
   
   <span class="md-ellipsis">
-    Docs
+    Library
   </span>
   
 
@@ -1073,7 +1073,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Docs
+            Library
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1084,7 +1084,112 @@
   
   
     <li class="md-nav__item">
-      <a href="checklist.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Library List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approx_algo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    近似アルゴリズム
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beam_search.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ビームサーチ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bitboard.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ビットボード
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../branch_and_bound.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    分枝限定法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,6 +1202,989 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compress.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    情報圧縮
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug_print.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    デバッグ出力
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eigen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    行列ライブラリEigen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eval_function.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    評価関数設計
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exp2.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploration &amp; Exploitation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiments.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    実験、環境構築
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    フロー
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../func.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C++関数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game_tree.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ゲーム木探索
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    用語集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gnuplot.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gnuplotで簡易ビジュアライザ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    グラフ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grid.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    グリッド操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how_to_get_started.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to get started!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index_set.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IndexSet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matching.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    マッチング
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math_opt.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数理計画法/数理最適化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    機械学習
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_agent.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    マルチエージェント
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optuna.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    optuna
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../patterns.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    パターン生成
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persistent_stack.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    永続stack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_snippet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pythonスニペット
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../random.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    乱数/乱択
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../result_analy.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    実行結果の分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sa.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    局所探索/山登り/焼きなまし
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../speedup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    高速化(C++)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stage_array.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stage 機能付き Value/Array
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats_modeling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    統計モデリング
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summed_area_table.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2次元累積和
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support_tool.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../svg.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SVGで簡易ビジュアライザ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tsp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TSP(巡回セールスマン問題)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uncategorized_topic.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    未分類トピック
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uncertainty.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    不確かさの取り扱い
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualizer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_45" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_45" id="__nav_3_45_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cpp lib
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_45_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_45">
+            <span class="md-nav__icon md-icon"></span>
+            Cpp lib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_lib/beam_cpp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ビームサーチ用テンプレート
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_lib/fast_clearing_array_cpp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast-clearing Array
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_lib/grid_cpp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    グリッド操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_lib/sa_cpp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    焼きなましテンプレート
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp_lib/tsp_cpp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TSP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_46" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_46" id="__nav_3_46_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design patterns
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_46_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_46">
+            <span class="md-nav__icon md-icon"></span>
+            Design patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -1118,18 +2206,18 @@
           
   
   <span class="md-ellipsis">
-    How to get started!
+    ハイパーパラメータの管理クラス(Configクラス)
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="how_to_get_started.html" class="md-nav__link md-nav__link--active">
+      <a href="config.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    How to get started!
+    ハイパーパラメータの管理クラス(Configクラス)
   </span>
   
 
@@ -1151,33 +2239,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#atcoder-heuristic-contestahc" class="md-nav__link">
-    <span class="md-ellipsis">
-      AtCoder Heuristic Contest(AHC)とは?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AtCoder Heuristic Contest(AHC)とは?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#abcarcagc" class="md-nav__link">
-    <span class="md-ellipsis">
-      ABC/ARC/AGCと比較して
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      取り組み方解説
+      概要
     </span>
   </a>
   
@@ -1186,34 +2250,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      感想戦、解説記事
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      過去問
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      ツールセット
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      資料集
+      コード例
     </span>
   </a>
   
@@ -1235,987 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="support_tool.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Support Tool
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tips.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tips
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="visualizer.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Visualizer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Library
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Library
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Library List
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/approx_algo.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    近似アルゴリズム
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/beam_search.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ビームサーチ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/bitboard.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ビットボード
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/branch_and_bound.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    分枝限定法
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/compress.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    情報圧縮
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/cpp_template.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    C++テンプレート
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/debug_print.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    デバッグ出力
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/eigen.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    行列ライブラリEigen
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/eval_function.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    評価関数設計
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/exp2.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exploration &amp; Exploitation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/experiments.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    実験、環境構築
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/flow.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    フロー
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/func.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    C++関数
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/game_tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ゲーム木探索
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/glossary.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    用語集
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/gnuplot.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    gnuplotで簡易ビジュアライザ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/graph.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    グラフ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/grid.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    グリッド操作
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/index_set.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IndexSet
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/matching.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    マッチング
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/math_opt.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    数理計画法/数理最適化
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/ml.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    機械学習
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/multi_agent.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    マルチエージェント
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/optuna.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    optuna
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/patterns.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    パターン生成
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/persistent_stack.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    永続stack
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/python_snippet.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    pythonスニペット
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/random.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    乱数/乱択
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/result_analy.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    実行結果の分析
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/sa.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    局所探索/山登り/焼きなまし
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/speedup.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    高速化(C++)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/stage_array.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Stage 機能付き Value/Array
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/stats_modeling.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    統計モデリング
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/summed_area_table.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2次元累積和
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/svg.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SVGで簡易ビジュアライザ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/timer.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Timer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/tsp.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    TSP(巡回セールスマン問題)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/uncategorized_topic.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    未分類トピック
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/uncertainty.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    不確かさの取り扱い
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_41" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_41" id="__nav_4_41_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Design patterns
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_41_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_41">
-            <span class="md-nav__icon md-icon"></span>
-            Design patterns
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Library/design_patterns/gameai.html" class="md-nav__link">
+      <a href="gameai.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2236,7 +2293,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/design_patterns/multiagent.html" class="md-nav__link">
+      <a href="io_wrapper.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IOラッパー
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multiagent.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2257,7 +2335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Library/design_patterns/transition.html" class="md-nav__link">
+      <a href="transition.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2300,10 +2378,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2314,8 +2392,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Blog
           </label>
@@ -2330,7 +2408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/index.html" class="md-nav__link">
+      <a href="../../blog/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2358,10 +2436,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2372,8 +2450,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Templates
           </label>
@@ -2386,7 +2464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/templates/experiment.html" class="md-nav__link">
+      <a href="../../blog/templates/experiment.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2407,7 +2485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/templates/report.html" class="md-nav__link">
+      <a href="../../blog/templates/report.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2443,10 +2521,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2457,8 +2535,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -2473,7 +2551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/archive/2023.html" class="md-nav__link">
+      <a href="../../blog/archive/2023.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2509,10 +2587,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2523,8 +2601,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Categories
           </label>
@@ -2539,7 +2617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/category/misc.html" class="md-nav__link">
+      <a href="../../blog/category/misc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2595,33 +2673,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#atcoder-heuristic-contestahc" class="md-nav__link">
-    <span class="md-ellipsis">
-      AtCoder Heuristic Contest(AHC)とは?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AtCoder Heuristic Contest(AHC)とは?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#abcarcagc" class="md-nav__link">
-    <span class="md-ellipsis">
-      ABC/ARC/AGCと比較して
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      取り組み方解説
+      概要
     </span>
   </a>
   
@@ -2630,34 +2684,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      感想戦、解説記事
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      過去問
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      ツールセット
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      資料集
+      コード例
     </span>
   </a>
   
@@ -2678,85 +2705,30 @@
                   
 
 
-<h1 id="how-to-get-started">How to get started!<a class="headerlink" href="#how-to-get-started" title="Permanent link">&para;</a></h1>
-<p>AHC の始め方など、まとめておきます。</p>
-<h2 id="atcoder-heuristic-contestahc">AtCoder Heuristic Contest(AHC)とは?<a class="headerlink" href="#atcoder-heuristic-contestahc" title="Permanent link">&para;</a></h2>
-<p>from <a href="https://atcoder.jp/contests/ahc001">https://atcoder.jp/contests/ahc001</a></p>
-<blockquote>
-<p>AtCoder Heuristic Contest（AHC）とは？<br />
-AtCoder にて新たに定期的に開催されるプログラミングコンテストです。ABC/ARC/AGC などのアルゴリズムコンテストと異なり、最適解を出すのが難しい問題に対し、出来るだけ良い解を作成するコンテストとなります。出題例などについては過去の類似形式のコンテストを参照下さい。</p>
-</blockquote>
-<p><a href="https://info.atcoder.jp/overview/contest/intro">https://info.atcoder.jp/overview/contest/intro</a></p>
-<h3 id="abcarcagc">ABC/ARC/AGCと比較して<a class="headerlink" href="#abcarcagc" title="Permanent link">&para;</a></h3>
+<h1 id="config">ハイパーパラメータの管理クラス(Configクラス)<a class="headerlink" href="#config" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>最適解を出す必要がない<ul>
-<li>解答の質が「スコア」で表現され、より良いスコアを目指すため、最適解を出さなくても良い</li>
-<li>スコアが良くなるように試行錯誤する</li>
+<li>ハイパーパラメータはConfigクラスなどで管理し、<code>config.param1</code>のように参照しておくと、変更しやすい</li>
+<li>設定ファイルや引数からの読み込みにも対応させておくと、Optunaによるチューニングなどもしやすい</li>
+<li>dump()機能を持たせておくと、実行時の情報をまとめて出力しておける</li>
 </ul>
-</li>
-<li>非減少型レーティング<ul>
-<li>AHCのレートは、ABC/ARC/AGCのレーティングシステムとは別になっており、非減少型のレーティングになっている</li>
-<li>なので、パフォーマンスが悪かったからといってレートが下がらないシステムのため、参加するハードルがABC/ARC/AGC等と比べて低い</li>
-</ul>
-</li>
-<li>基本的にコンテストが長期間<ul>
-<li>おおよそコンテスト開催期間は、短期は4時間程度、長期は1週間〜2週間程度のため、ABC/ARC/AGCよりも長く、1問か2問の問題に取り組む</li>
-</ul>
-</li>
-<li>解法/アプローチの自由度が高い<ul>
-<li>基本的に様々な解法が有効で、いろんなアプローチを取ることができる<ul>
-<li>コンテスト後の参加者の解説などで特定の手法が出やすくても、有効なだけで、他の手法がダメとは限らない</li>
-</ul>
-</li>
-<li>また、入力のパラメータによっては、単一の手法ではなく、パラメータによって異なる手法を適用できるようにするなどもスコア改善には必要になる</li>
-<li>高スコアを出すためには、十分な最適化や問題の性質の有効活用などが必要なため、深い考察や調査、試行錯誤が必要</li>
-</ul>
-</li>
-</ul>
-<h2 id="_1">取り組み方解説<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>どのように取り組めばよいかの解説</p>
-<ul>
-<li><a href="https://img.atcoder.jp/intro-heuristics/editorial.pdf">Introduction to Heuristics Contest 解説(公式)</a><ul>
-<li><a href="https://atcoder.jp/contests/intro-heuristics">Introduction to Heuristics Contest</a></li>
-</ul>
-</li>
-<li><a href="https://www.terry-u16.net/entry/ahc001-how-to">AtCoder Heuristic Contest 001 (AHC001) 初心者向け解説(terry_u16 さん)</a></li>
-<li><a href="https://qiita.com/tsukammo/items/7041a00e429f9f5ac4ae">競プロ解法紹介～レベル別マラソンの戦い方～(tsukammo さん)</a></li>
-<li><a href="https://chokudai.hatenablog.com/entry/2014/12/04/000132">マラソンマッチにおける精神論(chokudai さん)</a></li>
-<li><a href="http://www.colun.net/archives/294">マラソンマッチの取り組み方(colun さん)</a></li>
-<li><a href="https://trap.jp/post/1304/">AHC のおはなし(NNMochi さん)</a></li>
-<li><a href="https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21">Topcoder マラソンマッチの探索問題で重要なこと(takapt0226 さん)</a></li>
-<li><a href="https://qiita.com/tanaka-a/items/3c2a1bca63759ec71e7f">競プロ〜ヒューリスティック/マラソン事始め〜(tanaka-a さん)</a></li>
-</ul>
-<h2 id="_2">感想戦、解説記事<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li>コンテスト終了後は、他の人の解法などが twitter やブログなどで共有されることが多い<ul>
-<li>自分の手法や問題分析との違い、次回以降に有用そうな情報などを知ることができる</li>
-</ul>
-</li>
-<li><a href="../ContestMemo/index.html">ContestMemo</a>には、過去のコンテストの情報や反省をまとめています</li>
-</ul>
-<h2 id="_3">過去問<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>ヒューリスティック系のコンテストは、AtCoder 以外にもあり、過去問とその上位解法を知っておくことで、考察に役立つ可能性がある。
-解法ブログや twitter まとめなどが参考になる。</p>
-<ul>
-<li>AHC の過去問</li>
-<li>AtCoder のマラソンタイプのコンテストの過去問<ul>
-<li><a href="https://atcoder.jp/contests/archive?ratedType=0&amp;category=1200&amp;keyword=">AtCoder 過去のコンテスト(マラソン)</a></li>
-</ul>
-</li>
-<li>TopCoder Marathon マッチの過去問</li>
-<li>その他最適化コンテストの過去問</li>
-</ul>
-<h2 id="_4">ツールセット<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://kmyk.github.io/blog/blog/2021/03/18/what-is-a-toolset-for-marathon-matches/">マラソンマッチのためのツールセットはどのようなものになるか(kmyk さん)</a></li>
-</ul>
-<h2 id="_5">資料集<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://threecourse.hatenablog.com/entry/%3Fp%3D1164">マラソンマッチの資料集(threecourse さん)</a></li>
-<li><a href="https://heuristic-ja.growi.cloud/">ヒューリスティック最適化資料集(threecourse さん)</a></li>
-</ul>
+<h2 id="_2">コード例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Config</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">time_limit</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">beam_width</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">param1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">param2</span><span class="p">;</span>
+
+<span class="cp">#ifdef LOCAL</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dump</span><span class="p">(</span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result_json</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;time_limit&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time_limit</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;beam_width&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">beam_width</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;param1&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;param2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="cp">#endif</span>
+<span class="p">};</span>
+</code></pre></div>
 
 
 
@@ -2807,12 +2779,12 @@ AtCoder にて新たに定期的に開催されるプログラミングコンテ
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
       
-        <script src="../js/extra.js"></script>
+        <script src="../../js/extra.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
