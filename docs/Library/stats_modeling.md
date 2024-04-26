@@ -150,7 +150,56 @@ for i in range(1000):
 
 ## カルマンフィルタ
 
+- https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC
+- https://www.slideshare.net/slideshow/ss-250284912/250284912
+
+```cpp
+// 単純な例: 1次元でのロボットの状態推定(観測誤差、移動誤差あり)
+double rx = 0; // 初期位置
+double rv = 0; // 初期速度
+double a = 0.1; // 制御入力(加速度)
+const double epsilon = 1.0; // 速度に乗せる誤差
+const double delta = 1.0; // 観測誤差
+Vector2d x{0, 0}; // 推定状態(位置、速度)
+Matrix2d P{{1.0e-6, 0}, {0, 1.0e-6}}; // 推定値の分散
+
+const Matrix2d F{{1, 1}, {0, 1}};
+const Vector2d B{1, 1};
+const Matrix2d Q{{epsilon * epsilon, 0}, {0, epsilon * epsilon}};
+const Matrix2d R{{delta * delta, 0}, {0, 1}};
+const Matrix2d I{{1, 0}, {0, 1}};
+
+for (int t = 0; t < 100; t++) {
+    // 真の状態を更新
+    rv += a;
+    rv += normal_rand(0, epsilon * epsilon);
+    rx += rv;
+
+    // 推定状態を更新
+    Vector2d ex = F * x + B * a;
+    Matrix2d eP = F * P * F.transpose() + Q;
+    
+    // 観測は、実際の位置(誤差あり)を取得
+    double z = rx + normal_rand(0, delta * delta); // 観測値
+    
+    Vector2d y{z - ex(0), 0};
+    Matrix2d K = eP * (eP + R).inverse(); // カルマンゲイン
+    Vector2d x2 = ex + K * y;
+    Matrix2d P2 = (I - K) * eP;
+    // 推定状態を更新
+    x = x2;
+    P = P2;
+
+    // このターンでの真の位置と推定位置
+    cout << t << "\t" << rx << "\t" << x(0) << endl;
+}
+```
+
 ### パーティクルフィルタ
+
+- https://ja.wikipedia.org/wiki/%E7%B2%92%E5%AD%90%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF
+- https://www.ieice.org/jpn/books/kaishikiji/2005/200512.pdf
+- https://qiita.com/MoriKen/items/da8d290dcefad81b478d
 
 ## ベイズ最適化
 
@@ -167,3 +216,4 @@ for i in range(1000):
 - [AHC022](../ContestMemo/ahc022.md)
 - [AHC025](../ContestMemo/ahc025.md)
 - [AHC030](../ContestMemo/ahc030.md)
+- [masters2024-final](../ContestMemo/masters2024-final.md)

@@ -4,12 +4,15 @@
 
 - メタヒューリスティックス
   - [局所探索/山登り/焼きなまし法](./sa.md)
+    - [焼きなましテンプレート](./cpp_lib/sa_cpp.md)
   - [ビームサーチ](./beam_search.md)
+    - [ビームサーチテンプレート](./cpp_lib/beam_cpp.md)
 - グラフ系
   - [グラフ](./graph.md)
   - [マッチング](./matching.md)
   - [フロー](./flow.md)
   - [TSP](./tsp.md)
+    - [TSPテンプレート](./cpp_lib/tsp_cpp.md)
 - 機械学習、確率、統計系
   - [統計モデリング](./stats_modeling.md)
   - [機械学習](./ml.md)
@@ -17,6 +20,7 @@
   - [不確かさの取り扱い](./uncertainty.md)
 - その他
   - [グリッド](./grid.md)
+    - [グリッドテンプレート](./cpp_lib/grid_cpp.md)
   - [ゲーム木探索](./game_tree.md)
   - [マルチエージェント](./multi_agent.md)
   - [評価関数設計](./eval_function.md)
@@ -31,7 +35,6 @@
 
 - [乱数/乱択](./random.md)
 - [高速化(C++)](./speedup.md)
-- [C++テンプレート](./cpp_template.md)
 - [stage 機能付き配列](./stage_array.md)
 - [2次元累積和](./summed_area_table.md)
 - [時間計測 Timer](./timer.md)
@@ -41,6 +44,7 @@
 
 ## デバッグ、ビジュアライザ
 
+- [Visualizerメモ](./visualizer.md)
 - [gnuplotで簡易ビジュアライザ](./gnuplot.md)
 - [svgで簡易ビジュアライザ](./svg.md)
 - [デバッグ出力](./debug_print.md)
@@ -48,9 +52,11 @@
 
 ## デザインパターン、実装方法
 
+- [IOラッパー](./design_patterns/io_wrapper.md)
 - [ゲームとAIの分離](./design_patterns/gameai.md)
 - [異なるタスクを実行しうるマルチエージェントの協調動作](./design_patterns/multiagent.md)
 - [状態遷移](./design_patterns/transition.md)
+- [パラメータ管理クラス](./design_patterns/config.md)
 
 ## その他
 
@@ -58,13 +64,13 @@
 - [pythonスニペット](./python_snippet.md)
 - [C++関数メモ](./func.md)
 - [行列ライブラリEigen](./eigen.md)
+- [サポートツール](./support_tool.md)
 - [Optuna](./optuna.md)
 - [用語集](./glossary.md)
 
 ## ドキュメント/Tips
 
 - [How to get started](./how_to_get_started.md)
-- [Tips](./tips.md)
-- [Support Tool](./support_tool.md)
-- [Visualizer](./visualizer.md)
 - [Checklist](./checklist.md)
+- [いろんなTips](./tips.md)
+
