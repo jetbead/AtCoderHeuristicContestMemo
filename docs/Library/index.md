@@ -63,8 +63,8 @@
 
 ## ドキュメント/Tips
 
-- [How to get started](../Docs/how_to_get_started.md)
-- [Tips](../Docs/tips.md)
-- [Support Tool](../Docs/support_tool.md)
-- [Visualizer](../Docs/visualizer.md)
-- [Checklist](../Docs/checklist.md)
+- [How to get started](./how_to_get_started.md)
+- [Tips](./tips.md)
+- [Support Tool](./support_tool.md)
+- [Visualizer](./visualizer.md)
+- [Checklist](./checklist.md)
