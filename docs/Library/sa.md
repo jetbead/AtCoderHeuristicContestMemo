@@ -19,6 +19,8 @@
   - https://twitter.com/yunix91201367/status/1586588684622520322
 - AHC典型解法シリーズ第2弾「焼きなまし法」(thunder さん)
   - https://qiita.com/thun-c/items/ecd438fde4d237b1f7bc
+- 初心者から初心者に向けた焼きなましのすすめ(tombo さん)
+  - https://tombo314.hatenablog.com/entry/2024/04/24/153457
 
 ## テンプレート
 
