@@ -2709,7 +2709,10 @@
 <h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>ハイパーパラメータはConfigクラスなどで管理し、<code>config.param1</code>のように参照しておくと、変更しやすい</li>
-<li>設定ファイルや引数からの読み込みにも対応させておくと、Optunaによるチューニングなどもしやすい</li>
+<li>設定ファイルや引数からの読み込みにも対応させておくと、Optunaによるチューニングなどもしやすい<ul>
+<li>またはconfig.hhにしておいて、includeする</li>
+</ul>
+</li>
 <li>dump()機能を持たせておくと、実行時の情報をまとめて出力しておける</li>
 </ul>
 <h2 id="_2">コード例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
