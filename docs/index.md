@@ -50,6 +50,9 @@ title: Home
   - AtCoder Heuristic Race Ranking
     - Unofficial, ポイント制でのランキング
     - https://docs.google.com/spreadsheets/d/1gFmqVYr44QlQBkHKLcd1YyFM_-Ne7Hzf7SODbADx8HI
+  - AtCoder Heuristic Season Ranking
+    - 特定期間のRated AHCで計算した仮想レーティングでのランキング
+    - https://ahc-season-ranking.terry-u16.net/
 - :material-folder: **summary**
   - https://kato-hiro.github.io/AtCoderClans/
 
