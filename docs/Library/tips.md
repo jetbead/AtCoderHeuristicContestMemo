@@ -19,6 +19,8 @@
 - 焼きなまし法が使えなくても AHC 橙になれたよ(Kiri8128 さん)
   - https://kiri8128.hatenablog.com/entry/2023/11/29/024335
   - 評価関数・貪欲の考え方、その他の工夫について
+- AHCに取り組む上で心がけていること(hitoare さん)
+  - https://hitoare.hatenablog.com/entry/2024/04/30/223646
 
 
 ## Heuristicsの設計、実装について

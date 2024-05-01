@@ -44,6 +44,7 @@
   - 状態の差分更新をすることで、状態のコピーをなくす
 - https://gitlab.com/rafaelbocquet-cpcontests/euler-tour-beam-search (euler-tour beam-search)
 - https://qiita.com/rhoo/items/f2be256cde5ad2e62dde
+- https://qiita.com/rhoo/items/2f647e32f6ff2c6ee056
 - https://twitter.com/threecourse/status/1381102400400809992
 - https://twitter.com/search?q=from%3Acolun%20until%3A2018-04-19%20since%3A2018-04-16&src=typed_query&f=live
 - https://twitter.com/chokudai/status/986484347069915138

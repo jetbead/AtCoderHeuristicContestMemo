@@ -244,6 +244,7 @@ title: 第一回マスターズ決勝
   - https://twitter.com/tanaka_a8/status/1782389022217970112
   - https://twitter.com/zach_leee/status/1781697302866088216
   - https://twitter.com/zach_leee/status/1781696486604161461
+  - https://qiita.com/toast-uz/items/e17873fadcc8866ae453
 - [23位今日も一日よろしくです](https://twitter.com/iwashi31/status/1781496039922675763)
   - https://twitter.com/iwashi31/status/1781651328068121047
   - https://twitter.com/iwashi31/status/1781852691939152275
