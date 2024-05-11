@@ -51,6 +51,8 @@
   - https://github.com/rhoo19937/p/blob/main/tech/.md
 - ヒューリスティックコンテストのテクニック集
   - https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f
+- 相対スコアAHCの立ち回り(Kiri8128 さん)
+  - https://kiri8128.hatenablog.com/entry/2024/05/06/032420
 
 
 ## 改善アイデアの試し方

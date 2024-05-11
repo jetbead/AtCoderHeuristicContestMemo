@@ -164,6 +164,7 @@ title: 第一回マスターズ決勝
   - https://twitter.com/omi_UT/status/1781622653830463754
   - https://twitter.com/omi_UT/status/1781938419549254134
   - https://twitter.com/omi_UT/status/1782018108137591198
+  - https://omizatta.hatenablog.com/entry/2024/04/29/210411
 - [6位実装をしない](https://twitter.com/shr_pc/status/1781499727852478676)
   - https://twitter.com/shr_pc/status/1781597149937189091
   - https://twitter.com/shr_pc/status/1781597318984380881
@@ -269,6 +270,7 @@ title: 第一回マスターズ決勝
 - [36位ITなんもわからん](https://twitter.com/uuuus17/status/1781650702143807850)
   - https://twitter.com/uuuus17/status/1781671104949743735
   - https://twitter.com/_bo9chan/status/1781822139886375101
+  - https://twitter.com/_bo9chan/status/1785962925221638336
   - https://twitter.com/negoto_coder/status/1781640897656184949
 - 37位遊夜の棋士団
 - 38位ふくろうさんチーム

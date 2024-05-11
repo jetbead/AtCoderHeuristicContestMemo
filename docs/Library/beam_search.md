@@ -7,6 +7,7 @@
 - https://note.com/nyanyan_cubetech/n/n5e30c52139d3
 - https://platinum-prog.hatenablog.com/entry/2023/07/28/222536
 - https://platinum-prog.hatenablog.com/entry/2023/08/09/203217
+- https://twitter.com/ethylene_66/status/1767393143987880121
 
 ## 確実に前進
 
@@ -26,6 +27,8 @@
 - ZobristHashを用いる
   - [乱数/乱択](./random.md)
 - 確定した部分は無視する
+- https://twitter.com/Rafbill_pc/status/1767494993923477774
+  - https://gist.github.com/Rafbillpc/814f226576d59b8aa58c552c373f8217
 
 ## 多様性
 
@@ -59,6 +62,7 @@
   - https://twitter.com/koyumeishi_/status/1618430006207877120
   - https://twitter.com/colun/status/1618419150384418816
   - https://twitter.com/FakePsyho/status/1618522597481938945
+- https://twitter.com/yosupot/status/1779512387810570716
 
 ## 高度な話題
 

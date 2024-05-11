@@ -108,6 +108,12 @@
 - 大量にメモリを確保する場合、メモリ解放にも時間が掛かる可能性がある
   - 行儀が悪いが、`exit(0)`や`quick_exit(0)`で後処理を省略して終わらせる
 
+### STL周り
+
+- stackをそのままではコンテナにdequeが使われるが、`stack<int,vector<int>>`のようにvectorを指定するか、自前で用意したほうが速いかも
+  - https://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html
+- ac-library/atcoder/internal_queue.hpp
+
 ### 逆操作で戻す
 
 - 同じ処理を2回 or 変化したやつだけ保持しておいてそれだけ戻す or undo操作で初期状態に戻す
