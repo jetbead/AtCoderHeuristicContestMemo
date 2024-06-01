@@ -32,8 +32,7 @@
 
 ## キャッシュブロッキング
 
-- https://www.isus.jp/hpc/cache-blocking/
-  - https://www.intel.com/content/www/us/en/developer/articles/technical/cache-blocking-techniques.html
+- https://www.intel.com/content/www/us/en/developer/articles/technical/cache-blocking-techniques.html
 
 ## Cache-Oblivious
 
@@ -42,7 +41,7 @@
 
 ## 細かいテク
 
-### bit演算、bitset高速化
+### bit演算、bitset高速化、bitboard
 
 - 複数のbool値などを保持するのに`uint64_t`を64個のbit集合として圧縮したりすると、データコピーのコストが減って高速化につながる
 - また、簡単なbit-level parallelで複数要素をまとめて処理することで高速化を狙う
@@ -52,6 +51,7 @@
 - https://rsk0315.hatenablog.com/entry/2021/06/08/091128
 - https://rsk0315.hatenablog.com/entry/2022/09/25/214915
 - https://graphics.stanford.edu/~seander/bithacks.html
+- [bitboard](./bitboard.md)
 
 ### SIMD化されやすい書き方、キャッシュに乗りやすい書き方
 
@@ -107,6 +107,8 @@
   - vectorではなく配列で確保、使い回す、1次元で確保、など
 - 大量にメモリを確保する場合、メモリ解放にも時間が掛かる可能性がある
   - 行儀が悪いが、`exit(0)`や`quick_exit(0)`で後処理を省略して終わらせる
+    - exitはglobal変数やスレッド変数などの後処理やファイルストリームのフラッシュは実行される
+    - quick_exitはそれらを行わない。が、環境によっては使えないかも
 
 ### STL周り
 

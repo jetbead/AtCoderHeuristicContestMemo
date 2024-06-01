@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc033.png" class="trimimg"> | [トヨタ自動車プログラミングコンテスト2024#5(AHC033)](./ahc033.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/masters2024-final.png" class="trimimg"> | [第一回マスターズ選手権決勝](./masters2024-final.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc032.png" class="trimimg"> | [AHC032](./ahc032.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc031.png" class="trimimg"> | [MC Digitalプログラミングコンテスト2024(AHC031)](./ahc031.md) | <span style="color: #cc0000;">long</span> | :material-check: |
@@ -43,3 +44,8 @@
 | <img loading="lazy" src="../imgs/ahc001.png" class="trimimg"> | [AHC001](./ahc001.md) | <span style="color: #cc0000;">long</span> | |
 | <img loading="lazy" src="../imgs/intro-heuristics.png" class="trimimg"> | [Introduction to Heuristics Contest](./intro-heuristics.md) | <span style="color: #0000cc;">short</span> | |
 
+## 注意書き
+
+- あくまで勉強用に整理・メモしているものなので、間違っている・勘違いしている可能性があります
+- リンク切れやtweetがなくなっていたりする可能性があります
+  - 後で復習するときとかの参考情報にしてるだけなので、気づいたら直したりします

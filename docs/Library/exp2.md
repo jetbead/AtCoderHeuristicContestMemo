@@ -9,9 +9,8 @@
 
 ## 探索・活用系の問題
 
-- AHC003
-- AHC018
-
+- [AHC003](../ContestMemo/ahc003.md)
+- [AHC018](../ContestMemo/ahc018.md)
 
 ## バンディット
 
