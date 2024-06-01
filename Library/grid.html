@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -914,6 +914,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../ContestMemo/ahc033.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AHC033(トヨタ自動車)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ContestMemo/httf2022qual.html" class="md-nav__link">
         
   
@@ -1597,6 +1618,24 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビット演算による距離計算
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      時間軸を拡張
+    </span>
+  </a>
   
 </li>
       
@@ -2838,6 +2877,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビット演算による距離計算
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      時間軸を拡張
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2962,6 +3019,36 @@ xoxoxox
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x5</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x7</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x8</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
+<h2 id="_9">ビット演算による距離計算<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="bitboard.html">ビットボード</a></li>
+<li>ビットボードにのる程度のサイズの場合は、現在地点から何ターンで目的地に移動できるか？をビットボードの1ターン分の移動を繰り返すことで求められる<ul>
+<li>ターンごとに持っておけば、経路復元もできる</li>
+<li>maskとandを取るなどすれば、障害物や他の物体との衝突判定や有効な領域内かの判定などもできる</li>
+</ul>
+</li>
+<li>青木, ゲームで学ぶ探索アルゴリズム実践入門 7.4節</li>
+<li><a href="../ContestMemo/ahc033.html">AHC033</a></li>
+</ul>
+<h2 id="_10">時間軸を拡張<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ターン制のなにかを考える場合、グリッドのxy方向に、時間軸tを拡張して考えると、見通しがよくなる場合がある<ul>
+<li><code>grid[t][x][y]</code></li>
+</ul>
+</li>
+<li>目的地への距離や経路<ul>
+<li>時刻tから時刻t+1に向かってBFSなどする</li>
+</ul>
+</li>
+<li>マルチエージェントで他のエージェントと衝突しないか<ul>
+<li>他のエージェントの各時刻の通過マスをメモしておき、それと重なる<span class="arithmatex"><span class="MathJax_Preview">時刻,マス</span><script type="math/tex">時刻,マス</script></span>が判定</li>
+</ul>
+</li>
+<li>xターン後に評価されるマスの伝搬<ul>
+<li>xターン後に評価値が高いようなマスは、過去の時刻と周辺マスに向かって減衰させながら評価値を伝搬させる、など</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -3015,7 +3102,7 @@ xoxoxox
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
       
         <script src="../js/extra.js"></script>
       

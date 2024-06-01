@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -898,6 +898,27 @@
   
   <span class="md-ellipsis">
     AHC032
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc033.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AHC033(トヨタ自動車)
   </span>
   
 
@@ -1857,9 +1878,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bitbitset" class="md-nav__link">
+  <a href="#bitbitsetbitboard" class="md-nav__link">
     <span class="md-ellipsis">
-      bit演算、bitset高速化
+      bit演算、bitset高速化、bitboard
     </span>
   </a>
   
@@ -2882,9 +2903,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bitbitset" class="md-nav__link">
+  <a href="#bitbitsetbitboard" class="md-nav__link">
     <span class="md-ellipsis">
-      bit演算、bitset高速化
+      bit演算、bitset高速化、bitboard
     </span>
   </a>
   
@@ -3051,10 +3072,7 @@
 </ul>
 <h2 id="_1">キャッシュブロッキング<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.isus.jp/hpc/cache-blocking/">https://www.isus.jp/hpc/cache-blocking/</a><ul>
 <li><a href="https://www.intel.com/content/www/us/en/developer/articles/technical/cache-blocking-techniques.html">https://www.intel.com/content/www/us/en/developer/articles/technical/cache-blocking-techniques.html</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="cache-oblivious">Cache-Oblivious<a class="headerlink" href="#cache-oblivious" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3062,7 +3080,7 @@
 <li><a href="https://www.slideshare.net/iwiwi/cacheoblivious-dsirnlp5">https://www.slideshare.net/iwiwi/cacheoblivious-dsirnlp5</a></li>
 </ul>
 <h2 id="_2">細かいテク<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="bitbitset">bit演算、bitset高速化<a class="headerlink" href="#bitbitset" title="Permanent link">&para;</a></h3>
+<h3 id="bitbitsetbitboard">bit演算、bitset高速化、bitboard<a class="headerlink" href="#bitbitsetbitboard" title="Permanent link">&para;</a></h3>
 <ul>
 <li>複数のbool値などを保持するのに<code>uint64_t</code>を64個のbit集合として圧縮したりすると、データコピーのコストが減って高速化につながる</li>
 <li>また、簡単なbit-level parallelで複数要素をまとめて処理することで高速化を狙う</li>
@@ -3072,6 +3090,7 @@
 <li><a href="https://rsk0315.hatenablog.com/entry/2021/06/08/091128">https://rsk0315.hatenablog.com/entry/2021/06/08/091128</a></li>
 <li><a href="https://rsk0315.hatenablog.com/entry/2022/09/25/214915">https://rsk0315.hatenablog.com/entry/2022/09/25/214915</a></li>
 <li><a href="https://graphics.stanford.edu/~seander/bithacks.html">https://graphics.stanford.edu/~seander/bithacks.html</a></li>
+<li><a href="bitboard.html">bitboard</a></li>
 </ul>
 <h3 id="simd_1">SIMD化されやすい書き方、キャッシュに乗りやすい書き方<a class="headerlink" href="#simd_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3137,7 +3156,11 @@
 </ul>
 </li>
 <li>大量にメモリを確保する場合、メモリ解放にも時間が掛かる可能性がある<ul>
-<li>行儀が悪いが、<code>exit(0)</code>や<code>quick_exit(0)</code>で後処理を省略して終わらせる</li>
+<li>行儀が悪いが、<code>exit(0)</code>や<code>quick_exit(0)</code>で後処理を省略して終わらせる<ul>
+<li>exitはglobal変数やスレッド変数などの後処理やファイルストリームのフラッシュは実行される</li>
+<li>quick_exitはそれらを行わない。が、環境によっては使えないかも</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -3225,7 +3248,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
       
         <script src="../js/extra.js"></script>
       
