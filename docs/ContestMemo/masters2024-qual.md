@@ -6,7 +6,7 @@ title: 第一回マスターズ予選
 
 - https://atcoder.jp/contests/masters-qual
 
-<img src="../imgs/masters-qual.png" width=300>
+<img src="../imgs/masters2024-qual.png" width=300>
 
 ## 問題概要
 
