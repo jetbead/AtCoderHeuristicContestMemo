@@ -12,6 +12,10 @@
   - https://qiita.com/thun-c/items/8e7ae0249f1907854763
 - アルゴリズムで実社会を捉える～評価関数の作り方～(tsukammo さん)
   - https://qiita.com/tsukammo/items/de70b49dcd8912e78505
+- 焼きなまし法が使えなくても AHC 橙になれたよ (Kiri8128さん)
+  - https://kiri8128.hatenablog.com/entry/2023/11/29/024335
+  - 評価関数・貪欲の考え方
+
 
 ## ゲームの分類
 
@@ -135,7 +139,6 @@
   - 評価関数を改善する
   - 探索の質を高める、探索量を増やす
     - 可能性が高い手だけ調べる、合法手の一部だけ探索する、モンテカルロで浅くてもたくさん調べる、など
-  
 
 ## 問題
 
@@ -147,6 +150,7 @@
 - [TOYOTA Programming Contest 2023 Summer Final](../ContestMemo/toyota-2023-summer-final.md)
 - [AHC026](../ContestMemo/ahc026.md)
 - [AHC029](../ContestMemo/ahc029.md)
+  - https://www.youtube.com/watch?v=lIz8EarV0ek (chokudai社長による評価関数設計解説)
 - [新ジャッジテストコンテスト -Heuristic-](https://atcoder.jp/contests/newjudge-2308-heuristic)
   - https://twitter.com/tomerun/status/1688205287197745152
     - https://twitter.com/tomerun/status/1688207145765064704
