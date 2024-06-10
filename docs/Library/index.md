@@ -45,8 +45,8 @@
 ## デバッグ、ビジュアライザ
 
 - [Visualizerメモ](./visualizer.md)
-- [gnuplotで簡易ビジュアライザ](./gnuplot.md)
 - [svgで簡易ビジュアライザ](./svg.md)
+- [gnuplotで簡易ビジュアライザ](./gnuplot.md)
 - [デバッグ出力](./debug_print.md)
 - [実行結果の分析](./result_analy.md)
 
@@ -63,6 +63,7 @@
 - [実験、環境構築](./experiments.md)
 - [pythonスニペット](./python_snippet.md)
 - [C++関数メモ](./func.md)
+- [boost libraryメモ](./boost.md)
 - [行列ライブラリEigen](./eigen.md)
 - [サポートツール](./support_tool.md)
 - [Optuna](./optuna.md)
@@ -71,6 +72,5 @@
 ## ドキュメント/Tips
 
 - [How to get started](./how_to_get_started.md)
-- [Checklist](./checklist.md)
 - [いろんなTips](./tips.md)
-
+- [Checklist](./checklist.md)

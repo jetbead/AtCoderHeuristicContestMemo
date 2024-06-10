@@ -21,6 +21,13 @@
   - 評価関数・貪欲の考え方、その他の工夫について
 - AHCに取り組む上で心がけていること(hitoare さん)
   - https://hitoare.hatenablog.com/entry/2024/04/30/223646
+- 相対スコアAHCの立ち回り(Kiri8128 さん)
+  - https://kiri8128.hatenablog.com/entry/2024/05/06/032420
+- 短期AHC向け(Shun_PI さん)
+  - https://twitter.com/Shun___PI/status/1795429386847698997
+  - https://twitter.com/Shun___PI/status/1795762635105034346
+- AHCでの解法選択(MON.T+α さん)
+  - https://montplusa.hatenablog.com/entry/2024/06/10/214100
 
 
 ## Heuristicsの設計、実装について
@@ -51,11 +58,6 @@
   - https://github.com/rhoo19937/p/blob/main/tech/.md
 - ヒューリスティックコンテストのテクニック集
   - https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f
-- 相対スコアAHCの立ち回り(Kiri8128 さん)
-  - https://kiri8128.hatenablog.com/entry/2024/05/06/032420
-- 短期AHC向け(Shun_PI さん)
-  - https://twitter.com/Shun___PI/status/1795429386847698997
-  - https://twitter.com/Shun___PI/status/1795762635105034346
 
 
 ## 改善アイデアの試し方
