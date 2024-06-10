@@ -14,6 +14,8 @@
 - https://topcoder-tomerun.hatenablog.jp/entry/2017/12/16/000000
 - https://en.algorithmica.org/hpc/
 - https://www.cc.u-tokyo.ac.jp/events/lectures/X01/shiryou-1.pdf
+- https://speakerdeck.com/primenumber/puroguramuwogao-su-hua-suruhua
+  - https://speakerdeck.com/primenumber/puroguramuwogao-su-hua-suruhua-ii-gpgpubian
 
 ## SIMD
 
