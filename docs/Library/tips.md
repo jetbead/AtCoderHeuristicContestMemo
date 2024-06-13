@@ -23,9 +23,10 @@
   - https://hitoare.hatenablog.com/entry/2024/04/30/223646
 - 相対スコアAHCの立ち回り(Kiri8128 さん)
   - https://kiri8128.hatenablog.com/entry/2024/05/06/032420
-- 短期AHC向け(Shun_PI さん)
-  - https://twitter.com/Shun___PI/status/1795429386847698997
-  - https://twitter.com/Shun___PI/status/1795762635105034346
+- 短期AHCで勝つためのテクニック(Shun_PI さん)
+  - https://speakerdeck.com/shun_pi/duan-qi-ahcdesheng-tutamenotekunituku
+    - https://twitter.com/Shun___PI/status/1795429386847698997
+    - https://twitter.com/Shun___PI/status/1795762635105034346
 - AHCでの解法選択(MON.T+α さん)
   - https://montplusa.hatenablog.com/entry/2024/06/10/214100
 
