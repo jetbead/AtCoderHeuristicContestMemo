@@ -107,6 +107,33 @@ x128pp();
 - https://ja.wikipedia.org/wiki/Permuted_congruential_generator
 - https://twitter.com/rho__o/status/1734784410808160661
 
+```cpp
+class Pcg32fast {
+    static const uint64_t multiplier = 6364136223846793005ULL;
+    uint64_t mcg_state;
+
+   public:
+    Pcg32fast() {
+        mcg_state = 0xcafef00dd15ea5e5ULL;
+        next();
+    }
+    Pcg32fast(uint64_t seed) {
+        mcg_state = 2 * seed + 1;
+        next();
+    }
+    uint32_t next() {
+        uint64_t x = mcg_state;
+        uint32_t count = (uint32_t)(x >> 61);
+        mcg_state = x * multiplier;
+        x ^= x >> 22;
+        return (uint32_t)(x >> (22 + count));
+    }
+    uint32_t operator()() {
+        return next();
+    }
+};
+```
+
 ### 乱数生成の高速化
 
 - `rand() % m`のかわりに`(ll)rand() * m >> 32`を使う

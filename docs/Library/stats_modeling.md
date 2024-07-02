@@ -2,6 +2,11 @@
 
 - 推定系の問題などで、得られたデータから推定を行う方法
 
+## Links
+
+- Hit&Blowで学ぶベイズ推定：理論から実装まで (4etaさん)
+  - https://zenn.dev/4eta/articles/072132e44e2075
+
 ## ベイズの定理
 
 - $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
