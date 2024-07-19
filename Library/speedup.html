@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.76a95c52.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1992,6 +1992,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mallocallocatorcustom-allocator" class="md-nav__link">
+    <span class="md-ellipsis">
+      malloc/allocator置き換え、custom allocator
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2035,6 +2044,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      高速な実装
+    </span>
+  </a>
   
 </li>
       
@@ -3017,6 +3035,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mallocallocatorcustom-allocator" class="md-nav__link">
+    <span class="md-ellipsis">
+      malloc/allocator置き換え、custom allocator
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3063,6 +3090,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      高速な実装
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3098,6 +3134,10 @@
 <li><a href="https://www.cc.u-tokyo.ac.jp/events/lectures/X01/shiryou-1.pdf">https://www.cc.u-tokyo.ac.jp/events/lectures/X01/shiryou-1.pdf</a></li>
 <li><a href="https://speakerdeck.com/primenumber/puroguramuwogao-su-hua-suruhua">https://speakerdeck.com/primenumber/puroguramuwogao-su-hua-suruhua</a><ul>
 <li><a href="https://speakerdeck.com/primenumber/puroguramuwogao-su-hua-suruhua-ii-gpgpubian">https://speakerdeck.com/primenumber/puroguramuwogao-su-hua-suruhua-ii-gpgpubian</a></li>
+</ul>
+</li>
+<li><a href="https://www.youtube.com/live/j1KGQHlHJ5E">https://www.youtube.com/live/j1KGQHlHJ5E</a><ul>
+<li><a href="https://speakerdeck.com/tatyam_prime/ding-shu-bei-gao-su-hua-noji-shu">https://speakerdeck.com/tatyam_prime/ding-shu-bei-gao-su-hua-noji-shu</a></li>
 </ul>
 </li>
 </ul>
@@ -3210,6 +3250,20 @@
 </ul>
 </li>
 </ul>
+<h4 id="mallocallocatorcustom-allocator">malloc/allocator置き換え、custom allocator<a class="headerlink" href="#mallocallocatorcustom-allocator" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://github.com/tachibana51/fast-unsafe-heap-template-for-abc">https://github.com/tachibana51/fast-unsafe-heap-template-for-abc</a></li>
+<li><a href="https://x.com/kymn_/status/1814029317917323339">https://x.com/kymn_/status/1814029317917323339</a></li>
+<li><code>std::pmr::monotonic_buffer_resource</code><ul>
+<li><a href="https://faithandbrave.hateblo.jp/entry/2016/08/08/170454">https://faithandbrave.hateblo.jp/entry/2016/08/08/170454</a></li>
+<li><a href="https://cpplover.blogspot.com/2015/09/memoryresource.html">https://cpplover.blogspot.com/2015/09/memoryresource.html</a></li>
+<li><a href="https://qiita.com/MitsutakaTakeda/items/48980faa9498c46b15b2">https://qiita.com/MitsutakaTakeda/items/48980faa9498c46b15b2</a></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>pmr::monotonic_buffer_resource mbr;
+pmr::vector&lt;int&gt; v(&amp;mbr);
+</code></pre></div>
 <h3 id="stl">STL周り<a class="headerlink" href="#stl" title="Permanent link">&para;</a></h3>
 <ul>
 <li>stackをそのままではコンテナにdequeが使われるが、<code>stack&lt;int,vector&lt;int&gt;&gt;</code>のようにvectorを指定するか、自前で用意したほうが速いかも<ul>
@@ -3238,6 +3292,13 @@
 <ul>
 <li>マクロなどで型ごとのクラスを生成しておき、入力パラメータに合わせてswtich文等で切り替えて使う<ul>
 <li><a href="https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f">https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_10">高速な実装<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li>boost::unordered_flat_map<ul>
+<li><a href="boost.html">boost</a></li>
 </ul>
 </li>
 </ul>
