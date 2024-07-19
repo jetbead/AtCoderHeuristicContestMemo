@@ -7,6 +7,10 @@ AtCoder環境ではboostの新し目のバージョンが利用できる。
 - Boost逆引きリファレンス
   - https://boostjp.github.io/tips.html
 
+## メモ
+
+- brewでインストールしている場合は、`-I/usr/local/Cellar/boost/<version>/include/`を追加
+
 ## 多倍長計算
 
 ```cpp

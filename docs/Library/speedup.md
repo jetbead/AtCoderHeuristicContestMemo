@@ -16,6 +16,8 @@
 - https://www.cc.u-tokyo.ac.jp/events/lectures/X01/shiryou-1.pdf
 - https://speakerdeck.com/primenumber/puroguramuwogao-su-hua-suruhua
   - https://speakerdeck.com/primenumber/puroguramuwogao-su-hua-suruhua-ii-gpgpubian
+- https://www.youtube.com/live/j1KGQHlHJ5E
+  - https://speakerdeck.com/tatyam_prime/ding-shu-bei-gao-su-hua-noji-shu
 
 ## SIMD
 
@@ -112,6 +114,20 @@
     - exitはglobal変数やスレッド変数などの後処理やファイルストリームのフラッシュは実行される
     - quick_exitはそれらを行わない。が、環境によっては使えないかも
 
+#### malloc/allocator置き換え、custom allocator
+
+- https://github.com/tachibana51/fast-unsafe-heap-template-for-abc
+- https://x.com/kymn_/status/1814029317917323339
+- `std::pmr::monotonic_buffer_resource`
+  - https://faithandbrave.hateblo.jp/entry/2016/08/08/170454
+  - https://cpplover.blogspot.com/2015/09/memoryresource.html
+  - https://qiita.com/MitsutakaTakeda/items/48980faa9498c46b15b2
+
+```
+pmr::monotonic_buffer_resource mbr;
+pmr::vector<int> v(&mbr);
+```
+
 ### STL周り
 
 - stackをそのままではコンテナにdequeが使われるが、`stack<int,vector<int>>`のようにvectorを指定するか、自前で用意したほうが速いかも
@@ -134,3 +150,8 @@
 
 - マクロなどで型ごとのクラスを生成しておき、入力パラメータに合わせてswtich文等で切り替えて使う
   - https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f
+
+## 高速な実装
+
+- boost::unordered_flat_map
+  - [boost](./boost.md)

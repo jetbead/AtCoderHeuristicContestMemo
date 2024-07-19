@@ -6,6 +6,7 @@
 
 - Hit&Blowで学ぶベイズ推定：理論から実装まで (4etaさん)
   - https://zenn.dev/4eta/articles/072132e44e2075
+  - https://zenn.dev/4eta/articles/c00fcfd07e0238
 
 ## ベイズの定理
 

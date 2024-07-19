@@ -53,6 +53,9 @@ title: Home
   - AtCoder Heuristic Season Ranking
     - 特定期間のRated AHCで計算した仮想レーティングでのランキング
     - https://ahc-season-ranking.terry-u16.net/
+  - AtCoder 延長戦GP30ランキング
+    - https://x.com/myh9_f/status/1812698939227095264
+    - https://qropa.github.io/extended-gp30-ranking/
 - :material-folder: **summary**
   - https://kato-hiro.github.io/AtCoderClans/
 
