@@ -116,6 +116,7 @@
 
 #### malloc/allocator置き換え、custom allocator
 
+- https://github.com/kth-competitive-programming/kactl/blob/main/content/various/BumpAllocatorSTL.h
 - https://github.com/tachibana51/fast-unsafe-heap-template-for-abc
 - https://x.com/kymn_/status/1814029317917323339
 - `std::pmr::monotonic_buffer_resource`
