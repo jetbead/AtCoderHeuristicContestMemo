@@ -28,6 +28,7 @@
 - https://www.cc.u-tokyo.ac.jp/kashiwa_open/files/25simd.pdf
 - https://kaityo256.github.io/sevendayshpc/day7/index.html
 - https://speakerdeck.com/herumi/simdnoji-chu-toguan-shu-noshi-zhuang-li
+- https://officedaytime.com/simd512/
 
 ## AoS/SoA
 
@@ -42,6 +43,13 @@
 
 - https://www.slideshare.net/joisino/ss-258176417
 - https://www.slideshare.net/iwiwi/cacheoblivious-dsirnlp5
+  - vEB(van Emde Boas) layout
+
+## Branchless/Eytzinger layout
+
+- https://probablydance.com/2023/04/27/beautiful-branchless-binary-search/
+- https://speakerdeck.com/kampersanda/binary-search-with-modern-processors
+- https://algorithmica.org/en/eytzinger
 
 ## 細かいテク
 
@@ -156,3 +164,5 @@ pmr::vector<int> v(&mbr);
 
 - boost::unordered_flat_map
   - [boost](./boost.md)
+- FenwickTreeの定数倍高速化
+  - https://yosupo.hatenablog.com/entry/2016/12/04/121927

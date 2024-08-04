@@ -29,6 +29,8 @@
     - https://twitter.com/Shun___PI/status/1795762635105034346
 - AHCでの解法選択(MON.T+α さん)
   - https://montplusa.hatenablog.com/entry/2024/06/10/214100
+- 長期AHCでの時間配分(MON.T+α さん)
+  - https://montplusa.hatenablog.com/entry/2024/07/28/170000
 
 
 ## Heuristicsの設計、実装について
