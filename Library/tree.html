@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="tree.html">
+        <link rel="prev" href="tips.html">
       
       
-        <link rel="next" href="uncategorized_topic.html">
+        <link rel="next" href="tsp.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>TSP(巡回セールスマン問題) - AtCoder Heuristic Contest Memo</title>
+        <title>木構造 - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tsp" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TSP(巡回セールスマン問題)
+              木構造
             
           </span>
         </div>
@@ -2026,27 +2026,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="tree.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    木構造
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2063,18 +2042,18 @@
           
   
   <span class="md-ellipsis">
-    TSP(巡回セールスマン問題)
+    木構造
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="tsp.html" class="md-nav__link md-nav__link--active">
+      <a href="tree.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    TSP(巡回セールスマン問題)
+    木構造
   </span>
   
 
@@ -2096,56 +2075,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      厳密解
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      近似解法
+      解の形を木構造に限定して考える
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="近似解法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-opt3-optk-optlin-kernighan-heuristic" class="md-nav__link">
-    <span class="md-ellipsis">
-      2-opt/3-opt/k-opt/Lin-Kernighan heuristic
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lin-kernighan-helsgaun-tsp-solverlkh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lin-Kernighan-Helsgaun TSP Solver(LKH)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lin-Kernighan-Helsgaun TSP Solver(LKH)">
+    <nav class="md-nav" aria-label="解の形を木構造に限定して考える">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      利用例
+      分解
     </span>
   </a>
   
@@ -2154,39 +2096,16 @@
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      チューニング
+      部分変更
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#penaltylkh-3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Penaltyの改造(LKH-3)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#concorde-tsp-solverconcorde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Concorde TSP Solver(Concorde)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ga-eax" class="md-nav__link">
-    <span class="md-ellipsis">
-      GA-EAX
+      グリッドで木構造を考える
     </span>
   </a>
   
@@ -2198,9 +2117,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#dfsbfs" class="md-nav__link">
     <span class="md-ellipsis">
-      未分類
+      DFS木、BFS木
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      全域木
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortest-path-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      最短経路木(Shortest-path tree)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      最小シュタイナー木
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      オイラーツアーテクニック
     </span>
   </a>
   
@@ -2210,6 +2165,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tsp.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TSP(巡回セールスマン問題)
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2890,56 +2866,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      厳密解
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      近似解法
+      解の形を木構造に限定して考える
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="近似解法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-opt3-optk-optlin-kernighan-heuristic" class="md-nav__link">
-    <span class="md-ellipsis">
-      2-opt/3-opt/k-opt/Lin-Kernighan heuristic
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lin-kernighan-helsgaun-tsp-solverlkh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lin-Kernighan-Helsgaun TSP Solver(LKH)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lin-Kernighan-Helsgaun TSP Solver(LKH)">
+    <nav class="md-nav" aria-label="解の形を木構造に限定して考える">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      利用例
+      分解
     </span>
   </a>
   
@@ -2948,39 +2887,16 @@
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      チューニング
+      部分変更
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#penaltylkh-3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Penaltyの改造(LKH-3)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#concorde-tsp-solverconcorde" class="md-nav__link">
-    <span class="md-ellipsis">
-      Concorde TSP Solver(Concorde)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ga-eax" class="md-nav__link">
-    <span class="md-ellipsis">
-      GA-EAX
+      グリッドで木構造を考える
     </span>
   </a>
   
@@ -2992,9 +2908,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#dfsbfs" class="md-nav__link">
     <span class="md-ellipsis">
-      未分類
+      DFS木、BFS木
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      全域木
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortest-path-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      最短経路木(Shortest-path tree)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      最小シュタイナー木
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      オイラーツアーテクニック
     </span>
   </a>
   
@@ -3015,82 +2967,90 @@
                   
 
 
-<h1 id="tsp">TSP(巡回セールスマン問題)<a class="headerlink" href="#tsp" title="Permanent link">&para;</a></h1>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<h1 id="_1">木構造<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">解の形を木構造に限定して考える<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="http://www.math.uwaterloo.ca/tsp/index.html">http://www.math.uwaterloo.ca/tsp/index.html</a></li>
-<li><a href="https://future-architect.github.io/articles/20211201a/">https://future-architect.github.io/articles/20211201a/</a></li>
-<li><a href="https://twitter.com/shunji_umetani/status/977545293049688064">https://twitter.com/shunji_umetani/status/977545293049688064</a></li>
+<li>木には良い性質が多いので、グラフなどの問題で、解の形を「木」に限定して探索する、など<ul>
+<li>最適解が木構造になる、または、最適スコアに近いものが得られる場合でないと、形を限定するのは普通はあまり良くない</li>
 </ul>
-<h2 id="_1">厳密解<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+</li>
+<li><a href="../ContestMemo/ahc036.html">AHC036</a></li>
+</ul>
+<h3 id="_3">分解<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>すべての並びを列挙 <code>O(N!)</code></li>
-<li>bitDP <code>O(N^2 2^N)</code><ul>
-<li>蟻本pp.173-175</li>
+<li>木分解</li>
+<li>重心分解</li>
+<li>Heavy-Light Decomposition</li>
+</ul>
+<h3 id="_4">部分変更<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>木に1辺を追加するとサイクルになるので、サイクル上の別の1辺を削除すると別の木が得られる<ul>
+<li><a href="../ContestMemo/ahc011.html">AHC011</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="_2">近似解法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="2-opt3-optk-optlin-kernighan-heuristic">2-opt/3-opt/k-opt/Lin-Kernighan heuristic<a class="headerlink" href="#2-opt3-optk-optlin-kernighan-heuristic" title="Permanent link">&para;</a></h3>
+<h3 id="_5">グリッドで木構造を考える<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Chained Lin-Lernighan<ul>
-<li>Applegate et al., Chained Lin-Kernighan for large traveling salesman problems, INFORMS Journal on Computing, 2003</li>
+<li><a href="grid.html">グリッド</a></li>
+</ul>
+<h2 id="dfsbfs">DFS木、BFS木<a class="headerlink" href="#dfsbfs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>各頂点に1回だけ訪問するようにグラフを深さ優先探索順か、幅優先探索順かで辿ったときに使った辺でできる木</li>
+<li>巡回方法(2分木の場合)<ul>
+<li>行きがけ順(pre-order)<ul>
+<li>DFSで、今の頂点、子の頂点、の順で処理</li>
+</ul>
+</li>
+<li>通りがけ順(in-order)<ul>
+<li>DFSで、左の子、今の頂点、右の子の順で処理</li>
+</ul>
+</li>
+<li>帰りがけ順(post-order)<ul>
+<li>DFSで、子の頂点、今の頂点の順で処理</li>
+</ul>
+</li>
+<li>レベル順(level-order)<ul>
+<li>BFS</li>
 </ul>
 </li>
 </ul>
-<h3 id="lin-kernighan-helsgaun-tsp-solverlkh">Lin-Kernighan-Helsgaun TSP Solver(LKH)<a class="headerlink" href="#lin-kernighan-helsgaun-tsp-solverlkh" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="http://webhotel4.ruc.dk/~keld/research/LKH/">http://webhotel4.ruc.dk/~keld/research/LKH/</a></li>
-<li><a href="http://webhotel4.ruc.dk/~keld/research/LKH-3/">http://webhotel4.ruc.dk/~keld/research/LKH-3/</a></li>
-<li>LK法に効率的な枝刈りを導入した方法、ツール</li>
-<li>詳細な解説や使い方、パラメータなどは同梱のpdfに書かれている</li>
-<li>LKH-3は、様々なTSP亜種などの問題に適用できるよう、penalty(違反)を定義して、penaltyが小さいtourを見つけるように拡張したもの</li>
+</li>
 </ul>
-<h4 id="_3">利用例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h2 id="_6">全域木<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.kaggle.com/code/ppershing/lkh-bootstrap-rust-fine-tuning/notebook?scriptVersionId=9206685">https://www.kaggle.com/code/ppershing/lkh-bootstrap-rust-fine-tuning/notebook?scriptVersionId=9206685</a></li>
+<li>クラスカル法、プリム法</li>
 </ul>
-<h4 id="_4">チューニング<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h2 id="shortest-path-tree">最短経路木(Shortest-path tree)<a class="headerlink" href="#shortest-path-tree" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ほとんどのケースでデフォルトで十分な模様</li>
-<li>ただ、SEED、PATCHING_A/C、KICKS/KICK_TYPEあたりをいじると改善するかもしれない<ul>
-<li>(PATCHING_A/Cは変えられる値が制限されている？)</li>
+<li>ある頂点から他の頂点までの移動コストが最小になるような木<ul>
+<li>辺のコストがある場合はダイクストラ、コストなければBFS、などで構築</li>
+<li>全域木</li>
 </ul>
 </li>
-<li>TIME_LIMITもparファイルに指定しておくのがよさそう</li>
-<li><a href="https://www.kaggle.com/c/traveling-santa-2018-prime-paths/discussion/73694">https://www.kaggle.com/c/traveling-santa-2018-prime-paths/discussion/73694</a></li>
-</ul>
-<h4 id="penaltylkh-3">Penaltyの改造(LKH-3)<a class="headerlink" href="#penaltylkh-3" title="Permanent link">&para;</a></h4>
-<ul>
-<li><a href="https://www.kaggle.com/code/xuxu1234/santa-ctsp-2">https://www.kaggle.com/code/xuxu1234/santa-ctsp-2</a></li>
-<li><a href="https://www.kaggle.com/code/starohub/st-21-a-minmax-ctsp/notebook">https://www.kaggle.com/code/starohub/st-21-a-minmax-ctsp/notebook</a></li>
-</ul>
-<h3 id="concorde-tsp-solverconcorde">Concorde TSP Solver(Concorde)<a class="headerlink" href="#concorde-tsp-solverconcorde" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://www.math.uwaterloo.ca/tsp/concorde/index.html">https://www.math.uwaterloo.ca/tsp/concorde/index.html</a></li>
-<li><a href="https://twitter.com/shunji_umetani/status/933354622005141504">https://twitter.com/shunji_umetani/status/933354622005141504</a></li>
-</ul>
-<h3 id="ga-eax">GA-EAX<a class="headerlink" href="#ga-eax" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Edge Assembly Crossover(EAX)を使った遺伝的アルゴリズム(GA)<ul>
-<li><a href="https://pubsonline.informs.org/doi/10.1287/ijoc.1120.0506">https://pubsonline.informs.org/doi/10.1287/ijoc.1120.0506</a></li>
-<li><a href="https://www.jstage.jst.go.jp/article/tjsai/22/5/22_5_542/_article/">https://www.jstage.jst.go.jp/article/tjsai/22/5/22_5_542/_article/</a></li>
+<li>グラフの構造が変化する場合(頂点や辺の追加削除など)、最短経路木の該当の部分のみ修正し、その部分木のみを更新すれば、高速に更新できる<ul>
+<li><a href="https://bowwowforeach.hatenablog.com/entry/2023/02/09/210819">https://bowwowforeach.hatenablog.com/entry/2023/02/09/210819</a></li>
+<li><a href="https://soumat.hatenablog.com/entry/2024/09/07/152734">https://soumat.hatenablog.com/entry/2024/09/07/152734</a></li>
+<li><a href="../ContestMemo/ahc017.html">AHC017</a></li>
+<li><a href="../ContestMemo/ahc036.html">AHC036</a></li>
 </ul>
 </li>
-<li><a href="https://github.com/sugia/GA-for-TSP">https://github.com/sugia/GA-for-TSP</a></li>
-<li><a href="https://github.com/senshineL/GA-EAX-restart">https://github.com/senshineL/GA-EAX-restart</a></li>
-<li>(LKHなどより良い解が得られる可能性が高い。kaggleで上位陣が利用)</li>
 </ul>
-<h2 id="_5">未分類<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_7">最小シュタイナー木<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8520904/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8520904/</a></li>
-<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8075568/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8075568/</a></li>
-<li>Data Structures for Traveling Salesman<ul>
-<li><a href="https://dl.acm.org/doi/pdf/10.5555/313559.313668">https://dl.acm.org/doi/pdf/10.5555/313559.313668</a></li>
+<li>プリム法ベースのシュタイナー木構築<ul>
+<li><a href="https://bowwowforeach.hatenablog.com/entry/2023/06/18/213212">https://bowwowforeach.hatenablog.com/entry/2023/06/18/213212</a></li>
+<li><a href="../ContestMemo/ahc020.html">AHC020</a></li>
 </ul>
 </li>
-<li><a href="https://github.com/GAStudyGroup/GPX2">https://github.com/GAStudyGroup/GPX2</a></li>
-<li><a href="http://tsp-basics.blogspot.com/">http://tsp-basics.blogspot.com/</a></li>
+</ul>
+<h2 id="_8">オイラーツアーテクニック<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li>木の辺を2つの有向辺とみなしてオイラー閉路をDFSで作り、通過した辺を順番に配列にメモる</li>
+<li>部分木が、メモした配列の連続区間に対応する</li>
+<li>ビームサーチで、状態遷移の過程をオイラーツアーの木で持って処理するなどにも使える<ul>
+<li><a href="beam_search.html">ビームサーチ</a></li>
+</ul>
+</li>
 </ul>
 
 
