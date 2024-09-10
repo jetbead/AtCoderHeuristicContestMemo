@@ -32,6 +32,9 @@ title: Home
   - AHC Rating Simulator
     - パフォーマンスをもとにレーティング変化を計算するツール
     - https://saharan.github.io/progcon/ahc-rating-sim.html
+  - AtCoder Rating Contributor Graph
+    - レートの寄与をグラフ表示するツール
+    - https://atcoder-rating-contribution-graph.vercel.app/
   - competitiveprogramming.info/atcoder/contests/marathon
     - 過去のコンテスト情報が見やすくまとめられたサイト
     - https://competitiveprogramming.info/atcoder/contests/marathon
@@ -67,7 +70,7 @@ title: Home
 
 ## :material-account: About Me
 
-- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2285</span>)
+- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2287</span>)
   - AHCは、橙(rate2400)を目標に、ゆるく参加しています
   - 短期は50位、長期は30位ぐらいに入れるよう、コンテストの反省や知見をまとめておきます
 

@@ -80,10 +80,11 @@
 
 #### 近似/差分更新/高速化
 
-- [AHC017](../ContestMemo/ahc017.md)
-  - Shortest Path Tree
-  - 最短経路差分でグラフを作ってBFS
-  - など
+- [木構造](./tree.md)
+  - [AHC017](../ContestMemo/ahc017.md)
+    - Shortest Path Tree
+    - 最短経路差分でグラフを作ってBFS
+    - など
 
 ### All-pair Shortest Path(APSP)
 

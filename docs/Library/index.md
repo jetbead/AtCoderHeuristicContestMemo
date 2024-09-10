@@ -4,15 +4,13 @@
 
 - メタヒューリスティックス
   - [局所探索/山登り/焼きなまし法](./sa.md)
-    - [焼きなましテンプレート](./cpp_lib/sa_cpp.md)
   - [ビームサーチ](./beam_search.md)
-    - [ビームサーチテンプレート](./cpp_lib/beam_cpp.md)
 - グラフ系
   - [グラフ](./graph.md)
+  - [木構造](./tree.md)
   - [マッチング](./matching.md)
   - [フロー](./flow.md)
   - [TSP](./tsp.md)
-    - [TSPテンプレート](./cpp_lib/tsp_cpp.md)
 - 機械学習、確率、統計系
   - [統計モデリング](./stats_modeling.md)
   - [機械学習](./ml.md)
@@ -20,7 +18,6 @@
   - [不確かさの取り扱い](./uncertainty.md)
 - その他
   - [グリッド](./grid.md)
-    - [グリッドテンプレート](./cpp_lib/grid_cpp.md)
   - [ゲーム木探索](./game_tree.md)
   - [マルチエージェント](./multi_agent.md)
   - [評価関数設計](./eval_function.md)
@@ -33,6 +30,10 @@
 
 ## ライブラリ
 
+- [焼きなましテンプレート](./cpp_lib/sa_cpp.md)
+- [ビームサーチテンプレート](./cpp_lib/beam_cpp.md)
+- [TSPテンプレート](./cpp_lib/tsp_cpp.md)
+- [グリッドテンプレート](./cpp_lib/grid_cpp.md)
 - [乱数/乱択](./random.md)
 - [高速化(C++)](./speedup.md)
 - [stage 機能付き配列](./stage_array.md)
@@ -41,6 +42,8 @@
 - [ビットボード](./bitboard.md)
 - [IndexSet](./index_set.md)
 - [永続stack](./persistent_stack.md)
+- [FastClearingArray](./cpp_lib/fast_clearing_array_cpp.md)
+  - [FastClearingArray2D](./cpp_lib/grid_cpp.md)
 
 ## デバッグ、ビジュアライザ
 

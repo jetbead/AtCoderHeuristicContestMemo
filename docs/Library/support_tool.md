@@ -47,3 +47,5 @@
 - yunixさんのマラソン系コンテストでソースコードを分割して書く方法のメモ
   - https://yunix-kyopro.hatenablog.com/entry/2023/03/14/220453
   - https://github.com/yunix-kyopro/AHC-cpp-template-public
+- ymatsuxさんのC++ファイルマージツール
+  - https://github.com/ymatsux/competitive-programming/tree/main/combiner
