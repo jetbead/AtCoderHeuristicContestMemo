@@ -25,4 +25,4 @@ title: Intro. to HC
 
 ## Links
 
-- [agw さん Twitter まとめ](https://togetter.com/li/1550502)
+- [agwさん Twitter まとめ](https://togetter.com/li/1550502)

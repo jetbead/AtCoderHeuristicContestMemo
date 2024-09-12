@@ -56,45 +56,44 @@ title: 日本橋ハーフ2021増刊号(RECRUIT)
 
 (50 位まで&発言を見つけられた方のみ)
 
-- 1 位 Jirotech さん
+- Jirotechさん
   - https://twitter.com/Jiro_tech15/status/1436979563079163907
   - https://vimeo.com/603126256?ref=tw-share
   - https://twitter.com/Jiro_tech15/status/1437008103799541764
-- [4 位 phocom さん](https://twitter.com/_phocom/status/1436981894499880967)
-- [7 位 fuppy0716 さん](https://twitter.com/fuppy_kyopro/status/1436980675916144640)
-- [8 位 siman さん](https://simanman.hatenablog.com/entry/2021/09/13/155633)
-- [9 位 kawatea さん](https://twitter.com/kawatea03/status/1436978583197548546)
-- [10 位 bowwowforeach さん](https://twitter.com/bowwowforeach/status/1436982453579616256)
-- [12 位 fky\_さん](https://twitter.com/fkyrz_0111/status/1436978724826537984)
-- [14 位 assy さん](https://twitter.com/assy1028/status/1436979233373360132)
-- [16 位 Shun_PI さん](https://twitter.com/Shun___PI/status/1437012665293889539)
-- [17 位 nagiss さん](https://twitter.com/lgeuwce/status/1436982098103992331)
-- [18 位 shibh308 さん](https://twitter.com/shibh308/status/1436979647992909824)
-- [20 位 wanui さん](https://twitter.com/gmeriaog/status/1437764559662505984)
-- [21 位 tsukammo さん](https://twitter.com/tsukammo/status/1436983837645422599)
-- [22 位 c7c7 さん](https://twitter.com/C7C7LL/status/1436979425359237130)
-- [23 位 eivour さん](https://twitter.com/contramundum2/status/1437000102975926273)
-- [24 位 cuthbert さん](https://twitter.com/ethylene_66/status/1437009336308436995)
-- [25 位 eijirou さん](https://twitter.com/eijirou_kyopro/status/1436980647457738755)
-- [27 位 hirokazu1020 さん](https://twitter.com/hirokazu1020/status/1436982503286317063)
-- 28 位 prd_xxx さん
-  - https://twitter.com/prd_xxx/status/1436981945963986951
+- [phocomさん](https://twitter.com/_phocom/status/1436981894499880967)
+- [fuppy0716さん](https://twitter.com/fuppy_kyopro/status/1436980675916144640)
+- [simanさん](https://simanman.hatenablog.com/entry/2021/09/13/155633)
+- [kawateaさん](https://twitter.com/kawatea03/status/1436978583197548546)
+- [bowwowforeachさん](https://twitter.com/bowwowforeach/status/1436982453579616256)
+- [fky\_さん](https://twitter.com/fkyrz_0111/status/1436978724826537984)
+- [assyさん](https://twitter.com/assy1028/status/1436979233373360132)
+- [Shun_PIさん](https://twitter.com/Shun___PI/status/1437012665293889539)
+- [nagissさん](https://twitter.com/lgeuwce/status/1436982098103992331)
+- [shibh308さん](https://twitter.com/shibh308/status/1436979647992909824)
+- [wanuiさん](https://twitter.com/gmeriaog/status/1437764559662505984)
+- [tsukammoさん](https://twitter.com/tsukammo/status/1436983837645422599)
+- [c7c7さん](https://twitter.com/C7C7LL/status/1436979425359237130)
+- [eivourさん](https://twitter.com/contramundum2/status/1437000102975926273)
+- [cuthbertさん](https://twitter.com/ethylene_66/status/1437009336308436995)
+- [eijirouさん](https://twitter.com/eijirou_kyopro/status/1436980647457738755)
+- [hirokazu1020さん](https://twitter.com/hirokazu1020/status/1436982503286317063)
+- [prd_xxxさん](https://twitter.com/prd_xxx/status/1436981945963986951)
   - https://twitter.com/prd_xxx/status/1436984188817707013
   - https://twitter.com/prd_xxx/status/1436999142924972034
   - https://prd-xxx.hateblo.jp/entry/2021/09/15/003013
-- [29 位 yowa さん](https://twitter.com/yowa/status/1437071686537416706)
-- [30 位 nrvft さん](https://twitter.com/nrvkpr/status/1436998757262893058)
-- [32 位 udon1206 さん](https://jupiro.hatenablog.com/entry/rcl-2021)
-- [36 位 Kiri8128 さん](https://twitter.com/kiri8128/status/1436980713140588549)
-- [44 位 shim0 さん](https://twitter.com/idolikeshishamo/status/1436981033778380801)
-- [47 位 yochan さん](https://twitter.com/yochan_tech/status/1436978962723270659)
-- [48 位 komori3 さん](https://twitter.com/komora71_/status/1436983005382254596)
-- [49 位 terry_u16 さん](https://twitter.com/terry_u16/status/1436978268935127044)
+- [yowaさん](https://twitter.com/yowa/status/1437071686537416706)
+- [nrvftさん](https://twitter.com/nrvkpr/status/1436998757262893058)
+- [udon1206さん](https://jupiro.hatenablog.com/entry/rcl-2021)
+- [Kiri8128さん](https://twitter.com/kiri8128/status/1436980713140588549)
+- [shim0さん](https://twitter.com/idolikeshishamo/status/1436981033778380801)
+- [yochanさん](https://twitter.com/yochan_tech/status/1436978962723270659)
+- [komori3さん](https://twitter.com/komora71_/status/1436983005382254596)
+- [terry_u16さん](https://twitter.com/terry_u16/status/1436978268935127044)
 
-- [tomerun さん](https://twitter.com/tomerun/status/1438163487205724166)
+- [tomerunさん](https://twitter.com/tomerun/status/1438163487205724166)
 
 ## Links
 
-- [agw さん Twitter まとめ](https://togetter.com/li/1771914)
+- [agwさん Twitter まとめ](https://togetter.com/li/1771914)
 - [Twitter hashtag R_procon](https://twitter.com/hashtag/R_procon)
 

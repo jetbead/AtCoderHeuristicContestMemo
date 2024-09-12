@@ -29,28 +29,26 @@ title: TOYOTA2023夏Final
 - [AHCラジオ(解説放送)](https://www.youtube.com/watch?v=w6W6BGujPsY)
 - [ライブ中継](https://www.youtube.com/live/Onro9wuNHmI)
 
-- [1位terry_u16さん](https://twitter.com/terry_u16/status/1695690733339246680)
+- [terry_u16さん](https://twitter.com/terry_u16/status/1695690733339246680)
   - https://twitter.com/terry_u16/status/1695696323662709081
   - https://twitter.com/terry_u16/status/1695754801710264649
   - https://www.terry-u16.net/entry/toyota2023summer-final
-- [2位hitonanodeさん](https://twitter.com/rsat__m/status/1695662782367322365)
+- [hitonanodeさん](https://twitter.com/rsat__m/status/1695662782367322365)
   - https://twitter.com/rsat__m/status/1695668514269622347
   - https://twitter.com/rsat__m/status/1695681680231805164
-- [3位shibh308さん](https://twitter.com/shibh308/status/1695690896996733024)
+- [shibh308さん](https://twitter.com/shibh308/status/1695690896996733024)
   - https://twitter.com/shibh308/status/1695660146977120513
-- 4位hukinorinさん
-- [5位phocomさん](https://twitter.com/_phocom/status/1695690824930251162)
+- [phocomさん](https://twitter.com/_phocom/status/1695690824930251162)
   - https://twitter.com/_phocom/status/1695665568706331064
   - https://twitter.com/_phocom/status/1695661780150968608
-- 6位krさん
-- [7位laycrsさん](https://twitter.com/laycrs/status/1695760783714758923)
-- [8位kozimaさん](https://twitter.com/t33f/status/1695735014305189970)
+- [laycrsさん](https://twitter.com/laycrs/status/1695760783714758923)
+- [kozimaさん](https://twitter.com/t33f/status/1695735014305189970)
   - https://twitter.com/t33f/status/1695736113288360403
-- [9位eijirouさん](https://twitter.com/eijirou_kyopro/status/1695680128163148149)
+- [eijirouさん](https://twitter.com/eijirou_kyopro/status/1695680128163148149)
   - https://twitter.com/eijirou_kyopro/status/1695680234878844986
   - https://twitter.com/eijirou_kyopro/status/1695687402998964278
   - https://twitter.com/eijirou_kyopro/status/1695768041949368457
-- [10位Jirotechさん](https://twitter.com/Jiro_tech15/status/1695665939034112378)
+- [Jirotechさん](https://twitter.com/Jiro_tech15/status/1695665939034112378)
   - https://twitter.com/Jiro_tech15/status/1695740964256862718
   - https://twitter.com/Jiro_tech15/status/1695738163984277950
 
@@ -60,4 +58,4 @@ title: TOYOTA2023夏Final
 ## Links
 
 - [Twitter hashtag トヨタコンSummer](https://twitter.com/hashtag/%E3%83%88%E3%83%A8%E3%82%BF%E3%82%B3%E3%83%B3Summer)
-- [kiri8128 さん Score-Performance グラフ](https://twitter.com/kiri8128/status/1696911046014124182)
+- [kiri8128さん Score-Performance グラフ](https://twitter.com/kiri8128/status/1696911046014124182)

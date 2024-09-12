@@ -134,7 +134,7 @@ title: 第一回マスターズ決勝
 
 
 
-- [1位Imusu](https://twitter.com/semiexp/status/1781661110460166515)
+- [Imusu](https://twitter.com/semiexp/status/1781661110460166515)
   - https://twitter.com/japlj/status/1781666007733678416
   - https://twitter.com/semiexp/status/1781696689067479189
   - https://twitter.com/semiexp/status/1781700451966374026
@@ -143,14 +143,14 @@ title: 第一回マスターズ決勝
   - https://twitter.com/semiexp/status/1781706471585251638
   - https://twitter.com/semiexp/status/1781721755163488416
   - https://twitter.com/semiexp/status/1781724715599736909
-- [2位Pink Rose](https://twitter.com/skyaozora/status/1781597099794260444)
+- [Pink Rose](https://twitter.com/skyaozora/status/1781597099794260444)
   - https://twitter.com/nico_shindannin/status/1781680527789199528
   - https://twitter.com/laycrs/status/1781652206330245457
-- [3位astrea](https://twitter.com/threecourse/status/1781720825957331341)
+- [astrea](https://twitter.com/threecourse/status/1781720825957331341)
   - https://twitter.com/yunix91201367/status/1781717597731647771
   - https://twitter.com/yunix91201367/status/1781597010937966691
   - https://twitter.com/yunix91201367/status/1781695458429305044
-- [4位https://jag-icpc.org/?Join](https://twitter.com/TumoiYorozu/status/1781499186523099594)
+- [https://jag-icpc.org/?Join](https://twitter.com/TumoiYorozu/status/1781499186523099594)
   - https://twitter.com/TumoiYorozu/status/1781596794780295564
   - https://twitter.com/TumoiYorozu/status/1781598791927472428
   - https://twitter.com/TumoiYorozu/status/1781695481502130645
@@ -158,14 +158,14 @@ title: 第一回マスターズ決勝
   - https://twitter.com/rian_tkb/status/1781691341266936136
   - https://twitter.com/smiken_61/status/1781598482392088666
   - https://twitter.com/smiken_61/status/1781687426475524442
-- [5位Optimization I.G](https://twitter.com/tsukammo/status/1781945274841411914)
+- [Optimization I.G](https://twitter.com/tsukammo/status/1781945274841411914)
   - https://twitter.com/tsukammo/status/1781945784906453297
     - https://tsukammo.hatenablog.com/entry/2024/04/21/161831
   - https://twitter.com/omi_UT/status/1781622653830463754
   - https://twitter.com/omi_UT/status/1781938419549254134
   - https://twitter.com/omi_UT/status/1782018108137591198
   - https://omizatta.hatenablog.com/entry/2024/04/29/210411
-- [6位実装をしない](https://twitter.com/shr_pc/status/1781499727852478676)
+- [実装をしない](https://twitter.com/shr_pc/status/1781499727852478676)
   - https://twitter.com/shr_pc/status/1781597149937189091
   - https://twitter.com/shr_pc/status/1781597318984380881
   - https://twitter.com/shr_pc/status/1781647339129848029
@@ -173,25 +173,24 @@ title: 第一回マスターズ決勝
   - https://twitter.com/_simanman/status/1781731984026583284
     - https://twitter.com/bowwowforeach/status/1781666445153456428
   - https://twitter.com/_simanman/status/1781809867147358672
-- [7位わくわくわくわく](https://twitter.com/takoshiiiiiiiii/status/1781502246213275863)
+- [わくわくわくわく](https://twitter.com/takoshiiiiiiiii/status/1781502246213275863)
   - https://twitter.com/fuppy_kyopro/status/1781597850583097590
   - https://twitter.com/rsat__m/status/1781641126027624751
-- [8位Garden Tellers](https://twitter.com/phyllo/status/1781663560466362710)
+- [Garden Tellers](https://twitter.com/phyllo/status/1781663560466362710)
   - https://twitter.com/sash277/status/1781671192770015266
-- [9位ジャムおじさん](https://twitter.com/darjeeling743/status/1781637816348528913)
-- [10位FIRST](https://twitter.com/colun/status/1781945272438079539)
+- [ジャムおじさん](https://twitter.com/darjeeling743/status/1781637816348528913)
+- [FIRST](https://twitter.com/colun/status/1781945272438079539)
   - https://twitter.com/bowwowforeach/status/1781662695043067934
   - https://twitter.com/bowwowforeach/status/1781666445153456428
     - https://www.codingame.com/multiplayer/bot-programming/mad-pod-racing
   - https://twitter.com/bowwowforeach/status/1781820272670306462
   - https://twitter.com/Shun___PI/status/1781618543039234324
   - https://twitter.com/Shun___PI/status/1781975987619803168
-- [11位3人に勝てるわけないだろ！🐑🍃🤪](https://twitter.com/leaf_1415/status/1781626804597653750)
+- [3人に勝てるわけないだろ！🐑🍃🤪](https://twitter.com/leaf_1415/status/1781626804597653750)
   - https://twitter.com/yuuki_n_n/status/1781598313659412752
-- [12位パズル解放軍](https://twitter.com/shibuyapprocon/status/1782219796303733151)
-- 13位三人衆
-- [14位焼肉](https://twitter.com/ichyo/status/1781632979993002380)
-- [15位焼きなマシーン改](https://twitter.com/takumi152/status/1781688090308010330)
+- [パズル解放軍](https://twitter.com/shibuyapprocon/status/1782219796303733151)
+- [焼肉](https://twitter.com/ichyo/status/1781632979993002380)
+- [焼きなマシーン改](https://twitter.com/takumi152/status/1781688090308010330)
   - https://twitter.com/takumi152/status/1781701493399355439
   - https://twitter.com/takumi152/status/1781708952356712933
   - https://twitter.com/terry_u16/status/1781599105153966190
@@ -217,15 +216,15 @@ title: 第一回マスターズ決勝
   - https://twitter.com/terry_u16/status/1782073123669750103
   - https://twitter.com/terry_u16/status/1782075318188310778
   - https://twitter.com/terry_u16/status/1782095263592857844
-- [16位年末恒例の餅](https://twitter.com/tokumini_ss/status/1781652142224523292)
+- [年末恒例の餅](https://twitter.com/tokumini_ss/status/1781652142224523292)
   - https://twitter.com/tokumini_ss/status/1781650300778275142
   - https://twitter.com/merom686/status/1781651714887864645
-- [17位CAT'S EYE](https://twitter.com/tanakh/status/1781727734433264097)
+- [CAT'S EYE](https://twitter.com/tanakh/status/1781727734433264097)
   - https://twitter.com/koyumeishi_/status/1781649214344462515
   - https://twitter.com/yuki_prog/status/1781666371035955281
-- [18位マアヂマシィン](https://twitter.com/blue_jam/status/1781671102177255732)
+- [マアヂマシィン](https://twitter.com/blue_jam/status/1781671102177255732)
   - https://twitter.com/blue_jam/status/1781910704339272132
-- [19位中本會](https://twitter.com/komora71_/status/1781599707988701284)
+- [中本會](https://twitter.com/komora71_/status/1781599707988701284)
   - https://twitter.com/komora71_/status/1781661079711724020
   - https://twitter.com/komora71_/status/1781706222254923969
   - https://twitter.com/___kyskyskyskys/status/1781721063925420369
@@ -234,9 +233,8 @@ title: 第一回マスターズ決勝
   - https://twitter.com/MasaakiMitsuo/status/1781681497487069483
   - https://twitter.com/MasaakiMitsuo/status/1781682166998651372
   - https://twitter.com/MasaakiMitsuo/status/1781695837640540616
-- [20位uff](https://twitter.com/fmhr__/status/1781598806557233342)
-- 21位DiamondPrincess
-- [22位half_centuries](https://twitter.com/ToastUz/status/1781683730358415717)
+- [uff](https://twitter.com/fmhr__/status/1781598806557233342)
+- [half_centuries](https://twitter.com/ToastUz/status/1781683730358415717)
   - https://twitter.com/ToastUz/status/1781848577515688184
   - https://twitter.com/tanaka_a8/status/1781675651361317254
   - https://twitter.com/tanaka_a8/status/1781675973706231901
@@ -246,66 +244,50 @@ title: 第一回マスターズ決勝
   - https://twitter.com/zach_leee/status/1781697302866088216
   - https://twitter.com/zach_leee/status/1781696486604161461
   - https://qiita.com/toast-uz/items/e17873fadcc8866ae453
-- [23位今日も一日よろしくです](https://twitter.com/iwashi31/status/1781496039922675763)
+- [今日も一日よろしくです](https://twitter.com/iwashi31/status/1781496039922675763)
   - https://twitter.com/iwashi31/status/1781651328068121047
   - https://twitter.com/iwashi31/status/1781852691939152275
-- 24位チピチピChatGPT
-- 25位もちもちコーダーズ
-- 26位negainoido
-- [27位やほー🍑🍤](https://twitter.com/tempuracpp/status/1781696236791505292)
-- [28位O](https://twitter.com/WniKwo/status/1781598674033795298)
+- [やほー🍑🍤](https://twitter.com/tempuracpp/status/1781696236791505292)
+- [O](https://twitter.com/WniKwo/status/1781598674033795298)
   - https://twitter.com/WniKwo/status/1781678922939396204
   - https://twitter.com/WniKwo/status/1781865478081954167
   - https://twitter.com/omurice__/status/1781597057322725886
   - https://twitter.com/omurice__/status/1781624724923310370
   - https://twitter.com/omurice__/status/1781659385930154197
-- 29位IMKY
-- [30位manarimo](https://twitter.com/kawatea03/status/1781707224093741464)
-- 31位H#
-- [32位駆け込み寺](https://twitter.com/hamko_intel/status/1781601099923026164)
+- [manarimo](https://twitter.com/kawatea03/status/1781707224093741464)
+- [駆け込み寺](https://twitter.com/hamko_intel/status/1781601099923026164)
   - https://twitter.com/nekomimimi/status/1782396010947649920
-- 33位ゲーム出汁
-- [34位BABA_IS_AC](https://twitter.com/yusapon_/status/1781675718776377372)
-- [35位寿司処「松の」愛好会](https://twitter.com/rine_orz/status/1781644616594559205)
-- [36位ITなんもわからん](https://twitter.com/uuuus17/status/1781650702143807850)
+- [BABA_IS_AC](https://twitter.com/yusapon_/status/1781675718776377372)
+- [寿司処「松の」愛好会](https://twitter.com/rine_orz/status/1781644616594559205)
+- [ITなんもわからん](https://twitter.com/uuuus17/status/1781650702143807850)
   - https://twitter.com/uuuus17/status/1781671104949743735
   - https://twitter.com/_bo9chan/status/1781822139886375101
   - https://twitter.com/_bo9chan/status/1785962925221638336
   - https://twitter.com/negoto_coder/status/1781640897656184949
-- 37位遊夜の棋士団
-- 38位ふくろうさんチーム
-- [39位ウルトラ山のぼリスト集団](https://twitter.com/gmm_tea_cpg/status/1781646683845378548)
-- [40位infOtaKU](https://twitter.com/ygussany/status/1781649514962858471)
+- [ウルトラ山のぼリスト集団](https://twitter.com/gmm_tea_cpg/status/1781646683845378548)
+- [infOtaKU](https://twitter.com/ygussany/status/1781649514962858471)
   - https://twitter.com/trilink0725/status/1781852239864480181
-- 41位赤緑黒白木
-- [42位そうゆうさくせん](https://twitter.com/cexen/status/1781678632970358864)
-- 43位toyoharu
-- [44位Re: PSF](https://twitter.com/yos1up/status/1781653560259977686)
-- 45位わぶにゅー
-- [46位Monocari](https://twitter.com/drken1215/status/1781886915454910747)
+- [そうゆうさくせん](https://twitter.com/cexen/status/1781678632970358864)
+- [Re: PSF](https://twitter.com/yos1up/status/1781653560259977686)
+- [Monocari](https://twitter.com/drken1215/status/1781886915454910747)
   - https://twitter.com/drken1215/status/1781889317247602881
   - https://twitter.com/tsutaj/status/1781641508208406842
   - https://twitter.com/tsutaj/status/1782094223292158191
   - https://twitter.com/tsutaj/status/1782096511586934799
   - https://twitter.com/monkukui/status/1781598096394432530
-- 47位あにまるず
-- [48位無職](https://twitter.com/Jirosho111/status/1781641801562296340)
-- 49位KKHS
-- [50位最適ゴリラ理論](https://twitter.com/theory_and_me/status/1781713105074139452)
+- [無職](https://twitter.com/Jirosho111/status/1781641801562296340)
+- [最適ゴリラ理論](https://twitter.com/theory_and_me/status/1781713105074139452)
   - https://twitter.com/theory_and_me/status/1781846501293244788
-- [51位えびますたーどわん](https://twitter.com/ebicochineal/status/1782034523091595371)
+- [えびますたーどわん](https://twitter.com/ebicochineal/status/1782034523091595371)
   - https://twitter.com/ebicochineal/status/1782205294799708276
-- [52位天才貪欲マシーン](https://twitter.com/prussian_coder/status/1781685333173907460)
+- [天才貪欲マシーン](https://twitter.com/prussian_coder/status/1781685333173907460)
   - https://twitter.com/prussian_coder/status/1782316345826394250
   - https://twitter.com/bird0148677302/status/1781969934287024260
   - https://twitter.com/bird0148677302/status/1782327303969841352
-- [53位VRC競プロ部](https://twitter.com/amb_vrc/status/1781873510710964613)
+- [VRC競プロ部](https://twitter.com/amb_vrc/status/1781873510710964613)
   - https://twitter.com/amb_vrc/status/1781896135852061079
     - https://amentorimaru.hatenablog.com/entry/2024/04/21/034648
   - https://twitter.com/amb_vrc/status/1781958239741223268
-- 54位Bue World
-- 54位grammis
-
 
 ## Links
 
