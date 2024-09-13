@@ -30,6 +30,8 @@
 - https://yunix-kyopro.hatenablog.com/entry/2022/07/02/134251
 - https://yunix-kyopro.hatenablog.com/entry/2024/05/27/235836
 - https://topcoder-tomerun.hatenablog.jp/entry/2024/04/06/201915
+- https://zenn.dev/otohx/articles/8fbfbb6a5f465b
+- https://github.com/shibh308/ahc-cloud-run-jobs
 
 ## 手元で複数ケース実行
 
