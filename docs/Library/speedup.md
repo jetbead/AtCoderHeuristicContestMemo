@@ -121,6 +121,8 @@
   - 行儀が悪いが、`exit(0)`や`quick_exit(0)`で後処理を省略して終わらせる
     - exitはglobal変数やスレッド変数などの後処理やファイルストリームのフラッシュは実行される
     - quick_exitはそれらを行わない。が、環境によっては使えないかも
+- グラフの隣接リストをCSRで持つ
+  - https://qiita.com/Nachia/items/d420c08b333296f54526
 
 #### malloc/allocator置き換え、custom allocator
 
