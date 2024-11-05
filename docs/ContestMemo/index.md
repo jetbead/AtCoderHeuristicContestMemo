@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc038.png" class="trimimg"> | [トヨタ自動車プログラミングコンテスト2024#10(AHC038)](./ahc038.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc037.png" class="trimimg"> | [第11回Asprovaプログラミングコンテスト(AHC037)](./ahc037.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc036.png" class="trimimg"> | [RECRUIT 日本橋ハーフマラソン 2024夏(AHC036)](./ahc036.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc035.png" class="trimimg"> | [ALGO ARTISプログラミングコンテスト2024夏(AHC035)](./ahc035.md) | <span style="color: #0000cc;">short</span> | :material-check: |
