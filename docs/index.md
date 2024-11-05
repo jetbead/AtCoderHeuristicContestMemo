@@ -35,6 +35,9 @@ title: Home
   - AtCoder Rating Contributor Graph
     - レートの寄与をグラフ表示するツール
     - https://atcoder-rating-contribution-graph.vercel.app/
+  - AtCoder Graphs
+    - グラフ化ツールがまとめられたサイト
+    - https://atcoder-graphs.vercel.app/
   - competitiveprogramming.info/atcoder/contests/marathon
     - 過去のコンテスト情報が見やすくまとめられたサイト
     - https://competitiveprogramming.info/atcoder/contests/marathon
