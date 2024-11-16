@@ -84,15 +84,103 @@ xoxoxox
 
 - 連結成分が操作によってちぎれないかを判定する(=関節点判定)を単純にBFSとかしてしまうと遅い
 - 完全な判定ではないが、近似的に8近傍のみで判定する方法で高速化できる
+  - 連結性を保つ用途以外にも、内部に穴ができるような連結操作を禁止するような判定にも使える(OFFマスがちぎれないようにする)
+  - 3x3だけでなく、5x5なども同様に考えられる(4近傍のマスをUnionFindとかで連結性をチェック？)
 - https://twitter.com/takumi152/status/1705891739020525662
 - https://twitter.com/chokudai/status/1706124817915908481
-  - 連結性を保つ用途以外にも、大きな輪っかで連結になるような連結を禁止するような判定にも使える
 - https://twitter.com/Shun___PI/status/1705978257437532498
 
-### 曲率の離散類似による連結判定
+```cpp
+// 連結性チェック(3x3関節点判定)
+// 注意: ちゃんとverifyしてない
+class ArticulationPoint3x3 {
+    bool hole_ok;
+    vector<bool> memo;
 
-- https://yokozuna57.hatenablog.com/entry/2023/10/27/155346
-  - https://twitter.com/ethylene_66/status/1719190628675047894
+    // (y,x)の地点のON/OFFを入れ替えられるかを確認
+    // - maskは、(y,x)と周囲8近傍を含む3x3の範囲のON/OFF情報
+    // 0 1 2
+    // 3 4 5
+    // 6 7 8
+    bool check_mask(const vector<int>& mask) const {
+        assert(mask.size() == 9);
+
+        // 穴ができるのが許容で、OFF->ONにする場合は、4近傍にONがあればONにしてOK
+        if (hole_ok && mask[4] == 0) {
+            if (mask[1] == 1 || mask[3] == 1 || mask[5] == 1 || mask[7] == 1)
+                return true;
+            else
+                return false;
+        }
+
+        // 4近傍がすべて同じなら、ONにもOFFにもできない
+        if (mask[3] == mask[1] && mask[5] == mask[1] && mask[7] == mask[1]) return false;
+
+        // 周囲にある2頂点について、真ん中のON/OFFが変わった場合に非連結になるかチェック
+        // (コメントアウト部分は、遠回りで連結になる場合でもよい場合のチェック)
+        static const vector<vector<vector<int>>> check = {
+            {{1, 3}, {0} /*, {2, 5, 6, 7, 8}*/}, {{3, 7}, {6} /*, {0, 1, 2, 5, 8}*/},
+            {{7, 5}, {8} /*, {0, 1, 2, 3, 6}*/}, {{5, 1}, {2} /*, {0, 3, 6, 7, 8}*/},
+            {{1, 7}, {0, 3, 6}, {2, 5, 8}},      {{3, 5}, {0, 1, 2}, {6, 7, 8}}};
+        for (const auto& c : check) {
+            if (mask[c[0][0]] == mask[4] && mask[c[0][1]] == mask[4]) {
+                bool ok = false;
+                for (int i = 1; i < c.size(); i++) {
+                    bool f = true;
+                    for (const auto& idx : c[i]) {
+                        if (mask[idx] != mask[4]) f = false;
+                    }
+                    if (f) {
+                        ok = true;
+                        break;
+                    }
+                }
+                if (!ok) return false;
+            }
+        }
+        return true;
+    }
+
+    void build() {
+        memo.assign(1 << 9, false);
+        for (int S = 0; S < (1 << 9); S++) {
+            vector<int> mask(9, 0);
+            for (int i = 0; i < 9; i++)
+                if ((S >> i) & 1) mask[i] = 1;
+            memo[S] = check_mask(mask);
+        }
+    }
+
+   public:
+    // hole_ok=trueなら穴ができるのを許容、falseなら穴ができるのは禁止
+    ArticulationPoint3x3(bool hole_ok) : hole_ok(hole_ok) {
+        build();
+    }
+
+    bool check(int mask) const {
+        assert(0 <= mask && mask < memo.size());
+        return memo[mask];
+    }
+
+    bool check(const vector<vector<int>>& grid, int y, int x) const {
+        int mask = 0;
+        int mi = 0;
+        for (int dy = -1; dy <= 1; dy++) {
+            for (int dx = -1; dx <= 1; dx++) {
+                int ty = y + dy;
+                int tx = x + dx;
+                if (0 <= ty && ty < grid.size() && 0 <= tx && tx < grid[ty].size()) {
+                    if (grid[ty][tx] != 0) {
+                        mask |= 1 << mi;
+                    }
+                }
+                mi++;
+            }
+        }
+        return check(mask);
+    }
+};
+```
 
 ### 消去可能性
 
@@ -120,6 +208,13 @@ bool can_delete(int y, int x, int c) {
     return x1 + x3 + x5 + x7 - x1 * x2 * x3 - x3 * x4 * x5 - x5 * x6 * x7 - x7 * x8 * x1 == 1;
 }
 ```
+
+### 曲率の離散類似による連結判定
+
+- https://yokozuna57.hatenablog.com/entry/2023/10/27/155346
+  - https://twitter.com/ethylene_66/status/1719190628675047894
+
+
 
 ## ビット演算による距離計算
 
