@@ -29,6 +29,7 @@
 - https://kaityo256.github.io/sevendayshpc/day7/index.html
 - https://speakerdeck.com/herumi/simdnoji-chu-toguan-shu-noshi-zhuang-li
 - https://officedaytime.com/simd512/
+- https://qiita.com/advent-calendar/2021/avx
 
 ## AoS/SoA
 

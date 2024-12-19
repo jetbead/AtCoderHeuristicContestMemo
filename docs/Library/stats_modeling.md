@@ -158,6 +158,9 @@ for i in range(1000):
 
 - https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC
 - https://www.slideshare.net/slideshow/ss-250284912/250284912
+- https://qiita.com/s-yonekura/items/7cdc99ba444cdbd4e880
+- https://inzkyk.xyz/kalman_filter/multivariate_kalman_filters
+- https://www.kalmanfilter.net/JP/default_jp.aspx
 
 ```cpp
 // 単純な例: 1次元でのロボットの状態推定(観測誤差、移動誤差あり)
@@ -223,3 +226,4 @@ for (int t = 0; t < 100; t++) {
 - [AHC025](../ContestMemo/ahc025.md)
 - [AHC030](../ContestMemo/ahc030.md)
 - [masters2024-final](../ContestMemo/masters2024-final.md)
+- [AHC040](../ContestMemo/ahc040.md)

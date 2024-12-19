@@ -26,15 +26,9 @@ title: Home
   - AtCoder Heuristic Rating Estimator
     - 目標レーティングへ到達に必要なパフォーマンスを計算するツール
     - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
-  - AtCoder Rating Simulator
-    - 目標レーティングへ到達に必要なパフォーマンスを計算するツール
-    - https://atcoder-rating-simulator.dt.r.appspot.com/
   - AHC Rating Simulator
     - パフォーマンスをもとにレーティング変化を計算するツール
     - https://saharan.github.io/progcon/ahc-rating-sim.html
-  - AtCoder Rating Contributor Graph
-    - レートの寄与をグラフ表示するツール
-    - https://atcoder-rating-contribution-graph.vercel.app/
   - AtCoder Graphs
     - グラフ化ツールがまとめられたサイト
     - https://atcoder-graphs.vercel.app/
@@ -62,6 +56,12 @@ title: Home
   - AtCoder 延長戦GP30ランキング
     - https://x.com/myh9_f/status/1812698939227095264
     - https://qropa.github.io/extended-gp30-ranking/
+  - ~~AtCoder Rating Simulator~~
+    - 目標レーティングへ到達に必要なパフォーマンスを計算するツール
+    - https://atcoder-rating-simulator.dt.r.appspot.com/
+  - ~~AtCoder Rating Contributor Graph~~
+    - レートの寄与をグラフ表示するツール
+    - https://atcoder-rating-contribution-graph.vercel.app/
 - :material-folder: **summary**
   - https://kato-hiro.github.io/AtCoderClans/
 
@@ -73,7 +73,7 @@ title: Home
 
 ## :material-account: About Me
 
-- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2288</span>)
+- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2314</span>)
   - AHCは、橙(rate2400)を目標に、ゆるく参加しています
   - 短期は50位、長期は30位ぐらいに入れるよう、コンテストの反省や知見をまとめておきます
 

@@ -22,6 +22,14 @@
   - https://github.com/toast-uz/ahc_tools/
   - https://qiita.com/toast-uz/items/b798cd24d3805aef2d80
   - ローカル(並列)テスターサポートツール
+- terry-u16/pahcer
+  - https://github.com/terry-u16/pahcer
+  - https://x.com/terry_u16/status/1861773303691845955
+  - AHCのローカルテストを並列実行するツール
+- fmhr/fj
+  - https://github.com/fmhr/fj
+  - https://x.com/fmhr__/status/1861950305661079842
+  - 並列テスト、テーブル表示、csv保存
 
 ## クラウドジャッジ環境整備
 
