@@ -3135,12 +3135,13 @@
 <ul>
 <li>観測行列Hを、「各観測を行に並べたもの」(T x N行列)で考える</li>
 <li>行列Hのrankを計算してNになっていない場合、数値計算の精度低下や、観測データが状態変数の組み合わせでしか識別できず各変数を個別に識別できない問題が発生してしまう</li>
-<li>EigenでLU分解(FullPivLU)でランクを計算してみると、一応Nになるので、フルランクっぽく見える</li>
-<li>ただ、wikipediaにもあるように、LU分解などでランク計算するのは精度落ちなどがありえ、用いられないとある<ul>
+<li>特異値分解してみると、最小の特異値が0にかなり近く、ほぼランク落ちしてしまっていることがわかる<ul>
+<li>wikipediaにもあるように、LU分解などでランク計算するのは精度落ちなどがありえ、用いられないみたい<ul>
 <li><a href="https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E9%9A%8E%E6%95%B0">https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E9%9A%8E%E6%95%B0</a></li>
 </ul>
 </li>
-<li>特異値分解してみると、最小の特異値が0にかなり近く、ほぼランク落ちしてしまっていることがわかる</li>
+</ul>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="n">MatrixXd</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
 <span class="n">MatrixXd</span><span class="w"> </span><span class="nf">z</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
@@ -3188,7 +3189,7 @@
 <h2 id="_4">結論<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>長方形0を常に入れてしまうと、観測行列Hがランク落ちしてしまい、推定精度が悪化してしまうため、うまくバラけるようにHを設計する必要があった</li>
-<li>ランク落ちしているかどうかの確認は、LU分解ではなく、特異値分解などで確認する</li>
+<li>ランク落ちしているかどうかの確認は、LU分解ではなく、特異値分解などで確認したほうがよい</li>
 </ul>
 
 
