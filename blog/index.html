@@ -12,7 +12,7 @@
         <link rel="prev" href="../Library/design_patterns/transition.html">
       
       
-        <link rel="next" href="category/misc.html">
+        <link rel="next" href="category/estimate.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -2606,6 +2606,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ahc0400" class="md-nav__link">
+    <span class="md-ellipsis">
+      AHC040推定パートで、長方形0を毎回入れると推定結果が悪化する件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       ブログ
@@ -2752,6 +2761,29 @@
   
   
     <li class="md-nav__item">
+      <a href="archive/2024.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="archive/2023.html" class="md-nav__link">
         
   
@@ -2818,11 +2850,57 @@
   
   
     <li class="md-nav__item">
+      <a href="category/estimate.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    estimate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="category/misc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     misc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="category/review.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    review
   </span>
   
 
@@ -2874,6 +2952,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ahc0400" class="md-nav__link">
+    <span class="md-ellipsis">
+      AHC040推定パートで、長方形0を毎回入れると推定結果が悪化する件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       ブログ
@@ -2896,6 +2983,210 @@
       <header class="md-typeset">
         <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-12-22 00:00:00+00:00">December 22, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/review.html" class="md-meta__link">review</a>, 
+              <a href="category/estimate.html" class="md-meta__link">estimate</a></li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="ahc0400"><a class="toclink" href="2024/12/22/ahc040%E6%8E%A8%E5%AE%9A%E3%83%91%E3%83%BC%E3%83%88%E3%81%A7%E9%95%B7%E6%96%B9%E5%BD%A20%E3%82%92%E6%AF%8E%E5%9B%9E%E5%85%A5%E3%82%8C%E3%82%8B%E3%81%A8%E6%8E%A8%E5%AE%9A%E7%B5%90%E6%9E%9C%E3%81%8C%E6%82%AA%E5%8C%96%E3%81%99%E3%82%8B%E4%BB%B6.html">AHC040推定パートで、長方形0を毎回入れると推定結果が悪化する件</a></h2>
+<h3 id="_1"><a class="toclink" href="2024/12/22/ahc040%E6%8E%A8%E5%AE%9A%E3%83%91%E3%83%BC%E3%83%88%E3%81%A7%E9%95%B7%E6%96%B9%E5%BD%A20%E3%82%92%E6%AF%8E%E5%9B%9E%E5%85%A5%E3%82%8C%E3%82%8B%E3%81%A8%E6%8E%A8%E5%AE%9A%E7%B5%90%E6%9E%9C%E3%81%8C%E6%82%AA%E5%8C%96%E3%81%99%E3%82%8B%E4%BB%B6.html#_1">概要</a></h3>
+<p><a href="../ContestMemo/ahc040.html">AHC040</a>の各長方形の幅を推定するときに、長方形0を毎回入れた観測をすると推定結果が悪化する件について、調べたことのメモ。</p>
+<h3 id="_2"><a class="toclink" href="2024/12/22/ahc040%E6%8E%A8%E5%AE%9A%E3%83%91%E3%83%BC%E3%83%88%E3%81%A7%E9%95%B7%E6%96%B9%E5%BD%A20%E3%82%92%E6%AF%8E%E5%9B%9E%E5%85%A5%E3%82%8C%E3%82%8B%E3%81%A8%E6%8E%A8%E5%AE%9A%E7%B5%90%E6%9E%9C%E3%81%8C%E6%82%AA%E5%8C%96%E3%81%99%E3%82%8B%E4%BB%B6.html#_2">背景</a></h3>
+<p><img src="/blog/20241222_ahc040_estimate_1.png" width=300></p>
+<ul>
+<li>推定アプローチとして、<strong>長方形0を常に左上に配置して</strong>、そこから横方向・縦方向に伸ばすという「L字配置」をして、長方形の幅の和の情報を得る方法が考えられた</li>
+<li>しかし、このアプローチで推定した場合、あまり推定結果がよくならない現象が起きていた</li>
+</ul>
+<h3 id="_3"><a class="toclink" href="2024/12/22/ahc040%E6%8E%A8%E5%AE%9A%E3%83%91%E3%83%BC%E3%83%88%E3%81%A7%E9%95%B7%E6%96%B9%E5%BD%A20%E3%82%92%E6%AF%8E%E5%9B%9E%E5%85%A5%E3%82%8C%E3%82%8B%E3%81%A8%E6%8E%A8%E5%AE%9A%E7%B5%90%E6%9E%9C%E3%81%8C%E6%82%AA%E5%8C%96%E3%81%99%E3%82%8B%E4%BB%B6.html#_3">簡単な実験</a></h3>
+<p>簡単のため、N個の幅に対して、N/2個の和(誤差あり)の情報をT回得られる場合で実験。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Eigen/Dense&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">Eigen</span><span class="p">;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Game</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">Game</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sigma</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">N</span><span class="p">),</span><span class="w"> </span><span class="n">sigma</span><span class="p">(</span><span class="n">sigma</span><span class="p">),</span><span class="w"> </span><span class="n">engine</span><span class="p">(</span><span class="n">seed_gen</span><span class="p">()),</span><span class="w"> </span><span class="n">normal_rand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">sigma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100000</span><span class="p">;</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">engine</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">U</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">rects</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">L</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">engine</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">U</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">rects</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">normal_rand</span><span class="p">(</span><span class="n">engine</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">debug</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">rects</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">   </span><span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">sigma</span><span class="p">;</span>
+<span class="w">    </span><span class="n">random_device</span><span class="w"> </span><span class="n">seed_gen</span><span class="p">;</span>
+<span class="w">    </span><span class="n">mt19937_64</span><span class="w"> </span><span class="n">engine</span><span class="p">;</span>
+<span class="w">    </span><span class="n">normal_distribution</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">normal_rand</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rects</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sigma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">Game</span><span class="w"> </span><span class="n">game</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">sigma</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">random_device</span><span class="w"> </span><span class="n">seed_gen</span><span class="p">;</span>
+<span class="w">    </span><span class="n">mt19937_64</span><span class="w"> </span><span class="n">engine</span><span class="p">(</span><span class="n">seed_gen</span><span class="p">());</span>
+
+<span class="w">    </span><span class="n">VectorXd</span><span class="w"> </span><span class="n">mu</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
+<span class="w">    </span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mu</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65000</span><span class="p">;</span>
+<span class="w">        </span><span class="n">var</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20000.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">20000.0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">        </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// !!! 常に0を入れる !!!</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">engine</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">idx</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">game</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">idx</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// カルマンフィルタで更新</span>
+<span class="w">        </span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="n">H</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">z</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">z</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="w">        </span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">R</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sigma</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">sigma</span><span class="p">;</span>
+<span class="w">        </span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mu</span><span class="p">;</span>
+<span class="w">        </span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">H</span><span class="p">.</span><span class="n">transpose</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">R</span><span class="p">;</span>
+<span class="w">        </span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">H</span><span class="p">.</span><span class="n">transpose</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">inverse</span><span class="p">();</span>
+<span class="w">        </span><span class="n">mu</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="n">var</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">var</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">game</span><span class="p">.</span><span class="n">debug</span><span class="p">({</span><span class="n">i</span><span class="p">})</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">mu</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>常にindex0を入れた場合
+<div class="highlight"><pre><span></span><code># index 実際の幅 推定幅 推定標準偏差
+0   52999   77140.8 16001.1
+1   47006   39634.8 4111.54
+2   84034   78201.9 4100.78
+3   89342   82800.4 4107.2
+4   95932   90371.2 4109.58
+5   54637   49830.1 4102.79
+6   61122   56394.2 4106.21
+7   98155   93883.8 4100.35
+8   84121   77498   4103.31
+9   72824   64949   4114.36
+</code></pre></div></p>
+<p>すべてランダムに選んだ場合
+<div class="highlight"><pre><span></span><code>0   50084   50967.6 952.936
+1   71539   71651.8 918.389
+2   95361   96866.1 925.838
+3   75503   76197.4 959.127
+4   88144   88641.6 938.597
+5   46058   45540.7 920.785
+6   86431   85634.8 947.211
+7   76880   74930.8 925.045
+8   33301   33224.4 923.575
+9   66842   67633.7 927.25
+</code></pre></div></p>
+<h3 id="h"><a class="toclink" href="2024/12/22/ahc040%E6%8E%A8%E5%AE%9A%E3%83%91%E3%83%BC%E3%83%88%E3%81%A7%E9%95%B7%E6%96%B9%E5%BD%A20%E3%82%92%E6%AF%8E%E5%9B%9E%E5%85%A5%E3%82%8C%E3%82%8B%E3%81%A8%E6%8E%A8%E5%AE%9A%E7%B5%90%E6%9E%9C%E3%81%8C%E6%82%AA%E5%8C%96%E3%81%99%E3%82%8B%E4%BB%B6.html#h">観測行列Hのランク</a></h3>
+<ul>
+<li>観測行列Hを、「各観測を行に並べたもの」(T x N行列)で考える</li>
+<li>行列Hのrankを計算してNになっていない場合、数値計算の精度低下や、観測データが状態変数の組み合わせでしか識別できず各変数を個別に識別できない問題が発生してしまう</li>
+<li>EigenでLU分解(FullPivLU)でランクを計算してみると、一応Nになるので、フルランクっぽく見える</li>
+<li>ただ、wikipediaにもあるように、LU分解などでランク計算するのは精度落ちなどがありえ、用いられないとある<ul>
+<li><a href="https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E9%9A%8E%E6%95%B0">https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E3%81%AE%E9%9A%8E%E6%95%B0</a></li>
+</ul>
+</li>
+<li>特異値分解してみると、最小の特異値が0にかなり近く、ほぼランク落ちしてしまっていることがわかる</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">MatrixXd</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="n">MatrixXd</span><span class="w"> </span><span class="nf">z</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">MatrixXd</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MatrixXd</span><span class="o">::</span><span class="n">Zero</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ランダムに選ぶ</span>
+<span class="w">    </span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// !!! 常に0を入れる !!!</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">engine</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">N</span><span class="p">);</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">idx</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">game</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">idx</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="n">H</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">z</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="w">    </span><span class="n">R</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sigma</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">sigma</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">JacobiSVD</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="o">&gt;</span><span class="w"> </span><span class="n">svd</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">ComputeThinU</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">ComputeThinV</span><span class="p">);</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">svd</span><span class="p">.</span><span class="n">singularValues</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div>
+<p>常にindex0を入れた場合
+<div class="highlight"><pre><span></span><code>     16.716
+    6.34501
+    5.79118
+    5.59349
+    5.31227
+    5.10989
+    4.86206
+    4.53603
+    4.11643
+9.06548e-16    // !!! 0ではないがかなり小さい !!!
+</code></pre></div></p>
+<p>すべてランダムに選んだ場合
+<div class="highlight"><pre><span></span><code>15.9283
+6.08912
+5.92107
+5.73654
+5.51335
+5.44418
+4.95822
+4.75776
+4.33734
+ 3.8955
+</code></pre></div></p>
+<h3 id="_4"><a class="toclink" href="2024/12/22/ahc040%E6%8E%A8%E5%AE%9A%E3%83%91%E3%83%BC%E3%83%88%E3%81%A7%E9%95%B7%E6%96%B9%E5%BD%A20%E3%82%92%E6%AF%8E%E5%9B%9E%E5%85%A5%E3%82%8C%E3%82%8B%E3%81%A8%E6%8E%A8%E5%AE%9A%E7%B5%90%E6%9E%9C%E3%81%8C%E6%82%AA%E5%8C%96%E3%81%99%E3%82%8B%E4%BB%B6.html#_4">結論</a></h3>
+<ul>
+<li>長方形0を常に入れてしまうと、観測行列Hがランク落ちしてしまい、推定精度が悪化してしまうため、うまくバラけるようにHを設計する必要があった</li>
+<li>ランク落ちしているかどうかの確認は、LU分解ではなく、特異値分解などで確認する</li>
+</ul>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
