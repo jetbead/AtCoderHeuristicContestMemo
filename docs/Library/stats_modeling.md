@@ -87,6 +87,7 @@ for i in range(1000):
 - 事後分布がいい感じにならない場合は、事後分布からサンプリングして、それを使って代表値(要約値)などを求める(MCMC)、など
 
 - https://platinum-prog.hatenablog.com/entry/2023/05/20/231200
+- https://cookie-box.hatenablog.com/entry/2021/01/31/223006
 
 ### 共役事前分布
 
@@ -112,7 +113,6 @@ for i in range(1000):
 ### MCMC
 
 #### ギブスサンプリング
-
 
 ## 確率行列
 
@@ -162,8 +162,9 @@ for i in range(1000):
 - https://inzkyk.xyz/kalman_filter/multivariate_kalman_filters
 - https://www.kalmanfilter.net/JP/default_jp.aspx
 
+### 単純な例: 1次元でのロボットの状態推定(観測誤差、移動誤差あり) 
+
 ```cpp
-// 単純な例: 1次元でのロボットの状態推定(観測誤差、移動誤差あり)
 double rx = 0; // 初期位置
 double rv = 0; // 初期速度
 double a = 0.1; // 制御入力(加速度)
@@ -204,16 +205,35 @@ for (int t = 0; t < 100; t++) {
 }
 ```
 
+### 単純な例: AHC040の幅の推定(移動なし、観測誤差のみ)
+
+- [AHC040推定パート](../blog/posts/20241222_ahc040_estimate.md)
+
 ### パーティクルフィルタ
 
 - https://ja.wikipedia.org/wiki/%E7%B2%92%E5%AD%90%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF
 - https://www.ieice.org/jpn/books/kaishikiji/2005/200512.pdf
 - https://qiita.com/MoriKen/items/da8d290dcefad81b478d
+- [第一回マスターズ選手権-決勝-](../ContestMemo/masters2024-final.md)
+
+
+## 最小二乗法
+
+- https://ja.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95
+- https://manabitimes.jp/math/942
+- https://manabitimes.jp/math/1054
+- https://manabitimes.jp/math/1128
+- https://x.com/Shun___PI/status/1866061590661108020
+- 正規方程式
+
+### 正則化あり最小二乗法
+
+- 正則化項あり二乗和誤差$E(x)=\frac{1}{2} \| Xx-t \| + \frac{\lambda}{2} \| x \|^2$を最小化
+- $x = (X^T X + \lambda I)^{-1} X^T t$
 
 ## ベイズ最適化
 
 - https://www.slideshare.net/issei_sato/bayesian-optimization
-
 
 ## 問題
 

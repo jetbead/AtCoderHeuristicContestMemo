@@ -17,3 +17,8 @@
 - https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
 - https://qiita.com/tsukasa__diary/items/f050291b6adad80b7998
 - https://tanzaku.github.io/post/2022-07-13-chokudai-search/
+
+## ルールベースと貪欲の違い
+
+- 貪欲法は、何らか状態の評価をして一番良いものを選ぶというのを繰り返す
+- ルールベースは、状態の評価値を必ずしも必要とせず、ルールに従って選ぶ

@@ -19,6 +19,7 @@
 - https://koyumeishi.hatenablog.com/entry/2017/03/26/191726
 - https://speakerdeck.com/wata_orz/santakonpedeer-du-quan-wan-sitahua
   - https://www.youtube.com/watch?v=bM1Xtziy6xc
+- https://www.docswell.com/s/hitonanode/K22QM4-2024-11-29#p55
 
 ## Links
 

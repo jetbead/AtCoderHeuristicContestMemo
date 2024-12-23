@@ -13,9 +13,10 @@
   - 要素、関数の形、など
 - 生スコアに含まれていない周りの状態を含める
 - 避けたい状態にペナルティ
-- 残りターンの下限/下界を考える
+- 最終的なスコアとしてあり得る下限/下界を考える
   - [AHC033](../ContestMemo/ahc033.md)
     - https://shuu0914.hatenablog.com/entry/2024/05/27/190612
+  - [AHC040](../ContestMemo/ahc040.md)
 - ベーススコアとの差
   - [AHC028](../ContestMemo/ahc028.md)
     - https://speakerdeck.com/terryu16/ahc028jie-shuo?slide=12

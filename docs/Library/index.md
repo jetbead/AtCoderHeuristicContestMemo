@@ -70,10 +70,8 @@
 - [行列ライブラリEigen](./eigen.md)
 - [サポートツール](./support_tool.md)
 - [Optuna](./optuna.md)
-- [用語集](./glossary.md)
-
-## ドキュメント/Tips
-
-- [How to get started](./how_to_get_started.md)
 - [いろんなTips](./tips.md)
+- [用語集](./glossary.md)
+- [How to get started](./how_to_get_started.md)
 - [Checklist](./checklist.md)
+
