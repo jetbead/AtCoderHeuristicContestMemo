@@ -72,6 +72,7 @@
 - [Optuna](./optuna.md)
 - [いろんなTips](./tips.md)
 - [用語集](./glossary.md)
+- [AI関連](./ai.md)
 - [How to get started](./how_to_get_started.md)
 - [Checklist](./checklist.md)
 
