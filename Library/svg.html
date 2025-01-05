@@ -2153,6 +2153,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      javascriptで簡易アニメーション
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jupyter-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       jupyter notebookでアニメーション
@@ -3009,6 +3018,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      javascriptで簡易アニメーション
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#jupyter-notebook" class="md-nav__link">
     <span class="md-ellipsis">
       jupyter notebookでアニメーション
@@ -3280,6 +3298,175 @@
 <span class="w">        </span><span class="n">ofs</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dump</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
+</code></pre></div>
+<h2 id="javascript">javascriptで簡易アニメーション<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>./svg/out0000.svg</code>のように複数ファイルを<code>./svg/</code>以下に置いておく</li>
+<li>以下のhtmlを修正・用意して、ブラウザで開く</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>svg player<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">#</span><span class="nn">ui</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">#</span><span class="nn">seekRange</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">#</span><span class="nn">seekNumber</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">#</span><span class="nn">speedNumber</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ui&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;seekRange&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">step</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;seekNumber&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">step</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;firstButton&quot;</span><span class="p">&gt;</span>|◀◀<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;prevButton&quot;</span><span class="p">&gt;</span>|◀<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;playButton&quot;</span><span class="p">&gt;</span>▶<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nextButton&quot;</span><span class="p">&gt;</span>▶|<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lastButton&quot;</span><span class="p">&gt;</span>▶▶|<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span>
+        <span class="na">id</span><span class="o">=</span><span class="s">&quot;speedNumber&quot;</span>
+        <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span>
+        <span class="na">min</span><span class="o">=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">max</span><span class="o">=</span><span class="s">&quot;30&quot;</span>
+        <span class="na">step</span><span class="o">=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">value</span><span class="o">=</span><span class="s">&quot;8&quot;</span>
+      <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;field&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="c1">// 使い方:</span>
+<span class="w">      </span><span class="c1">// 1. ./svg/out0000.svgのように0から連番のsvgファイルをsvg/以下に置いておく</span>
+<span class="w">      </span><span class="c1">// 2. fileNumを実際のファイル数に修正する</span>
+<span class="w">      </span><span class="c1">// 3. htmlを開く</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fileNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span>
+
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">      </span><span class="c1">// ファイルパス指定</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">svgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">fileNum</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">i</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">padStart</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">svgs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;./svg/out&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.svg&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="c1">// サイズ指定</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">svg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">svg</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">svg</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">svg</span><span class="p">);</span>
+
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">seekRange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;seekRange&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="kd">let</span><span class="w"> </span><span class="nx">seekNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;seekNumber&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">seekRange</span><span class="p">.</span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fileNum</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">seekNumber</span><span class="p">.</span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fileNum</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="w">      </span><span class="c1">//</span>
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">setElement</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">svg</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">svgs</span><span class="p">[</span><span class="nx">step</span><span class="p">];</span>
+<span class="w">        </span><span class="nx">seekRange</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">step</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">seekNumber</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">step</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">changeRange</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">seekRange</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">setElement</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">changeNumber</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">seekNumber</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">setElement</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">setFirst</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">setElement</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">setLast</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">svgs</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">setElement</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">inc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">step</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">svgs</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">timer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">playAndStop</span><span class="p">();</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">          </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">step</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">svgs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">setElement</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">dec</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">step</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">step</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">svgs</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">svgs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">setElement</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">playAndStop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">timer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">clearInterval</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">          </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;playButton&quot;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;▶&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;speedNumber&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">step</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">svgs</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="nx">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">          </span><span class="nx">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">inc</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">speed</span><span class="p">);</span>
+<span class="w">          </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;playButton&quot;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;■&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="nx">changeSpeed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">timer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">playAndStop</span><span class="p">();</span><span class="w"> </span><span class="c1">// stop</span>
+<span class="w">        </span><span class="nx">playAndStop</span><span class="p">();</span><span class="w"> </span><span class="c1">// play</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nb">document</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;seekRange&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">changeRange</span><span class="p">);</span>
+<span class="w">      </span><span class="nb">document</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;seekNumber&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">changeNumber</span><span class="p">);</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nextButton&quot;</span><span class="p">).</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;onclick&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;inc()&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;prevButton&quot;</span><span class="p">).</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;onclick&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dec()&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nb">document</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;firstButton&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;onclick&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;setFirst()&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nb">document</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;lastButton&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;onclick&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;setLast()&quot;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="nb">document</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;playButton&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;onclick&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;playAndStop()&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="nb">document</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;speedNumber&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">changeSpeed</span><span class="p">);</span>
+
+<span class="w">      </span><span class="c1">//</span>
+<span class="w">      </span><span class="nx">setElement</span><span class="p">();</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <h2 id="jupyter-notebook">jupyter notebookでアニメーション<a class="headerlink" href="#jupyter-notebook" title="Permanent link">&para;</a></h2>
 <ul>
