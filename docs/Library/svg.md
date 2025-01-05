@@ -188,6 +188,178 @@ class SimpleSVG {
 
 ```
 
+## javascriptで簡易アニメーション
+
+- `./svg/out0000.svg`のように複数ファイルを`./svg/`以下に置いておく
+- 以下のhtmlを修正・用意して、ブラウザで開く
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>svg player</title>
+    <style>
+      #ui {
+        margin: 5px;
+      }
+      #seekRange {
+        width: 200px;
+      }
+      #seekNumber {
+        width: 50px;
+        height: 25px;
+      }
+      #speedNumber {
+        width: 50px;
+        height: 25px;
+      }
+      button {
+        width: 50px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ui">
+      <input id="seekRange" type="range" min="0" step="1" />
+      <input id="seekNumber" type="number" min="0" step="1" />
+      <button id="firstButton">|◀◀</button>
+      <button id="prevButton">|◀</button>
+      <button id="playButton">▶</button>
+      <button id="nextButton">▶|</button>
+      <button id="lastButton">▶▶|</button>
+      <input
+        id="speedNumber"
+        type="number"
+        min="1"
+        max="30"
+        step="1"
+        value="8"
+      />
+    </div>
+    <div id="field"></div>
+    <script>
+      // 使い方:
+      // 1. ./svg/out0000.svgのように0から連番のsvgファイルをsvg/以下に置いておく
+      // 2. fileNumを実際のファイル数に修正する
+      // 3. htmlを開く
+      const fileNum = 1000;
+
+      let step = 0;
+      let timer = null;
+
+      // ファイルパス指定
+      let svgs = [];
+      for (let i = 0; i < fileNum; i++) {
+        let idx = i.toString().padStart(4, "0");
+        svgs.push("./svg/out" + idx + ".svg");
+      }
+
+      // サイズ指定
+      let svg = document.createElement("img");
+      document.getElementById("field").style.width = svg.width;
+      document.getElementById("field").style.height = svg.height;
+      document.getElementById("field").appendChild(svg);
+
+      let seekRange = document.getElementById("seekRange");
+      let seekNumber = document.getElementById("seekNumber");
+      seekRange.max = fileNum - 1;
+      seekNumber.max = fileNum - 1;
+
+      //
+      function setElement() {
+        svg.src = svgs[step];
+        seekRange.value = step;
+        seekNumber.value = step;
+      }
+
+      function changeRange() {
+        step = Number(seekRange.value);
+        setElement();
+      }
+
+      function changeNumber() {
+        step = Number(seekNumber.value);
+        setElement();
+      }
+
+      function setFirst() {
+        step = 0;
+        setElement();
+      }
+
+      function setLast() {
+        step = svgs.length - 1;
+        setElement();
+      }
+
+      function inc() {
+        if (step == svgs.length - 1) {
+          if (timer != null) {
+            playAndStop();
+          }
+          return;
+        }
+        step = (step + 1) % svgs.length;
+        setElement();
+      }
+
+      function dec() {
+        if (step == 0) return;
+        step = (step - 1 + svgs.length) % svgs.length;
+        setElement();
+      }
+
+      function playAndStop() {
+        if (timer != null) {
+          clearInterval(timer);
+          timer = null;
+          document.getElementById("playButton").textContent = "▶";
+        } else {
+          const speed = document.getElementById("speedNumber").value;
+          if (step == svgs.length - 1) step = 0;
+          timer = setInterval(inc, 1000 / speed);
+          document.getElementById("playButton").textContent = "■";
+        }
+      }
+
+      function changeSpeed() {
+        if (timer == null) return;
+        playAndStop(); // stop
+        playAndStop(); // play
+      }
+
+      document
+        .getElementById("seekRange")
+        .addEventListener("change", changeRange);
+      document
+        .getElementById("seekNumber")
+        .addEventListener("change", changeNumber);
+      document.getElementById("nextButton").setAttribute("onclick", "inc()");
+      document.getElementById("prevButton").setAttribute("onclick", "dec()");
+      document
+        .getElementById("firstButton")
+        .setAttribute("onclick", "setFirst()");
+      document
+        .getElementById("lastButton")
+        .setAttribute("onclick", "setLast()");
+
+      document
+        .getElementById("playButton")
+        .setAttribute("onclick", "playAndStop()");
+      document
+        .getElementById("speedNumber")
+        .addEventListener("change", changeSpeed);
+
+      //
+      setElement();
+    </script>
+  </body>
+</html>
+```
+
+
 ## jupyter notebookでアニメーション
 
 
