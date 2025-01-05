@@ -144,6 +144,7 @@ for i in range(1000):
 
 - https://ja.wikipedia.org/wiki/%E7%9B%B8%E4%BA%92%E6%83%85%E5%A0%B1%E9%87%8F
 - https://manabitimes.jp/math/1403
+- https://qiita.com/aplysia/items/29a4fb4573fc1b8dec79
 - ベイズ推定などで、ある情報Aを得ることで事後確率分布が変わるような場合に、事前分布のエントロピーと事後分布のエントロピーの差を考える
   - $H(X) - H(X|A)$
   - この差が大きいほど、情報Aが、特定のxである確率が高くできるような情報であると判断できる

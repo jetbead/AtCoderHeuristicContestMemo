@@ -87,6 +87,11 @@
 - choise-dictionary?
   - https://arxiv.org/abs/1711.00808
 
+### グリッド関連
+
+- [隣接マスの事前列挙](./grid.md)
+- [3x3関節点高速化](./grid.md)
+
 ### 計算量オーダーより計算回数
 
 - ヒューリスティック系だと、Nが大きくなかったりするため、計算量オーダー的には`O(N)`でも`O(logN)`より高速に動作する場合がある
@@ -169,3 +174,5 @@ pmr::vector<int> v(&mbr);
   - [boost](./boost.md)
 - FenwickTreeの定数倍高速化
   - https://yosupo.hatenablog.com/entry/2016/12/04/121927
+- 1/sqrt(x)を計算する変態コード
+  - https://www.youtube.com/watch?v=n2Q1Sp7iew4

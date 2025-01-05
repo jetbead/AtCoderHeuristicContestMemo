@@ -97,7 +97,7 @@ int main() {
 }
 ```
 
-<img src="../../../20241230_ahc022_placement_cost_1.png" width=300>
+<img src="/imgs/20241230_ahc022_placement_cost_1.png" width=300>
 
 ```python
 data = []

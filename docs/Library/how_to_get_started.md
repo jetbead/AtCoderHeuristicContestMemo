@@ -24,6 +24,7 @@ https://info.atcoder.jp/overview/contest/intro
 - [AHC のおはなし(NNMochi さん)](https://trap.jp/post/1304/)
 - [Topcoder マラソンマッチの探索問題で重要なこと(takapt0226 さん)](https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21)
 - [競プロ〜ヒューリスティック/マラソン事始め〜(tanaka-a さん)](https://qiita.com/tanaka-a/items/3c2a1bca63759ec71e7f)
+- [AHCに初めて参加する人が読む記事2025](https://qiita.com/tomerun/items/8d2b67476c25ecef35f5)
 
 ## ツールセット
 

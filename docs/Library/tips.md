@@ -33,6 +33,8 @@
   - https://montplusa.hatenablog.com/entry/2024/07/28/170000
 - 【競プロ】ヒューリスティックコンテストで戦うヒント(tanaka-a さん)
   - https://qiita.com/tanaka-a/items/ab1c1f539a826606dc65
+- マラソンマッチで誤解してたこと、してなかったこと(koyumeishi さん)
+  - https://koyumeishi.hatenablog.com/entry/2018/12/28/055220
 
 
 ## Heuristicsの設計、実装について
