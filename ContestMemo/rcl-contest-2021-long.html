@@ -2699,7 +2699,7 @@
             
   
   <span class="md-ellipsis">
-    Templates
+    Archive
   </span>
   
 
@@ -2708,91 +2708,6 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            Templates
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../blog/templates/experiment.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    実験、試してみた
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../blog/templates/report.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AHCXXX参加記
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Archive
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Archive
           </label>
@@ -2866,10 +2781,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2880,8 +2795,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Categories
           </label>
@@ -3104,9 +3019,13 @@
 <li>空間方向<ul>
 <li>現在出現している野菜との距離に対して重み付け</li>
 <li>出現しているマス x の野菜の価値 v について、その距離で減衰させる(そこまで 0 点だったときの平均になる v/d 的な指数減衰など)</li>
-<li>取得済みを除く、消滅までの期間で距離を制限、複数の収穫機が同じマスを目指して動いて無駄にならないような工夫も必要？</li>
+<li>取得済みを除く、消滅までの期間で距離を制限、複数の収穫機が同じマスを目指して動いて無駄にならないような工夫も必要？<ul>
+<li>取りに行けない野菜の評価値が混ざらないように、マスと野菜との対応関係を考慮してあげる必要があるかも</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>消滅まで時間に余裕があるかどうか</li>
 </ul>
 </li>
 <li>コーナーケース<ul>
@@ -3118,6 +3037,8 @@
 <li>(結構、同じアプローチも、評価関数の作り方や細かい実装などでスコアの差がでやすかった？)</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li>焼きなましの可能性<ul>
 <li><a href="https://twitter.com/t33f/status/1437003245621157894">https://twitter.com/t33f/status/1437003245621157894</a></li>
 <li><a href="https://qiita.com/kusano_k/items/eb44e796adf237ae35d6">https://qiita.com/kusano_k/items/eb44e796adf237ae35d6</a></li>
