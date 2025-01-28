@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc041.png" class="trimimg"> | [ALGO ARTISプログラミングコンテスト2024冬(AHC041)](./ahc041.md) | <span style="color: #0000cc;">short</span> | |
 | <img loading="lazy" src="../imgs/ahc040.png" class="trimimg"> | [HACK TO THE FUTURE 2025(AHC040)](./ahc040.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc039.png" class="trimimg"> | [THIRDプログラミングコンテスト2024(AHC039)](./ahc039.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc038.png" class="trimimg"> | [トヨタ自動車プログラミングコンテスト2024#10(AHC038)](./ahc038.md) | <span style="color: #cc0000;">long</span> | :material-check: |
