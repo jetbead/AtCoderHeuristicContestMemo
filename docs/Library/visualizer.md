@@ -25,6 +25,7 @@
 ### 参考
 
 - [ヒューリスティックコンテストでビジュアライザを開発する方法に関するメモ(yunix さん)](https://yunix-kyopro.hatenablog.com/entry/2023/12/17/150534)
+- [ビジュアライザ筋トレ2025年 chatGPT活用編](https://yunix-kyopro.hatenablog.com/entry/2025/01/16/204053)
 - [マラソンマッチのビジュアライザいろいろ(threecourse さん)](https://threecourse.hatenablog.com/entry/2021/05/04/181226)
 - [簡易にビジュアライザを作る方法の調査記(gobi さん)](https://gobi-tk.hatenablog.com/entry/2023/04/16/184952)
 - [コンテストリスト](../ContestMemo/index.md)

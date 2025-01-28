@@ -35,6 +35,8 @@
   - https://qiita.com/tanaka-a/items/ab1c1f539a826606dc65
 - マラソンマッチで誤解してたこと、してなかったこと(koyumeishi さん)
   - https://koyumeishi.hatenablog.com/entry/2018/12/28/055220
+- AHC初心者向け、ローカルテスタの使い方(thunder さん)
+  - https://qiita.com/thun-c/items/bb090c1d8d4c38d5e4d2
 
 
 ## Heuristicsの設計、実装について

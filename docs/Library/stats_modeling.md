@@ -7,6 +7,8 @@
 - Hit&Blowで学ぶベイズ推定：理論から実装まで (4etaさん)
   - https://zenn.dev/4eta/articles/072132e44e2075
   - https://zenn.dev/4eta/articles/c00fcfd07e0238
+- AHC典型解法シリーズ第3弾「ベイズ推定」 (thunderさん)
+  - https://qiita.com/thun-c/items/688442aad6a0410545cc
 
 ## ベイズの定理
 

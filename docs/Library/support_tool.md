@@ -30,6 +30,10 @@
   - https://github.com/fmhr/fj
   - https://x.com/fmhr__/status/1861950305661079842
   - 並列テスト、テーブル表示、csv保存
+- qropa/optpod
+  - https://github.com/qropa/optpod
+  - https://x.com/myh9_f/status/1880604814943613434
+  - AHCのローカルテストを並列実行するツール
 
 ## クラウドジャッジ環境整備
 
