@@ -4,6 +4,8 @@ title: Home
 
 # AtCoder Heuristic Contest Memo
 
+主に、AtCoder Heuristic Contestなどに役立つ関連情報、コンテスト感想戦、自作ライブラリなどを自分用にまとめています。
+
 ## :material-table-of-contents: Contents
 
 - :material-pen: [Contest List](./ContestMemo/index.md)
@@ -73,9 +75,8 @@ title: Home
 
 ## :material-account: About Me
 
-- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2314</span>)
+- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2282</span>)
   - AHCは、橙(rate2400)を目標に、ゆるく参加しています
-  - 短期は50位、長期は30位ぐらいに入れるよう、コンテストの反省や知見をまとめておきます
 
 ## :material-github: GitHub
 
