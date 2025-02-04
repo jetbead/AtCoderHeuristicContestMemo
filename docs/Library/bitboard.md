@@ -13,38 +13,45 @@ struct BitBoard {
     bitset<H * W> board;
 
    public:
+    // 盤面の高さ
     int get_H() const {
         return H;
     }
+    // 盤面の幅
     int get_W() const {
         return W;
     }
 
+    // (y,x)をfにする
     void set(int y, int x, bool f) {
         board[y * W + x] = f;
     }
+    // (y,x)の状態を取得
     bool get(int y, int x) const {
         return board[y * W + x];
     }
+    // (y,x)の状態をフリップ
     void flip(int y, int x) {
         board[y * W + x] = ~board[y * W + x];
     }
+    // 盤面全体をフリップ
     void flip() {
         board.flip();
     }
 
+    // 盤面でのtrueの個数
     int count() const {
         return board.count();
     }
-    bool test() const {
-        return board.test();
-    }
+    // 盤面すべてがtrueか
     bool all() const {
         return board.all();
     }
+    // 盤面のいずれかがtrueか
     bool any() const {
         return board.any();
     }
+    // 盤面すべてがfalseか
     bool none() const {
         return board.none();
     }
@@ -105,15 +112,22 @@ ostream& operator<<(ostream& os, const BitBoard<H, W>& bb) {
 
 template <int H, int W>
 class BitBoardUtils {
+    array<bitset<H * W>, H> mask_w;
+    array<bitset<H * W>, W> mask_h;
     bitset<H * W> mask_left, mask_right;
 
     void make_mask() {
-        for (int y = 0; y < H; y++) {
-            mask_left |= bitset<H * W>(1) << (y * W);
-            mask_right |= bitset<H * W>(1) << (y * W + W - 1);
+        for (int x = 0; x < W; x++) {
+            mask_w[0].set(x);
+            for (int y = 0; y < H; y++) {
+                mask_h[x] |= bitset<H * W>(1) << (y * W + x);
+            }
         }
-        mask_left = ~mask_left;
-        mask_right = ~mask_right;
+        for (int y = 1; y < H; y++) {
+            mask_w[y] = mask_w[0] << (y * W);
+        }
+        mask_left = ~mask_h[0];
+        mask_right = ~mask_h[W - 1];
     }
 
    public:
@@ -121,6 +135,7 @@ class BitBoardUtils {
         make_mask();
     }
 
+    // 盤面全体を上下左右にずらす
     void shift_up(BitBoard<H, W>& board) {
         board.board >>= W;
     }
@@ -133,6 +148,57 @@ class BitBoardUtils {
     void shift_right(BitBoard<H, W>& board) {
         board.board = (board.board & mask_right) << 1;
     }
+    // 指定行/列のみを上下左右にずらす
+    void shift_up(BitBoard<H, W>& board, int x) {
+        bitset<H * W> column = board.board & mask_h[x];
+        column >>= W;
+        board.board = (board.board & ~mask_h[x]) | (column & mask_h[x]);
+    }
+    void shift_down(BitBoard<H, W>& board, int x) {
+        bitset<H * W> column = board.board & mask_h[x];
+        column <<= W;
+        board.board = (board.board & ~mask_h[x]) | (column & mask_h[x]);
+    }
+    void shift_left(BitBoard<H, W>& board, int y) {
+        bitset<H * W> row = (board.board & mask_w[y]) >> (y * W);
+        row >>= 1;
+        board.board = (board.board & ~mask_w[y]) | (row << (y * W));
+    }
+    void shift_right(BitBoard<H, W>& board, int y) {
+        bitset<H * W> row = (board.board & mask_w[y]) >> (y * W);
+        row <<= 1;
+        row &= mask_w[0];
+        board.board = (board.board & ~mask_w[y]) | (row << (y * W));
+    }
+    // 指定行/列のフリップ
+    void flip_row(BitBoard<H, W>& board, int y) {
+        board.board ^= mask_w[y];
+    }
+    void flip_column(BitBoard<H, W>& board, int x) {
+        board.board ^= mask_h[x];
+    }
+
+    // 盤面全体を90度右回転 O(HW)
+    void rotate_90(BitBoard<H, W>& board) {
+        BitBoard<H, W> rot;
+        for (int y = 0; y < H; y++) {
+            for (int x = 0; x < W; x++) {
+                rot.set(x, H - 1 - y, board.get(y, x));
+            }
+        }
+        swap(board, rot);
+    }
+    // 盤面全体を90度左回転 O(HW)
+    void rotate_l90(BitBoard<H, W>& board) {
+        BitBoard<H, W> rot;
+        for (int y = 0; y < H; y++) {
+            for (int x = 0; x < W; x++) {
+                rot.set(W - 1 - x, y, board.get(y, x));
+            }
+        }
+        swap(board, rot);
+    }
+
     // boardの位置から上下左右に1マス移動できる場所
     // 注意: 元の位置は含まないので、含むようにしたい場合はorを取る
     void expand(BitBoard<H, W>& board) {
