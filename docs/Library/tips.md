@@ -67,6 +67,8 @@
   - https://github.com/rhoo19937/p/blob/main/tech/.md
 - ヒューリスティックコンテストのテクニック集
   - https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f
+- niuristic(niuez さん)
+  - https://github.com/niuez/niuristic
 
 
 ## 改善アイデアの試し方
