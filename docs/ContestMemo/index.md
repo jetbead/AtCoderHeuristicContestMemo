@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc043.png" class="trimimg"> | [RECRUIT 日本橋ハーフマラソン 2025冬(AHC043)](./ahc043.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc042.png" class="trimimg"> | [AHC042](./ahc042.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc041.png" class="trimimg"> | [ALGO ARTISプログラミングコンテスト2024冬(AHC041)](./ahc041.md) | <span style="color: #0000cc;">short</span> | |
 | <img loading="lazy" src="../imgs/ahc040.png" class="trimimg"> | [HACK TO THE FUTURE 2025(AHC040)](./ahc040.md) | <span style="color: #cc0000;">long</span> | :material-check: |
