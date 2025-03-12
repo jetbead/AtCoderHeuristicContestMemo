@@ -2471,6 +2471,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ビームサーチ用テンプレート
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="beam_cpp.html" class="md-nav__link md-nav__link--active">
         
   
@@ -2481,6 +2493,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      単純なビームサーチ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3039,6 +3079,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      単純なビームサーチ
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3054,214 +3111,112 @@
 
 
 <h1 id="_1">ビームサーチ用テンプレート<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
-
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;atcoder/all&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">atcoder</span><span class="p">;</span>
-<span class="cp">#define REP(i, a, n) for (int i = (a); i &lt; (int)(n); i++)</span>
-<span class="cp">#define rep(i, n) REP(i, 0, n)</span>
-<span class="cp">#define FOR(it, c) for (__typeof((c).begin()) it = (c).begin(); it != (c).end(); ++it)</span>
-<span class="cp">#define ALLOF(c) (c).begin(), (c).end()</span>
-<span class="k">typedef</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">ll</span><span class="p">;</span>
-<span class="k">typedef</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">ull</span><span class="p">;</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">Timer</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="w"> </span><span class="n">start_time</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="w"> </span><span class="nf">getNow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">   </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">start</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">start_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getNow</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">getSec</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">duration_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">microseconds</span><span class="o">&gt;</span><span class="p">(</span><span class="n">getNow</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="p">).</span><span class="n">count</span><span class="p">();</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1e6</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<h2 id="_2">単純なビームサーチ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>実装<ul>
+<li>Stateクラス<ul>
+<li>状態を定義</li>
+<li>評価関数を定義</li>
+<li>ハッシュ関数を定義<ul>
+<li>重複排除や状態のループがなければ省略</li>
+</ul>
+</li>
+<li>デバッグ用printを実装</li>
+</ul>
+</li>
+<li>generate_next_states()関数<ul>
+<li>状態から行動・次の状態を生成</li>
+</ul>
+</li>
+<li>重複排除</li>
+</ul>
+</li>
+<li>改善<ul>
+<li>行動の改善</li>
+<li>評価関数の改善</li>
+<li>出力を永続stackにする</li>
+<li>状態のコピーコスト削減(状態のサイズを小さくする)</li>
+<li>priority_queue部分の改善(逆にしてBEAM_WIDTH個以上ならpopする、など)</li>
+<li>重複排除</li>
+<li>多様性確保</li>
+<li>評価値、ハッシュ値の差分計算</li>
+<li>ビーム幅の調整、自動調整</li>
+<li>差分更新可能な場合は、オイラーツアービームサーチなどに変更</li>
+<li>など</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">BeamConfig</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX_TURN</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">BEAM_WIDTH</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="kt">uint32_t</span><span class="w"> </span><span class="nf">xor128</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123456789</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">362436069</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">521288629</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">88675123</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
-<span class="w">    </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">));</span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
-<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="p">;</span>
-<span class="w">    </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">19</span><span class="p">))</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">));</span>
-<span class="p">}</span>
-<span class="kr">inline</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">frand</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">xor128</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">UINT32_MAX</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">UINT32_MAX</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="kr">inline</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">exprand</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">frand</span><span class="p">());</span>
-<span class="p">}</span>
-<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">RandomAccessIterator</span><span class="o">&gt;</span>
-<span class="kt">void</span><span class="w"> </span><span class="n">xor128_shuffle</span><span class="p">(</span><span class="n">RandomAccessIterator</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">RandomAccessIterator</span><span class="w"> </span><span class="n">last</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">typename</span><span class="w"> </span><span class="nc">iterator_traits</span><span class="o">&lt;</span><span class="n">RandomAccessIterator</span><span class="o">&gt;::</span><span class="n">difference_type</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">last</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">first</span><span class="p">);</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">swap</span><span class="p">(</span><span class="n">first</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">first</span><span class="p">[</span><span class="n">xor128</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)]);</span>
-<span class="p">}</span>
-
-<span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">GLOBAL_TIME_LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.97</span><span class="p">;</span>
-<span class="n">Timer</span><span class="w"> </span><span class="n">global_timer</span><span class="p">;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="n">Actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Action</span><span class="o">&gt;</span><span class="p">;</span>
-
 <span class="k">struct</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="p">;</span><span class="w">  </span><span class="c1">// 評価値</span>
-<span class="w">    </span><span class="n">Action</span><span class="w"> </span><span class="n">first_action</span><span class="p">;</span>
-<span class="w">    </span><span class="n">State</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">reset</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">eval</span><span class="p">;</span><span class="w">          </span><span class="c1">// 評価値</span>
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span><span class="w">        </span><span class="c1">// ハッシュ値</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">actions</span><span class="p">;</span><span class="w">  </span><span class="c1">// 行動列</span>
+
+<span class="w">    </span><span class="n">State</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">eval</span><span class="p">(</span><span class="n">compute_eval</span><span class="p">()),</span><span class="w"> </span><span class="n">hash</span><span class="p">(</span><span class="n">compute_hash</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// ...</span>
-<span class="w">        </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_score</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">compute_score</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// 現在の状態から愚直に評価値を計算</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">compute_eval</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// ...</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">check_score</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">compute_score</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">score</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="c1">// ターン型の場合は状態に遷移操作を持たせる</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">advance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Action</span><span class="o">&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// 現在の状態から愚直にハッシュ値を計算</span>
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">compute_hash</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// ...</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">Actions</span><span class="w"> </span><span class="n">legal_actions</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Actions</span><span class="w"> </span><span class="n">actions</span><span class="p">;</span>
-<span class="w">        </span><span class="c1">// ...</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">actions</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// ...</span>
 <span class="w">    </span><span class="p">}</span>
+
 <span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">eval</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
+
 <span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">eval</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 
-<span class="n">Action</span><span class="w"> </span><span class="nf">random_action</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">legal_actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="n">legal_actions</span><span class="p">();</span>
-<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">legal_actions</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">legal_actions</span><span class="p">[</span><span class="n">xor128</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">legal_actions</span><span class="p">.</span><span class="n">size</span><span class="p">()];</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Heap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 最大化タスク</span>
+<span class="c1">// using Heap = priority_queue&lt;State, vector&lt;State&gt;, greater&lt;State&gt;&gt;; // 最小化タスク</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">generate_next_states</span><span class="p">(</span><span class="n">Heap</span><span class="o">&amp;</span><span class="w"> </span><span class="n">next_states</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">next_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="n">next_state</span><span class="p">.</span><span class="n">eval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">next_state</span><span class="p">.</span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">next_state</span><span class="p">.</span><span class="n">actions</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">next_states</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">next_state</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="n">Action</span><span class="w"> </span><span class="nf">greedy_action</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">legal_actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="n">legal_actions</span><span class="p">();</span>
-<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">legal_actions</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">solve_beam</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">BeamConfig</span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">init_state</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">best_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Action</span><span class="w"> </span><span class="n">best_action</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">legal_actions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">State</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
-<span class="w">        </span><span class="n">now</span><span class="p">.</span><span class="n">advance</span><span class="p">(</span><span class="n">action</span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">best_score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">now</span><span class="p">.</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">best_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
-<span class="w">            </span><span class="n">best_action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">action</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">best_action</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="n">Heap</span><span class="w"> </span><span class="n">states</span><span class="p">;</span>
+<span class="w">    </span><span class="n">states</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">init_state</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rep</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">MAX_TURN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Heap</span><span class="w"> </span><span class="n">next_states</span><span class="p">;</span>
+<span class="w">        </span><span class="n">rep</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">BEAM_WIDTH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">states</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
 
-<span class="n">Action</span><span class="w"> </span><span class="nf">beam_search_action</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">beam_width</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">beam_depth</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">states</span><span class="p">;</span>
-<span class="w">    </span><span class="n">states</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="p">(</span><span class="n">state</span><span class="p">));</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">beam_depth</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">next_states</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">now_state</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">states</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">auto</span><span class="w"> </span><span class="n">legal_actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now_state</span><span class="o">-&gt;</span><span class="n">legal_actions</span><span class="p">();</span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">legal_actions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="w"> </span><span class="n">next_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="p">(</span><span class="o">*</span><span class="n">now_state</span><span class="p">);</span>
-<span class="w">                </span><span class="n">next_state</span><span class="o">-&gt;</span><span class="n">advance</span><span class="p">(</span><span class="n">action</span><span class="p">);</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">turn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">next_state</span><span class="o">-&gt;</span><span class="n">first_action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">action</span><span class="p">;</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">                </span><span class="n">next_states</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">next_state</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">next_states</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">beam_width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="c1">// c++20以降はshared_ptrのoperator&lt;は削除されているので、compを指定する必要がある</span>
-<span class="w">            </span><span class="n">nth_element</span><span class="p">(</span><span class="n">next_states</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">next_states</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">beam_width</span><span class="p">,</span><span class="w"> </span><span class="n">next_states</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
-<span class="w">                        </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">lhs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">lhs</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">rhs</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
-<span class="w">            </span><span class="n">next_states</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">beam_width</span><span class="p">);</span>
+<span class="w">            </span><span class="n">generate_next_states</span><span class="p">(</span><span class="n">next_states</span><span class="p">,</span><span class="w"> </span><span class="n">states</span><span class="p">.</span><span class="n">top</span><span class="p">());</span>
+<span class="w">            </span><span class="n">states</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="n">swap</span><span class="p">(</span><span class="n">states</span><span class="p">,</span><span class="w"> </span><span class="n">next_states</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="w"> </span><span class="n">best_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">now_state</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">states</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">best_state</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">now_state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">best_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now_state</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">best_state</span><span class="o">-&gt;</span><span class="n">first_action</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">states</span><span class="p">.</span><span class="n">empty</span><span class="p">());</span>
+<span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">best_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">states</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">input</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">solve_look_ahead</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
-<span class="w">    </span><span class="n">init</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">TIME_LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GLOBAL_TIME_LIMIT</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">global_timer</span><span class="p">.</span><span class="n">getSec</span><span class="p">();</span>
-<span class="w">    </span><span class="n">Timer</span><span class="w"> </span><span class="n">timer</span><span class="p">;</span>
-<span class="w">    </span><span class="n">timer</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sec</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">sec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timer</span><span class="p">.</span><span class="n">getSec</span><span class="p">();</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sec</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">TIME_LIMIT</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-
-<span class="w">        </span><span class="n">Action</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random_action</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
-<span class="w">        </span><span class="n">state</span><span class="p">.</span><span class="n">advance</span><span class="p">(</span><span class="n">action</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">solve_all</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">beam_width</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max_turn</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
-<span class="w">    </span><span class="n">init</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="w"> </span><span class="n">states</span><span class="p">;</span>
-<span class="w">    </span><span class="n">states</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">max_turn</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="w"> </span><span class="n">next_states</span><span class="p">;</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">now_state</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">states</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">auto</span><span class="w"> </span><span class="n">legal_actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now_state</span><span class="p">.</span><span class="n">legal_actions</span><span class="p">();</span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">legal_actions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">State</span><span class="w"> </span><span class="n">next_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now_state</span><span class="p">;</span>
-<span class="w">                </span><span class="n">next_state</span><span class="p">.</span><span class="n">advance</span><span class="p">(</span><span class="n">action</span><span class="p">);</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">turn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="n">next_state</span><span class="p">.</span><span class="n">first_action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">action</span><span class="p">;</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">                </span><span class="n">next_states</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">next_state</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">next_states</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">beam_width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">nth_element</span><span class="p">(</span><span class="n">next_states</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">next_states</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">beam_width</span><span class="p">,</span><span class="w"> </span><span class="n">next_states</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
-<span class="w">                        </span><span class="n">greater</span><span class="o">&lt;&gt;</span><span class="p">());</span>
-<span class="w">            </span><span class="n">next_states</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">beam_width</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">swap</span><span class="p">(</span><span class="n">states</span><span class="p">,</span><span class="w"> </span><span class="n">next_states</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">global_timer</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
-<span class="w">    </span><span class="n">input</span><span class="p">();</span>
-<span class="w">    </span><span class="n">solve_look_ahead</span><span class="p">();</span>
-<span class="w">    </span><span class="n">solve_all</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// ...</span>
 <span class="p">}</span>
 </code></pre></div>
 

@@ -1542,7 +1542,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      重複排除
+      同一局面によるループを防ぐ
     </span>
   </a>
   
@@ -1551,11 +1551,11 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      多様性
+      重複排除、多様性確保
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="多様性">
+    <nav class="md-nav" aria-label="重複排除、多様性確保">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1573,7 +1573,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#chokudai" class="md-nav__link">
+    <span class="md-ellipsis">
+      chokudaiサーチの軸
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビーム幅の自動調整
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       評価値
     </span>
@@ -1582,7 +1600,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       状態の差分更新で木のノードを行き来するテク
     </span>
@@ -1600,7 +1618,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       高度な話題
     </span>
@@ -3218,7 +3236,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      重複排除
+      同一局面によるループを防ぐ
     </span>
   </a>
   
@@ -3227,11 +3245,11 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      多様性
+      重複排除、多様性確保
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="多様性">
+    <nav class="md-nav" aria-label="重複排除、多様性確保">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3249,7 +3267,25 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#chokudai" class="md-nav__link">
+    <span class="md-ellipsis">
+      chokudaiサーチの軸
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビーム幅の自動調整
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       評価値
     </span>
@@ -3258,7 +3294,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       状態の差分更新で木のノードを行き来するテク
     </span>
@@ -3276,7 +3312,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       高度な話題
     </span>
@@ -3309,6 +3345,7 @@
 <li><a href="https://platinum-prog.hatenablog.com/entry/2023/07/28/222536">https://platinum-prog.hatenablog.com/entry/2023/07/28/222536</a></li>
 <li><a href="https://platinum-prog.hatenablog.com/entry/2023/08/09/203217">https://platinum-prog.hatenablog.com/entry/2023/08/09/203217</a></li>
 <li><a href="https://twitter.com/ethylene_66/status/1767393143987880121">https://twitter.com/ethylene_66/status/1767393143987880121</a></li>
+<li><a href="https://qiita.com/thun-c/items/98f22c8fcdb1fd827b00">https://qiita.com/thun-c/items/98f22c8fcdb1fd827b00</a></li>
 </ul>
 <h2 id="_2">確実に前進<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3325,21 +3362,29 @@
 <ul>
 <li><a href="persistent_stack.html">永続stack</a></li>
 </ul>
-<h2 id="_4">重複排除<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_4">同一局面によるループを防ぐ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
+<li>前の状態に戻る操作などでループが発生してしまう場合、無限ループになってしまう可能性がある</li>
+<li>局面に対するハッシュ値などですでに出現した状態は計算しないようにしておく</li>
 <li>ZobristHashを用いる<ul>
 <li><a href="random.html">乱数/乱択</a></li>
 </ul>
 </li>
+</ul>
+<h2 id="_5">重複排除、多様性確保<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ビームの上位が同じか、似たような状態ばかりになると、多様性が確保できず、良い解を見つけられない可能性がある</li>
+<li>ZobristHashなどを用いて、厳密なハッシュ値や、荒く分割したもののハッシュ値を求めるなどで、似たような盤面を排除する<ul>
+<li><a href="random.html">乱数/乱択</a></li>
+</ul>
+</li>
+<li>同スコアのものは排除する</li>
+<li>状態のなにかの要素で区別(別のビームに)して、それぞれでビームするようにする</li>
 <li>確定した部分は無視する</li>
 <li><a href="https://twitter.com/Rafbill_pc/status/1767494993923477774">https://twitter.com/Rafbill_pc/status/1767494993923477774</a><ul>
 <li><a href="https://gist.github.com/Rafbillpc/814f226576d59b8aa58c552c373f8217">https://gist.github.com/Rafbillpc/814f226576d59b8aa58c552c373f8217</a></li>
 </ul>
 </li>
-</ul>
-<h2 id="_5">多様性<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li>状態のなにかの要素で区別して、それぞれでビームするようにする</li>
 </ul>
 <h3 id="_6">小さい幅のビーム<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3350,11 +3395,27 @@
 </li>
 <li>評価関数がうまく設計できたり、ある程度良い解が多い場合など、高速に、よい解が得られる</li>
 </ul>
-<h2 id="_7">評価値<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="chokudai">chokudaiサーチの軸<a class="headerlink" href="#chokudai" title="Permanent link">&para;</a></h2>
+<ul>
+<li>chokudaiサーチでは、軸(キー)をどう用意するか、いろいろバリエーションが考えられる<ul>
+<li>ターン制などでも、複数の操作を1手として動かす場合、その1手をキーにするか、ターンをキーにするか、など<ul>
+<li>次の状態生成時に、次の状態にしかいかないか、2つ以上先の状態もいくか</li>
+</ul>
+</li>
+<li>軸にしたものは、評価関数に入ってなくても揃うので、調整がしやすくなるかも</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">ビーム幅の自動調整<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>アクションが固定など処理時間が安定している場合はハイパラ探索などで調整すればよいが、アクション数が盤面によって変わったり計算時間が変わる場合は調整が難しい</li>
+<li>動的に調整する場合、各ターンでは、それまでのビーム幅(の合計値)、計算時間、残りターン数、残り時間の情報などが使える</li>
+</ul>
+<h2 id="_8">評価値<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="eval_function.html">評価関数設計</a></li>
 </ul>
-<h2 id="_8">状態の差分更新で木のノードを行き来するテク<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_9">状態の差分更新で木のノードを行き来するテク<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ul>
 <li>advance/undo操作で状態を行き来する(差分)やつ<ul>
 <li>状態の差分更新をすることで、状態のコピーをなくす</li>
@@ -3381,7 +3442,7 @@
 </li>
 <li><a href="https://twitter.com/yosupot/status/1779512387810570716">https://twitter.com/yosupot/status/1779512387810570716</a></li>
 </ul>
-<h2 id="_9">高度な話題<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_10">高度な話題<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://twitter.com/threecourse/status/1380460108551843841">https://twitter.com/threecourse/status/1380460108551843841</a></li>
 </ul>
