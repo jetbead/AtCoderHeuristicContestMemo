@@ -1,214 +1,102 @@
 # ビームサーチ用テンプレート
 
+## 単純なビームサーチ
+
+- 実装
+  - Stateクラス
+    - 状態を定義
+    - 評価関数を定義
+    - ハッシュ関数を定義
+      - 重複排除や状態のループがなければ省略
+    - デバッグ用printを実装
+  - generate_next_states()関数
+    - 状態から行動・次の状態を生成
+  - 重複排除
+- 改善
+  - 行動の改善
+  - 評価関数の改善
+  - 出力を永続stackにする
+  - 状態のコピーコスト削減(状態のサイズを小さくする)
+  - priority_queue部分の改善(逆にしてBEAM_WIDTH個以上ならpopする、など)
+  - 重複排除
+  - 多様性確保
+  - 評価値、ハッシュ値の差分計算
+  - ビーム幅の調整、自動調整
+  - 差分更新可能な場合は、オイラーツアービームサーチなどに変更
+  - など
+
 ```cpp
-#include <bits/stdc++.h>
-
-#include <atcoder/all>
-
-using namespace std;
-using namespace atcoder;
-#define REP(i, a, n) for (int i = (a); i < (int)(n); i++)
-#define rep(i, n) REP(i, 0, n)
-#define FOR(it, c) for (__typeof((c).begin()) it = (c).begin(); it != (c).end(); ++it)
-#define ALLOF(c) (c).begin(), (c).end()
-typedef long long ll;
-typedef unsigned long long ull;
-
-class Timer {
-    std::chrono::system_clock::time_point start_time;
-    std::chrono::system_clock::time_point getNow() {
-        return std::chrono::system_clock::now();
-    }
-
-   public:
-    void start() {
-        start_time = getNow();
-    }
-    float getSec() {
-        float count =
-            std::chrono::duration_cast<std::chrono::microseconds>(getNow() - start_time).count();
-        return count / 1e6;
-    }
+struct BeamConfig {
+    int MAX_TURN;
+    int BEAM_WIDTH;
 };
 
-uint32_t xor128() {
-    static uint32_t x = 123456789, y = 362436069, z = 521288629, w = 88675123;
-    uint32_t t;
-    t = (x ^ (x << 11));
-    x = y;
-    y = z;
-    z = w;
-    return w = (w ^ (w >> 19)) ^ (t ^ (t >> 8));
-}
-inline float frand() {
-    return xor128() % UINT32_MAX / static_cast<float>(UINT32_MAX);
-}
-inline int exprand(int x) {
-    return (int)pow(x, frand());
-}
-template <class RandomAccessIterator>
-void xor128_shuffle(RandomAccessIterator first, RandomAccessIterator last) {
-    typename iterator_traits<RandomAccessIterator>::difference_type i, n;
-    n = (last - first);
-    for (i = n - 1; i > 0; --i) swap(first[i], first[xor128() % (i + 1)]);
-}
-
-static constexpr double GLOBAL_TIME_LIMIT = 1.97;
-Timer global_timer;
-
-using Action = int;
-using Actions = vector<Action>;
-
 struct State {
-    int score;  // 評価値
-    Action first_action;
-    State() {
-        reset();
+    // ...
+
+    double eval;          // 評価値
+    uint64_t hash;        // ハッシュ値
+    vector<int> actions;  // 行動列
+
+    State() : eval(compute_eval()), hash(compute_hash()) {
     }
-    void reset() {
-        // ...
-        score = compute_score();
-    }
-    int compute_score() {
+
+    // 現在の状態から愚直に評価値を計算
+    double compute_eval() {
         // ...
         return 0;
     }
-    void check_score() {
-        assert(compute_score() == score);
-    }
-    // ターン型の場合は状態に遷移操作を持たせる
-    void advance(const Action& action) {
+
+    // 現在の状態から愚直にハッシュ値を計算
+    uint64_t compute_hash() {
         // ...
+        return 0;
     }
-    Actions legal_actions() const {
-        Actions actions;
-        // ...
-        return actions;
-    }
+
     void print() {
         // ...
     }
+
     inline bool operator<(const State& other) const {
-        return score < other.score;
+        return eval < other.eval;
     }
+
     inline bool operator>(const State& other) const {
-        return score > other.score;
+        return eval > other.eval;
     }
 };
 
-Action random_action(const State& state) {
-    auto legal_actions = state.legal_actions();
-    assert(legal_actions.size() > 0);
-    return legal_actions[xor128() % legal_actions.size()];
+using Heap = priority_queue<State>;  // 最大化タスク
+// using Heap = priority_queue<State, vector<State>, greater<State>>; // 最小化タスク
+
+void generate_next_states(Heap& next_states, const State& state) {
+    State next_state = state;
+    // ...
+    next_state.eval = 0;
+    next_state.hash = 0;
+    next_state.actions.push_back(0);
+    next_states.push(next_state);
 }
 
-Action greedy_action(const State& state) {
-    auto legal_actions = state.legal_actions();
-    assert(legal_actions.size() > 0);
+void solve_beam(const BeamConfig& config) {
+    State init_state;
 
-    int best_score = -1;
-    Action best_action;
-    for (const auto& action : legal_actions) {
-        State now = state;
-        now.advance(action);
-        if (best_score < now.score) {
-            best_score = now.score;
-            best_action = action;
-        }
-    }
-    return best_action;
-}
+    Heap states;
+    states.push(init_state);
+    rep(t, config.MAX_TURN) {
+        Heap next_states;
+        rep(b, config.BEAM_WIDTH) {
+            if (states.empty()) break;
 
-Action beam_search_action(const State& state, const int beam_width, const int beam_depth) {
-    vector<shared_ptr<State>> states;
-    states.emplace_back(make_shared<State>(state));
-    for (int turn = 0; turn < beam_depth; turn++) {
-        vector<shared_ptr<State>> next_states;
-        for (const shared_ptr<State>& now_state : states) {
-            auto legal_actions = now_state->legal_actions();
-            for (const auto& action : legal_actions) {
-                shared_ptr<State> next_state = make_shared<State>(*now_state);
-                next_state->advance(action);
-                if (turn == 0) {
-                    next_state->first_action = action;
-                }
-                next_states.emplace_back(next_state);
-            }
-        }
-        if (next_states.size() > beam_width) {
-            // c++20以降はshared_ptrのoperator<は削除されているので、compを指定する必要がある
-            nth_element(next_states.begin(), next_states.begin() + beam_width, next_states.end(),
-                        [](const auto& lhs, const auto& rhs) { return *lhs > *rhs; });
-            next_states.resize(beam_width);
+            generate_next_states(next_states, states.top());
+            states.pop();
         }
         swap(states, next_states);
     }
-    shared_ptr<State> best_state = make_shared<State>();
-    for (const shared_ptr<State>& now_state : states) {
-        if (*best_state < *now_state) {
-            best_state = now_state;
-        }
-    }
-    return best_state->first_action;
-}
+    assert(!states.empty());
+    State best_state = states.top();
 
-void input() {
-}
-
-void init(State& state) {
-}
-
-void solve_look_ahead() {
-    State state;
-    init(state);
-
-    const double TIME_LIMIT = GLOBAL_TIME_LIMIT - global_timer.getSec();
-    Timer timer;
-    timer.start();
-    double sec;
-    while (true) {
-        sec = timer.getSec();
-        if (sec > TIME_LIMIT) break;
-
-        Action action = random_action(state);
-        state.advance(action);
-    }
-}
-
-void solve_all(const int beam_width, const int max_turn) {
-    State state;
-    init(state);
-
-    vector<State> states;
-    states.emplace_back(state);
-    for (int turn = 0; turn < max_turn; turn++) {
-        vector<State> next_states;
-        for (const State& now_state : states) {
-            auto legal_actions = now_state.legal_actions();
-            for (const auto& action : legal_actions) {
-                State next_state = now_state;
-                next_state.advance(action);
-                if (turn == 0) {
-                    next_state.first_action = action;
-                }
-                next_states.emplace_back(next_state);
-            }
-        }
-        if (next_states.size() > beam_width) {
-            nth_element(next_states.begin(), next_states.begin() + beam_width, next_states.end(),
-                        greater<>());
-            next_states.resize(beam_width);
-        }
-        swap(states, next_states);
-    }
-}
-
-int main() {
-    global_timer.start();
-    input();
-    solve_look_ahead();
-    solve_all(10, 100);
-    return 0;
+    // ...
 }
 ```
 
