@@ -87,6 +87,16 @@
   - https://twitter.com/FakePsyho/status/1618522597481938945
 - https://twitter.com/yosupot/status/1779512387810570716
 
+## 近傍設計
+
+### 過去改変
+
+- 手順や操作列を状態に持つとき、最後に加えるのではなく、途中に操作列を挿入するような近傍
+- [AHC021](../ContestMemo/ahc021.md)
+- [AHC042](../ContestMemo/ahc042.md)
+- kaggle santa 2023
+  - https://github.com/wata-orz/santa2023_permutation_puzzle
+
 ## 高度な話題
 
 - https://twitter.com/threecourse/status/1380460108551843841

@@ -76,6 +76,10 @@ title: HTTF2022予選
   - ヒートマップを見る
     - https://tsutaj.hatenablog.com/entry/2021/11/13/190712
 
+### Heterogeneous earliest finish time (HEFT)
+
+- https://x.com/ymatsux_ac/status/1899104622138265777
+- https://en.wikipedia.org/wiki/Heterogeneous_earliest_finish_time
 
 ## 解説
 

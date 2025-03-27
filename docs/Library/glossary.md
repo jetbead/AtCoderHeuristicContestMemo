@@ -7,6 +7,7 @@
 - https://twitter.com/colun/status/645318121713078272
   - https://togetter.com/li/876191
   - https://togetter.com/li/516809
+- https://speakerdeck.com/shun_pi/duan-qi-ahcdesheng-tutamenotekunituku?slide=6
 
 ## chokudai サーチ
 

@@ -37,6 +37,9 @@
   - https://koyumeishi.hatenablog.com/entry/2018/12/28/055220
 - AHC初心者向け、ローカルテスタの使い方(thunder さん)
   - https://qiita.com/thun-c/items/bb090c1d8d4c38d5e4d2
+- AtCoder Heuristic First-step Vol.1 講義スライド
+  - https://speakerdeck.com/terryu16/atcoder-heuristic-first-step-vol-dot-1-jiang-yi-suraido
+  - https://speakerdeck.com/takumi152/atcoder-heuristic-first-step-vol-dot-1-jiang-yi-suraido-shan-deng-rifa-shao-kinamasifa-bian
 
 
 ## Heuristicsの設計、実装について
