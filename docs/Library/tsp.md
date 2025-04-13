@@ -6,6 +6,16 @@
 - https://future-architect.github.io/articles/20211201a/
 - https://twitter.com/shunji_umetani/status/977545293049688064
 
+## 特殊ケース
+
+- https://en.wikipedia.org/wiki/Travelling_salesman_problem
+- Metric(delta TSP)
+  - 三角不等式を満たす場合
+- Euclidian TSP
+  - ユークリッド距離の場合
+- Synmetric/Asynmetric
+  - 頂点間の距離が方向によらず同じか、異なるか
+
 ## 厳密解
 
 - すべての並びを列挙 `O(N!)`
@@ -18,6 +28,17 @@
 
 - Chained Lin-Lernighan
   - Applegate et al., Chained Lin-Kernighan for large traveling salesman problems, INFORMS Journal on Computing, 2003
+
+
+### MSTを使った2近似アルゴリズム
+
+- https://manabitimes.jp/math/1130
+
+### クリストフィードのアルゴリズム
+
+- Christofides algorithm
+- 三角不等式が成り立つ距離のグラフでのTSPの近似アルゴリズム(3/2以下)
+- https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0
 
 
 ### Lin-Kernighan-Helsgaun TSP Solver(LKH)

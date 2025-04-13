@@ -36,7 +36,21 @@
 
 ## 全域木
 
-- クラスカル法、プリム法
+- クラスカル法、プリム法、ブルーフカ法
+- 全域木に含まれない辺は、その辺を追加してできるサイクルの中で一番長い
+  - [AHC045](../ContestMemo/ahc045.md)
+- Euclidean MST
+  - O(VlogV)
+  - https://www.mathenachia.blog/euclidean-mst/
+  - https://en.wikipedia.org/wiki/Euclidean_minimum_spanning_tree
+- 三角不等式を満たす場合、MSTを使ったTSPの2近似解法があり、「(MSTの総長) <= (TSPの総長) <= 2\*(MSTの総長)」になるようなTSPが構築できる
+  - https://manabitimes.jp/math/1130
+
+### O(N^2) prim法
+
+- 完全グラフの場合、訪問済み頂点から未訪問済み頂点への最短距離のみ保持すればよい
+  - [AHC045](../ContestMemo/ahc045.md)
+- 余計な辺などを保持・計算しないためか、高速に動作
 
 ## 最短経路木(Shortest-path tree)
 
@@ -55,6 +69,13 @@
   - https://bowwowforeach.hatenablog.com/entry/2023/06/18/213212
   - [AHC020](../ContestMemo/ahc020.md)
 
+## ドロネー図/ドロネー三角形分割/ボロノイ図
+
+- https://qiita.com/tsukasa__diary/items/a835c17e5bf4935636c4
+- https://en.wikipedia.org/wiki/Fortune%27s_algorithm
+- https://github.com/mapbox/delaunator
+- boost voronoi diagram
+- (平面グラフの辺数は高々3N-6本)
 
 ## オイラーツアーテクニック
 
