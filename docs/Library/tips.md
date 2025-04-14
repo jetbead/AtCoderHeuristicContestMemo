@@ -66,12 +66,14 @@
   - https://twitter.com/kiri8128/status/1642567258336792578
 - 評価関数を考えるときに参考になる図(phocom さん)
   - https://twitter.com/_phocom/status/1693217561381404801
-- テクニック集
+- テクニック集(rhoo さん)
   - https://github.com/rhoo19937/p/blob/main/tech/.md
 - ヒューリスティックコンテストのテクニック集
   - https://harsh-den-aaf.notion.site/9352f361c46a4514875e9c99f0a0718f
 - niuristic(niuez さん)
   - https://github.com/niuez/niuristic
+- 【ネタバレ注意】AHCの焼きなまし・ビームサーチ練習にオススメの問題まとめ(terry_u16 さん)
+  - https://www.terry-u16.net/entry/ahc-practice-problem
 
 
 ## 改善アイデアの試し方
