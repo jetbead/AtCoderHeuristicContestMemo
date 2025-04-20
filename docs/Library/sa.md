@@ -21,6 +21,10 @@
   - https://qiita.com/thun-c/items/ecd438fde4d237b1f7bc
 - 初心者から初心者に向けた焼きなましのすすめ(tombo さん)
   - https://tombo314.hatenablog.com/entry/2024/04/24/153457
+- 焼きなまし法の真実(colun さん)
+  - https://web.archive.org/web/20210829135915/http://www.colun.net/archives/774
+- ざっくり解説: 焼きなまし法はなぜうまくいくのか？(NBSM さん)
+  - https://lealgorithm.blogspot.com/2025/04/blog-post.html
 
 ## 状態
 
