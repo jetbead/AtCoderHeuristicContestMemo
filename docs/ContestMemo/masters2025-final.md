@@ -160,6 +160,7 @@ title: 第二回マスターズ決勝
   - https://x.com/tsukammo/status/1913595882609741883
   - https://x.com/tsukammo/status/1913606823934083154
   - https://x.com/tsukammo/status/1913621024761151819
+  - https://tsukammo.hatenablog.com/entry/2025/04/22/113824
   - https://x.com/omi_UT/status/1913399621952696353
   - https://x.com/omi_UT/status/1913528174178373764
   - https://x.com/omi_UT/status/1913603069012787527
@@ -201,6 +202,7 @@ title: 第二回マスターズ決勝
   - https://x.com/colun/status/1913413792609996947
   - https://x.com/colun/status/1913441349745139976
   - https://x.com/colun/status/1913505277254541561
+- [VRC競プロ部](https://amentorimaru.hatenablog.com/entry/2025/04/21/181233)
 - [half_centuries](https://x.com/ToastUz/status/1913394152345313339)
   - https://x.com/ToastUz/status/1913411229433151774
   - https://x.com/ToastUz/status/1913411958923296908

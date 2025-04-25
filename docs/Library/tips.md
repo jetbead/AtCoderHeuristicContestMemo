@@ -40,7 +40,7 @@
 - AtCoder Heuristic First-step Vol.1 講義スライド
   - https://speakerdeck.com/terryu16/atcoder-heuristic-first-step-vol-dot-1-jiang-yi-suraido
   - https://speakerdeck.com/takumi152/atcoder-heuristic-first-step-vol-dot-1-jiang-yi-suraido-shan-deng-rifa-shao-kinamasifa-bian
-
+  - https://x.com/atcoder/status/1914926537520111859
 
 ## Heuristicsの設計、実装について
 
