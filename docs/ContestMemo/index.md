@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc046.png" class="trimimg"> | [BrainPadプログラミングコンテスト2025(AHC046)](./ahc046.md) | <span style="color: #0000cc;">short</span> | |
 | <img loading="lazy" src="../imgs/masters2025-final.png" class="trimimg"> | [第二回マスターズ選手権決勝](./masters2025-final.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc045.png" class="trimimg"> | [THIRDプログラミングコンテスト2025(AHC045)](./ahc045.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc044.png" class="trimimg"> | [AHC044](./ahc044.md) | <span style="color: #0000cc;">short</span> | :material-check: |
