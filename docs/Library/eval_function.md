@@ -24,3 +24,7 @@
   - [AHC028](../ContestMemo/ahc028.md)
     - https://speakerdeck.com/terryu16/ahc028jie-shuo?slide=12
   - 「どれだけ理想状態よりムダな動きをするか？」を評価値とする
+
+## Links
+
+- https://www.mcdigital.jp/blog/20250331techblog/

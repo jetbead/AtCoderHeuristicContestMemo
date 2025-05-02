@@ -23,6 +23,10 @@ title: Intro. to HC
 
 - https://img.atcoder.jp/intro-heuristics/editorial.pdf
 
+- visualizer
+  - https://x.com/cologne1723/status/1916071823592329580
+    - https://thun-c.github.io/visualizer/introduction/Visualizer.html
+
 ## Links
 
 - [agwさん Twitter まとめ](https://togetter.com/li/1550502)

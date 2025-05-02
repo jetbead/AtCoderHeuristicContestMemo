@@ -125,6 +125,7 @@ title: 第二回マスターズ決勝
   - https://x.com/yunix91201367/status/1913621952658542636
   - https://x.com/yunix91201367/status/1913629492389777769
   - https://x.com/yunix91201367/status/1913773843476521214
+  - https://www.algo-artis.com/news/250428
 - [焼きなマシーンtemp](https://x.com/tempuracpp/status/1913414669244776791)
   - https://x.com/tempuracpp/status/1913391733897105682
   - https://x.com/tempuracpp/status/1913600171637948434
@@ -237,6 +238,7 @@ title: 第二回マスターズ決勝
   - https://x.com/BinomialSheep/status/1913607863324286993
   - https://x.com/BinomialSheep/status/1913608017163289073
   - https://x.com/BinomialSheep/status/1913609221951967710
+  - https://qiita.com/BinomialSheep/items/4604d56dcc110f771a9b
 - [引きこもり](https://x.com/ebicochineal/status/1913401563714118007)
   - https://x.com/ebicochineal/status/1913557635770769618
   - https://x.com/ebicochineal/status/1913562007661674607
@@ -247,6 +249,7 @@ title: 第二回マスターズ決勝
   - https://x.com/TumoiYorozu/status/1913599274266624262
 - [サイゼリヤ 六本木店](https://x.com/kenkoooo/status/1913412434095997389)
   - https://x.com/kenkoooo/status/1913598570734957020
+  - https://www.estie.jp/blog/entry/2025/04/28/104034
 - [!!!](https://x.com/bird0148677302/status/1913779283316859233)
   - https://x.com/beans_crypto/status/1913545029202624984
 - [🐑🍃🤪](https://x.com/leaf_1415/status/1913408191490306214)
