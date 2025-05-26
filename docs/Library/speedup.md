@@ -65,6 +65,7 @@
 - https://rsk0315.hatenablog.com/entry/2022/09/25/214915
 - https://graphics.stanford.edu/~seander/bithacks.html
 - [bitboard](./bitboard.md)
+  - [AHC046](../ContestMemo/ahc046.md) ビットボードでBFS計算を高速化
 
 ### SIMD化されやすい書き方、キャッシュに乗りやすい書き方
 

@@ -126,6 +126,7 @@ title: 第二回マスターズ決勝
   - https://x.com/yunix91201367/status/1913629492389777769
   - https://x.com/yunix91201367/status/1913773843476521214
   - https://www.algo-artis.com/news/250428
+  - https://note.com/algoartis/n/n05088d555c6a
 - [焼きなマシーンtemp](https://x.com/tempuracpp/status/1913414669244776791)
   - https://x.com/tempuracpp/status/1913391733897105682
   - https://x.com/tempuracpp/status/1913600171637948434
@@ -287,6 +288,8 @@ title: 第二回マスターズ決勝
   - https://x.com/through__TH__/status/1913512428304011715
 
 - [chokudai社長](https://x.com/chokudai/status/1913506507377045967)
+
+- [公式イベント記録フォト](https://info.atcoder.jp/entry/2025/05/26/143953)
 
 ## Links
 
