@@ -289,6 +289,11 @@ title: 第一回マスターズ決勝
     - https://amentorimaru.hatenablog.com/entry/2024/04/21/034648
   - https://twitter.com/amb_vrc/status/1781958239741223268
 
+
+- 延長戦
+  - https://eijirou-kyopro.hatenablog.com/entry/2024/05/06/185111
+  - https://zenn.dev/algoartis/articles/kalmanfilter_masters_2024
+
 ## Links
 
 - [Twitter hashtag AtCoderマスターズ選手権2024](https://twitter.com/hashtag/AtCoder%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%E9%81%B8%E6%89%8B%E6%A8%A92024)

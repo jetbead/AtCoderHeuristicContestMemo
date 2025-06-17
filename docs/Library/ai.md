@@ -3,8 +3,8 @@
 ## 注意
 
 - https://info.atcoder.jp/entry/llm-rules-ja
-- コンテストによっては、使用禁止になっている場合があるため注意
-  - 現状AHCは禁止にはなっていない
+- https://atcoder.jp/posts/1494
+- 2025/6/16(AHC049以降)からは、AHCでも利用ルールが策定されている
 
 ## 活用
 
@@ -54,3 +54,8 @@
 - Amplifying human performance in combinatorial competitive programming
   - https://arxiv.org/abs/2411.19744
   - https://x.com/tomerun/status/1872510831277277549
+- Towards Automating Long-Horizon Algorithm Engineering for Hard Optimization Problems
+  - https://sakana.ai/ale-bench/
+  - https://x.com/iwiwi/status/1934830621756674499
+  - https://x.com/ethylene_66/status/1934822835660493042
+  - https://x.com/chokudai/status/1934922050784932280
