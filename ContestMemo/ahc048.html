@@ -1,0 +1,4931 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="ahc047.html">
+      
+      
+        <link rel="next" href="httf2022qual.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>AHC048(MD Digital) - AtCoder Heuristic Contest Memo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Japanese:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans Japanese";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mc-digital2025ahc048" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AtCoder Heuristic Contest Memo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AHC048(MD Digital)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AtCoder Heuristic Contest Memo
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ContestMemo
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ContestMemo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contest List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc001.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC001
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc002.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC002
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc003.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC003
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc004.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC004
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc005.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC005
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc006.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC006(京セラ)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc007.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC007(THIRD)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc008.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC008(MC Digital)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc009.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC009(モノグサ)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc010.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC010(ALGO ARTIS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc011.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC011
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc012.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC012
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc013.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC013(RECRUIT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc014.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC014(estie)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc015.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC015(トヨタ自動車)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc016.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC016(HTTF2023予選)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc017.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC017(THIRD)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc018.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC018(RECRUIT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc019.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC019(MC Digital)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc020.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC020(ALGO ARTIS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc021.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC021(TOYOTA)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc022.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC022(RECRUIT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc023.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC023(Asprova)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc024.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC024(丸紅)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc025.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc026.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC026(トヨタ自動車)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc027.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC027(HTTF2024)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc028.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC028(ALGO ARTIS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc029.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC029(RECRUIT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc030.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC030(THIRD)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc031.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC031(MC Digital)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc032.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC032
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc033.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC033(トヨタ自動車)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc034.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC034(トヨタ自動車)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc035.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC035(ALGO ARTIS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc036.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC036(RECRUIT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc037.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC037(Asprova)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc038.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC038(トヨタ自動車)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc039.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC039(THIRD)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc040.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC040(HTTF2025)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc041.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC041(ALGO ARTIS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc042.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC042
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc043.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC043(RECRUIT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc044.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC044
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc045.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC045(THIRD)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc046.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC046(BrainPad)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ahc047.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC047(トヨタ自動車)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    AHC048(MD Digital)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ahc048.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    AHC048(MD Digital)
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      問題概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      時間
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      個人的メモ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      問題固有の性質
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3次元空間で考える
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3次元空間で考える">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      色
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ウェル
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      スコア関連
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="スコア関連">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      スコアの構造
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      捨てる/あふれるを1回でもしてしまうと、絵の具の追加コストが0にできない
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      出力色関連
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="出力色関連">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      入力の生成方法、出力色の偏り
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      出力色の割合の推定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      アプローチ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="アプローチ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      仕切りを変化させない解法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      同系色でグループ(クラスタ)に分ける方針
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      たくさんのウェルを用意する方針
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="たくさんのウェルを用意する方針">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ウェルの合成(マージ)の効果
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ウェルの配置、形状
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      各絵の具のタンクを用意して、必要な量を出して混ぜ合わせる解法(分数解法)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="各絵の具のタンクを用意して、必要な量を出して混ぜ合わせる解法(分数解法)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      切り出し方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      混ぜ合わせ領域を減らす
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      ちょうどよく終わらせる
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      その他
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kd8" class="md-nav__link">
+    <span class="md-ellipsis">
+      KD木/8分木
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビジュアライザの改造
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      立体視でビジュアライズ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      詳細順位表の式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      順位表デバッグ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      メタ戦略
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      相対スコア以外のスコア
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      小数点誤差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      お絵かき
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      解説
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="httf2022qual.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTTF2022予選
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro-heuristics.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro. to HC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="masters2024-final.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一回マスターズ決勝
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="masters2024-qual.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第一回マスターズ予選
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="masters2025-final.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二回マスターズ決勝
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="masters2025-qual.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第二回マスターズ予選
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rcl-contest-2021-long.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    日本橋ハーフ2021増刊号(RECRUIT)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="toyota-2023-summer-final.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TOYOTA2023夏Final
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Library
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Library List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/ai.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI関連
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/approx_algo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    近似アルゴリズム
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/beam_search.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ビームサーチ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/bitboard.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ビットボード
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/boost.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    boost
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/branch_and_bound.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    分枝限定法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/checklist.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CheckList
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/compress.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    情報圧縮
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/debug_print.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    デバッグ出力
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/eigen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行列ライブラリEigen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/eval_function.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    評価関数設計
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/exp2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exploration &amp; Exploitation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/experiments.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実験、環境構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/flow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    フロー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/func.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/game_tree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ゲーム木探索
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用語集
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/gnuplot.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gnuplotで簡易ビジュアライザ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/graph.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    グラフ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/grid.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    グリッド操作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/how_to_get_started.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to get started!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/index_set.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IndexSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/matching.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マッチング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/math_opt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数理計画法/数理最適化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/ml.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    機械学習
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/multi_agent.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マルチエージェント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/optuna.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    optuna
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/patterns.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    パターン生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/persistent_stack.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    永続stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/python_snippet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pythonスニペット
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/random.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    乱数/乱択
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/result_analy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実行結果の分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/sa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    局所探索/山登り/焼きなまし
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/speedup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高速化(C++)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/stage_array.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stage 機能付き Value/Array
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/stats_modeling.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    統計モデリング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/summed_area_table.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2次元累積和
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/support_tool.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Support Tool
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/svg.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SVGで簡易ビジュアライザ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/timer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Timer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/tips.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/tree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    木構造
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/tsp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TSP(巡回セールスマン問題)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/uncategorized_topic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    未分類トピック
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/uncertainty.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    不確かさの取り扱い
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/visualizer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visualizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_48" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_48" id="__nav_3_48_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cpp lib
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_48_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_48">
+            <span class="md-nav__icon md-icon"></span>
+            Cpp lib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/cpp_lib/beam_cpp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ビームサーチ用テンプレート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/cpp_lib/fast_clearing_array_cpp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fast-clearing Array
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/cpp_lib/grid_cpp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    グリッド操作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/cpp_lib/sa_cpp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    焼きなましテンプレート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/cpp_lib/tsp_cpp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TSP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_49" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_49" id="__nav_3_49_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_49_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_49">
+            <span class="md-nav__icon md-icon"></span>
+            Design patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/design_patterns/config.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ハイパーパラメータの管理クラス(Configクラス)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/design_patterns/gameai.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ゲームと AI の分離
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/design_patterns/io_wrapper.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IOラッパー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/design_patterns/multiagent.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    異なるタスクを実行しうるマルチエージェントの協調動作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/design_patterns/transition.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    状態遷移
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2024.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2023.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2023
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/category/estimate.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    estimate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/category/misc.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    misc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/category/review.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      問題概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      時間
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      個人的メモ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="個人的メモ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      問題固有の性質
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3次元空間で考える
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3次元空間で考える">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      色
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ウェル
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      スコア関連
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="スコア関連">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      スコアの構造
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      捨てる/あふれるを1回でもしてしまうと、絵の具の追加コストが0にできない
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      出力色関連
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="出力色関連">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      入力の生成方法、出力色の偏り
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      出力色の割合の推定
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      アプローチ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="アプローチ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      仕切りを変化させない解法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      同系色でグループ(クラスタ)に分ける方針
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      たくさんのウェルを用意する方針
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="たくさんのウェルを用意する方針">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ウェルの合成(マージ)の効果
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ウェルの配置、形状
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      各絵の具のタンクを用意して、必要な量を出して混ぜ合わせる解法(分数解法)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="各絵の具のタンクを用意して、必要な量を出して混ぜ合わせる解法(分数解法)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      切り出し方
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      混ぜ合わせ領域を減らす
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      ちょうどよく終わらせる
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      その他
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="その他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kd8" class="md-nav__link">
+    <span class="md-ellipsis">
+      KD木/8分木
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      ビジュアライザの改造
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      立体視でビジュアライズ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      詳細順位表の式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      順位表デバッグ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      メタ戦略
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      相対スコア以外のスコア
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      小数点誤差
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      お絵かき
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      解説
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mc-digital2025ahc048">MC Digitalプログラミングコンテスト2025(AHC048)<a class="headerlink" href="#mc-digital2025ahc048" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://atcoder.jp/contests/ahc048">https://atcoder.jp/contests/ahc048</a></li>
+</ul>
+<p><img src="../imgs/ahc048.png" width=300></p>
+<h2 id="_1">問題概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>K(=4〜20)種類の絵の具をN*N(=20*20)マスのパレットを使って混ぜ合わせて、与えられたH(=1000)種類の目的色を順番に作りたい</li>
+<li>絵の具は(C,M,Y)で表現される</li>
+<li>パレットのマスは、仕切りによって区切ることができ、仕切りによって区切られた各領域は「ウェル」と呼ぶ</li>
+<li>最初に仕切りの状態を指定したうえで、以下の操作を最大T(=4000〜64000)回行える<ul>
+<li>追加: 絵の具iを1グラム指定のマスに出す<ul>
+<li>そのマスが属するウェルに色が追加され、割合に応じた色になる</li>
+<li>ただし、ウェルのサイズ以上には入れられず、超える分は破棄される</li>
+</ul>
+</li>
+<li>渡す: 指定したマスの属するウェルから1グラム取り出して渡す<ul>
+<li>渡された色は目的色と比較される</li>
+<li>ウェルにある絵の具が1グラム未満のウェルは選択できない</li>
+</ul>
+</li>
+<li>廃棄: 指定のマスの属するウェルから1グラム廃棄する<ul>
+<li>ただし、1グラム未満の場合は、ウェル内のすべての絵の具を廃棄する</li>
+</ul>
+</li>
+<li>仕切りの出し入れ: 隣接する2マスを選び、その間の仕切りを出し入れする<ul>
+<li>2つのウェルが合併される場合は、量は2つの和になり、各サイズに応じた割合で色が混ざって1色に合成される</li>
+<li>ウェルが2つに分割される場合は、色は変わらず、量はそのサイズに応じた割合で分割される</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>以下のスコアをできるだけ最小化するような操作列を求めよ<ul>
+<li>スコア = <span class="arithmatex"><span class="MathJax_Preview">1+D*(V-H)+round(10^4*E)</span><script type="math/tex">1+D*(V-H)+round(10^4*E)</script></span><ul>
+<li>D: 絵の具を出すコスト(10〜10000)</li>
+<li>V: 絵の具を出した回数</li>
+<li>E: 渡された色と目的色の誤差(距離)の合計</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">時間<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>240 時間</li>
+</ul>
+<h2 id="_3">個人的メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>「パレットをどう使うか」と「仕切り操作」が重要だったかも</li>
+</ul>
+<h3 id="_4">問題固有の性質<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>パレットの使い方の自由度が高い<ul>
+<li>どういうウェルの形にするかや、仕切りの出し入れなどのタイミングなど、いろいろ考えられる要素がある</li>
+</ul>
+</li>
+<li>仕切りの出し入れと廃棄は、(操作回数合計の制約だけで)、ノーコストで行える<ul>
+<li>特に、仕切りを変えられる効果が大きい問題だったので、仕切り操作を活用する方針を考える必要があった</li>
+</ul>
+</li>
+<li>操作回数Tの制約の幅が広い<ul>
+<li>追加操作と渡す操作を除くと、1ターン平均で2回〜64回操作ができるが、やれることがだいぶ異なる</li>
+</ul>
+</li>
+<li>絵の具を出すコストDの幅も広い<ul>
+<li>Dが小さければ追加絵の具で調整できるが、Dが大きいと誤差の削減よりも追加コストのほうが大きくなるため、追加絵の具なしで調整する必要がある</li>
+</ul>
+</li>
+<li>サイズがsのウェルにはsグラムしか入れられない<ul>
+<li>色を混ぜ合わせるためには1*1ではだめで、サイズ2以上でないといけない</li>
+</ul>
+</li>
+<li>計算時間が結構厳しい<ul>
+<li>制限時間は3秒だったが、Hが1000もあるので、1ケースあたり最大でも3msぐらいしか計算できない</li>
+<li>仕切りの数や位置、絵の具の種類Kやその組み合わせなど、いろいろ探索しようとすると、時間が足りない可能性がある</li>
+</ul>
+</li>
+</ul>
+<h3 id="3">3次元空間で考える<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>必ずしも3次元空間で考える必要性はないが、一部は考えやすくなったかも</li>
+</ul>
+<h4 id="_5">色<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>色はC,M,Yの3次元なので、3次元空間(CMY色空間)の点として考えられる</li>
+<li>出力色は絵の具の重み付き和になっており、絵の具の色の点の凸包内に配置される<ul>
+<li>制約的に、凸包の外側の点は作れない</li>
+</ul>
+</li>
+</ul>
+<h4 id="_6">ウェル<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ウェルは、色と容量があるが、これを3次元の質点として考えると、色の合成は質点の重心移動として考えることができる<ul>
+<li>色を1つ混ぜたときは、その方向に移動することになる</li>
+<li>ただし、ウェルには容量の上限があるので注意が必要</li>
+</ul>
+</li>
+<li>合成以外も、操作によるウェルの変化は、3次元の質点の位置と大きさの変化と考えられる</li>
+</ul>
+<h3 id="_7">スコア関連<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="_8">スコアの構造<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>スコアは「追加絵の具のコスト」と「出力色との誤差」で構成されている</li>
+<li>追加絵の具のコスト<ul>
+<li>H回は絶対追加する必要があるが、H回なら0</li>
+<li>それ以上に追加した分についてコストがDずつかかる</li>
+</ul>
+</li>
+<li>出力色との誤差<ul>
+<li>誤差の合計Eの10000倍になっている</li>
+<li>なので、Dに応じて、1グラム絵の具を多く使うことで、誤差の合計がD/10000より減るなら使ったほうがよい</li>
+</ul>
+</li>
+</ul>
+<h4 id="10">捨てる/あふれるを1回でもしてしまうと、絵の具の追加コストが0にできない<a class="headerlink" href="#10" title="Permanent link">&para;</a></h4>
+<ul>
+<li>「捨てる」や「あふれる(ウェルサイズを超えて入れる)」が1回でもあると、渡せる総量がH未満になってしまうので、追加絵の具が必要となり、V-H&gt;0で、追加コストが発生してしまう</li>
+<li>今回、Tが大きいケースではEがかなり小さいところまでいけたため、ベスト解近くを目指すなら、追加絵の具を使わずになんとかする方法まで考える必要があったらしい</li>
+</ul>
+<h3 id="_9">出力色関連<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h4 id="_10">入力の生成方法、出力色の偏り<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p><img src="../imgs/ahc048_seed0000.png" width=300><img src="../imgs/ahc048_seed0003.png" width=300></p>
+<ul>
+<li>出力色は、K種類の絵の具の重み付き和として表されており、重みは「x_k = -ln rand_double(0,1)」で生成して正規化している<ul>
+<li>この式は、逆関数法での指数乱数生成の式</li>
+</ul>
+</li>
+<li>3次元の異なる4点を考えると、その内部の任意の点は、4点の重み付き和(ただし各重みが0〜1で、重みの合計が1)で表現することができる(凸結合)<ul>
+<li>バリセントリック座標、重心座標</li>
+</ul>
+</li>
+<li>この重みがDirichlet分布Dir(1,1,1,1)に従う場合は四面体内部に一様に分布するが、これは指数乱数を4つ生成して正規化することで生成できる</li>
+<li>ただ、今回は、K&gt;=4で、Kが大きいほど結構中心付近？にかたまりができやすかった模様<ul>
+<li>正規化前の重みx_iの期待値が1で正規化で1/NぐらいになるのでNが多いほど中心に近づく感じ？<ul>
+<li>凸包の点だけから作るとかでは一様にはならなそう</li>
+</ul>
+</li>
+<li>出力色を見て似たような色が多いと気づくか、3次元プロットとかしないと、凸包内で均等に散っているイメージを持ってしまうかも</li>
+</ul>
+</li>
+</ul>
+<h4 id="_11">出力色の割合の推定<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>出力色の割合を推定したい場合、等式制約付きの非負値最小二乗問題(Non-negative least squares, NNLS)として考えられる<ul>
+<li>AIなどに聞くと、active-set法などで求められるよ、と言われる</li>
+</ul>
+</li>
+<li>ただ、実際に推定をしてみると、Kが大きい場合でも4つ程度の重みの和だけで表現できることが多いことがわかる</li>
+<li>これは、カラテオドリの定理から、高々d+1個の点の凸結合として表現できるため<ul>
+<li>d=3なので高々4つの点の重み付き和</li>
+<li>3点の平面上や2点間の線分上とかの場合は減る</li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%A9%E3%83%86%E3%82%AA%E3%83%89%E3%83%AA%E3%81%AE%E5%AE%9A%E7%90%86_(%E5%87%B8%E5%8C%85">https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%A9%E3%83%86%E3%82%AA%E3%83%89%E3%83%AA%E3%81%AE%E5%AE%9A%E7%90%86_(%E5%87%B8%E5%8C%85</a>)</li>
+<li><a href="https://manabitimes.jp/math/1216">https://manabitimes.jp/math/1216</a></li>
+</ul>
+</li>
+<li>目的の点を含む4点(四面体)を考えると、各重みは連立方程式で求められる<ul>
+<li>重みベクトルwは4点の座標を縦に並べた行列をAとして、p_target = A * wのようにかけるので、前からA^{-1}をかけて、w = A^{-1} * p_target</li>
+<li>行列式の絶対値が0ならダメで、それで四面体内にあるか判定もできるので、これで内部になるような4点を見つけて連立方程式を解くでもよい</li>
+</ul>
+</li>
+<li>注意として、「ある1つの色は、ある4つの絵の具の重み付き和で表現できる」であって、全部の出力色が特定の4つの絵の具の重み付き和で表現できるわけではない<ul>
+<li>とはいえ、全部の絵の具が必要かというと、凸包内部の点は不要なので、凸包の点だけにすれば減らせる</li>
+<li>さらに、K種類の絵の具から順番に「その絵の具を削っても全部の色を表現できる」なら削る、などすると、使う絵の具の種類をもっと減らせる可能性がある(解説放送)</li>
+</ul>
+</li>
+<li>使う色が減ると、なんとなく組み合わせが減って不利っぽく見えるが、アプローチによっては1色あたりのウェルサイズを増やせる利点もある</li>
+</ul>
+<h3 id="_12">アプローチ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>今回は、Tによって強いアプローチが異なっていて(というか別ゲー状態)、上位でも違っていたので、相対スコアが上位でも低めだったりしていた<ul>
+<li>詳細順位表のbestが結構散っている</li>
+</ul>
+</li>
+<li>上位解法の出力は、解説放送で鑑賞会がされていたのでそちらを参照<ul>
+<li>それぞれでのトップの解法は、詳細順位表でみて、best解が取れている方の解法を見に行くのと良い</li>
+</ul>
+</li>
+</ul>
+<h4 id="_13">仕切りを変化させない解法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>考えやすいという理由で、「追加」と「渡す」だけできる場合で考える</li>
+<li>一番単純なのは、「絵の具0を1グラム出して、それを渡す」や「一番出力色に近い絵の具を1グラムを出して、それを渡す」を繰り返す方法<ul>
+<li>順位表でも同じ点数が並んでいたのが確認できる(提出しなくても、大体のスコアが推測しやすかったかも)</li>
+</ul>
+</li>
+<li>発展として、2種類混ぜた場合を考えて「1x2マスを用意して、一番近づく2つの色を混ぜてそれを渡す」、種類数を増やす、などが考えられる</li>
+<li>仕切り変化なしだとかなり厳しいが、それでもうまく評価関数や調整をすることでスコア取れている方はいた模様<ul>
+<li><a href="https://note.com/shira_111/n/n9cefa5c9a158">https://note.com/shira_111/n/n9cefa5c9a158</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="_14">同系色でグループ(クラスタ)に分ける方針<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ウェルにある程度入っている状態で絵の具を混ぜた場合、追加した絵の具の影響が微小になるので、「同系色でグループ(クラスタ)を作って、それぞれを独立に調整する」というアプローチは考えられる</li>
+<li>しかし、クラスタごとのウェルを別々に用意して独立にすると、各クラスタで使えるウェルが1つになってしまったり、ウェルサイズも小さくなってしまい細かい調整がしにくくなってしまうなど、良い方針ではなかった</li>
+</ul>
+<h4 id="_15">たくさんのウェルを用意する方針<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Tが小さい時は、こちらの方針が強かった模様<ul>
+<li>「仕切りを変化させない解法」の発展型</li>
+</ul>
+</li>
+<li>パレットにたくさんのウェルを用意して、絵の具の追加や隣接ウェルとの合成をすることで目的の色を作り、そこから取り出す</li>
+<li>基本形として、例えば、固定配置でサイズ4(1*4とか2*2とか)のウェルをたくさん用意して敷き詰める感じ<ul>
+<li>サイズ4なら100ウェルできる</li>
+</ul>
+</li>
+<li>現在のパレットの状態に対して、貪欲やビームサーチなどで一番良くなる操作列を見つけて採用する方針</li>
+</ul>
+<h5 id="_16">ウェルの合成(マージ)の効果<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h5>
+<ul>
+<li>絵の具の追加だけの場合、K種類しかないため、K方向にしか色を変化させられない</li>
+<li>ウェル間の合成をする場合、K種類の絵の具の組み合わせしたウェルとの合成なら、K方向ではない方向に変化させられる<ul>
+<li>たくさんウェルを用意できると、変化させられる方向がかなり増加する</li>
+<li>また、だいたい似た色の合成だと、その変化量も小さくなるため、微調整できる可能性がある</li>
+</ul>
+</li>
+</ul>
+<h5 id="_17">ウェルの配置、形状<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h5>
+<ul>
+<li>固定配置<ul>
+<li>単純には、1*4や2*2のウェルを敷き詰めて、ウェルの境界の仕切りのみ操作可能にする感じ<ul>
+<li>ウェル形状は、Iミノ、Oミノ以外にも、Zミノや仕切りを増やして「コ型」にする、なども</li>
+<li>隣接ウェルを増やすために、配置をズラしたり(ハニカムっぽい感じ)などもできる<ul>
+<li>2*2の場合、そのまま敷き詰めると上下左右だけだが、奇数列だけ1つずらすと、6個のウェルを隣接させることができる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>隣接のウェルと合成した後は、仕切りを元に戻してウェルの形状は固定にするか(形状固定)、元に戻さず必要があれば仕切りを上げる(形状可変)、など</li>
+</ul>
+</li>
+<li>不定形<ul>
+<li>すべての仕切りを操作可能として、不定形にしても行けた模様</li>
+</ul>
+</li>
+<li>仕切り位置可変<ul>
+<li>1*L(L&lt;=N)を1単位として、その内部の仕切りのみ可変にする</li>
+</ul>
+</li>
+<li>一本道<ul>
+<li>仕切り位置可変の最大長で、1*(N^2)の一本道として考えて、その間に仕切りを入れる<ul>
+<li>パレットへの埋め込みは、蛇腹状なり渦巻き状なりにすれば簡単にできる</li>
+</ul>
+</li>
+<li>埋め込んだ後に、一本道の前後以外に隣接するウェルに対しても仕切り操作可能にするのもできる</li>
+</ul>
+</li>
+<li>隣接ウェルが多いほど1回の仕切り操作で分離/合成ができる数が増えるのでそういう配置を考えたいが、(ウェルサイズをバラバラにしたとしても)配置は平面グラフになるので、平面グラフの性質で辺の数は「e&lt;=3v-6」なので、(辺は双方向化して考えると)、ウェルあたり平均6隣接もいけない</li>
+</ul>
+<h4 id="_18">各絵の具のタンクを用意して、必要な量を出して混ぜ合わせる解法(分数解法)<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>(インクジェットプリンタみたいなイメージ？)</p>
+<div class="highlight"><pre><span></span><code>+----------+--+
+|          |  |
++----------+  |
+|          |  |
++----------+  |
+|          |  |
++----------+  |
+.          .  .
+.          .  .
++----------+--+
+</code></pre></div>
+<ul>
+<li>(解説放送)<ul>
+<li>Tが大きいとき、この方針が強すぎで、ベスト解がかなり小さくなっていて、他の方針だとほとんど相対スコアの点数取れてなかったかも</li>
+</ul>
+</li>
+<li>基本形として、上記のような仕切りを考える<ul>
+<li>左側の1*(N-1)のウェルは、絵の具のタンクとして使う</li>
+<li>右側のN*1のウェルは、混ぜ合わせる領域として使う</li>
+</ul>
+</li>
+<li>タンクのウェルにはK種類の絵の具をそれぞれ1種類のみ入れ、仕切りをうまく調整することで必要な分を切り出して、右側の混ぜる領域に入れることができる<ul>
+<li>たとえば、以下のように仕切りを動かすと、"少し"だけを右側に混ぜることができる</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>+----------+
+|. . . . . |
++----------+
+
+↓
+
++----------+
+|. . .|. . |
++----------+
+
+↓
+
++----------+
+|. . .|
++----------+
+</code></pre></div>
+<ul>
+<li>出力色は4色の混ぜ合わせで、割合は計算できる(「出力色の割合の推定」)ので、それに一番近づくように切り出して上げれば良い<ul>
+<li>焼きなましなどでも</li>
+</ul>
+</li>
+<li>タンクに絵の具が足りなくなった場合は追加する</li>
+<li>渡した後にあまりが出るときは、捨てるのがわかりやすい<ul>
+<li>が、1度でも捨てるとDのコストが発生してしまう</li>
+</ul>
+</li>
+</ul>
+<h5 id="_19">切り出し方<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h5>
+<ul>
+<li>1*Lのウェルを、上記のように区切ると、ウェル内の絵の具の容量の1/L単位で切り出して使うことができる<ul>
+<li>1つの出力色を作るのに、絵の具の追加が平均1手+渡すのに1手+絵の具が足りないときに追加前に一番右の仕切りを戻すのに平均2手+絵の具の調整に仕切りを2手*4色分、とすると約12手かかる<ul>
+<li>(どんどん仕切りが左に寄っていく感じ)</li>
+</ul>
+</li>
+<li>H色なので、だいたいT&gt;=12000のときに適用できる</li>
+</ul>
+</li>
+<li>もっと手数を使える場合は、さらに仕切りを入れると、より細かい単位で切り出すことができる<ul>
+<li>積型(q/p*s/r)<ul>
+<li>短くなっている一番右の仕切りを"拡張"するように動かしてから、同様に仕切りを入れて取り出すと、仕切りの操作に4手かかっているが、仕切りの位置の組み合わせのバリエーションが増えて1/L^2程度の単位で取り出せる</li>
+<li>似たような感じで繰り返すとより2手ずつより細かい単位(k次精度)での調整ができる</li>
+</ul>
+</li>
+<li>和型(q/p+s/r)<ul>
+<li>仕切った後で、左側を同様に2回ぐらい仕切って合わせるような和型(q/p+s/r)みたいな形でも細かい調整ができるが、手数が上記よりかかる</li>
+<li>両側から取り出せるようにする<ul>
+<li><a href="https://www.terry-u16.net/entry/ahc048">https://www.terry-u16.net/entry/ahc048</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>など</li>
+</ul>
+</li>
+</ul>
+<h5 id="_20">混ぜ合わせ領域を減らす<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h5>
+<ul>
+<li>上の基本形だと右側にN*1確保しているが、作る絵の具はほぼ1グラムなので、こんなに大きくなくて良い(1〜2程度あれば十分)</li>
+<li>パレットのどこか(中央付近とか)に小さな混ぜ場を用意して放射状にウェルを伸ばす感じの配置を、手で作ったり焼きなましなどで見つけて(使う絵の具の種類数ごとに求めて)埋め込んでおくとよい</li>
+</ul>
+<h5 id="_21">ちょうどよく終わらせる<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h5>
+<ul>
+<li>一番最後の出力色は、追加の絵の具を考えない場合は、パレットに残ったやつを組み合わせてつくることになるため、適当にやると、誤差が大きくなる可能性がある</li>
+<li>残り数ターンは、残る絵の具が最後の目的色と合うように調整してあげると誤差を減らせる</li>
+</ul>
+<h3 id="_22">その他<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<h4 id="kd8">KD木/8分木<a class="headerlink" href="#kd8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>絵の具の追加のみで作れる組み合わせは前計算しておくと、あるウェルに対して、出力色に一番近づくような追加を逆算して求めることで、最近傍探索の問題になる</li>
+<li>KD木や8分木で高速に探索することができる</li>
+</ul>
+<h4 id="_23">ビジュアライザの改造<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<ul>
+<li>今回、公式ビジュアライザだと、「追加絵の具のコストと誤差それぞれどれだけか」「作成色と出力色がかなり近いときの差分」などがわかりにくい問題があったため、改造するか自前でビジュアライザを用意すると良かった<ul>
+<li>ただ、デバッグとか確認にはうれしいが、そんなに考察に役に立つという感じでもなかったかも・・・</li>
+</ul>
+</li>
+</ul>
+<h4 id="_24">立体視でビジュアライズ<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://x.com/moooaki/status/1932030219915079858">https://x.com/moooaki/status/1932030219915079858</a></li>
+</ul>
+<h4 id="_25">詳細順位表の式<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<ul>
+<li>X-axisを<code>log(T/4000)/log(2)</code>にすると、横軸がテストケース数の割合ぐらいになる</li>
+</ul>
+<h4 id="_26">順位表デバッグ<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<ul>
+<li>相対スコアのとき、「T&gt;=1000のときはWAになるようにする」という提出をすると、ケース数と相対スコアの合計が得られるので、そのパラメータのときの平均スコアがわかる<ul>
+<li>解説放送で、こんなことしなくても表示するようにしておく案が出ていたので、不要になるかも</li>
+</ul>
+</li>
+<li>スコアが取れてなさそうなケースの特定や、特定ケースだけでの確認、ベスト解の見積もりとかすることができる<ul>
+<li>提出は30分間隔なので、30分で1つの情報が得られる</li>
+</ul>
+</li>
+<li>潜伏的みたいなことになったりするけど、これ以外にも、複数の解法を組み合わせて最終提出にする場合とか、実装が間に合わなくてギリギリ提出になったとかでも潜伏みたいにはなりえる<ul>
+<li>コンテスト中の順位があまり役に立たなくなる恐れがあるが、そもそも暫定順位だったり、コンテスト終了後も時間指定で潜伏することができるテクもあるので、結局最終順位表まではわからない</li>
+</ul>
+</li>
+</ul>
+<h4 id="_27">メタ戦略<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<ul>
+<li>今回は、Tが大きいケースなどではベスト解がかなり小さくなるため、そのようなケースで改善してもあまり相対スコアが増加しないということが起きていた<ul>
+<li>たとえば、ベストが100点とか出ているときに、100,000点を10,000点にしても、相対スコアが0.001点から0.01点にしか伸びない</li>
+</ul>
+</li>
+<li>相対スコア的に言えば、Tが大きいケースを頑張るよりも、Tが小さくベスト解がある程度大きいところを攻めたほうがスコアを伸ばすのには効率がよかった<ul>
+<li>上位・最上位へは、Tが大きいケースがほぼ0点だと厳しいので、ちゃんと考える必要がある</li>
+</ul>
+</li>
+<li><a href="https://kiri8128.hatenablog.com/entry/2024/05/06/032420">https://kiri8128.hatenablog.com/entry/2024/05/06/032420</a></li>
+</ul>
+<h4 id="_28">相対スコア以外のスコア<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<ul>
+<li>解説放送の最後でいろいろアイデアがでていた</li>
+</ul>
+<h4 id="_29">小数点誤差<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://rsk0315.hatenablog.com/entry/2025/06/17/000613">https://rsk0315.hatenablog.com/entry/2025/06/17/000613</a></li>
+</ul>
+<h4 id="_30">お絵かき<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://x.com/Carbon_so6/status/1932064308625904120">https://x.com/Carbon_so6/status/1932064308625904120</a></li>
+<li><a href="https://x.com/m_buyoh/status/1932016597574824029">https://x.com/m_buyoh/status/1932016597574824029</a></li>
+</ul>
+<h2 id="_31">解説<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h2>
+<p>(50位まで&amp;発言を見つけられた方のみ)</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=h8k7f1Dbvao">AHCラジオ(解説放送)</a></li>
+<li><a href="https://atcoder.jp/contests/ahc048/editorial">解説(日本語)</a></li>
+<li><a href="https://atcoder.jp/contests/ahc048/editorial?editorialLang=en">解説(英語)</a></li>
+<li><a href="https://x.com/mcdigital_mcd/status/1933373745722454030">https://x.com/mcdigital_mcd/status/1933373745722454030</a></li>
+</ul>
+<ul>
+<li><a href="https://x.com/wata_orz/status/1932016846024434029">writer解</a><ul>
+<li><a href="https://x.com/wata_orz/status/1932021125799924058">https://x.com/wata_orz/status/1932021125799924058</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="https://x.com/montplusa/status/1932016611965476867">montplusaさん</a><ul>
+<li><a href="https://x.com/montplusa/status/1932019174374809616">https://x.com/montplusa/status/1932019174374809616</a></li>
+<li><a href="https://x.com/montplusa/status/1932055881929408583">https://x.com/montplusa/status/1932055881929408583</a></li>
+<li><a href="https://x.com/montplusa/status/1932057698780266637">https://x.com/montplusa/status/1932057698780266637</a></li>
+<li><a href="https://x.com/montplusa/status/1932065454216073696">https://x.com/montplusa/status/1932065454216073696</a></li>
+<li><a href="https://x.com/montplusa/status/1932078851406073989">https://x.com/montplusa/status/1932078851406073989</a></li>
+<li><a href="https://x.com/montplusa/status/1932080413620797842">https://x.com/montplusa/status/1932080413620797842</a></li>
+<li><a href="https://x.com/montplusa/status/1932089533748891844">https://x.com/montplusa/status/1932089533748891844</a></li>
+<li><a href="https://x.com/montplusa/status/1932103719635886349">https://x.com/montplusa/status/1932103719635886349</a></li>
+<li><a href="https://x.com/montplusa/status/1932111064923095222">https://x.com/montplusa/status/1932111064923095222</a></li>
+<li><a href="https://x.com/montplusa/status/1932380897573323194">https://x.com/montplusa/status/1932380897573323194</a><ul>
+<li><a href="https://montplusa.github.io/ahc048-postmortem/">https://montplusa.github.io/ahc048-postmortem/</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/montplusa/status/1932455950142914723">https://x.com/montplusa/status/1932455950142914723</a></li>
+<li><a href="https://x.com/montplusa/status/1932458563366265303">https://x.com/montplusa/status/1932458563366265303</a></li>
+<li><a href="https://x.com/montplusa/status/1932476138305302767">https://x.com/montplusa/status/1932476138305302767</a></li>
+<li><a href="https://x.com/montplusa/status/1932696982210163047">https://x.com/montplusa/status/1932696982210163047</a></li>
+<li><a href="https://x.com/montplusa/status/1932719958158684342">https://x.com/montplusa/status/1932719958158684342</a></li>
+<li><a href="https://x.com/montplusa/status/1932721032261243146">https://x.com/montplusa/status/1932721032261243146</a></li>
+<li><a href="https://x.com/montplusa/status/1932828830261260726">https://x.com/montplusa/status/1932828830261260726</a></li>
+<li><a href="https://x.com/montplusa/status/1933142846934253951">https://x.com/montplusa/status/1933142846934253951</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/MathGorilla_cp/status/1932022547807445018">MathGorillaさん</a><ul>
+<li><a href="https://x.com/MathGorilla_cp/status/1932073933383340417">https://x.com/MathGorilla_cp/status/1932073933383340417</a></li>
+<li><a href="https://x.com/MathGorilla_cp/status/1932075363422929165">https://x.com/MathGorilla_cp/status/1932075363422929165</a></li>
+<li><a href="https://x.com/MathGorilla_cp/status/1932081789134356985">https://x.com/MathGorilla_cp/status/1932081789134356985</a></li>
+<li><a href="https://x.com/MathGorilla_cp/status/1932084841966973335">https://x.com/MathGorilla_cp/status/1932084841966973335</a></li>
+<li><a href="https://x.com/MathGorilla_cp/status/1932094390090260654">https://x.com/MathGorilla_cp/status/1932094390090260654</a></li>
+<li><a href="https://x.com/MathGorilla_cp/status/1932653823849611738">https://x.com/MathGorilla_cp/status/1932653823849611738</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/kiri8128/status/1932017983129596008">Kiri8128さん</a><ul>
+<li><a href="https://x.com/kiri8128/status/1932047531103674871">https://x.com/kiri8128/status/1932047531103674871</a></li>
+<li><a href="https://x.com/kiri8128/status/1932058820454600755">https://x.com/kiri8128/status/1932058820454600755</a></li>
+<li><a href="https://x.com/kiri8128/status/1932061966094516553">https://x.com/kiri8128/status/1932061966094516553</a></li>
+<li><a href="https://x.com/kiri8128/status/1932071173929742563">https://x.com/kiri8128/status/1932071173929742563</a></li>
+<li><a href="https://x.com/kiri8128/status/1932074414579065117">https://x.com/kiri8128/status/1932074414579065117</a></li>
+<li><a href="https://x.com/kiri8128/status/1932077461770305979">https://x.com/kiri8128/status/1932077461770305979</a></li>
+<li><a href="https://x.com/kiri8128/status/1932083230192365740">https://x.com/kiri8128/status/1932083230192365740</a></li>
+<li><a href="https://x.com/kiri8128/status/1932095031277699461">https://x.com/kiri8128/status/1932095031277699461</a></li>
+<li><a href="https://x.com/kiri8128/status/1932095449730859403">https://x.com/kiri8128/status/1932095449730859403</a></li>
+<li><a href="https://x.com/kiri8128/status/1932098436947693767">https://x.com/kiri8128/status/1932098436947693767</a></li>
+<li><a href="https://x.com/kiri8128/status/1932099053028004281">https://x.com/kiri8128/status/1932099053028004281</a></li>
+<li><a href="https://x.com/kiri8128/status/1932099597234745575">https://x.com/kiri8128/status/1932099597234745575</a></li>
+<li><a href="https://x.com/kiri8128/status/1932105277513544014">https://x.com/kiri8128/status/1932105277513544014</a></li>
+<li><a href="https://x.com/kiri8128/status/1932108893792125299">https://x.com/kiri8128/status/1932108893792125299</a></li>
+<li><a href="https://x.com/kiri8128/status/1932116443929465185">https://x.com/kiri8128/status/1932116443929465185</a></li>
+<li><a href="https://x.com/kiri8128/status/1932216125707927991">https://x.com/kiri8128/status/1932216125707927991</a></li>
+<li><a href="https://x.com/kiri8128/status/1932415612988637598">https://x.com/kiri8128/status/1932415612988637598</a></li>
+<li><a href="https://x.com/kiri8128/status/1932438770563068082">https://x.com/kiri8128/status/1932438770563068082</a></li>
+<li><a href="https://x.com/kiri8128/status/1932708259342979137">https://x.com/kiri8128/status/1932708259342979137</a></li>
+<li><a href="https://x.com/kiri8128/status/1932798908629201385">https://x.com/kiri8128/status/1932798908629201385</a></li>
+<li><a href="https://x.com/kiri8128/status/1932802838381609113">https://x.com/kiri8128/status/1932802838381609113</a></li>
+<li><a href="https://x.com/kiri8128/status/1932805997871206662">https://x.com/kiri8128/status/1932805997871206662</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/AcPiiiii/status/1932020137143730584">Piiiiiさん</a><ul>
+<li><a href="https://x.com/AcPiiiii/status/1932060049742131495">https://x.com/AcPiiiii/status/1932060049742131495</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/terry_u16/status/1932016842597687644">terry_u16さん</a><ul>
+<li><a href="https://x.com/terry_u16/status/1932017073175347403">https://x.com/terry_u16/status/1932017073175347403</a></li>
+<li><a href="https://x.com/terry_u16/status/1932019219509760076">https://x.com/terry_u16/status/1932019219509760076</a></li>
+<li><a href="https://x.com/terry_u16/status/1932019783719100593">https://x.com/terry_u16/status/1932019783719100593</a></li>
+<li><a href="https://x.com/terry_u16/status/1932020353108500976">https://x.com/terry_u16/status/1932020353108500976</a></li>
+<li><a href="https://x.com/terry_u16/status/1932020507278299410">https://x.com/terry_u16/status/1932020507278299410</a></li>
+<li><a href="https://x.com/terry_u16/status/1932020785604104488">https://x.com/terry_u16/status/1932020785604104488</a></li>
+<li><a href="https://x.com/terry_u16/status/1932021552603939047">https://x.com/terry_u16/status/1932021552603939047</a></li>
+<li><a href="https://x.com/terry_u16/status/1932016594022260946">https://x.com/terry_u16/status/1932016594022260946</a></li>
+<li><a href="https://x.com/terry_u16/status/1932023448274084226">https://x.com/terry_u16/status/1932023448274084226</a></li>
+<li><a href="https://x.com/terry_u16/status/1932025200067154189">https://x.com/terry_u16/status/1932025200067154189</a></li>
+<li><a href="https://x.com/terry_u16/status/1932025576644337802">https://x.com/terry_u16/status/1932025576644337802</a></li>
+<li><a href="https://x.com/terry_u16/status/1932025932266770529">https://x.com/terry_u16/status/1932025932266770529</a></li>
+<li><a href="https://x.com/terry_u16/status/1932026330650227190">https://x.com/terry_u16/status/1932026330650227190</a></li>
+<li><a href="https://x.com/terry_u16/status/1932026808674988491">https://x.com/terry_u16/status/1932026808674988491</a></li>
+<li><a href="https://x.com/terry_u16/status/1932030220858782161">https://x.com/terry_u16/status/1932030220858782161</a></li>
+<li><a href="https://x.com/terry_u16/status/1932029354567184473">https://x.com/terry_u16/status/1932029354567184473</a></li>
+<li><a href="https://x.com/terry_u16/status/1932030822468767970">https://x.com/terry_u16/status/1932030822468767970</a></li>
+<li><a href="https://x.com/terry_u16/status/1932031966242853135">https://x.com/terry_u16/status/1932031966242853135</a></li>
+<li><a href="https://x.com/terry_u16/status/1932032829497716848">https://x.com/terry_u16/status/1932032829497716848</a></li>
+<li><a href="https://x.com/terry_u16/status/1932033147841183794">https://x.com/terry_u16/status/1932033147841183794</a></li>
+<li><a href="https://x.com/terry_u16/status/1932033736251711845">https://x.com/terry_u16/status/1932033736251711845</a></li>
+<li><a href="https://x.com/terry_u16/status/1932035888177148282">https://x.com/terry_u16/status/1932035888177148282</a></li>
+<li><a href="https://x.com/terry_u16/status/1932036601791807654">https://x.com/terry_u16/status/1932036601791807654</a></li>
+<li><a href="https://x.com/terry_u16/status/1932038557373526460">https://x.com/terry_u16/status/1932038557373526460</a></li>
+<li><a href="https://x.com/terry_u16/status/1932039623414583428">https://x.com/terry_u16/status/1932039623414583428</a></li>
+<li><a href="https://x.com/terry_u16/status/1932023822682832972">https://x.com/terry_u16/status/1932023822682832972</a></li>
+<li><a href="https://x.com/terry_u16/status/1932044134258491594">https://x.com/terry_u16/status/1932044134258491594</a></li>
+<li><a href="https://x.com/terry_u16/status/1932045737472528720">https://x.com/terry_u16/status/1932045737472528720</a></li>
+<li><a href="https://x.com/terry_u16/status/1932048654875148686">https://x.com/terry_u16/status/1932048654875148686</a></li>
+<li><a href="https://x.com/terry_u16/status/1932050013909336117">https://x.com/terry_u16/status/1932050013909336117</a></li>
+<li><a href="https://x.com/terry_u16/status/1932064476477690189">https://x.com/terry_u16/status/1932064476477690189</a></li>
+<li><a href="https://x.com/terry_u16/status/1932091545123279164">https://x.com/terry_u16/status/1932091545123279164</a></li>
+<li><a href="https://x.com/terry_u16/status/1932093051650154828">https://x.com/terry_u16/status/1932093051650154828</a></li>
+<li><a href="https://x.com/terry_u16/status/1932093897985159502">https://x.com/terry_u16/status/1932093897985159502</a></li>
+<li><a href="https://x.com/terry_u16/status/1932095769286504700">https://x.com/terry_u16/status/1932095769286504700</a></li>
+<li><a href="https://x.com/terry_u16/status/1932096771548967235">https://x.com/terry_u16/status/1932096771548967235</a></li>
+<li><a href="https://x.com/terry_u16/status/1932097852089757818">https://x.com/terry_u16/status/1932097852089757818</a></li>
+<li><a href="https://x.com/terry_u16/status/1932100256034181257">https://x.com/terry_u16/status/1932100256034181257</a></li>
+<li><a href="https://x.com/terry_u16/status/1932113120434233640">https://x.com/terry_u16/status/1932113120434233640</a></li>
+<li><a href="https://x.com/terry_u16/status/1932117459185902051">https://x.com/terry_u16/status/1932117459185902051</a></li>
+<li><a href="https://x.com/terry_u16/status/1932119077117710452">https://x.com/terry_u16/status/1932119077117710452</a></li>
+<li><a href="https://x.com/terry_u16/status/1932272015731560867">https://x.com/terry_u16/status/1932272015731560867</a></li>
+<li><a href="https://x.com/terry_u16/status/1932360903623848047">https://x.com/terry_u16/status/1932360903623848047</a></li>
+<li><a href="https://x.com/terry_u16/status/1932361437953077675">https://x.com/terry_u16/status/1932361437953077675</a></li>
+<li><a href="https://x.com/terry_u16/status/1932445370694693290">https://x.com/terry_u16/status/1932445370694693290</a></li>
+<li><a href="https://x.com/terry_u16/status/1932456553598324822">https://x.com/terry_u16/status/1932456553598324822</a></li>
+<li><a href="https://x.com/terry_u16/status/1932456932159488328">https://x.com/terry_u16/status/1932456932159488328</a></li>
+<li><a href="https://x.com/terry_u16/status/1932474640334753878">https://x.com/terry_u16/status/1932474640334753878</a></li>
+<li><a href="https://x.com/terry_u16/status/1932703141369409625">https://x.com/terry_u16/status/1932703141369409625</a></li>
+<li><a href="https://x.com/terry_u16/status/1932704274586480747">https://x.com/terry_u16/status/1932704274586480747</a></li>
+<li><a href="https://x.com/terry_u16/status/1932704957926662283">https://x.com/terry_u16/status/1932704957926662283</a></li>
+<li><a href="https://x.com/terry_u16/status/1932742897121861677">https://x.com/terry_u16/status/1932742897121861677</a></li>
+<li><a href="https://x.com/terry_u16/status/1932743830186700951">https://x.com/terry_u16/status/1932743830186700951</a></li>
+<li><a href="https://x.com/terry_u16/status/1933132102905774393">https://x.com/terry_u16/status/1933132102905774393</a></li>
+<li><a href="https://x.com/terry_u16/status/1933137388894855423">https://x.com/terry_u16/status/1933137388894855423</a></li>
+<li><a href="https://www.terry-u16.net/entry/ahc048">https://www.terry-u16.net/entry/ahc048</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/yosupot/status/1932018744479625354">yosupoさん</a></li>
+<li><a href="https://x.com/tanaka_a8/status/1932021041171456156">rabotさん</a><ul>
+<li><a href="https://x.com/tanaka_a8/status/1932030189258822099">https://x.com/tanaka_a8/status/1932030189258822099</a></li>
+<li><a href="https://x.com/tanaka_a8/status/1932066585726099857">https://x.com/tanaka_a8/status/1932066585726099857</a></li>
+<li><a href="https://x.com/tanaka_a8/status/1932780363333693836">https://x.com/tanaka_a8/status/1932780363333693836</a></li>
+<li><a href="https://x.com/tanaka_a8/status/1932782370102652998">https://x.com/tanaka_a8/status/1932782370102652998</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/Shun___PI/status/1932015482808500267">Shun_PIさん</a><ul>
+<li><a href="https://x.com/Shun___PI/status/1932016373917761681">https://x.com/Shun___PI/status/1932016373917761681</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932017178444022231">https://x.com/Shun___PI/status/1932017178444022231</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932017485387333894">https://x.com/Shun___PI/status/1932017485387333894</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932018137895215500">https://x.com/Shun___PI/status/1932018137895215500</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932018987011117197">https://x.com/Shun___PI/status/1932018987011117197</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932019482182189455">https://x.com/Shun___PI/status/1932019482182189455</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932023899807744034">https://x.com/Shun___PI/status/1932023899807744034</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932026827083821153">https://x.com/Shun___PI/status/1932026827083821153</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932067255841415677">https://x.com/Shun___PI/status/1932067255841415677</a></li>
+<li><a href="https://x.com/Shun___PI/status/1932700181805609025">https://x.com/Shun___PI/status/1932700181805609025</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/border_of_ymg/status/1932015899839721819">kenchoさん</a><ul>
+<li><a href="https://x.com/border_of_ymg/status/1932021227369234655">https://x.com/border_of_ymg/status/1932021227369234655</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932024313781367047">https://x.com/border_of_ymg/status/1932024313781367047</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932025545895927963">https://x.com/border_of_ymg/status/1932025545895927963</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932025821008638203">https://x.com/border_of_ymg/status/1932025821008638203</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932026954372563193">https://x.com/border_of_ymg/status/1932026954372563193</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932029047321805078">https://x.com/border_of_ymg/status/1932029047321805078</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932029962980315375">https://x.com/border_of_ymg/status/1932029962980315375</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932031177021608371">https://x.com/border_of_ymg/status/1932031177021608371</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932056252282233133">https://x.com/border_of_ymg/status/1932056252282233133</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932057114480107893">https://x.com/border_of_ymg/status/1932057114480107893</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932058235726627201">https://x.com/border_of_ymg/status/1932058235726627201</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932058675105214533">https://x.com/border_of_ymg/status/1932058675105214533</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932060641935954352">https://x.com/border_of_ymg/status/1932060641935954352</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932061469186965537">https://x.com/border_of_ymg/status/1932061469186965537</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932062967149060400">https://x.com/border_of_ymg/status/1932062967149060400</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932064526616473786">https://x.com/border_of_ymg/status/1932064526616473786</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932082027773452566">https://x.com/border_of_ymg/status/1932082027773452566</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932129502404223013">https://x.com/border_of_ymg/status/1932129502404223013</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932130397514863000">https://x.com/border_of_ymg/status/1932130397514863000</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932131135993356309">https://x.com/border_of_ymg/status/1932131135993356309</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932142944385126815">https://x.com/border_of_ymg/status/1932142944385126815</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932483054892974430">https://x.com/border_of_ymg/status/1932483054892974430</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932720267601850368">https://x.com/border_of_ymg/status/1932720267601850368</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932722633021530487">https://x.com/border_of_ymg/status/1932722633021530487</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932724744618659964">https://x.com/border_of_ymg/status/1932724744618659964</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932726052629168173">https://x.com/border_of_ymg/status/1932726052629168173</a></li>
+<li><a href="https://x.com/border_of_ymg/status/1932760240212304370">https://x.com/border_of_ymg/status/1932760240212304370</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/soiya_ksk/status/1932018880530301030">mtsdさん</a><ul>
+<li><a href="https://x.com/soiya_ksk/status/1932019655918731334">https://x.com/soiya_ksk/status/1932019655918731334</a></li>
+<li><a href="https://x.com/soiya_ksk/status/1932021074709172570">https://x.com/soiya_ksk/status/1932021074709172570</a></li>
+<li><a href="https://x.com/soiya_ksk/status/1932015622403342655">https://x.com/soiya_ksk/status/1932015622403342655</a></li>
+<li><a href="https://x.com/soiya_ksk/status/1932437976799412689">https://x.com/soiya_ksk/status/1932437976799412689</a></li>
+<li><a href="https://x.com/soiya_ksk/status/1932745859244216632">https://x.com/soiya_ksk/status/1932745859244216632</a></li>
+<li><a href="https://x.com/soiya_ksk/status/1933194632160215132">https://x.com/soiya_ksk/status/1933194632160215132</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/shr_pc/status/1932015127320261069">saharanさん</a><ul>
+<li><a href="https://x.com/shr_pc/status/1932015675717087240">https://x.com/shr_pc/status/1932015675717087240</a></li>
+<li><a href="https://x.com/shr_pc/status/1932019102006255841">https://x.com/shr_pc/status/1932019102006255841</a></li>
+<li><a href="https://x.com/shr_pc/status/1932017749859164406">https://x.com/shr_pc/status/1932017749859164406</a></li>
+<li><a href="https://x.com/shr_pc/status/1932022177584550051">https://x.com/shr_pc/status/1932022177584550051</a></li>
+<li><a href="https://x.com/shr_pc/status/1932023627454853515">https://x.com/shr_pc/status/1932023627454853515</a></li>
+<li><a href="https://x.com/shr_pc/status/1932024906184822973">https://x.com/shr_pc/status/1932024906184822973</a></li>
+<li><a href="https://x.com/shr_pc/status/1932026501060595811">https://x.com/shr_pc/status/1932026501060595811</a></li>
+<li><a href="https://x.com/shr_pc/status/1932027701113790962">https://x.com/shr_pc/status/1932027701113790962</a></li>
+<li><a href="https://x.com/shr_pc/status/1932028646673527149">https://x.com/shr_pc/status/1932028646673527149</a><ul>
+<li><a href="https://x.com/ynishi2015/status/1932023512556069141">https://x.com/ynishi2015/status/1932023512556069141</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/shr_pc/status/1932029270777618855">https://x.com/shr_pc/status/1932029270777618855</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/soumat_13/status/1932047902349930982">soumatさん</a><ul>
+<li><a href="https://x.com/soumat_13/status/1932710323045478853">https://x.com/soumat_13/status/1932710323045478853</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/tomerun/status/1931965373966139797">tomerunさん</a><ul>
+<li><a href="https://x.com/tomerun/status/1932015196626952553">https://x.com/tomerun/status/1932015196626952553</a></li>
+<li><a href="https://x.com/tomerun/status/1932020973202796694">https://x.com/tomerun/status/1932020973202796694</a></li>
+<li><a href="https://x.com/tomerun/status/1932023847509012790">https://x.com/tomerun/status/1932023847509012790</a></li>
+<li><a href="https://x.com/tomerun/status/1932024539141324962">https://x.com/tomerun/status/1932024539141324962</a></li>
+<li><a href="https://x.com/tomerun/status/1932086098089656465">https://x.com/tomerun/status/1932086098089656465</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/yunix91201367/status/1932054843814007150">yunixさん</a><ul>
+<li><a href="https://x.com/yunix91201367/status/1932056272557461667">https://x.com/yunix91201367/status/1932056272557461667</a></li>
+<li><a href="https://x.com/yunix91201367/status/1932058383731061123">https://x.com/yunix91201367/status/1932058383731061123</a></li>
+<li><a href="https://x.com/yunix91201367/status/1932061036875804947">https://x.com/yunix91201367/status/1932061036875804947</a></li>
+<li><a href="https://x.com/yunix91201367/status/1932061986973720617">https://x.com/yunix91201367/status/1932061986973720617</a></li>
+<li><a href="https://x.com/yunix91201367/status/1932062675711967665">https://x.com/yunix91201367/status/1932062675711967665</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/bowwowforeach/status/1932184397496848787">bowwowforeachさん</a><ul>
+<li><a href="https://x.com/bowwowforeach/status/1932184552082223309">https://x.com/bowwowforeach/status/1932184552082223309</a></li>
+<li><a href="https://x.com/bowwowforeach/status/1932202554739638498">https://x.com/bowwowforeach/status/1932202554739638498</a></li>
+<li><a href="https://x.com/bowwowforeach/status/1932207800727556123">https://x.com/bowwowforeach/status/1932207800727556123</a></li>
+<li><a href="https://x.com/bowwowforeach/status/1932212223323353145">https://x.com/bowwowforeach/status/1932212223323353145</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/ymatsux_ac/status/1932015306316382474">ymatsuxさん</a><ul>
+<li><a href="https://x.com/ymatsux_ac/status/1932016975255072825">https://x.com/ymatsux_ac/status/1932016975255072825</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932017510293114916">https://x.com/ymatsux_ac/status/1932017510293114916</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932017970542522584">https://x.com/ymatsux_ac/status/1932017970542522584</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932019409079701724">https://x.com/ymatsux_ac/status/1932019409079701724</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932032204575739923">https://x.com/ymatsux_ac/status/1932032204575739923</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932043202326081829">https://x.com/ymatsux_ac/status/1932043202326081829</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932045679003865255">https://x.com/ymatsux_ac/status/1932045679003865255</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932051845205348845">https://x.com/ymatsux_ac/status/1932051845205348845</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932055206231162999">https://x.com/ymatsux_ac/status/1932055206231162999</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932071928535396801">https://x.com/ymatsux_ac/status/1932071928535396801</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932074981024002112">https://x.com/ymatsux_ac/status/1932074981024002112</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932154037207814382">https://x.com/ymatsux_ac/status/1932154037207814382</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932023777132736652">https://x.com/ymatsux_ac/status/1932023777132736652</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932354197623812371">https://x.com/ymatsux_ac/status/1932354197623812371</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932360492129174014">https://x.com/ymatsux_ac/status/1932360492129174014</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932363940027372002">https://x.com/ymatsux_ac/status/1932363940027372002</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932367945537359966">https://x.com/ymatsux_ac/status/1932367945537359966</a></li>
+<li><a href="https://x.com/ymatsux_ac/status/1932708373663002817">https://x.com/ymatsux_ac/status/1932708373663002817</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/hiro116s/status/1932068971660107986">hiro116sさん</a><ul>
+<li><a href="https://x.com/hiro116s/status/1932791077335142419">https://x.com/hiro116s/status/1932791077335142419</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/NanoSeeing/status/1932015390537961640">nanoseeingさん</a><ul>
+<li><a href="https://nanoseeing.hatenablog.com/entry/2025/06/10/235533">https://nanoseeing.hatenablog.com/entry/2025/06/10/235533</a></li>
+<li><a href="https://x.com/NanoSeeing/status/1932479387838132350">https://x.com/NanoSeeing/status/1932479387838132350</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/FplusFplusF____/status/1932019542504636675">FplusFplusFさん</a><ul>
+<li><a href="https://x.com/FplusFplusF____/status/1932020844815151285">https://x.com/FplusFplusF____/status/1932020844815151285</a></li>
+<li><a href="https://x.com/FplusFplusF____/status/1932023814470382025">https://x.com/FplusFplusF____/status/1932023814470382025</a></li>
+<li><a href="https://x.com/FplusFplusF____/status/1932024300040773843">https://x.com/FplusFplusF____/status/1932024300040773843</a></li>
+<li><a href="https://x.com/FplusFplusF____/status/1932026619360854206">https://x.com/FplusFplusF____/status/1932026619360854206</a></li>
+<li><a href="https://x.com/FplusFplusF____/status/1932042392175329474">https://x.com/FplusFplusF____/status/1932042392175329474</a></li>
+<li><a href="https://x.com/FplusFplusF____/status/1932015374356332628">https://x.com/FplusFplusF____/status/1932015374356332628</a></li>
+<li><a href="https://x.com/FplusFplusF____/status/1932703279617880104">https://x.com/FplusFplusF____/status/1932703279617880104</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/potato167_long/status/1932021781516402857">potato167さん</a><ul>
+<li><a href="https://x.com/potato167_long/status/1932028775421845880">https://x.com/potato167_long/status/1932028775421845880</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/Ang_kyopro/status/1932020839458955548">Ang107さん</a><ul>
+<li><a href="https://x.com/Ang_kyopro/status/1932022741697245238">https://x.com/Ang_kyopro/status/1932022741697245238</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932048536457396626">https://x.com/Ang_kyopro/status/1932048536457396626</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932049422416064536">https://x.com/Ang_kyopro/status/1932049422416064536</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932051285064487330">https://x.com/Ang_kyopro/status/1932051285064487330</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932059671067803684">https://x.com/Ang_kyopro/status/1932059671067803684</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932061260226675016">https://x.com/Ang_kyopro/status/1932061260226675016</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932076141231448132">https://x.com/Ang_kyopro/status/1932076141231448132</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932258037546545487">https://x.com/Ang_kyopro/status/1932258037546545487</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932481871067467834">https://x.com/Ang_kyopro/status/1932481871067467834</a></li>
+<li><a href="https://x.com/Ang_kyopro/status/1932704034525437984">https://x.com/Ang_kyopro/status/1932704034525437984</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/stat_learning/status/1932020289627443536">starpentagonさん</a><ul>
+<li><a href="https://x.com/stat_learning/status/1932021339965317625">https://x.com/stat_learning/status/1932021339965317625</a></li>
+<li><a href="https://x.com/stat_learning/status/1932203968656195718">https://x.com/stat_learning/status/1932203968656195718</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/yochan_tech/status/1932071389265363136">yochanさん</a></li>
+<li><a href="https://x.com/gmeriaog/status/1932018680839495801">wanuiさん</a><ul>
+<li><a href="https://x.com/gmeriaog/status/1932087946670457192">https://x.com/gmeriaog/status/1932087946670457192</a></li>
+<li><a href="https://x.com/gmeriaog/status/1932417855028629659">https://x.com/gmeriaog/status/1932417855028629659</a></li>
+<li><a href="https://x.com/gmeriaog/status/1932728943901356113">https://x.com/gmeriaog/status/1932728943901356113</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/fuppy_kyopro/status/1932016189313777853">fuppy0716さん</a><ul>
+<li><a href="https://x.com/fuppy_kyopro/status/1932017488306561267">https://x.com/fuppy_kyopro/status/1932017488306561267</a></li>
+<li><a href="https://x.com/fuppy_kyopro/status/1932019778996314508">https://x.com/fuppy_kyopro/status/1932019778996314508</a></li>
+<li><a href="https://x.com/fuppy_kyopro/status/1932018199354278019">https://x.com/fuppy_kyopro/status/1932018199354278019</a></li>
+<li><a href="https://x.com/fuppy_kyopro/status/1932022734563017168">https://x.com/fuppy_kyopro/status/1932022734563017168</a></li>
+<li><a href="https://x.com/fuppy_kyopro/status/1932026020242305396">https://x.com/fuppy_kyopro/status/1932026020242305396</a></li>
+<li><a href="https://x.com/fuppy_kyopro/status/1932028578377711650">https://x.com/fuppy_kyopro/status/1932028578377711650</a></li>
+<li><a href="https://x.com/fuppy_kyopro/status/1932469901077442817">https://x.com/fuppy_kyopro/status/1932469901077442817</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/mih28731325/status/1932028404074967242">Moegiさん</a><ul>
+<li><a href="https://x.com/mih28731325/status/1932408957441871926">https://x.com/mih28731325/status/1932408957441871926</a></li>
+<li><a href="https://x.com/mih28731325/status/1932413017955917868">https://x.com/mih28731325/status/1932413017955917868</a></li>
+<li><a href="https://atcoder.jp/contests/ahc048/submissions/66661200">https://atcoder.jp/contests/ahc048/submissions/66661200</a></li>
+<li><a href="https://x.com/mih28731325/status/1932712830865998176">https://x.com/mih28731325/status/1932712830865998176</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/asi1024/status/1932032083326824566">asi1024さん</a></li>
+<li><a href="https://x.com/rian_tkb/status/1932015693500948741">riantkbさん</a><ul>
+<li><a href="https://x.com/rian_tkb/status/1932016519543914870">https://x.com/rian_tkb/status/1932016519543914870</a></li>
+<li><a href="https://x.com/rian_tkb/status/1932017365396668643">https://x.com/rian_tkb/status/1932017365396668643</a></li>
+<li><a href="https://x.com/rian_tkb/status/1932019371918180607">https://x.com/rian_tkb/status/1932019371918180607</a></li>
+<li><a href="https://x.com/rian_tkb/status/1932020013571125600">https://x.com/rian_tkb/status/1932020013571125600</a></li>
+<li><a href="https://x.com/rian_tkb/status/1932024562449109403">https://x.com/rian_tkb/status/1932024562449109403</a></li>
+<li><a href="https://x.com/rian_tkb/status/1932030960545214837">https://x.com/rian_tkb/status/1932030960545214837</a></li>
+<li><a href="https://x.com/rian_tkb/status/1932047255122612490">https://x.com/rian_tkb/status/1932047255122612490</a></li>
+<li><a href="https://x.com/rian_tkb/status/1932727810004824449">https://x.com/rian_tkb/status/1932727810004824449</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/uta_cccc/status/1932046847864156205">uta_cccさん</a><ul>
+<li><a href="https://utac.hateblo.jp/entry/2025/06/09/231417">https://utac.hateblo.jp/entry/2025/06/09/231417</a></li>
+<li><a href="https://x.com/uta_cccc/status/1932084341607415963">https://x.com/uta_cccc/status/1932084341607415963</a></li>
+<li><a href="https://x.com/uta_cccc/status/1932090047572136213">https://x.com/uta_cccc/status/1932090047572136213</a></li>
+<li><a href="https://x.com/uta_cccc/status/1932744638030598216">https://x.com/uta_cccc/status/1932744638030598216</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/RinSakamichi/status/1932016720828600498">RinSakamichiさん</a><ul>
+<li><a href="https://x.com/RinSakamichi/status/1932021466155114958">https://x.com/RinSakamichi/status/1932021466155114958</a></li>
+<li><a href="https://x.com/RinSakamichi/status/1932029478785753481">https://x.com/RinSakamichi/status/1932029478785753481</a></li>
+<li><a href="https://x.com/RinSakamichi/status/1933481167174709466">https://x.com/RinSakamichi/status/1933481167174709466</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/through__TH__/status/1932015588169367966">throughさん</a><ul>
+<li><a href="https://x.com/through__TH__/status/1932021530592170251">https://x.com/through__TH__/status/1932021530592170251</a></li>
+<li><a href="https://x.com/through__TH__/status/1932022772232012085">https://x.com/through__TH__/status/1932022772232012085</a></li>
+<li><a href="https://x.com/through__TH__/status/1932047929529020832">https://x.com/through__TH__/status/1932047929529020832</a></li>
+<li><a href="https://x.com/through__TH__/status/1932701084163977247">https://x.com/through__TH__/status/1932701084163977247</a></li>
+</ul>
+</li>
+<li><a href="https://x.com/kabipoyo/status/1933113804155679028">kabipoyoさん</a></li>
+<li><a href="https://x.com/sig_255/status/1932039822711136396">sig_256さん</a><ul>
+<li><a href="https://x.com/sig_255/status/1932044853321646527">https://x.com/sig_255/status/1932044853321646527</a></li>
+<li><a href="https://x.com/sig_255/status/1932046100732723436">https://x.com/sig_255/status/1932046100732723436</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://x.com/hashtag/AHC048">twitter hashtag AHC048</a></li>
+<li><a href="https://siman-man.github.io/ahc_statistics/048/">simanさん統計</a><ul>
+<li><a href="https://siman-man.github.io/ahc_statistics/048/index_with_admin.html">https://siman-man.github.io/ahc_statistics/048/index_with_admin.html</a></li>
+<li><a href="https://siman-man.github.io/ahc_statistics/048/index_vs_admin.html">https://siman-man.github.io/ahc_statistics/048/index_vs_admin.html</a></li>
+</ul>
+</li>
+<li><a href="https://img.atcoder.jp/ahc_standings/index.html?contest=ahc048">wataさんの詳細な順位表</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; jetbead 2021
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
