@@ -74,7 +74,8 @@
   - https://github.com/niuez/niuristic
 - 【ネタバレ注意】AHCの焼きなまし・ビームサーチ練習にオススメの問題まとめ(terry_u16 さん)
   - https://www.terry-u16.net/entry/ahc-practice-problem
-
+- FakePsyho/cpcontests
+  - https://github.com/FakePsyho/cpcontests
 
 ## 改善アイデアの試し方
 
