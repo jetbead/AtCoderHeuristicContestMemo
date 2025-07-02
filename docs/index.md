@@ -19,8 +19,10 @@ title: Home
 
 - :material-office-building: **Official**
   - [AtCoder Contests Archive(AHC Class)](https://atcoder.jp/contests/archive?ratedType=4&category=0&keyword=)
-  - [AHC Ranking(beta)](https://www.dropbox.com/s/j276tgd7izpc40u/ranking.csv?dl=0)
-    - [AHC Rating(beta) PDF](https://www.dropbox.com/s/ne358pdixfafppm/AHC_rating.pdf?dl=0)
+  - [AHC rating計算式(v2)](https://img.atcoder.jp/file/AHC_rating_v2.pdf)
+    - https://atcoder.jp/posts/1380
+  - [公式カレンダー](https://atcoder.jp/posts/1422)
+  - [AHCでの生成AIルール](https://atcoder.jp/posts/1494)
 - :material-axis-arrow: **rating/statistics**
   - AtCoder Marathon Replay
     - 当時のマラソンコンテストにおける順位や得点の推移をグラフ表示
@@ -28,42 +30,24 @@ title: Home
   - AtCoder Heuristic Rating Estimator
     - 目標レーティングへ到達に必要なパフォーマンスを計算するツール
     - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
-  - AHC Rating Simulator
-    - パフォーマンスをもとにレーティング変化を計算するツール
-    - https://saharan.github.io/progcon/ahc-rating-sim.html
   - AtCoder Graphs
     - グラフ化ツールがまとめられたサイト
     - https://atcoder-graphs.vercel.app/
   - competitiveprogramming.info/atcoder/contests/marathon
     - 過去のコンテスト情報が見やすくまとめられたサイト
     - https://competitiveprogramming.info/atcoder/contests/marathon
-  - AtCoder Heuristic Contest Statistics
-    - AHCの統計情報が見れるサイト
-    - https://ahcstats.vercel.app/
   - Scorerun
     - 各コンテスト最高得点とコードへのリンク
     - https://siman-man.github.io/scorerun/
-  - AHC ranking
-    - short/longを分けた場合のレート、ランキング
-    - https://docs.google.com/spreadsheets/d/1EMckCcHOKZ_xBnuXBafoU2gRxmZXSkHSAp1N2bZ7VfI
   - AHC Standings
     - スコア分布のビジュアライザ
     - https://img.atcoder.jp/ahc_standings/index.html
-  - AtCoder Heuristic Race Ranking
-    - Unofficial, ポイント制でのランキング
-    - https://docs.google.com/spreadsheets/d/1gFmqVYr44QlQBkHKLcd1YyFM_-Ne7Hzf7SODbADx8HI
   - AtCoder Heuristic Season Ranking
     - 特定期間のRated AHCで計算した仮想レーティングでのランキング
     - https://ahc-season-ranking.terry-u16.net/
   - AtCoder 延長戦GP30ランキング
     - https://x.com/myh9_f/status/1812698939227095264
     - https://qropa.github.io/extended-gp30-ranking/
-  - ~~AtCoder Rating Simulator~~
-    - 目標レーティングへ到達に必要なパフォーマンスを計算するツール
-    - https://atcoder-rating-simulator.dt.r.appspot.com/
-  - ~~AtCoder Rating Contributor Graph~~
-    - レートの寄与をグラフ表示するツール
-    - https://atcoder-rating-contribution-graph.vercel.app/
 - :material-folder: **summary**
   - https://kato-hiro.github.io/AtCoderClans/
 

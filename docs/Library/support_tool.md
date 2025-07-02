@@ -67,3 +67,25 @@
   - https://github.com/yunix-kyopro/AHC-cpp-template-public
 - ymatsuxさんのC++ファイルマージツール
   - https://github.com/ymatsux/competitive-programming/tree/main/combiner
+
+
+## その他
+
+- AHC Rating Simulator
+  - パフォーマンスをもとにレーティング変化を計算するツール
+  - https://saharan.github.io/progcon/ahc-rating-sim.html
+- AtCoder Heuristic Contest Statistics
+  - AHCの統計情報が見れるサイト
+  - https://ahcstats.vercel.app/
+- AHC ranking
+  - short/longを分けた場合のレート、ランキング
+  - https://docs.google.com/spreadsheets/d/1EMckCcHOKZ_xBnuXBafoU2gRxmZXSkHSAp1N2bZ7VfI
+- AtCoder Heuristic Race Ranking
+  - Unofficial, ポイント制でのランキング
+  - https://docs.google.com/spreadsheets/d/1gFmqVYr44QlQBkHKLcd1YyFM_-Ne7Hzf7SODbADx8HI
+- ~~AtCoder Rating Simulator~~
+  - 目標レーティングへ到達に必要なパフォーマンスを計算するツール
+  - https://atcoder-rating-simulator.dt.r.appspot.com/
+- ~~AtCoder Rating Contributor Graph~~
+  - レートの寄与をグラフ表示するツール
+  - https://atcoder-rating-contribution-graph.vercel.app/
