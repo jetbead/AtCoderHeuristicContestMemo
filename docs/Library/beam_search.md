@@ -77,6 +77,7 @@
 - https://github.com/niuez/niuristic/blob/main/algorithm/beam_search/beam_search.md
 - https://eijirou-kyopro.hatenablog.com/entry/2024/02/01/115639
 - https://twitter.com/rho__o/status/1753063890219642931
+- https://qiita.com/thun-c/items/a29c80f7ba54b271a6c7
 
 ## 上位N件を高速に取る話
 

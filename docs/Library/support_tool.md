@@ -34,6 +34,10 @@
   - https://github.com/qropa/optpod
   - https://x.com/myh9_f/status/1880604814943613434
   - AHCのローカルテストを並列実行するツール
+- AHC_decayed-performance
+  - https://github.com/potato167/AHC_decayed-performance
+  - https://x.com/potato167_long/status/1935594867826245657
+  - AHCの減衰パフォーマンスを表示
 
 ## クラウドジャッジ環境整備
 
