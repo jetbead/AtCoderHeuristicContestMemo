@@ -63,6 +63,7 @@
 
 ## その他
 
+- [いろんなTips](./tips.md)
 - [実験、環境構築](./experiments.md)
 - [pythonスニペット](./python_snippet.md)
 - [C++関数メモ](./func.md)
@@ -70,9 +71,7 @@
 - [行列ライブラリEigen](./eigen.md)
 - [サポートツール](./support_tool.md)
 - [Optuna](./optuna.md)
-- [いろんなTips](./tips.md)
 - [用語集](./glossary.md)
 - [AI関連](./ai.md)
 - [How to get started](./how_to_get_started.md)
-- [Checklist](./checklist.md)
 

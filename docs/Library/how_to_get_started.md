@@ -2,14 +2,7 @@
 
 AHC の始め方など。
 
-## AtCoder Heuristic Contest(AHC)とは?
-
-from https://atcoder.jp/contests/ahc001
-
-> AtCoder Heuristic Contest（AHC）とは？  
-> AtCoder にて新たに定期的に開催されるプログラミングコンテストです。ABC/ARC/AGC などのアルゴリズムコンテストと異なり、最適解を出すのが難しい問題に対し、出来るだけ良い解を作成するコンテストとなります。出題例などについては過去の類似形式のコンテストを参照下さい。
-
-https://info.atcoder.jp/overview/contest/intro
+- https://info.atcoder.jp/overview/contest/intro
 
 ## 取り組み方解説
 
