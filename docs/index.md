@@ -59,7 +59,7 @@ title: Home
 
 ## :material-account: About Me
 
-- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Rate: <span style="color: #c0c000; font-weight: bold">2325</span>)
+- [AtCoder Profile](https://atcoder.jp/users/phyllo?contestType=heuristic) (Max Rate: <span style="color: #c0c000; font-weight: bold">2355</span>)
   - AHCは、橙(rate2400)を目標に、ゆるく参加しています
 
 ## :material-github: GitHub

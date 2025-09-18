@@ -297,6 +297,29 @@ class WalkersAliasMethod {
   - ランダムに集合のindexを選ぶ
   - 「[0,N)の整数の集合を管理する定数倍が軽いデータ構造」([高速化](./speedup.md),[IndexSet](./index_set.md))を使う
 - 要素に重みをつけて、重み付きサンプリングする
+
+```c++
+class RandomSelector {
+    vector<int> table;
+
+   public:
+    RandomSelector() {
+    }
+    RandomSelector(const vector<int>& weights) {
+        for (int i = 0; i < weights.size(); i++) add(i, weights[i]);
+    }
+    void add(int val, int weight) {
+        for (int i = 0; i < weight; i++) {
+            table.push_back(val);
+        }
+    }
+    inline int select() {
+        if (table.size() == 0) return -1;
+        return table[xor128() % table.size()];
+    }
+};
+```
+
 - 要素に重み(乱数)をつけて、ソート or priority_queueして前から選ぶ
 - ランダムにk要素選んで、評価値を計算して、一番良いものを選ぶ
   - 評価値を求めるのが重い場合、選択時に計算を持ってこれるテク
