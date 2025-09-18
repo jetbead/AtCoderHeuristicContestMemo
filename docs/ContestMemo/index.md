@@ -4,6 +4,9 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc053.png" class="trimimg"> | [第12回Asprovaプログラミングコンテスト(AHC053)](./ahc053.md) | <span style="color: #0000cc;">short</span> | :material-check: |
+| <img loading="lazy" src="../imgs/ahc052.png" class="trimimg"> | [AHC052](./ahc052.md) | <span style="color: #0000cc;">short</span> | |
+| <img loading="lazy" src="../imgs/ahc051.png" class="trimimg"> | [THIRDプログラミングコンテスト2025夏(AHC051)](./ahc051.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc050.png" class="trimimg"> | [AHC050](./ahc050.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc049.png" class="trimimg"> | [トヨタ自動車プログラミングコンテスト2025#3(AHC049)](./ahc049.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc048.png" class="trimimg"> | [MC Digitalプログラミングコンテスト2025(AHC048)](./ahc048.md) | <span style="color: #cc0000;">long</span> | :material-check: |
