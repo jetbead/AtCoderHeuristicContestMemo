@@ -4,6 +4,8 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc055.png" class="trimimg"> | [RECRUIT 日本橋ハーフマラソン 2025秋(AHC055)](./ahc055.md) | <span style="color: #0000cc;">short</span> | :material-check: |
+| <img loading="lazy" src="../imgs/ahc054.png" class="trimimg"> | [ALGO ARTISプログラミングコンテスト2025夏(AHC054)](./ahc054.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc053.png" class="trimimg"> | [第12回Asprovaプログラミングコンテスト(AHC053)](./ahc053.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc052.png" class="trimimg"> | [AHC052](./ahc052.md) | <span style="color: #0000cc;">short</span> | |
 | <img loading="lazy" src="../imgs/ahc051.png" class="trimimg"> | [THIRDプログラミングコンテスト2025夏(AHC051)](./ahc051.md) | <span style="color: #cc0000;">long</span> | :material-check: |
