@@ -1929,6 +1929,29 @@
   
   
     <li class="md-nav__item">
+      <a href="csr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSR(compressed sparse row)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="debug_print.html" class="md-nav__link">
         
   
@@ -3132,10 +3155,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_47" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_48" >
         
           
-          <label class="md-nav__link" for="__nav_3_47" id="__nav_3_47_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_48" id="__nav_3_48_label" tabindex="0">
             
   
   
@@ -3148,8 +3171,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_47_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_47">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_48_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_48">
             <span class="md-nav__icon md-icon"></span>
             Cpp lib
           </label>
@@ -3293,10 +3316,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_48" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_49" >
         
           
-          <label class="md-nav__link" for="__nav_3_48" id="__nav_3_48_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_49" id="__nav_3_49_label" tabindex="0">
             
   
   
@@ -3309,8 +3332,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_48_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_48">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_49_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_49">
             <span class="md-nav__icon md-icon"></span>
             Design patterns
           </label>
@@ -4351,7 +4374,7 @@ T = T0 * pow(T1/T0, r)
 <li>自分のコードの場合は、以下のようにする感じ？(＋温度調整)
 <div class="highlight"><pre><span></span><code>if (exp(delta / T) &gt;= frand()) {
 ↓
-if (((uint32_t)(1) &lt;&lt; (uint32_t)(32 + delta / T)) &gt;= xor128()) {
+if (((uint32_t)(1) &lt;&lt; (uint32_t)max(0.0, 32 + delta / T)) &gt;= xor128()) {
 </code></pre></div></li>
 </ul>
 <h2 id="_18">状態の複数候補生成/サンプリング<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
