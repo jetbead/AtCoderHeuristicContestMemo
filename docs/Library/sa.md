@@ -213,7 +213,7 @@ T = T0 * pow(T1/T0, r)
 ```
 if (exp(delta / T) >= frand()) {
 ↓
-if (((uint32_t)(1) << (uint32_t)(32 + delta / T)) >= xor128()) {
+if (((uint32_t)(1) << (uint32_t)max(0.0, 32 + delta / T)) >= xor128()) {
 ```
 
 ## 状態の複数候補生成/サンプリング

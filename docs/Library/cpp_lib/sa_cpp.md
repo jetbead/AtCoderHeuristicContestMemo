@@ -181,6 +181,7 @@ double calc_temp(double sec, double time_limit) {
     static const double START_TEMP = 10.0;
     static const double END_TEMP = 1e-9;
     return START_TEMP + (END_TEMP - START_TEMP) * sec / time_limit;
+    // return START_TEMP * pow(END_TEMP / START_TEMP, sec / time_limit);
 }
 
 void solve() {
@@ -398,6 +399,7 @@ double calc_temp(double sec, double time_limit) {
     static const double START_TEMP = 10.0;
     static const double END_TEMP = 1e-9;
     return START_TEMP + (END_TEMP - START_TEMP) * sec / time_limit;
+    // return START_TEMP * pow(END_TEMP / START_TEMP, sec / time_limit);
 }
 
 void solve() {
