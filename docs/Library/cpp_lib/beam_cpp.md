@@ -18,6 +18,7 @@
   - 出力を永続stackにする
   - 状態のコピーコスト削減(状態のサイズを小さくする、スコアだけを先に計算して上位のみ状態を生成する)
   - priority_queue部分の改善(逆にしてBEAM_WIDTH個以上ならpopする、など)
+    - [cutoff priority_queue](../cutoff_priority_queue.md)
   - 重複排除
   - 多様性確保
   - 評価値、ハッシュ値の差分計算

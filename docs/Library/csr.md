@@ -8,6 +8,8 @@
 
 ## コード
 
+- spanを使っているためc++20以上
+
 ```cpp
 template <class T>
 class CSR {
@@ -46,6 +48,12 @@ class CSR {
     size_t size(size_t i) const {
         return compressed_rows[i + 1] - compressed_rows[i];
     }
+    span<T> get_span(size_t i) {
+        return span{columns}.subspan(compressed_rows[i], size(i));
+    }
+    T& operator()(size_t i, size_t j) {
+        return columns[compressed_rows[i] + j];
+    }
     const T& get(size_t i, size_t j) const {
         return columns[compressed_rows[i] + j];
     }
@@ -55,7 +63,7 @@ class CSR {
     const vector<T>& get_columns() const {
         return columns;
     }
-    const size_t get_column_offset(size_t i) const {
+    const size_t get_columns_offset(size_t i) const {
         return compressed_rows[i];
     }
 };
@@ -76,9 +84,8 @@ CSR<int> csr(v);
 
 rep(i, csr.rows_size()) {
     cerr << i << ": ";
-    const size_t sz = csr.size(i);
-    rep(j, sz) {
-        cerr << csr.get(i, j) << " ";
+    for (int x : csr.get_span(i)) {
+        cerr << x << " ";
     }
     cerr << endl;
 }

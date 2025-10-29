@@ -45,6 +45,13 @@
 - [FastClearingArray](./cpp_lib/fast_clearing_array_cpp.md)
   - [FastClearingArray2D](./cpp_lib/grid_cpp.md)
 - [CSR(compressed sparse row)](./csr.md)
+- [足切りpriority_queue](./cutoff_priority_queue.md)
+- [ボロノイ図/ドロネー三角形分割](./voronoi.md)
+- [最短経路木](./shotest_path_tree.md)
+- [プリム法ベースシュタイナー木](./prim_steiner_tree.md)
+- [二重確率行列](./doubly_stochastic_matrix.md)
+- [オブジェクトプール](./object_pool.md)
+- [ランダムDFS木/DFSパス](./dfs_tree_dfs_path.md)
 
 ## デバッグ、ビジュアライザ
 

@@ -33,6 +33,7 @@
     - DFSで、子の頂点、今の頂点の順で処理
   - レベル順(level-order)
     - BFS
+- [ランダムDFS木/DFSパス](./dfs_tree_dfs_path.md)
 
 ## 全域木
 
@@ -71,10 +72,7 @@
 
 ## ドロネー図/ドロネー三角形分割/ボロノイ図
 
-- https://qiita.com/tsukasa__diary/items/a835c17e5bf4935636c4
-- https://en.wikipedia.org/wiki/Fortune%27s_algorithm
-- https://github.com/mapbox/delaunator
-- boost voronoi diagram
+- [ボロノイ図/ドロネー三角形分割](./voronoi.md)
 - (平面グラフの辺数は高々3N-6本)
 
 ## オイラーツアーテクニック
