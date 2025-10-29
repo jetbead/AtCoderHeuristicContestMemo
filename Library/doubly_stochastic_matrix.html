@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="fast_clearing_array_cpp.html">
+        <link rel="prev" href="dfs_tree_dfs_path.html">
       
       
-        <link rel="next" href="sa_cpp.html">
+        <link rel="next" href="eigen.html">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>グリッド操作 - AtCoder Heuristic Contest Memo</title>
+        <title>二重確率行列 - AtCoder Heuristic Contest Memo</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-header__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              グリッド操作
+              二重確率行列
             
           </span>
         </div>
@@ -148,7 +148,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
+    <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -166,7 +166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -226,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/index.html" class="md-nav__link">
+      <a href="../ContestMemo/index.html" class="md-nav__link">
         
   
   
@@ -249,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc001.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc001.html" class="md-nav__link">
         
   
   
@@ -272,7 +272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc002.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc002.html" class="md-nav__link">
         
   
   
@@ -295,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc003.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc003.html" class="md-nav__link">
         
   
   
@@ -318,7 +318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc004.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc004.html" class="md-nav__link">
         
   
   
@@ -341,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc005.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc005.html" class="md-nav__link">
         
   
   
@@ -364,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc006.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc006.html" class="md-nav__link">
         
   
   
@@ -387,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc007.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc007.html" class="md-nav__link">
         
   
   
@@ -410,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc008.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc008.html" class="md-nav__link">
         
   
   
@@ -433,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc009.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc009.html" class="md-nav__link">
         
   
   
@@ -456,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc010.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc010.html" class="md-nav__link">
         
   
   
@@ -479,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc011.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc011.html" class="md-nav__link">
         
   
   
@@ -502,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc012.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc012.html" class="md-nav__link">
         
   
   
@@ -525,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc013.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc013.html" class="md-nav__link">
         
   
   
@@ -548,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc014.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc014.html" class="md-nav__link">
         
   
   
@@ -571,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc015.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc015.html" class="md-nav__link">
         
   
   
@@ -594,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc016.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc016.html" class="md-nav__link">
         
   
   
@@ -617,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc017.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc017.html" class="md-nav__link">
         
   
   
@@ -640,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc018.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc018.html" class="md-nav__link">
         
   
   
@@ -663,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc019.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc019.html" class="md-nav__link">
         
   
   
@@ -686,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc020.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc020.html" class="md-nav__link">
         
   
   
@@ -709,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc021.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc021.html" class="md-nav__link">
         
   
   
@@ -732,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc022.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc022.html" class="md-nav__link">
         
   
   
@@ -755,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc023.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc023.html" class="md-nav__link">
         
   
   
@@ -778,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc024.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc024.html" class="md-nav__link">
         
   
   
@@ -801,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc025.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc025.html" class="md-nav__link">
         
   
   
@@ -824,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc026.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc026.html" class="md-nav__link">
         
   
   
@@ -847,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc027.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc027.html" class="md-nav__link">
         
   
   
@@ -870,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc028.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc028.html" class="md-nav__link">
         
   
   
@@ -893,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc029.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc029.html" class="md-nav__link">
         
   
   
@@ -916,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc030.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc030.html" class="md-nav__link">
         
   
   
@@ -939,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc031.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc031.html" class="md-nav__link">
         
   
   
@@ -962,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc032.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc032.html" class="md-nav__link">
         
   
   
@@ -985,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc033.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc033.html" class="md-nav__link">
         
   
   
@@ -1008,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc034.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc034.html" class="md-nav__link">
         
   
   
@@ -1031,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc035.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc035.html" class="md-nav__link">
         
   
   
@@ -1054,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc036.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc036.html" class="md-nav__link">
         
   
   
@@ -1077,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc037.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc037.html" class="md-nav__link">
         
   
   
@@ -1100,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc038.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc038.html" class="md-nav__link">
         
   
   
@@ -1123,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc039.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc039.html" class="md-nav__link">
         
   
   
@@ -1146,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc040.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc040.html" class="md-nav__link">
         
   
   
@@ -1169,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc041.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc041.html" class="md-nav__link">
         
   
   
@@ -1192,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc042.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc042.html" class="md-nav__link">
         
   
   
@@ -1215,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc043.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc043.html" class="md-nav__link">
         
   
   
@@ -1238,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc044.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc044.html" class="md-nav__link">
         
   
   
@@ -1261,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc045.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc045.html" class="md-nav__link">
         
   
   
@@ -1284,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc046.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc046.html" class="md-nav__link">
         
   
   
@@ -1307,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc047.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc047.html" class="md-nav__link">
         
   
   
@@ -1330,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc048.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc048.html" class="md-nav__link">
         
   
   
@@ -1353,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc049.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc049.html" class="md-nav__link">
         
   
   
@@ -1376,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc050.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc050.html" class="md-nav__link">
         
   
   
@@ -1399,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc051.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc051.html" class="md-nav__link">
         
   
   
@@ -1422,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc052.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc052.html" class="md-nav__link">
         
   
   
@@ -1445,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc053.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc053.html" class="md-nav__link">
         
   
   
@@ -1468,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc054.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc054.html" class="md-nav__link">
         
   
   
@@ -1491,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/ahc055.html" class="md-nav__link">
+      <a href="../ContestMemo/ahc055.html" class="md-nav__link">
         
   
   
@@ -1514,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/httf2022qual.html" class="md-nav__link">
+      <a href="../ContestMemo/httf2022qual.html" class="md-nav__link">
         
   
   
@@ -1537,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/intro-heuristics.html" class="md-nav__link">
+      <a href="../ContestMemo/intro-heuristics.html" class="md-nav__link">
         
   
   
@@ -1560,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/masters2024-final.html" class="md-nav__link">
+      <a href="../ContestMemo/masters2024-final.html" class="md-nav__link">
         
   
   
@@ -1583,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/masters2024-qual.html" class="md-nav__link">
+      <a href="../ContestMemo/masters2024-qual.html" class="md-nav__link">
         
   
   
@@ -1606,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/masters2025-final.html" class="md-nav__link">
+      <a href="../ContestMemo/masters2025-final.html" class="md-nav__link">
         
   
   
@@ -1629,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/masters2025-qual.html" class="md-nav__link">
+      <a href="../ContestMemo/masters2025-qual.html" class="md-nav__link">
         
   
   
@@ -1652,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/rcl-contest-2021-long.html" class="md-nav__link">
+      <a href="../ContestMemo/rcl-contest-2021-long.html" class="md-nav__link">
         
   
   
@@ -1675,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ContestMemo/toyota-2023-summer-final.html" class="md-nav__link">
+      <a href="../ContestMemo/toyota-2023-summer-final.html" class="md-nav__link">
         
   
   
@@ -1745,7 +1745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -1768,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ai.html" class="md-nav__link">
+      <a href="ai.html" class="md-nav__link">
         
   
   
@@ -1791,7 +1791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../approx_algo.html" class="md-nav__link">
+      <a href="approx_algo.html" class="md-nav__link">
         
   
   
@@ -1814,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../beam_search.html" class="md-nav__link">
+      <a href="beam_search.html" class="md-nav__link">
         
   
   
@@ -1837,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bitboard.html" class="md-nav__link">
+      <a href="bitboard.html" class="md-nav__link">
         
   
   
@@ -1860,7 +1860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../boost.html" class="md-nav__link">
+      <a href="boost.html" class="md-nav__link">
         
   
   
@@ -1883,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../branch_and_bound.html" class="md-nav__link">
+      <a href="branch_and_bound.html" class="md-nav__link">
         
   
   
@@ -1906,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../compress.html" class="md-nav__link">
+      <a href="compress.html" class="md-nav__link">
         
   
   
@@ -1929,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../csr.html" class="md-nav__link">
+      <a href="csr.html" class="md-nav__link">
         
   
   
@@ -1952,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cutoff_priority_queue.html" class="md-nav__link">
+      <a href="cutoff_priority_queue.html" class="md-nav__link">
         
   
   
@@ -1975,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../debug_print.html" class="md-nav__link">
+      <a href="debug_print.html" class="md-nav__link">
         
   
   
@@ -1998,1064 +1998,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../dfs_tree_dfs_path.html" class="md-nav__link">
+      <a href="dfs_tree_dfs_path.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     ランダムDFS木/DFSパス
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../doubly_stochastic_matrix.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    二重確率行列
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../eigen.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    行列ライブラリEigen
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../eval_function.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    評価関数設計
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exp2.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Exploration &amp; Exploitation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../experiments.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    実験、環境構築
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../flow.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    フロー
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../func.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    C++関数
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../game_tree.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ゲーム木探索
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../glossary.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    用語集
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gnuplot.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    gnuplotで簡易ビジュアライザ
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../graph.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    グラフ
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../grid.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    グリッド操作
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how_to_get_started.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    How to get started!
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../index_set.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    IndexSet
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../matching.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    マッチング
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../math_opt.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    数理計画法/数理最適化
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ml.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    機械学習
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multi_agent.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    マルチエージェント
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../object_pool.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    オブジェクトプール
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../optuna.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    optuna
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../patterns.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    パターン生成
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../persistent_stack.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    永続stack
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../prim_steiner_tree.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    プリム法ベースシュタイナー木
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../python_snippet.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    pythonスニペット
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../random.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    乱数/乱択
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../result_analy.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    実行結果の分析
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sa.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    局所探索/山登り/焼きなまし
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../shotest_path_tree.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    最短経路木
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../speedup.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    高速化(C++)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../stage_array.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Stage 機能付き Value/Array
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../stats_modeling.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    統計モデリング
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../summed_area_table.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    2次元累積和
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../support_tool.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Support Tool
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../svg.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    SVGで簡易ビジュアライザ
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../timer.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Timer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tips.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tips
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tree.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    木構造
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tsp.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    TSP(巡回セールスマン問題)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../uncategorized_topic.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    未分類トピック
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../uncertainty.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    不確かさの取り扱い
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../visualizer.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Visualizer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../voronoi.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ボロノイ図/ドロネー三角形分割
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_55" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_55" id="__nav_3_55_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Cpp lib
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_55_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_55">
-            <span class="md-nav__icon md-icon"></span>
-            Cpp lib
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="beam_cpp.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ビームサーチ用テンプレート
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="fast_clearing_array_cpp.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Fast-clearing Array
     
   </span>
   
@@ -3082,17 +2030,76 @@
         
       
       
-      <a href="grid_cpp.html" class="md-nav__link md-nav__link--active">
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    二重確率行列
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="doubly_stochastic_matrix.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    グリッド操作
+    二重確率行列
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      コード
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3106,7 +2113,1057 @@
   
   
     <li class="md-nav__item">
-      <a href="sa_cpp.html" class="md-nav__link">
+      <a href="eigen.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行列ライブラリEigen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="eval_function.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    評価関数設計
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exp2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exploration &amp; Exploitation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="experiments.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実験、環境構築
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flow.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    フロー
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="func.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C++関数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="game_tree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ゲーム木探索
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用語集
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gnuplot.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gnuplotで簡易ビジュアライザ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graph.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    グラフ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="grid.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    グリッド操作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="how_to_get_started.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to get started!
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index_set.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IndexSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="matching.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マッチング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math_opt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数理計画法/数理最適化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ml.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    機械学習
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="multi_agent.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    マルチエージェント
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="object_pool.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    オブジェクトプール
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="optuna.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    optuna
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="patterns.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    パターン生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="persistent_stack.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    永続stack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="prim_steiner_tree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    プリム法ベースシュタイナー木
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python_snippet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pythonスニペット
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="random.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    乱数/乱択
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="result_analy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    実行結果の分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    局所探索/山登り/焼きなまし
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="shotest_path_tree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    最短経路木
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="speedup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高速化(C++)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stage_array.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Stage 機能付き Value/Array
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stats_modeling.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    統計モデリング
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="summed_area_table.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2次元累積和
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="support_tool.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Support Tool
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="svg.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SVGで簡易ビジュアライザ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="timer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Timer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tips.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tree.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    木構造
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tsp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TSP(巡回セールスマン問題)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="uncategorized_topic.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    未分類トピック
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="uncertainty.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    不確かさの取り扱い
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="visualizer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visualizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="voronoi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ボロノイ図/ドロネー三角形分割
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_55" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_55" id="__nav_3_55_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cpp lib
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_55_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_55">
+            <span class="md-nav__icon md-icon"></span>
+            Cpp lib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cpp_lib/beam_cpp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ビームサーチ用テンプレート
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cpp_lib/fast_clearing_array_cpp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fast-clearing Array
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cpp_lib/grid_cpp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    グリッド操作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cpp_lib/sa_cpp.html" class="md-nav__link">
         
   
   
@@ -3129,7 +3186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tsp_cpp.html" class="md-nav__link">
+      <a href="cpp_lib/tsp_cpp.html" class="md-nav__link">
         
   
   
@@ -3198,7 +3255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design_patterns/config.html" class="md-nav__link">
+      <a href="design_patterns/config.html" class="md-nav__link">
         
   
   
@@ -3221,7 +3278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design_patterns/gameai.html" class="md-nav__link">
+      <a href="design_patterns/gameai.html" class="md-nav__link">
         
   
   
@@ -3244,7 +3301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design_patterns/io_wrapper.html" class="md-nav__link">
+      <a href="design_patterns/io_wrapper.html" class="md-nav__link">
         
   
   
@@ -3267,7 +3324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design_patterns/multiagent.html" class="md-nav__link">
+      <a href="design_patterns/multiagent.html" class="md-nav__link">
         
   
   
@@ -3290,7 +3347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design_patterns/transition.html" class="md-nav__link">
+      <a href="design_patterns/transition.html" class="md-nav__link">
         
   
   
@@ -3368,7 +3425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/index.html" class="md-nav__link">
+      <a href="../blog/index.html" class="md-nav__link">
         
   
   
@@ -3431,7 +3488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/archive/2024.html" class="md-nav__link">
+      <a href="../blog/archive/2024.html" class="md-nav__link">
         
   
   
@@ -3456,7 +3513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/archive/2023.html" class="md-nav__link">
+      <a href="../blog/archive/2023.html" class="md-nav__link">
         
   
   
@@ -3527,7 +3584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/category/estimate.html" class="md-nav__link">
+      <a href="../blog/category/estimate.html" class="md-nav__link">
         
   
   
@@ -3552,7 +3609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/category/misc.html" class="md-nav__link">
+      <a href="../blog/category/misc.html" class="md-nav__link">
         
   
   
@@ -3577,7 +3634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/category/review.html" class="md-nav__link">
+      <a href="../blog/category/review.html" class="md-nav__link">
         
   
   
@@ -3628,6 +3685,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      コード
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3642,93 +3734,57 @@
 
 
 
-<h1 id="_1">グリッド操作<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">P</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
-<span class="w">    </span><span class="n">P</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">y</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">P</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">y</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">};</span>
-<span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">Array2D</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;use int8_t instead of bool&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">H</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Array2D</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">H</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">W</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">H</span><span class="p">(</span><span class="n">H</span><span class="p">),</span><span class="w"> </span><span class="n">W</span><span class="p">(</span><span class="n">W</span><span class="p">),</span><span class="w"> </span><span class="n">v</span><span class="p">(</span><span class="n">H</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">clear</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">H</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">());</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="p">];</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="p">];</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">};</span>
-<span class="k">using</span><span class="w"> </span><span class="n">Grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Array2D</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
-
-<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">FastClearingArray2D</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">base</span><span class="p">;</span>
-<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">mx</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Array2D</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<h1 id="_1">二重確率行列<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">概要<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>各行の和、各列の和がそれぞれ1になる非負の実正方行列<ul>
+<li><a href="../ContestMemo/ahc022.html">AHC022</a></li>
+</ul>
+</li>
+<li>以下の実装では、normalize()を呼び出したら正規化する</li>
+</ul>
+<h2 id="_3">コード<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">DoublyStochasticMatrix</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">probs</span><span class="p">;</span>
 
 <span class="w">   </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">FastClearingArray2D</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">H</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">W</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">base</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">mx</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">v</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">DoublyStochasticMatrix</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">N</span><span class="p">),</span><span class="w"> </span><span class="n">probs</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">N</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">probs</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">base</span><span class="p">;</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">probs</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">];</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">        </span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">base</span><span class="p">;</span>
-<span class="w">        </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">mx</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">p</span><span class="p">]);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">clear</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">base</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1e9</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">            </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">            </span><span class="n">v</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">normalize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">probs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">probs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">probs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">probs</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
-
-<span class="c1">// 方向操作</span>
-<span class="k">enum</span><span class="w"> </span><span class="nc">Angle</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span>
-<span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ULDR&quot;</span><span class="p">;</span>
-<span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">rev_angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;DRUL&quot;</span><span class="p">;</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vy</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vx</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">rev</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">using</span><span class="w"> </span><span class="n">Dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="n">P</span><span class="w"> </span><span class="nf">get_dir_pos</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">P</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vy</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vx</span><span class="p">[</span><span class="n">k</span><span class="p">]);</span>
-<span class="p">}</span>
 </code></pre></div>
+<h2 id="verified">Verified<a class="headerlink" href="#verified" title="Permanent link">&para;</a></h2>
+<ul>
+<li>なし</li>
+</ul>
 
 
 
@@ -3781,12 +3837,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="../../js/extra.js"></script>
+        <script src="../js/extra.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

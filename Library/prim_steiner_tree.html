@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="doubly_stochastic_matrix.html">
+        <link rel="prev" href="persistent_stack.html">
       
       
-        <link rel="next" href="eval_function.html">
+        <link rel="next" href="python_snippet.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>行列ライブラリEigen - AtCoder Heuristic Contest Memo</title>
+        <title>プリム法ベースシュタイナー木 - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eigen" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              行列ライブラリEigen
+              プリム法ベースシュタイナー木
             
           </span>
         </div>
@@ -2041,32 +2041,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    行列ライブラリEigen
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="eigen.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="eigen.html" class="md-nav__link">
         
   
   
@@ -2077,44 +2055,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      高速
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2584,10 +2524,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="prim_steiner_tree.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    プリム法ベースシュタイナー木
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="prim_steiner_tree.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2598,6 +2560,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      コード
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      テストコード
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3683,18 +3701,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Links
+      概要
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      高速
+      コード
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      テストコード
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified
     </span>
   </a>
   
@@ -3716,39 +3752,155 @@
 
 
 
-<h1 id="eigen">行列ライブラリEigen<a class="headerlink" href="#eigen" title="Permanent link">&para;</a></h1>
+<h1 id="_1">プリム法ベースシュタイナー木<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">概要<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ヘッダオンリーなC++ライブラリ<ul>
-<li>C++標準ライブラリ以外の依存関係はない</li>
-<li>ビルドも不要(ドキュメントとテストだけ)</li>
+<li><a href="https://bowwowforeach.hatenablog.com/entry/2023/06/18/213212">https://bowwowforeach.hatenablog.com/entry/2023/06/18/213212</a></li>
+<li>プリム法ベースのシュタイナー木<ul>
+<li>厳密解ではなく、1つのある程度良い解を求めるアルゴリズム</li>
 </ul>
 </li>
 </ul>
-<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<h2 id="_3">コード<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">namespace</span><span class="w"> </span><span class="nn">PrimSteinerTree</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Edge</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dest</span><span class="p">;</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Edge</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">src</span><span class="p">(</span><span class="mi">-1</span><span class="p">),</span><span class="w"> </span><span class="n">dest</span><span class="p">(</span><span class="mi">-1</span><span class="p">),</span><span class="w"> </span><span class="n">cost</span><span class="p">(</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">Edge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dest</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">cost</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">src</span><span class="p">(</span><span class="n">src</span><span class="p">),</span><span class="w"> </span><span class="n">dest</span><span class="p">(</span><span class="n">dest</span><span class="p">),</span><span class="w"> </span><span class="n">cost</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Edge</span><span class="o">&amp;</span><span class="w"> </span><span class="n">others</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">cost</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">others</span><span class="p">.</span><span class="n">cost</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PrimSteinerTree</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">Cand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">G</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">get_nearest_node_path</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">is_terminals</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">used</span><span class="p">,</span>
+<span class="w">                                          </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">used_nodes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dist</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">INF</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">prv</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Cand</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Cand</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">greater</span><span class="o">&lt;</span><span class="n">Cand</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">que</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">used_nodes</span><span class="p">)</span><span class="w"> </span><span class="n">que</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">Edge</span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">que</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">cand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">que</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+<span class="w">            </span><span class="n">que</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">cand</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">dest</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">INF</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">            </span><span class="n">dist</span><span class="p">[</span><span class="n">cand</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">dest</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cand</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
+<span class="w">            </span><span class="n">prv</span><span class="p">[</span><span class="n">cand</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">dest</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cand</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">used</span><span class="p">[</span><span class="n">cand</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">dest</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">is_terminals</span><span class="p">[</span><span class="n">cand</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">dest</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cand</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">dest</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">[</span><span class="n">cand</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">dest</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">edge</span><span class="p">.</span><span class="n">dest</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">INF</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">                </span><span class="n">que</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">cand</span><span class="p">.</span><span class="n">first</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">cost</span><span class="p">,</span><span class="w"> </span><span class="n">edge</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">target</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">ret</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">prv</span><span class="p">[</span><span class="n">target</span><span class="p">]);</span>
+<span class="w">            </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prv</span><span class="p">[</span><span class="n">target</span><span class="p">].</span><span class="n">src</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">used</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">   </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">PrimSteinerTree</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">N</span><span class="p">(</span><span class="n">N</span><span class="p">),</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">add_edge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">cost</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">G</span><span class="p">[</span><span class="n">s</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">cost</span><span class="p">);</span>
+<span class="w">        </span><span class="n">G</span><span class="p">[</span><span class="n">t</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">cost</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">terminals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">ret</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// ターミナル頂点</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num_remain_terminal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terminals</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">is_terminals</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">terminals</span><span class="p">)</span><span class="w"> </span><span class="n">is_terminals</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// シュタイナー木の頂点集合管理</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">used</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">used_nodes</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// ターミナル頂点の1つを木に入れる</span>
+<span class="w">        </span><span class="n">num_remain_terminal</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="n">used_nodes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">terminals</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="w">        </span><span class="n">used</span><span class="p">[</span><span class="n">terminals</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// 木から一番近いターミナル頂点までのパスを見つけるのを繰り返す</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num_remain_terminal</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_nearest_node_path</span><span class="p">(</span><span class="n">is_terminals</span><span class="p">,</span><span class="w"> </span><span class="n">used</span><span class="p">,</span><span class="w"> </span><span class="n">used_nodes</span><span class="p">);</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Edge</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">used</span><span class="p">[</span><span class="n">edge</span><span class="p">.</span><span class="n">src</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">used</span><span class="p">[</span><span class="n">edge</span><span class="p">.</span><span class="n">src</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">used_nodes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">edge</span><span class="p">.</span><span class="n">src</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">used</span><span class="p">[</span><span class="n">edge</span><span class="p">.</span><span class="n">dest</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">used</span><span class="p">[</span><span class="n">edge</span><span class="p">.</span><span class="n">dest</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">used_nodes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">edge</span><span class="p">.</span><span class="n">dest</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">ret</span><span class="p">[</span><span class="n">edge</span><span class="p">.</span><span class="n">src</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">edge</span><span class="p">);</span>
+<span class="w">                </span><span class="n">ret</span><span class="p">[</span><span class="n">edge</span><span class="p">.</span><span class="n">dest</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">edge</span><span class="p">.</span><span class="n">dest</span><span class="p">,</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">cost</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">num_remain_terminal</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="p">};</span><span class="w">  </span><span class="c1">// namespace PrimSteinerTree</span>
+</code></pre></div>
+<h2 id="_4">テストコード<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>公式<ul>
-<li><a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">https://eigen.tuxfamily.org/index.php?title=Main_Page</a></li>
+<li>bowwowforeachさんのブログの例</li>
 </ul>
-</li>
-<li>公開コピー誌 行列ライブラリEigenのメモ(暗黒通信団)<ul>
-<li><a href="http://ankokudan.org/d/dl/pdf/pdf-eigennote.pdf">http://ankokudan.org/d/dl/pdf/pdf-eigennote.pdf</a></li>
-</ul>
-</li>
-<li>C++行列計算ライブラリEigen入門<ul>
-<li><a href="https://qiita.com/yohm/items/a03006790dc1e54a87be">https://qiita.com/yohm/items/a03006790dc1e54a87be</a></li>
-</ul>
-</li>
-<li>gitlab?<ul>
-<li><a href="https://gitlab.com/libeigen/eigen">https://gitlab.com/libeigen/eigen</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="_1">高速<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">PrimSteinerTree</span><span class="o">::</span><span class="n">PrimSteinerTree</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pst</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pst</span><span class="p">.</span><span class="n">add_edge</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pst</span><span class="p">.</span><span class="n">build</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">});</span>
+<span class="w">    </span><span class="n">rep</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">edge</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">tree</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">src</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">dest</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">cost</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="verified">Verified<a class="headerlink" href="#verified" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Expression Template(式テンプレート)による遅延評価</li>
-<li>自動ベクトル化(SIMD)、ループ展開</li>
-<li>固定サイズの行列で動的メモリ割り当ての回避、</li>
-<li>大きな行列でのキャッシュの扱いへの配慮</li>
+<li>なし</li>
 </ul>
 
 
