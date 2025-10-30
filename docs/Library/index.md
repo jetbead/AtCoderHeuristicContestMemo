@@ -52,6 +52,7 @@
 - [二重確率行列](./doubly_stochastic_matrix.md)
 - [オブジェクトプール](./object_pool.md)
 - [ランダムDFS木/DFSパス](./dfs_tree_dfs_path.md)
+- [Queue](./queue.md)
 
 ## デバッグ、ビジュアライザ
 
