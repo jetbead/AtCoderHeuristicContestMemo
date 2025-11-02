@@ -1,6 +1,5 @@
 # グリッド操作
 
-
 ```cpp
 struct P {
     int y, x;
@@ -73,13 +72,15 @@ class FastClearingArray2D {
         }
     }
 };
+```
 
+```cpp
 // 方向操作
 enum Angle { U = 0, L = 1, D = 2, R = 3 };
 const string angle = "ULDR";
 const string rev_angle = "DRUL";
-const int vy[4] = {-1, 0, 1, 0};
-const int vx[4] = {0, -1, 0, 1};
+static constexpr int vy[4] = {-1, 0, 1, 0};
+static constexpr int vx[4] = {0, -1, 0, 1};
 int rev(int k) {
     return (k + 2) % 4;
 }

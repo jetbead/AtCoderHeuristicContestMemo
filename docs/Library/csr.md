@@ -5,10 +5,11 @@
 - 静的なグラフの隣接リスト`vector<vector<T>>`を1次元vector2つで管理する
   - 隣接リストでの各行について、1次元に要素を並べたcolumnsでのオフセットをcompressed_rowsとして持っておく
 - 1次元配列で管理すると、キャッシュやメモリアクセスでの高速化などが見込める可能性がある
+- 注意
+  - 常に速くなるとは限らない(むしろ遅くなる可能性もある)
+  - 最適化オプションやcache効率、処理の内容で大きく変わる可能性がありそう
 
 ## コード
-
-- spanを使っているためc++20以上
 
 ```cpp
 template <class T>
@@ -16,6 +17,19 @@ class CSR {
     vector<size_t> compressed_rows;
     vector<T> columns;
 
+   public:
+    struct CSRSpan {
+        using Iterator = typename vector<T>::const_iterator;
+        Iterator b, e;
+        CSRSpan(Iterator b, Iterator e) : b(b), e(e) {
+        }
+        Iterator begin() const {
+            return b;
+        }
+        Iterator end() const {
+            return e;
+        }
+    };
    public:
     CSR() {
     }
@@ -48,8 +62,9 @@ class CSR {
     size_t size(size_t i) const {
         return compressed_rows[i + 1] - compressed_rows[i];
     }
-    span<T> get_span(size_t i) {
-        return span{columns}.subspan(compressed_rows[i], size(i));
+    CSRSpan get_span(size_t i) const {
+        return CSRSpan{columns.begin() + compressed_rows[i],
+                       columns.begin() + compressed_rows[i + 1]};
     }
     T& operator()(size_t i, size_t j) {
         return columns[compressed_rows[i] + j];
