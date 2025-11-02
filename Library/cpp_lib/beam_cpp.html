@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -3108,6 +3108,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#candidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Candidate生成によるビームサーチ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Candidate生成によるビームサーチ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      前方更新型ビームサーチ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      差分更新型ビームサーチ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3707,6 +3740,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#candidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Candidate生成によるビームサーチ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Candidate生成によるビームサーチ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      前方更新型ビームサーチ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      差分更新型ビームサーチ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3834,6 +3900,492 @@
 
 <span class="w">    </span><span class="c1">// ...</span>
 <span class="p">}</span>
+</code></pre></div>
+<h2 id="candidate">Candidate生成によるビームサーチ<a class="headerlink" href="#candidate" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Stateが重い場合、上記のように遷移先をStateで生成すると、処理時間的にもメモリ使用量的にも厳しい</li>
+<li>Stateから、評価値や操作差分だけなど必要最低限の情報だけをCandidateとして生成して、それで評価値上位を求めるようにすると軽くできる</li>
+</ul>
+<h3 id="_3">前方更新型ビームサーチ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>各ターンごと、State集合からCandidate集合を生成し、その評価値上位のもののみCandidateからStateを生成する</li>
+<li>注意<ul>
+<li>毎ターン、最大でビーム幅個のState生成(Stateのコピー+変更操作)が入るので重い</li>
+<li>Stateの差分更新ができる場合は、差分更新型ビームサーチを検討する</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">namespace</span><span class="w"> </span><span class="nn">ForwardBeamSearch</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Utils</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CutOffPriorityQueue</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">max_size</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">update</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sort_and_cutoff</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">rbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">rend</span><span class="p">());</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max_size</span><span class="p">)</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">max_size</span><span class="p">);</span>
+<span class="w">        </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">   </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">CutOffPriorityQueue</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">max_size</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">max_size</span><span class="p">(</span><span class="n">max_size</span><span class="p">),</span><span class="w"> </span><span class="n">update</span><span class="p">(</span><span class="nb">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">clear</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">        </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">push</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="w">        </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">max_size</span><span class="p">)</span><span class="w"> </span><span class="n">sort_and_cutoff</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">all</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">update</span><span class="p">)</span><span class="w"> </span><span class="n">sort_and_cutoff</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="p">};</span><span class="w">  </span><span class="c1">// namespace Utils</span>
+
+<span class="c1">////////// 以下を問題ごとに書き換える //////////</span>
+
+<span class="c1">// TODO</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">;</span><span class="w">  </span><span class="c1">// 注: 高いほどよい</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint32_t</span><span class="p">;</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OpType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="n">NONE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">OP1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">OP2</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">Op</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 状態に対する変更操作の種類</span>
+<span class="w">    </span><span class="n">OpType</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 状態に対する変更操作の追加情報</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+
+<span class="w">    </span><span class="n">Op</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Score</span><span class="w"> </span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Hash</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 状態に関するもの</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="c1">// 出力に関するもの</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+
+<span class="w">    </span><span class="n">State</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 状態に対する操作をサポートする関数</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="p">};</span>
+<span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;stateの解&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 注: できるだけ軽くする</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Candidate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Score</span><span class="w"> </span><span class="n">score</span><span class="p">;</span><span class="w">     </span><span class="c1">// 変更後のスコア</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">parent_idx</span><span class="p">;</span><span class="w">  </span><span class="c1">// 元となった親stateのindex</span>
+<span class="w">    </span><span class="n">Hash</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span><span class="w">       </span><span class="c1">// 重複排除、多様性確保用</span>
+<span class="w">    </span><span class="n">Op</span><span class="w"> </span><span class="n">op</span><span class="p">;</span><span class="w">           </span><span class="c1">// 変更操作列</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">finished</span><span class="p">;</span><span class="w">   </span><span class="c1">// 終了したか</span>
+
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">Heap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">CutOffPriorityQueue</span><span class="o">&lt;</span><span class="n">Candidate</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// 指定したStateからCandidateを作成</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">expand</span><span class="p">(</span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">parent_idx</span><span class="p">,</span><span class="w"> </span><span class="n">Heap</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cands</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Candidate</span><span class="w"> </span><span class="n">cand</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="n">cands</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">cand</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// CandidateからStateを生成</span>
+<span class="n">State</span><span class="w"> </span><span class="nf">make_state_from_candidate</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">base_state</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cand</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base_state</span><span class="p">;</span><span class="w">  </span><span class="c1">// !!!Copy!!!</span>
+<span class="w">    </span><span class="n">state</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cand</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="n">state</span><span class="p">.</span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cand</span><span class="p">.</span><span class="n">hash</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">////////// ここまで //////////</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">Config</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">max_turn</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">beam_width</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">with_timeout</span><span class="p">;</span><span class="w">     </span><span class="c1">// 各ターンでのタイムアウトありで動かすかどうか</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">time_limit</span><span class="p">;</span><span class="w">     </span><span class="c1">// 処理全体のtime limit</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">expand_weight</span><span class="p">;</span><span class="w">  </span><span class="c1">// expandフェーズに使う時間割合(1.0未満)</span>
+<span class="p">};</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">get_timeout_sec</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">remain_time</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">remain_turn</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">expand_weight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 残り時間を等分割したものをこのターンで使える時間制限にする</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">remain_time</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">remain_turn</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">expand_weight</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">init_state</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Config</span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Timer</span><span class="w"> </span><span class="n">beam_timer</span><span class="p">;</span>
+<span class="w">    </span><span class="n">beam_timer</span><span class="p">.</span><span class="n">start</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="w"> </span><span class="n">states</span><span class="p">;</span>
+<span class="w">    </span><span class="n">states</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">init_state</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Heap</span><span class="w"> </span><span class="n">cands</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">beam_width</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">max_turn</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">start_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">beam_timer</span><span class="p">.</span><span class="n">getSec</span><span class="p">();</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">timeout_sec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_timeout_sec</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">time_limit</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="p">,</span>
+<span class="w">                                                   </span><span class="n">config</span><span class="p">.</span><span class="n">max_turn</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">turn</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">expand_weight</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// expand</span>
+<span class="w">        </span><span class="n">cands</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">states</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">beam_width</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">with_timeout</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">beam_timer</span><span class="p">.</span><span class="n">getSec</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">timeout_sec</span><span class="p">)</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="n">expand</span><span class="p">(</span><span class="n">states</span><span class="p">[</span><span class="n">b</span><span class="p">],</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">cands</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// cand2state</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">finished</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="w"> </span><span class="n">next_states</span><span class="p">;</span>
+<span class="w">        </span><span class="n">next_states</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">beam_width</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cand</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">cands</span><span class="p">.</span><span class="n">all</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">next_states</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">make_state_from_candidate</span><span class="p">(</span><span class="n">states</span><span class="p">[</span><span class="n">cand</span><span class="p">.</span><span class="n">parent_idx</span><span class="p">],</span><span class="w"> </span><span class="n">cand</span><span class="p">));</span>
+<span class="w">            </span><span class="n">finished</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">cand</span><span class="p">.</span><span class="n">finished</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">swap</span><span class="p">(</span><span class="n">states</span><span class="p">,</span><span class="w"> </span><span class="n">next_states</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">finished</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">states</span><span class="p">.</span><span class="n">empty</span><span class="p">());</span>
+<span class="w">    </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">best</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">states</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">best</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">};</span><span class="w">  </span><span class="c1">// namespace ForwardBeamSearch</span>
+</code></pre></div>
+<h3 id="_4">差分更新型ビームサーチ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Stateに対して、変更操作とその逆操作の処理が軽い場合、Stateのコピー無しで状態生成することで高速化できる可能性がある<ul>
+<li>move_forward(op), move_backward(op)</li>
+</ul>
+</li>
+<li>EulerTourで操作を辺として持つ実装<ul>
+<li>参考: <a href="https://eijirou-kyopro.hatenablog.com/entry/2024/02/01/115639">https://eijirou-kyopro.hatenablog.com/entry/2024/02/01/115639</a></li>
+</ul>
+</li>
+<li>注意<ul>
+<li>Opだけの情報ではStateを戻せないような場合、Opを拡張するか、Candidate/Edgeに情報を持たせて、move_forward()/move_back_ward()時に更新する</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">namespace</span><span class="w"> </span><span class="nn">EulerTourBeamSearch</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">Utils</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CutOffPriorityQueue</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">max_size</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">update</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sort_and_cutoff</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">rbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">rend</span><span class="p">());</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max_size</span><span class="p">)</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">max_size</span><span class="p">);</span>
+<span class="w">        </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">   </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">CutOffPriorityQueue</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">max_size</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">max_size</span><span class="p">(</span><span class="n">max_size</span><span class="p">),</span><span class="w"> </span><span class="n">update</span><span class="p">(</span><span class="nb">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">clear</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">        </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">push</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="w">        </span><span class="n">update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">max_size</span><span class="p">)</span><span class="w"> </span><span class="n">sort_and_cutoff</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">all</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">update</span><span class="p">)</span><span class="w"> </span><span class="n">sort_and_cutoff</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="p">};</span><span class="w">  </span><span class="c1">// namespace Utils</span>
+
+<span class="c1">////////// 以下を問題ごとに書き換える //////////</span>
+
+<span class="c1">// TODO</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">;</span><span class="w">  </span><span class="c1">// 注: 高いほどよい</span>
+<span class="k">using</span><span class="w"> </span><span class="n">Hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint32_t</span><span class="p">;</span>
+
+<span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OpType</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="n">NONE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">OP1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">OP2</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">Op</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 状態に対する変更操作の種類</span>
+<span class="w">    </span><span class="n">OpType</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 状態に対する変更操作の追加情報</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+
+<span class="w">    </span><span class="n">Op</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Op</span><span class="o">&amp;</span><span class="w"> </span><span class="n">op</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// TODO</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Score</span><span class="w"> </span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Hash</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// 状態に関するもの</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+
+<span class="w">    </span><span class="n">State</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 現在の状態からopを適用した状態に遷移する</span>
+<span class="w">    </span><span class="c1">// 注: Opだけで状態が復元できない場合は、Candidate/Edgeに持たせて更新する</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">move_forward</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Op</span><span class="o">&amp;</span><span class="w"> </span><span class="n">op</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 現在の状態にopをて供する前の状態に遷移する</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">move_backward</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Op</span><span class="o">&amp;</span><span class="w"> </span><span class="n">op</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;stateの解&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 注: できるだけ軽くする</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Candidate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Score</span><span class="w"> </span><span class="n">score</span><span class="p">;</span><span class="w">     </span><span class="c1">// 変更後のスコア</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">parent_idx</span><span class="p">;</span><span class="w">  </span><span class="c1">// 元となった親stateのindex</span>
+<span class="w">    </span><span class="n">Hash</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span><span class="w">       </span><span class="c1">// 重複排除、多様性確保用</span>
+<span class="w">    </span><span class="n">Op</span><span class="w"> </span><span class="n">op</span><span class="p">;</span><span class="w">           </span><span class="c1">// 変更操作列</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">finished</span><span class="p">;</span><span class="w">   </span><span class="c1">// 終了したか</span>
+
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&gt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">Heap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utils</span><span class="o">::</span><span class="n">CutOffPriorityQueue</span><span class="o">&lt;</span><span class="n">Candidate</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="c1">// 指定したStateからCandidateを作成</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">expand</span><span class="p">(</span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">parent_idx</span><span class="p">,</span><span class="w"> </span><span class="n">Heap</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cands</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Candidate</span><span class="w"> </span><span class="n">cand</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// TODO</span>
+<span class="w">    </span><span class="n">cands</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">cand</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">////////// ここまで //////////</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">Config</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">max_turn</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">beam_width</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">EulerTour</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Edge</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">is_forward</span><span class="p">;</span><span class="w">  </span><span class="c1">// 前進辺か</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">leaf_idx</span><span class="p">;</span><span class="w">     </span><span class="c1">// 遷移後が葉ノードなら0以上の番号</span>
+<span class="w">        </span><span class="n">Op</span><span class="w"> </span><span class="n">op</span><span class="p">;</span><span class="w">            </span><span class="c1">// 操作列</span>
+
+<span class="w">        </span><span class="n">Edge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">Edge</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">is_forward</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">leaf_idx</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Op</span><span class="o">&amp;</span><span class="w"> </span><span class="n">op</span><span class="p">)</span>
+<span class="w">            </span><span class="o">:</span><span class="w"> </span><span class="n">is_forward</span><span class="p">(</span><span class="n">is_forward</span><span class="p">),</span><span class="w"> </span><span class="n">leaf_idx</span><span class="p">(</span><span class="n">leaf_idx</span><span class="p">),</span><span class="w"> </span><span class="n">op</span><span class="p">(</span><span class="n">op</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Op</span><span class="o">&gt;</span><span class="w"> </span><span class="n">direct_path</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span><span class="w"> </span><span class="n">current_tour</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span><span class="w"> </span><span class="n">next_tour</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">buckets</span><span class="p">;</span>
+
+<span class="w">   </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">EulerTour</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Config</span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">init_state</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">state</span><span class="p">(</span><span class="n">init_state</span><span class="p">),</span><span class="w"> </span><span class="n">buckets</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">beam_width</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">make_cands</span><span class="p">(</span><span class="n">Heap</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cands</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cands</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">current_tour</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">expand</span><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">cands</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Edge</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">current_tour</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">is_forward</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">state</span><span class="p">.</span><span class="n">move_forward</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">op</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">state</span><span class="p">.</span><span class="n">move_backward</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">op</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">leaf_idx</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">expand</span><span class="p">(</span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">leaf_idx</span><span class="p">,</span><span class="w"> </span><span class="n">cands</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">update</span><span class="p">(</span><span class="n">Heap</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cands</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Candidate</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">leaves</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cands</span><span class="p">.</span><span class="n">all</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">finished</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">current_tour</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">leaves</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leaves</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">                </span><span class="n">current_tour</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">op</span><span class="p">);</span>
+<span class="w">                </span><span class="n">current_tour</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">op</span><span class="p">);</span>
+<span class="w">                </span><span class="n">finished</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">finished</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">finished</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">leaves</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leaves</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">            </span><span class="n">buckets</span><span class="p">[</span><span class="n">c</span><span class="p">.</span><span class="n">parent_idx</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="w">            </span><span class="n">finished</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">finished</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current_tour</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">is_forward</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">leaf_idx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">op</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">current_tour</span><span class="p">.</span><span class="n">back</span><span class="p">().</span><span class="n">op</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">direct_path</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">op</span><span class="p">);</span>
+<span class="w">            </span><span class="n">state</span><span class="p">.</span><span class="n">move_forward</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">op</span><span class="p">);</span>
+<span class="w">            </span><span class="n">current_tour</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<span class="w">            </span><span class="o">++</span><span class="n">it</span><span class="p">;</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">current_tour</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">current_tour</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">is_forward</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">next_tour</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">op</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">next_tour</span><span class="p">.</span><span class="n">back</span><span class="p">().</span><span class="n">is_forward</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">next_tour</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">next_tour</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">op</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">leaf_idx</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">buckets</span><span class="p">[</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">leaf_idx</span><span class="p">].</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pr</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">buckets</span><span class="p">[</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">leaf_idx</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">next_leaf_idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pr</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
+<span class="w">                    </span><span class="k">const</span><span class="w"> </span><span class="n">Candidate</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pr</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">next_tour</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">next_leaf_idx</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">op</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">next_tour</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">op</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">buckets</span><span class="p">[</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">leaf_idx</span><span class="p">].</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="o">++</span><span class="n">it</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">swap</span><span class="p">(</span><span class="n">current_tour</span><span class="p">,</span><span class="w"> </span><span class="n">next_tour</span><span class="p">);</span>
+<span class="w">        </span><span class="n">next_tour</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">finished</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Op</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_path</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">leaf_idx</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">leaf_idx</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Op</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">direct_path</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Edge</span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">current_tour</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">is_forward</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ret</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">op</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">ret</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">leaf_idx</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">leaf_idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Op</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">State</span><span class="o">&amp;</span><span class="w"> </span><span class="n">init_state</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Config</span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">EulerTour</span><span class="w"> </span><span class="n">et</span><span class="p">(</span><span class="n">config</span><span class="p">,</span><span class="w"> </span><span class="n">init_state</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Heap</span><span class="w"> </span><span class="n">cands</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">beam_width</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">max_turn</span><span class="p">;</span><span class="w"> </span><span class="n">turn</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// expand</span>
+<span class="w">        </span><span class="n">cands</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">        </span><span class="n">et</span><span class="p">.</span><span class="n">make_cands</span><span class="p">(</span><span class="n">cands</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// cand2state</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">et</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">cands</span><span class="p">))</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">Score</span><span class="w"> </span><span class="n">best_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cands</span><span class="p">.</span><span class="n">all</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="n">score</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Op</span><span class="o">&gt;</span><span class="w"> </span><span class="n">best_ops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">et</span><span class="p">.</span><span class="n">get_path</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">best_ops</span><span class="p">.</span><span class="n">empty</span><span class="p">());</span>
+<span class="w">    </span><span class="c1">// output best_ops</span>
+<span class="p">}</span>
+
+<span class="p">};</span><span class="w">  </span><span class="c1">// namespace EulerTourBeamSearch</span>
 </code></pre></div>
 
 
