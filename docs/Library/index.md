@@ -75,6 +75,7 @@
 - [行列ライブラリEigen](./eigen.md)
 - [boost](./boost.md)
 - [abseil](./abseil.md)
+- [immer](./immer.md)
 - [GMP](./gmp.md)
 - [LibTorch](./libtorch.md)
 - [LightGBM](./lightgbm.md)
