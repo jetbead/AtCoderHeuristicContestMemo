@@ -8,6 +8,9 @@ theme:
   features:
     - content.code.copy
     - toc.follow
+    - toc.integrate
+    - navigation.tabs
+    - navigation.tabs.sticky
   palette:
     primary: grey
   font:

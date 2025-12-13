@@ -1,3 +1,6 @@
+.md-grid {
+  max-width: 70rem;
+}
 .md-footer {
   display: none !important;
 }
@@ -25,6 +28,10 @@
 .md-tabs {
   background-color: rgba(240, 240, 240, 1);
   color: black;
+}
+
+.md-nav__item--active .md-nav--secondary {
+  border-left: 0.1rem solid var(--md-primary-fg-color) !important;
 }
 
 .md-header[data-md-state="shadow"] {
