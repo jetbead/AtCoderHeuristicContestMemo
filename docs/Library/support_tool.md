@@ -38,6 +38,10 @@
   - https://github.com/potato167/AHC_decayed-performance
   - https://x.com/potato167_long/status/1935594867826245657
   - AHCの減衰パフォーマンスを表示
+- ahc-per-case
+  - https://x.com/myh9_f/status/1994748696869871771
+  - https://github.com/qropa/ahc-per-case/blob/main/ahc_per_case.js
+  - AHCで１ケースあたりのスコアを表示するユーザースクリプト
 
 ## クラウドジャッジ環境整備
 

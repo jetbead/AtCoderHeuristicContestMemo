@@ -36,3 +36,4 @@ boost::unordered_flat_map<uint64_t, uint64_t> m;
 ## 計算幾何
 
 - https://boostjp.github.io/tips/geometry.html
+- [ボロノイ図/ドロネー三角形分割](voronoi.md)

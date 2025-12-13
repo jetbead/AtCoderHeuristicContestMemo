@@ -70,14 +70,23 @@
 - [状態遷移](./design_patterns/transition.md)
 - [パラメータ管理クラス](./design_patterns/config.md)
 
+## AtCoder環境で使えるライブラリ
+
+- [行列ライブラリEigen](./eigen.md)
+- [boost](./boost.md)
+- [abseil](./abseil.md)
+- [GMP](./gmp.md)
+- [LibTorch](./libtorch.md)
+- [LightGBM](./lightgbm.md)
+- [OR-Tools](./ortools.md)
+- [Z3](./z3.md)
+
 ## その他
 
 - [いろんなTips](./tips.md)
 - [実験、環境構築](./experiments.md)
 - [pythonスニペット](./python_snippet.md)
 - [C++関数メモ](./func.md)
-- [boost libraryメモ](./boost.md)
-- [行列ライブラリEigen](./eigen.md)
 - [サポートツール](./support_tool.md)
 - [Optuna](./optuna.md)
 - [用語集](./glossary.md)

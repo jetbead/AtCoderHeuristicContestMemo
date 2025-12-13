@@ -8,7 +8,7 @@ title: Home
 
 ## :material-table-of-contents: Contents
 
-- :material-pen: [Contest List](./ContestMemo/index.md)
+- :material-pen: [Contest Memo](./ContestMemo/index.md)
   - 過去のコンテスト情報、解法リンク、反省メモ
 - :material-axe: [Library List](./Library/index.md)
   - Heuristic Contest 関連の自作ライブラリ、調査メモ
