@@ -25,6 +25,8 @@
   - https://web.archive.org/web/20210829135915/http://www.colun.net/archives/774
 - ざっくり解説: 焼きなまし法はなぜうまくいくのか？(NBSM さん)
   - https://lealgorithm.blogspot.com/2025/04/blog-post.html
+- Multipoint Simulated Annealing (Nyaan さん)
+  - https://nyaannyaan.github.io/library/marathon/sa-manager.hpp
 
 ## 状態
 
