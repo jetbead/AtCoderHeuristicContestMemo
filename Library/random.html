@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1943,6 +1943,34 @@
     
   
     AHC057
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc058.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC058(ALGO ARTIS)
   
 
     
@@ -5171,7 +5199,7 @@
 <li><a href="https://www.pcg-random.org/posts/bounded-rands.html">https://www.pcg-random.org/posts/bounded-rands.html</a></li>
 <li><a href="../ContestMemo/ahc027.html">AHC027</a></li>
 <li><a href="https://twitter.com/koyumeishi_/status/1363367043861389316">https://twitter.com/koyumeishi_/status/1363367043861389316</a></li>
-<li>お気持ちとしては、0〜(2<sup>32)-1の乱数を2</sup>32で割ると0〜1になるので、それをm倍するイメージ</li>
+<li>お気持ちとしては、0〜(2^32) -1の乱数を 2^32 で割ると0以上1未満になるので、それをm倍するイメージ</li>
 </ul>
 </li>
 <li><a href="https://twitter.com/rho__o/status/1734784563665424875">https://twitter.com/rho__o/status/1734784563665424875</a></li>
@@ -5226,14 +5254,14 @@
 <ul>
 <li>要素iの重みw_iとして、要素iの選択される確率p_i = w_i / Σ_j w_jでサンプリングすること</li>
 <li>計算テクとしては、w_iの累積和(or FenwickTree/BIT)を持っておいて、[0,合計)の一様乱数で該当する要素を決める<ul>
-<li>愚直に線形に見ると<code>O(N)</code>だが、二分探索すれば<code>O(logN)</code>でできる</li>
-<li>さらに、前計算を工夫すると、<code>O(1)</code>で選択も可能(Walker's Alias Method)</li>
+<li>愚直に線形に見るとO(N)だが、二分探索すればO(logN)でできる</li>
+<li>さらに、前計算を工夫すると、O(1)で選択も可能(Walker's Alias Method)</li>
 </ul>
 </li>
 </ul>
 <h3 id="walkers-alias-method">Walker's Alias Method<a class="headerlink" href="#walkers-alias-method" title="Permanent link">&para;</a></h3>
 <ul>
-<li>N要素を重みに従ってサンプリングしたい場合、<code>O(1)</code>で行える</li>
+<li>N要素を重みに従ってサンプリングしたい場合、O(1)で行える</li>
 <li>等分のbinを用意し、各binに高々2種類になるように割り当てる</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1">// 重み分布weight(和が1.0でなくてもよい)に従ってサンプリング</span>
@@ -5425,10 +5453,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "toc.follow", "toc.integrate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "toc.follow", "toc.integrate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../js/extra.js"></script>
       
