@@ -44,8 +44,8 @@ uint32_t xor128() {
     z = w;
     return w = (w ^ (w >> 19)) ^ (t ^ (t >> 8));
 }
-inline float frand() {
-    return xor128() % UINT32_MAX / static_cast<float>(UINT32_MAX);
+inline double frand() {
+    return xor128() * (1.0 / 4294967296.0);
 }
 inline int exprand(int x) {
     return (int)pow(x, frand());
@@ -288,8 +288,8 @@ uint32_t xor128() {
     z = w;
     return w = (w ^ (w >> 19)) ^ (t ^ (t >> 8));
 }
-inline float frand() {
-    return xor128() % UINT32_MAX / static_cast<float>(UINT32_MAX);
+inline double frand() {
+    return xor128() * (1.0 / 4294967296.0);
 }
 inline int exprand(int x) {
     return (int)pow(x, frand());

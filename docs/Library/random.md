@@ -153,7 +153,7 @@ class Pcg32fast {
   - https://www.pcg-random.org/posts/bounded-rands.html
   - [AHC027](../ContestMemo/ahc027.md)
   - https://twitter.com/koyumeishi_/status/1363367043861389316
-  - お気持ちとしては、0〜(2^32)-1の乱数を2^32で割ると0〜1になるので、それをm倍するイメージ
+  - お気持ちとしては、0〜(2^32) -1の乱数を 2^32 で割ると0以上1未満になるので、それをm倍するイメージ
 - https://twitter.com/rho__o/status/1734784563665424875
 - 配列に入れておいてbit maskしたものでアクセス
   - https://twitter.com/terry_u16/status/1734776648627806391
@@ -193,12 +193,12 @@ class Pcg32fast {
 
 - 要素iの重みw_iとして、要素iの選択される確率p_i = w_i / Σ_j w_jでサンプリングすること
 - 計算テクとしては、w_iの累積和(or FenwickTree/BIT)を持っておいて、[0,合計)の一様乱数で該当する要素を決める
-  - 愚直に線形に見ると`O(N)`だが、二分探索すれば`O(logN)`でできる
-  - さらに、前計算を工夫すると、`O(1)`で選択も可能(Walker's Alias Method)
+  - 愚直に線形に見るとO(N)だが、二分探索すればO(logN)でできる
+  - さらに、前計算を工夫すると、O(1)で選択も可能(Walker's Alias Method)
 
 ### Walker's Alias Method
 
-- N要素を重みに従ってサンプリングしたい場合、`O(1)`で行える
+- N要素を重みに従ってサンプリングしたい場合、O(1)で行える
 - 等分のbinを用意し、各binに高々2種類になるように割り当てる
 
 ```cpp
