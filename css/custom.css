@@ -18,11 +18,10 @@
   display: none !important;
 }
 
-/*
+nav.toc,
 .md-sidebar--secondary {
   display: none !important;
 }
-*/
 
 .md-header,
 .md-tabs {

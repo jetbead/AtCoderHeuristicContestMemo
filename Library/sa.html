@@ -23,7 +23,7 @@
     
     
       
-        <title>局所探索/山登り/焼きなまし - AtCoder Heuristic Contest Memo</title>
+        <title>局所探索(山登り, 焼きなまし) - AtCoder Heuristic Contest Memo</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#_2" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              局所探索/山登り/焼きなまし
+              局所探索(山登り, 焼きなまし)
             
           </span>
         </div>
@@ -240,9 +240,7 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="AtCoder Heuristic Contest Memo" class="md-nav__button md-logo" aria-label="AtCoder Heuristic Contest Memo" data-md-component="logo">
       
@@ -3543,8 +3541,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -3553,7 +3549,7 @@
   <span class="md-ellipsis">
     
   
-    局所探索/山登り/焼きなまし
+    局所探索(山登り, 焼きなまし)
   
 
     
@@ -3571,7 +3567,7 @@
   <span class="md-ellipsis">
     
   
-    局所探索/山登り/焼きなまし
+    局所探索(山登り, 焼きなまし)
   
 
     
@@ -3587,8 +3583,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3597,46 +3591,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        状態
+        局所探索とは
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="状態">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        状態の局所性
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        状態設計
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         近傍
@@ -3644,152 +3621,13 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="近傍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        変化量が小さな近傍
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        確実に前進する近傍
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#greedy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        greedy 遷移 / 局所探索遷移
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        無駄な遷移をなくす
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-opt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2-opt 近傍
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2-opt 近傍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        類型
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kick" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        kick 近傍
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        部分破壊と再構築
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Invalidな状態を許容する焼きなまし
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        評価関数
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="評価関数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
-        高速だが正確ではない評価関数
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        時間に応じて近傍や評価関数を変える
+        評価関数
       
     </span>
   </a>
@@ -3800,7 +3638,7 @@
   <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       
-        冷却スケジュール
+        時間に応じて近傍や評価関数を変える
       
     </span>
   </a>
@@ -3811,79 +3649,18 @@
   <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       
-        高速化
+        冷却スケジュール
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="高速化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        差分計算
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tspdeque" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        TSPのパスをdequeで持ちながらスコア計算
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        状態更新/判定処理を後に持っていくテク
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        評価関数計算の打ち切り
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exp2x" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        exp()の計算部分を2^xの計算で近似して高速処理するテク
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     <span class="md-ellipsis">
       
-        状態の複数候補生成/サンプリング
+        高速化
       
     </span>
   </a>
@@ -3894,38 +3671,32 @@
   <a href="#_19" class="md-nav__link">
     <span class="md-ellipsis">
       
+        状態の複数候補生成/サンプリング
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         その他
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="その他">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#successive-halving" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Successive Halving
+        Links
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        その他のネタ
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5149,6 +4920,140 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        局所探索とは
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        状態設計
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        近傍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        評価関数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        時間に応じて近傍や評価関数を変える
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        冷却スケジュール
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        高速化
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        状態の複数候補生成/サンプリング
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        その他
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -5159,7 +5064,302 @@
 
 
 
-<h1 id="_1">局所探索/山登り/焼きなまし<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">局所探索(山登り, 焼きなまし)<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#_2">局所探索とは</a></li>
+<li><a href="#_3">状態設計</a></li>
+<li><a href="#_5">近傍</a></li>
+<li><a href="#_11">評価関数</a></li>
+<li><a href="#_13">時間に応じて近傍や評価関数を変える</a></li>
+<li><a href="#_14">冷却スケジュール</a></li>
+<li><a href="#_15">高速化</a></li>
+<li><a href="#_19">状態の複数候補生成/サンプリング</a></li>
+<li><a href="#_20">その他</a></li>
+<li><a href="#links">Links</a></li>
+</ul>
+</div>
+<h2 id="_2">局所探索とは<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>狭義には、今の状態(解)を少しだけ変更した状態(近傍)について調べ、そちらが良ければ状態を更新、を繰り返すような手法</li>
+<li>広義には、近傍に対して条件を満たしたら更新、を繰り返すようなアプローチ全般のこと<ul>
+<li>山登り法、焼きなまし法、など</li>
+</ul>
+</li>
+<li>状態の持ち方や近傍をどうするか、で性能が大きく変わりうる</li>
+</ul>
+<h2 id="_3">状態設計<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>盤面やグラフなど、問題の解空間をそのまま状態に持つ</li>
+<li>TSP系<ul>
+<li>訪問点の順番</li>
+<li>訪問辺順番</li>
+</ul>
+</li>
+<li>問題の解空間の一部だけ状態に持つ(残りは別途最適化)</li>
+<li>操作列をそのまま持つ</li>
+<li>「解空間-&gt;状態空間-&gt;解空間」みたいな変換(復元)ができる場合、より性質の良い(探索空間の小さい)状態空間で探索する</li>
+<li>など</li>
+</ul>
+<h3 id="_4">状態の局所性<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>局所性<ul>
+<li>状態内の離れた2つの要素に関連性(依存関係、文脈)がなければ、それぞれの要素は独立に考えることができる</li>
+<li>焼きなましは、「状態を少し変えて改善(局所探索)」という感じのため、近傍を考えるうえで重要<ul>
+<li>状態の1つの要素を入れ替えるのが容易などであれば、それを近傍として局所探索/山登り/焼きなましができる</li>
+<li>2次元グリッドなどの問題の場合、部分的な領域で見るとそこだけを入れ替えて別の状態にできるなら近傍として利用できる</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">近傍<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>同じ焼きなまし解だとしても差がでる大きな要素<ul>
+<li>近傍によって探索空間の形が変わるため、探索の質に直結する</li>
+</ul>
+</li>
+<li>「極小で高速な近傍」「依存する要素をまとめて置き換える近傍」など</li>
+<li>近傍として望ましい条件にはいくつかありえるが、基本的には、良い状態間を行き来できるような近傍を考えられるか</li>
+</ul>
+<h3 id="_6">変化量が小さな近傍<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>状態の変化(スコアの変化量)がとても小さい近傍のこと<ul>
+<li>状態の1要素を他の要素と入れ替える、位置を1だけずらす、2つの要素をswapする、など</li>
+</ul>
+</li>
+<li>「一番小さい」と思っても、より変化量が小さい近傍が作れる可能性があるので、できるだけ検討する<ul>
+<li>2-opt近傍</li>
+<li><a href="https://phyllo-algo.hatenablog.com/entry/2018/06/21/002545">https://phyllo-algo.hatenablog.com/entry/2018/06/21/002545</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">確実に前進する近傍<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21#%E9%81%B7%E7%A7%BB">https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21#%E9%81%B7%E7%A7%BB</a></li>
+<li>1コンボを1回の遷移とする</li>
+</ul>
+<h3 id="greedy">greedy 遷移 / 局所探索遷移<a class="headerlink" href="#greedy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>評価値が良くなるとは限らなくても、何らかgreedyな操作や局所探索を1回の遷移とする近傍<ul>
+<li>多少の無駄な遷移が入っても、良い遷移が入っていればよい</li>
+</ul>
+</li>
+<li>対象を動かせなくなるまで動かす、部分破壊再構築などでランダムに再構築、など</li>
+</ul>
+<h3 id="_8">無駄な遷移をなくす<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>xy座標系(-10^6 &lt;= x,y &lt;= 10^6)とかのときに、1ずつずらすとかは無駄なので、点が存在するところ、接するところ、交点などだけに遷移する<ul>
+<li>必ず評価値が変化する</li>
+</ul>
+</li>
+<li>「評価値が変わらない遷移」<ul>
+<li>例えば、パスの長さがスコアのときなどに、パスに関係していない辺を変えてもスコアは変化しないが、繋ぎ変えなどでより長いパスにできたりする</li>
+<li>どちらかというと、評価関数の方で考慮するような方法を考えるべき</li>
+</ul>
+</li>
+<li>pertubation for tie-breaking<ul>
+<li>同評価値の状態に対してランダムに選ぶのを変えたりなど摂動を与える</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-opt">2-opt 近傍<a class="headerlink" href="#2-opt" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/2-opt">https://en.wikipedia.org/wiki/2-opt</a></li>
+<li>巡回セールスマン問題などで、2 点を交換する 2-swap 近傍は 4 辺変化してしまうが、そこを 2 辺変化させるような近傍</li>
+<li>実装方法にもよるが、訪問点の順を状態に持っている場合は、ある範囲を reverse する感じになる<ul>
+<li>O(N)程度かかる</li>
+<li>(辺の付替え時に分離しないように付け替える必要があるが、その判定のためにO(N)で辺をたどる必要があるため)<ul>
+<li><a href="https://twitter.com/hotpepsi/status/1509563061027610624">https://twitter.com/hotpepsi/status/1509563061027610624</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>その他<ul>
+<li>k-opt(3-opt, 4-opt, double-bridge)</li>
+<li>Lin-Kernighan Heuristic</li>
+</ul>
+</li>
+</ul>
+<h4 id="_9">類型<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>系列を3箇所で切ってそれぞれ系列A、系列B、系列C、系列Dとして、ACBDの順番で連結する<ul>
+<li><a href="../ContestMemo/ahc028.html">AHC028</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="kick">kick 近傍<a class="headerlink" href="#kick" title="Permanent link">&para;</a></h3>
+<ul>
+<li>局所解を抜け出す(kick)ような状態を大きく変える近傍</li>
+<li>Introduction to Heuristics Contest 解説 p.7<ul>
+<li><a href="https://img.atcoder.jp/intro-heuristics/editorial.pdf">https://img.atcoder.jp/intro-heuristics/editorial.pdf</a></li>
+</ul>
+</li>
+<li>k-swap-kick<ul>
+<li>TSP などで、k 個のセグメント s1,s2,...,sk を s1,sk,...,s2 にする感じ</li>
+</ul>
+</li>
+<li>2-opt ではたどり着くのが難しいような double bridge みたいな形にキックする</li>
+</ul>
+<h3 id="_10">部分破壊と再構築<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>パスや状態の一部分を壊して再構築するような近傍</li>
+<li><a href="https://togetter.com/li/607979?page=2">https://togetter.com/li/607979?page=2</a></li>
+<li>パスやサイクルの一部を破壊してDFSで再構築<ul>
+<li><a href="../ContestMemo/ahc002.html">AHC002</a></li>
+<li><a href="../ContestMemo/ahc010.html">AHC010</a></li>
+<li><a href="../ContestMemo/ahc027.html">AHC027</a></li>
+</ul>
+</li>
+<li>領域の一部を破壊して再構築<ul>
+<li><a href="../ContestMemo/ahc014.html">AHC014</a><ul>
+<li>解が操作列でも、盤面での部分領域に対応する部分列の削除＆後ろに操作列追加で近傍を作成可能</li>
+<li>操作列に注目しても、操作列の依存関係を有向グラフとしてトポロジカルソートすると操作列の途中から最後をまとめて削除、ということもできる</li>
+</ul>
+</li>
+<li><a href="../ContestMemo/ahc020.html">AHC020</a><ul>
+<li>ある放送局の強度を0にして、カバーできなくなった家を適当な順番で最小コストでカバーする近傍</li>
+<li>ある放送局の強度を上げて、順番にカバーできない家ができないように最小化する近傍</li>
+<li>など</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="invalid">Invalidな状態を許容する焼きなまし<a class="headerlink" href="#invalid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>解の条件を満たさない状態になることを許容することで、探索空間で推移が難しい状態に推移できやすくなる可能性がある<ul>
+<li>最終状態では条件を満たす必要があるため、最後にチェックをしておいたほうが良い</li>
+<li>条件を満たさない場合はペナルティとして、時間に応じて徐々に強くしていく、など</li>
+</ul>
+</li>
+<li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
+<li>最終的に「与えられたタイルで作れる」必要があるが、辺の追加・削除を近傍に、与えられたタイルで作れない状態も探索<ul>
+<li>ただし、評価関数は各利用タイル数の差にして0になるよう目指す</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_11">評価関数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li>スコアをそのまま利用</li>
+<li>避けたい状態に対してペナルティ</li>
+<li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
+<li>2タイルをswapする近傍で、「一番大きな木のサイズ」を評価関数にすると、それ以外のタイルの状態が考慮できないので、「連結成分の個数(が1になるようにする)」や「連結成分のサイズの2乗和」などにすると、収束が速い</li>
+</ul>
+</li>
+</ul>
+<h3 id="_12">高速だが正確ではない評価関数<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>「高速だが正確ではない評価関数」が作れる場合、探索回数を確保でき、よりよい解にたどり着ける可能性が高まる</li>
+<li>正確ではない評価関数で探索し、その結果を初期値として、最後だけ正確な評価関数で探索する</li>
+</ul>
+<h2 id="_13">時間に応じて近傍や評価関数を変える<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<ul>
+<li>時間に応じて、荒く→細かく探索する<ul>
+<li>時間で区切って条件を変える</li>
+</ul>
+</li>
+<li>時間に応じて、徐々に正確にしていく、徐々に条件を満たすようにしていく<ul>
+<li><code>alpha * eval1() + (1-alpha) * eval2()</code>的に混ぜる</li>
+<li>時間で区切って使う評価関数を変える</li>
+</ul>
+</li>
+</ul>
+<h2 id="_14">冷却スケジュール<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<ul>
+<li>温度スケジューラとして、線形減衰、指数減衰などバリエーションがある<ul>
+<li>線形減衰: 下げる量が一定</li>
+<li>指数減衰: 下げる倍率が一定</li>
+</ul>
+</li>
+<li>一般的には指数減衰が良いことが多い模様なので、初手としては指数減衰にしておくのがよいかも<ul>
+<li><a href="https://img.atcoder.jp/intro-heuristics/editorial.pdf">https://img.atcoder.jp/intro-heuristics/editorial.pdf</a></li>
+<li><a href="https://ozy4dm.hateblo.jp/entry/2022/12/22/162046#12-%E6%A8%99%E6%BA%96%E7%9A%84%E3%81%AASA">https://ozy4dm.hateblo.jp/entry/2022/12/22/162046#12-%E6%A8%99%E6%BA%96%E7%9A%84%E3%81%AASA</a></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code># rは時間の割合(0&lt;=r&lt;=1)
+# T0: 初期温度
+# T1: 最終温度
+T = pow(T0, 1-r) * pow(T1, r)
+か
+T = T0 * pow(T1/T0, r)
+</code></pre></div>
+<h2 id="_15">高速化<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h3 id="_16">差分計算<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>近傍への遷移では、状態を一部分だけ変化させる場合が多く、スコアや評価関数の値をその差分だけ高速に計算できる場合がある</li>
+<li><a href="../ContestMemo/ahc012.html">AHC012</a><ul>
+<li>直線の追加削除は、その直線の両側の領域だけを考えれば良い</li>
+<li>ある領域にある個数は座圧＋二次元累積和でO(1)で求められ、領域数はO(K)程度</li>
+</ul>
+</li>
+</ul>
+<h3 id="tspdeque">TSPのパスをdequeで持ちながらスコア計算<a class="headerlink" href="#tspdeque" title="Permanent link">&para;</a></h3>
+<ul>
+<li>TSPパスをdequeで持つ<ul>
+<li>訪問マスをdequeで持って、front/backに対する操作のみ許す</li>
+</ul>
+</li>
+<li><a href="../ContestMemo/ahc027.html">AHC027</a></li>
+</ul>
+<h3 id="_17">状態更新/判定処理を後に持っていくテク<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>「近傍に遷移(状態更新)してから評価関数の値を計算」ではなく「遷移後の評価関数の値を計算して移動すると判断した場合だけ状態を更新」する</li>
+<li>評価関数の値を計算後にundo操作するとundo操作分の時間がかかってしまうが、状態更新前に評価関数が計算できる場合はundo操作を省略できる</li>
+<li><a href="../ContestMemo/ahc009.html">AHC009</a><ul>
+<li>前からDP・後からDPを持っておくと、差分計算が高速に求められる</li>
+<li>さらに、近傍更新時の変更箇所をターン順方向に固定すると、状態更新の方も高速化可能</li>
+</ul>
+</li>
+<li><a href="../ContestMemo/ahc024.html">AHC024</a><ul>
+<li>「色を変える→スコア計算→焼きなましの採用判定→採用されるなら連結性判定＆隣接判定」とすることで、結局rollbackするときに重い判定処理を省略できる</li>
+</ul>
+</li>
+</ul>
+<h3 id="_18">評価関数計算の打ち切り<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://qiita.com/not522/items/cd20b87157d15850d31c">https://qiita.com/not522/items/cd20b87157d15850d31c</a><ul>
+<li>変化量からしきい値以下か判定するところを式変形して、遷移先に依存しないところを先に計算しておくことで、評価関数内でしきい値を超えることがわかったタイミングで打ち切れるようになるテク</li>
+</ul>
+</li>
+</ul>
+<h3 id="exp2x">exp()の計算部分を2^xの計算で近似して高速処理するテク<a class="headerlink" href="#exp2x" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://spvyxgfbtewiazrl.doorblog.jp/archives/50676843.html">http://spvyxgfbtewiazrl.doorblog.jp/archives/50676843.html</a></li>
+<li><a href="https://twitter.com/koyumeishi_/status/1709456647285026819">https://twitter.com/koyumeishi_/status/1709456647285026819</a></li>
+<li><a href="https://twitter.com/koyumeishi_/status/1721964004741136589">https://twitter.com/koyumeishi_/status/1721964004741136589</a></li>
+</ul>
+<ul>
+<li>自分のコードの場合は、以下のようにする感じ？(＋温度調整)
+<div class="highlight"><pre><span></span><code>if (exp(delta / T) &gt;= frand()) {
+↓
+if (((uint32_t)(1) &lt;&lt; (uint32_t)max(0.0, 32 + delta / T)) &gt;= xor128()) {
+</code></pre></div></li>
+</ul>
+<h2 id="_19">状態の複数候補生成/サンプリング<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<ul>
+<li>焼きなまし中に出現する状態について、評価値が大きいものをいくつか保存しておくことで、状態のN-best的なものを用意できる<ul>
+<li>ただし、最終解の周辺だけとかになりそう(自己相関が高い)なので、多様性が必要だったら、他の手法や、評価値をサンプリング回数とか、別のサンプリング方法とかを検討</li>
+</ul>
+</li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%82%AE%E3%83%96%E3%82%B9%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0">https://ja.wikipedia.org/wiki/%E3%82%AE%E3%83%96%E3%82%B9%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0</a></li>
+<li><a href="../ContestMemo/ahc030.html">AHC030</a></li>
+</ul>
+<h2 id="_20">その他<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h3 id="successive-halving">Successive Halving<a class="headerlink" href="#successive-halving" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://cyberagent.ai/blog/research/1036/">https://cyberagent.ai/blog/research/1036/</a></li>
+</ul>
+<h3 id="_21">その他のネタ<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://twitter.com/chokudai/status/1672116955330011136">https://twitter.com/chokudai/status/1672116955330011136</a><ul>
+<li>「これまでの遷移の評価差分の絶対値の平均値」を最高温度に設定</li>
+</ul>
+</li>
+</ul>
 <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>誰でもできる焼きなまし法(gasin さん)<ul>
@@ -5209,278 +5409,6 @@
 </li>
 <li>Multipoint Simulated Annealing (Nyaan さん)<ul>
 <li><a href="https://nyaannyaan.github.io/library/marathon/sa-manager.hpp">https://nyaannyaan.github.io/library/marathon/sa-manager.hpp</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="_2">状態<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li>盤面やグラフなど、問題の解空間をそのまま状態に持つ</li>
-<li>TSP系<ul>
-<li>訪問点の順番</li>
-<li>訪問辺順番</li>
-</ul>
-</li>
-<li>問題の解空間の一部だけ状態に持つ(残りは別途最適化)</li>
-<li>操作列をそのまま持つ</li>
-<li>「解空間-&gt;状態空間-&gt;解空間」みたいな変換(復元)ができる場合、より性質の良い(探索空間の小さい)状態空間で探索する</li>
-<li>など</li>
-</ul>
-<h3 id="_3">状態の局所性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<ul>
-<li>局所性<ul>
-<li>状態内の離れた2つの要素に関連性(依存関係、文脈)がなければ、それぞれの要素は独立に考えることができる</li>
-<li>焼きなましは、「状態を少し変えて改善(局所探索)」という感じのため、近傍を考えるうえで重要<ul>
-<li>状態の1つの要素を入れ替えるのが容易などであれば、それを近傍として局所探索/山登り/焼きなましができる</li>
-<li>2次元グリッドなどの問題の場合、部分的な領域で見るとそこだけを入れ替えて別の状態にできるなら近傍として利用できる</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="_4">近傍<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>同じ焼きなまし解だとしても差がでる大きな要素<ul>
-<li>近傍によって探索空間の形が変わるため、探索の質に直結する</li>
-</ul>
-</li>
-<li>「極小で高速な近傍」「依存する要素をまとめて置き換える近傍」など</li>
-<li>近傍として望ましい条件にはいくつかありえるが、基本的には、良い状態間を行き来できるような近傍を考えられるか</li>
-</ul>
-<h3 id="_5">変化量が小さな近傍<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>状態の変化(スコアの変化量)がとても小さい近傍のこと<ul>
-<li>状態の1要素を他の要素と入れ替える、位置を1だけずらす、2つの要素をswapする、など</li>
-</ul>
-</li>
-<li>「一番小さい」と思っても、より変化量が小さい近傍が作れる可能性があるので、できるだけ検討する<ul>
-<li>2-opt近傍</li>
-<li><a href="https://phyllo-algo.hatenablog.com/entry/2018/06/21/002545">https://phyllo-algo.hatenablog.com/entry/2018/06/21/002545</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="_6">確実に前進する近傍<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21#%E9%81%B7%E7%A7%BB">https://qiita.com/takapt0226/items/b2f6d1d77a034b529e21#%E9%81%B7%E7%A7%BB</a></li>
-<li>1コンボを1回の遷移とする</li>
-</ul>
-<h3 id="greedy">greedy 遷移 / 局所探索遷移<a class="headerlink" href="#greedy" title="Permanent link">&para;</a></h3>
-<ul>
-<li>評価値が良くなるとは限らなくても、何らかgreedyな操作や局所探索を1回の遷移とする近傍<ul>
-<li>多少の無駄な遷移が入っても、良い遷移が入っていればよい</li>
-</ul>
-</li>
-<li>対象を動かせなくなるまで動かす、部分破壊再構築などでランダムに再構築、など</li>
-</ul>
-<h3 id="_7">無駄な遷移をなくす<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<ul>
-<li>xy座標系(-10^6 &lt;= x,y &lt;= 10^6)とかのときに、1ずつずらすとかは無駄なので、点が存在するところ、接するところ、交点などだけに遷移する<ul>
-<li>必ず評価値が変化する</li>
-</ul>
-</li>
-<li>「評価値が変わらない遷移」<ul>
-<li>例えば、パスの長さがスコアのときなどに、パスに関係していない辺を変えてもスコアは変化しないが、繋ぎ変えなどでより長いパスにできたりする</li>
-<li>どちらかというと、評価関数の方で考慮するような方法を考えるべき</li>
-</ul>
-</li>
-<li>pertubation for tie-breaking<ul>
-<li>同評価値の状態に対してランダムに選ぶのを変えたりなど摂動を与える</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-opt">2-opt 近傍<a class="headerlink" href="#2-opt" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/2-opt">https://en.wikipedia.org/wiki/2-opt</a></li>
-<li>巡回セールスマン問題などで、2 点を交換する 2-swap 近傍は 4 辺変化してしまうが、そこを 2 辺変化させるような近傍</li>
-<li>実装方法にもよるが、訪問点の順を状態に持っている場合は、ある範囲を reverse する感じになる<ul>
-<li>O(N)程度かかる</li>
-<li>(辺の付替え時に分離しないように付け替える必要があるが、その判定のためにO(N)で辺をたどる必要があるため)<ul>
-<li><a href="https://twitter.com/hotpepsi/status/1509563061027610624">https://twitter.com/hotpepsi/status/1509563061027610624</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>その他<ul>
-<li>k-opt(3-opt, 4-opt, double-bridge)</li>
-<li>Lin-Kernighan Heuristic</li>
-</ul>
-</li>
-</ul>
-<h4 id="_8">類型<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<ul>
-<li>系列を3箇所で切ってそれぞれ系列A、系列B、系列C、系列Dとして、ACBDの順番で連結する<ul>
-<li><a href="../ContestMemo/ahc028.html">AHC028</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="kick">kick 近傍<a class="headerlink" href="#kick" title="Permanent link">&para;</a></h3>
-<ul>
-<li>局所解を抜け出す(kick)ような状態を大きく変える近傍</li>
-<li>Introduction to Heuristics Contest 解説 p.7<ul>
-<li><a href="https://img.atcoder.jp/intro-heuristics/editorial.pdf">https://img.atcoder.jp/intro-heuristics/editorial.pdf</a></li>
-</ul>
-</li>
-<li>k-swap-kick<ul>
-<li>TSP などで、k 個のセグメント s1,s2,...,sk を s1,sk,...,s2 にする感じ</li>
-</ul>
-</li>
-<li>2-opt ではたどり着くのが難しいような double bridge みたいな形にキックする</li>
-</ul>
-<h3 id="_9">部分破壊と再構築<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<ul>
-<li>パスや状態の一部分を壊して再構築するような近傍</li>
-<li><a href="https://togetter.com/li/607979?page=2">https://togetter.com/li/607979?page=2</a></li>
-<li>パスやサイクルの一部を破壊してDFSで再構築<ul>
-<li><a href="../ContestMemo/ahc002.html">AHC002</a></li>
-<li><a href="../ContestMemo/ahc010.html">AHC010</a></li>
-<li><a href="../ContestMemo/ahc027.html">AHC027</a></li>
-</ul>
-</li>
-<li>領域の一部を破壊して再構築<ul>
-<li><a href="../ContestMemo/ahc014.html">AHC014</a><ul>
-<li>解が操作列でも、盤面での部分領域に対応する部分列の削除＆後ろに操作列追加で近傍を作成可能</li>
-<li>操作列に注目しても、操作列の依存関係を有向グラフとしてトポロジカルソートすると操作列の途中から最後をまとめて削除、ということもできる</li>
-</ul>
-</li>
-<li><a href="../ContestMemo/ahc020.html">AHC020</a><ul>
-<li>ある放送局の強度を0にして、カバーできなくなった家を適当な順番で最小コストでカバーする近傍</li>
-<li>ある放送局の強度を上げて、順番にカバーできない家ができないように最小化する近傍</li>
-<li>など</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="invalid">Invalidな状態を許容する焼きなまし<a class="headerlink" href="#invalid" title="Permanent link">&para;</a></h3>
-<ul>
-<li>解の条件を満たさない状態になることを許容することで、探索空間で推移が難しい状態に推移できやすくなる可能性がある<ul>
-<li>最終状態では条件を満たす必要があるため、最後にチェックをしておいたほうが良い</li>
-<li>条件を満たさない場合はペナルティとして、時間に応じて徐々に強くしていく、など</li>
-</ul>
-</li>
-<li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
-<li>最終的に「与えられたタイルで作れる」必要があるが、辺の追加・削除を近傍に、与えられたタイルで作れない状態も探索<ul>
-<li>ただし、評価関数は各利用タイル数の差にして0になるよう目指す</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="_10">評価関数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<ul>
-<li>スコアをそのまま利用</li>
-<li>避けたい状態に対してペナルティ</li>
-<li><a href="../ContestMemo/ahc011.html">AHC011</a><ul>
-<li>2タイルをswapする近傍で、「一番大きな木のサイズ」を評価関数にすると、それ以外のタイルの状態が考慮できないので、「連結成分の個数(が1になるようにする)」や「連結成分のサイズの2乗和」などにすると、収束が速い</li>
-</ul>
-</li>
-</ul>
-<h3 id="_11">高速だが正確ではない評価関数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<ul>
-<li>「高速だが正確ではない評価関数」が作れる場合、探索回数を確保でき、よりよい解にたどり着ける可能性が高まる</li>
-<li>正確ではない評価関数で探索し、その結果を初期値として、最後だけ正確な評価関数で探索する</li>
-</ul>
-<h2 id="_12">時間に応じて近傍や評価関数を変える<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
-<ul>
-<li>時間に応じて、荒く→細かく探索する<ul>
-<li>時間で区切って条件を変える</li>
-</ul>
-</li>
-<li>時間に応じて、徐々に正確にしていく、徐々に条件を満たすようにしていく<ul>
-<li><code>alpha * eval1() + (1-alpha) * eval2()</code>的に混ぜる</li>
-<li>時間で区切って使う評価関数を変える</li>
-</ul>
-</li>
-</ul>
-<h2 id="_13">冷却スケジュール<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
-<ul>
-<li>温度スケジューラとして、線形減衰、指数減衰などバリエーションがある<ul>
-<li>線形減衰: 下げる量が一定</li>
-<li>指数減衰: 下げる倍率が一定</li>
-</ul>
-</li>
-<li>一般的には指数減衰が良いことが多い模様なので、初手としては指数減衰にしておくのがよいかも<ul>
-<li><a href="https://img.atcoder.jp/intro-heuristics/editorial.pdf">https://img.atcoder.jp/intro-heuristics/editorial.pdf</a></li>
-<li><a href="https://ozy4dm.hateblo.jp/entry/2022/12/22/162046#12-%E6%A8%99%E6%BA%96%E7%9A%84%E3%81%AASA">https://ozy4dm.hateblo.jp/entry/2022/12/22/162046#12-%E6%A8%99%E6%BA%96%E7%9A%84%E3%81%AASA</a></li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code># rは時間の割合(0&lt;=r&lt;=1)
-# T0: 初期温度
-# T1: 最終温度
-T = pow(T0, 1-r) * pow(T1, r)
-か
-T = T0 * pow(T1/T0, r)
-</code></pre></div>
-<h2 id="_14">高速化<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
-<h3 id="_15">差分計算<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
-<ul>
-<li>近傍への遷移では、状態を一部分だけ変化させる場合が多く、スコアや評価関数の値をその差分だけ高速に計算できる場合がある</li>
-<li><a href="../ContestMemo/ahc012.html">AHC012</a><ul>
-<li>直線の追加削除は、その直線の両側の領域だけを考えれば良い</li>
-<li>ある領域にある個数は座圧＋二次元累積和でO(1)で求められ、領域数はO(K)程度</li>
-</ul>
-</li>
-</ul>
-<h3 id="tspdeque">TSPのパスをdequeで持ちながらスコア計算<a class="headerlink" href="#tspdeque" title="Permanent link">&para;</a></h3>
-<ul>
-<li>TSPパスをdequeで持つ<ul>
-<li>訪問マスをdequeで持って、front/backに対する操作のみ許す</li>
-</ul>
-</li>
-<li><a href="../ContestMemo/ahc027.html">AHC027</a></li>
-</ul>
-<h3 id="_16">状態更新/判定処理を後に持っていくテク<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
-<ul>
-<li>「近傍に遷移(状態更新)してから評価関数の値を計算」ではなく「遷移後の評価関数の値を計算して移動すると判断した場合だけ状態を更新」する</li>
-<li>評価関数の値を計算後にundo操作するとundo操作分の時間がかかってしまうが、状態更新前に評価関数が計算できる場合はundo操作を省略できる</li>
-<li><a href="../ContestMemo/ahc009.html">AHC009</a><ul>
-<li>前からDP・後からDPを持っておくと、差分計算が高速に求められる</li>
-<li>さらに、近傍更新時の変更箇所をターン順方向に固定すると、状態更新の方も高速化可能</li>
-</ul>
-</li>
-<li><a href="../ContestMemo/ahc024.html">AHC024</a><ul>
-<li>「色を変える→スコア計算→焼きなましの採用判定→採用されるなら連結性判定＆隣接判定」とすることで、結局rollbackするときに重い判定処理を省略できる</li>
-</ul>
-</li>
-</ul>
-<h3 id="_17">評価関数計算の打ち切り<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://qiita.com/not522/items/cd20b87157d15850d31c">https://qiita.com/not522/items/cd20b87157d15850d31c</a><ul>
-<li>変化量からしきい値以下か判定するところを式変形して、遷移先に依存しないところを先に計算しておくことで、評価関数内でしきい値を超えることがわかったタイミングで打ち切れるようになるテク</li>
-</ul>
-</li>
-</ul>
-<h3 id="exp2x">exp()の計算部分を2^xの計算で近似して高速処理するテク<a class="headerlink" href="#exp2x" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="http://spvyxgfbtewiazrl.doorblog.jp/archives/50676843.html">http://spvyxgfbtewiazrl.doorblog.jp/archives/50676843.html</a></li>
-<li><a href="https://twitter.com/koyumeishi_/status/1709456647285026819">https://twitter.com/koyumeishi_/status/1709456647285026819</a></li>
-<li><a href="https://twitter.com/koyumeishi_/status/1721964004741136589">https://twitter.com/koyumeishi_/status/1721964004741136589</a></li>
-</ul>
-<ul>
-<li>自分のコードの場合は、以下のようにする感じ？(＋温度調整)
-<div class="highlight"><pre><span></span><code>if (exp(delta / T) &gt;= frand()) {
-↓
-if (((uint32_t)(1) &lt;&lt; (uint32_t)max(0.0, 32 + delta / T)) &gt;= xor128()) {
-</code></pre></div></li>
-</ul>
-<h2 id="_18">状態の複数候補生成/サンプリング<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
-<ul>
-<li>焼きなまし中に出現する状態について、評価値が大きいものをいくつか保存しておくことで、状態のN-best的なものを用意できる<ul>
-<li>ただし、最終解の周辺だけとかになりそう(自己相関が高い)なので、多様性が必要だったら、他の手法や、評価値をサンプリング回数とか、別のサンプリング方法とかを検討</li>
-</ul>
-</li>
-<li><a href="https://ja.wikipedia.org/wiki/%E3%82%AE%E3%83%96%E3%82%B9%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0">https://ja.wikipedia.org/wiki/%E3%82%AE%E3%83%96%E3%82%B9%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0</a></li>
-<li><a href="../ContestMemo/ahc030.html">AHC030</a></li>
-</ul>
-<h2 id="_19">その他<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
-<h3 id="successive-halving">Successive Halving<a class="headerlink" href="#successive-halving" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://cyberagent.ai/blog/research/1036/">https://cyberagent.ai/blog/research/1036/</a></li>
-</ul>
-<h3 id="_20">その他のネタ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://twitter.com/chokudai/status/1672116955330011136">https://twitter.com/chokudai/status/1672116955330011136</a><ul>
-<li>「これまでの遷移の評価差分の絶対値の平均値」を最高温度に設定</li>
 </ul>
 </li>
 </ul>
@@ -5537,7 +5465,7 @@ if (((uint32_t)(1) &lt;&lt; (uint32_t)max(0.0, 32 + delta / T)) &gt;= xor128()) 
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "toc.follow", "toc.integrate", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
