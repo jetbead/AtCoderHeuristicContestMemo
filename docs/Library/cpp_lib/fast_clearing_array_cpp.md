@@ -11,17 +11,32 @@ class FastClearingArray {
     T mx;
     vector<T> v;
 
+    struct CellProxy {
+        FastClearingArray* self;
+        int i;
+        operator T() const {
+            return self->get(i);
+        }
+        CellProxy& operator=(const T& x) {
+            self->set(i, x);
+            return *this;
+        }
+    };
+
    public:
     FastClearingArray(int N) : N(N), base(1), mx(0), v(N, T()) {
     }
-    const T operator[](const int i) const {
+    CellProxy operator[](int i) {
+        return CellProxy{this, i};
+    }
+    const T operator[](int i) const {
         return get(i);
     }
-    const T get(const int i) const {
+    const T get(int i) const {
         if (v[i] >= base) return v[i] - base;
         return -1;
     }
-    void set(const int i, const T& x) {
+    void set(int i, const T& x) {
         assert(x >= 0);
         v[i] = x + base;
         mx = max(mx, v[i]);
