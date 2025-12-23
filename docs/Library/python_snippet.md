@@ -1,5 +1,7 @@
 # pythonスニペット
 
+[TOC]
+
 ## 引数処理
 
 ```python

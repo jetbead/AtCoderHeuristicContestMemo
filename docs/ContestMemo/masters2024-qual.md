@@ -4,12 +4,13 @@ title: 第一回マスターズ予選
 
 # 第一回マスターズ選手権-予選-
 
-- https://atcoder.jp/contests/masters-qual
+[TOC]
 
 <img src="../imgs/masters2024-qual.png" width=300>
 
 ## 問題概要
 
+- https://atcoder.jp/contests/masters-qual
 - N\*Nマスの盤面があり、マスの間には壁がある場合がある
 - 各マスには1〜N^2 の数字が1つずつ書かれており、以下の一連の操作を最大で4N^2 回行う
   1. 高橋くんと青木くんの現在位置にかかれているマスを交換したければ交換する

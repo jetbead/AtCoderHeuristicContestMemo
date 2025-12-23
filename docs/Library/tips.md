@@ -1,5 +1,7 @@
 # Tips
 
+[TOC]
+
 ## 考え方
 
 - TopCoder Marathon Matchに関する道具とメタ戦略(kmyk さん)

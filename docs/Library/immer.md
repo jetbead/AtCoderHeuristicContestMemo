@@ -4,10 +4,7 @@ immutableな永続データ構造のライブラリ。AtCoder環境で使える�
 
 Heuristic Contest的には、ビームサーチなどでの出力保存や差分操作などで活用できる(かも)。
 
-## Links
-
-- https://github.com/arximboldi/immer
-- https://sinusoid.es/immer/#contents
+[TOC]
 
 ## vector
 
@@ -35,3 +32,8 @@ const auto v1 = v0.set("hello", 42);
 cout << v0["hello"] << endl;
 cout << v1["hello"] << endl;
 ```
+
+## Links
+
+- https://github.com/arximboldi/immer
+- https://sinusoid.es/immer/#contents

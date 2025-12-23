@@ -1,10 +1,6 @@
 # フロー
 
-## Links
-
-- https://www.youtube.com/watch?v=vVJNlhQtfgo
-  - https://img.atcoder.jp/TOYOTA_AHC_AlgorithmExplanatoryMeeting2/morita.pdf
-- https://ocw.mit.edu/courses/15-082j-network-optimization-fall-2010/pages/lecture-notes/
+[TOC]
 
 ## 最小費用流
 
@@ -29,3 +25,9 @@
 ## 問題
 
 - [AHC034](../ContestMemo/ahc034.md)
+
+## Links
+
+- https://www.youtube.com/watch?v=vVJNlhQtfgo
+  - https://img.atcoder.jp/TOYOTA_AHC_AlgorithmExplanatoryMeeting2/morita.pdf
+- https://ocw.mit.edu/courses/15-082j-network-optimization-fall-2010/pages/lecture-notes/

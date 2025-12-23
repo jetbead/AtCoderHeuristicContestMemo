@@ -1,21 +1,6 @@
 # ゲーム木探索
 
-## Links
-
-- 世界四連覇 AI エンジニアがゼロから教えるゲーム木探索入門(thunder さん)
-  - https://qiita.com/thun-c/items/058743a25c37c87b8aa4
-- 競技プログラミングにおけるゲーム木探索の面白さ(tsukammo さん)
-  - https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
-- ゲーム木探索技術とコンピュータ将棋への応用
-  - https://www.slideshare.net/shogotakeuchi/ss-62415546
-- AHC典型解法シリーズ第1弾「モンテカルロ法」(thunder さん)
-  - https://qiita.com/thun-c/items/8e7ae0249f1907854763
-- アルゴリズムで実社会を捉える～評価関数の作り方～(tsukammo さん)
-  - https://qiita.com/tsukammo/items/de70b49dcd8912e78505
-- 焼きなまし法が使えなくても AHC 橙になれたよ (Kiri8128さん)
-  - https://kiri8128.hatenablog.com/entry/2023/11/29/024335
-  - 評価関数・貪欲の考え方
-
+[TOC]
 
 ## ゲームの分類
 
@@ -155,3 +140,20 @@
   - https://twitter.com/tomerun/status/1688205287197745152
     - https://twitter.com/tomerun/status/1688207145765064704
   - https://twitter.com/kiri8128/status/1688206238784565248
+
+## Links
+
+- 世界四連覇 AI エンジニアがゼロから教えるゲーム木探索入門(thunder さん)
+  - https://qiita.com/thun-c/items/058743a25c37c87b8aa4
+- 競技プログラミングにおけるゲーム木探索の面白さ(tsukammo さん)
+  - https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
+- ゲーム木探索技術とコンピュータ将棋への応用
+  - https://www.slideshare.net/shogotakeuchi/ss-62415546
+- AHC典型解法シリーズ第1弾「モンテカルロ法」(thunder さん)
+  - https://qiita.com/thun-c/items/8e7ae0249f1907854763
+- アルゴリズムで実社会を捉える～評価関数の作り方～(tsukammo さん)
+  - https://qiita.com/tsukammo/items/de70b49dcd8912e78505
+- 焼きなまし法が使えなくても AHC 橙になれたよ (Kiri8128さん)
+  - https://kiri8128.hatenablog.com/entry/2023/11/29/024335
+  - 評価関数・貪欲の考え方
+

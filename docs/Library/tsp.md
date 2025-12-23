@@ -1,10 +1,6 @@
 # TSP(巡回セールスマン問題)
 
-## Links
-
-- http://www.math.uwaterloo.ca/tsp/index.html
-- https://future-architect.github.io/articles/20211201a/
-- https://twitter.com/shunji_umetani/status/977545293049688064
+[TOC]
 
 ## 特殊ケース
 
@@ -89,3 +85,9 @@
   - https://dl.acm.org/doi/pdf/10.5555/313559.313668
 - https://github.com/GAStudyGroup/GPX2
 - http://tsp-basics.blogspot.com/
+
+## Links
+
+- http://www.math.uwaterloo.ca/tsp/index.html
+- https://future-architect.github.io/articles/20211201a/
+- https://twitter.com/shunji_umetani/status/977545293049688064

@@ -4,14 +4,15 @@ title: TOYOTA2023夏Final
 
 # TOYOTA Programming Contest 2023 Summer final
 
-- https://atcoder.jp/contests/toyota2023summer-final
-- https://atcoder.jp/contests/toyota2023summer-final-open
-  - オンサイトのみRated
+[TOC]
 
 <img src="../imgs/toyota-2023-summer-final.png" height=300>
 
 ## 問題概要
 
+- https://atcoder.jp/contests/toyota2023summer-final
+- https://atcoder.jp/contests/toyota2023summer-final-open
+  - オンサイトのみRated
 - D\*Dマスの倉庫があり、N(=0〜D)個のマスには障害物が置かれている
 - 今、D\*D-1-N個の番号のついたコンテナを倉庫に入れて、可能な限り番号順に取り出したい
 - コンテナは、他のコンテナや障害物を飛び越えて入れたり運び出したりはできない

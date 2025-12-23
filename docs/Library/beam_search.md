@@ -1,14 +1,12 @@
 # ビームサーチ
 
-## Links
+[TOC]
 
-- https://hakomof.hatenablog.com/entry/2018/12/06/000000
-- https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
-- https://note.com/nyanyan_cubetech/n/n5e30c52139d3
-- https://platinum-prog.hatenablog.com/entry/2023/07/28/222536
-- https://platinum-prog.hatenablog.com/entry/2023/08/09/203217
-- https://twitter.com/ethylene_66/status/1767393143987880121
-- https://qiita.com/thun-c/items/98f22c8fcdb1fd827b00
+## ビームサーチとは
+
+- 状態を幅優先探索するのに、各深さで評価値が良い上位K個以下だけ保持して、次の深さではその状態からだけ次の状態を生成し、繰り返すような手法
+  - Kは「ビーム幅」という
+- 似たような状態ばかりにならないようにしたり、時間調整、高速化、亜種、など様々なトピックがある
 
 ## 確実に前進
 
@@ -103,3 +101,14 @@
 ## 高度な話題
 
 - https://twitter.com/threecourse/status/1380460108551843841
+
+
+## Links
+
+- https://hakomof.hatenablog.com/entry/2018/12/06/000000
+- https://qiita.com/tsukammo/items/02e8ad2469c5441d2956
+- https://note.com/nyanyan_cubetech/n/n5e30c52139d3
+- https://platinum-prog.hatenablog.com/entry/2023/07/28/222536
+- https://platinum-prog.hatenablog.com/entry/2023/08/09/203217
+- https://twitter.com/ethylene_66/status/1767393143987880121
+- https://qiita.com/thun-c/items/98f22c8fcdb1fd827b00

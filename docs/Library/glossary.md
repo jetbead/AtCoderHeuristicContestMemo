@@ -1,6 +1,6 @@
 # 用語集
 
-- https://kmyk.github.io/blog/blog/2019/03/08/terms-in-marathon-matches/
+[TOC]
 
 ## 文脈
 
@@ -23,3 +23,7 @@
 
 - 貪欲法は、何らか状態の評価をして一番良いものを選ぶというのを繰り返す
 - ルールベースは、状態の評価値を必ずしも必要とせず、ルールに従って選ぶ
+
+## Links
+
+- https://kmyk.github.io/blog/blog/2019/03/08/terms-in-marathon-matches/

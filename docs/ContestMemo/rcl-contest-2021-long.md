@@ -4,12 +4,13 @@ title: 日本橋ハーフ2021増刊号(RECRUIT)
 
 # RECRUIT 日本橋ハーフマラソン 2021 ～増刊号～
 
-- https://atcoder.jp/contests/rcl-contest-2021-long
+[TOC]
 
 <img src="../imgs/rcl-contest-2021-long.png" width=400>
 
 ## 問題概要
 
+- https://atcoder.jp/contests/rcl-contest-2021-long
 - N \* N マスのフィールドがあり、特定の時間に価値 v の野菜が現れ、時間が立つと消える
 - 野菜を収穫するには収穫機が必要で、価格は「(現在持っている台数+1)^3」円かかる
 - T ターン中、「収穫機を買って設置する」か「収穫機を移動する」か選ぶ

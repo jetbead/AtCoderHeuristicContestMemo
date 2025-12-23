@@ -2,10 +2,7 @@
 
 AtCoder環境ではboostの新し目のバージョンが利用できる。
 
-## Links
-
-- Boost逆引きリファレンス
-  - https://boostjp.github.io/tips.html
+[TOC]
 
 ## メモ
 
@@ -37,3 +34,8 @@ boost::unordered_flat_map<uint64_t, uint64_t> m;
 
 - https://boostjp.github.io/tips/geometry.html
 - [ボロノイ図/ドロネー三角形分割](voronoi.md)
+
+## Links
+
+- Boost逆引きリファレンス
+  - https://boostjp.github.io/tips.html

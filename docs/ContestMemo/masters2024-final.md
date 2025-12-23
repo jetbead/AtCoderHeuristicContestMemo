@@ -4,12 +4,13 @@ title: 第一回マスターズ決勝
 
 # 第一回マスターズ選手権-決勝-
 
-- https://atcoder.jp/contests/masters2024-final/
+[TOC]
 
 <img src="../imgs/masters2024-final.png" width=300>
 
 ## 問題概要
 
+- https://atcoder.jp/contests/masters2024-final/
 - 2次元平面上で飛行ドローンを操作し、N箇所の目的地をすべて訪れたい
   - 操作は、「加速」と「計測」が行える
 - いくつか壁があったり、風による影響で速度が変化したり、計測には誤差がのる

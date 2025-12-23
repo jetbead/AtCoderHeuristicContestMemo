@@ -1,14 +1,6 @@
 # 実験、環境構築
 
-## Links
-
-- https://speakerdeck.com/butsugiri/increasing-number-of-attempts-ver-2021
-- https://github.com/abhishekkrthakur/approachingalmost
-- https://takuti.me/ja/note/data-science-project-structure/
-- https://upura.hatenablog.com/entry/2018/12/28/225234
-- https://goodresearch.dev/
-- https://speakerdeck.com/hpprc/zi-yuan-tositejian-rushi-yan-puroguramu
-- https://twitter.com/mamas16k/status/1660011592870948864
+[TOC]
 
 ## コンパイラ設定
 
@@ -25,6 +17,8 @@
 
 ## 設定ファイル
 
+自分が使っている設定のメモ。
+
 ### .clang-format
 
 ```
@@ -34,3 +28,13 @@ AllowShortIfStatementsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: false
 ColumnLimit: 100
 ```
+
+## Links
+
+- https://speakerdeck.com/butsugiri/increasing-number-of-attempts-ver-2021
+- https://github.com/abhishekkrthakur/approachingalmost
+- https://takuti.me/ja/note/data-science-project-structure/
+- https://upura.hatenablog.com/entry/2018/12/28/225234
+- https://goodresearch.dev/
+- https://speakerdeck.com/hpprc/zi-yuan-tositejian-rushi-yan-puroguramu
+- https://twitter.com/mamas16k/status/1660011592870948864

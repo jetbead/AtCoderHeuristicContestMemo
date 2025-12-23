@@ -4,12 +4,13 @@ title: Intro. to HC
 
 # Introduction to Heuristics Contest
 
-- https://atcoder.jp/contests/intro-heuristics
+[TOC]
 
 ![image](../imgs/intro-heuristics.png)
 
 ## 問題概要
 
+- https://atcoder.jp/contests/intro-heuristics
 - 26 種類のコンテストがあり、ユーザーの満足度ができるだけ高くなるようにしたい
   - 満足度は開催すると増加するが、開催タイミングで増加量は変動する
   - また、特定のタイプのコンテストがしばらく開催されないと下がる

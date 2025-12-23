@@ -1,14 +1,8 @@
 # 統計モデリング
 
-- 推定系の問題などで、得られたデータから推定を行う方法
+推定系の問題などで、得られたデータから推定を行う方法
 
-## Links
-
-- Hit&Blowで学ぶベイズ推定：理論から実装まで (4etaさん)
-  - https://zenn.dev/4eta/articles/072132e44e2075
-  - https://zenn.dev/4eta/articles/c00fcfd07e0238
-- AHC典型解法シリーズ第3弾「ベイズ推定」 (thunderさん)
-  - https://qiita.com/thun-c/items/688442aad6a0410545cc
+[TOC]
 
 ## ベイズの定理
 
@@ -250,3 +244,11 @@ for (int t = 0; t < 100; t++) {
 - [AHC030](../ContestMemo/ahc030.md)
 - [masters2024-final](../ContestMemo/masters2024-final.md)
 - [AHC040](../ContestMemo/ahc040.md)
+
+## Links
+
+- Hit&Blowで学ぶベイズ推定：理論から実装まで (4etaさん)
+  - https://zenn.dev/4eta/articles/072132e44e2075
+  - https://zenn.dev/4eta/articles/c00fcfd07e0238
+- AHC典型解法シリーズ第3弾「ベイズ推定」 (thunderさん)
+  - https://qiita.com/thun-c/items/688442aad6a0410545cc

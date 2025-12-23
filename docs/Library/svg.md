@@ -1,14 +1,11 @@
 # SVGで簡易ビジュアライザ
 
+[TOC]
+
 ## 概要
 
 - Scalable Vector Graphics
 - xmlベースの2次元ベクタ形式イメージ用画像形式
-
-## Links
-
-- https://www.w3.org/Graphics/SVG/
-- https://developer.mozilla.org/ja/docs/Web/SVG
 
 ## 表示方法
 
@@ -528,3 +525,9 @@ python -m http.server 8000
 
 - tooltipsを表示
   - `<g><title>meg</title><rect>...</rect></g>`のようにすると、マウスカーソルを載せたときにmsg情報を表示できる
+
+
+## Links
+
+- https://www.w3.org/Graphics/SVG/
+- https://developer.mozilla.org/ja/docs/Web/SVG

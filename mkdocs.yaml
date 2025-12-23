@@ -7,8 +7,8 @@ theme:
   #language: "ja"
   features:
     - content.code.copy
-    - toc.follow
-    - toc.integrate
+    # - toc.follow
+    # - toc.integrate
     - navigation.tabs
     - navigation.tabs.sticky
   palette:
@@ -36,6 +36,7 @@ markdown_extensions:
   - footnotes
   - toc:
       permalink: true
+      toc_depth: 2-2
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all

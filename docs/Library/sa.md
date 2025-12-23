@@ -1,34 +1,15 @@
-# 局所探索/山登り/焼きなまし
+# 局所探索(山登り, 焼きなまし)
 
-## Links
+[TOC]
 
-- 誰でもできる焼きなまし法(gasin さん)
-  - https://gasin.hatenadiary.jp/entry/2019/09/03/162613
-- 焼きなまし法のコツ Ver. 1.3(shindannin さん)
-  - https://shindannin.hatenadiary.com/entry/2021/03/06/115415
-- 詳解 焼きなまし法(hakomo さん)
-  - https://github.com/hakomo/Simulated-Annealing-Techniques
-- 競技プログラミングにおいて焼きなまし法に堕ちずに落とすコツ(tsukammo さん)
-  - https://qiita.com/tsukammo/items/b410f3202372fe87c919
-- chokudai 先生の焼きなまし講座
-  - https://togetter.com/li/607979
-- 貪欲法、山登り法、焼きなまし、ビームサーチ、これらの間の関係について(kmyk さん)
-  - https://kmyk.github.io/blog/blog/2019/03/07/local-search-and-greedy/
-- 焼きなましをするときの設計に関するメモ(yunix_kyopro さん)
-  - https://yunix-kyopro.hatenablog.com/entry/2022/10/30/141616
-  - https://twitter.com/yunix91201367/status/1586588684622520322
-- AHC典型解法シリーズ第2弾「焼きなまし法」(thunder さん)
-  - https://qiita.com/thun-c/items/ecd438fde4d237b1f7bc
-- 初心者から初心者に向けた焼きなましのすすめ(tombo さん)
-  - https://tombo314.hatenablog.com/entry/2024/04/24/153457
-- 焼きなまし法の真実(colun さん)
-  - https://web.archive.org/web/20210829135915/http://www.colun.net/archives/774
-- ざっくり解説: 焼きなまし法はなぜうまくいくのか？(NBSM さん)
-  - https://lealgorithm.blogspot.com/2025/04/blog-post.html
-- Multipoint Simulated Annealing (Nyaan さん)
-  - https://nyaannyaan.github.io/library/marathon/sa-manager.hpp
+## 局所探索とは
 
-## 状態
+- 狭義には、今の状態(解)を少しだけ変更した状態(近傍)について調べ、そちらが良ければ状態を更新、を繰り返すような手法
+- 広義には、近傍に対して条件を満たしたら更新、を繰り返すようなアプローチ全般のこと
+  - 山登り法、焼きなまし法、など
+- 状態の持ち方や近傍をどうするか、で性能が大きく変わりうる
+
+## 状態設計
 
 - 盤面やグラフなど、問題の解空間をそのまま状態に持つ
 - TSP系
@@ -231,8 +212,35 @@ if (((uint32_t)(1) << (uint32_t)max(0.0, 32 + delta / T)) >= xor128()) {
 
 - https://cyberagent.ai/blog/research/1036/
 
-
 ### その他のネタ
 
 - https://twitter.com/chokudai/status/1672116955330011136
   - 「これまでの遷移の評価差分の絶対値の平均値」を最高温度に設定
+
+## Links
+
+- 誰でもできる焼きなまし法(gasin さん)
+  - https://gasin.hatenadiary.jp/entry/2019/09/03/162613
+- 焼きなまし法のコツ Ver. 1.3(shindannin さん)
+  - https://shindannin.hatenadiary.com/entry/2021/03/06/115415
+- 詳解 焼きなまし法(hakomo さん)
+  - https://github.com/hakomo/Simulated-Annealing-Techniques
+- 競技プログラミングにおいて焼きなまし法に堕ちずに落とすコツ(tsukammo さん)
+  - https://qiita.com/tsukammo/items/b410f3202372fe87c919
+- chokudai 先生の焼きなまし講座
+  - https://togetter.com/li/607979
+- 貪欲法、山登り法、焼きなまし、ビームサーチ、これらの間の関係について(kmyk さん)
+  - https://kmyk.github.io/blog/blog/2019/03/07/local-search-and-greedy/
+- 焼きなましをするときの設計に関するメモ(yunix_kyopro さん)
+  - https://yunix-kyopro.hatenablog.com/entry/2022/10/30/141616
+  - https://twitter.com/yunix91201367/status/1586588684622520322
+- AHC典型解法シリーズ第2弾「焼きなまし法」(thunder さん)
+  - https://qiita.com/thun-c/items/ecd438fde4d237b1f7bc
+- 初心者から初心者に向けた焼きなましのすすめ(tombo さん)
+  - https://tombo314.hatenablog.com/entry/2024/04/24/153457
+- 焼きなまし法の真実(colun さん)
+  - https://web.archive.org/web/20210829135915/http://www.colun.net/archives/774
+- ざっくり解説: 焼きなまし法はなぜうまくいくのか？(NBSM さん)
+  - https://lealgorithm.blogspot.com/2025/04/blog-post.html
+- Multipoint Simulated Annealing (Nyaan さん)
+  - https://nyaannyaan.github.io/library/marathon/sa-manager.hpp

@@ -4,12 +4,13 @@ title: 第二回マスターズ予選
 
 # 第二回マスターズ選手権-予選-
 
-- https://atcoder.jp/contests/masters2025-qual
+[TOC]
 
 <img src="../imgs/masters2025-qual.png" width=300>
 
 ## 問題概要
 
+- https://atcoder.jp/contests/masters2025-qual
 - N\*Nマスの盤面があり、マスには鉱石(1種類or3種類)か岩、または鉱石に対応した穴がある
   - 初期位置は1種類目の穴
 - 操作として、各ターンでは、4近傍への移動、4近傍への運搬、4方向へぶつかるまで転がす、ができる
