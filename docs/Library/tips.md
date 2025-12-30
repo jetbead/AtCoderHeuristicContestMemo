@@ -43,6 +43,8 @@
   - https://speakerdeck.com/terryu16/atcoder-heuristic-first-step-vol-dot-1-jiang-yi-suraido
   - https://speakerdeck.com/takumi152/atcoder-heuristic-first-step-vol-dot-1-jiang-yi-suraido-shan-deng-rifa-shao-kinamasifa-bian
   - https://x.com/atcoder/status/1914926537520111859
+- AHC (AtCoder Heuristic Contest) 攻略法をレッドコーダーにインタビュー(shindannin さん)
+  - https://shindannin.hatenadiary.com/entry/2025/12/28/223052
 
 ## Heuristicsの設計、実装について
 
