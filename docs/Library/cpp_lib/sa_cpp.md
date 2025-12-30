@@ -19,9 +19,9 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 class Timer {
-    std::chrono::system_clock::time_point start_time;
-    std::chrono::system_clock::time_point getNow() {
-        return std::chrono::system_clock::now();
+    std::chrono::steady_clock::time_point start_time;
+    std::chrono::steady_clock::time_point getNow() {
+        return std::chrono::steady_clock::now();
     }
 
    public:
@@ -263,9 +263,9 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 class Timer {
-    std::chrono::system_clock::time_point start_time;
-    std::chrono::system_clock::time_point getNow() {
-        return std::chrono::system_clock::now();
+    std::chrono::steady_clock::time_point start_time;
+    std::chrono::steady_clock::time_point getNow() {
+        return std::chrono::steady_clock::now();
     }
 
    public:
