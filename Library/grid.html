@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -5174,6 +5174,7 @@ xoxoxox
 <span class="w">        </span><span class="n">build</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="c1">// 3x3の真ん中のON/OFFが変わった時、連結を保っているかどうか(falseなら(局所情報的には)非連結になると判断)</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">check</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">mask</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">memo</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">memo</span><span class="p">[</span><span class="n">mask</span><span class="p">];</span>

@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -5215,7 +5215,7 @@
 <li>w_iの合計値の情報なしでサンプリングできる</li>
 </ul>
 </li>
-<li><code>-ln(rand())/w_i</code>の値が一番大きいものを選ぶ<ul>
+<li><code>-ln(frand())/w_i</code>の値が一番小さいものを選ぶ<ul>
 <li>Reservoir sampling + exponential distribution + numeric stability</li>
 <li><a href="https://en.wikipedia.org/wiki/Reservoir_sampling">https://en.wikipedia.org/wiki/Reservoir_sampling</a></li>
 <li><a href="https://stackoverflow.com/questions/2140787/select-k-random-elements-from-a-list-whose-elements-have-weights">https://stackoverflow.com/questions/2140787/select-k-random-elements-from-a-list-whose-elements-have-weights</a></li>
