@@ -169,6 +169,7 @@ class ArticulationPoint3x3 {
         build();
     }
 
+    // 3x3の真ん中のON/OFFが変わった時、連結を保っているかどうか(falseなら(局所情報的には)非連結になると判断)
     bool check(int mask) const {
         assert(0 <= mask && mask < memo.size());
         return memo[mask];

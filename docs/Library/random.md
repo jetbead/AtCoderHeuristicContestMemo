@@ -284,7 +284,7 @@ class WalkersAliasMethod {
 
 - 構築なしで、すべての要素を1回なめるだけでサンプリングするテク
   - w_iの合計値の情報なしでサンプリングできる
-- `-ln(rand())/w_i`の値が一番大きいものを選ぶ
+- `-ln(frand())/w_i`の値が一番小さいものを選ぶ
   - Reservoir sampling + exponential distribution + numeric stability
   - https://en.wikipedia.org/wiki/Reservoir_sampling
   - https://stackoverflow.com/questions/2140787/select-k-random-elements-from-a-list-whose-elements-have-weights
