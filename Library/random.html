@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -1989,6 +1989,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../ContestMemo/ahc059.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC059
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc060.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC060(RECRUIT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc061.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC061(THIRD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ContestMemo/httf2022qual.html" class="md-nav__link">
         
   
@@ -2137,6 +2221,34 @@
     
   
     第二回マスターズ予選
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/masters2026-qual.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三回マスターズ予選
   
 
     
@@ -4997,34 +5109,38 @@
 <span class="c1">// https://prng.di.unimi.it/xoroshiro128plusplus.c</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Xoroshiro128pp</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="nf">rotl</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">sm</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="nf">rotl</span><span class="p">(</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">64</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="p">));</span>
 <span class="w">    </span><span class="p">}</span>
+
 <span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="nf">splitmix64</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234567</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mh">0x9e3779b97f4a7c15</span><span class="p">);</span>
-<span class="w">        </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">0xbf58476d1ce4e5b9</span><span class="p">;</span>
-<span class="w">        </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">27</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">0x94d049bb133111eb</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sm</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mh">0x9e3779b97f4a7c15ULL</span><span class="p">);</span>
+<span class="w">        </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">0xbf58476d1ce4e5b9ULL</span><span class="p">;</span>
+<span class="w">        </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">27</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">0x94d049bb133111ebULL</span><span class="p">;</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">31</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">   </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">Xoroshiro128pp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">Xoroshiro128pp</span><span class="p">(</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234567</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sm</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">splitmix64</span><span class="p">();</span>
 <span class="w">        </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">splitmix64</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
+
 <span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">next</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 <span class="w">        </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
 <span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rotl</span><span class="p">(</span><span class="n">s0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s0</span><span class="p">;</span>
+
 <span class="w">        </span><span class="n">s1</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="n">s0</span><span class="p">;</span>
 <span class="w">        </span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rotl</span><span class="p">(</span><span class="n">s0</span><span class="p">,</span><span class="w"> </span><span class="mi">49</span><span class="p">)</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">21</span><span class="p">);</span>
 <span class="w">        </span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rotl</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">);</span>
+
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="k">operator</span><span class="p">()()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">next</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="k">operator</span><span class="p">()()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">next</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
 <span class="p">};</span>
 
 <span class="n">Xoroshiro128pp</span><span class="w"> </span><span class="n">x128pp</span><span class="p">;</span>
