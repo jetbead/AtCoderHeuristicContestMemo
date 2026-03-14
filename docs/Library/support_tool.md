@@ -44,6 +44,10 @@
   - https://x.com/myh9_f/status/1994748696869871771
   - https://github.com/qropa/ahc-per-case/blob/main/ahc_per_case.js
   - AHCで１ケースあたりのスコアを表示するユーザースクリプト
+- AHC Standings Customizer
+  - https://x.com/kiri8128/status/2017189269572579746
+  - https://greasyfork.org/ja/scripts/564554-ahc-standings-customizer
+  - AHCの順位表に表示する内容をカスタマイズ
 
 ## クラウドジャッジ環境整備
 

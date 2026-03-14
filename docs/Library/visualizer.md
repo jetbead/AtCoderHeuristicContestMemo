@@ -28,6 +28,7 @@
 
 - [ヒューリスティックコンテストでビジュアライザを開発する方法に関するメモ(yunix さん)](https://yunix-kyopro.hatenablog.com/entry/2023/12/17/150534)
 - [ビジュアライザ筋トレ2025年 chatGPT活用編](https://yunix-kyopro.hatenablog.com/entry/2025/01/16/204053)
+- [AtCoderマスターズ選手権のためにビジュアライザ実装のAgent Skillsを作った件](https://yunix-kyopro.hatenablog.com/entry/2026/02/24/230913)
 - [マラソンマッチのビジュアライザいろいろ(threecourse さん)](https://threecourse.hatenablog.com/entry/2021/05/04/181226)
 - [簡易にビジュアライザを作る方法の調査記(gobi さん)](https://gobi-tk.hatenablog.com/entry/2023/04/16/184952)
 - [AHCのジャッジコードを流用して作るvisualzer作成(AtCoder第二回マスターズ選手権-予選-)(tsukammo さん)](https://tsukammo.hatenablog.com/entry/2025/03/03/011646)

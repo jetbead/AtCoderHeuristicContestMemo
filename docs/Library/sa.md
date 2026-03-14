@@ -244,3 +244,5 @@ if (((uint32_t)(1) << (uint32_t)max(0.0, 32 + delta / T)) >= xor128()) {
   - https://lealgorithm.blogspot.com/2025/04/blog-post.html
 - Multipoint Simulated Annealing (Nyaan さん)
   - https://nyaannyaan.github.io/library/marathon/sa-manager.hpp
+- サンタコンペ2025完全攻略〜お前らの焼きなましは遅すぎる〜(terry_u16 さん)
+  - https://speakerdeck.com/terryu16/santakonpe2025wan-quan-gong-lue-oqian-ranoshao-kinamasihachi-sugiru

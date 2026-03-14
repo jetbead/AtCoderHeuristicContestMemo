@@ -28,7 +28,7 @@ struct BitBoard {
     // row mask
     static const Bits& row_mask(int y) {
         static const auto masks = [] {
-            std::array<Bits, H> m{};
+            array<Bits, H> m{};
             for (int yy = 0; yy < H; ++yy) {
                 Bits r{};
                 for (int x = 0; x < W; ++x) r.set(idx(yy, x));
@@ -41,7 +41,7 @@ struct BitBoard {
     // col mask
     static const Bits& col_mask(int x) {
         static const auto masks = [] {
-            std::array<Bits, W> m{};
+            array<Bits, W> m{};
             for (int xx = 0; xx < W; ++xx) {
                 Bits c{};
                 for (int y = 0; y < H; ++y) c.set(idx(y, xx));
@@ -268,9 +268,9 @@ struct BitBoard {
     // startからの距離dで到達可能なマス集合
     // - free_mask: 1 = 通行可 0 = 通行不可
     // - 返り値: layers[d] := start から「ちょうどd手」で到達可能なマス集合
-    static std::vector<BitBoard> reachable_layers(const BitBoard& free_mask, int start_y,
+    static vector<BitBoard> reachable_layers(const BitBoard& free_mask, int start_y,
                                                   int start_x, int max_d) {
-        std::vector<BitBoard> layers(max_d + 1);
+        vector<BitBoard> layers(max_d + 1);
         if (start_y < 0 || start_y >= H || start_x < 0 || start_x >= W) return layers;
         int start = idx(start_y, start_x);
         if (!free_mask.board_.test(start)) return layers;

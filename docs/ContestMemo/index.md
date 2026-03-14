@@ -4,6 +4,10 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/masters2026-qual.png" class="trimimg"> | [第三回マスターズ選手権予選](./masters2026-qual.md) | <span style="color: #0000cc;">short</span> | :material-check: |
+| <img loading="lazy" src="../imgs/ahc061.png" class="trimimg"> | [THIRDプログラミングコンテスト2026(AHC061)](./ahc061.md) | <span style="color: #cc0000;">long</span> | :material-check: |
+| <img loading="lazy" src="../imgs/ahc060.png" class="trimimg"> | [RECRUIT 日本橋ハーフマラソン 2026冬(AHC060)](./ahc060.md) | <span style="color: #0000cc;">short</span> | :material-check: |
+| <img loading="lazy" src="../imgs/ahc059.png" class="trimimg"> | [AHC059](./ahc059.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc058.png" class="trimimg"> | [ALGO ARTISプログラミングコンテスト2025師走(AHC058)](./ahc058.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc057.png" class="trimimg"> | [AHC057](./ahc057.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc056.png" class="trimimg"> | [HACK TO THE FUTURE 2026(AHC056)](./ahc056.md) | <span style="color: #cc0000;">long</span> | :material-check: |
