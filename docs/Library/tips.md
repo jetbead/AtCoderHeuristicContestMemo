@@ -82,6 +82,8 @@
   - https://github.com/FakePsyho/cpcontests
 - AHCざっくり問題設定一覧表(FplusFplusF さん)
   - https://fplusfplusf.hatenablog.com/entry/2025/09/02/212949
+- AtCoder Heuristic Contest Analyzer(shindannin さん)
+  - https://shindannin.github.io/ac_analyzer/
 
 ## 改善アイデアの試し方
 

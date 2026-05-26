@@ -212,6 +212,7 @@ for (int t = 0; t < 100; t++) {
 - https://www.ieice.org/jpn/books/kaishikiji/2005/200512.pdf
 - https://qiita.com/MoriKen/items/da8d290dcefad81b478d
 - [第一回マスターズ選手権-決勝-](../ContestMemo/masters2024-final.md)
+- [AHC061](../ContestMemo/ahc061.md)
 
 
 ## 最小二乗法
@@ -244,6 +245,7 @@ for (int t = 0; t < 100; t++) {
 - [AHC030](../ContestMemo/ahc030.md)
 - [masters2024-final](../ContestMemo/masters2024-final.md)
 - [AHC040](../ContestMemo/ahc040.md)
+- [AHC061](../ContestMemo/ahc061.md)
 
 ## Links
 

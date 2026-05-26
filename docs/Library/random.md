@@ -5,6 +5,7 @@
 - https://www.slideshare.net/iwiwi/ss-13293754
 - https://speakerdeck.com/square1001/algorithm-with-randomness
 - https://blog.hamayanhamayan.com/entry/2017/08/25/110421
+- https://joisino.hatenablog.com/entry/constant
 
 ## 乱択アルゴリズム
 
