@@ -4,8 +4,8 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
-| <img loading="lazy" src="../imgs/ahc065.png" class="trimimg"> | [AHC065](./ahc065.md) | <span style="color: #cc0000;">long</span> | :material-check: |
-| <img loading="lazy" src="../imgs/ahc064.png" class="trimimg"> | [JR西日本・ALGO ARTISプログラミングコンテスト(AHC064)](./ahc064.md) | <span style="color: #cc0000;">long</span> | |
+| <img loading="lazy" src="../imgs/ahc065.png" class="trimimg"> | [AHC065](./ahc065.md) | <span style="color: #0000cc;">short</span> | :material-check: |
+| <img loading="lazy" src="../imgs/ahc064.png" class="trimimg"> | [JR西日本・ALGO ARTISプログラミングコンテスト(AHC064)](./ahc064.md) | <span style="color: #0000cc;">short</span> | |
 | <img loading="lazy" src="../imgs/masters2026-final.png" class="trimimg"> | [第三回マスターズ選手権決勝](./masters2026-final.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc063.png" class="trimimg"> | [AHC063](./ahc063.md) | <span style="color: #cc0000;">long</span> | |
 | <img loading="lazy" src="../imgs/ahc062.png" class="trimimg"> | [ユニークビジョンプログラミングコンテスト2026春(AHC062)](./ahc062.md) | <span style="color: #0000cc;">short</span> | :material-check: |
