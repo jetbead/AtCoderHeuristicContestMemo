@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -2073,6 +2073,118 @@
   
   
     <li class="md-nav__item">
+      <a href="../ContestMemo/ahc062.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC062(ユニークビジョン)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc063.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC063
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc064.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC064(JR西日本・ALGO ARTIS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc065.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC065
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ContestMemo/httf2022qual.html" class="md-nav__link">
         
   
@@ -2221,6 +2333,34 @@
     
   
     第二回マスターズ予選
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/masters2026-final.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三回マスターズ決勝
   
 
     
@@ -5282,8 +5422,9 @@
 <h2 id="chokudai">chokudaiサーチの軸<a class="headerlink" href="#chokudai" title="Permanent link">&para;</a></h2>
 <ul>
 <li>chokudaiサーチでは、軸(キー)をどう用意するか、いろいろバリエーションが考えられる<ul>
-<li>ターン制などでも、複数の操作を1手として動かす場合、その1手をキーにするか、ターンをキーにするか、など<ul>
-<li>次の状態生成時に、次の状態にしかいかないか、2つ以上先の状態もいくか</li>
+<li>(<code>vector&lt;Heap&gt; beams;</code>の<code>beams[key]</code>的なイメージ)</li>
+<li>基本的なbeam searchだと「今」に対して「次」のみだが、chokudaiサーチだと軸でheapを分けて持っているので「今」から「次」だけでなく「次の次」やその先などにも展開できる<ul>
+<li>大きな遷移(複数ターンをまとめて1遷移にする)を考えたとき、keyを「1遷移」にする以外にも、keyを「1ターン」にして、遷移先のターンの所に入れるみたいなことができる</li>
 </ul>
 </li>
 <li>軸にしたものは、評価関数に入ってなくても揃うので、調整がしやすくなるかも</li>
@@ -5315,6 +5456,7 @@
 <li><a href="https://eijirou-kyopro.hatenablog.com/entry/2024/02/01/115639">https://eijirou-kyopro.hatenablog.com/entry/2024/02/01/115639</a></li>
 <li><a href="https://twitter.com/rho__o/status/1753063890219642931">https://twitter.com/rho__o/status/1753063890219642931</a></li>
 <li><a href="https://qiita.com/thun-c/items/a29c80f7ba54b271a6c7">https://qiita.com/thun-c/items/a29c80f7ba54b271a6c7</a></li>
+<li><a href="https://trap.jp/post/2920/">https://trap.jp/post/2920/</a></li>
 </ul>
 <h2 id="n">上位N件を高速に取る話<a class="headerlink" href="#n" title="Permanent link">&para;</a></h2>
 <ul>
