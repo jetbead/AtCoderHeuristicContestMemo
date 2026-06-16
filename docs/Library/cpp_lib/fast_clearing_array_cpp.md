@@ -1,7 +1,12 @@
 # Fast-clearing Array
 
+## 概要
+
 - 初期化処理をO(1)で行う
 - 値は0以上しか入れられない(未初期化は-1として扱う)
+- 2次元版は[こちら](./grid_cpp.md)
+
+## コード
 
 ```cpp
 template <class T>
@@ -51,3 +56,7 @@ class FastClearingArray {
     }
 };
 ```
+
+## Verified
+
+- なし

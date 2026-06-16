@@ -1,5 +1,9 @@
 # TSP
 
+## 無向グラフ向け
+
+- 温度は都度調整する
+
 ```cpp
 template <class T>
 class TSP {
