@@ -48,6 +48,9 @@
   - https://x.com/kiri8128/status/2017189269572579746
   - https://greasyfork.org/ja/scripts/564554-ahc-standings-customizer
   - AHCの順位表に表示する内容をカスタマイズ
+- AHC Score Graph
+  - https://github.com/EdamAme-x/ahc-score-graph-user-script
+  - AHCのスコアの変化をグラフで見れる奴
 
 ## クラウドジャッジ環境整備
 

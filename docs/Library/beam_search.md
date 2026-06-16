@@ -115,3 +115,4 @@
 - https://platinum-prog.hatenablog.com/entry/2023/08/09/203217
 - https://twitter.com/ethylene_66/status/1767393143987880121
 - https://qiita.com/thun-c/items/98f22c8fcdb1fd827b00
+- https://www.youtube.com/watch?v=v3_XCHc0qYA
