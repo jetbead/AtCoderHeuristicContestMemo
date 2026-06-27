@@ -2213,6 +2213,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../ContestMemo/ahc067.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC067
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ContestMemo/httf2022qual.html" class="md-nav__link">
         
   
@@ -5128,6 +5156,30 @@
 <li><a href="https://kuruton.hatenablog.com/entry/2021/12/14/011150">https://kuruton.hatenablog.com/entry/2021/12/14/011150</a></li>
 <li><a href="https://x.com/not_522/status/1866105405287584182">https://x.com/not_522/status/1866105405287584182</a><ul>
 <li><a href="https://tech.preferred.jp/ja/blog/optuna-autosampler/">https://tech.preferred.jp/ja/blog/optuna-autosampler/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="c">C++での利用<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
+<ul>
+<li>いろんなアプローチがあるが、C++のコードの場合、方法によってはリビルドが必要になったり、スコア計算をどうするかなどが問題になる<ul>
+<li>ハイパラの注入方法</li>
+<li>スコア計算方法(自前か、公式テスターを使うか)</li>
+</ul>
+</li>
+<li>リビルドあり<ul>
+<li>マクロにしておいて、<code>-DPARAM1=0.1</code>などで指定してビルド</li>
+<li>コードの該当行をreplaceしてビルド<ul>
+<li>configなどで該当行の文字列と置き換え文字列&amp;ハイパラを指定できるようにしておく</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>リビルドなし<ul>
+<li>コマンドライン引数で指定する</li>
+<li>ハイパラを書いた設定ファイルなどで読み込むようにする<ul>
+<li><a href="design_patterns/config.html">Config</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

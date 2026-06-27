@@ -2213,6 +2213,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ContestMemo/ahc067.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC067
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ContestMemo/httf2022qual.html" class="md-nav__link">
         
   
@@ -5113,28 +5141,61 @@
 <h1 id="config">ハイパーパラメータの管理クラス(Configクラス)<a class="headerlink" href="#config" title="Permanent link">&para;</a></h1>
 <h2 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ハイパーパラメータはConfigクラスなどで管理し、<code>config.param1</code>のように参照しておくと、変更しやすい</li>
+<li>ハイパーパラメータはConfigクラスなどで管理し、<code>cfg.param1</code>のように参照しておくと、変更しやすい</li>
 <li>設定ファイルや引数からの読み込みにも対応させておくと、Optunaによるチューニングなどもしやすい<ul>
-<li>またはconfig.hhにしておいて、includeする</li>
+<li>またはconfig.hhにしておいてincludeするなども考えられるが、ビルドし直しが必要になる</li>
 </ul>
 </li>
 <li>dump()機能を持たせておくと、実行時の情報をまとめて出力しておける</li>
 </ul>
 <h2 id="_2">コード例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Config</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">time_limit</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">beam_width</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">param1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">param2</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Config</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">param1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">param2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.5</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">Config</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;params.json&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#ifdef LOCAL</span>
+<span class="w">        </span><span class="n">load_json_file</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="w">        </span><span class="n">dump</span><span class="p">();</span>
+<span class="cp">#endif</span>
+<span class="w">    </span><span class="p">}</span>
 
 <span class="cp">#ifdef LOCAL</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dump</span><span class="p">(</span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result_json</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;time_limit&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time_limit</span><span class="p">;</span>
-<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;beam_width&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">beam_width</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">load_json_file</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ifstream</span><span class="w"> </span><span class="nf">fin</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">fin</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">        </span><span class="n">fin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">param1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// param1 = j.at(&quot;param1&quot;).get&lt;int&gt;();</span>
+<span class="w">        </span><span class="n">param2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;param2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">dump</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[Config]&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;param1 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">param1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;param2 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">param2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">dump</span><span class="p">(</span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result_json</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;param1&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param1</span><span class="p">;</span>
 <span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;param2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param2</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="cp">#endif</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>params.jsonは以下のように用意。</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;param1&quot;: 50,
+  &quot;param2&quot;: 3.4
+}
+</code></pre></div>
+<p>使うときは、以下のように用意。</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Solver</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Config</span><span class="w"> </span><span class="n">cfg</span><span class="p">;</span>
+
+<span class="w">   </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">Solver</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">cfg</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
 
