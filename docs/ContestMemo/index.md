@@ -4,6 +4,7 @@
 
 | | Contest Name | Type | 反省メモ |
 | --- | :--- | :--- | :--- |
+| <img loading="lazy" src="../imgs/ahc068.png" class="trimimg"> | [estieプログラミングコンテスト2026(AHC068)](./ahc068.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc067.png" class="trimimg"> | [AHC067](./ahc067.md) | <span style="color: #0000cc;">short</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc066.png" class="trimimg"> | [AHC066](./ahc066.md) | <span style="color: #cc0000;">long</span> | :material-check: |
 | <img loading="lazy" src="../imgs/ahc065.png" class="trimimg"> | [AHC065](./ahc065.md) | <span style="color: #0000cc;">short</span> | :material-check: |
