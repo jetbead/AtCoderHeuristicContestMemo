@@ -2269,6 +2269,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ContestMemo/ahc069.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC069(RECRUIT)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ContestMemo/ahc070.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC070(Asprova)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ContestMemo/httf2022qual.html" class="md-nav__link">
         
   
@@ -5181,7 +5237,7 @@
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">param1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">param2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.5</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">Config</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;params.json&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Config</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"params.json"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="cp">#ifdef LOCAL</span>
 <span class="w">        </span><span class="n">load_json_file</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
 <span class="w">        </span><span class="n">dump</span><span class="p">();</span>
@@ -5195,26 +5251,26 @@
 <span class="w">        </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
 <span class="w">        </span><span class="n">fin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
 
-<span class="w">        </span><span class="n">param1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p">);</span>
-<span class="w">        </span><span class="c1">// param1 = j.at(&quot;param1&quot;).get&lt;int&gt;();</span>
-<span class="w">        </span><span class="n">param2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;param2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">param1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"param1"</span><span class="p">,</span><span class="w"> </span><span class="n">param1</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// param1 = j.at("param1").get&lt;int&gt;();</span>
+<span class="w">        </span><span class="n">param2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"param2"</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">dump</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;[Config]&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;param1 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">param1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;param2 = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">param2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"[Config]"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"param1 = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">param1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"param2 = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">param2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">dump</span><span class="p">(</span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result_json</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;param1&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param1</span><span class="p">;</span>
-<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">&quot;param2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param2</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">"param1"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">result_json</span><span class="p">[</span><span class="s">"param2"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param2</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="cp">#endif</span>
 <span class="p">};</span>
 </code></pre></div>
 <p>params.jsonは以下のように用意。</p>
 <div class="highlight"><pre><span></span><code>{
-  &quot;param1&quot;: 50,
-  &quot;param2&quot;: 3.4
+  "param1": 50,
+  "param2": 3.4
 }
 </code></pre></div>
 <p>使うときは、以下のように用意。</p>
