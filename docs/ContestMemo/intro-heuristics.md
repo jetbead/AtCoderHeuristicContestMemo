@@ -28,6 +28,10 @@ title: Intro. to HC
   - https://x.com/cologne1723/status/1916071823592329580
     - https://thun-c.github.io/visualizer/introduction/Visualizer.html
 
+- https://qiita.com/thun-c/items/fd82d1fb8131746bd347
+- https://qiita.com/thun-c/items/c8f72927ff0fbe3aa705
+- https://qiita.com/thun-c/items/797662754b521e22c49b
+
 ## Links
 
 - [agwさん Twitter まとめ](https://togetter.com/li/1550502)

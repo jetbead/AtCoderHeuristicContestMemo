@@ -20,6 +20,8 @@ AHC の始め方など。
 - [競プロ〜ヒューリスティック/マラソン事始め〜(tanaka-a さん)](https://qiita.com/tanaka-a/items/3c2a1bca63759ec71e7f)
 - [AHCに初めて参加する人が読む記事2025(tomerun さん)](https://qiita.com/tomerun/items/8d2b67476c25ecef35f5)
 - [【競技プログラミング】貪欲法×乱択で戦う！AHC入門動画【ゆっくり解説】(Frest さん)](https://www.youtube.com/watch?v=-ns6ZuVmrsQ)
+- [AtCoder Heuristic Contest 入門（AHC002-初級編）](https://note.com/mech_39/n/n64cd9df5a873)
+  - [AtCoder Heuristic Contest 入門（AHC002-中級編）](https://note.com/mech_39/n/na5095fd3e1a7)
 
 ## ツールセット
 

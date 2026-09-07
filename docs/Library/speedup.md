@@ -171,8 +171,9 @@ pmr::vector<int> v(&mbr);
 
 ## 高速な実装
 
-- boost::unordered_flat_map
+- boost::unordered_flat_map / absl::flat_hash_map / ankerl::unordered_dense
   - [boost](./boost.md)
+  - [最近のC++のハッシュマップ事情(Faith and Brave - C++で遊ぼう)](https://faithandbrave.hateblo.jp/entry/2026/08/28/133610)
 - FenwickTreeの定数倍高速化
   - https://yosupo.hatenablog.com/entry/2016/12/04/121927
 - 1/sqrt(x)を計算する変態コード

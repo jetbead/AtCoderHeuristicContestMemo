@@ -124,6 +124,11 @@ title: 第一回マスターズ決勝
 - https://www.ieice.org/jpn/books/kaishikiji/2005/200512.pdf
 - https://twitter.com/terry_u16/status/1781698819132117109
 
+#### ゲーム化
+
+- https://x.com/kiri8128/status/2086825121571078537
+  - https://x.com/kiri8128/status/2086827874636726435
+
 ## 解説
 
 (発言を見つけられた方のみ)
