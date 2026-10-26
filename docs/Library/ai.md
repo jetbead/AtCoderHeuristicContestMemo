@@ -4,9 +4,7 @@
 
 ## 注意
 
-- https://info.atcoder.jp/entry/llm-rules-ja
-- https://atcoder.jp/posts/1494
-- 2025/6/16(AHC049以降)からは、AHCでも利用ルールが策定されている
+- AI関連ルールはいろいろ変わっていっているので、コンテストごとのAI利用ルールを確認すること
 
 ## 活用
 
@@ -42,7 +40,13 @@
 
 - 必要なツールの導入や環境構築、自作ツール作成などをサポートしてもらう
   - Makefile、デバッカ、など
+- ビジュアライザ作成
 - READMEなどを読み込ませて細かく説明してもらう
+
+### 解説作成
+
+- ポスター作成
+- 解説動画作成
 
 ## Link
 
@@ -61,3 +65,5 @@
   - https://x.com/iwiwi/status/1934830621756674499
   - https://x.com/ethylene_66/status/1934822835660493042
   - https://x.com/chokudai/status/1934922050784932280
+- https://x.com/wata_orz/status/2096921972039131157
+- https://x.com/wata_orz/status/2096956630101610962

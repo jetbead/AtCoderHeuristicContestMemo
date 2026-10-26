@@ -51,6 +51,10 @@
 - AHC Score Graph
   - https://github.com/EdamAme-x/ahc-score-graph-user-script
   - AHCのスコアの変化をグラフで見れる奴
+- AHC Plaza
+  - https://x.com/onegaspine/status/2093233141796520317
+  - https://github.com/taigatappuri/AHC-Plaza
+  - ブラウザベースで動作するGUIツール
 
 ## クラウドジャッジ環境整備
 

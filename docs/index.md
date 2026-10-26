@@ -29,7 +29,8 @@ title: Home
     - https://iilj.github.io/AtCoderMarathonReplay/#/chart/ahc001/
   - AtCoder Heuristic Rating Estimator
     - 目標レーティングへ到達に必要なパフォーマンスを計算するツール
-    - https://3w36zj6.github.io/atcoder-heuristic-rating-estimator/
+    - https://atcoder-rating-estimator.pages.dev/
+    - https://github.com/3w36zj6/atcoder-rating-estimator
   - AtCoder Graphs
     - グラフ化ツールがまとめられたサイト
     - https://atcoder-graphs.vercel.app/
@@ -39,15 +40,14 @@ title: Home
   - Scorerun
     - 各コンテスト最高得点とコードへのリンク
     - https://siman-man.github.io/scorerun/
-  - AHC Standings
-    - スコア分布のビジュアライザ
-    - https://img.atcoder.jp/ahc_standings/index.html
   - AtCoder Heuristic Season Ranking
     - 特定期間のRated AHCで計算した仮想レーティングでのランキング
     - https://ahc-season-ranking.terry-u16.net/
   - AtCoder 延長戦GP30ランキング
     - https://x.com/myh9_f/status/1812698939227095264
     - https://qropa.github.io/extended-gp30-ranking/
+  - あとこの競プロまとめブログ
+    - https://chokudai.github.io/atoco-cp/tags/ahc/
 - :material-folder: **summary**
   - https://kato-hiro.github.io/AtCoderClans/
 

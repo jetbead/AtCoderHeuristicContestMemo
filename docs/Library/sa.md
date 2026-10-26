@@ -77,10 +77,12 @@
   - k-opt(3-opt, 4-opt, double-bridge)
   - Lin-Kernighan Heuristic
 
-#### 類型
+### 区間swap
 
 - 系列を3箇所で切ってそれぞれ系列A、系列B、系列C、系列Dとして、ACBDの順番で連結する
   - [AHC028](../ContestMemo/ahc028.md)
+- TSPのように最初の頂点に戻らず、端が自由ない場合の訪問順最適化とかで有効
+  - [AHC062](../ContestMemo/ahc062.md)
 
 ### kick 近傍
 
@@ -91,9 +93,17 @@
   - TSP などで、k 個のセグメント s1,s2,...,sk を s1,sk,...,s2 にする感じ
 - 2-opt ではたどり着くのが難しいような double bridge みたいな形にキックする
 
-### 部分破壊と再構築
+### LNS(Large Neighborhood Search, 巨大近傍法)
+
+- https://img.atcoder.jp/intro-heuristics/editorial.pdf
+- https://qiita.com/thun-c/items/ecd438fde4d237b1f7bc
+- LNS自体は大きな近傍を探索するメタヒューリスティクス
+  - LNSが探索する近傍の大きさに注目した概念で、破壊再構築はその手段の一つ、という感じ
+
+#### 部分破壊と再構築(破壊再構築)
 
 - パスや状態の一部分を壊して再構築するような近傍
+  - 再構築時に、貪欲法や局所探索、小さい問題の最適解を求める系で行うことでよりよい改善解が見つかる可能性がある
 - https://togetter.com/li/607979?page=2
 - パスやサイクルの一部を破壊してDFSで再構築
   - [AHC002](../ContestMemo/ahc002.md)
@@ -107,7 +117,6 @@
     - ある放送局の強度を0にして、カバーできなくなった家を適当な順番で最小コストでカバーする近傍
     - ある放送局の強度を上げて、順番にカバーできない家ができないように最小化する近傍
     - など
-  
 
 ### Invalidな状態を許容する焼きなまし
 
