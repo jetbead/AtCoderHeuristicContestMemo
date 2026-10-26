@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2305,6 +2305,118 @@
     
   
     AHC070(Asprova)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc071.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC071
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc072.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC072(ALGO ARTIS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc073.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHC073
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContestMemo/ahc_genai_test_2026.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AHCGenAITest2026
   
 
     
@@ -5529,7 +5641,7 @@
 <h2 id="_5">同一局面によるループを防ぐ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>前の状態に戻る操作などでループが発生してしまう場合、無限ループになってしまう可能性がある</li>
-<li>局面に対するハッシュ値などですでに出現した状態は計算しないようにしておく</li>
+<li>局面に対するハッシュ値などですでに出現した状態は計算しないようにしておく(重複排除)</li>
 <li>ZobristHashを用いる<ul>
 <li><a href="random.html">乱数/乱択</a></li>
 </ul>
@@ -5542,22 +5654,44 @@
 <li><a href="random.html">乱数/乱択</a></li>
 </ul>
 </li>
-<li>同スコアのものは排除する</li>
-<li>状態のなにかの要素で区別(別のビームに)して、それぞれでビームするようにする</li>
+<li>同スコアのものは排除する<ul>
+<li>同スコアの状態は1つだけ選ぶ</li>
+<li>小さい乱数値を入れて同スコアの状態の選び方に多様性を持たせる</li>
+</ul>
+</li>
+<li>状態のなにかの要素で区別(別のビームに)して、それぞれでビームするようにする<ul>
+<li>小さい幅の複数ビーム</li>
+</ul>
+</li>
 <li>確定した部分は無視する</li>
 <li><a href="https://twitter.com/Rafbill_pc/status/1767494993923477774">https://twitter.com/Rafbill_pc/status/1767494993923477774</a><ul>
 <li><a href="https://gist.github.com/Rafbillpc/814f226576d59b8aa58c552c373f8217">https://gist.github.com/Rafbillpc/814f226576d59b8aa58c552c373f8217</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="_7">小さい幅のビーム<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7">小さい幅の複数ビーム<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>ある程度の幅をもたせた(1つの)ビームではなく、小さい幅＋多様性をもたせた(複数の)ビーム<ul>
-<li>AHC011 wataさん解</li>
-<li>AHC019 USAさん解</li>
+<li>AHC011 wataさん解<ul>
+<li>空きマスの位置でビームを分ける</li>
 </ul>
 </li>
-<li>評価関数がうまく設計できたり、ある程度良い解が多い場合など、高速に、よい解が得られる</li>
+<li>AHC019 USAさん解<ul>
+<li>ブロックサイズでビームを分ける</li>
+</ul>
+</li>
+<li><a href="../ContestMemo/ahc_genai_test_2026.html">AHC_GenAI26</a><ul>
+<li>サイコロの位置でビームを分ける</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>イメージとしては、<code>beam[y][x]</code>で持つ感じ<ul>
+<li>ターンtでの<code>beam[y][x]</code>からターンt+1では<code>next_beam[y][x]</code>に入れて<code>swap(beam,next_beam)</code>する感じ</li>
+<li>各<code>beam[y][x]</code>の幅は1とか5とか小さめでも、全体では座標倍になるので、小さい幅のビームがたくさんある感じ</li>
+</ul>
+</li>
+<li>各ビーム幅が1とかでも多様性が確保されていて座標倍とかになるので、十分強い場合が多いみたい</li>
 </ul>
 <h2 id="chokudai">chokudaiサーチの軸<a class="headerlink" href="#chokudai" title="Permanent link">&para;</a></h2>
 <ul>
@@ -5690,10 +5824,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../js/extra.js"></script>
       
